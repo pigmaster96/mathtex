@@ -1,1 +1,1 @@
-Note consolidation
+Repository for note consolidation, all written in TeX.
