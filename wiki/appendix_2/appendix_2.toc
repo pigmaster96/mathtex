@@ -1,0 +1,19 @@
+\contentsline {chapter}{\numberline {A}Differential Equations}{2}{}%
+\contentsline {section}{\numberline {A.1}Fundamentals}{2}{}%
+\contentsline {subsection}{\numberline {A.1.1}Introduction to Ordinary Differential Equations\\(ODEs)}{2}{}%
+\contentsline {subsection}{\numberline {A.1.2}Separation of Variables}{4}{}%
+\contentsline {subsection}{\numberline {A.1.3}Direction fields, Isoclines, and Integral curves}{5}{}%
+\contentsline {subsection}{\numberline {A.1.4}Long term Behaviour: Fences, Funnels, and Separatrices}{7}{}%
+\contentsline {subsection}{\numberline {A.1.5}Runge-Kutta 2 (Numerical methods)}{10}{}%
+\contentsline {subsection}{\numberline {A.1.6}First order Linear Differential Equations}{11}{}%
+\contentsline {subsection}{\numberline {A.1.7}Superposition (First order ODEs)}{14}{}%
+\contentsline {subsection}{\numberline {A.1.8}Solution by Integrating Factor (inhomogenous first order ODEs)}{15}{}%
+\contentsline {subsection}{\numberline {A.1.9}General, Particular and Homogeneous solutions}{17}{}%
+\contentsline {subsection}{\numberline {A.1.10}Polar form and Euler Identity}{19}{}%
+\contentsline {subsection}{\numberline {A.1.11}More on Complex Exponentials}{22}{}%
+\contentsline {subsection}{\numberline {A.1.12}Superposition (Second order ODEs)}{23}{}%
+\contentsline {subsection}{\numberline {A.1.13}General solution for inhomogenous linear ODEs}{24}{}%
+\contentsline {subsection}{\numberline {A.1.14}Existence and uniqueness}{25}{}%
+\contentsline {subsection}{\numberline {A.1.15}Exponential response formula}{25}{}%
+\contentsline {section}{\numberline {A.2}Fourier Series}{25}{}%
+\contentsline {subsection}{\numberline {A.2.1}Fourier Series}{25}{}%
