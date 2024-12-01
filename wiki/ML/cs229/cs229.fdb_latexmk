@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1733047794.26637 "cs229.tex" "cs229.pdf" "cs229" 1733047794.81419 0
+["pdflatex"] 1733077968.38557 "cs229.tex" "cs229.pdf" "cs229" 1733077968.99401 0
   "/etc/texmf/web2c/texmf.cnf" 1720557663.6242 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -80,8 +80,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1720557685.57372 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1720557728 8214000 057329cfd04c520b67b7761012d13353 ""
-  "cs229.aux" 1733047794.76018 322 1489a8eb3eacaae2a0cd923de1125d40 "pdflatex"
-  "cs229.tex" 1733047793.51107 1861 118412f8a94a3c2915ea2d8681885607 ""
+  "cs229.aux" 1733077968.94177 435 8fb2428f8dd4ff0316f9e811245e0a15 "pdflatex"
+  "cs229.tex" 1733077967.03372 3875 7f02e71fcad58360cae9ce3a7facc293 ""
   (generated)
   "cs229.aux"
   "cs229.log"

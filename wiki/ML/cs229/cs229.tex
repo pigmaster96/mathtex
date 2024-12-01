@@ -23,7 +23,7 @@ Our goal is, given a training set, to learn a function $h:\mathcal{X}\mapsto\mat
 \vspace{1mm}\\
 When trying to predict a continuous target variable, we call this a \textit{regression} problem; whereas when $y$
 can take on only a small number of discrete values we call that a \textit{classification} problem.
-\section{Linear Regression}
+\subsection{Linear Regression}
 Say we decide to approximate $y$ as a linear function of $x$:
 \begin{equation*}
 h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\ldots
@@ -34,10 +34,49 @@ We can simplify our notation as such: (by convention letting $x_0=1$, aptly name
 \begin{equation*}
 h(x)=\sum^d_{i=0}\theta_ix_i=\bm{\theta}^T\bm{x}
 \end{equation*}
+In order to formalise a measure of proximity between the predicted value $h(x)$ and the target $y$,
+we define a \textit{cost function}:
+\begin{equation*}
+J(\theta)=\frac{1}{2}\sum^n_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2
+\end{equation*}
+This particular cost function implies an \textit{ordinary least squares} regression model.
+\newpage
+\subsection{LMS algorithm}
+Our cost function $J(\theta)$ gives us a measure of prediction accuracy. We want to choose $\theta$ so as to
+minimise $J(\theta)$. Starting with an initial set of $\theta$, we need a search algorithm that
+repeatedly changes $\theta$ in an attempt to minimise $J(\theta)$. Here we consider the \textit{gradient descent}
+algorithm, which, given some initial $\theta$, repeatedly performs the update:
+\begin{equation*}
+\theta_j:=\theta_j-\alpha\frac{\partial}{\partial\theta_j}J(\theta)
+\end{equation*}
+Where the update is simultaneously performed for all values of $j=0,\ldots,d$. $\alpha$ is called the 
+\textit{learning rate}
+(how much we move in the direction the gradient points in).\\
+\vspace{1mm}\\
+\textbf{Intuition}\\
+Consider attempting to minimise the least mean squares (LMS) cost function for a single training example:
+\begin{align*}
+\frac{\partial}{\partial\theta_j}J(\theta)&=\frac{\partial}{\partial\theta_j}\frac{1}{2}(h_\theta(x)-y)^2\\
+&=2\cdot\frac{1}{2}(h_\theta(x)-y)\cdot\frac{\partial}{\partial\theta_j}(h_\theta(x)-y)\\
+&=(h_\theta(x)-y)\cdot\frac{\partial}{\partial\theta_j}\left(\sum^d_{i=0}\theta_ix_i-y\right)\\
+&=(h_\theta(x)-y)\,x_j
+\end{align*}
+This gives us the update rule:
+\begin{equation*}
+\theta_j:=\theta_j+\alpha\left(y^{(i)}-h_\theta(x^{(i)})\right)x_j^{(i)}
+\end{equation*}
+(we use the notation $a:=b$ to denote (in a script) overwriting $a$ with $b$) Notice the property of the LMS update
+rule that the magnitude of the update is proportional to the \textit{error} term 
+$\left(y^{(i)}-h_\theta(x^{(i)})\right)$ (this means that predictions further off the mark result in a greater
+correction to $\theta$).\\
 (next page)
 \newpage
-\noindent\textbf{Loss Function}\\
-Say we have
+\noindent\textbf{Batch Gradient Descent}\\
+
+
+
+
+
 
 
 
