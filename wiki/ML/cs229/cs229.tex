@@ -13,10 +13,31 @@
 \maketitle
 
 \chapter{Supervised learning}
-\section{}
-
-
-
+Given a dataset of $n$ \textit{training examples} $\{(x^{(i)},y^{(i)});i=1\},\ldots,n\}$---a \textit{training set}---where $\bm{x}$ 
+represents the \textit{features} and $\bm{y}$ the ``output'' or \textit{target} variable we are trying to predict.
+If not already obvious, we denote the vector space of $\bm{x}$ as $\mathcal{X}$ and that of the outputs $\bm{y}$ as 
+$\mathcal{Y}$.\\
+\vspace{1mm}\\
+Our goal is, given a training set, to learn a function $h:\mathcal{X}\mapsto\mathcal{Y}$ so that $h(x)$ is a 
+``good'' predictor for the corresponding $y$. This function $h$ is called a \textit{hypothesis}.\\
+\vspace{1mm}\\
+When trying to predict a continuous target variable, we call this a \textit{regression} problem; whereas when $y$
+can take on only a small number of discrete values we call that a \textit{classification} problem.
+\section{Linear Regression}
+Say we decide to approximate $y$ as a linear function of $x$:
+\begin{equation*}
+h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\ldots
+\end{equation*}
+Where $\bm{\theta}$ represents the \textit{parameters/weights} (parametrising the
+space of linear functions mapping from $\mathcal{X}$ to $\mathcal{Y}$).
+We can simplify our notation as such: (by convention letting $x_0=1$, aptly named the \textit{intercept} term)
+\begin{equation*}
+h(x)=\sum^d_{i=0}\theta_ix_i=\bm{\theta}^T\bm{x}
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Loss Function}\\
+Say we have
 
 
 
