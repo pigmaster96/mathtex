@@ -9,6 +9,8 @@
 \usepackage{bm} %bolding without changing font
 \usepackage{graphicx} %import imaging
 \graphicspath{{./images/}} %set imaging path
+\newcommand*{\vertbar}{\rule[-1ex]{0.5pt}{2.5ex}} %matrix
+\newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}} %matrix
 \begin{document}
 \maketitle
 
@@ -112,7 +114,103 @@ Stochastic gradient descent gets $\theta$ ``close'' to the minimum much faster t
 that ``convergence'' doesn't really occur---the parameters $\theta$ will keep oscillating around the minimum of
 $J(\theta)$. (though most values near minimum would be reasonably good approximations to the true minimum)
 \newpage
-\subsection{}
+\subsection{Gradients of }
+\textbf{Matrix Derivatives}\\
+For a function $f:\mathbb{R}^{n\times d}\mapsto\mathbb{R}$ mapping from $n$-by-$d$ matrices to real numbers,
+we define the derivative of $f$ with respect to $A$ to be
+\begin{equation*}
+\nabla_Af(A)=\begin{bmatrix}
+\frac{\partial f}{\partial A_{11}}&\cdots&\frac{\partial f}{\partial A_{1d}}\\
+\vdots&\ddots&\vdots\\
+\frac{\partial f}{\partial A_{n1}}&\cdots&\frac{\partial f}{\partial A_{nd}}
+\end{bmatrix}
+\end{equation*}
+\textbf{Gradient of} $b^Tx$:\\
+For $x\in\mathbb{R}^n$ and $f(x)=b^Tx$ for known $b\in\mathbb{R}^n$, we have
+\begin{equation*}
+f(x)=\sum^n_{i=1}b_ix_i
+\end{equation*}
+and so
+\begin{equation*}
+\frac{\partial f(x)}{\partial x_k}=\frac{\partial}{\partial x_k}\sum^n_{i=1}b_ix_i=b_k
+\end{equation*}
+Consider repeating this for the partial of each element of $x$. See that $\nabla_xb^Tx=b$ (analagous to
+single variable calculus).\\
+\vspace{1mm}\\
+\textbf{Gradient of} $f(x)=x^TAx$:\\
+Now consider the quadratic function $f(x)=x^TAx$ for $A\in\mathbb{S}^n$ (meaning symmetric). First see that
+\begin{equation*}
+f(x)=\sum^n_{i=1}\sum^n_{j=1}A_{ij}x_ix_j
+\end{equation*}
+this can be seen from considering that 
+\begin{equation*}
+b=Ax\in\mathbb{R}^{n\times1}
+\end{equation*}
+can be written as
+\begin{align*}
+b_1=&\sum^n_{i=1}A_{1i}x_i\\
+&\vdots\\
+b_n=&\sum^n_{i=1}A_{ni}x_i
+\end{align*}
+(next page)
+\newpage
+\noindent so we can write
+\begin{align*}
+x^TAx=x^T&b=\sum^n_{j=1}x_jb_j\in\mathbb{R}\\
+=&\sum^n_{j=1}x_j\left(\sum^n_{i=1}A_{ji}x_i\right)
+\end{align*}
+Rewriting gives us
+\begin{equation*}
+f(x)=\sum^n_{i=1}\sum^n_{j=1}A_{ij}x_ix_j
+\end{equation*}
+which was what we wanted. Now we take the partial derivative by considering the terms including $x_k$ an
+$x_k^2$ factors separately:
+\begin{align*}
+\frac{\partial f(x)}{\partial x_k}&=\frac{\partial f(x)}{\partial x_k}\sum^n_{i=1}\sum^n_{j=1}A_{ij}x_ix_j\\
+&=\frac{\partial f(x)}{\partial x_k}\left[\sum_{i\neq k}
+\sum_{j\neq k}A_{ij}x_ix_j+\sum_{i\neq k}A_{ik}x_ix_k
++\sum_{j\neq k}A_{kj}x_kx_j+A_{kk}x_k^2\right]\\
+&=\sum_{i\neq k}A_{ik}x_i+\sum_{j\neq k}A_{kj}x_j+2A_{kk}x_k\\
+&=\sum_{i=1}A_{ik}x_i+\sum_{j=1}A_{kj}x_j=2\sum^n_{i=1}A_{ki}x_i
+\end{align*}
+where the last equality follows since $A$ is assumed to be \textit{symmetric}. Since 
+\begin{equation*}
+\sum^n_{i=1}A_{ki}x_i
+\end{equation*}
+is just the inner product of a single row of $A$ and $x$---the $k$th entry of $\nabla_xf(x)$ is the just the 
+inner product of the $k$th row of $A$ and $x$; therefore 
+\begin{equation*}
+\nabla_xx^TAx=2Ax
+\end{equation*}
+also analagous to single variable calculus.
+(next page)
+\newpage
+\noindent\textbf{Hessian}
+
+\newpage
+
+\subsection{Least Squares matrix representation}
+Here we consider $J(\theta)$---the least squares cost function---in matrix-vectorial notation.\\
+\vspace{1mm}\\
+Given a training set, we define the \textit{design matrix} $\bm{X}$ to be the $n\times d$ matrix ($n\times d+1$ if we
+include the intercept term) that contains the training examples' inputs values in its rows:
+\begin{equation*}
+\bm{X}=\begin{bmatrix}
+\horzbar(x^{(1)})^T\horzbar\\
+\horzbar(x^{(2)})^T\horzbar\\
+\vdots\\\horzbar(x^{(n)})^T\horzbar
+\end{bmatrix}
+\end{equation*}
+and $\bm{y}$ the $n$-dimensional vector containing the target values:
+\begin{equation*}
+\bm{y}=\begin{bmatrix}
+y^{(1)}\\y^{(2)}\\\vdots\\y^{(n)}
+\end{bmatrix}
+\end{equation*}
+See that we can represent our least squares function over the entire dataset as
+
+
+
 
 
 
