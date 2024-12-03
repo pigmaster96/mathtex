@@ -67,19 +67,52 @@ This gives us the update rule:
 \end{equation*}
 (we use the notation $a:=b$ to denote (in a script) overwriting $a$ with $b$) Notice the property of the LMS update
 rule that the magnitude of the update is proportional to the \textit{error} term 
-$\left(y^{(i)}-h_\theta(x^{(i)})\right)$ (this means that predictions further off the mark result in a greater
-correction to $\theta$).\\
+$\left(y^{(i)}-h_\theta(x^{(i)})\right)$; this means that predictions further off the mark result in a greater
+correction to $\theta$.\\
 (next page)
 \newpage
 \noindent\textbf{Batch Gradient Descent}\\
-
-
-
-
-
-
-
-
+We had the LMS rule for when there was only a single training example. One way to modify this method for a
+training set of more than one example is the following algorithm:\\
+\vspace{1mm}\\
+\indent Repeat until convergence \{
+\begin{equation*}
+\theta_j:=\theta_j+\alpha\sum^n_{i=1}\left(y^{(i)}-h_\theta(x^{(i)})\right)x_j^{(i)},\text{ (for every $j$)}
+\end{equation*}
+\indent\}\\
+\vspace{1mm}\\
+Written more succinctly ($\theta_j$ and $x_j$ as vectors):
+\begin{equation*}
+\theta:=\theta+\alpha\sum^n_{i=1}\left(y^{(i)}-h_\theta(x^{(i)})\right)x^{(i)}
+\end{equation*}
+This method looks at every example in the entire training set on every step, and is called 
+\textit{batch gradient descent}.\\
+\vspace{1mm}\\
+\textbf{Stochastic gradient descent}\\
+Now consider another algorithm:\\
+\vspace{1mm}\\
+\indent Loop \{\\
+\indent\indent for $i=1$ to $n$, \{
+\begin{equation*}
+\theta_j:=\theta_j+\alpha\left(y^{(i)}-h_\theta(x^{(i)})\right)x_j^{(i)},\quad\text{(for every $j$)}
+\end{equation*}
+\indent\indent\}\\
+\indent\}\\
+\vspace{1mm}\\
+Written more compactly:
+\begin{equation*}
+\theta:=\theta+\alpha\left(y^{(i)}-h_\theta(x^{(i)})\right)x^{(i)},\text{ (update $\theta$ $n$ times)}
+\end{equation*}
+Here we update $\theta$ for each training example during each run of the training set. This is called
+\textit{stochastic/incremental gradient descent}.\\
+\vspace{1mm}\\
+Whereas batch gradient descent has to scan through the entire training set before taking a single step---which 
+is costly if $n$ is large---stochastic gradient descent continues to make progress with each example it looks at.
+Stochastic gradient descent gets $\theta$ ``close'' to the minimum much faster than batch gradient descent. Note
+that ``convergence'' doesn't really occur---the parameters $\theta$ will keep oscillating around the minimum of
+$J(\theta)$. (though most values near minimum would be reasonably good approximations to the true minimum)
+\newpage
+\subsection{}
 
 
 

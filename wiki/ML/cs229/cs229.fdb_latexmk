@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1733077968.38557 "cs229.tex" "cs229.pdf" "cs229" 1733077968.99401 0
+["pdflatex"] 1733208593.48888 "cs229.tex" "cs229.pdf" "cs229" 1733208594.22364 0
   "/etc/texmf/web2c/texmf.cnf" 1720557663.6242 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -61,6 +61,7 @@
   "/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty" 1686341992 88371 d84032c0f422c3d1e282266c01bef237 ""
   "/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty" 1686341992 4474 b811654f4bf125f11506d13d13647efb ""
   "/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty" 1686341992 2444 0d0c1ee65478277e8015d65b86983da2 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd" 1705352648 2469 74341109f164f230581718c66211c718 ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/report.cls" 1705352648 23203 f5d913095ece2233436f0e628619cd37 ""
   "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1705352648 8448 dbc0dbf4156c0bb9ba01a1c685d3bad0 ""
   "/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1579991033 13886 d1306dcf79a944f6988e688c1785f9ce ""
@@ -80,8 +81,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1720557685.57372 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1720557728 8214000 057329cfd04c520b67b7761012d13353 ""
-  "cs229.aux" 1733077968.94177 435 8fb2428f8dd4ff0316f9e811245e0a15 "pdflatex"
-  "cs229.tex" 1733077967.03372 3875 7f02e71fcad58360cae9ce3a7facc293 ""
+  "cs229.aux" 1733208594.15006 530 53b064c10d34cb2d3a9bf57bd6a160c0 "pdflatex"
+  "cs229.tex" 1733208591.79803 5810 4768fd1c5cf81765a56ef3b4c3e6227e ""
   (generated)
   "cs229.aux"
   "cs229.log"
