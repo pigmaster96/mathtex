@@ -25,6 +25,7 @@ Our goal is, given a training set, to learn a function $h:\mathcal{X}\mapsto\mat
 \vspace{1mm}\\
 When trying to predict a continuous target variable, we call this a \textit{regression} problem; whereas when $y$
 can take on only a small number of discrete values we call that a \textit{classification} problem.
+
 \subsection{Linear Regression}
 Say we decide to approximate $y$ as a linear function of $x$:
 \begin{equation*}
@@ -43,6 +44,7 @@ J(\theta)=\frac{1}{2}\sum^n_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2
 \end{equation*}
 This particular cost function implies an \textit{ordinary least squares} regression model.
 \newpage
+
 \subsection{LMS algorithm}
 Our cost function $J(\theta)$ gives us a measure of prediction accuracy. We want to choose $\theta$ so as to
 minimise $J(\theta)$. Starting with an initial set of $\theta$, we need a search algorithm that
@@ -114,7 +116,8 @@ Stochastic gradient descent gets $\theta$ ``close'' to the minimum much faster t
 that ``convergence'' doesn't really occur---the parameters $\theta$ will keep oscillating around the minimum of
 $J(\theta)$. (though most values near minimum would be reasonably good approximations to the true minimum)
 \newpage
-\subsection{Gradients of }
+
+\subsection{Gradient/Hessian of $b^Tx$, $x^TAx$}
 \textbf{Matrix Derivatives}\\
 For a function $f:\mathbb{R}^{n\times d}\mapsto\mathbb{R}$ mapping from $n$-by-$d$ matrices to real numbers,
 we define the derivative of $f$ with respect to $A$ to be
@@ -182,32 +185,113 @@ inner product of the $k$th row of $A$ and $x$; therefore
 \begin{equation*}
 \nabla_xx^TAx=2Ax
 \end{equation*}
-also analagous to single variable calculus.
+also analagous to single variable calculus.\\
 (next page)
 \newpage
-\noindent\textbf{Hessian}
-
+\noindent\textbf{Hessian}\\
+Finally we consider the Hessian of the quadratic function $f(x)=x^TAx$ (it should be obvious
+that the Hessian of a linear function $b^Tx$ is zero):
+\begin{equation*}
+\frac{\partial^2f(x)}{\partial x_k\partial x_\ell}=
+\frac{\partial}{\partial x_k}\left[\frac{\partial f(x)}{\partial x_\ell}\right]
+=\frac{\partial}{\partial x_k}\left[2\sum^n_{i=1}A_{\ell i}x_i\right]=2A_{\ell k}=2A_{k\ell}
+\end{equation*}
+See therefore that $\nabla^2_xx^TAx=2A$.\\
+\vspace{1mm}\\
+\textbf{Recapitulation}:
+\begin{itemize}
+\item$\nabla_xb^Tx=b$
+\item$\nabla_xx^TAx=2Ax$
+\item$\nabla^2_xx^TAx=2A$
+\end{itemize}
 \newpage
 
 \subsection{Least Squares matrix representation}
 Here we consider $J(\theta)$---the least squares cost function---in matrix-vectorial notation.\\
 \vspace{1mm}\\
-Given a training set, we define the \textit{design matrix} $\bm{X}$ to be the $n\times d$ matrix ($n\times d+1$ if we
+Given a training set, we define the \textit{design matrix} $X$ to be the $n\times d$ matrix ($n\times d+1$ if we
 include the intercept term) that contains the training examples' inputs values in its rows:
 \begin{equation*}
-\bm{X}=\begin{bmatrix}
+X=\begin{bmatrix}
 \horzbar(x^{(1)})^T\horzbar\\
 \horzbar(x^{(2)})^T\horzbar\\
 \vdots\\\horzbar(x^{(n)})^T\horzbar
 \end{bmatrix}
 \end{equation*}
-and $\bm{y}$ the $n$-dimensional vector containing the target values:
+and $y$ the $n$-dimensional vector containing the target values:
 \begin{equation*}
-\bm{y}=\begin{bmatrix}
+y=\begin{bmatrix}
 y^{(1)}\\y^{(2)}\\\vdots\\y^{(n)}
 \end{bmatrix}
 \end{equation*}
-See that we can represent our least squares function over the entire dataset as
+Now we try to represent the least squares function over the entire dataset; see that since 
+\begin{equation*}
+h_\theta(x^{(i)})=(x^{(i)})^T\theta
+\end{equation*}
+we can write
+\begin{align*}
+X\theta-y&=\begin{bmatrix}
+(x^{(1)})^T\theta\\
+\vdots\\(x^{(n)})^T\theta
+\end{bmatrix}-
+\begin{bmatrix}y^{(1)}\\\vdots\\y^{(n)}\end{bmatrix}\\
+&=\begin{bmatrix}
+h_\theta(x^{(1)})-y^{(1)}\\\vdots\\
+h_\theta(x^{(n)})-y^{(n)}\end{bmatrix}\in\mathbb{R}^n
+\end{align*}
+Using the fact that for a vector $z$, 
+$z^Tz=\sum_iz^2_i$:
+\begin{align*}
+\frac{1}{2}(X\theta-y)^T(X\theta-y)&=
+\frac{1}{2}\sum^n_{i=1}(h_\theta(x^{(i)})-y^{(i)})^2\\
+&=J(\theta)
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Minimising the LMS}\\
+To minimise the cost function $J(\theta)$ we want its derivatives with respect to $\theta$:
+\begin{align*}
+\nabla_\theta J(\theta)&=\nabla_\theta\frac{1}{2}(X\theta-y)^T(X\theta-y)\\
+&=\frac{1}{2}\nabla_\theta\left((X\theta)^T-y^T\right)(X\theta-y)\\
+&=\frac{1}{2}\nabla_\theta(\theta^TX^TX\theta
+-y^TX\theta-(X\theta)^Ty-y^Ty)\\
+&=\frac{1}{2}\nabla_\theta(\theta^TX^TX\theta
+-y^TX\theta-y^TX\theta)\\
+&=\frac{1}{2}\nabla_\theta(\theta^TX^TX\theta-2(X^Ty)\theta)\\
+&=\frac{1}{2}(2X^TX\theta-2X^Ty)\\
+&=X^TX\theta-X^Ty
+\end{align*}
+Of note:
+\begin{itemize}
+\item The third equality comes from $(Ab)^T=b^TA^T$
+\item The fourth equality comes from $a^Tb=b^Ta$
+\item To differentiate we use the facts $\nabla_xb^Tx=b$ and $\nabla_xx^TAx=2Ax$. 
+Note the second fact assumes $A$ is symmetric, which is true here since $X^TX$ is symmetric.
+\end{itemize}
+To minimise $J$ we set the derivative to zero and obtain the \textit{normal equations}:
+\begin{equation*}
+X^TX\theta=X^Ty
+\end{equation*}
+Thus we have, in closed-form, the value of $\theta$ that minimises $J(\theta)$, given by
+\begin{equation*}
+\theta=(X^TX)^{-1}X^Ty
+\end{equation*}
+Note that this final step implicitly assumes that $X^TX$ is invertible. This can be checked before calculating
+the inverse; if either the number of linearly independent examples is fewer than the number of
+features, or if the features are not linearly independent:\\\vspace{1mm}\\
+See that a matrix $A\in\mathbb{R}^{n\times m}$ can have rank $m$ ($=\min(n,m)$) only if $n\geq m$ 
+(thus more linearly independent examples than features are required---$m$ representing features and $n$ samples.) 
+If the features ($m$) were not linearly independent, the matrix $A$ would not have rank $m$. See that
+\begin{align*}
+A^TAx=0&\implies x^TA^TAx=0\implies(Ax)^TAx=0\\&\implies||Ax||^2=0\implies Ax=0
+\end{align*}
+Intuitively, only if $Ax=0$ is the trivial solution (meaning $A$ is a one-to-one mapping for $m$ sized vectors), 
+then would $A^TAx$ also be one-to-one and also invertible.
+\newpage
+
+
+
+
+
 
 
 
