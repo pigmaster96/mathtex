@@ -13,6 +13,7 @@
 \newcommand*{\horzbar}{\rule[.5ex]{2.5ex}{0.5pt}} %matrix
 \begin{document}
 \maketitle
+\tableofcontents
 
 \chapter{Supervised learning}
 Given a dataset of $n$ \textit{training examples} $\{(x^{(i)},y^{(i)});i=1\},\ldots,n\}$---a \textit{training set}---where $\bm{x}$ 
@@ -26,7 +27,7 @@ Our goal is, given a training set, to learn a function $h:\mathcal{X}\mapsto\mat
 When trying to predict a continuous target variable, we call this a \textit{regression} problem; whereas when $y$
 can take on only a small number of discrete values we call that a \textit{classification} problem.
 
-\subsection{Linear Regression}
+\section{Linear Regression}
 Say we decide to approximate $y$ as a linear function of $x$:
 \begin{equation*}
 h_\theta(x)=\theta_0+\theta_1x_1+\theta_2x_2+\ldots
@@ -288,9 +289,69 @@ Intuitively, only if $Ax=0$ is the trivial solution (meaning $A$ is a one-to-one
 then would $A^TAx$ also be one-to-one and also invertible.
 \newpage
 
+\subsection{Probabalistic interpretation of linear regression simplifies to LMS}
+\textbf{Hypothesis}\\
+Here we make some probabalistic assumptions, under which least-squares regression is derived as a very natural
+algorithm. Assume that the target variables and the inputs are related via the equation:
+\begin{equation*}
+y^{(i)}=\theta^Tx^{(i)}+\epsilon^{(i)}
+\end{equation*}
+were $\epsilon$ is an error term that captures either unmodeled effects or random noise. 
+Let us further assume that the $\epsilon^{(i)}$ are distributed IID (independently and identically distributed)
+according to a Gaussian/Normal distribution with mean zero and some variance $\sigma^2$. We can write this
+assumption as $\epsilon^{(i)}\thicksim\mathcal{N}(0,\sigma^2)$, where $\epsilon^{(i)}$ has the probability density
+function:
+\begin{equation*}
+p(\epsilon^{(i)})=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(\epsilon^{(i)})^2}{2\sigma^2}\right)
+\end{equation*}
+This implies that
+\begin{equation*}
+p(y^{(i)}|x^{(i)};\theta)=\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\theta^Tx^{(i)})^2}{2\sigma^2}\right)
+\end{equation*}
+The distribution of $y^{(i)}$ can also be written as 
+$y^{(i)}|x^{(i)};\theta\thicksim\mathcal{N}(\theta^Tx^{(i)},\sigma^2)$\\
+\vspace{1mm}\\
+\textbf{Likelihood}\\
+Given all our data in $X$ (the design matrix) and $\theta$, our distribution of all the $y^{(i)}$, when viewed
+for a fixed value of $\theta$ (we don't actually know $\theta$, but we come up with a function given a value), we
+have the \textit{likelihood function}
+\begin{equation*}
+L(\theta)=L(\theta;X,y)=p(y|X;\theta)
+\end{equation*}
+(the combined probability of all these $y^{(i)}$ occuring given $X$ and a value of $\theta$) By the independence
+assumption on the $\epsilon^{(i)}$ this can be written as
+\begin{align*}
+L(\theta)&=\prod^n_{i=1}p(y^{(i)}|x^{(i)};\theta)\\
+&=\prod^n_{i=1}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\theta^Tx^{(i)})^2}{2\sigma^2}\right)
+\end{align*}
+(next page)
+\newpage
+\noindent\textbf{Maximum Likelihood}\\
+Given this probabilistic model relating the $y^{(i)}$ and $x^{(i)}$, we should choose $\theta$ so as to maximise
+the probability of the data---we want to maximise $L(\theta)$---the \textit{maximum likelihood}.\\
+\vspace{1mm}\\
+Given the monotonicity of the logarithm, and that we are simply looking for the $\theta$ to maximise the function,
+and not the value of the function itself, maximising over the \textit{log likelihood} $\ell(\theta)$ simplifies 
+things:
+\begin{align*}
+\ell(\theta)&=\log L(\theta)\\
+&=\log\prod^n_{i=1}\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\theta^Tx^{(i)})^2}{2\sigma^2}\right)\\
+&=\sum^n_{i=1}\log\frac{1}{\sqrt{2\pi}\sigma}\exp\left(-\frac{(y^{(i)}-\theta^Tx^{(i)})^2}{2\sigma^2}\right)\\
+&=\sum^n_{i=1}\log\frac{1}{\sqrt{2\pi}\sigma}+\sum^n_{i=1}\log\exp\left(-\frac{(y^{(i)}
+-\theta^Tx^{(i)})^2}{2\sigma^2}\right)\\
+&=n\log\frac{1}{\sqrt{2\pi}\sigma}-\frac{1}{2\sigma^2}\sum^n_{i=1}(y^{(i)}-\theta^Tx^{(i)})^2\\
+&=\underbrace{n\log\frac{1}{\sqrt{2\pi}\sigma}}_{\text{constant}}
+-\frac{1}{\sigma^2}\cdot\frac{1}{2}\sum^n_{i=1}(y^{(i)}-\theta^Tx^{(i)})^2
+\end{align*}
+see therefore that maximising $\ell(\theta)$ is the same as maximising
+\begin{equation*}
+\frac{1}{2}\sum^n_{i=1}(y^{(i)}-\theta^Tx^{(i)})^2
+\end{equation*}
+which is our original least-squares cost function. Note that the final choice of $\theta$ did not depend on what 
+$\sigma^2$ was.
+\newpage
 
-
-
+\subsection{}
 
 
 
