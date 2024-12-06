@@ -390,8 +390,33 @@ to the idea that the amound of stuff we need to keep in order to represent the h
 of the training set.
 \newpage
 
-\subsection{}
-
+\subsection{Binary Classification and Logistic Regression}
+\textbf{Classification}\\
+Classification problems are applicable in situations where the values $y$ we want to predict
+take on only a small number of discrete values. Here we consider \textit{binary classification}, where 
+$y$ can take on only two values---0 and 1. 0 is called
+the \textit{negative class} and 1 the \textit{positive class}. For a given $x^{(i)}$, the corresponding 
+$y^{(i)}$ is also called the \textit{label} for the training example.\\
+\vspace{1mm}\\
+\textbf{Logistic Regression}\\
+A linear regression algorithm in this case would perform poorly given the nature of the problem---intuitively
+it doesn't make sense for $h_\theta(x)$ to take values larger than 1 or smaller than 0 when
+we already know that $y\in\{0,1\}$. To fix this we consider a different hypothesis $h$:
+\begin{equation*}
+h_\theta(x)=g(\theta^Tx)=\frac{1}{1+e^{-\theta^Tx}}
+\end{equation*}
+where 
+\begin{equation*}
+g(z)=\frac{1}{1+e^{-z}}
+\end{equation*}
+is called the \textit{logistic/sigmoid} function:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{1}\\
+\end{center}
+See that $g(z)$ tends toward 1 as $z\to\infty$, and to 0 as $z\to\-infty$. Also see
+that it is always bounded between 0 and 1.
+\end{figure}
 
 
 

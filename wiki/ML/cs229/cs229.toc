@@ -5,3 +5,4 @@
 \contentsline {subsection}{\numberline {1.1.3}Least Squares matrix representation}{8}{}%
 \contentsline {subsection}{\numberline {1.1.4}Probabalistic interpretation of linear regression simplifies to LMS}{10}{}%
 \contentsline {subsection}{\numberline {1.1.5}Locally Weighted Linear Regression}{12}{}%
+\contentsline {subsection}{\numberline {1.1.6}Binary Classification and Logistic Regression}{13}{}%

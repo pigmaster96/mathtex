@@ -1,1 +1,3 @@
-\contentsline {chapter}{\numberline {A}}{2}{}%
+\contentsline {chapter}{\numberline {A}Probability}{2}{}%
+\contentsline {section}{\numberline {A.1}Fundamental concepts}{2}{}%
+\contentsline {subsection}{\numberline {A.1.1}Expectation and Variance}{2}{}%
