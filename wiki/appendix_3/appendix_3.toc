@@ -1,3 +1,11 @@
 \contentsline {chapter}{\numberline {A}Probability}{2}{}%
 \contentsline {section}{\numberline {A.1}Fundamental concepts}{2}{}%
 \contentsline {subsection}{\numberline {A.1.1}Expectation and Variance}{2}{}%
+\contentsline {subsection}{\numberline {A.1.2}Expected value of a function of a RV}{3}{}%
+\contentsline {subsection}{\numberline {A.1.3}Expectation and variance of linear functions}{4}{}%
+\contentsline {subsection}{\numberline {A.1.4}Variance in terms of Moments Expression}{4}{}%
+\contentsline {subsection}{\numberline {A.1.5}Expectation and Variance of Bernoulli}{5}{}%
+\contentsline {subsection}{\numberline {A.1.6}Expectation of Discrete Uniform}{5}{}%
+\contentsline {subsection}{\numberline {A.1.7}Variance of Discrete Uniform}{7}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{8}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{8}{}%

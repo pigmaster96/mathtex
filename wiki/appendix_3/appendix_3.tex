@@ -19,13 +19,173 @@
 
 \section{Fundamental concepts}
 \subsection{Expectation and Variance}
+\textbf{Expectation}\\
+We define the \textit{expected value} of a random variable $X$ with a PMF $p_X$ by
+\begin{equation*}
+\boxed{\mathbb{E}[X]=\sum_xxp_X(x)}
+\end{equation*}
+\textbf{Variance and Standard Deviation}\\
+We define the \textit{variance} associated with a random variable $X$ as
+\begin{equation*}
+\boxed{\text{var}(X)=\mathbb{E}\left[(X-\mathbb{E}[X])^2\right]=\sum_x(X-\mathbb{E}[X])^2p_X(x)}
+\end{equation*}
+(See that the because of the square the variance is always nonnegative). The variance provides a measure of
+dispersion of $X$ around the mean. Another measure of dispersion is the \textit{Standard deviation} of $X$, which 
+is defined as the square root of the variance and is denoted by $\sigma_X$:
+\begin{equation*}
+\boxed{\sigma_X=\sqrt{\text{var}(X)}}
+\end{equation*}
+The standard deviation is often easier to interpret because it has the same units as $X$.
+\newpage
+
+\subsection{Expected value of a function of a RV}
+\textbf{Expectation of a function}\\
+Let $X$ be a RV with PMF $p_X$, and let $g(X)$ be a function of $X$. Then the expected value
+of the random variable $g(X)$ is given by
+\begin{equation*}
+\boxed{\mathbb{E}[g(X)]=\sum_xg(x)p_X(x)}
+\end{equation*}
+This can be shown, since
+\begin{equation*}
+p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x)
+\end{equation*}
+we have
+\begin{align*}
+\mathbb{E}[g(X)]&=\mathbb{E}[Y]\\
+&=\sum_yyp_Y(y)\\
+&=\sum_yy\sum_{\{x|g(x)=y\}}p_X(x)\\
+&=\sum_y\sum_{\{x|g(x)=y\}}yp_X(x)\\
+&=\sum_y\sum_{\{x|g(x)=y\}}g(x)p_X(x)\\
+&=\sum_xg(x)p_X(x)
+\end{align*}
+\textbf{Variance}\\
+Using this we can write the variance of $X$ as
+\begin{equation*}
+\text{var}(X)=\mathbb{E}\left[(X-\mathbb{E}[X])^2\right]
+=\sum_x(X-\mathbb{E}[X])^2p_X(x)
+\end{equation*}
+\newpage
+
+\subsection{Expectation and variance of linear functions}
+We show for a random variable $X$, and letting $Y=aX+b$:
+\begin{equation*}
+\boxed{\mathbb{E}[Y]=a\mathbb{E}[X]+b,\quad
+\text{var}(Y)=a^2\text{var}(X)}
+\end{equation*}
+Linearity of Expectations:
+\begin{equation*}
+\mathbb{E}[Y]=\sum_x(ax+b)p_X(x)=a\underbrace{\sum_xxp_x(x)}_{=\mathbb{E}[X]}+b\underbrace{\sum_xp_x(x)}_{=1}
+=a\mathbb{E}[X]+b
+\end{equation*}
+Variance:
+\begin{align*}
+\text{var}(Y)&=\sum_x(ax+b-\mathbb{E}[aX+b])^2p_X(x)\\
+&=\sum_x(ax+b-a\mathbb{E}[X]+b)^2p_X(x)\\
+&=a^2\sum_x(x-\mathbb{E}[X])^2p_X(x)\\
+&=a^2\text{var}(X)
+\end{align*}
+Note that unless $g(X)$ is a linear function, it is not generally true that $\mathbb{E}[g(X)]$ is equal to 
+$g(\mathbb{E}[X])$.
+
+\subsection{Variance in terms of Moments Expression}
+We show
+\begin{equation*}
+\boxed{\text{var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2}
+\end{equation*}
+see that
+\begin{align*}
+\text{var}(X)&=\sum_x(x-\mathbb{E}[X])^2p_X(x)\\
+&=\sum_x(x^2-2x\mathbb{E}[X]+(\mathbb{E}[X])^2)p_X(x)\\
+&=\sum_xx^2p_X(x)-2\mathbb{E}[X]\sum_xxp_X(x)+(\mathbb{E}[X])^2\sum_xp_X(x)\\
+&=\mathbb{E}[X^2]-2(\mathbb{E}[X])^2+(\mathbb{E}[X])^2\\
+&=\mathbb{E}[X^2]-(\mathbb{E}[X])^2
+\end{align*}
+\newpage
+
+\subsection{Expectation and Variance of Bernoulli}
+Consider a Bernoulli RV $X$ with PMF
+\begin{equation*}
+p_X(k)=\begin{cases}
+p,&\text{if }k=1.\\
+1-p,&\text{if }k=0.
+\end{cases}
+\end{equation*}
+The mean, second moment, and variance of $X$ are as follows:
+\begin{align*}
+\mathbb{E}[X]&=1\cdot p+0\cdot(1-p)=p\\
+\mathbb{E}[X^2]&=1^2\cdot p+0\cdot(1-p)=p\\
+\text{var}(X)&=\mathbb{E}[X^2]-(\mathbb{E}[X])^2
+=p-p^2=p(1-p)
+\end{align*}
+
+\subsection{Expectation of Discrete Uniform}
+Consider a Discrete Uniform RV $X$ with PMF, for $k\in[a,b]$:
+\begin{equation*}
+p_X(k)=\begin{cases}
+\frac{1}{b-a+1},&\text{if }k=a,a+1\ldots,b\\
+0,&\text{otherwise}.
+\end{cases}
+\end{equation*}
+An illustration is useful here:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{1}\\
+\end{center}
+\textbf{Expectation}\\
+Upon inspection one might suppose that the expectation is
+\begin{equation*}
+\mathbb{E}[X]=\frac{a+b}{2}
+\end{equation*}
+\end{figure}\\
+(next page)
+\newpage
+\noindent\textbf{Expectation (cont.)}\\
+The formula can be elucidated from the definition of the expectation. First see that a sequence
+$\sum^b_{k=a}k$ can be written as
+\begin{align*}
+\sum^b_{k=a}k&=\sum^b_{k=1}k-\sum^{a-1}_{k=1}k\\
+&=\frac{(b)(b+1)}{2}-\frac{(a-1)(a)}{2}\quad\text{(see \ref{supnotes:1})}\\
+&=\frac{b^2+b-a^2+a}{2}=\frac{(b-a+1)(a+b)}{2}
+\end{align*}
+The last step isn't easy to factor, but working back from our `hypothesis' for the expectation it coincides.\\
+\vspace{1mm}\\
+so now we have
+\begin{align*}
+\mathbb{E}[X]&=\sum^b_{k=a}k\left(\frac{1}{b-a+1}\right)\\
+&=\frac{1}{b-a+1}\sum^b_{k=a}k\\
+&=\frac{1}{b-a+1}\cdot\frac{(b-a+1)(a+b)}{2}\\
+&=\frac{(a+b)}{2}
+\end{align*}
+\newpage
+
+\subsection{Variance of Discrete Uniform}
 
 
 
 
 
 
+\chapter{Supplementary Notes}
 
+\section{The sum of the first $n$ natural numbers is $n(n+1)/2$}
+\label{supnotes:1}
+We have that
+\begin{equation*}
+\sum^i_{i=1}i=1+2+\cdots+n
+\end{equation*}
+Now consider $2\sum^n_{i=1}i$:
+\begin{align*}
+2\sum^n_{i=1}i&=2(1+2+\cdots+(n-1)+n)\\
+&=(1+2+\cdots+(n-1)+n)+(n+(n-1)+\cdots+2+1)\\
+&=(1+n)+(2+(n-1))+\cdots+((n-1)+2)+(n+1)\\
+&=(n+1)_1+(n+1)_2+\cdots+(n+1)_n\\
+&=n(n+1)
+\end{align*}
+so
+\begin{align*}
+2\sum^n_{i=1}i&=n(n+1)\\
+\sum^n_{i=1}i&=\frac{n(n+1)}{2}
+\end{align*}
 
 
 \end{document}
