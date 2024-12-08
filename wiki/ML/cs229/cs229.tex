@@ -414,9 +414,25 @@ is called the \textit{logistic/sigmoid} function:
 \begin{center}
 \includegraphics[width=10cm]{1}\\
 \end{center}
-See that $g(z)$ tends toward 1 as $z\to\infty$, and to 0 as $z\to\-infty$. Also see
-that it is always bounded between 0 and 1.
-\end{figure}
+See that $g(z)$ tends toward 1 as $z\to\infty$, and to 0 as $z\to-\infty$. Also see
+that it is always bounded between 0 and 1. As before we keep the convention of $x_0=1$, so that
+$\theta^Tx=\theta_0+\sum^d_{j=1}\theta_jx_j$.
+\end{figure}\\
+(next page)
+\newpage
+\noindent\textbf{Derivative of the Sigmoid function}\\
+Defining $g$ as the sigmoid function, we note its derivative:
+\begin{align*}
+g'(z)&=\frac{d}{dz}\frac{1}{1+e^{-z}}\\
+&=\frac{1}{(1+e^{-z})^2}(e^{-z})\\
+&=\frac{1}{(1+e^{-z})}\cdot\left(1-\frac{1}{(1+e^{-z})}\right)\\
+&=g(z)(1-g(z))
+\end{align*}
+\textbf{Probabalistic assumptions and maximum likelihood}
+
+
+
+
 
 
 
