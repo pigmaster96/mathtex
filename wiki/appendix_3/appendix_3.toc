@@ -9,3 +9,6 @@
 \contentsline {subsection}{\numberline {A.1.7}Variance of Discrete Uniform}{7}{}%
 \contentsline {chapter}{\numberline {B}Supplementary Notes}{8}{}%
 \contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{8}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{9}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{10}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{11}{}%

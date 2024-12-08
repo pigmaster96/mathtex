@@ -154,13 +154,37 @@ so now we have
 \mathbb{E}[X]&=\sum^b_{k=a}k\left(\frac{1}{b-a+1}\right)\\
 &=\frac{1}{b-a+1}\sum^b_{k=a}k\\
 &=\frac{1}{b-a+1}\cdot\frac{(b-a+1)(a+b)}{2}\\
-&=\frac{(a+b)}{2}
+\mathbb{E}[X]&=\frac{(a+b)}{2}
 \end{align*}
 \newpage
 
 \subsection{Variance of Discrete Uniform}
+\textbf{Case for $k\in[1,n]$}:\\
+We can obtain the second moment for a discrete uniform distributed over $k\in[1,n]$ as
+\begin{align*}
+\mathbb{E}[X^2]&=\sum^{n}_{k=1}k^2\left(\frac{1}{n}\right)\\
+&=\frac{1}{n}\sum^{n}_{k=1}k^2\\
+&=\frac{1}{n}\cdot\frac{n(n+1)(2n+1)}{6}\quad\text{(see \ref{supnotes:4})}\\
+&=\frac{(n+1)(2n+1)}{6}
+\end{align*}
+We then use the formula for variance in terms of moments expression:
+\begin{align*}
+\text{var}(X)&=\mathbb{E}[X^2]-(\mathbb{E}[X])^2\\
+&=\frac{(n+1)(2n+1)}{6}-\left(\frac{n+1}{2}\right)^2\\
+&=\frac{1}{12}(n+1)(4n+2-3n-3)\\
+&=\frac{n^2-1}{12}
+\end{align*}
+\textbf{General case} $k\in[a,b]$:\\
+For the general case, note that a RV uniformly distributed over an interval $[a,b]$ has the \textit{same variance}
+as one which is uniformly distributed over $[1,b-a+1]$---the PMF of the second is just a shifted version
+of the PMF of the first.\\
+\vspace{1mm}\\
+Therefore, the desired variance is given by the first case, but instead with $n=b-a+1$, yielding
+\begin{equation*}
+\boxed{\text{var}(X)=\frac{(b-a+1)^2-1}{12}=\frac{(b-a)(b-a+2)}{12}}
+\end{equation*}
 
-
+\subsection{}
 
 
 
@@ -186,6 +210,88 @@ so
 2\sum^n_{i=1}i&=n(n+1)\\
 \sum^n_{i=1}i&=\frac{n(n+1)}{2}
 \end{align*}
+\newpage
+
+\section{Telescoping series}
+\label{supnotes:2}
+Let $\langle b_n\rangle$ be a sequence in $\mathbb{R}$. Let $\langle a_n\rangle$ be a sequence defined as
+\begin{equation*}
+a_k=b_k-b_{k-1}
+\end{equation*}
+we show
+\begin{equation*}
+\boxed{\sum^n_{k=m}a_k=b_n-b_{m-1}}
+\end{equation*}
+See that
+\begin{align*}
+\sum^n_{k=m}a_k&=\sum^n_{k=m}(b_k-b_{k-1})\\
+&=\sum^n_{k=m}b_k-\sum^n_{k=m}b_{k-1}\\
+&=\sum^n_{k=m}b_k-\sum^{n-1}_{k=m-1}b_k\\
+&=\left(\sum^{n-1}_{k=m}b_k+b_n\right)-\left(b_{m-1}+\sum^{n-1}_{k=m}b_k\right)\\
+&=b_n-b_{m-1}
+\end{align*}
+\newpage
+
+\section{Sum of series of products of consecutive integers}
+\label{supnotes:3}
+We show
+\begin{align*}
+\boxed{\sum^n_{j=1}j(j+1)=1\cdot2+2\cdot3+\cdots
++n(n+1)=\frac{n(n+1)(n+2)}{3}}
+\end{align*}
+See that
+\begin{align*}
+3i(i+1)&=i(i+1)(i+2)-i(i+1)(i-1)\\
+&=(i+1)((i+1)+1)((i+1)-1)-i(i+1)(i-1)
+\end{align*}
+Thus we have the basis of a telescoping series (see (\ref{supnotes:2})):
+\begin{equation*}
+3i(i+1)=b(i+1)-b(i)
+\end{equation*}
+where
+\begin{equation*}
+b(i)=i(i+1)(i-1)
+\end{equation*}
+So we have
+\begin{align*}
+\sum^n_{j=1}3j(j+1)&=\sum^n_{j=1}(j+1)((j+1)+1)((j+1)-1)-j(j+1)(j-1)\\
+&=n(n+1)(n+2)-0(0+1)(0-1)\\
+&=n(n+1)(n+2)
+\end{align*}
+Thus
+\begin{equation*}
+\sum^n_{j=1}j(j+1)=\frac{n(n+1)(n+2)}{3}
+\end{equation*}
+\newpage
+
+\section{Sum of sequence of squares}
+\label{supnotes:4}
+We show
+\begin{equation*}
+\boxed{\forall n\in\mathbb{N}:
+\sum^n_{i=1}i^2=\frac{n(n+1)(2n+1)}{6}}
+\end{equation*}
+See that this follows from (\ref{supnotes:3}):
+\begin{align*}
+\sum^n_{i=1}3i(i+1)&=n(n+1)(n+2)\\
+\sum^n_{i=1}3i^2+\sum^n_{i=1}3i&=n(n+1)(n+2)\\
+\sum^n_{i=1}3i^2&=n(n+1)(n+2)-3\frac{n(n+1)}{2}\quad\text{see (\ref{supnotes:1}))}\\
+\sum^n_{i=1}i^2&=\frac{n(n+1)(n+2)}{3}-\frac{n(n+1)}{2}\\
+&=\frac{2n(n+1)(n+2)-3n(n+1)}{6}\\
+&=\frac{n(n+1)(2n+1)}{6}
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}
