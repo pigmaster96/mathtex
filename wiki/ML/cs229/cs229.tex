@@ -428,9 +428,103 @@ g'(z)&=\frac{d}{dz}\frac{1}{1+e^{-z}}\\
 &=\frac{1}{(1+e^{-z})}\cdot\left(1-\frac{1}{(1+e^{-z})}\right)\\
 &=g(z)(1-g(z))
 \end{align*}
-\textbf{Probabalistic assumptions and maximum likelihood}
+\textbf{Probabalistic assumptions and maximum likelihood}\\
+Here we fit our model via maximum likelihood. For that
+we need to make a set of probabalistic assumptions; let us assume that
+\begin{align*}
+P(y=1|x;\theta)&=h_\theta(x)\\
+P(y=0|x;\theta)&=1-h_\theta(x)
+\end{align*}
+We can write down the probability function for a \textit{single} trial as
+\begin{equation*}
+p(y|x;\theta)=(h_\theta(x))^y(1-h_\theta(x))^{1-y}
+\end{equation*}
+Assuming the $n$ training examples were generated independently, we write down the likelihood as
+\begin{align*}
+L(\theta)&=p(\bm{y}|X;\theta)\\
+&=\prod^n_{i=1}p(y^{(i)}|x^{(i)};\theta)\\
+&=\prod^n_{i=1}(h_\theta(x^{(i)}))^{y^{(i)}}(1-h_\theta(x^{(i)}))^{1-y^{(i)}}
+\end{align*}
+To make things easier we maximise the log likelihood:
+\begin{equation*}
+\ell(\theta)=\log L(\theta)=\sum^n_{i=1}\left[
+y^{(i)}\log(h(x^{(i)})+(1-y^{(i)})\log(1-h(x^{(i)}))\right]
+\end{equation*}
+Here we have the choice of batch or stochastic gradient \textit{ascent}, since we are \textit{maximising}
+the likelihood (same as if we maximised log likelihood).\\
+(next page)
+\newpage
+\noindent\textbf{Stochastic gradient ascent rule}\\
+Since we are trying to \textit{maximise}, our update rule looks like
+\begin{equation*}
+\theta:=\theta+\alpha\nabla_\theta\ell(\theta)
+\end{equation*}
+(Note the positive rather than the negative sign in the update). Here we consider \textit{stochastic} gradient
+ascent, so we look at \textit{one} training example and take the derivative
+to get the rule (if we took the derivative of the log likelihood we found earlier that would be batch
+gradient ascent):
+\begin{align*}
+\frac{\partial}{\partial\theta_j}\ell(\theta)
+&=\left(y\frac{1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)}\right)\frac{\partial}{\partial\theta_j}g(\theta^Tx)\\
+\text{(chain rule)}\quad&=\left(y\frac{1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)}\right)
+g(\theta^Tx)(1-g(\theta^Tx))\frac{\partial}{\partial\theta_j}\theta^Tx\\
+&=(y(1-g(\theta^Tx))-(1-y)g(\theta^Tx))x_j\\
+&=(y-g(\theta^Tx))x_j=(y-h_\theta(x))x_j
+\end{align*}
+In the second equality we used the chain rule and the derivative of $g$ as derived earlier. We now
+have the stochastic gradient ascent rule:
+\begin{equation*}
+\theta_j:=\theta_j+\alpha(y^{(i)}-h_\theta(x^{(i)}))x^{(i)}_j
+\end{equation*}
+This appears similar to the LMS update rule, but this time our hypothesis $h$ is different.\\
+\vspace{1mm}\\
+\textbf{Link to logistic loss}\\
+Our rule can be viewed as a loss function by defining
+$\ell_\text{logistic}:\mathbb{R}\times\{0,1\}\to\mathbb{R}_{\geq0}$
+to be the \textit{logistic loss}:
+\begin{equation*}
+\ell_\text{logistic}(t,y)\triangleq y\log(1+\exp(-t))+
+(1-y)\log(1+\exp(t))
+\end{equation*}
+One can verify by plugging in $h_\theta(x)=1/(1+e^{-\theta^Tx})$ (which is our hypothesis here)
+that the \textit{negative} log likelihood can be rewritten as
+\begin{equation*}
+-\ell(\theta)=\ell_\text{logistic}(\theta^Tx,y)
+\end{equation*}
+(maximising the likelihood is the same as minimising the \textit{negative} likelihood)
+\newpage
 
+\subsection{Logistic regression and Perceptrons}
+Consider modifying the logistic regression method to `force' it to output values that are
+either 0 or 1 exactly. This can be done by changing the definition of $g$ to be the threshold function:
+\begin{equation*}
+g(z)=\begin{cases}
+1&\text{if }z\geq0\\
+0&\text{if }z<0
+\end{cases}
+\end{equation*}
+If we then let $h_\theta(x)=g(\theta^Tx)$ as before but using this modified definition of $g$, with the
+same update rule:
+\begin{equation*}
+\theta_j:=\theta_j+\alpha(y^{(i)}-h_\theta(x^{(i)}))x^{(i)}_j
+\end{equation*}
+then we have the \textit{perceptron learning algorithm}.
+Note that the perceptron is a very type of algorithm to logistic regression or least squares regression. 
+\newpage
 
+\subsection{Multi-class classification}
+Consider a classification problem where the response variable $y$ takes on any one of $k$ discrete values, so
+$y\in\{1,2,\ldots,k\}$. We can model this as distributed according to a \textit{multinomial distribution}.\\
+\vspace{1mm}\\
+(The idea of a multinomial distribution is just a generalisation of the binomial, think instead of 
+2 possible outcomes per trial for n trials (binomial), we have k possible outcomes per trial for n trials (multinomial))\\
+\vspace{1mm}\\
+In this case, $p(y|x;\theta)$ is a distribution over $k$ possible discrete outcomes (multinomial). 
+A multinomial distribution involves $k$ numbers $\phi_1,\ldots,\phi_k$ specifying
+the probability of each outcome. Naturally this also meansthey must satisfy
+\begin{equation*}
+\sum^k_{i=1}\phi_i=1
+\end{equation*}
 
 
 

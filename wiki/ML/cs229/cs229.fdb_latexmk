@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1733670127.38767 "cs229.tex" "cs229.pdf" "cs229" 1733670128.02935 0
+["pdflatex"] 1733746334.18281 "cs229.tex" "cs229.pdf" "cs229" 1733746334.82103 0
   "/etc/texmf/web2c/texmf.cnf" 1720557663.6242 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -56,6 +56,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb" 1248133631 31764 459c573c03a4949a528c2cc7f557e217 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty" 1591045760 12594 0d51ac3a545aaaa555021326ff22a6cc ""
@@ -90,9 +91,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1720557685.57372 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1720557728 8214000 057329cfd04c520b67b7761012d13353 ""
-  "cs229.aux" 1733670127.96554 1125 24dac3d3913f43f2e7ddab06ac7ebc7c "pdflatex"
-  "cs229.tex" 1733670126.09851 20263 9f385c70623e44f7a445090520570ed5 ""
-  "cs229.toc" 1733670127.96654 688 a4894614c7bd749e8a05be1dba5f21fd "pdflatex"
+  "cs229.aux" 1733746334.75409 1378 6c3957c3ba2a0dd2ce196fb9e83ae516 "pdflatex"
+  "cs229.tex" 1733746332.45292 24797 dc1038f067ac8e8a67e5dd09eb1965a1 ""
+  "cs229.toc" 1733746334.75509 859 530e383799c86c9c61d73a648d1676bc "pdflatex"
   "images/1.png" 1733479453.01059 21256 66b460b01af2d9720d7ad4fdf8f20c5a ""
   (generated)
   "cs229.aux"
