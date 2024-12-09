@@ -7,4 +7,4 @@
 \contentsline {subsection}{\numberline {1.1.5}Locally Weighted Linear Regression}{12}{}%
 \contentsline {subsection}{\numberline {1.1.6}Binary Classification and Logistic Regression}{13}{}%
 \contentsline {subsection}{\numberline {1.1.7}Logistic regression and Perceptrons}{16}{}%
-\contentsline {subsection}{\numberline {1.1.8}Multi-class classification}{17}{}%
+\contentsline {subsection}{\numberline {1.1.8}Multi-class softmax classification}{17}{}%

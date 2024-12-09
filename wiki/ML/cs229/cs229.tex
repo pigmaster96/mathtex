@@ -512,25 +512,70 @@ then we have the \textit{perceptron learning algorithm}.
 Note that the perceptron is a very type of algorithm to logistic regression or least squares regression. 
 \newpage
 
-\subsection{Multi-class classification}
+\subsection{Multi-class softmax classification}
+\textbf{Multinomial distribution}\\
 Consider a classification problem where the response variable $y$ takes on any one of $k$ discrete values, so
 $y\in\{1,2,\ldots,k\}$. We can model this as distributed according to a \textit{multinomial distribution}.\\
 \vspace{1mm}\\
-(The idea of a multinomial distribution is just a generalisation of the binomial, think instead of 
-2 possible outcomes per trial for n trials (binomial), we have k possible outcomes per trial for n trials (multinomial))\\
+The idea of a multinomial distribution is just a generalisation of the binomial---think instead of 
+2 possible outcomes per trial for n trials (binomial), we have k possible outcomes per trial for n trials (multinomial).\\
 \vspace{1mm}\\
 In this case, $p(y|x;\theta)$ is a distribution over $k$ possible discrete outcomes (multinomial). 
 A multinomial distribution involves $k$ numbers $\phi_1,\ldots,\phi_k$ specifying
-the probability of each outcome. Naturally this also meansthey must satisfy
+the probability of each outcome. Naturally this also means they must satisfy
 \begin{equation*}
 \sum^k_{i=1}\phi_i=1
 \end{equation*}
-
-
-
-
-
-
+\textbf{Softmax}\\
+We introduce $k$ groups of parameters $\theta_1,\ldots,\theta_k$ (for $k$ possible outcomes), each of them being a
+vector in $\mathbb{R}^d$ (corresponding to number of features). Intuitively, we would like to use
+$\theta_1^Tx,\ldots,\theta_k^Tx$ to represent $\phi_1,\ldots,\phi_k$ which correspond to the probabilities:
+\begin{equation*}
+\phi_i=P(y=i|x;\theta)
+\end{equation*}
+However, this won't work since the all the $\theta_j^Tx$ don't sum to 1, and they don't necessarily individually
+fall within $[0,1]$ anyway.\\
+\vspace{1mm}\\
+Thus, we consider the \textit{softmax} function to turn $(\theta_1^Tx,\cdots,\theta_k^Tx)$ into a probability 
+vector with nonnegative entries that sum to 1. We define
+softmax :$\mathbb{R}^k\to\mathbb{R}^k$ as
+\begin{equation*}
+\text{softmax}(t_1,\ldots,t_k)=\begin{bmatrix}
+\frac{\exp(t_1)}{\sum^k_{j=1}\exp(t_j)}\\\vdots\\
+\frac{\exp(t_k)}{\sum^k_{j=1}\exp(t_j)}\end{bmatrix}
+\end{equation*}
+The inputs $t$ are often called \textit{logits}. See that the entries of the output are always
+nonnegative and sum to 1.\\
+(next page)
+\newpage
+\noindent\textbf{Softmax (cont.)}\\
+Let $(t_1,\ldots,t_k)=(\theta_1^Tx,\cdots,\theta_k^Tx)$.
+We apply the softmax function to $(t_1,\ldots,t_k)$ and use the output as probabilities
+$P(y=1|x;\theta),\ldots,P(y=k|x;\theta)$:
+\begin{equation*}
+\begin{bmatrix}P(y=1|x;\theta)\\\vdots\\P(y=k|x;\theta)
+\end{bmatrix}=\text{softmax}(t_1,\cdots,t_k)=
+\begin{bmatrix}
+\frac{\exp(t_1)}{\sum^k_{j=1}\exp(t_j)}\\\vdots\\
+\frac{\exp(t_k)}{\sum^k_{j=1}\exp(t_j)}\end{bmatrix}
+\end{equation*}
+Essentially we let
+\begin{equation*}
+P(y=i|x;\theta)=\phi_i=\frac{\exp(t_i)}{\sum^k_{j=1}\exp(t_j)}=\frac{\exp(\theta_i^Tx)}{\sum^k_{j=1}
+\exp(\theta_j^Tx)}
+\end{equation*}
+\textbf{Likelihood and cross-entropy loss}\\
+Considering a \textit{single example}, we can write down
+the log-likelihood as
+\begin{equation*}
+-\log p(y|x,\theta)=-\log\left(\frac{\exp(t_y)}{\sum^k_{j=1}\exp(t_j)}\right)
+=-\log\left(\frac{\exp(\theta_y^Tx)}{\sum^k_{j=1}\exp(\theta_j^Tx)}\right)
+\end{equation*}
+See that we can write down the negative log-likelihood of \textit{all the training data} as
+\begin{equation*}
+\ell(\theta)=\sum^n_{i=1}-\log\left(\frac{\exp(\theta_{y^{(i)}}^Tx^{(i)})}{\sum^k_{j=1}
+\exp(\theta_j^Tx^{(i)})}\right)
+\end{equation*}
 
 
 
