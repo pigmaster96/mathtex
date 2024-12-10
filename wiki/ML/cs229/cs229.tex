@@ -597,12 +597,29 @@ We had the cross-entropy
 The cross-entropy has a simple gradient. Letting 
 $t=(t_1,\ldots,t_k)$ and recalling $\phi_i=\frac{\exp(t_i)}{\sum^k_{j=1}\exp(t_j)}$, we can derive
 \begin{equation*}
+\frac{\partial\ell_{\text{ce}}(t,y)}{\partial t_i}=\phi_i-1\{y=i\}
 \end{equation*}
-
-
-
-
-
+In vectorised notation we have the following form
+\begin{equation*}
+\frac{\partial\ell_{\text{ce}}(t,y)}{\partial t}=\phi-e_y
+\end{equation*}
+where $e_s\in\mathbb{R}^k$ is the $s$-th natural basis vector (where the $s$-th entry is 1 and all other entries
+are zeros).\\
+\vspace{1mm}\\
+\textbf{With respect to $\theta$}\\
+We want the gradient with respect to $\theta$; using the chain rule we have (for single example)
+\begin{equation*}
+\frac{\partial\ell_{\text{ce}}((\theta_1^Tx,\ldots,\theta_k^Tx),y)}{\partial\theta_i}
+=\frac{\partial\ell(t,y)}{\partial t_i}\cdot\frac{\partial t_i}{\partial\theta_i}=(\phi_i-1\{y=i\})\cdot x
+\end{equation*}
+We now have the gradient of the loss with respect to $\theta_i$ for the training data as
+\begin{equation*}
+\frac{\partial\ell(\theta)}{\partial\theta_i}
+=\sum^n_{j=1}(\phi_i^{(j)}-1\{y^{(j)}=i\})\cdot x^{(j)}
+\end{equation*}
+Remember that $\phi_i=\frac{\exp(t_i)}{\sum^k_{j=1}\exp(t_j)}$ denotes the predicted probability \textit{given the training example} and 
+$\theta$, and thus its
+value changes with each example (hence the superscript).
 \newpage
 
 \subsection{Derivation of gradient for cross-entropy loss}
@@ -610,6 +627,50 @@ The cross-entropy loss is given by
 \begin{equation*}
 \ell_{\text{ce}}((t_1,\ldots,t_k),y)=-\log\left(\frac{\exp(t_y)}{\sum^k_{j=1}\exp(t_j)}\right)
 \end{equation*}
+Letting $t=(t_1,\ldots,t_k)$ and recalling $\phi_i=\frac{\exp(t_i)}{\sum^k_{j=1}\exp(t_j)}$, 
+we take the gradient with respect to $t_i$. This falls into two cases:\\
+\vspace{1mm}\\
+\textbf{First case:} $y=i$\\
+Using the chain rule:
+\begin{equation*}
+\frac{\partial}{\partial t_y}(-\log(\phi_y))=
+\frac{\partial}{\partial\phi_y}(-\log(\phi_y))\cdot
+\frac{\partial\phi_y}{\partial t_y}=-\frac{1}{\phi_y}\cdot
+\frac{\partial\phi_y}{\partial t_y}
+\end{equation*}
+now product rule:
+\begin{align*}
+-\frac{1}{\phi_y}\cdot\frac{\partial\phi_y}{\partial t_y}
+&=-\frac{1}{\phi_y}\cdot\left(\phi_y+\left(-\frac{(\exp(t_y))^2}{\left(\sum^k_{j=1}\exp(t_j)\right)^2}\right)\right)
+\\&=-1+\frac{\sum^k_{j=1}\exp(t_j)}{\exp(t_y)}\cdot\frac{(\exp(t_y))^2}{\left(\sum^k_{j=1}\exp(t_j)\right)^2}\\
+&=\frac{\exp(t_y)}{\sum^k_{j=1}\exp(t_j)}-1=\phi_y-1
+\end{align*}
+\textbf{Second case:} $y\neq i$\\
+Same as before
+\begin{equation*}
+\frac{\partial}{\partial t_{i\neq y}}(-\log(\phi_y))=
+\frac{\partial}{\partial\phi_y}(-\log(\phi_y))\cdot
+\frac{\partial\phi_y}{\partial t_{i\neq y}}=-\frac{1}{\phi_y}\cdot
+\frac{\partial\phi_y}{\partial t_{i\neq y}}
+\end{equation*}
+but now instead we have
+\begin{align*}
+-\frac{1}{\phi_y}\cdot\frac{\partial\phi_y}{\partial t_{i\neq y}}&=
+\frac{\sum^k_{j=1}\exp(t_j)}{\exp(t_y)}\cdot
+\frac{\exp(t_y)\exp(t_{i\neq y})}{\left(\sum^k_{j=1}\exp(t_j)\right)^2}=\phi_{i\neq y}
+\end{align*}
+\textbf{Compact form}\\
+We can therefore write
+\begin{equation*}
+\frac{\partial\ell_{\text{ce}}(t,y)}{\partial t_i}=\phi_i-1\{y=i\}
+\end{equation*}
+Where $1\{\cdot\}$ denotes the indicator function.
+\newpage
+
+\subsection{}
+
+
+
 
 
 
