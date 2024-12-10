@@ -564,9 +564,9 @@ Essentially we let
 P(y=i|x;\theta)=\phi_i=\frac{\exp(t_i)}{\sum^k_{j=1}\exp(t_j)}=\frac{\exp(\theta_i^Tx)}{\sum^k_{j=1}
 \exp(\theta_j^Tx)}
 \end{equation*}
-\textbf{Likelihood and cross-entropy loss}\\
+\textbf{Likelihood and cross-entropy}\\
 Considering a \textit{single example}, we can write down
-the log-likelihood as
+the \textit{negative} log-likelihood as
 \begin{equation*}
 -\log p(y|x,\theta)=-\log\left(\frac{\exp(t_y)}{\sum^k_{j=1}\exp(t_j)}\right)
 =-\log\left(\frac{\exp(\theta_y^Tx)}{\sum^k_{j=1}\exp(\theta_j^Tx)}\right)
@@ -576,6 +576,41 @@ See that we can write down the negative log-likelihood of \textit{all the traini
 \ell(\theta)=\sum^n_{i=1}-\log\left(\frac{\exp(\theta_{y^{(i)}}^Tx^{(i)})}{\sum^k_{j=1}
 \exp(\theta_j^Tx^{(i)})}\right)
 \end{equation*}
+Defining the \textit{Cross-entropy loss} $\ell_{\text{ce}}:\mathbb{R}^k\times\{1,\ldots,k\}
+\to\mathbb{R}_{\geq0}$ (its just the negative log likelihood for one trial):
+\begin{equation*}
+\ell_{\text{ce}}((t_1,\ldots,t_k),y)=-\log\left(\frac{\exp(t_y)}{\sum^k_{j=1}\exp(t_j)}\right)
+\end{equation*}
+With that we can rewrite the negative log-likelihood of all the training data as
+\begin{equation*}
+\ell(\theta)=\sum^n_{i=1}\ell_{\text{ce}}((\theta_1^Tx^{(i)},\ldots,\theta_k^Tx^{(i)}),y^{(i)})
+\end{equation*}
+(We want to `tune' all the $\theta$ to maximise the likelihood/minimise the negative likelihood
+of the features $x^{(i)}$ `predicting' $y^{(i)}$.)\\
+(next page)
+\newpage
+\noindent\textbf{Minimising the cross-entropy}\\
+We had the cross-entropy
+\begin{equation*}
+\ell_{\text{ce}}((t_1,\ldots,t_k),y)=-\log\left(\frac{\exp(t_y)}{\sum^k_{j=1}\exp(t_j)}\right)
+\end{equation*}
+The cross-entropy has a simple gradient. Letting 
+$t=(t_1,\ldots,t_k)$ and recalling $\phi_i=\frac{\exp(t_i)}{\sum^k_{j=1}\exp(t_j)}$, we can derive
+\begin{equation*}
+\end{equation*}
+
+
+
+
+
+\newpage
+
+\subsection{Derivation of gradient for cross-entropy loss}
+The cross-entropy loss is given by
+\begin{equation*}
+\ell_{\text{ce}}((t_1,\ldots,t_k),y)=-\log\left(\frac{\exp(t_y)}{\sum^k_{j=1}\exp(t_j)}\right)
+\end{equation*}
+
 
 
 
