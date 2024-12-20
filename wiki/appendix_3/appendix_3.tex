@@ -18,6 +18,77 @@
 \chapter{Probability}
 
 \section{Fundamental concepts}
+
+\subsection{Permutations and Combinations, Binomial Coefficient}
+\textbf{$k$-permutations}\\
+Starting with $n$ distinct objects, and letting $k$ be some positive integer where $k\leq n$, 
+consider counting the number of different ways that we ca  pick $k$ out of these $n$ objects and arrange them
+into a sequence---the number of distinct $k$-object sequences.\\
+\vspace{1mm}\\
+We first have $n$ choices for the first object. 
+Having chosen the first, there are only $n-1$ possible choices for the second, $n-2$ for the third, and so on.
+This continues until we have chosen $k-1$ objects, leaving us with $n-(k-1)$ choices for the last one. The 
+number of possible sequences, called \textit{$k$-permutations}, can be written as
+\begin{equation*}
+n(n-1)\cdots(n-k+1)
+\end{equation*}
+This can be rewritten, giving us
+\begin{align*}
+n(n-1)\cdots(n-k+1)&=\frac{n(n-1)\cdots(n-k+1)(n-k)\cdots2\cdot1}{(n-k)\cdots2\cdot1}\\
+&=\frac{n!}{(n-k)!}
+\end{align*}
+See that in the special case where $k=n$ we have
+\begin{equation*}
+n(n-1)(n-2)\cdots2\cdot1=n!
+\end{equation*}
+(This can also be seen from substituting $k=n$ into the formula and recalling the convention $0!=1$.)
+(next page)
+\newpage
+\noindent\textbf{Reordering a set}\\
+Starting with $k$ objects, consider trying to find how many ways can we order them in a set of $k$ elements. 
+This follows a fairly similar principle to permutation; think of having $k$ `slots' to order $k$ elements in: 
+the first `slot' has $k$ possible inputs, the second $k-1$ and so on. See that this just gives us $k!$.\\
+\vspace{1mm}\\
+\textbf{Combinations}\\
+Combinations can be viewed as counting the number of $k$-element subsets of a given $n$-element set.
+Combinations are different from permutations in that
+\textit{there is no ordering of selected elements}. For instance, where the 2-permutations of the letters 
+A, B, C, and D are
+\begin{equation*}
+\text{AB, BA, AC, CA, AD, DA, BC, CB, BD, DB, CD, DC}
+\end{equation*}
+the \textit{combinations} of two out of these four letters are
+\begin{equation*}
+\text{AB, AC, AD, BC, BD, CD}
+\end{equation*}
+See that the `duplicates' are grouped together; for instance AB and BA are not viewed as distinct.\\
+\vspace{1mm}\\
+This reasoning can be generalised: each combination is associated with $k!$ `duplicate' $k$-permutations---all
+`duplicate' permutations of any given combination is just
+that permutation reordered for the maximum number of times:
+\begin{equation*}
+\text{(any single combination of length $k$)}\cdot k!=\text{(permutations of that combination)}
+\end{equation*}
+The number $n!/(n-k)!$ of $k$-permutations is equal to the number of combinations times $k!$. Hence the number of
+possible combinations is equal to
+\begin{equation*}
+\frac{n!}{k!\,(n-k)!}
+\end{equation*}
+\textbf{Binomial Coefficient}\\
+Consider a bernoulli process with probability $p$. We want the probility of $k$ `successes' in $n$ trials. 
+See that the probability of one \textit{specific} sequence of $n$ trials yielding $k$ `successes' would be
+\begin{equation*}
+p^k(1-p)^{n-k}
+\end{equation*}
+We obtain the desired probability by multiplying this by the number of \textit{combinations} of $k$ `successes' we
+can obtain in $n$ trials: 
+\begin{equation*}
+\binom{n}{k}p^k(1-p)^{n-k}
+\end{equation*}
+(think tossing a coin three times and obtaining two heads---the heads might occur on 
+the first and third tosses, or other \textit{combinations} of trials).
+\newpage
+
 \subsection{Expectation and Variance}
 \textbf{Expectation}\\
 We define the \textit{expected value} of a random variable $X$ with a PMF $p_X$ by
