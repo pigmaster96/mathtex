@@ -8,9 +8,11 @@
 \contentsline {subsection}{\numberline {A.1.6}Expectation and Variance of Bernoulli}{7}{}%
 \contentsline {subsection}{\numberline {A.1.7}Expectation of Discrete Uniform}{7}{}%
 \contentsline {subsection}{\numberline {A.1.8}Variance of Discrete Uniform}{9}{}%
-\contentsline {subsection}{\numberline {A.1.9}}{9}{}%
-\contentsline {chapter}{\numberline {B}Supplementary Notes}{10}{}%
-\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{10}{}%
-\contentsline {section}{\numberline {B.2}Telescoping series}{11}{}%
-\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{12}{}%
-\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{13}{}%
+\contentsline {section}{\numberline {A.2}Limit Theorems}{10}{}%
+\contentsline {subsection}{\numberline {A.2.1}Sample mean}{10}{}%
+\contentsline {subsection}{\numberline {A.2.2}Markov Inequality}{11}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{12}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{12}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{13}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{14}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{15}{}%

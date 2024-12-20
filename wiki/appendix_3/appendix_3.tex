@@ -41,7 +41,7 @@ See that in the special case where $k=n$ we have
 \begin{equation*}
 n(n-1)(n-2)\cdots2\cdot1=n!
 \end{equation*}
-(This can also be seen from substituting $k=n$ into the formula and recalling the convention $0!=1$.)
+(This can also be seen from substituting $k=n$ into the formula and recalling the convention $0!=1$.)\\
 (next page)
 \newpage
 \noindent\textbf{Reordering a set}\\
@@ -254,9 +254,51 @@ Therefore, the desired variance is given by the first case, but instead with $n=
 \begin{equation*}
 \boxed{\text{var}(X)=\frac{(b-a+1)^2-1}{12}=\frac{(b-a)(b-a+2)}{12}}
 \end{equation*}
+\newpage
 
-\subsection{}
+\section{Limit Theorems}
+\subsection{Sample mean}
+\textbf{Definition}\\
+Here we discuss asymptomatic behaviour of sequences of random variables. The principal context involves a sequence 
+$X_1,X_2,\ldots$ of independent identically distributed random variables with expectation $\mu$ and variance 
+$\sigma^2$.
+We denote
+\begin{equation*}
+S_n=X_1+\cdots+X_n
+\end{equation*}
+to be the sum of the first $n$ of them. Since they are independent we also have
+\begin{equation*}
+\text{var}(S_n)=\text{var}(X_1)+\ldots+\text{var}(X_n)=n\sigma^2
+\end{equation*}
+See that the distribution of $S_n$ spreads out (it's variance increases) as $n$ increases and doesn't have a 
+meaningful limit. Consider instead the \textit{sample mean}
+\begin{equation*}
+M_n=\frac{X_1+\cdots+X_n}{n}=\frac{S_n}{n}
+\end{equation*}
+\textbf{Expectation and Variance}\\
+We have the expectation as
+\begin{align*}
+\mathbb{E}[M_n]&=\frac{\mathbb{E}[X_1+\ldots+X_n]}{n}\\
+&=\frac{\mathbb{E}[X_1]+\ldots+\mathbb{E}[X_n]}{n}\\
+&=\frac{n\mu}{n}=\mu
+\end{align*}
+and the variance as
+\begin{equation*}
+\text{var}(M_n)=\frac{1}{n^2}\,\text{var}(S_n)=\frac{\sigma^2}{n}
+\end{equation*}
+See that the variance of $M_n$ decreases to 0 as $n$ increases.\\
+\vspace{1mm}\\
+With this consider a new random variable, that we modify based off $M_n$ and $S_n$:
+\begin{equation*}
+Z_n=\frac{S_n-n\mu}{\sigma\sqrt{n}}
+\end{equation*}
+This has the properties
+\begin{equation*}
+\mathbb{E}[Z_n]=0,\quad\text{var}(Z_n)=\frac{\text{var}(S_n-n\mu)}{\sigma^2n}=1
+\end{equation*}
+\newpage
 
+\subsection{Markov Inequality}
 
 
 
