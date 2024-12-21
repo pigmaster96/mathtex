@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1734701298.71062 "appendix_3.tex" "appendix_3.pdf" "appendix_3" 1734701299.68694 0
+["pdflatex"] 1734792721.6811 "appendix_3.tex" "appendix_3.pdf" "appendix_3" 1734792723.54963 0
   "/etc/texmf/web2c/texmf.cnf" 1720557663.6242 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -83,10 +83,11 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1720557685.57372 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1720557728 8214000 057329cfd04c520b67b7761012d13353 ""
-  "appendix_3.aux" 1734701299.62267 2544 cd8589c03fe4387da8b30638de10c242 "pdflatex"
-  "appendix_3.tex" 1734701297.0066 13566 70cde72e91eac0ab1b556afe7fd6f50e ""
-  "appendix_3.toc" 1734701299.62367 1465 e856ff85d06cdeaa2347e99862058400 "pdflatex"
+  "appendix_3.aux" 1734792723.48898 2756 81b604b0abe5e451bddbf70326daee8e "pdflatex"
+  "appendix_3.tex" 1734792717.94057 17402 c7d3d1723d449c727464f07290d354ee ""
+  "appendix_3.toc" 1734792723.48998 1595 1f5b94fa92bc7735e92b9f352c66a1f3 "pdflatex"
   "images/1.png" 1733591559.12811 102867 1ec84d05e09e940bd959deab3b4f3cbf ""
+  "images/2.png" 1734777781.83674 215004 0a27a033ae9fa3d0b6c8dadf85e5c3cd ""
   (generated)
   "appendix_3.aux"
   "appendix_3.log"

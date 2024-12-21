@@ -131,6 +131,10 @@ INPUT ./images/1.png
 INPUT ./images/1.png
 INPUT ./images/1.png
 INPUT ./images/1.png
+INPUT ./images/2.png
+INPUT ./images/2.png
+INPUT ./images/2.png
+INPUT ./images/2.png
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmex10.tfm

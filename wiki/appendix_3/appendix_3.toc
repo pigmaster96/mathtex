@@ -11,8 +11,10 @@
 \contentsline {section}{\numberline {A.2}Limit Theorems}{10}{}%
 \contentsline {subsection}{\numberline {A.2.1}Sample mean}{10}{}%
 \contentsline {subsection}{\numberline {A.2.2}Markov Inequality}{11}{}%
-\contentsline {chapter}{\numberline {B}Supplementary Notes}{12}{}%
-\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{12}{}%
-\contentsline {section}{\numberline {B.2}Telescoping series}{13}{}%
-\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{14}{}%
-\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{15}{}%
+\contentsline {subsection}{\numberline {A.2.3}Chebyshev Inequality}{13}{}%
+\contentsline {subsection}{\numberline {A.2.4}}{14}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{15}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{15}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{16}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{17}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{18}{}%
