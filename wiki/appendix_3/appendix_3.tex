@@ -403,7 +403,48 @@ since $(x-\mu)^2\geq g(x)$ for all $x$ we can write
 which can be arranged into the desired inequality.
 \newpage
 
+\subsection{Weak law of large numbers}
+\textbf{Justification}\\
+The weak law of large numbers asserts that the \textit{sample mean} of a large number of independent
+identically distributed random variables is very close to the expectation with high probability.\\
+\vspace{1mm}\\
+Considering a sequence of $X_1,X_2,\ldots$ of independent identically distributed random variables with 
+expectation $\mu$ and variance $\sigma^2$, recall the sample mean
+is defined as
+\begin{equation*}
+M_n=\frac{X_1+\ldots+X_n}{n}
+\end{equation*}
+We had the expectation as
+\begin{equation*}
+\mathbb{E}[M_n]=\frac{\mathbb{E}[X_1]+\ldots+\mathbb{E}[X_n]}{n}
+=\frac{n\mu}{n}=\mu
+\end{equation*}
+and the variance as
+\begin{equation*}
+\text{var}(M_n)=\frac{1}{n^2}\,\text{var}(X_1+\ldots+X_n)=\frac{n\text{var}(X)}{n^2}=\frac{\sigma^2}{n}
+\end{equation*}
+Applying the Chebyshev inequality gives us
+\begin{equation*}
+\mathbb{P}(|M_n-\mu|\geq\epsilon)\leq\frac{\sigma^2}{n\epsilon^2},\quad\text{for any $\epsilon>0$}
+\end{equation*}
+We observe that for any fixed $\epsilon>0$, the right hand side of this equation goes to 0 as $n$ increases.\\
+\vspace{1mm}\\
+\textbf{Definition}\\
+This is called the \textit{weak law of large numbers}: 
+Letting $X_1,X_2,\ldots$ be independent identically distributed random variables with mean $\mu$, 
+for every $\epsilon>0$ we have
+\begin{equation*}
+\boxed{\mathbb{P}(|M_n-\mu|\geq\epsilon)=\mathbb{P}\left(\left|\frac{X_1+\ldots+X_n}{n}-\mu\right|\geq\epsilon\right)
+\to0\quad\text{as $n\to\infty$}}
+\end{equation*}
+Intuitively, this means that for large $n$, the bulk of the distribution of $M_n$ is concentrated near $\mu$.
+That is, if we consider an interval $[\mu-\epsilon,\mu+\epsilon]$ around $\mu$, then there
+is a high probability that $M_n$ falls in that interval; as $n\to\infty$, this probability converges to 1.
+\newpage
+
 \subsection{}
+
+
 
 
 
