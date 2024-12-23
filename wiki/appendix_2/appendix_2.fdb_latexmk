@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1734941574.34366 "appendix_2.tex" "appendix_2.pdf" "appendix_2" 1734941575.47228 0
+["pdflatex"] 1734954932.93284 "appendix_2.tex" "appendix_2.pdf" "appendix_2" 1734954934.09003 0
   "/etc/texmf/web2c/texmf.cnf" 1720557663.6242 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -46,6 +46,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1248133631 36741 fa121aac0049305630cf160b86157ee4 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb" 1248133631 37912 77d683123f92148345f3fc36a38d9ab1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb" 1248133631 36281 c355509802a035cadc5f15869451dcee ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -53,6 +54,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb" 1248133631 31809 8670ca339bf94e56da1fc21c80635e2a ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb" 1248133631 32762 224316ccc9ad3ca0423a14971cfa7fc1 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1248133631 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb" 1248133631 32915 7bf7720c61a5b3a7ff25b0964421c9b6 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb" 1248133631 30457 bc0868ebece724ed7c3d37e3d9bff7bd ""
@@ -89,9 +91,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1707919699 40399 f2c302f7d2af602abb742093540a5834 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1720557685.57372 5472669 54eaf61a88b6b7896ebd0dac973cb29c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1720557728 8214000 057329cfd04c520b67b7761012d13353 ""
-  "appendix_2.aux" 1734941575.4042 2675 d1fda4259d2637b18749d2313d6618e4 "pdflatex"
-  "appendix_2.tex" 1734941572.73115 30762 9ccdf95033d6a195cdde35130f111e42 ""
-  "appendix_2.toc" 1734941575.4052 1746 a4441c829e54f6b3ac387178321990b7 "pdflatex"
+  "appendix_2.aux" 1734954934.01046 2772 643db8b99c177f33896f8b4687536c4b "pdflatex"
+  "appendix_2.tex" 1734954930.9573 34182 8d6ccae6e3ae5243902ae9b43b15dfc6 ""
+  "appendix_2.toc" 1734954934.01046 1802 d4f44a237d51a7d0613ba28fc88b452d "pdflatex"
   "images/1.png" 1732078759.04029 55799 0f74295b66850e7b3701c2c46b5b626e ""
   "images/2.png" 1732078759.04129 69029 9d37e40d15c32878a2cad9ad7fb9849f ""
   "images/3.png" 1732078759.04129 10003 101b39ec83d7b699794b71cbe5e6da52 ""
@@ -100,6 +102,7 @@
   "images/6.png" 1732078759.04229 9862 3e8f9bc738425df694810e5902996a7c ""
   "images/7.png" 1732078759.04229 5918 0e2c1c684decd9caba7db424b918e253 ""
   "images/8.png" 1732078759.04229 10183 ef9b2554703bc6abc8c2b6181c1b9680 ""
+  "images/9.png" 1734950938.52914 19082 13f333b7bcadbfef35f06231efa863b9 ""
   (generated)
   "appendix_2.aux"
   "appendix_2.log"

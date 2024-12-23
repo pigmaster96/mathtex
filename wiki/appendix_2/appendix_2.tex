@@ -673,8 +673,85 @@ Therefore we can also write the down the integral as
 \newpage
 
 \subsection{Finding $n$-th roots}
+To solve linear DEs with constant coefficients, we need to be able to find the real and complex roots of polynomial
+equations. Though a lot of this is done today with calculators and computers, one
+still has to know how to do an important special case by hand: finding the roots of 
+\begin{equation*}
+z^n=\alpha
+\end{equation*}
+where $\alpha$ is a complex number---finding the $n$-th roots of $\alpha$.\\
+\vspace{1mm}\\
+\textbf{$n$-th roots of unity}\\
+Consider first a special case; we want the solutions to
+\begin{equation*}
+z^n=1
+\end{equation*}
+We use polar representation for both sides, setting $z=re^{i\theta}$ on the left. See that
+\begin{equation*}
+\underbrace{r^ne^{in\theta}}_{(re^{i\theta})^n}
+=\underbrace{1\cdot e^{(2k\pi i)},\quad k=0,\pm1,\pm2,\ldots}_{=1}
+\end{equation*}
+Equating the absolute values and the arguments of each side:
+\begin{equation*}
+r^n=1,\quad n\theta=2k\pi,\quad k=0,\pm1,\pm2,\ldots
+\end{equation*}
+(notice the arguments for $k=a$ and $k=-a$, where $a$ is an integer, are the same) we can conclude that
+\begin{equation*}
+r=1,\quad\theta=\frac{2k\pi}{n},\quad k=0,1,\ldots,n-1
+\end{equation*}
+we don't need any integer values of $k$ other than $0,\ldots,n-1$---they would not produce a complex number
+that isn't already among the above $n$ numbers. See that if we add $an$, an integer multiple of $n$,
+to any $k$ we get the same complex number:
+\begin{equation*}
+\theta'=\frac{2(k+an)\pi}{n}=\theta+2a\pi\end{equation*}
+(this is the same as having $k=n,n+1,n+2\ldots$) so
+\begin{equation*}
+e^{i\theta'}=e^{i\theta}e^{2a\pi i}=e^{i\theta}
+\end{equation*}
+We can conclude therefore that \textit{the $n$-th roots of 1 are the numbers}
+\begin{equation*}
+e^{2k\pi i/n},\quad k=0,\ldots,n-1
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Roots of unity visualised}\\
+There are $n$ complex $n$-th roots of unity. Since they all have absolute value 1 ($r=1$) they all lie on the unit
+circle in the complex plane. They are evenly spaced around the unit circle; the angle between two consecuitive
+roots is $2\pi/n$.
+\begin{figure}[h]
+Illustrated here is the case for $n=6$:
+\begin{center}
+\includegraphics[width=10cm]{9}\\
+\end{center}
+The six solutions to $z^6=1$ lie on the unit circle in the complex plane. 
+See that we can express the roots of unity in
+a different notation:
+\begin{equation*}
+\text{\textit{the $n$-th roots of 1 are} }1,\zeta,\zeta^2,\ldots,\zeta^{n-1},\text{ where }\zeta=e^{2\pi i/n}
+\end{equation*}
+\end{figure}\\
+\textbf{General case}\\
+Now we generalise to find the $n$-th roots of an arbitrary complex number $w$. We start by writing $w$ in
+polar form:
+\begin{equation*}
+w=re^{i\theta};\quad\theta=\text{Arg}(w),0\leq\theta<2\pi
+\end{equation*}
+Here $\theta$ is the principal value of the polar angle of $w$. Following the same reasoning as before, see that
+\begin{equation*}
+z^n=re^{i(\theta+2\pi k)};\quad k=0,\pm1,\pm2,\ldots
+\end{equation*}
+where removing the redundant $k$  (this can be shown using the same methods as above) and solving gives us
+\begin{equation*}
+z=\sqrt[n]{r}e^{i(\theta+2\pi k)/n},\quad k=0,1,\ldots,n-1
+\end{equation*}
+See that these $n$ roots can be expressed with the roots of unity as
+\begin{equation*}
+\sqrt[n]{w}=z_0,z_0\zeta,z_0\zeta^2,\ldots,z_0\zeta^{n-1},\quad\text{where }z_0=\sqrt[n]{r}e^{i\theta/n}
+\end{equation*}
+($z_0$ is just the case where $k=0$) See that all of the $n$ roots satisfy $z^n=w$.
+\newpage
 
-
+\subsection{}
 
 
 
