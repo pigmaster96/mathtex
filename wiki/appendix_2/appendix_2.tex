@@ -567,7 +567,7 @@ We can now write
 \begin{equation*}
 x+iy=r(\cos(\theta)+i\sin(\theta))=re^{i\theta}
 \end{equation*}
-Polar representation in exponential form allows for much simpler multiplication of complex numbers. Since once can
+Polar representation in exponential form allows for much simpler multiplication of complex numbers. Since one can
 show that (using angle addition formulas)
 \begin{align*}
 e^{i\theta_1}e^{i\theta_2}&=(\cos(\theta_1)+i\sin(\theta_1))(\cos(\theta_2)+i\sin(\theta_2))\\
@@ -617,7 +617,7 @@ A=\sqrt{a^2+b^2},\quad\phi=\tan^{-1}\left(\frac{b}{a}\right)
 \end{equation*}
 See that
 \begin{align*}
-a\cos(\lambda t)+b\sin(\lambda t)&=\text{Re}((a-bi)(\cos(\lambda t+i\sin(\lambda t))\\
+a\cos(\lambda t)+b\sin(\lambda t)&=\text{Re}((a-bi)(\cos(\lambda t)+i\sin(\lambda t))\\
 &=\text{Re}(Ae^{-i\phi}\cdot e^{i\lambda t})\\
 &=\text{Re}(Ae^{i(\lambda t-\phi)})\\
 &=A\cos(\lambda t-\phi)
@@ -637,10 +637,46 @@ So see that
 \end{equation*}
 this can be extrapolated further to show
 \begin{align*}
-\cos(x)&=\text{Re}(e^{ix}),&\sin(x)&=\text{Im}(e^{ix}\\
+\cos(x)&=\text{Re}(e^{ix}),&\sin(x)&=\text{Im}(e^{ix})\\
 \cos(x)&=\frac{1}{2}(e^{ix}+e^{-ix}),&\sin(x)&=
 \frac{1}{2i}(e^{ix}-e^{-ix})
 \end{align*}
+\textbf{Derivatives and integrals}\\
+Note that a function like
+\begin{equation*}
+e^{ix}=\cos(x)+i\sin(x)
+\end{equation*}
+is a \textit{complex-valued function of the real variable} $x$. Such a function may be written as
+\begin{equation*}
+u(x)+iv(x),\quad u,v\text{ real-valued}
+\end{equation*}
+with its derivative and integral with respect to $x$ defined to be
+\begin{equation*}
+\text{a) }D(u+iv)=Du+iDv,\quad\text{b) }\int(u+iv)dx=\int udx+i\int vdx
+\end{equation*}
+It follows easily that
+\begin{equation*}
+D(e^{(a+ib)x})=(a+ib)e^{(a+ib)x}
+\end{equation*}
+since
+\begin{align*}
+D(e^{(a+ib)x})&=D(e^{ax}\cos(bx)+ie^{ax}\sin(bx))\\
+&=ae^{ax}\cos(bx)-be^{ax}\sin(bx)+i(ae^{ax}\sin(bx)+be^{ax}\cos(bx))\\
+&=e^{ax}\cos(bx)(a+ib)+e^{ax}\sin(bx)(ia+i^2b)\\
+&=(a+ib)e^{ax}(\cos(bx)+i\sin(bx))\\
+&=(a+ib)e^{(a+ib)x}
+\end{align*}
+Therefore we can also write the down the integral as
+\begin{equation*}
+\int e^{(a+ib)x}dx=\frac{1}{a+ib}e^{(a+ib)x}
+\end{equation*}
+\newpage
+
+\subsection{Finding $n$-th roots}
+
+
+
+
 
 
 
@@ -779,19 +815,4 @@ f(t)&=c_0+\sum_{n=1}^{\infty}[a_n\cos(nt)+b_n\sin(nt)],
 
 
 \end{document}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
