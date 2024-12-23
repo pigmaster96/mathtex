@@ -12,7 +12,7 @@
 \contentsline {subsection}{\numberline {A.1.10}Polar form and Euler Identity}{19}{}%
 \contentsline {subsection}{\numberline {A.1.11}More on Complex Exponentials}{22}{}%
 \contentsline {subsection}{\numberline {A.1.12}Finding $n$-th roots}{23}{}%
-\contentsline {subsection}{\numberline {A.1.13}}{25}{}%
+\contentsline {subsection}{\numberline {A.1.13}Sinusoidal functions}{25}{}%
 \contentsline {subsection}{\numberline {A.1.14}Superposition (Second order ODEs)}{26}{}%
 \contentsline {subsection}{\numberline {A.1.15}General solution for inhomogenous linear ODEs}{27}{}%
 \contentsline {subsection}{\numberline {A.1.16}Existence and uniqueness}{28}{}%
