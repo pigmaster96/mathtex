@@ -14,10 +14,11 @@
 \contentsline {subsection}{\numberline {A.1.12}Finding $n$-th roots}{23}{}%
 \contentsline {subsection}{\numberline {A.1.13}Sinusoidal functions}{25}{}%
 \contentsline {subsection}{\numberline {A.1.14}Solution to the Constant Coefficient First Order Equation}{27}{}%
-\contentsline {subsection}{\numberline {A.1.15}}{29}{}%
-\contentsline {subsection}{\numberline {A.1.16}Superposition (Second order ODEs)}{30}{}%
-\contentsline {subsection}{\numberline {A.1.17}General solution for inhomogenous linear ODEs}{31}{}%
-\contentsline {subsection}{\numberline {A.1.18}Existence and uniqueness}{32}{}%
-\contentsline {subsection}{\numberline {A.1.19}Exponential response formula}{32}{}%
-\contentsline {section}{\numberline {A.2}Fourier Series}{32}{}%
-\contentsline {subsection}{\numberline {A.2.1}Fourier Series}{32}{}%
+\contentsline {subsection}{\numberline {A.1.15}First Order Response to Sinusoidal/Exponential Input---complex replacement}{29}{}%
+\contentsline {subsection}{\numberline {A.1.16}Amplitude, Phase, Gain, and Bode Plots}{31}{}%
+\contentsline {subsection}{\numberline {A.1.17}Superposition (Second order ODEs)}{32}{}%
+\contentsline {subsection}{\numberline {A.1.18}General solution for inhomogenous linear ODEs}{33}{}%
+\contentsline {subsection}{\numberline {A.1.19}Existence and uniqueness}{34}{}%
+\contentsline {subsection}{\numberline {A.1.20}Exponential response formula}{34}{}%
+\contentsline {section}{\numberline {A.2}Fourier Series}{34}{}%
+\contentsline {subsection}{\numberline {A.2.1}Fourier Series}{34}{}%

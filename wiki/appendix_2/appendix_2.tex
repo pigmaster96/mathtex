@@ -850,7 +850,77 @@ When $k\leq0$ the homogeneous solution $e^-{kt}$ does not decay asymptotically t
 case it does not make sense to talk about the steady-state solution.
 \newpage
 
-\subsection{}
+\subsection{First Order Response to Sinusoidal/Exponential Input---complex replacement}
+\textbf{Context}\\
+Consider solving the first order constant coefficient DE with sinusoidal input
+\begin{equation*}
+\dot{x}+kx=B\cos(\omega t)
+\end{equation*}
+The idea here is to replace $\cos(\omega t)$ by the complex exponenial $e^{i\omega t}$; this is called
+\textit{complex replacement}.\\
+\vspace{1mm}\\
+\textbf{Complex Replacement}\\
+Consider introducing a new variable $y$ with its own related ODE:
+\begin{equation*}
+\dot{y}+ky=B\sin(\omega t)
+\end{equation*}
+Combining $x$ and $y$ to make a complex variable $z=x+iy$, see that we get
+\begin{equation*}
+\dot{z}+kz=B(\cos(\omega t)+i\sin(\omega t))=Be^{i\omega t}
+\end{equation*}
+where
+\begin{equation*}
+\cos(\omega t)=\text{Re}(e^{i\omega t})\quad\text{and}\quad x=\text{Re}(z)
+\end{equation*}
+\textbf{Exponential input}\\
+Using complex replacement we now have the same problem but with exponential input
+\begin{equation*}
+\dot{z}+kz=Be^{i\omega t}
+\end{equation*}
+This can be solved using integrating factors, but we present a simpler solution: consider a particular solution of 
+the form $z_p(t)=Ae^{i\omega t}$ (this is a reasonable choice given that differentiation reproduces exponentials); 
+this gives us
+\begin{equation*}
+\dot{z}_p+kz_p=i\omega Ae^{i\omega t}+kAe^{i\omega t}
+=(k+i\omega)Ae^{i\omega t}
+\end{equation*}
+so we have
+\begin{equation*}
+(k+i\omega)Ae^{i\omega t}=Be^{i\omega t}\implies A=B/(k+i\omega)
+\end{equation*}
+As such we have the particular solution
+\begin{equation*}
+z_p(t)=Be^{i\omega t}/(k+i\omega)
+\end{equation*}
+simplifying with polar coordinates:
+\begin{equation*}
+z_p(t)=\frac{Be^{i\omega t}}{\sqrt{k^2+\omega^2}e^{i\phi}}
+=\frac{Be^{i(\omega t-\phi)}}{\sqrt{k^2+\omega^2}}
+\end{equation*}
+since
+\begin{equation*}
+k+i\omega=\sqrt{k^2+\omega^2}e^{i\phi},\quad\text{where }\phi=\tan^{-1}(\omega/k)\text{ in the first quadrant}
+\end{equation*}
+Since $\tan^{-1}$ is ambiguous ($\tan(\pi/4)=\tan(5\pi/4)=1$), we clarify by saying which quadrant the
+complex number is in. In this case since $k,\omega>0$ its the first quadrant.\\
+(next page)
+\newpage
+\noindent\textbf{Solving for sinusoidal input}\\
+We have 
+\begin{equation*}
+z_p(t)=\frac{Be^{i(\omega t-\phi)}}{\sqrt{k^2+\omega^2}}
+\end{equation*}
+we wanted $x_p$, where $x_p=\text{Re}(z_p)$:
+\begin{equation*}
+x_p(t)=\frac{B}{\sqrt{k^2+\omega^2}}\cos(\omega t-\phi)
+\end{equation*}
+To get the general solution we add the homogeneous solution:
+\begin{equation*}
+x(t)=x_p(t)+Ce^{-kt}=\frac{B}{\sqrt{k^2+\omega^2}}\cos(\omega t-\phi)+Ce^{-kt}
+\end{equation*}
+\newpage
+
+\subsection{Amplitude, Phase, Gain, and Bode Plots}
 
 
 \newpage
