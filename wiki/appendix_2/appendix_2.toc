@@ -13,9 +13,11 @@
 \contentsline {subsection}{\numberline {A.1.11}More on Complex Exponentials}{22}{}%
 \contentsline {subsection}{\numberline {A.1.12}Finding $n$-th roots}{23}{}%
 \contentsline {subsection}{\numberline {A.1.13}Sinusoidal functions}{25}{}%
-\contentsline {subsection}{\numberline {A.1.14}Superposition (Second order ODEs)}{27}{}%
-\contentsline {subsection}{\numberline {A.1.15}General solution for inhomogenous linear ODEs}{28}{}%
-\contentsline {subsection}{\numberline {A.1.16}Existence and uniqueness}{29}{}%
-\contentsline {subsection}{\numberline {A.1.17}Exponential response formula}{29}{}%
-\contentsline {section}{\numberline {A.2}Fourier Series}{29}{}%
-\contentsline {subsection}{\numberline {A.2.1}Fourier Series}{29}{}%
+\contentsline {subsection}{\numberline {A.1.14}Solution to the Constant Coefficient First Order Equation}{27}{}%
+\contentsline {subsection}{\numberline {A.1.15}}{29}{}%
+\contentsline {subsection}{\numberline {A.1.16}Superposition (Second order ODEs)}{30}{}%
+\contentsline {subsection}{\numberline {A.1.17}General solution for inhomogenous linear ODEs}{31}{}%
+\contentsline {subsection}{\numberline {A.1.18}Existence and uniqueness}{32}{}%
+\contentsline {subsection}{\numberline {A.1.19}Exponential response formula}{32}{}%
+\contentsline {section}{\numberline {A.2}Fourier Series}{32}{}%
+\contentsline {subsection}{\numberline {A.2.1}Fourier Series}{32}{}%

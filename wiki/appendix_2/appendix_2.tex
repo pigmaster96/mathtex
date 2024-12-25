@@ -787,8 +787,70 @@ f(t)=A\cos(\omega(t-\tau))
 (next page)
 \newpage
 \noindent\textbf{Example}\\
+\begin{figure}[h]
+In the figure below the dotted curve is $\cos(t)$ and the solid curve is $2.5\cos(\pi t-\pi/2)$. The solid
+curve has
+\begin{equation*}
+A=2.5,\quad\omega=\pi,\quad\phi=\pi/2,\quad\tau=1/2
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{10}\\
+\end{center}
+\end{figure}
+\newpage
 
+\subsection{Solution to the Constant Coefficient First Order Equation}
+\textbf{Solution}\\
+Considering the constant coefficient equation (constant coefficient meaning $k$ is a constant)
+\begin{equation*}
+\dot{y}+ky=q(t)
+\end{equation*}
+This is easily solvable by integrating factor:
+\begin{align*}
+y&=e^{-kt}\left(\int e^{kt}q(t)dt+c\right)\\
+&=e^{-kt}\int e^{kt}q(t)dt+ce^{-kt}
+\end{align*}
+(integrating factor gives us a way of finding the particular solution, but see that it also gives us the 
+homogeneous solution) We have the \textit{particular} solution and \textit{homogeneous} solution respectively
+\begin{equation*}
+y_p(t)=e^{-kt}\int e^{kt}q(t)dt\quad\text{and}\quad
+y_h(t)=e^{-kt}
+\end{equation*}
+The general solution is then
+\begin{equation*}
+y(t)=y_p(t)+cy_h(t)
+\end{equation*}
+\textbf{Behaviour for $k>0$:}\\
+For $k>0$ the system models \textit{exponential decay}. When the input is 0 the system response is $y(t)=ce^{-kt}$, 
+which decays exponentially to 0 as $t$ goes to $\infty$.\\
+\vspace{1mm}\\
+In the general solution we call $ce^{-kt}$ the \textit{transient} because it goes to 0. The other term 
+$e^{-kt}\int e^{kt}q(t)dt$ is called the \textit{steady-state/long-term} solution. That is, $cy_h$ is the transient
+and $y_p$ is the steady-state solution.\\
+\vspace{1mm}\\
+The value of $c$ is determined by the initial value $y(0)$. See that this initial value only affects the transient
+and not the long-term behaviour of the solution---no matter what the initial condition, every solution goes
+asymptotically to the steady-state---all solution curves approach the steady-state as $t\to\infty$.\\
+\vspace{1mm}\\
+(next page)
+\newpage
+\noindent\textbf{Behaviour for $k>0$ illustrated}\\
+In the case $k>0$ all solutions go asymptotically to the 
+steady-state:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{11}\\
+\end{center}
+Since all the solutions approach each other, there is no precise way to choose the one to we call the 
+steady-state---we can \textit{choose any one} to be the steady-state solution. 
+Generally we just choose the simplest looking solution.
+\end{figure}\\
+\textbf{The case $k\leq0$:}\\
+When $k\leq0$ the homogeneous solution $e^-{kt}$ does not decay asymptotically to 0---it is not transient. In this
+case it does not make sense to talk about the steady-state solution.
+\newpage
 
+\subsection{}
 
 
 \newpage
