@@ -920,7 +920,50 @@ x(t)=x_p(t)+Ce^{-kt}=\frac{B}{\sqrt{k^2+\omega^2}}\cos(\omega t-\phi)+Ce^{-kt}
 \end{equation*}
 \newpage
 
-\subsection{Amplitude, Phase, Gain, and Bode Plots}
+\subsection{Amplitude, Phase, Gain, and Bode Plots\\---Terminology and introduction}
+\textbf{Terminology}\\
+We found that the ODE
+\begin{equation*}
+\dot{x}+kx=kB\cos(\omega t)
+\end{equation*}
+has a particular solution
+\begin{equation*}
+x(t)=\frac{kB}{\sqrt{k^2+\omega^2}}\cos(\omega t-\phi)
+\end{equation*}
+where $\phi=\tan^{-1}(\omega/k)$. If we consider the input to be $B\cos(\omega t)$ then the 
+gain $g$ (output amplitude/input amplitude) is $g=k/\sqrt{k^2+\omega^2}$:
+\begin{equation*}
+x(t)=gB\cos(\omega t-\phi)
+\end{equation*}
+We define the terminology as follows:
+\begin{itemize}
+\item $B\cos(\omega t)$ is the input/input signal.
+\item $B$ is the input amplitude and $\omega$ is the input angular/circular frequency.
+\item $x(t)$ is the output or response.
+\item $g=k/\sqrt{k^2+\omega^2}$ is called the gain/amplitude response. 
+See that the input amplitude is scaled by the gain to give the output amplitude.
+\item $\phi$ is called the phase lag.
+\end{itemize}
+(next page)
+\newpage
+\noindent\textbf{Bode plots}\\
+Since $g$ and $\phi$ vary with 
+$\omega$, we can regard them as functions of $\omega$---$g(\omega)$ and $\phi(\omega)$.
+$k$ is called the \textit{coupling constant}. Consider the graphs of $g(\omega)$ and $-\phi(\omega)$ for 
+the values of coupling constant $k=.25,.5,.75,1,1.25,1.5$:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{12}\\
+\end{center}
+\end{figure}\\
+These graphs are essentially \textit{Bode plots}. (Bode plots display $\log g(\omega)$ and $-\phi(\omega)$ against 
+$\log\omega$).
+\newpage
+
+\subsection{}
+
+
+
 
 
 \newpage
