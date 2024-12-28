@@ -1010,7 +1010,57 @@ To summarise, these statements all mean the same thing:
 \item $y(t)=y_0$ is an equilibrium solution.
 \item $y=y_0$ is a critical point.
 \end{enumerate}
+Consider the direction field for these solutions; (recall each isocline represents $f(y)=c$) they correspond to the
+\textit{nullclines}, where $f(y)=0$:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{14}\\
+\end{center}
+\end{figure}\\
+(Note that the nullclines are also solution curves, if $y$ starts at $M$ it will never change since its
+derivative will be 0 forever.) For a clear picture of the other isoclines consider
+a graph of $f(y)$ against $y$:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{15}\\
+\end{center}
+\end{figure}\\
+See that 
+\begin{align*}
+\text{for }y<0\quad&\dot{y}=f(y)\text{ is negative,}\\
+\text{for }0<y<M\quad&\dot{y}=f(y)\text{ is positive,}\\
+\text{for }M<y\quad&\dot{y}=f(y)\text{ is negative}
+\end{align*}
+These are indicated on the graph by the arrows on the horizontal axis.\\
+(next page)
+\newpage
+\noindent\textbf{Direction field}\\
+We sketch the direction field and some solution curves:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{16}\\
+\end{center}
+See that
+\begin{enumerate}
+\item Since the isoclines are constant in the $t$ direction any solution curve can be translated left or right and 
+still be a solution---time invariance.
+\item Since the lines $y=0$ and $y=M$ are solutions the other curves can't cross them.
+\item The solutions that start above $y=0$ must increase, and since they can't cross $y=M$ they 
+tend toward it asymptotically. These bounded solutions
+are called \textit{logistic curves}. They represent small populations increasing to $M$.
+\item If the population exceeds $M$, they tend back towards it. This represents overpopulation. M is called the 
+\textit{carrying capacity} of the environment.
+\item Although it doesn't make sense to model a negative numbered population $y<0$, mathematically the solution
+curves that start below $y=0$ decrease without bound.
+\end{enumerate}
+\end{figure}\\
+\textbf{Stable and Unstable Equilibria}\\
+See that solution curves near the equilibrium $y=M$ tend asymptotically towards it; this is called a 
+\textit{stable equilibrium}. Solution curves near the other equilibrium $y=0$ tend away from it; this is called
+an \textit{unstable equilibrium}.
+\newpage
 
+\subsection{Phase lines}
 
 
 

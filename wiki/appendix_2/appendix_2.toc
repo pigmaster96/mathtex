@@ -17,9 +17,10 @@
 \contentsline {subsection}{\numberline {A.1.15}First Order Response to Sinusoidal/Exponential Input---complex replacement}{29}{}%
 \contentsline {subsection}{\numberline {A.1.16}Amplitude, Phase, Gain, and Bode Plots\\---Terminology and introduction}{31}{}%
 \contentsline {subsection}{\numberline {A.1.17}Autonomous equations, Logistic Model}{33}{}%
-\contentsline {subsection}{\numberline {A.1.18}Superposition (Second order ODEs)}{35}{}%
-\contentsline {subsection}{\numberline {A.1.19}General solution for inhomogenous linear ODEs}{36}{}%
-\contentsline {subsection}{\numberline {A.1.20}Existence and uniqueness}{37}{}%
-\contentsline {subsection}{\numberline {A.1.21}Exponential response formula}{37}{}%
-\contentsline {section}{\numberline {A.2}Fourier Series}{37}{}%
-\contentsline {subsection}{\numberline {A.2.1}Fourier Series}{37}{}%
+\contentsline {subsection}{\numberline {A.1.18}Phase lines}{36}{}%
+\contentsline {subsection}{\numberline {A.1.19}Superposition (Second order ODEs)}{37}{}%
+\contentsline {subsection}{\numberline {A.1.20}General solution for inhomogenous linear ODEs}{38}{}%
+\contentsline {subsection}{\numberline {A.1.21}Existence and uniqueness}{39}{}%
+\contentsline {subsection}{\numberline {A.1.22}Exponential response formula}{39}{}%
+\contentsline {section}{\numberline {A.2}Fourier Series}{39}{}%
+\contentsline {subsection}{\numberline {A.2.1}Fourier Series}{39}{}%
