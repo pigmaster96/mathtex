@@ -960,7 +960,60 @@ These graphs are essentially \textit{Bode plots}. (Bode plots display $\log g(\o
 $\log\omega$).
 \newpage
 
-\subsection{}
+\subsection{Autonomous equations, Logistic Model}
+Here we consider \textit{autonomous first order differential equations}. These are (in general) nonlinear equations
+of the form
+\begin{equation*}
+\dot{x}=f(x)
+\end{equation*}
+(compare this with the general first order ODE $\dot{x}=f(x,t)$.) The word autonomous means self governing---the
+rate of change of $x$ is governed by $x$ itself and is not dependent on time.\\
+\vspace{1mm}\\
+\textbf{Example: Logistic Population Model}\\
+Suppose we have a model for a population $y$ with variable growth rate $k(y)$ which depends on the current
+population but \textit{not on time}:
+\begin{equation*}
+\dot{y}=k(y)\cdot y
+\end{equation*}
+Say we model $k(y)$ as
+\begin{figure}[h]
+\begin{equation*}
+k(y)=k_0\left(1-\frac{y}{M}\right)
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{13}\\
+\end{center}
+\end{figure}\\
+The idea here is that population growth is positive until the population reaches some $M$, after which it becomes 
+negative and declines until it becomes lower than $M$.
+In the simplest version of this we model $k(y)$ as a straight line as above. The final equation is known as the 
+\textit{logistic population model}:
+\begin{equation*}
+\dot{y}=k_0(1-(y/M))y=f(y)
+\end{equation*}
+The equation is nonlinear and autonomous. 
+Autonomous equations are always separable; in this case partial fractions could be used to compute an
+integral, but here we consider a qualitative approach.\\
+(next page)
+\newpage
+\noindent\textbf{Qualitative perspective}\\
+We start by looking for \textit{constant} solutions
+$y(t)=y_0$. We do this by considering $\dot{y}=0$; see that this occurs in two situations, either
+\begin{equation*}
+y(t)=0,\quad\text{or}\quad y(t)=M
+\end{equation*}
+Because a system at equilibrium is unchanging, we call these solutions \textit{equilibrium solutions}. 
+Since equilibrium is achieved when $y$ is $0$ or $M$ we call $0$ and $M$ the \textit{critical points} of the DE. 
+To summarise, these statements all mean the same thing:
+\begin{enumerate}
+\item $f(y_0)=0$.
+\item $y(t)=y_0$ is an equilibrium solution.
+\item $y=y_0$ is a critical point.
+\end{enumerate}
+
+
+
+
 
 
 
