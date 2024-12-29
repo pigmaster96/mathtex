@@ -16,7 +16,7 @@
 
 \appendix
 \chapter{Differential Equations}
-\section{Fundamentals}
+\section{First Order Differential Equations}
 \subsection{Introduction to Ordinary Differential Equations\\(ODEs)} %030624
 Here we introduce intuition for  Ordinary Differential Equations (ODEs) and introductory solving methods.\\
 \vspace{1mm}\\
@@ -960,7 +960,7 @@ These graphs are essentially \textit{Bode plots}. (Bode plots display $\log g(\o
 $\log\omega$).
 \newpage
 
-\subsection{Autonomous equations, Logistic Model}
+\subsection{Autonomous equations, Logistic Model,\\Stable/Unstable equilibria}
 Here we consider \textit{autonomous first order differential equations}. These are (in general) nonlinear equations
 of the form
 \begin{equation*}
@@ -1060,7 +1060,7 @@ See that solution curves near the equilibrium $y=M$ tend asymptotically towards 
 an \textit{unstable equilibrium}.
 \newpage
 
-\subsection{Phase lines}
+\subsection{Phase lines, Semistable equilibria}
 \textit{Phase lines} allows for the essential content of an autonomous DE:
 \begin{equation*}
 \dot{y}=f(y)
@@ -1078,14 +1078,57 @@ Consider the simple autonomous equation
 \begin{equation*}
 \dot{y}=3y
 \end{equation*}
-First we find the critical points; see that only one critical point exists: $y=0$. 
-Next we plot the graph of $f(y)$ (in this case a straight line); see that $\dot{y}>0$ for $y>0$ and $\dot{y}<0$ for $y<0$:
+1) First we find the critical points; see that only one critical point exists: $y=0$. 
+2) Next we plot the graph of $f(y)$ (in this case a straight line); see that $\dot{y}>0$ for $y>0$ and $\dot{y}<0$ for $y<0$:
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=10cm]{17}\\
 \end{center}
 \end{figure}\\
-With this we can draw the phase line. 
+(next page)
+\newpage
+\noindent\textbf{Example 1 (cont.)}\\
+3) With this we can draw the phase line as outlined above. Since the arrows on the phase line point
+away from the critical point, the equilibrium is \textit{unstable}:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{18}\\
+\end{center}
+4) See how the phase line conveys qualitiative information. The equilibrium solution corresponds to the critical
+point.
+\end{figure}\\
+\textbf{Example 2: Logistic equation}\\
+Now consider the same solution for the logistic equation:
+\begin{figure}[h]
+\begin{equation*}
+\dot{y}=k_0(1-y/M)y
+\end{equation*}
+With critical points $y=0,y=M$:
+\begin{center}
+\includegraphics[width=9cm]{19}\\
+\end{center}
+\end{figure}\\
+(next page)
+\newpage
+\noindent\textbf{Semistable Equilibria}\\
+Some equilibria are stable on one side and unstable on the other. We call them \textit{semistable}. 
+Consider the DE
+\begin{equation*}
+\dot{y}=y^2
+\end{equation*}
+With only one critical point $y=0$:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{20}\\
+\end{center}
+\end{figure}
+\newpage
+
+\section{Second Order Constant Coefficient Linear Equations}
+
+
+
+
 
 
 
