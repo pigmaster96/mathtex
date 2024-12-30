@@ -1125,7 +1125,110 @@ With only one critical point $y=0$:
 \newpage
 
 \section{Second Order Constant Coefficient Linear Equations}
+\subsection{Second Order Physical systems---\\Spring-Mass-Dashpot}
+\textbf{Spring and Mass}\\
+Here we model a second order differential equation. Consider a spring attached to a wall and a cart:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{21}\\
+\end{center}
+Consider the coordinate system set in a way that at $x=0$ the spring doesn't exert any force---the equilibrium 
+position. Now also consider an external force acting on the mass, the system can be modelled as
+\begin{equation*}
+m\ddot{x}=F_\text{spr}+F_\text{ext}
+\end{equation*}
+The spring's behaviour can be characterised by the fact that it depends on the deviation from equilibrium position,
+meaning
+\begin{align*}
+\text{if }x>0,\quad&F_\text{spr}(x)<0\\
+\text{if }x=0,\quad&F_\text{spr}(x)=0\\
+\text{if }x<0,\quad&F_\text{spr}(x)>0
+\end{align*}
+The simplest way to model the force exerted by the spring (which is valid in general for small $x$) is
+\begin{equation*}
+F_\text{spr}(x)=-kx,\text{ where }k>0
+\end{equation*}
+This is called \textit{Hooke's law}, and $k$ is called the \textit{spring constant}.
+\end{figure}\\
+Replacing $F_\text{spr}$ by $-kx$ we get
+\begin{equation*}
+m\ddot{x}+kx=F_\text{ext}
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Dashpot}\\
+Any real mechanical system has friction, which can take many forms; it is characterised by the fact that it
+depends on the motion of the mass. We will suppose that
+it depends only on the velocity of the mass and not on its
+position.\\
+\vspace{1mm}\\
+Often dampening is controlled by a device called
+the \textit{dashpot} (its a cylinder filled with oil that a piston moves through):
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{22}\\
+\end{center}
+We write $F_\text{dash}(\dot{x})$ for the force exerted by the dashpot. It opposes the velocity:
+\begin{align*}
+\text{if }\dot{x}>0,\quad&F_\text{dash}(\dot{x})<0\\
+\text{if }\dot{x}=0,\quad&F_\text{dash}(\dot{x})=0\\
+\text{if }\dot{x}<0,\quad&F_\text{dash}(\dot{x})>0
+\end{align*}
+The simplest way to model this (which is also valid for small $\dot{x}$) is
+\begin{equation*}
+F_\text{dash}(\dot{x})=-b\dot{x},\text{ where }b>0
+\end{equation*}
+This is called \textit{linear damping}, and $b$ is called the \textit{damping constant}.
+\end{figure}\\
+Putting this together
+\begin{equation*}
+m\ddot{x}=F_\text{spr}+F_\text{dash}+F_\text{ext}
+\end{equation*}
+we get the differential equation for the displacement $x$ of the mass from equilibrium as
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=F_\text{ext}
+\end{equation*}
+\newpage
 
+\subsection{Linear DEs---Notation}
+A \textit{linear differential equation} is of the following form:
+\begin{equation*}
+a_nx^{(n)}+a_{n-1}x^{(n-1)}+\cdots+a_1\dot{x}+a_0x=q(t)
+\end{equation*}
+The $a_k$ are the \textit{coefficients}; they may depend on $t$. If $a_n$ is not
+zero then the differential equation is said to be of order $n$.\\
+\vspace{1mm}\\
+If the $a_k$ are constant then the equation is said to be a \textit{constant coefficient linear equation}.
+
+\subsection{Second order homogeneous constant coefficient\\linear equations---Spring system, 
+Simple harmonic oscillator}
+Consider the spring system in the case where $F_\text{ext}=0$:
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=0
+\end{equation*}
+With no external force the equation is \textit{homogeneous}.\\
+\vspace{1mm}\\
+\textbf{Undamped case: Simple harmonic oscillator}\\
+The special case where $b=0$ (no dashpot) is called \textit{undamped}. This is called the \textit{simple harmonic
+oscillator}.  We can write its ODE as
+\begin{equation*}
+\ddot{x}+\frac{k}{m}x=0
+\end{equation*}
+If we let $\omega=\sqrt{k/m}$ our equation becomes
+\begin{equation*}
+\ddot{x}+\omega^2x=0
+\end{equation*}
+See that $x_1(t)=\cos(\omega t)$ and $x_2(t)=\sin(\omega t)$ are solutions to this equation. Since the equation is
+linear we can use superposition of solutions to get
+the solution
+\begin{equation*}
+x(t)=a\cos(\omega t)+b\sin(\omega t)=A\cos(\omega t-\phi)
+\end{equation*}
+This is the \textit{general solution}. We know it gives every solution because
+$x(0)=a$ and $\dot{x}(0)=\omega b$---by solving (uniquely) for $a$ and $b$ we can get any desired initial condition.
+\newpage
+
+\subsection{}
 
 
 

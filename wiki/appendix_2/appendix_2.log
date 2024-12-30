@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.10)  29 DEC 2024 11:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.10)  30 DEC 2024 13:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -212,153 +212,165 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./appendix_2.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./appendix_2.toc [1
+
+])
 \tf@toc=\write3
 \openout3 = `appendix_2.toc'.
 
- [1
-
-]
+ [2]
 Appendix A.
-[2
+[3
 
-] [3] [4]
-<./images/1.png, id=31, 577.15625pt x 359.3425pt>
+] [4] [5]
+<./images/1.png, id=34, 577.15625pt x 359.3425pt>
 File: ./images/1.png Graphic file (type png)
 <use ./images/1.png>
 Package pdftex.def Info: ./images/1.png  used on input line 104.
 (pdftex.def)             Requested size: 284.52756pt x 177.15405pt.
- [5 <./images/1.png>]
-<./images/2.png, id=37, 915.42pt x 463.7325pt>
+ [6 <./images/1.png>]
+<./images/2.png, id=41, 915.42pt x 463.7325pt>
 File: ./images/2.png Graphic file (type png)
 <use ./images/2.png>
 Package pdftex.def Info: ./images/2.png  used on input line 131.
 (pdftex.def)             Requested size: 284.52756pt x 144.1306pt.
- [6 <./images/2.png>]
-<./images/3.png, id=43, 872.25874pt x 178.6675pt>
+ [7 <./images/2.png>]
+<./images/3.png, id=46, 872.25874pt x 178.6675pt>
 File: ./images/3.png Graphic file (type png)
 <use ./images/3.png>
 Package pdftex.def Info: ./images/3.png  used on input line 173.
 (pdftex.def)             Requested size: 284.52756pt x 58.27888pt.
- [7{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/3.png>]
-<./images/4.png, id=49, 883.3pt x 875.27pt>
+ [8{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc} <./images/3.png>]
+<./images/4.png, id=52, 883.3pt x 875.27pt>
 File: ./images/4.png Graphic file (type png)
 <use ./images/4.png>
 Package pdftex.def Info: ./images/4.png  used on input line 194.
 (pdftex.def)             Requested size: 284.52756pt x 281.93518pt.
- [8 <./images/4.png>] [9] [10]
-<./images/5.png, id=60, 772.8875pt x 89.33376pt>
+ [9 <./images/4.png>] [10] [11]
+<./images/5.png, id=63, 772.8875pt x 89.33376pt>
 File: ./images/5.png Graphic file (type png)
 <use ./images/5.png>
 Package pdftex.def Info: ./images/5.png  used on input line 292.
 (pdftex.def)             Requested size: 284.52756pt x 32.88666pt.
- [11 <./images/5.png>]
-<./images/6.png, id=65, 775.89874pt x 129.48375pt>
+ [12 <./images/5.png>]
+<./images/6.png, id=69, 775.89874pt x 129.48375pt>
 File: ./images/6.png Graphic file (type png)
 <use ./images/6.png>
 Package pdftex.def Info: ./images/6.png  used on input line 301.
 (pdftex.def)             Requested size: 284.52756pt x 47.48343pt.
- [12 <./images/6.png>]
-<./images/7.png, id=71, 825.0825pt x 135.50626pt>
+ [13 <./images/6.png>]
+<./images/7.png, id=74, 825.0825pt x 135.50626pt>
 File: ./images/7.png Graphic file (type png)
 <use ./images/7.png>
 Package pdftex.def Info: ./images/7.png  used on input line 338.
 (pdftex.def)             Requested size: 284.52756pt x 46.72902pt.
- [13 <./images/7.png>] [14] [15] [16] [17] [18]
-<./images/8.png, id=94, 699.61375pt x 344.28625pt>
+ [14 <./images/7.png>] [15] [16] [17] [18] [19]
+<./images/8.png, id=97, 699.61375pt x 344.28625pt>
 File: ./images/8.png Graphic file (type png)
 <use ./images/8.png>
 Package pdftex.def Info: ./images/8.png  used on input line 514.
 (pdftex.def)             Requested size: 256.0748pt x 126.01804pt.
- [19 <./images/8.png>] [20] [21] [22] [23]
-<./images/9.png, id=114, 925.4575pt x 367.3725pt>
+ [20 <./images/8.png>] [21] [22] [23] [24]
+<./images/9.png, id=118, 925.4575pt x 367.3725pt>
 File: ./images/9.png Graphic file (type png)
 <use ./images/9.png>
 Package pdftex.def Info: ./images/9.png  used on input line 726.
 (pdftex.def)             Requested size: 284.52756pt x 112.94815pt.
- [24 <./images/9.png>] [25]
-<./images/10.png, id=123, 1091.07625pt x 514.92375pt>
+ [25 <./images/9.png>] [26]
+<./images/10.png, id=126, 1091.07625pt x 514.92375pt>
 File: ./images/10.png Graphic file (type png)
 <use ./images/10.png>
 Package pdftex.def Info: ./images/10.png  used on input line 797.
 (pdftex.def)             Requested size: 284.52756pt x 134.27773pt.
- [26 <./images/10.png>] [27]
-<./images/11.png, id=131, 1134.2375pt x 577.15625pt>
+ [27 <./images/10.png>] [28]
+<./images/11.png, id=134, 1134.2375pt x 577.15625pt>
 File: ./images/11.png Graphic file (type png)
 <use ./images/11.png>
 Package pdftex.def Info: ./images/11.png  used on input line 842.
 (pdftex.def)             Requested size: 284.52756pt x 144.78188pt.
- [28 <./images/11.png>] [29] [30] [31]
-<./images/12.png, id=146, 788.9475pt x 786.94pt>
+ [29 <./images/11.png>] [30] [31] [32]
+<./images/12.png, id=149, 788.9475pt x 786.94pt>
 File: ./images/12.png Graphic file (type png)
 <use ./images/12.png>
 Package pdftex.def Info: ./images/12.png  used on input line 956.
 (pdftex.def)             Requested size: 284.52756pt x 283.8025pt.
- [32 <./images/12.png>]
-<./images/13.png, id=151, 1005.7575pt x 389.455pt>
+ [33 <./images/12.png>]
+<./images/13.png, id=154, 1005.7575pt x 389.455pt>
 File: ./images/13.png Graphic file (type png)
 <use ./images/13.png>
 Package pdftex.def Info: ./images/13.png  used on input line 984.
 (pdftex.def)             Requested size: 284.52756pt x 110.17574pt.
- [33 <./images/13.png>]
-<./images/14.png, id=156, 994.71625pt x 249.93375pt>
+ [34 <./images/13.png>]
+<./images/14.png, id=159, 994.71625pt x 249.93375pt>
 File: ./images/14.png Graphic file (type png)
 <use ./images/14.png>
 Package pdftex.def Info: ./images/14.png  used on input line 1017.
 (pdftex.def)             Requested size: 284.52756pt x 71.49118pt.
-<./images/15.png, id=157, 949.5475pt x 273.02pt>
+<./images/15.png, id=160, 949.5475pt x 273.02pt>
 File: ./images/15.png Graphic file (type png)
 <use ./images/15.png>
 Package pdftex.def Info: ./images/15.png  used on input line 1025.
 (pdftex.def)             Requested size: 284.52756pt x 81.80664pt.
- [34 <./images/14.png> <./images/15.png>]
-<./images/16.png, id=163, 964.60374pt x 436.63126pt>
+ [35 <./images/14.png> <./images/15.png>]
+<./images/16.png, id=166, 964.60374pt x 436.63126pt>
 File: ./images/16.png Graphic file (type png)
 <use ./images/16.png>
 Package pdftex.def Info: ./images/16.png  used on input line 1041.
 (pdftex.def)             Requested size: 284.52756pt x 128.79178pt.
- [35 <./images/16.png>]
-<./images/17.png, id=168, 965.6075pt x 382.42876pt>
+ [36 <./images/16.png>]
+<./images/17.png, id=172, 965.6075pt x 382.42876pt>
 File: ./images/17.png Graphic file (type png)
 <use ./images/17.png>
 Package pdftex.def Info: ./images/17.png  used on input line 1085.
 (pdftex.def)             Requested size: 284.52756pt x 112.68712pt.
- [36 <./images/17.png>]
-<./images/18.png, id=174, 979.66pt x 411.5375pt>
+ [37 <./images/17.png>]
+<./images/18.png, id=177, 979.66pt x 411.5375pt>
 File: ./images/18.png Graphic file (type png)
 <use ./images/18.png>
 Package pdftex.def Info: ./images/18.png  used on input line 1095.
 (pdftex.def)             Requested size: 284.52756pt x 119.52492pt.
-<./images/19.png, id=175, 1039.885pt x 755.82375pt>
+<./images/19.png, id=178, 1039.885pt x 755.82375pt>
 File: ./images/19.png Graphic file (type png)
 <use ./images/19.png>
 Package pdftex.def Info: ./images/19.png  used on input line 1108.
 (pdftex.def)             Requested size: 256.0748pt x 186.11836pt.
- [37 <./images/18.png> <./images/19.png>]
-<./images/20.png, id=181, 1039.885pt x 566.115pt>
+ [38 <./images/18.png> <./images/19.png>]
+<./images/20.png, id=184, 1039.885pt x 566.115pt>
 File: ./images/20.png Graphic file (type png)
 <use ./images/20.png>
 Package pdftex.def Info: ./images/20.png  used on input line 1122.
 (pdftex.def)             Requested size: 284.52756pt x 154.89171pt.
- [38 <./images/20.png>] [39] [40] [41] [42] (./appendix_2.aux)
+ [39 <./images/20.png>]
+<./images/21.png, id=189, 1033.8625pt x 253.94875pt>
+File: ./images/21.png Graphic file (type png)
+<use ./images/21.png>
+Package pdftex.def Info: ./images/21.png  used on input line 1133.
+(pdftex.def)             Requested size: 284.52756pt x 69.88843pt.
+ [40 <./images/21.png>]
+<./images/22.png, id=194, 1033.8625pt x 293.095pt>
+File: ./images/22.png Graphic file (type png)
+<use ./images/22.png>
+Package pdftex.def Info: ./images/22.png  used on input line 1169.
+(pdftex.def)             Requested size: 284.52756pt x 80.66174pt.
+ [41 <./images/22.png>] [42] [43] [44] [45] [46] (./appendix_2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3645 strings out of 474222
- 55176 string characters out of 5748733
+ 3669 strings out of 474222
+ 55598 string characters out of 5748733
  1937975 words of memory out of 5000000
- 25860 multiletter control sequences out of 15000+600000
+ 25884 multiletter control sequences out of 15000+600000
  573434 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,16n,65p,239b,289s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 57i,16n,65p,241b,289s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on appendix_2.pdf (43 pages, 849126 bytes).
+Output written on appendix_2.pdf (47 pages, 877461 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
+ 303 PDF objects out of 1000 (max. 8388607)
+ 168 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 101 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
