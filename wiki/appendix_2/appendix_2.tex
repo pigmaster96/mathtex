@@ -1228,7 +1228,51 @@ This is the \textit{general solution}. We know it gives every solution because
 $x(0)=a$ and $\dot{x}(0)=\omega b$---by solving (uniquely) for $a$ and $b$ we can get any desired initial condition.
 \newpage
 
-\subsection{}
+\subsection{Characteristic polynomial}
+\textbf{2nd Order Case}\\
+For $m,b,k$ constant, consider the homogeneous equation
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=0
+\end{equation*}
+Consider solutions of the form $x=e^{rt}$. We have
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=(mr^2+br+k)e^{rt}=0
+\end{equation*}
+Since an exponential is never zero, $e^{rt}$ is therefore a solution exactly when $r$ satisfies the
+\textit{characteristic equation} (the left hand side is the \textit{characteristic polynomial}):
+\begin{equation*}
+mr^2+br+k=0
+\end{equation*}
+\textbf{Example}\\
+Consider the DE
+\begin{equation*}
+\ddot{x}+8\dot{x}+7x=0
+\end{equation*}
+The characteristic polynomial here is $r^2+8r+7$. Solving for $r$ by factorisation we have $(r+1)(r+7)$ and 
+the roots $r=-1$ and $r=-7$. Therefore the corresponding exponential solutions are
+$x_1(t)=e^{-t}$ and $x_2(t)=e^{-7t}$.\\
+\vspace{1mm}\\
+By superposition, the linear combination of independent solutions gives the general solution:
+\begin{equation*}
+x(t)=c_1e^{-t}+c_2e^{-7t}
+\end{equation*}
+Where given initial conditions for $x$ and $\dot{x}$ we can solve for $c_1$ and $c_2$.\\
+\vspace{1mm}\\
+\textbf{General $n$th Order Case}\\
+See that using the same principle we can take the homogeneous constant coefficient linear equation of degree $n$:
+\begin{equation*}
+a_nx^{(n)}+\cdots+a_1\dot{x}+a_0x=0
+\end{equation*}
+and get its characteristic polynomial
+\begin{equation*}
+p(r)=a_nr^n+\cdots+a_1r+a_0
+\end{equation*}
+In which the exponential $x(t)=e^{rt}$ is a solution of the homogeneous DE if and only if $r$ is a root
+of $p(r)$ (meaning $p(r)=0$). By superposition, any linear combination of these exponentials is also a solution.
+\newpage
+
+\subsection{Modes and Roots\\(homogeneous constant coefficient linear equations)}
+
 
 
 
