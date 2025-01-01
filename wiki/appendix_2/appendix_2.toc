@@ -23,10 +23,11 @@
 \contentsline {subsection}{\numberline {A.2.2}Linear DEs---Notation}{42}{}%
 \contentsline {subsection}{\numberline {A.2.3}Second order homogeneous constant coefficient\\linear equations---Spring system, Simple harmonic oscillator}{42}{}%
 \contentsline {subsection}{\numberline {A.2.4}Characteristic polynomial}{43}{}%
-\contentsline {subsection}{\numberline {A.2.5}Modes and Roots\\(homogeneous constant coefficient linear equations)}{44}{}%
-\contentsline {subsection}{\numberline {A.2.6}Superposition (Second order ODEs)}{45}{}%
-\contentsline {subsection}{\numberline {A.2.7}General solution for inhomogenous linear ODEs}{46}{}%
-\contentsline {subsection}{\numberline {A.2.8}Existence and uniqueness}{47}{}%
-\contentsline {subsection}{\numberline {A.2.9}Exponential response formula}{47}{}%
-\contentsline {section}{\numberline {A.3}Fourier Series}{47}{}%
-\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{47}{}%
+\contentsline {subsection}{\numberline {A.2.5}Modes and Roots (real and complex)\\(homogeneous constant coefficient linear equations)}{44}{}%
+\contentsline {subsection}{\numberline {A.2.6}Repeated roots\\(homogeneous constant coefficient linear equations)}{47}{}%
+\contentsline {subsection}{\numberline {A.2.7}Superposition (Second order ODEs)}{48}{}%
+\contentsline {subsection}{\numberline {A.2.8}General solution for inhomogenous linear ODEs}{49}{}%
+\contentsline {subsection}{\numberline {A.2.9}Existence and uniqueness}{50}{}%
+\contentsline {subsection}{\numberline {A.2.10}Exponential response formula}{50}{}%
+\contentsline {section}{\numberline {A.3}Fourier Series}{50}{}%
+\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{50}{}%
