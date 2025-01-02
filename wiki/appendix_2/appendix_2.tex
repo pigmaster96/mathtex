@@ -1394,13 +1394,85 @@ c_1e^{at}\cos(bt)+c_2e^{at}\sin(bt)=Ae^{at}\cos(bt-\phi)
 \newpage
 
 \subsection{Repeated roots\\(homogeneous constant coefficient linear equations)}
-
-
-
-
-
-
-
+\textbf{Illustrative example}\\
+Consider $\ddot{x}+4\dot{x}+4x=0$. In this case the
+characteristic equation:
+\begin{equation*}
+P(s)=s^2+4s+4=(s+2)^2
+\end{equation*}
+has $r=-2$ as a repeated root. The only exponential solution is $e^{-2}t$. 
+To get the second basic exponential solution, see that
+$te^{-2t}$ is also a solution. Our general solution is 
+therefore
+\begin{equation*}
+x(t)=c_1e^{-2t}+c_2te^{-2t}
+\end{equation*}
+\textbf{Deriving solution for second order repeated roots}\\
+Considering the DE $a\ddot{x}+b\dot{x}+cx=0$, from the characteristic equation we know
+\begin{equation*}
+r_{1,2}=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
+\end{equation*}
+Should we only have one solution, as per the quadratic formula, we must have
+\begin{equation*}
+b^2-4ac=0,\quad\text{and}\quad r_{1,2}=-\frac{b}{2a}
+\end{equation*}
+We know one solution is $x_1=e^{-b/(2a)t}$. Consider a second solution of the form 
+\begin{equation*}
+x_2=v(t)x_1
+\end{equation*}
+we want to plug $x_2$ into the DE. For that we require its derivatives:
+\begin{align*}
+x_2'&=v'e^{-b/(2a)t}-\frac{b}{2a}ve^{-b/(2a)t}\\
+x_2''&=v''e^{-b/(2a)t}-\frac{b}{2a}v'e^{-b/(2a)t}
+-\frac{b}{2a}v'e^{-b/(2a)t}+\frac{b^2}{4a^2}ve^{-b/(2a)t}
+\\&=v''e^{-b/(2a)t}-\frac{b}{a}v'e^{-b/(2a)t}+\frac{b^2}{4a^2}ve^{-b/(2a)t}
+\end{align*}
+Evaluating the DE with our proposed solution $x_2$:
+\begin{align*}
+a\left(v''e^{-b/(2a)t}-\frac{b}{a}v'e^{-b/(2a)t}+\frac{b^2}{4a^2}ve^{-b/(2a)t}\right)&+\\
+b\left(v'e^{-b/(2a)t}-\frac{b}{2a}ve^{-b/(2a)t}\right)
+&+c\left(ve^{-b/(2a)t}\right)=0
+\end{align*}
+Factoring out the exponential we get
+\begin{align*}
+&e^{-b/(2a)t}\left(av''-bv'+\frac{b^2}{4a}v+bv'-\frac{b^2}{2a}v+cv\right)\\
+&=e^{-b/(2a)t}\left(av''+\left(-\frac{b^2}{4a}+c\right)v\right)\\
+&=e^{-b/(2a)t}\left(av''-\frac{1}{4a}\left(b^2-4ac\right)v\right)=0
+\end{align*}
+(next page)
+\newpage
+\noindent\textbf{Derivation continued}\\ 
+Evaluating the DE with our proposed solution $x_2=ve^{-b/(2a)t}$ gave us
+\begin{equation*}
+e^{-b/(2a)t}\left(av''-\frac{1}{4a}\left(b^2-4ac\right)v\right)=0
+\end{equation*}
+We know that $b^2-4ac=0$ (since the quadratic equation only has one solution as mentioned before). Thus since
+exponentials cannot be zero, we have 
+\begin{equation*}
+av''=0\implies v''=0
+\end{equation*}
+(since $a\neq0$.) We can then determine $v(t)$:
+\begin{equation*}
+v'=\int v''dt=k\implies v=\int v'dt=k_1t+k_2
+\end{equation*}
+We therefore have our proposed basic solutions as
+\begin{equation*}
+x_1=e^{-b/(2a)t},\quad x_2=vx_1=(k_1t+k_2)e^{-b/(2a)t}
+\end{equation*}
+see that combining our solutions into a general solution via superposition gives
+\begin{equation*}
+x(t)=c_1e^{-b/(2a)t}+c_2(k_1t+k_2)e^{-b/(2a)t}
+\end{equation*}
+See that this can be simplified since $c_1,c_2,k_1,k_2$ are all unknown constants
+\begin{equation*}
+x(t)=(c_1+c_2k_2)e^{-b/(2a)t}+c_2k_1te^{-b/(2a)t}
+\end{equation*}
+We have
+\begin{equation*}
+x(t)=C_1e^{-b/(2a)t}+C_2te^{-b/(2a)t}
+\end{equation*}
+See that since we are dealing with a homogeneous equation,
+$te^{-b/(2a)t}$ by itself satisfies the DE (because of superposition).
 
 
 

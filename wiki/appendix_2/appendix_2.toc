@@ -25,9 +25,9 @@
 \contentsline {subsection}{\numberline {A.2.4}Characteristic polynomial}{43}{}%
 \contentsline {subsection}{\numberline {A.2.5}Modes and Roots (real and complex)\\(homogeneous constant coefficient linear equations)}{44}{}%
 \contentsline {subsection}{\numberline {A.2.6}Repeated roots\\(homogeneous constant coefficient linear equations)}{47}{}%
-\contentsline {subsection}{\numberline {A.2.7}Superposition (Second order ODEs)}{48}{}%
-\contentsline {subsection}{\numberline {A.2.8}General solution for inhomogenous linear ODEs}{49}{}%
-\contentsline {subsection}{\numberline {A.2.9}Existence and uniqueness}{50}{}%
-\contentsline {subsection}{\numberline {A.2.10}Exponential response formula}{50}{}%
-\contentsline {section}{\numberline {A.3}Fourier Series}{50}{}%
-\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{50}{}%
+\contentsline {subsection}{\numberline {A.2.7}Superposition (Second order ODEs)}{49}{}%
+\contentsline {subsection}{\numberline {A.2.8}General solution for inhomogenous linear ODEs}{50}{}%
+\contentsline {subsection}{\numberline {A.2.9}Existence and uniqueness}{51}{}%
+\contentsline {subsection}{\numberline {A.2.10}Exponential response formula}{51}{}%
+\contentsline {section}{\numberline {A.3}Fourier Series}{51}{}%
+\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{51}{}%
