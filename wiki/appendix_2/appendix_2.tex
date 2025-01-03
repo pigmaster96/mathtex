@@ -1473,8 +1473,75 @@ x(t)=C_1e^{-b/(2a)t}+C_2te^{-b/(2a)t}
 \end{equation*}
 See that since we are dealing with a homogeneous equation,
 $te^{-b/(2a)t}$ by itself satisfies the DE (because of superposition).
+\newpage
 
+\subsection{Damped harmonic oscillators}
+\textbf{Spring-mass-dashpot}\\
+Recall the model spring-mass-dashpot system with the constant coefficient linear DE:
+\begin{figure}[h]
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=F_\text{ext}
+\end{equation*}
+where $m$ is the mass, $b$ the damping constant, $k$ the spring constant, and $x(t)$ the displacement
+of the mass from its equilibrium position.
+\begin{center}
+\includegraphics[width=10cm]{23}\\
+\end{center}
+Assuming zero external force ($F_\text{ext}=0$), we have
+the homogeneous equation
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=0
+\end{equation*}
+The algebra doesn't require any restrictions on $m,b,k$, except $m\neq0$ (for the equation to be second order
+in the first place). But in this physical model we require $m>0,b\geq0$, and $k>0$.
+\end{figure}\\
+(next page)
+\newpage
+\noindent\textbf{Damped harmonic oscillator}
+\begin{figure}[h]
+The \textit{undamped} ($b=0$) system has the equation
+\begin{equation*}
+m\ddot{x}+kx=0
+\end{equation*}
+We have its solution as
+\begin{equation*}
+x(t)=c_1\cos(\omega t)+c_2\sin(\omega t)=A\cos(\omega t-\phi)
+\end{equation*}
+Here $\omega=\sqrt{k/m}$. The solution is always a sinusoid, thus we call this a 
+\textit{simple harmonic oscillator}:
+\begin{center}
+\includegraphics[width=10cm]{24}\\
+\end{center}
+When we add damping ($b>0$) we then call the system a \textit{damped harmonic oscillator}.\\
+\vspace{1mm}\\
+This emphasises an important fact about uding DEs to model physical systems:
+Any system modeled by the same equation will respond just like the spring-mass-dashpot (regardless of what $m,d,k,x$
+represent). That is, all damped harmonic oscillators exhibit similar behaviour.
+\end{figure}
+\newpage
 
+\subsection{Under, Over and Critical damping}
+\textbf{Response to damping}\\
+As we saw, the unforced damped harmonic oscillator has equation
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=0
+\end{equation*}
+with $m>0,b\geq0$ and $k>0$. It has characteristic equation
+\begin{equation*}
+ms^2+bs+k=0
+\end{equation*}
+with characteristic roots
+\begin{equation*}
+\frac{-b\pm\sqrt{b^2-4mk}}{2m}
+\end{equation*}
+There are three cases depending on the sign of the expression under the square root:
+\begin{enumerate}
+\item $b^2<4mk$---\textit{Underdamping}
+\item $b^2>4mk$---\textit{Overdamping}
+\item $b^2=4mk$---\textit{Critical damping}
+\end{enumerate}
+\textbf{First case: Underdamping}\\
+If
 
 \newpage
 
