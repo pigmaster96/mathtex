@@ -1541,7 +1541,39 @@ There are three cases depending on the sign of the expression under the square r
 \item $b^2=4mk$---\textit{Critical damping}
 \end{enumerate}
 \textbf{First case: Underdamping}\\
-If
+If $b^2<4mk$ the square root is negative and the characteristic roots are complex. See that the roots are given by
+\begin{equation*}
+-\frac{b}{2m}\pm i\omega_d,\quad\text{where }\omega_d=\frac{\sqrt{|b^2-4mk|}}{2m}
+\end{equation*}
+With that we have the complex exponential solutions
+\begin{equation*}
+e^{(-b/(2m)+i\omega_d)t},\quad e^{(-b/(2m)-i\omega_d)t}
+\end{equation*}
+With the basic real solutions
+\begin{equation*}
+e^{-bt/(2m)}\cos(\omega_dt),\quad e^{-bt/(2m)}\sin(\omega_dt)
+\end{equation*}
+The general real solution is found by taking linear combinations of two basic solutions:
+\begin{equation*}
+x(t)=c_1e^{-bt/(2m)}\cos(\omega_dt)+c_2e^{-bt/(2m)}\sin(\omega_dt)
+\end{equation*}
+This can also be written as
+\begin{equation*}
+x(t)=e^{-bt/(2m)}(c_1\cos(\omega_dt)+c_2\sin(\omega_dt))
+=Ae^{-bt/(2m)}\cos(\omega_dt-\phi)
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Underdamping---Intuition}\\
+We had the behaviour of an underdamped system as
+\begin{equation*}
+Ae^{-bt/(2m)}\cos(\omega_dt-\phi)
+\end{equation*}
+
+
+
+
+
 
 \newpage
 

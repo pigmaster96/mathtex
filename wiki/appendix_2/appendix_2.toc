@@ -27,9 +27,9 @@
 \contentsline {subsection}{\numberline {A.2.6}Repeated roots\\(homogeneous constant coefficient linear equations)}{47}{}%
 \contentsline {subsection}{\numberline {A.2.7}Damped harmonic oscillators}{49}{}%
 \contentsline {subsection}{\numberline {A.2.8}Under, Over and Critical damping}{51}{}%
-\contentsline {subsection}{\numberline {A.2.9}Superposition (Second order ODEs)}{52}{}%
-\contentsline {subsection}{\numberline {A.2.10}General solution for inhomogenous linear ODEs}{53}{}%
-\contentsline {subsection}{\numberline {A.2.11}Existence and uniqueness}{54}{}%
-\contentsline {subsection}{\numberline {A.2.12}Exponential response formula}{54}{}%
-\contentsline {section}{\numberline {A.3}Fourier Series}{54}{}%
-\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{54}{}%
+\contentsline {subsection}{\numberline {A.2.9}Superposition (Second order ODEs)}{53}{}%
+\contentsline {subsection}{\numberline {A.2.10}General solution for inhomogenous linear ODEs}{54}{}%
+\contentsline {subsection}{\numberline {A.2.11}Existence and uniqueness}{55}{}%
+\contentsline {subsection}{\numberline {A.2.12}Exponential response formula}{55}{}%
+\contentsline {section}{\numberline {A.3}Fourier Series}{55}{}%
+\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{55}{}%
