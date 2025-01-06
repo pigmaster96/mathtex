@@ -227,6 +227,14 @@ INPUT ./images/24.png
 INPUT ./images/24.png
 INPUT ./images/24.png
 INPUT ./images/24.png
+INPUT ./images/25.png
+INPUT ./images/25.png
+INPUT ./images/25.png
+INPUT ./images/25.png
+INPUT ./images/26.png
+INPUT ./images/26.png
+INPUT ./images/26.png
+INPUT ./images/26.png
 INPUT appendix_2.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

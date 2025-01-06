@@ -1569,9 +1569,53 @@ We had the behaviour of an underdamped system as
 \begin{equation*}
 Ae^{-bt/(2m)}\cos(\omega_dt-\phi)
 \end{equation*}
-
-
-
+Intuitively, when $b=0$ the response is a sinusoid. In terms of the spring-mass-dashpot setup this corresponds to 
+zero damping/no friction. When the damping constant $b$ is small (underdamped), we expect the system to still
+oscillate, but with decreasing amplitude as its energy is lost to friction.\\
+\vspace{1mm}\\
+This can be seen from the response of the underdamped system. The factor $\cos(\omega_dt-\phi)$ represents
+the oscillation while the exponential factor $e^{-bt/(2m)}$ has a negative exponent---thus representing 
+a decaying amplitude. As $t\to\infty$, $x(t)\to0$:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{25}\\
+\end{center}
+We call $\omega_d$ the \textit{damped angular/circular frequency} of the system, or the \textit{psuedo-frequency}
+of $x(t)$ (`psuedo' because $x(t)$ is not periodic and only periodic functions have a frequency).
+\end{figure}\\
+(next page)
+\newpage
+\noindent\textbf{Underdamping---Example}\\
+Consider the system
+\begin{equation*}
+\ddot{x}+\dot{x}+3x=0
+\end{equation*}
+(See that $b^2<4mk$) We have the characteristic equation 
+$s^2+s+3=0$ and the characteristic roots $-1/2\pm\sqrt{11}/2$. We have the basic real solutions as
+\begin{equation*}
+e^{-t/2}\cos(\sqrt{11}t/2),\quad e^{-t/2}\sin(\sqrt{11}t/2)
+\end{equation*}
+and the general solution
+\begin{equation*}
+x(t)=e^{-t/2}(c_1\cos(\sqrt{11}t/2)+c_2\sin(\sqrt{11}t/2))
+=Ae^{-t/2}\cos(\sqrt{11}t/2-\phi)
+\end{equation*}
+The damped angular frequency, $\omega_d$, in this case is $\sqrt{11}/2$. Say we have the initial conditions 
+$x(0)=1,\dot{x}(0)=0$, this gives us constants $c_1=1,c_2=1/\sqrt{11}$. So
+\begin{align*}
+x(t)&=e^{-t/2}\left(\cos(\sqrt{11}t/2)+\frac{1}{\sqrt{11}}\sin(\sqrt{11}t/2)\right)\\
+&=\frac{\sqrt{12}}{\sqrt{11}}e^{-t/2}\cos(\sqrt{11}t/2-\phi)
+\end{align*}
+Where $\phi=\tan^{-1}(1/\sqrt{11})$. Plotted:
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=10cm]{26}\\
+\end{center}
+\end{figure}\\
+(next page)
+\newpage
+\noindent\textbf{Overdamping}\\
+Overdamping corresponds to the case where $b^2>4mk$ (distinct real roots).
 
 
 
