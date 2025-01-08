@@ -1667,6 +1667,20 @@ to be the critically damping value gives the fastest return of the system to equ
 \begin{center}
 \includegraphics[width=10cm]{29}\\
 \end{center}
+\textbf{Intuition for rate of decay}\\
+This can be seen from the roots. Considering fixed $m,k$ and only varying the damping constant $b$, 
+in the overdamped case notice that one characteristic root is less negative than that of the 
+critically damped case; since the less negative root controls the decay rate this leads to the rate of decay always
+being smaller. See that $f=b$ has a higher derivative than
+$g=\sqrt{b^2-4mk}$:
+\begin{equation*}
+\frac{df}{db}=1\quad\frac{dg}{db}=\frac{b}{\sqrt{b^2-4mk}}
+>\frac{b}{\sqrt{b}}=1
+\end{equation*}
+For $m,k>0$. So $-b+\sqrt{b^2-4mk}$ only becomes less negative (slower rate of decay).\\
+\vspace{1mm}\\
+For the underdamped case to exist we must have $b<4mk$. See that this $b$ is always smaller than in the critically
+damped case, which corresponds to $b=4mk$.
 \end{figure}
 \newpage
 
@@ -1744,6 +1758,20 @@ Therefore, to get the general solution $y(t)$ to an inhomogenous linear ODE:
 \underbrace{y_h}_{\text{general \textbf{homogenous} solution}}
 \end{align*}
 Note that the superposition principle \textbf{does not} work for nonlinear differential equations.
+\newpage
+
+\subsection{Superposition of homogeneous equations only requires linearity}
+Consider the illustrative example. Given the ODE
+\begin{equation*}
+t^2y''+ty'-4y=0
+\end{equation*}
+One can check by substitution that $y_1(t)=t^2$ and $y_2(t)=1/t^2$ are both solutions. Thus
+\begin{equation*}
+y(t)=c_1t^2+c_2/t^2
+\end{equation*}
+Is a solution for any $c_1,c_2$.
+Point here is that \textit{we didn't need the differential equation to have constant coefficients}: linearity and 
+homogeneity is sufficient.
 
 \subsection{Existence and uniqueness} %130524 \vspace{}
 Solving a first-order linear ODE leads to a 1-parameter family of solutions (a general solution).
@@ -1764,6 +1792,77 @@ y(a)=b
 \end{equation*}
 \textbf{Existence} means there is \textbf{at least one} solution.\\
 \textbf{Uniqueness} means that there is \textbf{only one} solution.
+\newpage
+
+\subsection{Exponential input (2nd order ODEs)\\---exponential response}
+\textbf{Context}\\
+Consider a case where the driving function (the external force in a spring-mass-dashpot system) is
+an exponential $Be^{at}$:
+\begin{equation*}
+mx''+bx'+kx=Be^{at}
+\end{equation*}
+where $B,a$ are constants. We obtain a \textit{particular} solution by considering a solution of the form $Ae^{at}$
+(same as the first order case). Substituting gives us
+\begin{align*}
+mx''+bx'+kx&=ma^2Ae^{at}+baAe^{at}+kAe^{at}\\
+&=(ma^2+ba+k)Ae^{at}
+\end{align*}
+Thus we get (by comparing coefficients)
+\begin{equation*}
+A=\frac{B}{ma^2+ba+k}
+\end{equation*}
+See that the denominator is just the characteristic polymonial, which we will denote as $p(a)$ (this is not
+suprising, since the characteristic polynomial is derived
+using the same principles).\\
+\vspace{1mm}\\
+This concept isn't new, the same idea was used in the context of exponential/sinusoidal input to first order ODEs.\\
+\vspace{1mm}\\
+\textbf{Exponential response formula (ERF)}\\
+Considering the second order equation
+\begin{equation*}
+mx''+bx'+kx=Be^{at}
+\end{equation*}
+and letting $p(r)=mr^2+br+k$ be its characteristic polynomial, then
+\begin{equation*}
+x(t)=\frac{B}{p(a)}e^{at}
+\end{equation*}
+is a \textit{particular solution}, as long as $p(a)\neq0$.\\
+(next page)
+\newpage
+\noindent\textbf{Example}\\
+Consider finding the \textit{general} solution to
+\begin{equation*}
+x''+8x'+7x=9e^{2t}
+\end{equation*}
+considering solutions of the form $x(t)=Ae^{2t}$, substituting gives us
+\begin{equation*}
+x''+8x'+7x=Ae^{2t}\underbrace{(4+16+7)}_{p(2)}=27Ae^{2t}
+\end{equation*}
+Comparing coefficients gives us
+\begin{equation*}
+A=\frac{\overbrace{9}^{B}}{\underbrace{27}_{p(2)}},\quad x_p=\frac{1}{3}e^{2t}
+\end{equation*}
+This is our \textit{particular} solution (see that the ERF is just a shortcut of this reasoning). To obtain 
+a general solution we need to solve the homogeneous equation:
+\begin{equation*}
+x''+8x'+7x=0
+\end{equation*}
+Where we get the homogeneous solution
+\begin{equation*}
+x_h=c_1e^{-7t}+c_2e^{-t}
+\end{equation*}
+Thus the general solution to the original equation is
+\begin{equation*}
+x=x_h+x_p=c_1e^{-7t}+c_2e^{-t}+\frac{1}{3}e^{2t}
+\end{equation*}
+\newpage
+
+\subsection{Sinusoidal input---complex replacement}
+
+
+
+
+\newpage
 
 \subsection{Exponential response formula}
 The exponential response formula gives us a quick method for finding the particular solution to 
