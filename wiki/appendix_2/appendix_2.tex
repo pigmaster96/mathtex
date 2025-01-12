@@ -1858,6 +1858,73 @@ x=x_h+x_p=c_1e^{-7t}+c_2e^{-t}+\frac{1}{3}e^{2t}
 \newpage
 
 \subsection{Sinusoidal input---complex replacement}
+\textbf{General case, Gain}\\
+The ERF can be applied using complex replacement to solve equations with sinusoidal driving. Consider the
+general case:
+\begin{equation*}
+mx''+bx'+kx=B\cos(\omega t)
+\end{equation*}
+can be \textit{complexified} as
+\begin{equation*}
+mz''+bz'+kz=Be^{i\omega t}
+\end{equation*}
+where $z=x+iy$, $y$ defined as
+\begin{equation*}
+my''+by'+ky=B\sin(\omega t)
+\end{equation*}
+Now we solve for $z_p$ using the ERF:
+\begin{equation*}
+z_p=\frac{B}{p(i\omega)}e^{i\omega t}
+\end{equation*}
+We get $x_p$ by taking Re$(z)$:
+\begin{equation*}
+x_p=\frac{B}{|p(i\omega)|}\cos(\omega t-\phi)
+\end{equation*}
+where $|p(i\omega)|$ refers to the magnitude of $p(i\omega)$, and $\phi=$Arg$(p(i\omega))$.\\
+\vspace{1mm}\\
+See that the output looks similar to the input---apart from the phase lag, the output is a
+multiple of the input by a factor of $1/|p(i\omega)|$. This factor is called the \textit{gain} of the system:
+\begin{equation*}
+\text{output amplitude}=\text{gain}\times\text{input amplitude}
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Example}\\
+Say we want the general solution to 
+\begin{equation*}
+x''+8x'+7x=9\cos(2t)
+\end{equation*}
+using complex replacement we instead solve
+\begin{equation*}
+z''+8z'+7z=9e^{2it}
+\end{equation*}
+Now we can apply the ERF:
+\begin{align*}
+z_p(t)&=\frac{9}{p(2i)}e^{2it}\\
+&=\frac{9}{(2i)^2+16i+7}e^{2it}\\
+&=\frac{9}{3+16i}e^{2it}
+\end{align*}
+Simplify by expressing $p(2i)$ in polar form:
+\begin{align*}
+\frac{9}{3+16i}e^{2it}&=9\left(\frac{1}{\sqrt{265}}e^{-i\phi}\right)e^{2it}\\
+&=\frac{9}{\sqrt{265}}e^{i(2t-\phi)}
+\end{align*}
+where $\phi=$Arg$(p(2i))=\tan^{-1}(16/3)$. We can then obtain $x_p$ as
+\begin{equation*}
+x_p(t)=\text{Re}(z_p(t))=\frac{9}{\sqrt{265}}\cos(2t-\phi)
+\end{equation*}
+To get the general solution we add the homogeneous solution:
+\begin{equation*}
+x_h(t)=c_1e^{-7t}+c_2e^{-t}
+\end{equation*}
+To obtain
+\begin{equation*}
+x(t)=x_p+x_h=\frac{9}{\sqrt{265}}\cos(2t-\phi)+c_1e^{-7t}+c_2e^{-t}
+\end{equation*}
+In this case the gain is
+\begin{equation*}
+1/|p(2i)|=1/\sqrt{265}
+\end{equation*}
 
 
 
