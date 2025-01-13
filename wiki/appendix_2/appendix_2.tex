@@ -1951,7 +1951,69 @@ and the original equation looks like
 m(x''+\omega_n^2x)=F_{\text{ext}}(t)
 \end{equation*}
 \textbf{Intuition for resonance}\\
-Now consider adding sinusoidal input
+Now consider adding sinusoidal input $F_{\text{ext}}(t)=B\cos(\omega t)$:
+\begin{equation*}
+m(x''+\omega_n^2x)=B\cos(\omega t)
+\end{equation*}
+Using complex replacement, we seek to obtain the $z_p$ in
+\begin{equation*}
+m(x''+\omega_n^2x)=Be^{i\omega t}
+\end{equation*}
+Applying the ERF with $a=i\omega$ we get
+\begin{equation*}
+z_p=\frac{B}{p(i\omega)}e^{i\omega t}=\frac{B}{m(\omega_n^2-\omega^2)}e^{i\omega t}
+\end{equation*}
+(Notice the lack of a damping makes the denominator non-complex.) Taking the real part to obtain $x_p$:
+\begin{equation*}
+x_p=\text{Re}(z_p)=\frac{B}{m(\omega_n^2-\omega^2)}\cos(\omega t)
+\end{equation*}
+With the homogeneous solution, our general solution is
+\begin{equation*}
+x_h=c_1\cos(\omega_nt)+c_2\sin(\omega_nt)+\frac{B}{m(\omega_n^2-\omega^2)}\cos(\omega t)
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Intuition for resonance (cont.)}\\
+We had the particular solution
+\begin{equation*}
+\frac{B}{m(\omega_n^2-\omega^2)}\cos(\omega t)
+\end{equation*}
+See that the gain is $1/|p(a)|=1/m(\omega_n^2-\omega^2)$---the closer $\omega$ is to $\omega_n$. 
+Setting $m=1,B=1$ and $\omega_n=2$ while varying $\omega$ (the frequency of the driving):
+\begin{center}
+\includegraphics[width=10cm]{30}\\
+\end{center}
+See that the solution breaks down when $\omega=\omega_n$. This is called \textbf{pure resonance}; notice it corresponds to the case $p(a)=0$.\\
+(next page)
+\newpage
+\noindent\textbf{The workaround solution---resonant response formula}\\
+When $p(a)=0$ the initial solution we found breaks down. It can be checked that the following is a solution 
+\textit{to the complexified equation}:
+\begin{equation*}
+z_p(t)=\frac{B}{p'(a)}te^{at}
+\end{equation*}
+where taking the real part gives a valid $x_p$ (which can also be checked):
+\begin{equation*}
+x_p(t)=\frac{B}{2m\omega}t\sin(\omega t)
+\end{equation*}
+See the extra factor of $t$ before the sine term---the amplitude of the response in the case of pure resonance
+grows with time. 
+\begin{center}
+\includegraphics[width=10cm]{31}\\
+\end{center}
+The following is a counterpart to the ERF in the pure resonance case, when $p(a)=0$. It is called the 
+\textit{Resonant Response Formula (RRF)}; essentially, in the second order equation
+\begin{equation*}
+mx''+bx'+kx=Be^{at}
+\end{equation*}
+with characteristic polynomial $p$, if $p(a)=0$ and $p'(a)\neq0$, then 
+\begin{equation*}
+x(t)=\frac{B}{p'(a)}te^{at}
+\end{equation*}
+is a \textit{particular} solution.
+\newpage
+
+\subsection{Generalised ERF}
 
 
 
