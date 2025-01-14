@@ -2014,8 +2014,45 @@ is a \textit{particular} solution.
 \newpage
 
 \subsection{Generalised ERF}
+We can solve a LTI DE $p(D)x=q(t)$ with exponential input 
+$q(t)=Be^{at}$ even when $p(a)=0$ using the \textit{generalised exponential response} formula:\\
+\vspace{1mm}\\
+\textbf{Definition}\\
+\textit{Generalised ERF:} Let $p(D)$ be a polynomial operator with constant coefficients, and $p^{(s)}$
+its $s$-th derivative. Then
+\begin{equation*}
+p(D)x=Be^{at},\quad\text{where $a$ is real or complex}
+\end{equation*}
+has the particular solution 
+\begin{equation*}
+x_p=\begin{cases}
+\frac{Be^{at}}{p(a)}&\text{if }p(a)\neq0\\
+\frac{Bte^{at}}{p'(a)}&\text{if }p(a)=0\text{ and }p'(a)\neq0\\
+\frac{Bt^2e^{at}}{p''(a)}&\text{if }p(a)=p'(a)=0\text{ and }p''(a)\neq0\\
+&\vdots\\
+\frac{Bt^se^{at}}{p^{(s)}(a)}&\text{if $a$ is an $s$-fold zero}
+\end{cases}
+\end{equation*}
+\newpage
 
-
+\subsection{Stability}
+\textbf{The notion of Stability}\\
+A system is called \textit{stable} if its long-term behaviour does not depend significantly 
+on the initial conditions.\\
+\vspace{1mm}\\
+\textbf{In this context}\\
+In terms of DEs, the simplest spring-mass system or RLC-circuit is represented as
+\begin{equation*}
+a_0y''+a_1y'+a_2y=r(t),\quad a_i\text{ constants, }t=\text{time.}
+\end{equation*}
+By the theory of inhomogeneous equations, the general solution to this is of the form
+\begin{equation*}
+y=c_1y_1+c_2y_2+y_p,\quad\text{$c_1,c_2$ arbitrary constants}
+\end{equation*}
+where $y_p$ is a \textit{particular solution}, and $c_1y_1+c_2y_2$ is the \textit{complementary function} (the
+general solution to the associated homogeneous equation).\\
+\vspace{1mm}\\
+See that the initial conditions determine the exact values of $c_1$ and $c_2$. 
 
 
 
