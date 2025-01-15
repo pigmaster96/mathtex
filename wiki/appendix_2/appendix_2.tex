@@ -2052,7 +2052,22 @@ y=c_1y_1+c_2y_2+y_p,\quad\text{$c_1,c_2$ arbitrary constants}
 where $y_p$ is a \textit{particular solution}, and $c_1y_1+c_2y_2$ is the \textit{complementary function} (the
 general solution to the associated homogeneous equation).\\
 \vspace{1mm}\\
-See that the initial conditions determine the exact values of $c_1$ and $c_2$. 
+See that the initial conditions determine the exact values of $c_1$ and $c_2$. (the same initial conditions
+might lead to different constants for different particular solutions, but considering a
+fixed particular solution, they are controlled by the initial conditions) See that
+\begin{equation*}
+\text{\textit{the system is stable}}\iff\forall c_1,c_2\quad\lim_{t\to\infty}(c_1y_1+c_2y_2)=0
+\end{equation*}
+If the ODE is stable, the two parts of the solution can be classified as
+\begin{equation*}
+y_p=\text{\textit{steady-state solution}},\quad c_1y_1+c_2y_2=\text{\textit{transient}}
+\end{equation*}
+The effects of transient term, which depends on the initial conditions, disappear over time. 
+The steady state term therefore more and more closely represents the response of the system as time goes to $\infty$, regardless of initial conditions.\\
+(next page)\\
+\newpage
+\noindent\textbf{Conditions for stability (second order case)}\\
+First
 
 
 
