@@ -2013,6 +2013,13 @@ x(t)=\frac{B}{p'(a)}te^{at}
 is a \textit{particular} solution.
 \newpage
 
+\subsection{$p(D)$ Notation, Gain, Phase lag, Complex Gain}
+
+
+
+
+\newpage
+
 \subsection{Generalised ERF}
 We can solve a LTI DE $p(D)x=q(t)$ with exponential input 
 $q(t)=Be^{at}$ even when $p(a)=0$ using the \textit{generalised exponential response} formula:\\
@@ -2094,24 +2101,52 @@ The three cases can be summarised as (root form)
 a_0y''+a_1y'+a_2y=r(t)\text{ is stable}\iff\parbox{13em}{all roots of $a_0r^2+a_1r+a_2=0$\\
 have negative real part.}
 \end{equation*}
-it can be further shown that (coefficient form)
+it can be further shown that (coefficient form) \textit{assuming $a_0>0$:}
 \begin{equation*}
 a_0y''+a_1y'+a_2y=r(t)\text{ is stable}\iff a_0,a_1,a_2>0
 \end{equation*}
-See that
-
+See that the characteristic equation can be written as
+\begin{equation*}
+r^2+\frac{a_1}{a_0}r+\frac{a_2}{a_0}=r^2+br+c=0
+\end{equation*}
+by the quadratic formula
+\begin{equation*}
+(-b\pm\sqrt{b^2-4c})/2
+\end{equation*}
+First considering the case where both roots are complex, then the \textit{real} part of each of them is $-b/2$.
+The condition for stability is that the real part is negative, therefore for stability we must have $b>0$. 
+A similar principle applies for the case of repeated roots, where the real part is again given by $-b/2$, 
+so $b>0$ for stability.\\
+\vspace{1mm}\\
+Now consider the case of two real roots. See that $(-b+\sqrt{b^2-4c})/2>0$ if $b<\sqrt{b^2-4c}$, which only occurs
+when $c<0$ (assuming the square root gives a real result; also the other root is always less than 0).
+Therefore to have both real roots be negative we must have $c>0$.\\
+\vspace{1mm}\\
+Assuming $a_0>0$, we must have $a_1,a_2>0$.\\
+(next page)
+\newpage
+\noindent\textbf{Stability of higher order ODEs (root form only)}\\
+The stability criterion in the root form can also be applied to higher-order ODEs with constant coefficients:
+\begin{equation*}
+(a_0D^n+a_1D^{n-1}+\ldots+a_{n-1}D+a_n)y=f(t)
+\end{equation*}
+where the characteristic equation looks like
+\begin{equation*}
+a_0r^n+a_1r^{n-1}+\ldots+a_{n-1}r+a_n=0
+\end{equation*}
+The real and complex roots of the characteristic equation give rise to solutions to the associated homogeneous equation just as they do in the second order case (for a $k$-fold repeated root, one gets additional solutions by 
+multiplying $1,t,t^2,\ldots,t^{k-1}$).\\
+\vspace{1mm}\\
+Thus the stability criterion for the second order case can be extrapolated to the higher order case:
+\begin{equation*}
+n\text{-th order ODE is stable}\iff\text{all roots have negative real parts}
+\end{equation*}
+\newpage
 
 
 
 
 \newpage
-
-\subsection{Exponential response formula}
-The exponential response formula gives us a quick method for finding the particular solution to 
-any linear, constant coefficient, differential equations whose input can be expressed in terms
-of an exponential function.\\
-\vspace{2mm}\\
-The Exponential Response Formula(ERF): 
 
 \section{Fourier Series}
 \subsection{Fourier Series}
