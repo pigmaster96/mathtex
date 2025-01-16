@@ -36,6 +36,6 @@
 \contentsline {subsection}{\numberline {A.2.15}Simple harmonic oscillator---\\intuition for resonance}{63}{}%
 \contentsline {subsection}{\numberline {A.2.16}Generalised ERF}{66}{}%
 \contentsline {subsection}{\numberline {A.2.17}Stability}{67}{}%
-\contentsline {subsection}{\numberline {A.2.18}Exponential response formula}{68}{}%
-\contentsline {section}{\numberline {A.3}Fourier Series}{68}{}%
-\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{68}{}%
+\contentsline {subsection}{\numberline {A.2.18}Exponential response formula}{69}{}%
+\contentsline {section}{\numberline {A.3}Fourier Series}{69}{}%
+\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{69}{}%

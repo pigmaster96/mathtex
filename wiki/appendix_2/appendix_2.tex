@@ -2064,10 +2064,42 @@ y_p=\text{\textit{steady-state solution}},\quad c_1y_1+c_2y_2=\text{\textit{tran
 \end{equation*}
 The effects of transient term, which depends on the initial conditions, disappear over time. 
 The steady state term therefore more and more closely represents the response of the system as time goes to $\infty$, regardless of initial conditions.\\
-(next page)\\
+(next page)
 \newpage
 \noindent\textbf{Conditions for stability (second order case)}\\
-First
+First we consider the second order case. See that stability concerns just the behaviour of the solutions to
+the associated homogeneous equation
+\begin{equation*}
+a_0y''+a_1y'+a_2y=0
+\end{equation*}
+(the forcing term only determines the particular solution. what matters for stability is that the homogeneous
+solution decays to 0---so the response resembles the particular solution regardless of constants of integration) 
+See that the conditions can be split into three cases, summarised as follows:
+\begin{table}[h]
+\begin{center}
+\begin{tabular}{c c c}
+\hline
+roots & (homogeneous) solution & condition for stability\\
+\hline
+$r_1\neq r_2$&$c_1e^{r_1t}+c_2e^{r_2t}$&$r_1<0,r_2<0$\\
+$r_1=r_2$&$e^{r_1t}(c_1+c_2t)$&$r_1<0$\\
+$a\pm ib$&$e^{at}(c_1\cos bt+c_2\sin bt)$&$a<0$\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}\\
+\textbf{Root, coefficient form for second order case}\\
+The three cases can be summarised as (root form)
+\begin{equation*}
+a_0y''+a_1y'+a_2y=r(t)\text{ is stable}\iff\parbox{13em}{all roots of $a_0r^2+a_1r+a_2=0$\\
+have negative real part.}
+\end{equation*}
+it can be further shown that (coefficient form)
+\begin{equation*}
+a_0y''+a_1y'+a_2y=r(t)\text{ is stable}\iff a_0,a_1,a_2>0
+\end{equation*}
+See that
+
 
 
 
