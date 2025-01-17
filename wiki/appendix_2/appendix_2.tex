@@ -2013,35 +2013,6 @@ x(t)=\frac{B}{p'(a)}te^{at}
 is a \textit{particular} solution.
 \newpage
 
-\subsection{$p(D)$ Notation, Gain, Phase lag, Complex Gain}
-
-
-
-
-\newpage
-
-\subsection{Generalised ERF}
-We can solve a LTI DE $p(D)x=q(t)$ with exponential input 
-$q(t)=Be^{at}$ even when $p(a)=0$ using the \textit{generalised exponential response} formula:\\
-\vspace{1mm}\\
-\textbf{Definition}\\
-\textit{Generalised ERF:} Let $p(D)$ be a polynomial operator with constant coefficients, and $p^{(s)}$
-its $s$-th derivative. Then
-\begin{equation*}
-p(D)x=Be^{at},\quad\text{where $a$ is real or complex}
-\end{equation*}
-has the particular solution 
-\begin{equation*}
-x_p=\begin{cases}
-\frac{Be^{at}}{p(a)}&\text{if }p(a)\neq0\\
-\frac{Bte^{at}}{p'(a)}&\text{if }p(a)=0\text{ and }p'(a)\neq0\\
-\frac{Bt^2e^{at}}{p''(a)}&\text{if }p(a)=p'(a)=0\text{ and }p''(a)\neq0\\
-&\vdots\\
-\frac{Bt^se^{at}}{p^{(s)}(a)}&\text{if $a$ is an $s$-fold zero}
-\end{cases}
-\end{equation*}
-\newpage
-
 \subsection{Stability}
 \textbf{The notion of Stability}\\
 A system is called \textit{stable} if its long-term behaviour does not depend significantly 
@@ -2143,10 +2114,133 @@ n\text{-th order ODE is stable}\iff\text{all roots have negative real parts}
 \end{equation*}
 \newpage
 
+\subsection{$p(D)$ Notation, Gain, Phase lag, Complex Gain}
+\textbf{$p(D)$ Notation}\\
+Consider the typical linear constant coefficient DE
+\begin{equation*}
+a_nx^{(n)}+a_{n-1}x^{(n-1)}+\ldots+a_1x'+a_0x=q(t)
+\end{equation*}
+as usual, this has the characteristic polynomial
+\begin{equation*}
+p(s)=a_ns^n+a_{n-1}s^{n-1}+\ldots+a_1s+a_0
+\end{equation*}
+We write $D=\frac{d}{dt}$ to represent the operation of differentiation applied to functions of $t$, 
+where for instance $Dx=\frac{dx}{dt}$. Similarly
+we have the representation $D^2=\frac{d^2}{dt^2}$ for differentiation twice. See that this notation can be fit
+into the characteristic polynomial:
+\begin{equation*}
+p(D)=a_nD^n+a_{n-1}D^{n-1}+\ldots+a_1D+a_0
+\end{equation*}
+which allows us to represent the initial DE as
+\begin{equation*}
+p(D)x=q
+\end{equation*}
+giving us an efficient representation.\\
+\vspace{1mm}\\
+\textbf{Context for Gain, Phase lag}\\
+We have the \textit{transience theorem}: All solutions $x=x(t)$ to the linear homogeneous constant coefficient DE
+\begin{equation*}
+p(D)x=0
+\end{equation*}
+decay to 0 as $t\to\infty$ exactly when the roots $r$ of the characteristic polynomial $p(s)$ have negative
+real part.\\
+\vspace{1mm}\\
+In this case the homogeneous solutions are called \textit{transients}; by superposition, 
+should we fix a driving term, and therefore a particular solution, all solutions then converge to the 
+\textit{same} solution as $t$ gets large, and we say that
+the DE is \textit{stable}. Therefore if we have a system modelled by a stable equation, and are only interested in
+what happens after the transients have died down, we can ignore the initial condition:
+\begin{center}
+\includegraphics[width=10cm]{32}\\
+\end{center}
+The solutions converge to the particular solution $x_p$. When the input signal is sinusoidal, recall 
+that the particular solution will also be sinusoidal. Here we review this.\\
+(next page)
+\newpage
+\noindent\textbf{Review of Complex replacement}\\
+We find the particular solution using the ERF, where the DE
+\begin{equation*}
+p(D)x=Be^{at}
+\end{equation*}
+has the particular solution
+\begin{equation*}
+x_p=\frac{Be^{at}}{p(a)}
+\end{equation*}
+provided $p(a)\neq0$ (this corresponds to the resonant case).
+Given sinusoidal input:
+\begin{equation*}
+p(D)x=B\cos(\omega t)
+\end{equation*}
+We consider the complex equation since $B\cos(\omega t)=\text{Re}(Be^{i\omega t})$:
+\begin{equation*}
+p(D)z=Be^{i\omega t},\quad x=\text{Re}(z)
+\end{equation*}
+The ERF gives
+\begin{equation*}
+z_p=\frac{B}{p(i\omega)}e^{i\omega t}\implies x_p=B\,\text{Re}\left(\frac{e^{i\omega t}}{p(i\omega)}\right)
+\end{equation*}
+Thus
+\begin{equation*}
+x_p=\frac{B}{|p(i\omega)|}\cos(\omega t-\phi)
+\end{equation*}
+where $\phi=\text{Arg}(p(i\omega))$. This is the particular, and therefore steady-state (periodic) solution.\\
+\vspace{1mm}\\
+\textbf{Gain, Phase lag}\\
+Compare the periodic input $q(t)=B\cos(\omega t)$ and its
+periodic output $x_p(t)=\frac{B}{|p(i\omega)|}\cos(\omega t-\phi)$. See that the amplitude is scaled by 
+$1/|p(i\omega)|$ and the output sinusoid is shifted by an angle $\phi=\text{Arg}(p(i\omega))$ relative
+to the input sinusoid. This motivates the following definitions: for a constant coefficient linear DE
+\begin{equation*}
+P(D)x=q(t)\quad\text{with sinusoidal input } q(t)
+\end{equation*}
+\begin{enumerate}
+\item The \textit{gain} is defined to be the \textit{ratio of the amplitude of the output sinusoid to the 
+amplitude of the input sinusoid}.
+\item The \textit{phase lag} is defined to be the \textit{angle by which the output
+sinusoid is shifted relative to the input sinusoid}.
+\end{enumerate}
+\textbf{Complex Gain}\\
+When solving by complex replacement we had $x_p=\text{Re}(z_p)$ where $z_p(t)$ is the complex solution
+to $p(D)z=Be^{i\omega t}$:
+\begin{equation*}
+z_p=\frac{B}{p(i\omega)}e^{i\omega t}
+\end{equation*}
+see that the complexified exponential input can also be compared to the complex output. We therefore define the 
+\textit{complex gain}, in this case it is $1/p(i\omega)$.
+\newpage
+
+\subsection{Polynomial Input: Undetermined Coefficients}
+
+
+
 
 
 
 \newpage
+
+\subsection{Generalised ERF}
+We can solve a LTI DE $p(D)x=q(t)$ with exponential input 
+$q(t)=Be^{at}$ even when $p(a)=0$ using the \textit{generalised exponential response} formula:\\
+\vspace{1mm}\\
+\textbf{Definition}\\
+\textit{Generalised ERF:} Let $p(D)$ be a polynomial operator with constant coefficients, and $p^{(s)}$
+its $s$-th derivative. Then
+\begin{equation*}
+p(D)x=Be^{at},\quad\text{where $a$ is real or complex}
+\end{equation*}
+has the particular solution 
+\begin{equation*}
+x_p=\begin{cases}
+\frac{Be^{at}}{p(a)}&\text{if }p(a)\neq0\\
+\frac{Bte^{at}}{p'(a)}&\text{if }p(a)=0\text{ and }p'(a)\neq0\\
+\frac{Bt^2e^{at}}{p''(a)}&\text{if }p(a)=p'(a)=0\text{ and }p''(a)\neq0\\
+&\vdots\\
+\frac{Bt^se^{at}}{p^{(s)}(a)}&\text{if $a$ is an $s$-fold zero}
+\end{cases}
+\end{equation*}
+\newpage
+
+
 
 \section{Fourier Series}
 \subsection{Fourier Series}
