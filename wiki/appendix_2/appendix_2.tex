@@ -2210,10 +2210,61 @@ see that the complexified exponential input can also be compared to the complex 
 \newpage
 
 \subsection{Polynomial Input: Undetermined Coefficients}
-
-
-
-
+\textbf{Definition}\\
+A \textit{polynomial} is a function of the form
+\begin{equation*}
+q(x)=a_nx^n+a_{n-1}x^{n-1}+\cdots+a_0
+\end{equation*}
+where the largest $k$ for which $a_k\neq0$ is the \textit{degree} of $q(x)$ (0 is also a polynomial with no degree).
+\\
+\vspace{1mm}\\
+\textbf{Theorem. (Undetermined coefficients)}: If $p(0)\neq
+0$, and $q(x)$ is a polynomial of degree $n$, then
+\begin{equation*}
+p(D)y=q(x)
+\end{equation*}
+has exactly one solution which is a polynomial, and is of degree $n$.\\
+\vspace{1mm}\\
+\textbf{Instructive example}\\
+We now show this with an instructive example. Consider
+finding a particular solution $y_p$ to
+\begin{equation*}
+y''+3y'+4y=4x^2-2x
+\end{equation*}
+Consider a polynomial solution with the same degree as the input---of the form $y_p=Ax^2+Bx+C$. See that
+calculating its derivatives gives us
+\begin{align*}
+y_p&=Ax^2+Bx+C\\
+y'_p&=2Ax+B\\
+y''_p&=2A
+\end{align*}
+Substituting into the DE gives us
+\begin{align*}
+&2A+3(2Ax+B)a+4(Ax^2+Bx+C)\\
+=&4Ax^2+(4B+6A)x+(4C+3B+2A)=4x^2-2x
+\end{align*}
+Comparing coefficients we have $A=1,B=-2,C=1$. So
+we obtain the particular solution $y_p=x^2-2x+1$.\\
+(next page)
+\newpage
+\noindent\textbf{Another example}\\
+Consider
+\begin{equation*}
+y''+5y'+4y=2x+3
+\end{equation*}
+We have a \textit{trial solution} of the form $y_p=Ax+B$ (same degree as input). Substituting gives us
+\begin{equation*}
+0+5A+4(Ax+B)=2x+3
+\end{equation*}
+Comparing coefficients and solving gives us $A=1/2,B=1/8$.
+We obtain the particular solution
+\begin{equation*}
+y_p=\frac{1}{2}x+\frac{1}{8}
+\end{equation*}
+Should we want a general solution we add the homogeneous solution.\\
+\vspace{1mm}\\
+\textbf{Case where $p(0)=0$}\\
+Should
 
 
 \newpage

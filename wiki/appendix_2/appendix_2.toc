@@ -37,6 +37,6 @@
 \contentsline {subsection}{\numberline {A.2.16}Stability}{66}{}%
 \contentsline {subsection}{\numberline {A.2.17}$p(D)$ Notation, Gain, Phase lag, Complex Gain}{69}{}%
 \contentsline {subsection}{\numberline {A.2.18}Polynomial Input: Undetermined Coefficients}{71}{}%
-\contentsline {subsection}{\numberline {A.2.19}Generalised ERF}{72}{}%
-\contentsline {section}{\numberline {A.3}Fourier Series}{73}{}%
-\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{73}{}%
+\contentsline {subsection}{\numberline {A.2.19}Generalised ERF}{73}{}%
+\contentsline {section}{\numberline {A.3}Fourier Series}{74}{}%
+\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{74}{}%
