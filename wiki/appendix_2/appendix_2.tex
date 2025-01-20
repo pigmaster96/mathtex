@@ -2263,13 +2263,46 @@ y_p=\frac{1}{2}x+\frac{1}{8}
 \end{equation*}
 Should we want a general solution we add the homogeneous solution.\\
 \vspace{1mm}\\
-\textbf{Case where $p(0)=0$}\\
-Should
+\textbf{Case where $p(0)=0$ or homogeneous DE has polynomial solutions}\\
+Should $p(0)=0$, then coefficient of $y$ in the equation is 0, this looks like
+\begin{equation*}
+a_2y''+a_1y'=q
+\end{equation*}
+See that in this case the homogeneous DE $p(D)$ has polynomial solutions (constants are polynomials, and any
+constant $y_p$ would satisfy the homogeneous differential equation.\\
+\vspace{1mm}\\
+In this case, the polynomial solution to the inhomogeneous DE $p(D)y=q$ would be of \textit{higher degree} than 
+that of $q(x)$; consider the example
+\begin{equation*}
+y''+y'=x+1
+\end{equation*}
+A particular solution of the form $y_p=Ax+B$ (same degree as input) doesn't work---substituting gives
+$0+A=x+1$. We fix this by considering a solution one degree higher $y_p=Ax^2+Bx$, where substituting gives us
+\begin{equation*}
+2Ax+(2A+B)=x+1\implies A=1/2,B=0\implies y_p=\frac{1}{2}x^2
+\end{equation*}
+\textbf{Another example}\\
+Consider
+\begin{equation*}
+y'''+3y''=x^2+x
+\end{equation*}
+Lowest order derivative is 2, so we try increasing the degree of the proposed solution by 2: $y_p=Ax^4+Bx^3+Cx^2$.
+Substituting, we have
+\begin{equation*}
+(24Ax+6B)+3(12Ax^2+6Bx+2C)=x^2+x
+\end{equation*}
+so $A=1/36,B=1/27,C=-1/27$.
+\newpage
+
+\subsection{}
+
+
+
 
 
 \newpage
 
-\subsection{Generalised ERF}
+\subsection{Generalised ERF with proof}
 We can solve a LTI DE $p(D)x=q(t)$ with exponential input 
 $q(t)=Be^{at}$ even when $p(a)=0$ using the \textit{generalised exponential response} formula:\\
 \vspace{1mm}\\
