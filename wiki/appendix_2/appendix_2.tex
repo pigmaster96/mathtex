@@ -2294,12 +2294,118 @@ Substituting, we have
 so $A=1/36,B=1/27,C=-1/27$.
 \newpage
 
-\subsection{}
-
-
-
-
-
+\subsection{Linear Operators}
+\textbf{Polynomial differential operator}\\
+The general linear ODE with constant coefficients of order $n$ for a function $y=y(t)$:
+\begin{equation*}
+y^{(n)}+a_1y^{(n-1)}+\ldots+a_ny=q(t)
+\end{equation*}
+can be written compactly using the differentiation operator $D=\frac{d}{dt}$:
+\begin{equation*}
+p(D)y=q(t)
+\end{equation*}
+where
+\begin{equation*}
+p(D)=D^n+a_1D^{n-1}+\ldots+a_n
+\end{equation*}
+we call $p(D)$ a \textit{polynomial differential operator with constant coefficients}.\\
+\vspace{1mm}\\
+\textbf{Properties}\\
+We now state a few rules surrounding these operators. We will assume that the functions involved are sufficiently
+differentiable so that the operators can be applied.\\
+\vspace{1mm}\\
+\textbf{Sum rule}: If $p(D)$ and $q(D)$ are polynomial operators, then for any (sufficiently differentiable) 
+function $u$,
+\begin{equation*}
+[p(D)+q(D)]u=p(D)u+q(D)u
+\end{equation*}
+\textbf{Linearity rule}: If $f,g$ are functions and $c_1,c_2$ constants,
+\begin{equation*}
+p(D)(c_1f+c_2g)=c_1p(D)f+c_2p(D)g
+\end{equation*}
+\textbf{Proof of linearity rule}: This follows from the linearity of differentiaton, see that
+\begin{equation*}
+D(c_1f+c_2g)=(c_1f+c_2g)'=c_1f'+c_2g'=c_1Df+c_2Dg
+\end{equation*}
+also see that taking the second or higher derivative also follows the linearity rule. That is,
+\begin{equation*}
+D^n(c_1f+c_2g)=\frac{d^n}{dt}(c_1f+c_2g)=c_1f^{(n)}+c_2g^{(n)}=c_1D^nf+c_2D^ng
+\end{equation*}
+We can scale the linear operator $D^n$ by $a$ (a constant/function/or whatever independent variable) and it stays
+linear:
+\begin{equation*}
+aD^n(c_1f+c_2g)=a\frac{d^n}{dt}(c_1f+c_2g)=c_1af^{(n)}+c_2ag^{(n)}=c_1aD^nf+c_2aD^ng
+\end{equation*}
+Finally we can combine these operators into a polynomial operator
+\begin{equation*}
+D^n+a_1D^{n-1}+\ldots+a_n
+\end{equation*}
+which clearly still obeys the linearity rule (consider $c_1f+c_2g$ a single function $u$ and apply
+sum rule to each term in the differential polynomial operator).\\
+(next page)
+\newpage
+\noindent\textbf{Multiplication rule}: If $p(D)=g(D)h(D)$ as polynomials in $D$, then
+\begin{equation*}
+p(D)u=g(D)(h(D)u)
+\end{equation*}
+First consider the simple operator $aD^k$ and see that
+\begin{equation*}
+D^m(aD^ku)=aD^{m+k}u
+\end{equation*}
+(Note that in this case $a$ must be a constant.) This then extends to general polynomial operators $h(D)$ by 
+the linearity rule.\\
+\vspace{1mm}\\
+An important corollary of the multiplication property is that \textit{polynomial operators with constant
+coefficients commute}:
+\begin{equation*}
+g(D)(h(D)u)=h(D)(g(D)u)
+\end{equation*}
+This can be shown since $g(D)h(D)=h(D)g(D)=p(D)$, so both sides of the equation are equal to $p(D)u$.\\
+\vspace{1mm}\\
+\textbf{Substitution rule}
+\begin{equation*}
+p(D)e^{at}=p(a)e^{at}
+\end{equation*}
+See that by repeated differentiation
+\begin{equation*}
+De^{at}=ae^{at},D^2e^{at}=a^2e^{at},\ldots,D^ke^{at}=a^ke^{at}
+\end{equation*}
+therefore;
+\begin{equation*}
+(D^n+c_1D^{n-1}+\ldots+c_n)e^{at}=(a^n+c_1a^{n-1}+\ldots+c_n)e^{at}
+\end{equation*}
+This is the substitution rule.\\
+(next page)
+\newpage
+\noindent\textbf{Exponential-shift rule}: This handles expressions such as $t^ke^{at}$ and $t^k\sin(at)$. 
+Let $u=u(t)$. Then
+\begin{equation*}
+p(D)e^{at}u=e^{at}p(D+a)u
+\end{equation*}
+\textbf{Proof}: First see that when $p(D)=D$, by product rule
+\begin{equation*}
+De^{at}u(t)=e^{at}Du(t)+ae^{at}u(t)=e^{at}(D+a)u(t)
+\end{equation*}
+To show this rule is true for $D^k$, we apply the differentiation repeatedly:
+\begin{align*}
+D^2e^{at}u=D(De^{at}u)&=D(e^{at}(D+a)u)\\
+&=e^{at}(D+a)((D+a)u)\\
+&=e^{at}(D+a)^2u
+\end{align*}
+in the same way,
+\begin{align*}
+D^3e^{at}u=D(D^2e^{at}u)&=D(e^{at}(D+a)^2u)\\
+&=e^{at}(D+a)((D+a)^2u)\\
+&=e^{at}(D+a)^3u
+\end{align*}
+and so on; see therefore that 
+\begin{equation*}
+D^ke^{at}u=e^{at}(D+a)^ku
+\end{equation*}
+and 
+\begin{equation*}
+(D^n+c_1D^{n-1}+\ldots+c_n)e^{at}u(t)=((D+a)^n+c_1(D+a)^{n-1}+\ldots+c_n)e^{at}u(t)
+\end{equation*}
 \newpage
 
 \subsection{Generalised ERF with proof}
