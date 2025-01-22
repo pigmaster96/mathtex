@@ -38,6 +38,7 @@
 \contentsline {subsection}{\numberline {A.2.17}$p(D)$ Notation, Gain, Phase lag, Complex Gain}{69}{}%
 \contentsline {subsection}{\numberline {A.2.18}Polynomial Input: Undetermined Coefficients}{71}{}%
 \contentsline {subsection}{\numberline {A.2.19}Linear Operators}{73}{}%
-\contentsline {subsection}{\numberline {A.2.20}Generalised ERF with proof}{76}{}%
-\contentsline {section}{\numberline {A.3}Fourier Series}{77}{}%
-\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{77}{}%
+\contentsline {subsection}{\numberline {A.2.20}Time Invariance}{76}{}%
+\contentsline {subsection}{\numberline {A.2.21}Generalised ERF with proof}{77}{}%
+\contentsline {section}{\numberline {A.3}Fourier Series}{78}{}%
+\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{78}{}%

@@ -2408,6 +2408,58 @@ and
 \end{equation*}
 \newpage
 
+\subsection{Time Invariance}
+\textbf{Definition}\\
+In the case of \textit{constant coefficient} operators $p(D)$, there is an important 
+relationship between solutions of to $p(D)x=q(t)$ for input signals $q(t)$. The following result shows why these
+operators are called `Linear Time Invariant' (or LTI).\\
+\vspace{1mm}\\
+\textbf{Translation invariance}: If $p(D)$ is a constant-coefficient differential operator and $p(D)x=q(t)$,
+then $p(D)y=q(t-c)$, where $y(t)=x(t-c)$.\\
+\vspace{1mm}\\
+This is the `time invariance' of $p(D)$.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Consider two systems:
+\begin{align*}
+\text{System A: }&\frac{1}{t}y(t)=x(t)\implies y(t)=tx(t)\\
+\text{System B: }&\frac{1}{10}y(t)=x(t)\implies y(t)=10x(t)
+\end{align*}
+System A is not time-invariant, System B is. First consider system A with a delayed input $x_d(t)=x(t+\delta)$.
+We have the corresponding response $y_1$ as
+\begin{equation*}
+y_1(t)=tx_d(t)=tx(t+\delta)
+\end{equation*}
+Now consider delaying the output by $\delta$
+\begin{equation*}
+y_2(t)=y(t+\delta)=(t+\delta)x(t+\delta)
+\end{equation*}
+Clearly $y_1(t)\neq y_2(t)$, therefore the system is not time-invariant. Now consider the same for system $B$;
+for the delayed input:
+\begin{equation*}
+y_1(t)=10x(t+\delta)
+\end{equation*}
+Now with the delayed output
+\begin{equation*}
+y_2(t)=y(t+\delta)=10x(t+\delta)
+\end{equation*}
+$y_1(t)=y_2(t)$, therefore the system is time-invariant.\\
+\vspace{1mm}\\
+\textbf{Example 2}\\
+Suppose that we know that $x_p(t)=\sqrt{2}\sin(t/2-\pi/4)$ is a solution to the DE
+\begin{equation*}
+2\ddot{x}+\dot{x}+x=\sin(t/2)
+\end{equation*}
+Should we want to find a solution $y_p$ to 
+\begin{equation*}
+2\ddot{x}+\dot{x}+x=\sin(t/2-\pi/3)
+\end{equation*}
+by translation-invariance we immediately have
+\begin{equation*}
+y_p=\sqrt{2}\sin(t/2-\pi/4-\pi/3)=\sqrt{2}\sin(t/2-7\pi/12)
+\end{equation*}
+\newpage
+
 \subsection{Generalised ERF with proof}
 We can solve a LTI DE $p(D)x=q(t)$ with exponential input 
 $q(t)=Be^{at}$ even when $p(a)=0$ using the \textit{generalised exponential response} formula:\\
@@ -2428,6 +2480,24 @@ x_p=\begin{cases}
 \frac{Bt^se^{at}}{p^{(s)}(a)}&\text{if $a$ is an $s$-fold zero}
 \end{cases}
 \end{equation*}
+\textbf{Proof}\\
+The first case can be shown fairly easily:
+\begin{equation*}
+p(D)x_p=p(D)\frac{e^{at}}{p(a)}=\frac{1}{p(a)}p(D)e^{at}
+=\frac{p(a)e^{at}}{p(a)}=e^{at}
+\end{equation*}
+Now we prove the last general case (since the other cases are just instances of it). First understand
+that saying the polynomial $p(D)$ has the number $a$ as an $s$-fold zero is the same as saying $p(D)$ has 
+a factorization
+\begin{equation*}
+p(D)=q(D)(D-a)^s
+\end{equation*}
+(both $p(D)$ and $q(D)$ are polynomials; this just says $(-a)$ can be factored out $s$ times). We will first prove
+that the above implies
+\begin{equation*}
+p^{(s)}(a)=q(a)s!
+\end{equation*}
+
 \newpage
 
 
