@@ -42,5 +42,6 @@
 \contentsline {subsection}{\numberline {A.2.21}Generalised ERF with proof}{77}{}%
 \contentsline {subsection}{\numberline {A.2.22}Resonant response formula, example}{80}{}%
 \contentsline {subsection}{\numberline {A.2.23}Pure resonance}{81}{}%
-\contentsline {section}{\numberline {A.3}Fourier Series}{82}{}%
-\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{82}{}%
+\contentsline {subsection}{\numberline {A.2.24}}{82}{}%
+\contentsline {section}{\numberline {A.3}Fourier Series}{83}{}%
+\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{83}{}%

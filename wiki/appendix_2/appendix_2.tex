@@ -2595,6 +2595,49 @@ x_p=\frac{1}{2}t\sin2t
 \newpage
 
 \subsection{Pure resonance}
+Here we look at the pure resonant case for a second-order LTI DE. We use the spring-mass model for a physical
+interpretation of the system, but obviously the same behaviour applies to other systems with the same DE:
+\begin{equation*}
+x''+w_0^2x=F_0\cos\omega t
+\end{equation*}
+We solve a system like this with complex replacement:
+\begin{equation*}
+z''+w_0^2z=F_0e^{i\omega t},\quad x=\text{Re}(z)
+\end{equation*}
+Characteristic polynomial:
+\begin{equation*}
+p(r)=r^2+\omega_0^2\implies p(i\omega)=\omega_0^2-\omega^2
+\end{equation*}
+ERF:
+\begin{equation*}
+z_p=\begin{cases}
+\frac{F_0e^{i\omega t}}{p(i\omega)}=\frac{F_0e^{i\omega t}}{\omega_0^2-\omega^2}&\text{if $\omega\neq\omega_0$}
+\\
+\frac{F_0te^{i\omega t}}{p'(i\omega)}=\frac{F_0te^{i\omega t}}{2i\omega}&\text{if $\omega=\omega_0$}
+\end{cases}
+\end{equation*}
+Taking real part
+\begin{equation*}
+x_p=\begin{cases}
+\frac{F_0\cos\omega t}{\omega_0^2-\omega^2}&\text{if $\omega\neq\omega_0$}\\
+\frac{F_0t\sin\omega_0t}{2\omega_0}&\text{if $\omega=\omega_0$}
+\end{cases}
+\end{equation*}
+See that the amplitude $A(\omega)$ is given by
+\begin{equation*}
+A(\omega)=\left|\frac{F_0}{\omega_0^2-\omega}\right|
+\end{equation*}
+See that as $\omega$ gets closer to $\omega_0$ the amplitude increases (it is similar to the damped amplitude
+response except that the peak is infinitely high). 
+\begin{center}
+\includegraphics[width=10cm]{33}\\
+\end{center}
+When $\omega=\omega_0$ we have $x_p=\frac{F_0t\sin\omega_0t}{2\omega_0}$. This is called \textit{pure resonance}.
+The frequency $\omega_0$ is called the \textit{resonant} or \textit{natural} frequency of the system.
+Notice that the response is \textit{oscillatory but not periodic}---the amplitude keeps growing in time.
+\newpage
+
+\subsection{}
 
 
 
