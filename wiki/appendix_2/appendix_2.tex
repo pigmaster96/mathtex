@@ -2683,10 +2683,57 @@ both of them collectively as the \textit{frequency response} of the system.\\
 (next page)
 \newpage
 \noindent\textbf{Frequency response and Practical Resonance}\\
-a
+We have a periodic solution to the equation
+\begin{equation*}
+mx''+bx'+kx=B\cos(\omega t)
+\end{equation*}
+given by $x_p=gB\cos(\omega t-\phi)$, where $g$ is the gain
+\begin{equation*}
+g=g(\omega)=\frac{1}{\sqrt{(k-m\omega^2)^2+b^2\omega^2}}
+\end{equation*}
+and $\phi$ is the phase lag
+\begin{equation*}
+\phi=\phi(\omega)=\text{Arg}(p(i\omega))=\tan^{-1}\left(\frac{b\omega}{k-m\omega^2}\right)
+\end{equation*}
+The gain/amplitude response is a function of $\omega$. It tells us the size of the system's response to the
+given input frequency. If the amplitude has a peak at $\omega_r$ we call this the \textit{practical
+resonance frequency}:
+\begin{center}
+\includegraphics[width=10cm]{34}\\
+\end{center}
+If the damping $b$ gets too large, there will be no peak and therefore no practical resonance. 
+(note this is different from overdamping and critical damping, where the response is not sinusoidal and therefore
+does not have a measureable gain)\\
+\vspace{1mm}\\
+\textbf{Finding the practical resonant frequency}\\
+Practical resonance occurs at the frequency $\omega_r$ where $g(\omega)$ has a maximum. Accordingly we look for the
+\textit{minimum} of 
+\begin{equation*}
+f(\omega)=(k-m\omega^2)^2+b^2\omega^2
+\end{equation*}
+Setting $f'(\omega)=0$ and solving gives
+\begin{align*}
+f'(\omega)&=-4m\omega(k-m\omega^2)+2b^2\omega\\
+&=2\omega(b^2-2mk-2m^2\omega^2)=0
+\end{align*}
+so we have $\omega=0$ or $(b^2-2mk-2m^2\omega^2)=0$:
+\begin{align*}
+m^2\omega^2&=mk-b^2/2\\
+\omega_r&=\sqrt{\frac{k}{m}-\frac{b^2}{2m^2}}
+\end{align*}
+See that there is a practical resonant frequency when $mk-b^2/2>0$.\\
+(next page)
+\newpage
+\noindent\textbf{Phase lag visualised}\\
+The dotted line is the input and the solid line is the response:
+\begin{center}
+\includegraphics[width=10cm]{35}\\
+\end{center}
+The damping causes a lag between the input and output. In radians, the angle $\phi$ is called the
+\textit{phase lag} and the time $\phi/\omega$ the \textit{time lag}.
+\newpage
 
-
-
+\subsection{}
 
 
 \newpage
