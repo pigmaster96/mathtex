@@ -2637,7 +2637,53 @@ The frequency $\omega_0$ is called the \textit{resonant} or \textit{natural} fre
 Notice that the response is \textit{oscillatory but not periodic}---the amplitude keeps growing in time.
 \newpage
 
-\subsection{}
+\subsection{Recap and Practical resonance}
+\textbf{Recap: Gain, Phase lag, Complex gain}\\
+Given a second order linear CC DE with a \textit{sinusoidal} driving force $B\cos\omega t$:
+\begin{equation*}
+mx''+bx'+kx=B\cos\omega t
+\end{equation*}
+An equation like this is solved using complex replacement:
+\begin{equation*}
+mz''+bz'+kz=Be^{i\omega t},\quad x=\text{Re}(z)
+\end{equation*}
+characteristic equation:
+\begin{equation*}
+p(s)=ms^2+bs+k
+\end{equation*}
+ERF:
+\begin{equation*}
+z_p=\frac{Be^{i\omega t}}{p(i\omega)}=\frac{Be^{i\omega t}}{k-m\omega^2+ib\omega}
+\end{equation*}
+So
+\begin{equation*}
+x_p=\text{Re}(z_p)=\frac{B}{\sqrt{(k-m\omega^2)^2+b^2\omega^2}}\cos(\omega t-\phi)
+\end{equation*}
+where $\phi=\text{Arg}(p(i\omega))=\tan^{-1}\left(\frac{b\omega}{k-m\omega^2}\right)$. See that the numerator of
+the inverse tangent is positive---$\phi$ must be between 0 and $\pi$ (in first or second quadrants).\\
+\vspace{1mm}\\
+Recall that the \textit{complex gain} is defined as the ratio between the output and input amplitudes in the 
+\textit{complexified} equation:
+\begin{equation*}
+\tilde{g}(\omega)=\frac{1}{p(i\omega)}=\frac{1}{k-m\omega^2+ib\omega}
+\end{equation*}
+The \textit{gain} is defined as the ratio between the output and input amplitudes in the \textit{real} equation:
+\begin{equation*}
+g=g(\omega)=\frac{1}{|p(i\omega)|}=\frac{1}{\sqrt{(k-m\omega^2)^2+b^2\omega^2}}
+\end{equation*}
+The \textit{phase lag} is
+\begin{equation*}
+\phi=\phi(\omega)=\text{Arg}(p(i\omega))=\tan^{-1}\left(\frac{b\omega}{k-m\omega^2}\right)
+\end{equation*}
+from this we also have the \textit{time lag} as $\phi/\omega$.\\
+\vspace{1mm}\\
+We call the gain $g(\omega)$ the \textit{amplitude response} of the system, the phase lag $\phi(\omega)$
+the \textit{phase response} of the system, and 
+both of them collectively as the \textit{frequency response} of the system.\\
+(next page)
+\newpage
+\noindent\textbf{Frequency response and Practical Resonance}\\
+a
 
 
 
