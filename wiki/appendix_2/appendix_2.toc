@@ -43,6 +43,6 @@
 \contentsline {subsection}{\numberline {A.2.22}Resonant response formula, example}{80}{}%
 \contentsline {subsection}{\numberline {A.2.23}Pure resonance}{81}{}%
 \contentsline {subsection}{\numberline {A.2.24}Recap and Practical resonance}{82}{}%
-\contentsline {subsection}{\numberline {A.2.25}}{85}{}%
-\contentsline {section}{\numberline {A.3}Fourier Series}{86}{}%
-\contentsline {subsection}{\numberline {A.3.1}Fourier Series}{86}{}%
+\contentsline {section}{\numberline {A.3}Fourier series and Laplace Transform}{85}{}%
+\contentsline {subsection}{\numberline {A.3.1}Periodic functions---Definitions}{85}{}%
+\contentsline {subsection}{\numberline {A.3.2}Fourier series---Definition and Coefficients}{86}{}%

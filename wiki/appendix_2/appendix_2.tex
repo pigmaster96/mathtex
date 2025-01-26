@@ -2733,27 +2733,57 @@ The damping causes a lag between the input and output. In radians, the angle $\p
 \textit{phase lag} and the time $\phi/\omega$ the \textit{time lag}.
 \newpage
 
-\subsection{}
-
-
+\section{Fourier series and Laplace Transform}
+\subsection{Periodic functions---Definitions}
+\textbf{Definition}\\
+A function $f(t)$ is \textit{periodic} with \textit{period} $P>0$ if
+\begin{equation*}
+f(t+P)=f(t)\quad\text{for all }t
+\end{equation*}
+\textbf{Example}\\
+$f(t)=\sin(2t)$ is periodic with period $P=\pi$. This can be seen because for all $t$,
+\begin{equation*}
+f(t+\pi)=\sin(2(t+\pi))=\sin(2t+2\pi)=\sin(2t)=f(t)
+\end{equation*}
+Notice however that in the this example $f(t)=\sin(2t)$ also has period $P=n\pi$ for any integer $n=1,2,3\ldots$.\\
+\vspace{1mm}\\
+\textbf{Base period}\\
+Most periodic functions have a \textit{minimal period}---which the smallest value that satisfies the definition
+of the period. This is also called the \textit{base period}. An exception to this is the constant function,
+where every value of $P>0$ is a period.\\
+\vspace{1mm}\\
+\textbf{Windows}\\
+To fully describe a periodic function we only need to specify the period and the value of the function over
+one full period. We call an interval containing one full
+period a \textit{window}. Typical choices are $[-P/2,P/2)$ and $[0,P)$, but any interval of length $P$ would work.
 \newpage
 
-\section{Fourier Series}
-\subsection{Fourier Series}
-If the input function $f(t)$ is periodic (of period $2\pi$)
+\subsection{Fourier series---Definition and Coefficients}
+If the $f(t)$ is periodic (for now considering period $2\pi$)
 ,we can express the function (where it is continuous) as an
-infinite sum of sines and cosines.
-This series representation is called a Fourier Series:
+infinite sum of sines and cosines which all have period $2\pi$.\\
+\vspace{1mm}\\
+\textbf{Theorem} (Fourier):\\
+Suppose $f(t)$ has period $2\pi$ then we have
 \begin{align*}
-f(t)&=c_0+\sum_{n=1}^{\infty}[a_n\cos(nt)+b_n\sin(nt)], 
-& \text{$c_0, a_n, b_n$ real constants}
+f(t)\approx&\frac{a_0}{2}+a_1\cos(t)+a_2\cos(2t)+a_3\cos(3t)+\ldots\\
+&+b_1\sin(t)+b_2\sin(2t)+b_3\sin(3t)+\ldots\\
+=&\frac{a_0}{2}+\sum^{\infty}_{n=1}[a_n\cos(nt)+b_n\sin(nt)]
 \end{align*}
+where the coefficients $a_0,a_1,\ldots$ and $b_1,b_2,\ldots$ are computed by
+\begin{align*}
+a_0&=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\,dt\\
+a_n&=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\cos(nt)\,dt\\
+b_n&=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\sin(nt)\,dt
+\end{align*}
+See that all the sinusoids have $2\pi$ as a period. The series is called a \textit{Fourier series}; and the
+coefficients $a_0,a_1,\ldots,b_1,b_2\ldots$ are called the \textit{Fourier coefficients} of $f(t)$.\\
+\vspace{1mm}\\
+We used an approximation instead of an equality in the first statement because the two sides may differ 
+for discontinuities in $f(t)$. We use an equal sign from now on.
+\newpage
 
-
-
-
-
-
+\subsection{}
 
 
 
