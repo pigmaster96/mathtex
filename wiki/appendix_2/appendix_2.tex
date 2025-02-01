@@ -2780,16 +2780,35 @@ See that all the sinusoids have $2\pi$ as a period. The series is called a \text
 coefficients $a_0,a_1,\ldots,b_1,b_2\ldots$ are called the \textit{Fourier coefficients} of $f(t)$.\\
 \vspace{1mm}\\
 We used an approximation instead of an equality in the first statement because the two sides may differ 
-for discontinuities in $f(t)$. We use an equal sign from now on.
+for discontinuities in $f(t)$. We use an equal sign from now on.\\
+(next page)
+\newpage
+\noindent\textbf{Example}\\
+Say we have
+
+
+
 \newpage
 
-\subsection{}
-
-
-
-
-
-
+\subsection{Fourier series for functions with period 2L}
+\textbf{Generalising}\\
+Suppose that we have a periodic function $f(t)$ with arbitrary period $P=2L$; generalising the special case
+$P=2\pi$ by a re-scaling of the interval $(-\pi,\pi)$ to
+$(-L,L)$ allows us to write down the general Fourier series and Fourier coefficient formulas:
+\begin{equation*}
+f(t)=\frac{a_0}{2}+\sum^\infty_{n=1}\left[a_n\cos\left(n\frac{\pi}{L}t\right)
++b_n\sin\left(n\frac{\pi}{L}t\right)\right]
+\end{equation*}
+with Fourier coefficients given by
+\begin{align*}
+a_0&=\frac{1}{L}\int^L_{-L}f(t)\,dt\\
+a_n&=\frac{1}{L}\int^L_{-L}f(t)\cos\left(n\frac{\pi}{L}t\right)dt\\
+b_n&=\frac{1}{L}\int^L_{-L}f(t)\sin\left(n\frac{\pi}{L}t\right)dt
+\end{align*}
+The number $L=P/2$ is called the \textit{half-period}.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Say we have
 
 
 

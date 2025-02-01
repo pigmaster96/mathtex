@@ -46,3 +46,4 @@
 \contentsline {section}{\numberline {A.3}Fourier series and Laplace Transform}{85}{}%
 \contentsline {subsection}{\numberline {A.3.1}Periodic functions---Definitions}{85}{}%
 \contentsline {subsection}{\numberline {A.3.2}Fourier series---Definition and Coefficients}{86}{}%
+\contentsline {subsection}{\numberline {A.3.3}Fourier series for functions with period 2L}{88}{}%
