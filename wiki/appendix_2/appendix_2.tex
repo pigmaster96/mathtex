@@ -2780,11 +2780,73 @@ See that all the sinusoids have $2\pi$ as a period. The series is called a \text
 coefficients $a_0,a_1,\ldots,b_1,b_2\ldots$ are called the \textit{Fourier coefficients} of $f(t)$.\\
 \vspace{1mm}\\
 We used an approximation instead of an equality in the first statement because the two sides may differ 
-for discontinuities in $f(t)$. We use an equal sign from now on.\\
+for discontinuities in $f(t)$. We use an equal sign from now on.
+\newpage
+
+\subsection{Example: Square wave}
+\textbf{Definition}\\
+Say we have $f(t)$ as the \textit{square wave} with period $2\pi$, defined as
+\begin{equation*}
+f(t)=\begin{cases}
+-1&\text{for }-\pi\leq t<0\\
+1&\text{for }0\leq t<\pi
+\end{cases}
+\end{equation*}
+Plotted:
+\begin{center}
+\includegraphics[width=10cm]{36}\\
+\end{center}
+\textbf{Fourier series}\\
+Consider computing its Fourier series. Recall
+\begin{equation*}
+f(t)=\frac{a_0}{2}+\sum^{\infty}_{n=1}[a_n\cos(nt)+b_n\sin(nt)]
+\end{equation*}
+where
+\begin{equation*}
+a_0=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\,dt,\quad
+a_n=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\cos(nt)\,dt,\quad
+b_n=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\sin(nt)\,dt
+\end{equation*}
+First see that
+\begin{equation*}
+a_0=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\,dt=0
+\end{equation*}
+now for the other coefficients, see that we can split the
+integral to get around the discontinuity in the 
+square wave function
+\begin{equation*}
+a_n=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\cos(nt)\,dt
+=\frac{1}{\pi}\int^0_{-\pi}(-1)\cos(nt)\,dt+\frac{1}{\pi}\int^\pi_{0}(1)\cos(nt)\,dt
+\end{equation*}
+and so
+\begin{equation*}
+a_n=\left.-\frac{\sin(nt)}{n\pi}\right|_{-\pi}^0+
+\left.\frac{\sin(nt)}{n\pi}\right|^{\pi}_0=0\quad\text{for $n\neq0$}
+\end{equation*}
+(or see visually that both integrals are 0)\\
 (next page)
 \newpage
-\noindent\textbf{Example}\\
-Say we have
+\noindent\textbf{Fourier series cont.}\\
+Likewise
+\begin{align*}
+b_n&=\frac{1}{\pi}\int^\pi_{-\pi}f(t)\sin(nt)\,dt=
+\frac{1}{\pi}\int^0_{-\pi}(-1)\sin(nt)\,dt+\frac{1}{\pi}\int^\pi_{0}(1)\sin(nt)\,dt\\
+&=\left.\frac{\cos(nt)}{n\pi}\right|_{-\pi}^0-\left.\frac{\cos(nt)}{n\pi}\right|^{\pi}_0
+=\frac{1-\cos(-n\pi)}{n\pi}-\frac{\cos(n\pi)-1}{n\pi}\\
+&=\frac{2}{n\pi}(1-\cos(-n\pi))=\frac{2}{n\pi}(1-(-1)^n)
+=\begin{cases}
+\frac{4}{n\pi}&\text{for $n$ odd}\\
+0&\text{for $n$ even}
+\end{cases}
+\end{align*}
+The last step comes from the the simplification $\cos(n\pi)=(-1)^n$.
+With that we have the fourier series for $f(t)$ as
+\begin{equation*}
+f(t)=\sum^\infty_{n=1}b_n\sin(nt)=\frac{4}{\pi}\left(
+\sin t+\frac{1}{3}\sin(3t)+\frac{1}{5}\sin(5t)+\cdots\right)
+\end{equation*}
+\textbf{Illustrated convergence of Fourier series}\\
+The claim is that
 
 
 
