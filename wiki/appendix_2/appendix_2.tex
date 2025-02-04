@@ -2846,10 +2846,23 @@ f(t)=\sum^\infty_{n=1}b_n\sin(nt)=\frac{4}{\pi}\left(
 \sin t+\frac{1}{3}\sin(3t)+\frac{1}{5}\sin(5t)+\cdots\right)
 \end{equation*}
 \textbf{Illustrated convergence of Fourier series}\\
-The claim is that
-
-
-
+Here we plot the sums of the first $N$ terms of the series for $N=1,3,9,33$:
+\begin{center}
+\includegraphics[width=10cm]{37}\\
+\end{center}
+See that the more terms considered, the better the series approximates the candidate function.\\
+\vspace{1mm}\\
+\textbf{Intuition for odd and even functions}\\
+It turns out that for \textit{odd} $f(t)$, meaning $f(-t)=-f(t)$, such functions only have sines (which
+are also odd functions) in their Fourier series, it resembles
+\begin{equation*}
+f(t)=\sum^\infty_{n=1}b_n\sin(nt)
+\end{equation*}
+Similarly for even functions, where $f(-t)=f(t)$, their Fourier series consist of cosines:
+\begin{equation*}
+f(t)=\frac{a_0}{2}+\sum^\infty_{n=1}a_n\cos(nt)
+\end{equation*}
+For instance see that in the case of the square wave (an odd function), the Fourier series consists of just sines.
 \newpage
 
 \subsection{Fourier series for functions with period 2L}
@@ -2869,11 +2882,31 @@ b_n&=\frac{1}{L}\int^L_{-L}f(t)\sin\left(n\frac{\pi}{L}t\right)dt
 \end{align*}
 The number $L=P/2$ is called the \textit{half-period}.\\
 \vspace{1mm}\\
-\textbf{Example}\\
-Say we have
-
-
-
+\textbf{Example: Triangle wave}\\
+Let $f(t)$ be a period 2 function, defined on the window $[-1,1)$ by $f(t)=|t|$; this function is called a 
+\textit{triangle wave} or \textit{continuous sawtooth function}:
+\begin{center}
+\includegraphics[width=10cm]{38}\\
+\end{center}
+Consider computing its Fourier series. In this case the period is $P=2$, and therefore the half-period is $L=1$. 
+Computing $a_0$:
+\begin{equation*}
+a_0=\frac{1}{L}\int^L_{-L}f(t)\,dt=\int^1_{-1}|t|\,dt
+=2\int^1_{0}t\,dt=1
+\end{equation*}
+Now for $a_n$ for $n\neq0$ (and integrating by parts):
+\begin{align*}
+a_n&=\frac{1}{L}\int^L_{-L}f(t)\cos\left(n\frac{\pi}{L}t\right)dt\\
+&=\frac{1}{1}\int^1_{-1}|t|\cos(n\pi t)\,dt=2\int^1_0t\cos(n\pi t)\,dt\\
+&=2\left(\frac{t\sin(n\pi t)}{n\pi}+\left.\frac{\cos(n\pi t)}{n^2\pi^2}\right)\right|^1_0
+=\frac{2}{n^2\pi^2}((-1)^n-1)=\begin{cases}
+-\frac{4}{n^2\pi^2}&\text{for $n$ odd}\\
+0&\text{for $n$ even}\end{cases}
+\end{align*}
+(next page)
+\newpage
+\noindent\textbf{Triangle wave (cont.)}\\
+Now for the sine coefficients.
 
 
 
