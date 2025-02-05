@@ -2907,6 +2907,24 @@ a_n&=\frac{1}{L}\int^L_{-L}f(t)\cos\left(n\frac{\pi}{L}t\right)dt\\
 \newpage
 \noindent\textbf{Triangle wave (cont.)}\\
 Now for the sine coefficients.
+\begin{align*}
+b_n&=\frac{1}{L}\int^L_{-L}f(t)\sin\left(n\frac{\pi}{L}t\right)dt=\frac{1}{1}\int^1_{-1}|t|\sin(n\pi t)\,dt\\
+&=\int^0_{-1}-t\sin(n\pi t)\,dt+\int^1_{0}t\sin(n\pi t)\,dt\\
+&=-\left(\left.-\frac{t\cos(n\pi t)}{n\pi}+\frac{\sin(n\pi t)}{n^2\pi^2}\right)\right|^0_{-1}+
+\left(\left.-\frac{t\cos(n\pi t)}{n\pi}+\frac{\sin(n\pi t)}{n^2\pi^2}\right)\right|^1_{0}\\
+&=\frac{\cos(n\pi)}{n\pi}-\frac{\cos(n\pi)}{n\pi}=0
+\end{align*}
+Thus the Fourier series for $f(t)$ is 
+\begin{align*}
+f(t)&=\frac{1}{2}-\frac{4}{\pi^2}\left(\cos(\pi t)+\frac{\cos(3\pi t)}{3^2}+\frac{\cos(5\pi t)}{5^2}+\cdots\right)\\
+&=\frac{1}{2}-\frac{4}{\pi^2}\sum_{n\text{ odd}}\frac{\cos(n\pi t)}{n^2}
+\end{align*}
+\newpage
+
+\subsection{Orthogonality Rules}
+Here we show
+
+\newpage
 
 
 
