@@ -48,4 +48,4 @@
 \contentsline {subsection}{\numberline {A.3.2}Fourier series---Definition and Coefficients}{86}{}%
 \contentsline {subsection}{\numberline {A.3.3}Example: Square wave}{87}{}%
 \contentsline {subsection}{\numberline {A.3.4}Fourier series for functions with period 2L}{89}{}%
-\contentsline {subsection}{\numberline {A.3.5}Orthogonality Rules}{91}{}%
+\contentsline {subsection}{\numberline {A.3.5}Orthogonality Rules Justification}{91}{}%

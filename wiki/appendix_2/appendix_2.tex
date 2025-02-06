@@ -2921,10 +2921,111 @@ f(t)&=\frac{1}{2}-\frac{4}{\pi^2}\left(\cos(\pi t)+\frac{\cos(3\pi t)}{3^2}+\fra
 \end{align*}
 \newpage
 
-\subsection{Orthogonality Rules}
-Here we show
-
+\subsection{Orthogonality Rules Justification}
+Here we justify a few integral formulas, called the orthogonality relations (note the integral can be viewed
+as a continuous dot product between two sinusoids, thus the link to the name). $n,m$ are integers:
+\begin{align*}
+\frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\cos\left(m\frac{\pi}{L}t\right)\,dt&=\begin{cases}
+1&n=m\neq0\\
+0&n\neq m\\
+2&n=m=0
+\end{cases}\\
+\frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt&=0\\
+\frac{1}{L}\int^L_{-L}\sin\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt&=\begin{cases}
+1&n=m\neq0\\
+0&n\neq m
+\end{cases}
+\end{align*}
+\textbf{First relation}\\
+First see that, denoting $a=n\pi/L$, $b=m\pi/L$, $n,m$ integers:
+\begin{align*}
+\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}\,dt&=\left[\frac{e^{i(a+b)t}}{i(a+b)}-\frac{e^{-i(a+b)t}}{i(a+b)}\right]^L_{-L}\\
+&=\left.\frac{2\sin((a+b)t)}{i(a+b)}\right|^L_{-L}\\
+&=\left.\frac{2L\sin((n\pi+m\pi)t/L)}{i(n\pi+m\pi)}\right|^L_{-L}\\
+&=\frac{4L\sin(n\pi+m\pi)}{i(n\pi+m\pi)}=\begin{cases}
+0&n=m\neq0\\
+0&n\neq m
+\end{cases}
+\end{align*}
+And for $n=m=0$:
+\begin{equation*}
+\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}\,dt=\int^L_{-L}e^{0}+e^{0}\,dt=\int^L_{-L}2\,dt=4L
+\end{equation*}
+so
+\begin{equation*}
+\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}\,dt=\begin{cases}
+0&n=m\neq0\\
+0&n\neq m\\
+4L&n=m=0
+\end{cases}
+\end{equation*}
+(next page)
 \newpage
+\noindent\textbf{First relation (cont.)}\\
+Then see that 
+\begin{align*}
+\int^L_{-L}e^{i(a-b)t}+e^{-i(a-b)t}\,dt&=\left[\frac{e^{i(a-b)t}}{i(a-b)}-\frac{e^{-i(a-b)t}}{i(a-b)}\right]^L_{-L}\\
+&=\left.\frac{2\sin((a-b)t)}{i(a-b)}\right|^L_{-L}\\
+&=\left.\frac{2L\sin((n\pi-m\pi)t/L)}{i(n\pi-m\pi)}\right|^L_{-L}\\
+&=\frac{4L\sin(n\pi-m\pi)}{i(n\pi-m\pi)}=0\quad\text{for $n\neq m$}
+\end{align*}
+and for $a=b\neq0$ or $a=b=0$
+\begin{equation*}
+\int^L_{-L}e^{i(a-b)t}+e^{-i(a-b)t}\,dt=\int^L_{-L}e^{0}+e^{0}\,dt=\int^L_{-L}2\,dt=4L
+\end{equation*}
+so
+\begin{equation*}
+\int^L_{-L}e^{i(a-b)t}+e^{-i(a-b)t}\,dt=\begin{cases}
+4L&n=m\neq0\\
+0&n\neq m\\
+4L&n=m=0
+\end{cases}
+\end{equation*}
+Finally we prove the first relation:
+\begin{align*}
+\frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\cos\left(m\frac{\pi}{L}t\right)\,dt=
+\frac{1}{L}\int^L_{-L}\cos(at)\cos(bt)\,dt
+\end{align*}
+using the fact that $\cos(x)=(e^{ix}+e^{-ix})/2$
+\begin{align*}
+\frac{1}{L}\int^L_{-L}\cos(at)\cos(bt)\,dt&=
+\frac{1}{L}\int^L_{-L}\frac{e^{iat}+e^{-iat}}{2}\cdot
+\frac{e^{ibt}+e^{-ibt}}{2}\,dt\\
+&=\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}
++e^{i(a-b)t}+e^{-i(a-b)t}\,dt\\
+\end{align*}
+\begin{equation*}
+=\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}\,dt}_{=\begin{cases}0&n=m\neq0\\
+0&n\neq m\\
+1&n=m=0
+\end{cases}}
++\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a-b)t}+e^{-i(a-b)t}\,dt}_{=\begin{cases}
+1&n=m\neq0\\
+0&n\neq m\\
+1&n=m=0
+\end{cases}}
+\end{equation*}
+so
+\begin{equation*}
+\frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\cos\left(m\frac{\pi}{L}t\right)\,dt=\begin{cases}
+1&n=m\neq0\\
+0&n\neq m\\
+2&n=m=0
+\end{cases}
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Second relation}\\
+See that
+
+
+
+
+
+
+
+
+
 
 
 
