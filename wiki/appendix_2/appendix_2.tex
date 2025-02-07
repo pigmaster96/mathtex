@@ -2992,7 +2992,7 @@ using the fact that $\cos(x)=(e^{ix}+e^{-ix})/2$
 \frac{1}{L}\int^L_{-L}\frac{e^{iat}+e^{-iat}}{2}\cdot
 \frac{e^{ibt}+e^{-ibt}}{2}\,dt\\
 &=\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}
-+e^{i(a-b)t}+e^{-i(a-b)t}\,dt\\
++e^{i(a-b)t}+e^{-i(a-b)t}\,dt
 \end{align*}
 \begin{equation*}
 =\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}\,dt}_{=\begin{cases}0&n=m\neq0\\
@@ -3016,7 +3016,87 @@ so
 (next page)
 \newpage
 \noindent\textbf{Second relation}\\
-See that
+See that for $a=n\pi/L$, $b=m\pi/L$, $n,m$ integers:
+\begin{align*}
+\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}\,dt&=
+\left[\frac{e^{i(a+b)t}}{i(a+b)}+\frac{e^{-i(a+b)t}}{i(a+b)}\right]^L_{-L}\\
+&=\left.\frac{2\cos((a+b)t)}{i(a+b)}\right|^L_{-L}\\
+&=\frac{2\cos((a+b)L)}{i(a+b)}-\frac{2\cos(-(a+b)L)}{i(a+b)}\\
+&=\begin{cases}
+0&n=m\neq0\\
+0&n\neq m
+\end{cases}
+\end{align*}
+(since $\cos(-x)=\cos(x)$) and for $n=m=0$
+\begin{equation*}
+\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}\,dt=\int^L_{-L}e^{0}-e^{0}\,dt=\int^L_{-L}0\,dt=0
+\end{equation*}
+so
+\begin{equation*}
+\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}\,dt=\begin{cases}
+0&n=m\neq0\\
+0&n\neq m\\
+0&n=m=0
+\end{cases}
+\end{equation*}
+see that by exactly the same line of reasoning:
+\begin{align*}
+\int^L_{-L}e^{i(a-b)t}-e^{-i(a-b)t}\,dt&=
+\left[\frac{e^{i(a-b)t}}{i(a-b)}+\frac{e^{-i(a-b)t}}{i(a-b)}\right]^L_{-L}\\
+&=\left.\frac{2\cos((a-b)t)}{i(a-b)}\right|^L_{-L}\\
+&=\frac{2\cos((a-b)L)}{i(a-b)}-\frac{2\cos(-(a-b)L)}{i(a-b)}\\
+&=0\quad\text{for }n\neq m
+\end{align*}
+for $n=m\neq0$ and $n=m=0$
+\begin{equation*}
+\int^L_{-L}e^{i(a-b)t}-e^{-i(a-b)t}\,dt=\int^L_{-L}e^{0}-e^{0}\,dt=\int^L_{-L}0\,dt=0
+\end{equation*}
+so
+\begin{equation*}
+\int^L_{-L}e^{i(a-b)t}-e^{-i(a-b)t}\,dt=\begin{cases}
+0&n=m\neq0\\
+0&n\neq m\\
+0&n=m=0
+\end{cases}
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Second relation (cont.)}\\
+Finally see that
+\begin{equation*}
+\frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt=
+\frac{1}{L}\int^L_{-L}\cos(at)\sin(bt)\,dt
+\end{equation*}
+using $\cos(x)=(e^{ix}+e^{-ix})/2$ and $\sin(x)=(e^{ix}-e^{-ix})/2$:
+\begin{align*}
+\frac{1}{L}\int^L_{-L}\cos(at)\sin(bt)\,dt&=
+\frac{1}{L}\int^L_{-L}\frac{e^{iat}+e^{-iat}}{2}\cdot
+\frac{e^{ibt}-e^{-ibt}}{2}\,dt\\
+&=\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}
+-e^{i(a-b)t}+e^{-i(a-b)t}\,dt
+\end{align*}
+as derived above,
+\begin{equation*}
+=\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}\,dt}_{\begin{cases}
+0&n=m\neq0\\
+0&n\neq m\\
+0&n=m=0
+\end{cases}}-
+\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a-b)t}-e^{-i(a-b)t}\,dt}_{\begin{cases}
+0&n=m\neq0\\
+0&n\neq m\\
+0&n=m=0
+\end{cases}}
+\end{equation*}
+so
+\begin{equation*}
+\frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt=0
+\end{equation*}
+(next page)
+\newpage
+\noindent\textbf{Third relation}\\
+Lastly, see that
+
 
 
 
