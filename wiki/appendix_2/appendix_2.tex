@@ -2933,7 +2933,8 @@ as a continuous dot product between two sinusoids, thus the link to the name). $
 \frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt&=0\\
 \frac{1}{L}\int^L_{-L}\sin\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt&=\begin{cases}
 1&n=m\neq0\\
-0&n\neq m
+0&n\neq m\\
+0&n=m=0
 \end{cases}
 \end{align*}
 \textbf{First relation}\\
@@ -3067,22 +3068,22 @@ Finally see that
 \frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt=
 \frac{1}{L}\int^L_{-L}\cos(at)\sin(bt)\,dt
 \end{equation*}
-using $\cos(x)=(e^{ix}+e^{-ix})/2$ and $\sin(x)=(e^{ix}-e^{-ix})/2$:
+using $\cos(x)=(e^{ix}+e^{-ix})/2$ and $\sin(x)=(e^{ix}-e^{-ix})/(2i)$:
 \begin{align*}
 \frac{1}{L}\int^L_{-L}\cos(at)\sin(bt)\,dt&=
 \frac{1}{L}\int^L_{-L}\frac{e^{iat}+e^{-iat}}{2}\cdot
-\frac{e^{ibt}-e^{-ibt}}{2}\,dt\\
-&=\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}
+\frac{e^{ibt}-e^{-ibt}}{2i}\,dt\\
+&=\frac{1}{4Li}\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}
 -e^{i(a-b)t}+e^{-i(a-b)t}\,dt
 \end{align*}
 as derived above,
 \begin{equation*}
-=\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}\,dt}_{\begin{cases}
+=\underbrace{\frac{1}{4Li}\int^L_{-L}e^{i(a+b)t}-e^{-i(a+b)t}\,dt}_{\begin{cases}
 0&n=m\neq0\\
 0&n\neq m\\
 0&n=m=0
 \end{cases}}-
-\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a-b)t}-e^{-i(a-b)t}\,dt}_{\begin{cases}
+\underbrace{\frac{1}{4Li}\int^L_{-L}e^{i(a-b)t}-e^{-i(a-b)t}\,dt}_{\begin{cases}
 0&n=m\neq0\\
 0&n\neq m\\
 0&n=m=0
@@ -3096,9 +3097,38 @@ so
 \newpage
 \noindent\textbf{Third relation}\\
 Lastly, see that
+\begin{equation*}
+\frac{1}{L}\int^L_{-L}\sin\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt=
+\frac{1}{L}\int^L_{-L}\sin(at)\sin(bt)\,dt
+\end{equation*}
+using $\sin(x)=(e^{ix}-e^{-ix})/(2i)$:
+\begin{align*}
+\frac{1}{L}&\int^L_{-L}\sin(at)\sin(bt)\,dt=
+\frac{1}{L}\int^L_{-L}\frac{e^{iat}-e^{-iat}}{2i}\cdot
+\frac{e^{ibt}-e^{-ibt}}{2i}\,dt\\
+&=\frac{1}{4Li^2}\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}\,dt
+-\frac{1}{4Li^2}\int^L_{-L}e^{i(a-b)t}+e^{-i(a-b)t}\,dt\\
+&=\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a-b)t}+e^{-i(a-b)t}\,dt}_{=\begin{cases}
+1&n=m\neq0\\
+0&n\neq m\\
+1&n=m=0
+\end{cases}}-
+\underbrace{\frac{1}{4L}\int^L_{-L}e^{i(a+b)t}+e^{-i(a+b)t}\,dt}_{=\begin{cases}0&n=m\neq0\\
+0&n\neq m\\
+1&n=m=0
+\end{cases}}
+\end{align*}
+so
+\begin{equation*}
+\frac{1}{L}\int^L_{-L}\sin\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt=\begin{cases}
+1&n=m\neq0\\
+0&n\neq m\\
+0&n=m=0
+\end{cases}
+\end{equation*}
+\newpage
 
-
-
+\subsection{Orthogonality rules to justify coefficient formulas}
 
 
 
