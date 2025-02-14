@@ -3129,8 +3129,80 @@ so
 \newpage
 
 \subsection{Orthogonality rules to justify coefficient formulas}
-
-
+We had the orthogonality rules as: for
+$n,m$ integers:
+\begin{align*}
+\frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\cos\left(m\frac{\pi}{L}t\right)\,dt&=\begin{cases}
+1&n=m\neq0\\
+0&n\neq m\\
+2&n=m=0
+\end{cases}\\
+\frac{1}{L}\int^L_{-L}\cos\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt&=0\\
+\frac{1}{L}\int^L_{-L}\sin\left(n\frac{\pi}{L}t\right)\sin\left(m\frac{\pi}{L}t\right)\,dt&=\begin{cases}
+1&n=m\neq0\\
+0&n\neq m\\
+0&n=m=0
+\end{cases}
+\end{align*}
+\textbf{Cosine coefficients}\\
+Given a function (with arbritrary period $2L$)
+\begin{equation*}
+f(t)=\frac{a_0}{2}+\sum^{\infty}_{n=1}\left[a_n\cos\left(n\frac{\pi}{L}t\right)+
+b_n\sin\left(n\frac{\pi}{L}t\right)\right]
+\end{equation*}
+First we consider $a_n$ coefficients; say that we want to find $a_k$, where $k$ is an integer and $k>0$:
+\begin{align*}
+&\frac{1}{L}\int^L_{-L}f(t)\cos\left(k\frac{\pi}{L}t\right)
+dt\\
+=&\frac{1}{L}\int^L_{-L}\frac{a_0}{2}\cos\left(k\frac{\pi}{L}t\right)+
+\sum^{\infty}_{n=1}\left[a_n\cos\left(n\frac{\pi}{L}t\right)\cos\left(k\frac{\pi}{L}t\right)\right]\\&+
+\sum^{\infty}_{n=1}\left[b_n\sin\left(n\frac{\pi}{L}t\right)\cos\left(k\frac{\pi}{L}t\right)\right]dt
+\end{align*}
+Using the orthogonality relations see that all except one  term in this expression are equal to 0 
+\begin{equation*}
+=0+\ldots+0+\frac{1}{L}\int^L_{-L}a_k\cos\left(k\frac{\pi}{L}t\right)\cos\left(k\frac{\pi}{L}t\right)+0+\ldots+0
+\end{equation*}
+so
+\begin{equation*}
+\frac{1}{L}\int^L_{-L}f(t)\cos\left(k\frac{\pi}{L}t\right)
+=a_k\underbrace{\frac{1}{L}\int^L_{-L}\cos\left(k\frac{\pi}{L}t\right)\cos\left(k\frac{\pi}{L}t\right)}_{=1}=a_k
+\end{equation*}
+which gives us a formula for the cosine coefficients.\\
+(next page)\newpage
+\noindent\textbf{Sine coefficients}\\
+The sine coefficients can be proven the same way; say we want to find $b_k$ where again $k$ is an integer and $k>0$:
+\begin{align*}
+&\frac{1}{L}\int^L_{-L}f(t)\sin\left(k\frac{\pi}{L}t\right)dt\\
+=&\frac{1}{L}\int^L_{-L}\frac{a_0}{2}\sin\left(k\frac{\pi}{L}t\right)+\sum^{\infty}_{n=1}\left[a_n\cos\left(n\frac{\pi}{L}t\right)\sin\left(k\frac{\pi}{L}t\right)\right]\\&+
+\sum^{\infty}_{n=1}\left[b_n\sin\left(n\frac{\pi}{L}t\right)\sin\left(k\frac{\pi}{L}t\right)\right]dt
+\end{align*}
+Again see that by the orthogonality rules
+\begin{equation*}
+=0+\ldots+0+\frac{1}{L}\int^L_{-L}b_k\sin\left(k\frac{\pi}{L}t\right)\sin\left(k\frac{\pi}{L}t\right)+0+\ldots+0
+\end{equation*}
+so
+\begin{equation*}
+\frac{1}{L}\int^L_{-L}f(t)\sin\left(k\frac{\pi}{L}t\right)dt=b_k\underbrace{\frac{1}{L}\int^L_{-L}\sin\left(k\frac{\pi}{L}t\right)\sin\left(k\frac{\pi}{L}t\right)}_{=1}=b_k
+\end{equation*}
+which gives us a formula for the sine coefficients.\\
+\vspace{1mm}\\
+\textbf{Justifying $a_0/2$}\\
+See that should we consider $k=0$, attempting to compute the cosine coefficients gives
+\begin{align*}
+&\frac{1}{L}\int^L_{-L}f(t)\cos\left(0\cdot\frac{\pi}{L}t\right)dt\\
+=&\frac{1}{L}\int^L_{-L}\frac{a_0}{2}\cos\left(0\cdot\frac{\pi}{L}t\right)+
+\underbrace{\sum^{\infty}_{n=1}\left[a_n\cos\left(n\frac{\pi}{L}t\right)\cos\left(0\cdot\frac{\pi}{L}t\right)\right]}_{=0}\\&+
+\underbrace{\sum^{\infty}_{n=1}\left[b_n\sin\left(n\frac{\pi}{L}t\right)\cos\left(0\cdot\frac{\pi}{L}t\right)\right]}_{=0}dt\\
+=&\frac{1}{L}\int^L_{-L}\frac{a_0}{2}\,dt=a_0
+\end{align*}
+First see that
+\begin{equation*}
+\frac{1}{L}\int^L_{-L}f(t)\cos\left(0\cdot\frac{\pi}{L}t\right)dt=\frac{1}{L}\int^L_{-L}f(t)\,dt=a_0
+\end{equation*}
+which gives us the formula for $a_0$. Also see that this justifies the convention of scaling $a_0$ by a 
+factor of 1/2 in the fourier series formula. (Computing the sine coefficients for $k=0$ amounts to 0 since $\sin(0)=0$)
+\newpage
+\subsection{Even and Odd Functions}
 
 
 

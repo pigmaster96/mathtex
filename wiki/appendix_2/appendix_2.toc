@@ -50,3 +50,4 @@
 \contentsline {subsection}{\numberline {A.3.4}Fourier series for functions with period 2L}{89}{}%
 \contentsline {subsection}{\numberline {A.3.5}Orthogonality Rules Justification}{91}{}%
 \contentsline {subsection}{\numberline {A.3.6}Orthogonality rules to justify coefficient formulas}{96}{}%
+\contentsline {subsection}{\numberline {A.3.7}Even and Odd Functions}{98}{}%
