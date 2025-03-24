@@ -3224,13 +3224,14 @@ Illustrated:
 \includegraphics[width=10cm]{39}\\
 \end{center}
 \textbf{Even and odd Fourier coefficient rules}\\
-Consider multiplying \textit{even and odd powers of $t$}. We can show
+Consider multiplying even and odd functions; intuitively (consider for instance multiplying 
+odd and even powers of $t$):
 \begin{enumerate}
 \item even$\times$even = even
 \item odd$\times$odd = even
 \item odd$\times$even = odd
 \end{enumerate}
-We can use this to show that, assuming perioding $f(t)$:
+We can use this to show that, assuming periodic $f(t)$:
 \begin{equation*}
 \text{If }f(t)\text{ is \textit{even} then we have }b_n=0,\text{ and }a_n=\frac{2}{L}\int^L_0f(t)\cos\left(n\frac{\pi}{L}\right)\,dt
 \end{equation*}
@@ -3240,14 +3241,28 @@ and
 \end{equation*}
 (next page)\newpage
 \noindent\textbf{Justification for Even and odd Fourier coefficient rules}\\
-Starting with the \textit{Even} case, 
+Starting with the \textit{Even} case, assuming even $f(t)$, see that attempting to obtain the fourier coefficients
+using their respective formulas:
+\begin{align*}
+a_n&=\frac{1}{L}\int^L_{-L}\underbrace{f(t)\cos\left(n\frac{\pi}{l}t\right)}_{\text{is even}}dt\\
+b_n&=\frac{1}{L}\int^L_{-L}\underbrace{f(t)\sin\left(n\frac{\pi}{l}t\right)}_{\text{is odd}}dt
+\end{align*}
+we can thus rewrite the integrals as
+\begin{equation*}
+a_n=\frac{2}{L}\int^L_0f(t)\cos\left(n\frac{\pi}{L}\right)dt,\quad b_n=0
+\end{equation*}
+The odd case can be shown the same way; if $f(t)$ is \textit{odd}:
+\begin{align*}
+a_n&=\frac{1}{L}\int^L_{-L}\underbrace{f(t)\cos\left(n\frac{\pi}{l}t\right)}_{\text{is odd}}dt\\
+b_n&=\frac{1}{L}\int^L_{-L}\underbrace{f(t)\sin\left(n\frac{\pi}{l}t\right)}_{\text{is even}}dt
+\end{align*}
+so
+\begin{equation*}
+a_n=0,\quad b_n=\frac{2}{L}\int^L_0f(t)\sin\left(n\frac{\pi}{L}\right)dt
+\end{equation*}
+\newpage
 
-
-
-
-
-
-
+\subsection{}
 
 
 
