@@ -39,15 +39,16 @@
 \contentsline {subsection}{\numberline {A.2.18}Polynomial Input: Undetermined Coefficients}{71}{}%
 \contentsline {subsection}{\numberline {A.2.19}Linear Operators}{73}{}%
 \contentsline {subsection}{\numberline {A.2.20}Time Invariance}{76}{}%
-\contentsline {subsection}{\numberline {A.2.21}Generalised ERF with proof}{77}{}%
-\contentsline {subsection}{\numberline {A.2.22}Resonant response formula, example}{80}{}%
-\contentsline {subsection}{\numberline {A.2.23}Pure resonance}{81}{}%
-\contentsline {subsection}{\numberline {A.2.24}Recap and Practical resonance}{82}{}%
-\contentsline {section}{\numberline {A.3}Fourier series and Laplace Transform}{85}{}%
-\contentsline {subsection}{\numberline {A.3.1}Periodic functions---Definitions}{85}{}%
-\contentsline {subsection}{\numberline {A.3.2}Fourier series---Definition and Coefficients}{86}{}%
-\contentsline {subsection}{\numberline {A.3.3}Example: Square wave}{87}{}%
-\contentsline {subsection}{\numberline {A.3.4}Fourier series for functions with period 2L}{89}{}%
-\contentsline {subsection}{\numberline {A.3.5}Orthogonality Rules Justification}{91}{}%
-\contentsline {subsection}{\numberline {A.3.6}Orthogonality rules to justify coefficient formulas}{96}{}%
-\contentsline {subsection}{\numberline {A.3.7}Even and Odd Functions}{98}{}%
+\contentsline {subsection}{\numberline {A.2.21}Generalised ERF with proof}{78}{}%
+\contentsline {subsection}{\numberline {A.2.22}Resonant response formula, example}{81}{}%
+\contentsline {subsection}{\numberline {A.2.23}Pure resonance}{82}{}%
+\contentsline {subsection}{\numberline {A.2.24}Recap and Practical resonance}{83}{}%
+\contentsline {section}{\numberline {A.3}Fourier series and Laplace Transform}{86}{}%
+\contentsline {subsection}{\numberline {A.3.1}Periodic functions---Definitions}{86}{}%
+\contentsline {subsection}{\numberline {A.3.2}Fourier series---Definition and Coefficients}{87}{}%
+\contentsline {subsection}{\numberline {A.3.3}Example: Square wave}{88}{}%
+\contentsline {subsection}{\numberline {A.3.4}Fourier series for functions with period 2L}{90}{}%
+\contentsline {subsection}{\numberline {A.3.5}Orthogonality Rules Justification}{92}{}%
+\contentsline {subsection}{\numberline {A.3.6}Orthogonality rules to justify coefficient formulas}{97}{}%
+\contentsline {subsection}{\numberline {A.3.7}Even and Odd Functions}{99}{}%
+\contentsline {subsection}{\numberline {A.3.8}}{101}{}%

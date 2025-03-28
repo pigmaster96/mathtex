@@ -2459,6 +2459,21 @@ by translation-invariance we immediately have
 y_p=\sqrt{2}\sin(t/2-\pi/4-\pi/3)=\sqrt{2}\sin(t/2-7\pi/12)
 \end{equation*}
 \newpage
+\noindent\textbf{Intuitively}:\\
+A linear map is a function between two vector spaces where addition and scalar multiplication are preserved;
+a function $T:V\to W$ is linear if 
+\begin{align*}
+T(u+v)&=T(u)+T(v)\\
+T(av)&=aT(v)
+\end{align*}
+\textit{Linearity} in the context of a system means that the relation between the input $x(t)$ and the output $y(t)$, both being regarded as functions, is a linear mapping: if $a$ is a constant then the system output to $ax(t)$ is $ay(t)$ (so $T(ax)=aT(x)=ay$).\\
+\vspace{1mm}\\
+If $x'(t)$ is a further input with system output $y'(t)$ then the output
+of the system to an input $x(t)+x'(t)$ is $y(t)+y'(t)$ (so $T(u+v)=T(u)+T(v)$). (this is also superposition)\\
+\vspace{1mm}\\
+\textit{Time invariance} means that whether we apply an input to the system now or $T$ seconds from now, the output would be identical except for a time delay of $T$ seconds. That is, if the output due to input $x(t)$ is $y(t)$, then the output due to $x(t-T)$ is $y(t-T)$. The
+system is time invariant because the output does not depend on the particular time the input is applied.
+\newpage
 
 \subsection{Generalised ERF with proof}
 We can solve a LTI DE $p(D)x=q(t)$ with exponential input 
