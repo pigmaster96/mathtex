@@ -1,1 +1,1 @@
-My notes consolidated, all written in TeX.
+TeX note taking
