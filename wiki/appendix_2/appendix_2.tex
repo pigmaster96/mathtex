@@ -3342,8 +3342,51 @@ The input signal has a base frequency 1---the presence of this third harmonic is
 the driven oscillator picked it out in its reponse in the form of a dominant frequency \textit{three times} the
 fundamental frequency of the input.
 \newpage
-\subsection{}
 
+\subsection{Example: Damped Harmonic Oscillator with\\triangle wave input}
+Say $f(t)$ is a triangle wave as shown
+\begin{center}
+\includegraphics[width=10cm]{40}\\
+\end{center}
+Computing its fourier series would yield
+\begin{equation*}
+f(t)=\frac{1}{2}-\frac{4}{\pi^2}\left(\cos t+\frac{\cos3t}{3^2}+\frac{\cos5t}{5^2}+\ldots\right)
+\end{equation*}
+Now consider the DE
+\begin{equation*}
+\ddot{x}+2\dot{x}+9x=f(t)
+\end{equation*}
+\textbf{Solving}\\
+We solve for the individual component
+\begin{equation*}
+\ddot{x}+2\dot{x}+9x=\cos nt
+\end{equation*}
+First (for the constant), when $n=0$, a particular solution is $x_{n,p}=1/9$. Now for $n\geq1$ we have by complex
+replacement
+\begin{equation*}
+\ddot{z}_n+2\dot{z}_n+9z_n=e^{int},\quad x_n=\text{Re}(z_n)
+\end{equation*}
+By the ERF we have
+\begin{equation*}
+z_{n,p}=\frac{e^{int}}{9-n^2+2in}
+\end{equation*}
+We can write the complex number in polar form $9-n^2+2in=R_ne^{i\phi_n}$ where
+\begin{equation*}
+R_n=\sqrt{(9-n^2)^2+4n^2}\text{ and }\phi_n=\text{Arg}(9-n^2+2in)=\tan^{-1}\frac{2n}{9-n^2}
+\end{equation*}
+So we have
+\begin{equation*}
+z_{n,p}=\frac{1}{R_n}e^{i(nt-\phi_n)},\text{ implying }x_{n,p}=\frac{1}{R_n}\cos(nt-\phi_n)
+\end{equation*}
+By superposition we have our solution
+\begin{equation*}
+x_{sp}(t)=\frac{1}{18}-\frac{4}{\pi^2}\left(\frac{\cos(t-\phi_1)}{R_1}+\frac{\cos(3t-\phi_3)}{3^2R_3}
++\frac{\cos(5t-\phi_5)}{5^2R_5}+\ldots\right)
+\end{equation*}
+where $R_n$ and $\phi_n$ are defined as above.
+\newpage
+
+\subsection{General fourier series input to damped harmonic oscillator}
 
 
 
