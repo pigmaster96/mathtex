@@ -3387,6 +3387,28 @@ where $R_n$ and $\phi_n$ are defined as above.
 \newpage
 
 \subsection{General fourier series input to damped harmonic oscillator}
+Now a generalisation of the previous example. Consider solving 
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=f(t)
+\end{equation*}
+for the steady-periodic response $x_{sp}(t)$, where 
+\begin{equation*}
+f(t)=\frac{a_0}{2}+\sum^\infty_{n=1}a_n\cos\left(n\frac{\pi}{L}t\right)
+\end{equation*}
+\textbf{Solving}\\
+For $n=0$ we have $x_{0,p}=1/k$. For $n\geq1$ we use complex replacement
+\begin{equation*}
+m\ddot{z}_n+b\dot{z}_n+kz_n=e^{in\frac{\pi}{L}t},\quad x_n=\text{Re}(z_n)
+\end{equation*}
+and exponential response
+\begin{equation*}
+z_{n,p}(t)=\frac{e^{in\frac{\pi}{L}t}}{p\left(in\frac{\pi}{L}\right)}
+\end{equation*}
+Writing $p\left(in\frac{\pi}{L}\right)$ in as polar coordinates
+\begin{equation*}
+\end{equation*}
+
+
 
 
 
@@ -3397,4 +3419,3 @@ where $R_n$ and $\phi_n$ are defined as above.
 
 
 \end{document}
-
