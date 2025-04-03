@@ -3404,13 +3404,43 @@ and exponential response
 \begin{equation*}
 z_{n,p}(t)=\frac{e^{in\frac{\pi}{L}t}}{p\left(in\frac{\pi}{L}\right)}
 \end{equation*}
-Writing $p\left(in\frac{\pi}{L}\right)$ in as polar coordinates
+We have $p\left(in\frac{\pi}{L}\right)$ (where $p(s)=ms^2+bs+k$)
 \begin{equation*}
+p\left(in\frac{\pi}{L}\right)=\left(k-m\left(n\frac{\pi}{L}\right)^2\right)+ibn\frac{\pi}{L}
 \end{equation*}
+written in polar coordinates
+\begin{equation*}
+=\left|p\left(in\frac{\pi}{L}\right)\right|e^{i\phi_n}
+\end{equation*}
+where
+\begin{equation*}
+\left|p\left(in\frac{\pi}{L}\right)\right|=\sqrt{
+\left(k-m\left(n\frac{\pi}{L}\right)^2\right)^2+\left(bn\frac{\pi}{L}\right)^2}
+\end{equation*}
+and
+\begin{equation*}
+\phi_n=\text{Arg}\left(p\left(in\frac{\pi}{L}\right)\right)
+=\tan^{-1}\left(\frac{bn\frac{\pi}{L}}{k-m\left(n\frac{\pi}{L}\right)^2}\right)
+\end{equation*}
+So we have
+\begin{equation*}
+z_{n,p}=g_ne^{i\left(n\frac{\pi}{L}t-\phi_n\right)},\quad\text{where }
+g_n=\frac{1}{\left|p\left(in\frac{\pi}{L}\right)\right|}
+\end{equation*}
+taking the real part we have
+\begin{equation*}
+x_{n,p}=g_n\cos\left(n\frac{\pi}{L}t-\phi_n\right)
+\end{equation*}
+Using superposition we finally get
+\begin{equation*}
+x_{sp}(t)=\frac{a_0}{2}x_{0,p}+\sum^\infty_{n=1}a_nx_{n,p}(t)=\frac{a_0}{2k}+\sum^{\infty}_{n=1}a_ng_n\cos\left(
+n\frac{\pi}{L}t-\phi_n\right)
+\end{equation*}
+This is the general formula for the steady state periodic response of a second order LTI DE to an even periodic 
+driver $f(t)$.
+\newpage
 
-
-
-
+\subsection{Step and Box functions}
 
 
 
