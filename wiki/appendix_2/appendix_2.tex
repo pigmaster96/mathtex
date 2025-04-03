@@ -3441,6 +3441,92 @@ driver $f(t)$.
 \newpage
 
 \subsection{Step and Box functions}
+\textbf{Step functions}\\
+The \textit{unit step function} (also called the \textit{heaviside function}) is defined as
+\begin{equation*}
+u(t)=\begin{cases}
+0&\text{for }t<0\\
+1&\text{for }t>0\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{41}\\
+\end{center}
+See that $u(t-a)$ is just $u(t)$ shifted to the right
+\begin{equation*}
+u(t-a)=\begin{cases}
+0&\text{for }t<a\\
+1&\text{for }t>a\end{cases}
+\end{equation*}
+Note that
+\begin{itemize}
+\item $u(t)$ is not defined when $t=0$. It has a \textit{jump discontinuity} at that point.
+\item The graph shows that $u(0^-)=0$ and $u(0^+)=1$. Where $u(0^-)$ indicates the left-hand limit and
+$u(0^+)$ the right-hand limit.
+\end{itemize}
+\textbf{Box Functions}\\
+We define a \textit{box function} as
+\begin{equation*}
+u_{ab}(t)=\begin{cases}
+0&\text{for }t<a\\
+1&\text{for }a<t<b\\
+0&\text{for }t>b
+\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{42}\\
+\end{center}
+See that this same function can be written as
+\begin{equation*}
+u_{ab}(t)=u(t-a)-u(t-b)
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Switches}\\
+By multiplying a function $f(t)$ with a step or box function, see that they act as switches to turn
+$f(t)$ on and off.
+\begin{center}
+\includegraphics[width=10cm]{43}\\
+\includegraphics[width=10cm]{44}
+\end{center}
+\begin{itemize}
+\item\textit{Top left:} $f(t)$
+\item\textit{Top right:} $u(t-a)f(t)$ is 0 for $t<a$ and $f(t)$ for $t>a$
+\item\textit{Bottom left:} $[u(t-a)-u(t-b)]f(t)$ is $f(t)$ within the window $a<t<b$ and 0 otherwise.
+\item\textit{Bottom right:} $u(t-a)f(t-a)$ translates $f(t)$ to the right $a$ units, 
+and the result is switched on at time $a$.
+\end{itemize}
+(next page)\newpage
+\noindent\textbf{Multiple functions}\\
+See that we can change formulas for different intervals of $t$. The function
+\begin{equation*}
+f(t)=\begin{cases}
+0&\text{for }t<0\\
+f_1(t)&\text{for }0<t<1\\
+f_2(t)&\text{for }1<t<2\\
+f_3(t)&\text{for }2<t
+\end{cases}
+\end{equation*}
+can be written as
+\begin{equation*}
+f(t)=[u(t)-u(t-1)]f_1(t)+[u(t-1)-u(t-2)]f_2(t)
++u(t-2)f_3(t)
+\end{equation*}
+We can also add on new functions at specific timings; see that the function
+\begin{equation*}
+f(t)=u(t)f_1(t)+u(t-2)f_2(t)+u(t-4)f_3(t)
+\end{equation*}
+looks like
+\begin{equation*}
+f(t)=\begin{cases}
+0&\text{for }t<0\\
+f_1(t)&\text{for }0<t<2\\
+f_1(t)+f_2(t)&\text{for }2<t<4\\
+f_1(t)+f_2(t)+f_3(t)&\text{for }4<t
+\end{cases}
+\end{equation*}
+With no `off' switch the number of terms in each successive case grows.
+\newpage
+
+\subsection{}
 
 
 
