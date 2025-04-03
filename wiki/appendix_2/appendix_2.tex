@@ -3526,7 +3526,61 @@ f_1(t)+f_2(t)+f_3(t)&\text{for }4<t
 With no `off' switch the number of terms in each successive case grows.
 \newpage
 
-\subsection{}
+\subsection{Delta function}
+The discontinuity in the unit step function $u(t)$ is an idealised model of a quantity
+that goes from 0 to 1 very quickly. We assume it jumps across these values in no time.\\
+\vspace{1mm}\\
+This modelled `jump' is called the \textit{delta function} or \textit{Dirac delta function} or 
+\textit{unit impulse}.
+It is important to note that the delta function isn't really a function, but rather a 
+\textit{generalised function}.\\
+\vspace{1mm}\\
+\textbf{Intuition}\\
+Consider a substance being added to a container at a rate of $q(t)$. The total amount added to the container
+from time 0 to time $t$ is
+\begin{equation*}
+Q(t)=\int^t_0q(u)du
+\end{equation*}
+Equivalently
+\begin{equation*}
+\dot{Q}(t)=q(t)
+\end{equation*}
+Assume that $q(t)$ is only nonzero for a short period of time and that the total amount of substance added
+over that period is 1(unit mass). Consider two of the many possible ways this could happen:
+\begin{center}
+\includegraphics[width=10cm]{45}\\
+\end{center}
+See that the area under each box has total area equal to 1, and that the graphs for $Q(t)$ rise linearly to 1 and 
+remain constant at that value thereafter.\\
+(next page)\newpage
+\noindent\textbf{Definition}\\
+Now consider a generalisation of the example; let $q_h(t)$ be a box of width $h$ and height $1/h$. As
+$h\to0$, the width of the box becomes 0, but the \textit{area of the box remains at 1}:
+\begin{center}
+\includegraphics[width=10cm]{46}\\
+\end{center}
+We define the \textit{delta function} to be the formal limit
+\begin{equation*}
+\delta(t)=\lim_{h\to0}q_h(t)
+\end{equation*}
+Graphically $\delta(t)$ is represented as a spike or harpoon at $t=0$. It is an infinitely tall spike
+of infinitesimal width enclosing a total area of 1.\\
+\vspace{1mm}\\
+As an input function $\delta(t)$ represents the ideal case where 1 unit of input is applied
+at once at time $t=0$.
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -55,4 +55,4 @@
 \contentsline {subsection}{\numberline {A.3.9}Example: Damped Harmonic Oscillator with\\triangle wave input}{103}{}%
 \contentsline {subsection}{\numberline {A.3.10}General fourier series input to damped harmonic oscillator}{104}{}%
 \contentsline {subsection}{\numberline {A.3.11}Step and Box functions}{105}{}%
-\contentsline {subsection}{\numberline {A.3.12}}{108}{}%
+\contentsline {subsection}{\numberline {A.3.12}Delta function}{108}{}%
