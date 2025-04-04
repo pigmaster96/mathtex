@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.10)  3 APR 2025 20:48
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.7.10)  4 APR 2025 13:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -493,25 +493,48 @@ File: ./images/46.png Graphic file (type png)
 <use ./images/46.png>
 Package pdftex.def Info: ./images/46.png  used on input line 3560.
 (pdftex.def)             Requested size: 284.52756pt x 95.13675pt.
- [109 <./images/46.png>] (./appendix_2.aux)
+ [109 <./images/46.png>]
+<./images/47.png, id=466, 460.72125pt x 231.86626pt>
+File: ./images/47.png Graphic file (type png)
+<use ./images/47.png>
+Package pdftex.def Info: ./images/47.png  used on input line 3600.
+(pdftex.def)             Requested size: 142.26378pt x 71.59474pt.
+ [110 <./images/47.png>]
+<./images/48.png, id=471, 947.54pt x 176.66pt>
+File: ./images/48.png Graphic file (type png)
+<use ./images/48.png>
+Package pdftex.def Info: ./images/48.png  used on input line 3645.
+(pdftex.def)             Requested size: 284.52756pt x 53.04692pt.
+ [111 <./images/48.png>]
+<./images/49.png, id=476, 947.54pt x 231.86626pt>
+File: ./images/49.png Graphic file (type png)
+<use ./images/49.png>
+Package pdftex.def Info: ./images/49.png  used on input line 3691.
+(pdftex.def)             Requested size: 284.52756pt x 69.62408pt.
+<./images/50.png, id=477, 947.54pt x 231.86626pt>
+File: ./images/50.png Graphic file (type png)
+<use ./images/50.png>
+Package pdftex.def Info: ./images/50.png  used on input line 3702.
+(pdftex.def)             Requested size: 284.52756pt x 69.62408pt.
+ [112 <./images/49.png> <./images/50.png>] [113] (./appendix_2.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3961 strings out of 474222
- 60770 string characters out of 5748733
+ 4009 strings out of 474222
+ 61614 string characters out of 5748733
  1939975 words of memory out of 5000000
- 26176 multiletter control sequences out of 15000+600000
+ 26224 multiletter control sequences out of 15000+600000
  573434 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,19n,65p,312b,303s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on appendix_2.pdf (110 pages, 1627307 bytes).
+Output written on appendix_2.pdf (114 pages, 1650638 bytes).
 PDF statistics:
- 555 PDF objects out of 1000 (max. 8388607)
- 307 compressed objects within 4 object streams
+ 575 PDF objects out of 1000 (max. 8388607)
+ 315 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

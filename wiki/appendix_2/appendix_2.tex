@@ -3567,18 +3567,146 @@ Graphically $\delta(t)$ is represented as a spike or harpoon at $t=0$. It is an 
 of infinitesimal width enclosing a total area of 1.\\
 \vspace{1mm}\\
 As an input function $\delta(t)$ represents the ideal case where 1 unit of input is applied
-at once at time $t=0$.
+at once at time $t=0$.\\
+\vspace{1mm}\\
+\textbf{Properties}\\
+We have
+\begin{equation*}
+\delta(t)=\begin{cases}
+0&\text{if }t\neq0\\
+\infty&\text{if }t=0
+\end{cases}
+\end{equation*}
+Since $\delta(t)$ is the limit of graphs of area 1, the area under its graph is 1, meaning
+\begin{equation*}
+\int^d_c\delta(t)dt=\begin{cases}
+1&\text{if }c<0<d\\
+0&\text{otherwise}
+\end{cases}
+\end{equation*}
+Also see that for any continuous function we have
+\begin{equation*}
+f(t)\delta(t)=f(0)\delta(t)\quad\text{and}\quad
+\int^d_cf(t)\delta(t)dt=\begin{cases}
+f(0)&\text{if }c<0<d\\
+0&\text{otherwise}
+\end{cases}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Properties cont.}\\
+As with the unit function, we can translate the delta function; 
+where $\delta(t-a)$ is 0 everywhere except $t=a$. Its total area remains as 1:
+\begin{center}
+\includegraphics[width=5cm]{47}\\
+\end{center}
+where then
+\begin{equation*}
+f(t)\delta(t-a)=f(a)\delta(t-a)\\
+\end{equation*}
+and
+\begin{equation*}
+\int^d_cf(t)\delta(t-a)dt=\begin{cases}
+f(a)&\text{if }c<a<d\\
+0&\text{otherwise}
+\end{cases}
+\end{equation*}
+\textbf{More intuition}\\
+Note that any sequence of functions with unit area become an $\delta(t)$ in the limit;
+practically, $\delta(t)$ should be thought of as \textit{any function} of unit area, concentrated very near $t=0$.\\
+\vspace{1mm}\\
+In a sense this justifies the idea of $\delta(t)$ not really being a function, but rather a 
+\textit{generalised function}.\\
+\vspace{1mm}\\
+\textbf{Limits}\\
+The left and right-handed limits of the impulse are
+\begin{equation*}
+\delta(0^-)=0,\quad\delta(0^+)=0,\quad\delta(0)=\infty
+\end{equation*}
+So 0 is in the interval $[0^-,\infty)$ but not $[0^+,\infty)$, and
+\begin{equation*}
+\int^\infty_{0^-}\delta(t)dt=1\quad\text{and}\quad\int^\infty_{0^+}\delta(t)dt=0
+\end{equation*}
+further
+\begin{equation*}
+\int^{0^+}_{0^-}\delta(t)dt=1
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Generalised Derivative---Intuition}\\
+We say that
+\begin{equation*}
+\delta(t)=u'(t)
+\end{equation*}
+where $u(t)$ is the unit step function. Given the discontinuous nature of $u(t)$ this isn't like a usual derivative,
+but rather a \textit{generalised derivative}. Here we justify this.\\
+\vspace{1mm}\\
+First see that the slope of the unit function $u(t)$ is 0 everywhere except at $t=0$ and that its slope is
+$\infty$ at $t=0$.
+\begin{center}
+\includegraphics[width=10cm]{48}\\
+\end{center}
+that is, its derivative is
+\begin{equation*}
+u'(t)=\begin{cases}
+0&\text{if }t\neq0\\
+\infty&\text{if }t=0
+\end{cases}
+\end{equation*}
+this derivative matches the properties of the delta function. It doesn't exist in a calculus sense
+since discontinuities aren't differentiable. The function $u(t)$ isn't even defined at 0. 
+So we call this derivative a \textit{generalised derivative}.\\
+\vspace{1mm}\\
+Further, consider the anti-derivative of $\delta(t)$; let
+\begin{equation*}
+f(t)=\int^t_{-\infty}\delta(\tau)d\tau
+\end{equation*}
+The fundamental theorem of calculus would lead us to say
+$f'(t)=\delta(t)$. (this is only in a generalised sense since technically the FTC requires continuity) See however
+that we can state
+\begin{equation*}
+f(t)=\begin{cases}
+0&\text{if }t<0\\
+1&\text{if }t>0
+\end{cases}
+\end{equation*}
+That is, $f(t)=u(t)$, so $u(t)$ is the antiderivative of $\delta(t)$.\\
+(next page)\newpage
+\noindent\textbf{Scaling}\\
+See that the antiderivative of a scaled impulse is also a scaled unit function, where $a$ constant
+\begin{equation*}
+f(t)=\int^t_{-\infty}a\delta(\tau)d\tau
+\end{equation*}
+yields
+\begin{equation*}
+f(t)=\begin{cases}
+0&\text{if }t<0\\
+a&\text{if }t>0
+\end{cases}
+\end{equation*}
+which is just $au(t)$.\\
+\vspace{1mm}\\
+\textbf{Deriving jump discontinuities}\\
+In that sense, a jump discontinuity contributes a delta function to the generalised derivative. For instance
+suppose $f(t)$ has the following graph
+\begin{center}
+\includegraphics[width=10cm]{49}\\
+\end{center}
+The corresponding derivative would look like
+\begin{equation*}
+f'(t)=2\delta(t)-3\delta(t-2)+\begin{cases}
+2t&\text{if }t<0\\
+0&\text{if }0<t<2\\
+3&\text{if }2<t
+\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{50}\\
+\end{center}
+$f'(t)$ is a generalised function. Referring to different parts of a generalised function, we call the delta
+function pieces the \textit{singular part} and the remainder the \textit{regular part}.
+If the singular part contains a multiple of $\delta(t-a)$, we say the function \textit{contains} $\delta(t-a)$.
+\newpage
 
-
-
-
-
-
-
-
-
-
-
+\subsection{}
 
 
 
