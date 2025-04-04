@@ -56,4 +56,4 @@
 \contentsline {subsection}{\numberline {A.3.10}General fourier series input to damped harmonic oscillator}{104}{}%
 \contentsline {subsection}{\numberline {A.3.11}Step and Box functions}{105}{}%
 \contentsline {subsection}{\numberline {A.3.12}Delta function}{108}{}%
-\contentsline {subsection}{\numberline {A.3.13}}{113}{}%
+\contentsline {subsection}{\numberline {A.3.13}Initial conditions}{113}{}%
