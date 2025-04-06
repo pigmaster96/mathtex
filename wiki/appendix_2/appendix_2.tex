@@ -3718,12 +3718,64 @@ and that of the delta function as
 \end{equation*}
 Generally, see that at a discontinuity we may need to distinguish between $0^-$ and $0^+$. Assuming $x$ is the output, we
 do this by calling $x(0^-),\dot{x}(0^-),\ldots$ the \textit{pre-initial conditions} and 
-$x(0^+),\dot{x}(0^+),\ldots$ the \textit{post-initial conditions}.
+$x(0^+),\dot{x}(0^+),\ldots$ the \textit{post-initial conditions}.\\
+\vspace{1mm}\\
+We define the \textit{rest initial conditions} as the pre-initial conditions
+\begin{equation*}
+x(0^-)=0,\dot{x}(0^-)=0,\ldots,x^{(n-1)}(0^-)=0
+\end{equation*}
+\newpage
 
-
-
-
-
+\subsection{First order unit step response}
+Consider
+\begin{equation*}
+\dot{x}+kx=ru(t),\quad x(0^-)=0,\quad k,r\text{ constants}
+\end{equation*}
+This can be rewritten as
+\begin{equation*}
+\dot{x}+kx=\begin{cases}0&\text{for }t<0\\
+r&\text{for }t>0\end{cases}
+\quad x(0^-)=0
+\end{equation*}
+Solving each case gives
+\begin{equation*}
+x(t)=\begin{cases}c_1e^{-kt}&\text{for }t<0\\
+\frac{r}{k}+c_2e^{-kt}&\text{for }t>0\end{cases}
+\end{equation*}
+See that $x(0^-)=c_1$ and $x(0^+)=r/k+c_2$. If the two differ then there will be a jump of magnitude
+\begin{equation*}
+x(0^+)-x(0^-)=r/k+c_2-c_1
+\end{equation*}
+The initial condition $x(0^-)=0$ implies $c_1=0$ so
+\begin{equation*}
+x(t)=\begin{cases}0&\text{for }t<0\\
+\frac{r}{k}+c_2e^{-kt}&\text{for }t>0\end{cases}
+\end{equation*}
+To find $c_2$ we substitute this back into the differential equation (we use a generalised derivative
+for the jump at $t=0$ from $0^-$ to $0^+$)
+\begin{align*}
+\dot{x}+kx&=(r/k+c_2)\delta(t)+\begin{cases}
+0&\text{for }t<0\\
+-kc_2e^{-kt}+r+kc_2e^{-kt}&\text{for }t>0
+\end{cases}\\
+&=(r/k+c_2)\delta(t)+\begin{cases}
+0&\text{for }t<0\\
+r&\text{for }t>0\end{cases}
+\end{align*}
+Comparing this result with the second statement we see that
+$r/k+c_2=0$ or $c_2=-r/k$.
+so
+\begin{equation*}
+x(t)=\begin{cases}0&\text{for }t<0\\
+\frac{r}{k}(1-e^{-kt})&\text{for }t>0\end{cases}
+\quad=\quad\frac{r}{k}(1-e^{-kt})u(t)
+\end{equation*}
+With $r=1$, this is the \textit{unit step response}, sometimes written as $v(t)$, where 
+$v(t)=(1/k)(1-e^{-kt})u(t)$.\\
+(next page)
+\newpage
+\noindent\textbf{Intuition and simplification}\\
+Plotted is the \textit{unit} step response:
 
 
 
