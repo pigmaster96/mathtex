@@ -3806,10 +3806,75 @@ At $t=0$ it jumps to $x=1$ and then decays exponentially to 0.\\
 (next page)
 \newpage
 \noindent\textbf{$\delta(t)$ as a limit of box functions}\\
-Now we compute the \textit{unit impulse response} as the \textit{limit of the responses to box functions}.
+Now we compute the \textit{unit impulse response} as the \textit{limit of the responses to box functions}. Defining
+the box function as 
+\begin{equation*}
+u_h(t)=\begin{cases}
+0&\text{for }t<0\\
+1/h&\text{for }0<t<h\\
+0&\text{for }h<t
+\end{cases}
+\end{equation*}
+It has a total area of 1 for all $h>0$ and the graph of $u_h(t)$ becomes a delta function as $h\to0$:
+\begin{equation*}
+\lim_{h\to0}u_h(t)=\delta(t)
+\end{equation*}
+Given the equation
+\begin{equation*}
+\dot{x}+kx=u_h(t),\quad x(0^-)=0
+\end{equation*}
+the solution (worked out piecewise) is found to be
+\begin{equation*}
+x(t)=\begin{cases}
+c_1e^{-kt}&\text{for }t<0\\
+\frac{1}{hk}+c_2e^{-kt}&\text{for }0<t<h\\
+c_3e^{-kt}&\text{for }h<t
+\end{cases}
+\end{equation*}
+Finding the constants, the initial condition $x(0^-)=0$ we find that $c_1=0$; substitution into the original
+equation (like in the a step response) gives us $c_2=-1/hk$.\\
+\vspace{1mm}\\
+For the third case the principle follows that of the impulse response, setting the initial condition 
+$x(h)=1/hk(1-e^{-hk})$ (since we found $c_2$). So
+\begin{align*}
+c_3e^{-hk}&=\frac{1}{hk}(1-e^{-hk})\\
+c_3&=\frac{1}{hk}(e^{hk}-1)
+\end{align*}
+This gives the solution
+\begin{equation*}
+x(t)=\begin{cases}
+0&\text{for }t<0\\
+\frac{1}{hk}(1-e^{-kt})&\text{for }0<t<h\\
+\frac{1}{hk}(e^{hk}-1)e^{-kt}&\text{for }h<t\end{cases}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+x(t)=\begin{cases}
+0&\text{for }t<0\\
+\frac{1}{hk}(1-e^{-kt})&\text{for }0<t<h\\
+\frac{1}{hk}(e^{hk}-1)e^{-kt}&\text{for }h<t\end{cases}
+\end{equation*}
+Now consider the limit $h\to0$. The second case becomes irrelevant (its range becomes 0), and since by 
+l'hospital's rule we can say
+\begin{equation*}
+\lim_{h\to0}\frac{e^{hk}-1}{hk}=1
+\end{equation*}
+Our solution tends to
+\begin{equation*}
+x(t)=\begin{cases}
+0&\text{for }t<0\\
+e^{-kt}&\text{for }0<t\end{cases}
+\end{equation*}
+This limit is \textit{exactly the unit impulse response} found previously:
+\begin{center}
+\includegraphics[width=10cm]{53}\\
+\end{center}
+(input in black and output in red) See that the output rises faster and gets closer to 1 as $h\to0$.
+\newpage
 
-
-
+\subsection{}
 
 
 
