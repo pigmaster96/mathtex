@@ -3771,11 +3771,44 @@ x(t)=\begin{cases}0&\text{for }t<0\\
 \quad=\quad\frac{r}{k}(1-e^{-kt})u(t)
 \end{equation*}
 With $r=1$, this is the \textit{unit step response}, sometimes written as $v(t)$, where 
-$v(t)=(1/k)(1-e^{-kt})u(t)$.\\
+$v(t)=(1/k)(1-e^{-kt})u(t)$:
+\begin{center}
+\includegraphics[width=10cm]{51}\\
+\end{center}
+Notice that it starts at 0 and goes asymptotically up to $1/k$.
+\newpage
+
+\subsection{Unit impulse response}
+(Note that the unit impulse and the unit step are very different---the magnitude of the instantaneous
+impulse extends to infinity, while the discontinuity of the step function only extends to a fixed value).\\
+\vspace{1mm}\\
+Consider the initial value problem
+\begin{equation*}
+\dot{x}+kx=\delta(t),\quad x(0^-)=0,\quad k,r\text{ constants}
+\end{equation*}
+Due to the rest initial conditions we have $x(t)=0$ for $t<0$. The idea here is that $x(t)$ jumps from 0 to 1 
+at $t=0$. That is, $x(0^+)=1$ (not $\delta(0^+)$); for $t>0$ the input $\delta(t)=0$ and therefore for $t>0$ we 
+solve
+\begin{equation*}
+\dot{x}+kx=0,\quad x(0)=1
+\end{equation*}
+So we have
+\begin{equation*}
+x(t)=\begin{cases}
+0&\text{for }t<0\\
+e^{-kt}&\text{for }t>0\end{cases}
+\end{equation*}
+This is called the \textit{Unit impulse response}, denoted by $w(t)$:
+\begin{center}
+\includegraphics[width=10cm]{52}\\
+\end{center}
+At $t=0$ it jumps to $x=1$ and then decays exponentially to 0.\\
 (next page)
 \newpage
-\noindent\textbf{Intuition and simplification}\\
-Plotted is the \textit{unit} step response:
+\noindent\textbf{$\delta(t)$ as a limit of box functions}\\
+Now we compute the \textit{unit impulse response} as the \textit{limit of the responses to box functions}.
+
+
 
 
 

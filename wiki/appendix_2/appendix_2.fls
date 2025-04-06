@@ -331,6 +331,14 @@ INPUT ./images/50.png
 INPUT ./images/50.png
 INPUT ./images/50.png
 INPUT ./images/50.png
+INPUT ./images/51.png
+INPUT ./images/51.png
+INPUT ./images/51.png
+INPUT ./images/51.png
+INPUT ./images/52.png
+INPUT ./images/52.png
+INPUT ./images/52.png
+INPUT ./images/52.png
 INPUT appendix_2.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
