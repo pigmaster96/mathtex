@@ -3945,10 +3945,69 @@ $1/k$.
 \newpage
 
 \subsection{Second order impulse response}
+\textbf{Initial deductions}\\
+Consider the second order system
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=c\delta(t-a)
+\end{equation*}
+First see that $x(t)$ is continuous at $t=a$:
+\begin{equation*}
+x(a^+)=x(a^-)
+\end{equation*}
+This comes from the idea that if $x(t)$ had a `jump' at $a$ then $\dot{x}(t)$ would contain a multiple of
+$\delta(t-a)$, and $m\ddot{x}$ correspondingly a multiple of the doublet $\delta'(t-a)$; since this isnt the case
+(the input $c\delta(t-a)$ doesn't contain a doublet)
+$x(t)$ must be continuous at $t=a$.\\
+\vspace{1mm}\\
+Next see that $m\dot{x}(t)$ must have a jump discontinuity of $c$ units at $t=a$:
+\begin{equation*}
+m\dot{x}(a^+)-m\dot{x}(a^-)=c
+\end{equation*}
+In order to make the left-hand side of the DE match the input $m\ddot{x}(t)$ has to contain the term $c\delta(t-a)$.
+To achieve this $m\dot{x}$ has to have a jump discontinuity of magnitude $c$.\\
+\vspace{1mm}\\
+\textbf{Unit impulse response}\\
+Now we consider 
+\begin{equation*}
+m\ddot{x}+b\dot{x}+kx=\delta(t),\quad x(0^-)=0,\dot{x}(0^-)=0
+\end{equation*}
+Let $w(t)$ (the standard notation for the unit impulse response) denote the solution we seek. 
+We know from the first statement that
+$w(0^+)=w(0^-)=0$; the second statement gives us $m\dot{w}(0^+)-m\dot{w}(0^-)=1$, so $\dot{w}(0^+)=1/m$. With
+that our equation becomes
+\begin{equation*}
+m\ddot{w}+b\dot{w}+kw=0,\quad w(0^+)=0,\dot{w}(0^+)=1/m
+\end{equation*}
+This becomes a constant coefficient linear DE which is easily solvable.
+(next page)\newpage
+\noindent\textbf{Example}\\
+Consider 
+\begin{equation*}
+2\ddot{x}+8\dot{x}+26x=\delta(t),\quad x(0^-)=0,\dot{x}(0^-)=0
+\end{equation*}
+The $t<0$ case means solving the homogeneous equation with rest initial conditions, yielding $w(t)=0$. Now
+considering $t>0$, the
+unit jump discontinuity at $t=0$ implies $2\dot{w}(0^+)=1$. So for $t>0$ we have to solve
+\begin{equation*}
+2\ddot{w}+8\dot{w}+26w=0,\quad w(0^+)=0,\dot{w}(0^+)=1/2
+\end{equation*}
+The roots of the characteristic polynomial are $-2\pm3i$, implying
+\begin{equation*}
+w(t)=c_1e^{-2t}\cos(3t)+c_2e^{-2t}\sin(3t),\quad\text{for }t>0
+\end{equation*}
+Where substituting the post-initial conditions give $c_1=0,c_2=1/6$. So we have
+\begin{equation*}
+w(t)=\begin{cases}
+0&\text{for }t<0\\
+\frac{1}{6}e^{-2t}\sin(3t)&\text{for }t>0
+\end{cases}\quad=\quad\frac{1}{6}e^{-2t}\sin(3t)u(t)
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{55}\\
+\end{center}
+\newpage
 
-
-
-
+\subsection{Higher order unit impulse response}
 
 
 
