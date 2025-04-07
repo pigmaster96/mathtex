@@ -3778,7 +3778,7 @@ $v(t)=(1/k)(1-e^{-kt})u(t)$:
 Notice that it starts at 0 and goes asymptotically up to $1/k$.
 \newpage
 
-\subsection{Unit impulse response}
+\subsection{First order unit impulse response}
 (Note that the unit impulse and the unit step are very different---the magnitude of the instantaneous
 impulse extends to infinity, while the discontinuity of the step function only extends to a fixed value).\\
 \vspace{1mm}\\
@@ -3874,7 +3874,90 @@ This limit is \textit{exactly the unit impulse response} found previously:
 (input in black and output in red) See that the output rises faster and gets closer to 1 as $h\to0$.
 \newpage
 
-\subsection{}
+\subsection{Second order unit step response}
+Consider
+\begin{equation*}
+m\ddot{x}+kx=u(t),\quad x(0^-)=0,\dot{x}(0^-)=0
+\end{equation*}
+This can be rewritten as
+\begin{equation*}
+m\ddot{x}+kx=\begin{cases}
+0&\text{for }t<0\\
+1&\text{for }t>0
+\end{cases}\quad x(0^-)=0,\dot{x}(0^-)=0
+\end{equation*}
+Where the general homogenous solution is
+\begin{equation*}
+x_h(t)=c_1\cos(\omega_nt)+c_2\sin(\omega_nt),\quad\text{where }\omega_n=\sqrt{k/m}
+\end{equation*}
+Solving each case gives
+\begin{equation*}
+x(t)=\begin{cases}
+c_1\cos(\omega_nt)+c_2\sin(\omega_nt)&\text{for }t<0\\
+1/k+c_3\cos(\omega_nt)+c_4\sin(\omega_nt)&\text{for }t>0
+\end{cases}
+\end{equation*}
+The pre-initial conditions $x(0^-)=\dot{x}(0^-)=0$ easily
+imply $c_1=c_2=0$, so
+\begin{equation*}
+x(t)=\begin{cases}
+0&\text{for }t<0\\
+1/k+c_3\cos(\omega_nt)+c_4\sin(\omega_nt)&\text{for }t>0
+\end{cases}
+\end{equation*}
+To find $c_3$ and $c_4$ we consider substituting $x(t)$ back into the DE. Computing the second deriative yields
+\begin{align*}
+\dot{x}&=(1/k+c_3)\delta(t)+\begin{cases}
+0&\text{for }t<0\\
+-c_3\omega_n\sin(\omega_nt)+c_4\omega_n\cos(\omega_nt)&\text{for }t>0
+\end{cases}\\
+\ddot{x}&=(1/k+c_3)\delta'(t)+c_4\omega_n\delta(t)+
+\begin{cases}
+0&\text{for }t<0\\
+-c_3\omega^2_n\cos(\omega_nt)-c_4\omega^2_n\sin(\omega_nt)&\text{for }t>0\end{cases}
+\end{align*}
+We get the scaling factors for the delta function by computing $x(0^+)=1/k+c_3$ and $\dot{x}(0^+)=c_4\omega_n$.\\
+\vspace{1mm}\\
+See that the right hand side of the initial DE doesn't have any delta functions or $\delta'(t)$ 
+(called a \textit{doublet}); the coefficients in front of
+these terms must be 0:
+\begin{align*}
+1/k+c_3=0&\implies c_3=-1/k\\
+c_4\omega_n=0&\implies c_4=0
+\end{align*}
+(We can also fully subsitute in the derivatives and $\omega_n=\sqrt{k/m}$ 
+and see that this leads to the same conclusion)\\
+(next page)\newpage
+\noindent\textbf{Cont.}
+Our response is
+\begin{equation*}
+x(t)=\begin{cases}
+0&\text{for }t<0\\
+1/k(1-\cos(\omega_nt))&\text{for }t>0
+\end{cases}
+\end{equation*}
+Say $k=1$ and $m=0.5$:
+\begin{center}
+\includegraphics[width=10cm]{54}\\
+\end{center}
+If damping were added the homogeneous part would go to 0 and the unit step response would go asymptotically to 
+$1/k$.
+\newpage
+
+\subsection{Second order impulse response}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
