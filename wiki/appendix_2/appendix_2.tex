@@ -4008,6 +4008,37 @@ w(t)=\begin{cases}
 \newpage
 
 \subsection{Higher order unit impulse response}
+We can extend our reasoning in the first and second order cases to any order. Consider an $n^{th}$ order system 
+with the DE:
+\begin{equation*}
+a_nx^{(n)}+a_{n-1}x^{(n-1)}+\ldots+a_1x'+a_0x=\delta(t),\quad\text{with rest initial conditions}
+\end{equation*}
+We can extrapolate the reasoning from the second order response to show
+\begin{equation*}
+x(0^+)=0,x'(0^+)=0,\ldots,x^{(n-2)}(0^+)=0,x^{(n-1)}(0^+)=1/a_n
+\end{equation*}
+There is jump discontinuity only in the $n-1$ derivative at $t=0$. The other derivatives are continuous and
+thus have the same post and pre-initial conditions; with rest initial conditions this means all their 
+post-initial conditions are also 0.\\
+\vspace{1mm}\\
+If there were a jump discontinuity at a lower derivative, then the highest derivative $x^{(n)}$ would be
+some derivative of $\delta(t)$ (such as $\delta'(t),\delta''(t)$, etc.); this is impossible since the right-hand
+side of the DE doesn't have any such derivatives.\\
+\vspace{1mm}\\
+In order to match the right side, we must also have a unit jump discontinuity in the second last derivative
+(since only this would produce a generalised
+derivative $\delta(t)$):
+\begin{equation*}
+a_nx^{(n-1)}(0^+)-a_n\underbrace{x^{(n-1)}(0^-)}_{=0}=1\implies x^{(n-1)}(0^+)=1/a_n
+\end{equation*}
+So we conclude that the solution is 0 for $t<0$ and for $t>0$ it is exactly the same as the solution to
+\begin{equation*}
+a_nx^{(n)}+a_{n-1}x^{(n-1)}+\ldots+a_1x'+a_0x=0
+\end{equation*}
+with initial conditions
+\begin{equation*}
+x(0)=0,x'(0)=0,\ldots,x^{(n-2)}(0)=0,x^{(n-1)}(0)=1/a_n
+\end{equation*}
 
 
 
