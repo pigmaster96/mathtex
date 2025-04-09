@@ -4039,7 +4039,30 @@ with initial conditions
 \begin{equation*}
 x(0)=0,x'(0)=0,\ldots,x^{(n-2)}(0)=0,x^{(n-1)}(0)=1/a_n
 \end{equation*}
+\newpage
 
+\subsection{Convolution---Definition and properties}
+\textbf{Definition}\\
+The \textit{convolution} of two functions $f$ and $g$,
+denoted by $f*g$, is defined as
+\begin{equation*}
+(f*g)(t)=\int^{t^+}_{0^-}f(\tau)g(t-\tau)d\tau\quad\text{for }t>0
+\end{equation*}
+This is a \textit{one-sided} convolution, which is only concerned with functions on the interval $(0^-,\infty)$.\\
+\vspace{1mm}\\
+\textbf{Properties}\\
+\textit{Linearity}; for functions $f_1,f_2,g$ and constants $c_1,c_2$:
+\begin{equation*}
+(c_1f_1+c_2f_2)*g=c_1(f_1*g)+c_2(f_2*g)
+\end{equation*}
+This follows from the linearity of integration.\\
+\vspace{1mm}\\
+\textit{Commutivity}: $f*g=g*f$. This follows from the change of variable $v=t-\tau$; the limits become
+\begin{equation*}
+\tau=0^-\implies t-\tau=t^+\quad\text{and}\quad\tau=t^+\implies t-\tau=0^-
+\end{equation*}
+\textit{Associativity}: $f*(g*h)=(f*g)*h$. Showing this amounts to changing the order of integration. 
+First consider the discrete case:
 
 
 
