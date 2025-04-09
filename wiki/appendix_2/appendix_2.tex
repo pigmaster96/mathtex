@@ -4063,10 +4063,28 @@ This follows from the linearity of integration.\\
 \end{equation*}
 \textit{Associativity}: $f*(g*h)=(f*g)*h$. Showing this amounts to changing the order of integration. 
 First consider the discrete case:
-
-
-
-
+\begin{align*}
+((f*g)*h)(n)&=\sum^n_{k=0}(f*g)(k)h(n-k)\\
+&=\sum^n_{k=0}\left(\sum^k_{i=0}f(l)g(k-l)\right)h(n-k)\\
+&=\sum_{0\leq l\leq k\leq n}f(l)g(k-l)h(n-k)\\
+&=\sum^n_{l=0}\sum^n_{k=l}f(l)g(k-l)h(n-k)\\
+&=\sum^n_{l=0}f(l)\left(\sum^{n-1}_{k=0}g(k)h(n-k-l)\right)\\
+&=\sum^n_{l=0}f(l)(g*h)(n-l)\\
+&=(f*(g*h))(n)
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Properties cont.}\\
+The continuous case is analogously:
+\begin{align*}
+((f*g)*h)(t)&=\int^t_0(f*g)(s)h(t-s)ds\\
+&=\int^t_{s=0}\left(\int^s_{u=0}f(u)g(s-u)du\right)h(t-s)ds\\
+&=\iint_{0\leq u\leq s\leq t} f(u)g(s-u)h(t-s)du\,ds\\
+&=\int^t_{u=0}f(u)\left(\int^{t-u}_{s=0}g(s)h(t-u-s)ds\right)du\\
+&=\int^t_{u=0}f(u)(g*h)(t-u)du\\
+&=(f*(g*h))(t)
+\end{align*}
+\textbf{Delta functions}\\
+We have
 
 
 
