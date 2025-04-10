@@ -4084,13 +4084,93 @@ The continuous case is analogously:
 &=(f*(g*h))(t)
 \end{align*}
 \textbf{Delta functions}\\
-We have
+See that
+\begin{equation*}
+(\delta*f)(t)=f(t)\quad\text{and}\quad(\delta(t-a)*f)(t)=f(t-a)
+\end{equation*}
+These can be shown via direct computation. Recall that for $b>0$
+\begin{equation*}
+\int^b_{0^-}\delta(\tau)f(\tau)d\tau=f(0)
+\end{equation*}
+So it follows that for $t\geq0$
+\begin{align*}
+(\delta*f)(t)&=\int^{t^+}_{0^-}\delta(\tau)f(t-\tau)d\tau=
+f(t-0)=f(t)\\
+(\delta(t-a)*f)(t)&=\int^{t^+}_{0^-}\delta(\tau-a)f(t-\tau)d\tau=f(t-a)
+\end{align*}
+(for the second statement see that the delta function only has magnitude for $\tau=a$) 
+\newpage
 
-
-
-
-
-
+\subsection{Green's Formula}
+\textbf{Definition}\\
+Suppose we have the linear time invariant system with rest initial conditions:
+\begin{equation*}
+p(D)y=f(t),\quad y(t)=0\text{ for }t<0
+\end{equation*}
+Suppose that $w(t)$ is the unit impulse response (also called the \textit{weight} function) for the above system. 
+That is, $w(t)$ satisfies $p(D)w=\delta(t)$,
+with rest initial conditions. \textit{Green's formula} states that for any input $f(t)$ the solution to that
+system is given by
+\begin{equation*}
+y(t)=(f*w)(t)=\int^{t^+}_{0^-}f(\tau)w(t-\tau)d\tau
+\end{equation*}
+This means we can find the response to \textit{any} input once we know the unit impulse response. It is also
+an integral, which can be computed numerically if necessary.\\
+\textbf{Intuition}\\
+Recall that linear time invariance means 
+\begin{equation*}
+y(t)\text{ solves }p(D)y=f(t)\implies y(t-a)\text{ solves }p(D)y=f(t-a)
+\end{equation*}
+(If $y(t)$ is the response to input $f(t)$ then $y(t-a)$ is the response to input $f(t-a)$.) 
+First consider partitioning time into intervals of width $\Delta t$; so $t_0=0,t_1=\Delta t,t_2=2\Delta t$, etc.:
+\begin{center}
+\includegraphics[width=10cm]{56}\\
+\end{center}
+Next we decompose the input signal $f(t)$ into packets over each interval. The $k$th signal packet, $f_k(t)$
+coincides with $f(t)$ between $t_k$ and $t_{k+1}$ and is 0 elsewhere:
+\begin{equation*}
+f_k(t)=\begin{cases}
+f(t)&\text{for }t_k<t<t_{k+1}\\
+0&\text{elsewhere}
+\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{57}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{Intuition cont.}\\
+Naturally for $t>0$ we have $f(t)$ as the sum of the packets
+\begin{equation*}
+f(t)=f_0(t)+f_1(t)+\ldots+f_k(t)+\ldots
+\end{equation*}
+Given that a single packet $f_k(t)$ is concentrated entirely in the small neighbourhood of $t_k$, they can be
+approximated as an impulse with the same size as the area under $f_k(t)$, we also approximate the 
+area as a rectangle, (like a riemann sum) so 
+\begin{equation*}
+f_k(t)\approx(f(t_k)\Delta t)\delta(t-t_k)
+\end{equation*}
+The weight function $w(t)$ is the response to $\delta(t)$. So by linear time invariance the response to $f_k(t)$ is
+\begin{equation*}
+y_k(t)\approx(f(t_k)\Delta t)w(t-t_k)
+\end{equation*}
+Say we want to find the response at a fixed time $T$, we
+know $f$ (input) is the sum of $f_k$ so by \textit{superposition}
+we have $y$ (output) as the sum of $y_k$. At time $T$:
+\begin{align*}
+y(T)&=y_0(T)+y_1(T)+\ldots\\
+&\approx\left(f(t_0)w(T-t_0)+f(t_1)w(T-t_1)+\ldots\right)\Delta t
+\end{align*}
+We can ignore all the terms where $t_k>T$ as $T-t_k<0$ so $\delta(T-t_k)=0$ and $w(T-t_k)=0$. So
+if $n$ is the last index where $t_k<T$ we have
+\begin{equation*}
+y(T)\approx\left(f(t_0)w(T-t_0)+f(t_1)w(T-t_1)+\ldots+
+f(t_n)w(T-t_n)\right)\Delta t
+\end{equation*}
+This is a riemann sum; as $\Delta t\to0$ it tends to the integral
+\begin{equation*}
+y(T)=\int^T_0f(t)w(T-t)dt
+\end{equation*}
+which is the convolution $(y*w)(T)$---the system response is the convolution of the input with the impulse response.
 
 
 
