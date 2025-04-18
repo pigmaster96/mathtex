@@ -50,13 +50,32 @@ is odd; its square $(n+1)^2=n^2+2n+1$ is also odd, since $n^2+2n$ is even.)\\
 while $2q^2$ is not (since $q^2$ is odd). Therefore
 $p^2\neq2q^2$.\\
 \vspace{1mm}\\
-Since $p^2\neq2q^2$ for all integers $p$, there is no rational number $r=p/q$ whose square is 2.\qed
-(next page)\\
+Since $p^2\neq2q^2$ for all integers $p$, there is no rational number $r=p/q$ whose square is 2.\qed\\
+(next page)\newpage
 \noindent\textbf{Dedekind cuts}\\
-The set
-
-
-
+The set $\mathbb{Q}$ of rational numbers is incomplete with `gaps' of negligible width. An elegant method
+to fill in these gaps are with \textit{Dedekind cuts} in which one visualises real numbers as places on a number
+line that can be `cut':
+\begin{center}
+\includegraphics[width=10cm]{1}\\
+\end{center}
+\textbf{Definition} A \textit{cut} in $\mathbb{Q}$ is a pair of subsets $A,B$ of $\mathbb{Q}$ such that
+\begin{itemize}
+\item $A\cup B=\mathbb{Q},\,A\neq\emptyset,\,B\neq\emptyset,\,A\cap B=\emptyset$
+\item If $a\in A$ and $b\in B$ then $a<b$
+\item $A$ contains no largest element
+\end{itemize}
+$A$ is the left-hand part of the cut and $B$ the right. We denote the cut as $x=A|B$. Now we define:\\
+\vspace{1mm}\\
+\textbf{Definition} A \textit{real number} is a cut in $\mathbb{Q}$\\
+\vspace{1mm}\\
+$\mathbb{R}$ is the class (of set-pairs) of all real numbers $x=A|B$. Here are two examples of cuts:
+\begin{enumerate}
+\item $A|B=\{r\in\mathbb{Q}:r<1\}|\{r\in\mathbb{Q}:r\geq1\}$
+\item $A|B=\{r\in\mathbb{Q}:r\leq0$ or $r^2<2\}|\{r\in\mathbb{Q}:r>0$ and $r^2\geq2\}$
+\end{enumerate}
+The first cut is a \textit{rational cut}, where for some fixed rational number $c$, $A$ is the set of all rationals
+$<c$ while $B$ is the rest of $\mathbb{Q}$. We write $c^*$ for the rational cut at $c$.
 
 
 
