@@ -24,7 +24,40 @@ Recall the definitions:
 \item The set $\mathbb{Z}$ of integers, 0, 1, -1, -2, 2,\ldots 
 \item The set $\mathbb{Q}$ of rational numbers $p/q$ where $p,q$ are integers, $q\neq0$.
 \end{itemize}
-It is clear that $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}$
+It is clear that $\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}$. Intuitively $\mathbb{Z}$ improves $\mathbb{N}$ 
+because it contains negatives and $\mathbb{Q}$ improves $\mathbb{Z}$ because it contains reciprocals. However
+notice that $\mathbb{Q}$ is incomplete---doesn't admit irrational roots such as $\sqrt{2}$ or numbers like $\pi$. 
+We solve this with $\mathbb{R}$ such that
+\begin{equation*}
+\mathbb{N}\subset\mathbb{Z}\subset\mathbb{Q}\subset\mathbb{R}
+\end{equation*}
+As an example of the fact that $\mathbb{Q}$ is incomplete:\\
+\vspace{1mm}\\
+\textbf{Theorem} \textit{No number $r$ in $\mathbb{Q}$ has the square equal to 2; that is, 
+$\sqrt{2}\notin\mathbb{Q}$.}\\
+\vspace{1mm}\\
+\textbf{Proof} To prove that every $r=p/q$ has $r^2\neq2$ we show that $p^2\neq2q^2$. (since $r=p/q\neq2\implies
+r^2=p^2/q^2\neq2$) We also assume that $p$ and $q$ have no common factors since they would
+have been canceled out beforehand.\\
+\vspace{1mm}\\
+\underline{Case 1}: $p$ is odd. Then $p^2$ is odd while $2q^2$ is not. Therefore $p^2\neq2q^2$.\\
+\vspace{1mm}\\
+(an even number $n$ would also have even $n^2$: because $n=2a$ for some $a$ would have a square $n^2=4a^2$ 
+which is also divisible by 2. An odd number squared is odd: the expression $(n+1)$ for even $n$ 
+is odd; its square $(n+1)^2=n^2+2n+1$ is also odd, since $n^2+2n$ is even.)\\
+\vspace{1mm}\\
+\underline{Case 2}: $p$ is even. Since $p$ and $q$ have no common factors, $q$ is odd. Then $p^2$ is divisible by 4
+while $2q^2$ is not (since $q^2$ is odd). Therefore
+$p^2\neq2q^2$.\\
+\vspace{1mm}\\
+Since $p^2\neq2q^2$ for all integers $p$, there is no rational number $r=p/q$ whose square is 2.\qed
+(next page)\\
+\noindent\textbf{Dedekind cuts}\\
+The set
+
+
+
+
 
 
 
