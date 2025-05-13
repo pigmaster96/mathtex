@@ -4059,10 +4059,37 @@ For the unit vectors $\mathbf{i,j,k}$, we have
 \newpage
 
 \subsection{Scalar triple product}
-
-
-
-
+Here we justify the scalar triple product
+\begin{equation*}
+|A|=\bm{a}\cdot\bm{b}\times\bm{c}=\text{Volume of parallelepiped spanned by $\bm{a},\bm{b},\bm{c}$}
+\end{equation*}
+Consider the 3-dimensional parallelepiped spanned by the vectors $\overrightarrow{\bm{A}},\overrightarrow{\bm{B}},\overrightarrow{\bm{C}}$
+\begin{center}
+\includegraphics[width=5cm]{104}
+\end{center}
+we know that the determinant of the matrix with rows 
+$\overrightarrow{\bm{A}},\overrightarrow{\bm{B}},\overrightarrow{\bm{C}}$
+is equal to the volume of this parallelepiped. But say we we want to use a different method; we know that the volume is given by the area
+of the base (parallelogram) multiplied by the height:
+\begin{equation*}
+\text{volume}=\text{area(base)}\cdot\text{height}
+\end{equation*}
+we can find the base as the magnitude of the cross product between $\overrightarrow{\bm{A}}$ and $\overrightarrow{\bm{B}}$, and the 
+height as the projection of $\overrightarrow{\bm{C}}$ onto the unit vector orthogonal to the base parallelogram (which is a dot product), giving
+us
+\begin{align*}
+\text{volume}&=|\overrightarrow{\bm{A}}\times\overrightarrow{\bm{B}}|(\overrightarrow{\bm{C}}\cdot\hat{\bm{n}})\\
+&=|\overrightarrow{\bm{A}}\times\overrightarrow{\bm{B}}|\left(\overrightarrow{\bm{C}}\cdot
+\frac{(\overrightarrow{\bm{A}}\times\overrightarrow{\bm{B}})}{|\overrightarrow{\bm{A}}\times\overrightarrow{\bm{B}}|}\right)\\
+&=\overrightarrow{\bm{C}}\cdot(\overrightarrow{\bm{A}}\times\overrightarrow{\bm{B}})
+\end{align*}
+justifying our formula. See that the order of operations matters here---we have to take the cross then the dot to end up with a scalar.
+Also see that due to the geometric interpretation it doesn't matter which two of the three vectors we choose to represent the base.\\
+\vspace{1mm}\\
+Finally, note that expanding the formula of triple product is actually the same as expanding the formula of the determinant:
+\begin{center}
+\includegraphics[width=10cm]{105}
+\end{center}
 \newpage
 
 \subsection{Equations of Planes I} %270624
