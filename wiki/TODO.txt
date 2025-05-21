@@ -3,7 +3,7 @@
 #####################
 090525-thorough definition of the riemann and darboux (what is this?) integral (real analysis; appendix 4)
 110525-Numerical analysis (MITOCW has an introductory course), linear algebra prereq
-
+210525-Fubini's theorem (analysis)---associativity of convolution sum or just swapping integrals in general
 
 
 
