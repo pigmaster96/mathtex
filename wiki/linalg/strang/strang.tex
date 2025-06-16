@@ -73,7 +73,170 @@ This can be seen from
 The square root gives us the triangle equality (side 3 cannot exceed side 1 + side 2).
 \newpage
 
+\section{Intuition for column rank being equal to row rank}
+If all columns are in the same direction, why does it happen that all the rows are the same direction?\\
+\vspace{1mm}\\
+Consider the matrix, see that column 2 is $m$ times column 1:
+\begin{equation*}
+\bm A=\left[\begin{array}{cc}
+a&ma\\
+b&mb
+\end{array}\right]
+\end{equation*}
+See that the second row is just $b/a$ times the first row---if the column rank is 1, then the row rank is 1. See that transposing the matrix, we have
+\begin{equation*}
+\bm A=\left[\begin{array}{cc}
+a(1)&b(1)\\
+a(m)&b(m)
+\end{array}\right]
+\end{equation*}
+which still has one independent column. Now consider the 3x3 case:
+\begin{equation*}
+\bm A=\left[\begin{array}{ccc}
+a&ma&pa\\
+b&mb&pb\\
+c&mc&pc
+\end{array}\right]
+\end{equation*}
+See that a similar deduction can also be made in this case, where the row rank of $A$ is equal to its column rank.\\
+(next page)\newpage
+\noindent\textbf{An informal proof}\\
+Consider any matrix $\bm A$, suppose we go from left to right, looking for independent columns of $\bm A$ using the following procedure:
+\begin{enumerate}
+\item If column 1 of $\bm A$ is not zero, put it in matrix $\bm C$
+\item If column 2 of $\bm A$ is not a multiple of column 1, put it in into $\bm C$
+\item If column 3 of $\bm A$ is not a combination of columns 1 and 2, put it into $C$. \textit{continue}
+\end{enumerate}
+See that at the end $\bm C$ will have $r$ columns taken from $\bm A$, where $r$ is the rank of $\bm A$ and $\bm C$. While the $n$ columns of $\bm A$ are dependent, 
+the $r$ columns of $\bm C$ will surely be independent.\\
+\vspace{1mm}\\
+For instance consider $\bm A$ with rank 2
+\begin{equation*}
+\bm A=\left[\begin{array}{ccc}
+2&6&4\\
+4&12&8\\
+1&3&5
+\end{array}\right]\quad\text{leads to}\quad \bm C=
+\left[\begin{array}{cc}
+2&4\\
+4&8\\
+1&5
+\end{array}\right]
+\end{equation*}
+Now consider another matrix $\bm R$ to be multiplied by $\bm C$ such that 
+$\bm A=\bm{CR}$. The first and third columns of $\bm A$ are already in $\bm C$, so those respective columns in $\bm R$ make up a \textit{identity matrix};
+the second column of $\bm A$ is a multiple of the first, so we have
+\begin{equation*}
+\bm A=\bm{CR}\quad\text{is }\left[\begin{array}{ccc}
+2&6&4\\
+4&12&8\\
+1&3&5
+\end{array}\right]=
+\left[\begin{array}{cc}
+2&4\\
+4&8\\
+1&5
+\end{array}\right]
+\left[\begin{array}{ccc}
+1&3&0\\
+0&0&1
+\end{array}\right]
+\end{equation*}
+(See that the $i$th row of $\bm A$ can be seen as a linear combination of the rows of $\bm R$ specified the $i$th row of $\bm C$. 
+(or just consider $\bm A^T=\bm R^T\bm C^T$). We know that
+\begin{enumerate}
+\item $\bm C$ contains the full set of $r$ independent columns of $\bm A$.
+\item $\bm R=[\bm{I\,\bm F}]$ contains the identity matrix $\bm I$ in the same $r$ columns that held $\bm C$.
+\item The dependent columns of $\bm A$ are combinations of $\bm{CF}$ of the independent columns in $\bm C$.
+\end{enumerate}
+Where the matrix $\bm F$ goes into the other $n-r$ columns of $\bm R=[\bm{I\,\bm F}]$. ($\bm A=\bm{CR}$ becomes $\bm A=\bm{C[I,F]}=\bm{[C,CF]}=
+[\text{indep cols of $\bm A$},\text{ dep cols of $\bm A$}]$ (in correct order).\\
+\vspace{1mm}\\
+See that $\bm C$ has the same column space as $\bm A$, and $\bm R$ \textit{has the same row space} as $\bm A$ (every row of $\bm A$ is a combination of the rows
+of $\bm R$).\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had the example
+\begin{equation*}
+\bm A=\bm{CR}\quad\text{is }\left[\begin{array}{ccc}
+2&6&4\\
+4&12&8\\
+1&3&5
+\end{array}\right]=
+\left[\begin{array}{cc}
+2&4\\
+4&8\\
+1&5
+\end{array}\right]
+\left[\begin{array}{ccc}
+1&3&0\\
+0&0&1
+\end{array}\right]
+\end{equation*}
+\textit{Here is an informal proof that the row rank of $\bm A$ equals the column rank of $\bm A$} (based from facts we already know)
+\begin{enumerate}
+\item The $r$ columns of $\bm C$ are independent (chosen that way from $\bm A$)
+\item Every column of $\bm A$ is a combination of those $r$ columns of $\bm C$ (since $\bm A=\bm{CR}$)
+\item The $r$ rows of $\bm R$ are independent (they contain the $r$ by $r$ matrix $\bm I$)
+\item Every row of $\bm A$ is a combination of the $\bm r$ rows of $\bm R$
+\end{enumerate}
+See that for every column of $\bm A$ that goes into $\bm C$, a column of $\bm I$ goes into $\bm R$, where each column of $\bm I$ in $\bm R$ adds an independent row.\\
+\vspace{1mm}\\
+This means that the column rank of $\bm C$ (column space of $\bm A$) is always equal to the row rank of $\bm R$ (row space of $\bm A$)---the 
+column rank of $\bm A$ is equal to the row rank of $\bm A$.\\
+\vspace{1mm}\\
+\textbf{More examples}\\
+Rank 2:
+\begin{equation*}
+\left[\begin{array}{ccc}
+1&2&3\\
+4&5&6\\
+7&8&9
+\end{array}\right]=
+\left[\begin{array}{cc}
+1&2\\
+4&5\\
+7&8
+\end{array}\right]
+\left[\begin{array}{ccc}
+1&0&-1\\
+0&1&2
+\end{array}\right]
+\end{equation*}
+Rank 2:
+\begin{equation*}
+\left[\begin{array}{cccc}
+1&2&3&4\\
+1&2&4&5
+\end{array}\right]=
+\left[\begin{array}{cc}
+1&3\\
+1&4
+\end{array}\right]
+\left[\begin{array}{cccc}
+1&2&0&1\\
+0&0&1&1
+\end{array}\right]
+\end{equation*}
+Rank 1:
+\begin{equation*}
+\left[\begin{array}{cccc}
+1&2&10&100\\
+3&6&30&300\\
+2&4&20&200
+\end{array}\right]=
+\left[\begin{array}{c}
+1\\3\\2
+\end{array}\right]
+\left[\begin{array}{cccc}
+1&2&10&100
+\end{array}\right]
+\end{equation*}
+\newpage
+
 \section{}
+
+
 
 
 
