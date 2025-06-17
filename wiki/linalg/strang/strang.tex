@@ -279,11 +279,140 @@ As such, if there so happens to be a solution to $\bm{Ax}=\bm b$ then we can add
 For some constant $\alpha$, which gives us $\bm b$ again---we have infinitely many solutions.
 \newpage
 
-\section{Elimination by elimination matrices}
-
-
-
-
+\section{Elimination and Back Substitution}
+\textbf{Elimination}\\
+We want to produce an \textit{upper triangular} matrix $\bm U$ from a square matrix $\bm A$. This is done through elimination; the procedure (for a 3x3 matrix) is as
+follows (assuming no row exchanges):
+\begin{enumerate}
+\item Use the first equation(row) to produce zeros in column 1 below the first pivot.
+\item Use the new second equation(row) to clear out column 2 below pivot 2 in row 2.
+\item \textit{Continue to column 3}. The expected result is an upper triangular matrix $\bm U$.
+\end{enumerate}
+These steps can be carried out using elimination matrices $\bm E$.\\
+\vspace{1mm}\\
+Consider $\bm A$ and $\bm b$
+\begin{equation*}
+\bm A=\left[\begin{array}{ccc}
+2&3&4\\
+4&11&14\\
+2&8&17
+\end{array}\right]\quad
+\bm b=\left[\begin{array}{c}
+19\\55\\50
+\end{array}\right]
+\end{equation*}
+$\bm E_{21}$ multiplies equation 1 by 2 and subtracts that from equation 2 to get a zero in the first column below the first pivot:
+\begin{equation*}
+\bm E_{21}=\left[\begin{array}{ccc}
+1&0&0\\
+-2&1&0\\
+0&0&1
+\end{array}\right]\implies
+\bm E_{21}\bm A=\left[\begin{array}{ccc}
+2&3&4\\
+0&5&6\\
+2&8&17
+\end{array}\right],\quad
+\bm E_{21}\bm b=\left[\begin{array}{c}
+19\\17\\50
+\end{array}\right]
+\end{equation*}
+(For intuition on the elimination matrices, consider the row perspective of matrix multiplication) This produced the desired zero in column 1. It changed equation 2.
+To make the first pivot column zero, we subtract row 1 from row 3 using $\bm E_{31}$
+\begin{equation*}
+\bm E_{31}=\left[\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+-1&0&1
+\end{array}\right]\implies
+\bm E_{31}\bm E_{21}\bm A=\left[\begin{array}{ccc}
+2&3&4\\
+0&5&6\\
+0&5&13
+\end{array}\right],\quad
+\bm E_{31}\bm E_{21}\bm b=\left[\begin{array}{c}
+19\\17\\31
+\end{array}\right]
+\end{equation*}
+This completes elimination in column 1. Moving on to column 2 row 2 (the second pivot row). We use $\bm E_{32}$ to subtract equation 2 from equation 3
+\begin{equation*}
+\bm E_{31}=\left[\begin{array}{ccc}
+1&0&0\\
+0&1&0\\
+0&-1&1
+\end{array}\right]\implies
+\bm U=\left[\begin{array}{ccc}
+2&3&4\\
+0&5&6\\
+0&0&7
+\end{array}\right],\quad
+\bm c=\left[\begin{array}{c}
+19\\17\\14
+\end{array}\right]
+\end{equation*}
+$\bm E_{32}\bm E_{31}\bm E_{21}\bm A=\bm U$ is triangular. See that the same steps were applied to the right hand side 
+$\bm b$ to produce a new right hand side $\bm c$.\\
+(next page)\newpage
+\noindent\textbf{Possible breakdown of elimination}\\
+Elimination might fail. This occurs when zero appears in a pivot position---subtracting that zero from lower rows will not clear out the column
+below that pivot. For example:
+\begin{equation*}
+\bm A=\left[\begin{array}{ccc}
+2&3&4\\
+4&6&14\\
+2&8&17
+\end{array}\right]\to
+\left[\begin{array}{ccc}
+2&3&4\\
+0&0&6\\
+0&5&13
+\end{array}\right]=\bm B
+\end{equation*}
+A possible way to get around this would be to \textit{exchange} row 2 (with the zero pivot) for row (with the nonzero in that column), then carry out elimination
+as per usual. This exchange is carried out using the permuation matrix $\bm P$:
+\begin{equation*}
+\bm{PB}=
+\left[\begin{array}{ccc}
+1&0&0\\
+0&0&1\\
+0&1&0
+\end{array}\right]
+\left[\begin{array}{ccc}
+2&3&4\\
+0&0&6\\
+0&5&13
+\end{array}\right]=
+\left[\begin{array}{ccc}
+2&3&4\\
+0&5&13\\
+0&0&6
+\end{array}\right]
+\end{equation*}
+In this example the exchange produced $\bm U$ with nonzero pivots; normally there may be more columns eliminate before $\bm U$ is reached.\\
+\vspace{1mm}\\
+At times this exchange strategy may not work. This occurs when there is no pivot is available. Consider $\bm A'$:
+\begin{equation*}
+\bm A'=\left[\begin{array}{ccc}
+2&3&4\\
+4&6&14\\
+2&3&17
+\end{array}\right]\to
+\left[\begin{array}{ccc}
+2&3&4\\
+0&0&6\\
+0&0&13
+\end{array}\right]=\bm U'
+\end{equation*}
+There is no second pivot in this case. This tells us that the matrix $\bm A'$ \textit{did not have full rank} (intuitively see that the non-pivot row can be expressed
+as a linear combination of the other pivot rows, so the row space 
+(which is equal to the row space of the original $\bm A'$ since the elimination steps are just linear combinations of the existing rows) 
+is not full rank, and so the column space of the 
+original $\bm A'$ is also not full rank.\\
+\vspace{1mm}\\
+In this case there will be nonzero solutions $\bm X$ to $\bm A'\bm X=0$. The columns of $\bm U'$ (and $\bm A'$) are not independent.\\
+(next page)\newpage
+\noindent\textbf{Back Substitution to solve $\bm{Ux}=\bm c$}\\
+Elimination (ideally) produces an upper
 
 
 
