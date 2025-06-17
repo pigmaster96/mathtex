@@ -234,7 +234,57 @@ Rank 1:
 \end{equation*}
 \newpage
 
-\section{}
+\section{Ways to multiply $\bm{AB}=\bm C$}
+\textbf{Multiplcation by columns of $\bm A$ and rows of $\bm B$}\\
+A lesser known way to multiply $\bm{AB}$ is through considering the columns of $\bm A$ and the rows of $\bm B$ (contrary to the usual ideas where each 
+entry of the result is a dot product of a row of $\bm A$ and column of $\bm B$):
+\begin{center}
+\includegraphics[width=10cm]{3}
+\end{center}
+We multiply each column of $\bm A$ by each row of $\bm B$; this gives us $n$ rank 1 matrices, which we then sum together; these matrices are called \textit{outer products}\\
+\vspace{1mm}\\
+(usually we see the $i$th column of the result as a linear combination of the columns of $\bm A$ specified by the $i$th column of $\bm B$. However
+in this case the $i$th outer product is a matrix of the same size as the result, that contains all the contributions of the $i$th column of $\bm A$ to the final product.
+By summing this over all $n$ columns of $\bm A$ we get the result.)\\
+\vspace{1mm}\\
+\textbf{Summary of methods}
+\begin{center}
+\includegraphics[width=10cm]{4}
+\end{center}
+(A nice way to intuit the the third method is to consider $(\bm{AB})^T=\bm B^T\bm A^T$; where the columns of $(\bm{AB})^T$ are the rows of $\bm{AB}$)
+\newpage
+
+\section{Solutions to $\bm{Ax}=\bm b$}
+Given a $n$x$n$ matrix $\bm A$ and an $n$x1 column vector $b$, there are three outcomes for the vector $\bm x$ that solves $\bm{Ax}=\bm b$.\\
+\vspace{1mm}\\
+First there may be \textit{no vector} $\bm x$ that solves $\bm{Ax}=\bm b$, or there may be exactly \textit{one} solution, or there may be \textit{infinitely many}
+solution vectors $\bm x$. Here are the possibilities:\\
+\vspace{1mm}\\
+1. \textbf{Exactly one solution} to $\bm{Ax}=\bm b$ means that $\bm A$ has independent columns (only one particular linear combination of the columns of $\bm A$
+leads to $\bm b$. That combination is specified by $\bm x$). $\bm A$ is full rank and the only solution to $\bm{Ax}=\bm{0}$ is $\bm x=\bm0$. 
+$\bm A$ \textit{has an inverse matrix} $\bm A^{-1}$ (given $\bm b$, we can work backward to get $\bm x$ since only one $\bm x$ leads to $\bm b$).\\
+\vspace{1mm}\\
+2. \textbf{No solution} to $\bm{Ax}=\bm b$ means that $\bm b$ is not in the column space of $\bm A$, so $\bm A$ is not full rank.\\
+\vspace{1mm}\\
+3. \textbf{Infinitely many solutions}. See that when the columns of $\bm A$ are not independent (not full rank), then there are infinitely many ways to
+produce the zero vector $\bm b=\bm0$ (this is the meaning of dependent columns), and so there are infinitely many solutions to $\bm{AX}=\bm0$.\\
+\vspace{1mm}\\ 
+Also see that if $\bm A$ is not full rank it means that its column space is some subspace, where
+solutions only exist for $\bm b$ within that subspace.\\
+\vspace{1mm}\\
+As such, if there so happens to be a solution to $\bm{Ax}=\bm b$ then we can add any solution to $\bm{AX}=\bm0$:
+\begin{equation*}
+\bm A(\bm x+\alpha\bm X)=\bm A\bm x+\alpha\bm A\bm X=\bm b+\bm0=\bm b
+\end{equation*}
+For some constant $\alpha$, which gives us $\bm b$ again---we have infinitely many solutions.
+\newpage
+
+\section{Elimination by elimination matrices}
+
+
+
+
+
 
 
 
