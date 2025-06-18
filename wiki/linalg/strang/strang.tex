@@ -254,6 +254,8 @@ By summing this over all $n$ columns of $\bm A$ we get the result.)\\
 (A nice way to intuit the the third method is to consider $(\bm{AB})^T=\bm B^T\bm A^T$; where the columns of $(\bm{AB})^T$ are the rows of $\bm{AB}$)
 \newpage
 
+\chapter{Solving linear equations $\bm{Ax}=\bm b$}\newpage
+
 \section{Solutions to $\bm{Ax}=\bm b$}
 Given a $n$x$n$ matrix $\bm A$ and an $n$x1 column vector $b$, there are three outcomes for the vector $\bm x$ that solves $\bm{Ax}=\bm b$.\\
 \vspace{1mm}\\
@@ -410,11 +412,58 @@ is not full rank, and so the column space of the
 original $\bm A'$ is also not full rank.\\
 \vspace{1mm}\\
 In this case there will be nonzero solutions $\bm X$ to $\bm A'\bm X=0$. The columns of $\bm U'$ (and $\bm A'$) are not independent.\\
+\vspace{1mm}\\
+\textbf{Augmented matrix}\\
+During elimination, in order to make sure that the operations on the matrix $\bm A$ are also executed on $\bm b$, one can 
+\textit{include $\bm b$ as an extra column of $\bm A$}; this combination $[\bm A,\bm b]$ is called an \textit{augmented matrix}:
+\begin{equation*}
+\left[\begin{array}{cc}\bm A&\bm b\end{array}\right]=
+\left[\begin{array}{cccc}
+2&3&4&19\\
+4&11&14&55\\
+2&8&17&50
+\end{array}\right]\xrightarrow{E}
+\left[\begin{array}{cccc}
+2&3&4&19\\
+0&5&6&17\\
+0&0&7&14
+\end{array}\right]=
+\left[\begin{array}{cc}\bm U&\bm c\end{array}\right]
+\end{equation*}
 (next page)\newpage
 \noindent\textbf{Back Substitution to solve $\bm{Ux}=\bm c$}\\
-Elimination (ideally) produces an upper
+Elimination (ideally) produces an upper triangular matrix $\bm U$ that has all zeros below the diagonal, with nonzero pivots. For instance we had, for some $\bm x$
+\begin{equation*}
+\bm{Ax}=\bm b,\quad\bm A=\left[\begin{array}{ccc}
+2&3&4\\
+4&11&14\\
+2&8&17
+\end{array}\right]\quad
+\bm b=\left[\begin{array}{c}
+19\\55\\50
+\end{array}\right]
+\end{equation*}
+undergo elimination to to become
+\begin{equation*}
+\bm{Ux}=\bm c,\quad\bm U=\left[\begin{array}{ccc}
+2&3&4\\
+0&5&6\\
+0&0&7
+\end{array}\right]\quad
+\bm c=\left[\begin{array}{c}
+19\\17\\14
+\end{array}\right]
+\end{equation*}
+See that this form allows us to easily solve the equations by going from bottom to top in a procedural manner, finding $x_3$, then $x_2$, then $x_1$:
+\begin{enumerate}
+\item\textit{Back substitution}: The last equation $7x_3=14$ gives $x_3=2$
+\item\textit{Work upwards}: The next equation $5x_2+6(2)=17$ gives $x_2=1$
+\item\textit{repeat}: The first equation $2x_1+3(1)+4(2)=19$ gives $x_1=4$
+\end{enumerate}
+giving us the only solution to this example $\bm x=(4,1,2)$. Remember the pivots need to be nonzero(full rank) for a single specific solution to be found.
+\newpage
 
-
+\section{Elimination matrices and inverse matrices}
 
 
 

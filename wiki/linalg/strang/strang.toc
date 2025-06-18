@@ -2,5 +2,7 @@
 \contentsline {section}{\numberline {1.1}Intuition for Dot product, Cosine formula, Schwarz and Triangle inequalities}{2}{}%
 \contentsline {section}{\numberline {1.2}Intuition for column rank being equal to row rank}{4}{}%
 \contentsline {section}{\numberline {1.3}Ways to multiply $\bm {AB}=\bm {C}$}{7}{}%
-\contentsline {section}{\numberline {1.4}Solutions to $\bm {Ax}=\bm {b}$}{8}{}%
-\contentsline {section}{\numberline {1.5}Elimination and Back Substitution}{9}{}%
+\contentsline {chapter}{\numberline {2}Solving linear equations $\bm {Ax}=\bm {b}$}{8}{}%
+\contentsline {section}{\numberline {2.1}Solutions to $\bm {Ax}=\bm {b}$}{9}{}%
+\contentsline {section}{\numberline {2.2}Elimination and Back Substitution}{10}{}%
+\contentsline {section}{\numberline {2.3}Elimination matrices and inverse matrices}{13}{}%
