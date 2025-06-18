@@ -464,6 +464,7 @@ giving us the only solution to this example $\bm x=(4,1,2)$. Remember the pivots
 \newpage
 
 \section{Elimination matrices and inverse matrices}
+\textbf{Elimination matrices}\\
 The basic elimination step \textit{subtracts} a multiple $\ell_{ij}$ of equation $j$ from equation $i$. We always speak about \textit{subtractions} as elimination 
 proceeds. For instance even if the first pivot $a_{11}=3$ and below it is
 $a_{21}=-3$ where we could just add equation 1 to 2, we \textit{subtract} $\ell_{21}=-1$ \textit{times equation 1 from equation 2} (which gives
@@ -475,7 +476,63 @@ For instance here is the matrix that subtracts 2 times row 1 from row 3:
 1&0&0\\0&1&0\\-2&0&1\end{array}\right]
 \end{equation*} 
 If no row exchanges are needed, then three elimination matrices $\bm E_{21},
-\bm E_{31},\bm E_{32}$ will produce three zeros below the diagonal to change $\bm A$ to the upper triangular $\bm U$.
+\bm E_{31},\bm E_{32}$ will produce three zeros below the diagonal to change $\bm A$ to the upper triangular $\bm U$(this just carries out elimination 
+using matrices to represent each step).\\
+\vspace{1mm}\\
+\textbf{Inverse}\\
+See that the \textit{inverse} of each matrix $\bm E_{ij}$ just \textit{adds back} $\ell_{ij}\,\cdot$ (row $j$) to row $i$. 
+This leads to the inverse of their product $\bm E=\bm E_{32}\bm E_{31}\bm E_{21}$. We denote the inverse of $\bm E$ by $\bm L$. 
+For instance, say some $\bm E$ subtracts 5 times row 1 from row 2, then $\bm E^{-1}$ adds 5 times row 1 to row 2:
+\begin{equation*}
+\bm E=\left[\begin{array}{ccc}
+1&0&0\\-5&1&0\\0&0&1\end{array}\right],\quad
+\bm E^{-1}=\left[\begin{array}{ccc}
+1&0&0\\5&1&0\\0&0&1\end{array}\right]
+\end{equation*}
+(See that sequential application of these matrices, in either order, to some vector leads to no net change---as if we had multiplied by the identity.)\\
+\vspace{1mm}\\
+Now lets consider $\bm F$ which subtracts 4 times row 2 from row 3 (which might be a next step during elimination), naturally $\bm F^{-1}$ adds it back:
+\begin{equation*}
+\bm F=\left[\begin{array}{ccc}
+1&0&0\\0&1&0\\0&-4&1\end{array}\right],\quad
+\bm F^{-1}=\left[\begin{array}{ccc}
+1&0&0\\0&1&0\\0&4&1\end{array}\right]
+\end{equation*}
+During elimination we would first apply $\bm E$ then $\bm F$, which is the same as applying $\bm{FE}$. Reversing the elimination would amount to 
+$(\bm{FE})^{-1}$, which is the same as applying $\bm E^{-1}\bm F^{-1}$:
+\begin{equation*}
+\bm F\bm E=\left[\begin{array}{ccc}
+1&0&0\\-5&1&0\\20&-4&1\end{array}\right]\quad\text{is inverted by}\quad
+\bm E^{-1}\bm F^{-1}=\left[\begin{array}{ccc}
+1&0&0\\5&1&0\\0&4&1\end{array}\right]
+\end{equation*}
+See that the product $\bm{FE}$ contains `20' but its inverse doesn't. In $\bm{FE}$, row 3 feels an effect of size 20 from row 1. However in $\bm E^{-1}\bm F^{-1}$ 
+that doesn't happen.\\
+(next page)\newpage
+\noindent\textbf{$\bm L$ is the inverse of $\bm E$}\\
+$\bm E$ is the product of all the elimination matrices $\bm E_{ij}$, it turns $\bm A$ into its upper triangular form $\bm{EA}=\bm U$ (assuming no row exchanges). 
+The difficulty with $\bm E$ is multiplying all the separate elimination steps $\bm E_{ij}$ does not produce a good formula; illustrating 
+$\bm E=\bm E_{32}\bm E_{31}\bm E_{21}$:
+\begin{center}
+\includegraphics[width=10cm]{5}
+\end{center}
+See that the bottom left corner is dependent on multiple constants (since mutating the third row requries knowledge of the mutations that already occured to the
+second row).\\
+\vspace{1mm}\\
+Now consider the inverse $\bm E^{-1}_{21}\bm E^{-1}_{31}\bm E^{-1}_{32}=\bm E^{-1}=\bm L$ (see that inverses need to be applied in reverse):
+\begin{center}
+\includegraphics[width=10cm]{6}
+\end{center}
+(In the inverse matrix, the mutation of each row doesn't depend on previous mutations, so the multipliers fall into place in the lower triangular $\bm L$. 
+Also see that the final matrix is only lower triangular because the elimination algorithm specifies that we don't manipulate the first row, and that we don't
+manipulate the second row with the third row.)\\
+\vspace{1mm}\\
+This is why we might want to consider $\bm A=\bm{LU}$ to go back from triangular $\bm U$ to the original $\bm A$.
+\newpage
+
+\section{}
+
+
 
 
 

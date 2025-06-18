@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.20)  18 JUN 2025 21:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.20)  19 JUN 2025 03:56
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -236,20 +236,31 @@ Package pdftex.def Info: ./images//4.png  used on input line 252.
 Chapter 2.
 [8
 
-] [9] [10] [11] [12] [13] (./strang.aux) ) 
+] [9] [10] [11] [12] [13]
+<./images//5.png, id=64, 839.38594pt x 98.61844pt>
+File: ./images//5.png Graphic file (type png)
+<use ./images//5.png>
+Package pdftex.def Info: ./images//5.png  used on input line 517.
+(pdftex.def)             Requested size: 284.52756pt x 33.42899pt.
+<./images//6.png, id=65, 754.31813pt x 144.54pt>
+File: ./images//6.png Graphic file (type png)
+<use ./images//6.png>
+Package pdftex.def Info: ./images//6.png  used on input line 524.
+(pdftex.def)             Requested size: 284.52756pt x 54.51994pt.
+ [14 <./images//5.png (PNG copy)> <./images//6.png (PNG copy)>] [15] (./strang.aux) ) 
 Here is how much of TeX's memory you used:
- 3429 strings out of 478287
- 52098 string characters out of 5849289
- 354485 words of memory out of 5000000
- 21583 multiletter control sequences out of 15000+600000
+ 3451 strings out of 478287
+ 52454 string characters out of 5849289
+ 355485 words of memory out of 5000000
+ 21603 multiletter control sequences out of 15000+600000
  491338 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,11n,62p,235b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on strang.pdf (14 pages, 367562 bytes).
+Output written on strang.pdf (16 pages, 396700 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 72 compressed objects within 1 object stream
+ 127 PDF objects out of 1000 (max. 8388607)
+ 76 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
