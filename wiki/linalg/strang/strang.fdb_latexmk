@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1750248699 "strang.tex" "strang.pdf" "strang" 1750248699
+["pdflatex"] 1750252322 "strang.tex" "strang.pdf" "strang" 1750252322
   "/etc/texmf/web2c/texmf.cnf" 1718868312 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -85,9 +85,9 @@
   "images//2.png" 1749551625 30130 7c5f7d4ebddc38907fabba757a1d8ccb ""
   "images//3.png" 1750156072 16663 7ef8d1e009af73c2b55e900a2cd63a9b ""
   "images//4.png" 1750157803 107638 20d8edc8a6cc863c050dbafac6059ac9 ""
-  "strang.aux" 1750248699 1237 b63b9c7b442a2d22d6f7691a186362df "pdflatex"
-  "strang.tex" 1750248698 18015 7ac11f8322de3727b5bae789e23f2ccb ""
-  "strang.toc" 1750248699 718 faeceff95d945cd4f35103d9f0456a18 "pdflatex"
+  "strang.aux" 1750252322 1237 b63b9c7b442a2d22d6f7691a186362df "pdflatex"
+  "strang.tex" 1750252320 18813 5b74ac180a8ae68aa27c6aa3b6b77b7c ""
+  "strang.toc" 1750252322 718 faeceff95d945cd4f35103d9f0456a18 "pdflatex"
   (generated)
   "strang.aux"
   "strang.log"

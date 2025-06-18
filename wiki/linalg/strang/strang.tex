@@ -464,6 +464,18 @@ giving us the only solution to this example $\bm x=(4,1,2)$. Remember the pivots
 \newpage
 
 \section{Elimination matrices and inverse matrices}
+The basic elimination step \textit{subtracts} a multiple $\ell_{ij}$ of equation $j$ from equation $i$. We always speak about \textit{subtractions} as elimination 
+proceeds. For instance even if the first pivot $a_{11}=3$ and below it is
+$a_{21}=-3$ where we could just add equation 1 to 2, we \textit{subtract} $\ell_{21}=-1$ \textit{times equation 1 from equation 2} (which gives
+us the same result).\\
+\vspace{1mm}\\
+For instance here is the matrix that subtracts 2 times row 1 from row 3:
+\begin{equation*}
+\bm E_{31}=\left[\begin{array}{ccc}
+1&0&0\\0&1&0\\-2&0&1\end{array}\right]
+\end{equation*} 
+If no row exchanges are needed, then three elimination matrices $\bm E_{21},
+\bm E_{31},\bm E_{32}$ will produce three zeros below the diagonal to change $\bm A$ to the upper triangular $\bm U$.
 
 
 
