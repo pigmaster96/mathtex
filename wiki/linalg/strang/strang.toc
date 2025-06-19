@@ -6,4 +6,5 @@
 \contentsline {section}{\numberline {2.1}Solutions to $\bm {Ax}=\bm {b}$}{9}{}%
 \contentsline {section}{\numberline {2.2}Elimination and Back Substitution}{10}{}%
 \contentsline {section}{\numberline {2.3}Elimination matrices and inverse matrices}{13}{}%
-\contentsline {section}{\numberline {2.4}}{15}{}%
+\contentsline {section}{\numberline {2.4}Gauss-Jordan elimination}{15}{}%
+\contentsline {section}{\numberline {2.5}Proving $\bm {A}=\bm {LU}$}{16}{}%

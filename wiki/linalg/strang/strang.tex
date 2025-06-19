@@ -530,7 +530,58 @@ manipulate the second row with the third row.)\\
 This is why we might want to consider $\bm A=\bm{LU}$ to go back from triangular $\bm U$ to the original $\bm A$.
 \newpage
 
-\section{}
+\section{Gauss-Jordan elimination}
+How would one compute the inverse of an $n$x$n$ matrix $\bm A$? Before answering that question, one might want to consider whether it is really necessary to know
+$\bm A^{-1}$; although it is possible to find the solution to $\bm{Ax}=\bm b$ using $\bm x=\bm A^{-1}\bm{b}$, computing $\bm A^{-1}$ and taking $\bm A^{-1}\bm b$ is
+a very slow way to find $\bm x$.\\
+\vspace{1mm}\\
+Say we want to compute $\bm A^{-1}$. This is equivalent to solving for $\bm{AX}=\bm I$. In that sense, by performing the manipulations on $\bm A$ to make it look
+like $\bm I$. We essentially replicate the effect of $\bm A^{-1}$ on $\bm A$; by repeating those steps on the identity, 
+it becomes as if we were taking $\bm A^{-1}\bm I=\bm A^{-1}$, allowing us to obtain the desired matrix.\\
+\vspace{1mm}\\
+This whole process can be done with an augmented matrix using \textit{Gauss-Jordan elimination}, where we essentially take steps to reduce $\bm A$ to reduced row
+echelon form, while repeating said steps on the identity to obtain the inverse:
+\begin{center}
+\includegraphics[width=10cm]{7}
+\end{center}
+The Gauss-Jordan essentially turns $[\bm A,\bm I]$ into $[I,\bm A^{-1}]$, where the elimination steps are essentially equivalent to multiplicaiton by $\bm A^{-1}$.
+\newpage
+
+\section{Proving $\bm A=\bm{LU}$}
+Elimination is expressed by $\bm{EA}=\bm U$ and inverted by $\bm{LU}=\bm A$. It starts with $\bm A$ and ends with upper triangular $\bm U$, with each elimination step
+being carried out by elimination matrices $\bm E_{ij}$. To invert one elimination step we add rows instead of subtracting:
+\begin{center}
+\includegraphics[width=10cm]{8}
+\end{center}
+Recall that $\bm E=\bm E_{32}\bm E_{31}\bm E_{21}$ gives us a fairly messy result:
+\begin{center}
+\includegraphics[width=10cm]{5}
+\end{center}
+while the inverse, $\bm E^{-1}=\bm E_{21}^{-1}\bm E_{31}^{-1}\bm E_{32}^{-1}=\bm L$ produces a much simpler result
+\begin{center}
+\includegraphics[width=10cm]{6}
+\end{center}
+We then have a elegant expression in $\bm A=\bm E^{-1}\bm U=\bm{LU}$. We now show that this equation holds over larger matrices of size $n$.\\
+\vspace{1mm}\\
+\textbf{Proof 1}\\
+Following each step in elimination, consider the pivot rows that are subtracted from lower rows; see that these rows are not original rows of $\bm A$, since
+they have been mutated by the previous elimination steps; they are instead rows of $\bm U$.\\
+\vspace{1mm}\\
+When computing the, say, third row of $\bm U$, we subtract multiples of earlier rows of $\bm U$:
+\begin{equation*}
+\text{Row 3 of $\bm U$}=(\text{Row 3 of $\bm A$})-\ell_{31}(\text{Row 1 of $\bm U$})-\ell_{32}(\text{Row 2 of $\bm U$})
+\end{equation*}
+Rewriting, see that
+\begin{equation*}
+\text{Row 3 of $\bm A$}=\ell_{31}(\text{Row 1 of $\bm U$})+\ell_{32}(\text{Row 2 of $\bm U$})+1(\text{Row 3 of $\bm U$})
+\end{equation*}
+Row $[\ell_{31},\ell_{32},1]$ is multiplying the matrix $\bm U$. This is \textit{exactly row 3 of $\bm A=\bm{LU}$}. All rows look like this regardless of the size of
+$\bm A$. With no row exchanges, we have $\bm A=\bm{LU}$.\\
+(next page)\newpage
+\noindent\textbf{Proof 2}\\
+Here is another proof. The idea
+
+
 
 
 
