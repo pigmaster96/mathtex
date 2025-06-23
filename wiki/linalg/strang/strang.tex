@@ -582,9 +582,33 @@ $\bm A$. With no row exchanges, we have $\bm A=\bm{LU}$.\\
 Here is another proof. The idea here is to see elimination as removing one rank 1 matrix at a time---one column of $\bm L$ times one row of $\bm U$ from $\bm A$; 
 where the problem becomes one size smaller with each iteration.\\
 \vspace{1mm}\\
-Elimination begins with pivot row=row 1 of $\bm A$
-
-
+Elimination begins with pivot row = row 1 of $\bm A$. We multiply that pivot row by the numbers $\ell_{21}$, then $\ell_{31}$, and eventually $\ell_{n1}$; we subtract
+the respective products from row 2, row 3, and eventually row $n$ of $\bm A$.
+By choosing $\ell_{21}=a_{21}/a_{11}$, $\ell_{31}=a_{31}/a_{11}$ and so on until
+$\ell_{n1}=a_{n1}/a_{11}$; now consider
+if we also subtracted away the pivot row away from itself---this subtraction leaves zeros in column 1:
+\begin{center}
+\includegraphics[width=10cm]{9}
+\end{center}
+The idea here is that we \textit{removed a rank 1 matrix} with columns made up of multiples of $\bm\ell_1=(1,\ell_{21},\ell_{31},\ell_{41},\ldots)$, 
+scaled by
+each respective entry of the first row of $\bm A$, which is also the first pivot row $\bm u_1$ of the final upper triangular matrix.\\
+\vspace{1mm}\\
+We continue with elimination in the second pivot column, using the second row as the pivot row; as before we also subtract the second pivot row from itself. 
+See that this is again equivalent to subtracting a rank 1 matrix with basis
+$\bm\ell_2=(0,1,\ell_{32},\ell_{42},\ldots)$. Recall that the second pivot row is the second row of the upper triangular matrix $\bm U$ in our factorisation.
+\begin{center}
+\includegraphics[width=10cm]{10}
+\end{center}
+Notice that both $\bm\ell_1$ and $\bm\ell_2$ are columns of $\bm L$.
+We removed a column $\bm\ell_2$ times the second pivot row. Continuing in the same way, we successively remove columns with each step removing a column
+$\bm\ell_j$ of $\bm L$ times a pivot row $\bm u_j$ of $\bm U$. See that this entire process can be depicted as
+\begin{center}
+\includegraphics[width=10cm]{11}
+\end{center}
+Notice that $\bm U$ is upper triangular; the pivot row $u_k$ begins with $k-1$ zeros. $\bm L$ is lower triangular with 1's on the main diagonal. Column 
+$\bm\ell_k$ also begins with $k-1$ zeros. (See that this proof makes use of the
+idea that matrix multiplication can be seen as a sum of rank 1 matrices)
 
 
 
