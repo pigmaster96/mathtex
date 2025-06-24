@@ -609,6 +609,33 @@ $\bm\ell_j$ of $\bm L$ times a pivot row $\bm u_j$ of $\bm U$. See that this ent
 Notice that $\bm U$ is upper triangular; the pivot row $u_k$ begins with $k-1$ zeros. $\bm L$ is lower triangular with 1's on the main diagonal. Column 
 $\bm\ell_k$ also begins with $k-1$ zeros. (See that this proof makes use of the
 idea that matrix multiplication can be seen as a sum of rank 1 matrices)
+\newpage
+
+\section{Permutation matrices}
+\textbf{Examples}\\
+Permutation matrices have a 1 in every row and a 1 in every column. All other entries are 0. When this matrix $\bm P$ multiplies a vector, it changes the order of 
+its components; for instance:
+\begin{center}
+\includegraphics[width=10cm]{12}
+\end{center}
+(A nonzero $i$th entry on row $m$ of $\bm P$ means that row $i$ of $\bm x$ goes on that row $m$ in the result) Other examples include
+\begin{center}
+\includegraphics[width=10cm]{13}
+\end{center}
+Recall that elimination may require row exchanges. If $\bm A$ is invertible, then there is a permuation $\bm P$ to order its rows in advance, so that elimination
+on $\bm{PA}$ meets no zeros in the pivot positions. Then $\bm{PA}=\bm{LU}$.\\
+\vspace{1mm}\\
+\textbf{Inverse}\\
+We can intuit that the inverse of $\bm P$ is just its transpose:
+\begin{center}
+\includegraphics[width=10cm]{14}
+\end{center}
+(For instance, a nonzero entry in row 1 column 2 means `row 2 of $\bm x$ becomes row 1 of result'. Its transpose corresponds to a nonzero entry in 
+row 2 column 1, so `row 1 of $\bm x$ becomes row 2 in the result'---reversing the change. This logic can be extrapolated to every other row.)\\
+(next page)\newpage
+\noindent\textbf{$\bm{PA}=\bm{LU}$ factorisation}\\
+
+
 
 
 
