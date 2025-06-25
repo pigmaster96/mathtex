@@ -634,6 +634,60 @@ We can intuit that the inverse of $\bm P$ is just its transpose:
 row 2 column 1, so `row 1 of $\bm x$ becomes row 2 in the result'---reversing the change. This logic can be extrapolated to every other row.)\\
 (next page)\newpage
 \noindent\textbf{$\bm{PA}=\bm{LU}$ factorisation}\\
+Recall that elimination may require row exchanges; consider for instance
+\begin{center}
+\includegraphics[width=12cm]{15}
+\end{center}
+To rescue elimination, $\bm P$ exchanced row 2 with 3, bringing 1 to the second pivot so elimination could continue.\\
+\vspace{1mm}\\
+See that we could order the rows in advance, first exchanging rows 2 and 3 to get $\bm{PA}$, then $\bm{LU}$ factorisation becomes $\bm{PA}=\bm{LU}$; the matrix
+$\bm{PA}$ sails through elimination without seeing that zero pivot:
+\begin{center}
+\includegraphics[width=12cm]{16}
+\end{center}
+We may require several row exchanges; in that case the an overall permutation $\bm P$ would include them all, still producing $\bm{PA}=\bm{LU}$. A useful way to keep
+track of the permutations might be to add a column of indices at the end of $\bm A$ so that the original indices are displayed:
+\begin{center}
+\includegraphics[width=12cm]{17}
+\end{center}
+\textbf{Column permutations}\\
+We know that we can reorder rows using 
+\begin{center}
+\includegraphics[width=10cm]{18}
+\end{center}
+See that we can also reorder columns by applying a permutation matrix on the right:
+\begin{center}
+\includegraphics[width=8cm]{19}
+\end{center}
+Note that these two operations don't cover all possible permutations of the 9 entries in $\bm A$. The first index is constant on every row and the second index is
+constant on every column.
+\newpage
+
+\section{Transposes and symmetric matrices}
+\subsection{The transpose of $\bm{AB}$ is $\bm B^T\bm A^T$: Intuition}
+We have
+\begin{equation*}
+(\bm{AB})^T=\bm B^T\bm A^T
+\end{equation*}
+Consider $\bm{AB}$. Computing the first \textit{row} of the result (the first column of $(\bm{AB})^T$); this can be seen as a linear combination of the 
+\textit{rows} of $\bm B$ (the columns of $\bm B^T$) specified by the entries
+in the first \textit{row} of $\bm A$ (the first column of $\bm A^T$).
+\subsection{Showing $(\bm A^T)^{-1}=(\bm A^{-1})^T$}
+Consider taking the transpose of $\bm A^{-1}\bm A$,
+\begin{center}
+\includegraphics[width=12cm]{20}
+\end{center}
+Similarly, transposing $\bm{AA}^{-1}=\bm I$ leads to $({\bm A}^{-1})^T\bm A^T=\bm I$. Notice especially that $\bm A^T$ \textit{is invertible exactly when $\bm A$ is 
+invertible}.
+\subsection{$\bm A^T\bm A$ is symmetric}
+Choose any matrix $\bm A$, probably rectangular. Multiply $\bm A^T$ times $\bm A$, then the product $\bm S=\bm A^T\bm A$ is automatically a square symmetric matrix:
+\begin{center}
+\includegraphics[width=10cm]{21}
+\end{center}
+The matrix $\bm{AA}^T$ is also symmetric (see that their shapes permit multiplication in either order), note howerver that $\bm{AA}^T$ \textit{is a different matrix} 
+from $\bm A^T\bm A$.
+
+
 
 
 
