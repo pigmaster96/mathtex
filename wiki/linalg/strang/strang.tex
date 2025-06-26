@@ -686,12 +686,80 @@ Choose any matrix $\bm A$, probably rectangular. Multiply $\bm A^T$ times $\bm A
 \end{center}
 The matrix $\bm{AA}^T$ is also symmetric (see that their shapes permit multiplication in either order), note howerver that $\bm{AA}^T$ \textit{is a different matrix} 
 from $\bm A^T\bm A$.
+\newpage
+
+\chapter{The Four Fundamental Subspaces}
+
+\section{Reduced Row Echelon Form}
 
 
 
 
 
 
+
+
+
+
+\appendix
+\chapter{Misc. topics}
+\section{Taylor series, Difference approximations}
+\textbf{Taylor series}\\
+Recall the idea of the taylor series, where $f(x)$ near some point $x=x_0$ can be approximated as
+\begin{equation*}
+f(x)\approx f(x_0)+f'(x_0)(x-x_0)+\frac{f''(x_0)}{2!}(x-x_0)^2+\frac{f'''(x_0)}{3!}(x-x_0)^3+\cdots
+\end{equation*}
+See that this comes from approximating $f(x)$ as a polynomial
+\begin{equation*}
+y(x)=a_0+a_1(x-x_0)+a_2(x-x_0)^2+a_3(x-x_0)^3+\cdots
+\end{equation*}
+where we have $a_0=y(x_0)$; now consider differentiating:
+\begin{align*}
+y'(x)&=a_1+2a_2(x-x_0)+3a_3(x-x_0)^2+\cdots\\
+y''(x)&=2a_2+(3)(2)a_3(x-x_0)+(4)(3)a_4(x-x_0)^2\cdots\\
+y^{(n)}(x)&=n!\,a_n+((n+1)\cdot(n-1)\cdots3\cdot2)a_{n+1}(x-x_0)+\cdots
+\end{align*}
+so we have
+\begin{equation*}
+a_1=y'(x_0),\quad a_2=\frac{y''(x_0)}{2!},\,\cdots,a_n=\frac{y^{(n)}(x_0)}{n!}
+\end{equation*}
+where substituting into our initial approximation gives us
+\begin{equation*}
+y(x)\approx y(x_0)+y'(x_0)(x-x_0)+\frac{y''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{y^{(n)}(x_0)}{n!}(x-x_0)^n+\cdots
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+y(x)\approx y(x_0)+y'(x_0)(x-x_0)+\frac{y''(x_0)}{2!}(x-x_0)^2+\cdots+\frac{y^{(n)}(x_0)}{n!}(x-x_0)^n+\cdots
+\end{equation*}
+substituting $x-x_0=h$ gives us
+\begin{equation*}
+y(x_0+h)\approx y(x_0)+y'(x_0)(h)+\frac{y''(x_0)}{2!}(h)^2+\cdots+\frac{y^{(n)}(x_0)}{n!}(h)^n+\cdots
+\end{equation*}
+Which can be rewritten as
+\begin{equation*}
+y(x+h)\approx y(x)+hy'(x)+\frac{1}{2!}h^2y''(x)+\cdots+\frac{1}{n!}h^ny^{(n)}(x)+\cdots
+\end{equation*}
+\vspace{1mm}\\
+\textbf{Difference formulas}\\
+Considering the first few terms of the taylor series approximation, we have
+\begin{align*}
+y(x+h)-y(x)&\approx hy'(x)+\frac{1}{2}h^2y''(x)\\
+y(x-h)-y(x)&\approx-hy'(x)+\frac{1}{2}h^2y''(x)
+\end{align*}
+This allows us to have an approximation to $dy/dx$:
+\begin{center}
+\includegraphics[width=10cm]{22}
+\end{center}
+and also to the second derivative
+\begin{center}
+\includegraphics[width=10cm]{23}
+\end{center}
+The individual formulas also yield approximations:
+\begin{center}
+\includegraphics[width=10cm]{24}
+\end{center}
 
 
 
