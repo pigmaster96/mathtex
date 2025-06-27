@@ -15,5 +15,6 @@
 \contentsline {subsection}{\numberline {2.7.3}$\bm {A}^T\bm {A}$ is symmetric}{20}{}%
 \contentsline {chapter}{\numberline {3}The Four Fundamental Subspaces}{21}{}%
 \contentsline {section}{\numberline {3.1}Reduced Row Echelon Form}{21}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{22}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{22}{}%
+\contentsline {section}{\numberline {3.2}Computing the nullspace by elimination}{23}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{24}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{24}{}%
