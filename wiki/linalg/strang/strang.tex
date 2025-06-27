@@ -741,7 +741,62 @@ There are three row operations allowed in elimination from $\bm A$ to $\bm R$:
 A different series of steps could be used reach the same $\bm R$. But the result $\bm R$ can't change.
 \newpage
 
-\section{Computing the nullspace by elimination}
+\section{$\bm A=\bm{CR}$ factorisation}
+We can apply elimination to reduce $\bm A$ to $\bm R_0$ (reduced echelon form with zero rows); then 
+$\bm I$ in $\bm R_0$ locates the matrix $\bm C$ of \textit{independent columns} in $\bm A$. Removing any zero rows from $\bm R_0$ produces 
+the row matrix $\bm R$ such that $\bm A=\bm{CR}$. For instance, 
+\begin{center}
+\includegraphics[width=10cm]{30}
+\end{center}
+where the independent columns of $\bm A$ are 1 and 3, and
+\begin{equation*}
+\bm R=\left[\begin{array}{ccc}
+1&2&0\\0&0&1
+\end{array}\right],\quad
+\bm C=\left[\begin{array}{cc}
+1&1\\2&5\\3&9
+\end{array}\right]
+\end{equation*}
+so
+\begin{center}
+\includegraphics[width=12cm]{29}
+\end{center}
+\newpage
+
+\section{Systematic nullspace computation}
+Elimination gives us a systematic way to find a basis for the nullspace. Say we have
+\begin{center}
+\includegraphics[width=12cm]{31}
+\end{center}
+Consider attempting to find a basis for the nullspace, meaning a basis for the solutions of $\bm{Ax}=\bm0$; say that $\bm{W^{-1}A}=\bm R_0$, then for some $\bm x$,
+\begin{equation*}
+\bm{Ax}=\bm0\implies\bm{W^{-1}Ax}=\bm{W^{-1}0}\implies\bm{R_0x}=\bm0
+\end{equation*}
+See that the elimination process doesn't change the space of solutions that satisfy $\bm{Ax}=\bm0$. Also see that using $\bm R$ instead of $\bm R_0$ only removes the 
+redundant zero rows without removing any solutions.\\
+\vspace{1mm}\\
+Given some $\bm R$, we have a systematic way to find a basis for the nullspace: considering all the indices of $\bm x$ corresponding to dependent indices,
+by letting one of those indices be 1 and the rest 0, we have a simple solution for $\bm{Rx}=\bm0$:
+\begin{center}
+\includegraphics[width=10cm]{32}
+\end{center}
+See that if we were to write $\bm R$ as $[\bm I,\bm F]$, the solutions can be found in an algorithmic manner:
+\begin{center}
+\includegraphics[width=12cm]{33}
+\end{center}
+The second case occurs should we have to permute $\bm R$ to reorder the independent columns. Recall that $\bm{PP}^T=\bm I$, and so
+\begin{center}
+\includegraphics[width=12cm]{34}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+To put these two ideas together, suppose the $m$x$n$ matrix $\bm A$ has rank $r$. To find the $n-r$ special solutions to $\bm{Ax}=\bm0$, compute the reduced row
+echelon form $\bm R_0$ of $\bm A$; remove the $m-r$ zero rows of $\bm R_0$ to produce $\bm R=[\bm I,\bm F]\bm P$, where $\bm A=\bm{CR}$.\\
+\vspace{1mm}\\
+Then the special solutions to $\bm{Ax}=0$ are the $n-r$ columns of $\bm P^T\left[\begin{array}{c}-\bm F\\\bm I\end{array}\right]$.
+\newpage
+
+\section{Block elimination}
 
 
 
