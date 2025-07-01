@@ -17,6 +17,7 @@
 \contentsline {section}{\numberline {3.1}Reduced Row Echelon Form}{21}{}%
 \contentsline {section}{\numberline {3.2}$\bm {A}=\bm {CR}$ factorisation}{23}{}%
 \contentsline {section}{\numberline {3.3}Systematic nullspace computation}{24}{}%
-\contentsline {section}{\numberline {3.4}Block elimination}{26}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{27}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{27}{}%
+\contentsline {section}{\numberline {3.4}The complete solution to $\bm {Ax}=\bm {b}$}{26}{}%
+\contentsline {subsection}{\numberline {3.4.1}Rank and solution}{27}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{28}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{28}{}%

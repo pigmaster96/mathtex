@@ -796,7 +796,54 @@ echelon form $\bm R_0$ of $\bm A$; remove the $m-r$ zero rows of $\bm R_0$ to pr
 Then the special solutions to $\bm{Ax}=0$ are the $n-r$ columns of $\bm P^T\left[\begin{array}{c}-\bm F\\\bm I\end{array}\right]$.
 \newpage
 
-\section{Block elimination}
+\section{The complete solution to $\bm{Ax}=\bm b$}
+\textbf{Finding a particular solution}\\
+We can reduce $\bm{Ax}=\bm b$ to a simpler system $\bm R_0\bm x=\bm d$ with the same solutions (if any). A useful aid here is to augment 
+$\bm A$ with $\bm b$ to produce an augmented matrix $[\bm A,\bm b]$:
+\begin{center}
+\includegraphics[width=11cm]{35}
+\end{center}
+Applying elimination to reach $\bm R_0$, the augmented part also undergoes the same elimination steps to produce a $\bm d$:
+\begin{center}
+\includegraphics[width=11cm]{36}
+\end{center}
+For an easy solution $x_p$ we can \textit{choose the free variables to be 0}. In this case $x_2=x_4=0$, then the pivot variables can just be read off from $\bm d$:
+\begin{center}
+\includegraphics[width=12cm]{37}
+\end{center}
+See that for a solution to exist, the zero rows in $\bm R_0$ must also be zero in $\bm d$.\\
+\vspace{1mm}\\
+This procedure allows us to come up with a particular solution. For a complete solution, we consider any sum of the particular solution $x_p$ with any nullspace 
+vectors $x_n$:
+\begin{center}
+\includegraphics[width=10cm]{38}\\
+\includegraphics[width=11cm]{39}
+\end{center}
+The nullspace can be found as per outlined earlier (setting one variable to one and the rest to zero to get each nullspace basis vector). See 
+that the complete solution includes all nullspace basis vectors, and 
+that if the nullspace is just the zero vector then every particular solution $\bm x_p$ is the only solution to that $\bm b$.\\
+(next page)\newpage
+\subsection{Rank and solution}
+\textbf{Full column rank}\\
+In the case where $\bm A$ has \textit{full column rank}, every column has a pivot and the rank is $r=n$. The matrix is tall and thin ($m\geq n$). 
+Row reduction puts $R=I$ at the top when $\bm A$ is reduced to $\bm R_0$ with rank $n$:
+\begin{center}
+\includegraphics[width=10cm]{40}\\
+\end{center}
+See that in this case the matrix has the following properties:
+\begin{center}
+\includegraphics[width=11cm]{41}\\
+\end{center}
+With full column rank, $\bm{Ax}=\bm b$ will have \textit{one solution or no solution}. (think of a mapping from $n$ dimensional space into $m$ dimensional space
+where $m\geq n$, there aren't enough vectors in $n$ space to encompass all of $m$ space, so there may be no solution for a particular vector in $m$ space; or see 
+that the columns only span a $n$ dimensional hyperplane in a higher $m$ dimensional space---any $m$ dimensional vector not on that hyperplane has no solution)\\
+\vspace{1mm}\\
+\textbf{Full row rank}\\
+The other case is full row rank---now $\bm{Ax}=\bm b$ has \textit{one or infinitely many solutions}. In this case $\bm A$ must be \textit{short and wide} ($m\leq n$);
+the matrix has full row rank if $r=m$, where every row has a pivot.\\
+\vspace{1mm}\\
+In this case if $m<n$ a nullspace consisting of more than just the zero vector exists. 
+
 
 
 
