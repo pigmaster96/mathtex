@@ -842,8 +842,72 @@ that the columns only span a $n$ dimensional hyperplane in a higher $m$ dimensio
 The other case is full row rank---now $\bm{Ax}=\bm b$ has \textit{one or infinitely many solutions}. In this case $\bm A$ must be \textit{short and wide} ($m\leq n$);
 the matrix has full row rank if $r=m$, where every row has a pivot.\\
 \vspace{1mm}\\
-In this case if $m<n$ a nullspace consisting of more than just the zero vector exists. 
+(If $m<n$, then a nullspace consisting of more than just the zero vector exists and there will be multiple solutions to $\bm{Ax}=\bm b$.) See that a matrix like
+this has the following properties:
+\begin{center}
+\includegraphics[width=10cm]{42}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}
+\begin{center}
+\includegraphics[width=12cm]{43}
+\end{center}
+If the matrix $\bm A$ is square and invertible, it indicates a mapping from $m=n=r$ space into that same space; the basis specified by $\bm A$ spans the whole of 
+$r$ space
+and there is only one linear combination of that basis that solves for $\bm{Ax}=\bm b$ (since $\bm A$ has linearly independent columns and therefore a trivial nullspace).\\
+\vspace{1mm}\\
+If the matrix is not full rank, then the columns span a hyperplane in the space equal to the row length, meaning some $\bm{Ax}=\bm b$ may not have a solution, and if
+some $\bm b$ does lie within that hyperplane there will be infinite solutions to it (since the columns are not independent and therefore a nontrivial nullspace exists).\\
+\vspace{1mm}\\
+Their reduced row echelon form will fall into the following categories:
+\begin{center}
+\includegraphics[width=12cm]{44}
+\end{center}
+Cases 1 and 2 have full row rank, case 3 has full column rank but not row rank, case 4 is not full rank.
+See that in the last two cases, when $\bm{Ax}=\bm b$ is reduced to $\bm R_0\bm x=\bm d$, $\bm d$ must end in $m-r$ zeros for the equation to be solvable. $\bm F$ refers
+to the top part of the dependent columns.
+\newpage
 
+\section{Intuition for four subspaces}
+We have
+\begin{center}
+\includegraphics[width=10cm]{45}
+\end{center}
+\textbf{Column space of reduced form not the same as original matrix}\\
+Note that although the reduced row echelon form provides the pivot positions to determine the row and column rank of a matrix, while the \textit{rows} of the rref form 
+span the same row space as the original unreduced matrix, the columns of the rref form cannot act as substitutes for the original column space, instead only providing
+information on dimensionality and on which original columns act as basis vectors for the column space. That is 
+\begin{equation*}
+\bm C(\bm A)\neq\bm C(\bm R_0)\quad\text{but}\quad\bm C(\bm A^T)=\bm C(\bm R_0^T)
+\end{equation*}
+(none of the row operations in elimination change the row space, but they do change the column space)\\
+\vspace{1mm}\\
+\textbf{Nullspace dimension is $n-r$}\\
+The intuition for the dimension of $\bm N(A)$ being $n-r$ is clear from elimination, where each dependent column provides a new basis vector for the nullspace (we can
+find a basis by substituting one free variable as 1 and the rest zero, repeating for all free variables), so the number of basis vectors equals the number of
+dependent columns equals total columns minus independent columns---so $n-r$.
+\vspace{1mm}\\
+\textbf{Left nullspace dimensionality}\\
+We know the dimensions for $\bm A$ is the same as that of $\bm A^T$. Transposing $\bm A$ gives us $m$ columns, of which we know $r$ are independent. So there are $m-r$ 
+dependent columns which each provide a basis vector for the nullspace.
+\newpage
+
+\section{Block elimination}
+
+
+
+\newpage
+
+\section{Every rank $r$ matrix is a sum of $r$ rank one matrices}
+Rank one matrices have the form $\bm{uv^T}$. Recall the $\bm A=\bm{CR}$ factorisation,
+where we reduce the matrix by row operations to $\bm R_0$, which has the same row space as $\bm A$, and remove the zero rows to find $\bm R$, which also has the same row
+space. For instance:
+\begin{center}
+\includegraphics[width=10cm]{46}
+\end{center}
+For each independent column in $\bm A$, a new independent column is added to $\bm C$ and a new indentity component added to $\bm R$. On the other
+hand for each dependent column in $\bm A$, only a new column is added to $\bm R$ and $\bm C$ is left unchanged. Each independent column in $\bm C$ 
+contributes a rank 1 matrix:
 
 
 
