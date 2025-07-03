@@ -20,7 +20,7 @@
 \contentsline {section}{\numberline {3.4}The complete solution to $\bm {Ax}=\bm {b}$}{26}{}%
 \contentsline {subsection}{\numberline {3.4.1}Rank and solution}{27}{}%
 \contentsline {section}{\numberline {3.5}Intuition for four subspaces}{29}{}%
-\contentsline {section}{\numberline {3.6}Block elimination}{30}{}%
-\contentsline {section}{\numberline {3.7}Every rank $r$ matrix is a sum of $r$ rank one matrices}{31}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{32}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{32}{}%
+\contentsline {section}{\numberline {3.6}$\bm {A}=\bm {CR}$ and Block elimination}{30}{}%
+\contentsline {chapter}{\numberline {4}Orthogonality}{32}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{33}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{33}{}%

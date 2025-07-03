@@ -892,26 +892,118 @@ We know the dimensions for $\bm A$ is the same as that of $\bm A^T$. Transposing
 dependent columns which each provide a basis vector for the nullspace.
 \newpage
 
-\section{Block elimination}
-
-
-
+\section{$\bm A=\bm{CR}$ and Block elimination}
+The earlier notes on the rref form introduced it as a simple way to express the entire matrix in terms of its dependent rows, where for a matrix $\bm A$, with independent
+components $\bm W$ and dependent components $\bm H$, reduction to rref looks like:
+\begin{equation*}
+\bm A=\left[\begin{array}{cc}W&H\end{array}\right]\implies
+\bm W^{-1}\bm A=\bm W^{-1}\left[\begin{array}{cc}W&H\end{array}\right]=
+\left[\begin{array}{cc}I&W^{-1}H\end{array}\right]
+\end{equation*}
+See that we can recover the dependent components of $\bm H$ with $\bm W^{-1}\bm H$ by multiplying it by the independent columns $\bm W$, so
+\begin{equation*}
+\bm A=\underbrace{\bm W}_{\bm C}\underbrace{\left[\begin{array}{cc}I&W^{-1}H\end{array}\right]}_{\bm R}
+\end{equation*}
+where $\bm C$ means the same thing as $\bm W$, that is, the independent columns of $\bm A$. See that
+$\bm W$ is gauranteed to be square since row and column rank are equal.\\
+\vspace{1mm}\\
+\textbf{Block elimination}\\
+The above doesn't show how the zero rows in $\bm R_0$ (if they exist) are redundant. 
+We can develop a better idea of elimination if we consider working with blocks of the original $\bm A$. This is called block elimination; consider reducing
+a matrix $\bm A$ with rank $r$ to rref using the following three steps:\\
+\vspace{1mm}\\
+\textbf{Step 1}: Exchange columns of $\bm A$ using $\bm P_C$ and exchange rows of $\bm A$ using $\bm P_R$ to put the $r$ independent columns first and $r$ independent rows 
+first. This looks like
+\begin{equation*}
+\bm P_R\bm A\bm P_C=\left[\begin{array}{cc}
+\bm W&\bm H\\
+\bm J&\bm K\end{array}\right]
+\end{equation*}
+$\left[\begin{array}{c}\bm W\\\bm J\end{array}\right]$ has full column rank and 
+$\left[\begin{array}{cc}\bm W&\bm H\end{array}\right]$ has full row rank. See that $\bm W$ is a square matrix with full rank $r$ and is therefore invertible.\\
+\vspace{1mm}\\
+\textbf{Step 2}: Multiply the top rows by $\bm W^{-1}$:
+\begin{equation*}
+\left[\begin{array}{cc}
+\bm W&\bm H\\
+\bm J&\bm K\end{array}\right]\to
+\left[\begin{array}{cc}
+\bm I&\bm W^{-1}\bm H\\
+\bm J&\bm K\end{array}\right]
+\end{equation*}
+\textbf{Step 3}: Subtract $\bm J[\begin{array}{cc}\bm I&\bm W^{-1}\bm H\end{array}]$
+from the $m-r$ rows $[\begin{array}{cc}\bm J&\bm K\end{array}]$ to produce
+$[\begin{array}{cc}\bm0&\bm0\end{array}]$:
+\begin{equation*}
+\left[\begin{array}{cc}
+\bm I&\bm W^{-1}\bm H\\
+\bm J&\bm K\end{array}\right]\to
+\left[\begin{array}{cc}
+\bm I&\bm W^{-1}\bm H\\
+\bm 0&\bm 0\end{array}\right]
+\end{equation*}
+To understand why $\bm J\bm W^{-1}\bm H=\bm K$, we know that the first $r$ rows 
+$[\begin{array}{cc}\bm I&\bm W^{-1}\bm H\end{array}]$ are linearly independent, and since $\bm A$ has rank $r$, the lower rows $[\begin{array}{cc}\bm J&\bm K\end{array}]$ 
+must be combinations of the upper rows. These combinations must be given by $\bm J$ to get
+the first $r$ columns correct: $\bm{JI}=\bm J$. Then $\bm J$ times $\bm W^{-1}\bm H$ must equal $\bm K$ to make the last columns correct.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We have block elimination as the following transformations:
+\begin{center}
+\includegraphics[width=12cm]{47}
+\end{center}
+We can, in a manner similar to the steps taken, factor out parts of $\bm A$ as follows to acquire the reduced row echelon form; for step 2:
+\begin{equation*}
+\bm P_R\bm A\bm P_C=\left[\begin{array}{cc}
+\bm W&\bm H\\
+\bm J&\bm K\end{array}\right]=
+\left[\begin{array}{cc}
+\bm W&\bm 0\\
+\bm 0&\bm 1\end{array}\right]
+\left[\begin{array}{cc}
+\bm I&\bm W^{-1}\bm H\\
+\bm J&\bm K\end{array}\right]
+\end{equation*}
+For step 3:
+\begin{equation*}
+\left[\begin{array}{cc}
+\bm W&\bm 0\\
+\bm 0&\bm 1\end{array}\right]
+\left[\begin{array}{cc}
+\bm I&\bm W^{-1}\bm H\\
+\bm J&\bm K\end{array}\right]=
+\left[\begin{array}{cc}
+\bm W&\bm 0\\
+\bm 0&\bm 1\end{array}\right]
+\left[\begin{array}{cc}
+\bm 1&\bm 0\\
+\bm J&\bm 0\end{array}\right]
+\left[\begin{array}{cc}
+\bm I&\bm W^{-1}\bm H\\
+\bm 0&\bm 0\end{array}\right]
+\end{equation*}
+The result is
+\begin{equation*}
+\bm P_R\bm A\bm P_C=
+\left[\begin{array}{cc}
+\bm W&\bm 0\\
+\bm J&\bm 0\end{array}\right]
+\left[\begin{array}{cc}
+\bm I&\bm W^{-1}\bm H\\
+\bm 0&\bm 0\end{array}\right]=\left[\begin{array}{c}
+\bm W\\
+\bm J\end{array}\right]
+\left[\begin{array}{cc}
+\bm I&\bm W^{-1}\bm H\end{array}\right]
+\end{equation*}
+See that this is just the $\bm A=\bm{CR}$ factorisation, but this time showing that the zero rows are redundant rather than just using a reduced form where zero rows don't
+exist. Another way of writing this result is
+\begin{center}
+\includegraphics[width=12cm]{48}
+\end{center}
 \newpage
 
-\section{Every rank $r$ matrix is a sum of $r$ rank one matrices}
-Rank one matrices have the form $\bm{uv^T}$. Recall the $\bm A=\bm{CR}$ factorisation,
-where we reduce the matrix by row operations to $\bm R_0$, which has the same row space as $\bm A$, and remove the zero rows to find $\bm R$, which also has the same row
-space. For instance:
-\begin{center}
-\includegraphics[width=10cm]{46}
-\end{center}
-For each independent column in $\bm A$, a new independent column is added to $\bm C$ and a new indentity component added to $\bm R$. On the other
-hand for each dependent column in $\bm A$, only a new column is added to $\bm R$ and $\bm C$ is left unchanged. Each independent column in $\bm C$ 
-contributes a rank 1 matrix:
-
-
-
-
+\chapter{Orthogonality}
 
 
 
