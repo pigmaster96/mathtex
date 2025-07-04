@@ -1064,6 +1064,42 @@ So $\bm A$ maps every row space component to a specific column space component; 
 two nullspaces. $\bm A$ \textit{is invertible from the row space to the column space}.
 \newpage
 
+\section{Projections}
+\subsection{Projection onto a line}
+We want to project any $\bm b$ onto the column space of any $m$ by $n$ matrix $\bm A$. This entails finding the point $\bm p$ on that subspace that is closest to our
+arbitrary point $\bm b$. We start with a line.\\
+\vspace{1mm}\\
+Considering a one dimensional subspace (a line) with basis $\bm a=(a_1,\ldots,a_m)$. 
+Along that line, we want the point $\bm p$ closest to $\bm b=(b_1,\ldots,b_m)$; the key to projection is orthogonality: \textit{the line from $\bm b$ to $\bm p$, 
+that is $\bm b-\bm p$, is perpendicular to the vector $\bm a$}.\\
+\vspace{1mm}\\
+We know that the projection $\bm p$ will be some multiple of $\bm a$; call it $\bm p=\hat{\bm x}\bm a$ (so here $\hat{\bm x}$ denotes a constant)---computing this number 
+$\hat{\bm x}$ will give us the vector $\bm p$. We can call the perpendicular line $\bm b-\bm p$ the `error' $\bm e=b-\hat{\bm x}\bm a$, and use the fact that it is 
+perpendicular to $\bm a$ to derive $\hat{\bm x}$:
+\begin{center}
+\includegraphics[width=6cm]{54}\\
+\includegraphics[width=11cm]{55}
+\end{center}
+With that we can compute the projection $\bm p=\hat{\bm x}\bm a$:
+\begin{center}
+\includegraphics[width=12cm]{56}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Projection matrix}\\
+We had the projection of $\bm b$ onto the line through $\bm a$ as the vector $\bm p$ given by
+\begin{equation*}
+\bm p=\hat{\bm x}\bm a=\frac{\bm a^T\bm b}{\bm a^T\bm a}\bm a
+\end{equation*}
+Now comes the \textit{projection matrix}, where we want a matrix $\bm P$ that can be applied to the arbitrary point $\bm b$ to get the desired projection $\bm p$, so 
+$\bm{Pb}=\bm p$. This can found easily; since $\hat{\bm x}$ is a constant, we can rearrange the above equation:
+\begin{center}
+\includegraphics[width=12cm]{57}
+\end{center}
+The projection matrix $\bm P$ is a $m$ by $m$ rank one matrix. Notice that the line through $\bm a$, the subspace we are projecting onto, is the column space of $\bm P$.
+
+
+
+
 
 
 

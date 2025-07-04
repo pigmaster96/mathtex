@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1751631165 "strang.tex" "strang.pdf" "strang" 1751631165
+["pdflatex"] 1751652449 "strang.tex" "strang.pdf" "strang" 1751652449
   "/etc/texmf/web2c/texmf.cnf" 1718868312 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -137,13 +137,17 @@
   "images//51.png" 1751625432 12552 b816d1312dab9e1aa0afe342ec3c4578 ""
   "images//52.png" 1751627541 22050 efcbf553fb2714383a67a20effe81d00 ""
   "images//53.png" 1751628706 90004 57cf4533c4d34f48e11aa27f88bd4c4d ""
+  "images//54.png" 1751649931 18946 f970a6019461714eca91fd1409c2ce39 ""
+  "images//55.png" 1751650051 18950 01c6cf4aaab5738c658dae3fd33acf88 ""
+  "images//56.png" 1751650926 38525 6ac665cde5133caad87509945c2f6c2f ""
+  "images//57.png" 1751651792 18454 dd3e4806411beec37f311bd62c4f7087 ""
   "images//6.png" 1750275995 12341 eba27b82c9795e068320130d1c7d96cf ""
   "images//7.png" 1750359351 27387 374affb2deaf9a905f5c5c472d1bcc33 ""
   "images//8.png" 1750361129 9713 06ca0cdf5b44c1b72385010752bb3d6d ""
   "images//9.png" 1750704617 17122 8114ceecf475892d068876c863424801 ""
-  "strang.aux" 1751631165 4236 7a23aa987358e97c2a89cedcc5992a3b "pdflatex"
-  "strang.tex" 1751631162 53714 0cbfaf638d56684837178663f5a10ad4 ""
-  "strang.toc" 1751631165 2566 a14daf944d8dfa5013d2714d48be6734 "pdflatex"
+  "strang.aux" 1751652449 4456 17e373bcc9f6a63bd4246c5b37a9e715 "pdflatex"
+  "strang.tex" 1751652449 55712 ec5ee2d79ccc9f5b48a1675d9ea62644 ""
+  "strang.toc" 1751652449 2704 96a46944c002a788591a440249594a65 "pdflatex"
   (generated)
   "strang.aux"
   "strang.log"

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.20)  4 JUL 2025 20:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.20)  5 JUL 2025 02:07
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -201,13 +201,13 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./strang.toc)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./strang.toc [1
+
+])
 \tf@toc=\write3
 \openout3 = `strang.toc'.
 
- [1
-
-] [2]
+ [2]
 Chapter 1.
 <./images//1.png, id=21, 755.82375pt x 271.76532pt>
 File: ./images//1.png Graphic file (type png)
@@ -499,39 +499,61 @@ File: ./images//53.png Graphic file (type png)
 Package pdftex.def Info: ./images//53.png  used on input line 1050.
 (pdftex.def)             Requested size: 341.43306pt x 210.59303pt.
  [35]
+<./images//54.png, id=186, 428.19975pt x 219.219pt>
+File: ./images//54.png Graphic file (type png)
+<use ./images//54.png>
+Package pdftex.def Info: ./images//54.png  used on input line 1080.
+(pdftex.def)             Requested size: 170.71652pt x 87.39836pt.
+<./images//55.png, id=187, 711.8595pt x 93.951pt>
+File: ./images//55.png Graphic file (type png)
+<use ./images//55.png>
+Package pdftex.def Info: ./images//55.png  used on input line 1081.
+(pdftex.def)             Requested size: 312.9803pt x 41.30702pt.
+<./images//56.png, id=188, 803.4015pt x 168.02776pt>
+File: ./images//56.png Graphic file (type png)
+<use ./images//56.png>
+Package pdftex.def Info: ./images//56.png  used on input line 1085.
+(pdftex.def)             Requested size: 341.43306pt x 71.40956pt.
+ [36 <./images//54.png (PNG copy)> <./images//55.png (PNG copy)> <./images//56.png (PNG copy)>]
+<./images//57.png, id=193, 765.45975pt x 118.64325pt>
+File: ./images//57.png Graphic file (type png)
+<use ./images//57.png>
+Package pdftex.def Info: ./images//57.png  used on input line 1096.
+(pdftex.def)             Requested size: 341.43306pt x 52.92189pt.
+ [37 <./images//57.png (PNG copy)>]
 Appendix A.
-[36
+[38
 
 ]
-<./images//22.png, id=190, 599.23875pt x 103.88812pt>
+<./images//22.png, id=200, 599.23875pt x 103.88812pt>
 File: ./images//22.png Graphic file (type png)
 <use ./images//22.png>
-Package pdftex.def Info: ./images//22.png  used on input line 1120.
+Package pdftex.def Info: ./images//22.png  used on input line 1158.
 (pdftex.def)             Requested size: 284.52756pt x 49.32834pt.
-<./images//23.png, id=191, 640.64343pt x 111.41624pt>
+<./images//23.png, id=201, 640.64343pt x 111.41624pt>
 File: ./images//23.png Graphic file (type png)
 <use ./images//23.png>
-Package pdftex.def Info: ./images//23.png  used on input line 1124.
+Package pdftex.def Info: ./images//23.png  used on input line 1162.
 (pdftex.def)             Requested size: 284.52756pt x 49.48401pt.
-<./images//24.png, id=192, 613.54219pt x 173.89969pt>
+<./images//24.png, id=202, 613.54219pt x 173.89969pt>
 File: ./images//24.png Graphic file (type png)
 <use ./images//24.png>
-Package pdftex.def Info: ./images//24.png  used on input line 1128.
+Package pdftex.def Info: ./images//24.png  used on input line 1166.
 (pdftex.def)             Requested size: 284.52756pt x 80.64491pt.
- [37 <./images//22.png (PNG copy)> <./images//23.png (PNG copy)> <./images//24.png (PNG copy)>] (./strang.aux) ) 
+ [39 <./images//22.png (PNG copy)> <./images//23.png (PNG copy)> <./images//24.png (PNG copy)>] (./strang.aux) ) 
 Here is how much of TeX's memory you used:
- 3957 strings out of 478287
- 61115 string characters out of 5849289
+ 4001 strings out of 478287
+ 61871 string characters out of 5849289
  354485 words of memory out of 5000000
- 22106 multiletter control sequences out of 15000+600000
+ 22150 multiletter control sequences out of 15000+600000
  491338 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,14n,62p,235b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on strang.pdf (38 pages, 1406383 bytes).
+Output written on strang.pdf (40 pages, 1505665 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 296 PDF objects out of 1000 (max. 8388607)
+ 154 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 281 words of extra memory for PDF output out of 10000 (max. 10000000)
 
