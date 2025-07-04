@@ -1005,6 +1005,65 @@ exist. Another way of writing this result is
 
 \chapter{Orthogonality}
 
+\section{Orthogonal subspaces}
+Recall that two vectors $\bm v$ and $\bm w$ are orthogonal if $\bm v^T\bm w=0$. To say that two subspaces are orthogonal means that every vector in one space
+is orthogonal to every vector in the other space.\\
+\vspace{1mm}\\
+We can make the claim that for any matrix $\bm A$, \textit{the nullspace of $\bm A$ is orthogonal to the row space of $\bm A$.} To see this just consider $\bm{Ax}=\bm0$:
+\begin{center}
+\includegraphics[width=10cm]{49}
+\end{center}
+Every row has a zero dot product with $\bm x$. Then every combination of the rows is perpendicular to $\bm x$. That is, the whole row space $\bm C(\bm A^T)$ is orthogonal to 
+the nullspace $\bm N(\bm A)$ in $n$ dimensional space (since $\bm A^T$ has $n$ rows). Another way to show this is
+\begin{center}
+\includegraphics[width=10cm]{50}
+\end{center}
+See that we can analagously reason that the \textit{the column space $\bm C(\bm A)$ and the left nullspace $\bm N(\bm A^T)$ are perpendicular inside $m$ dimensional space}.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+See that the only common vector between two orthogonal subspaces would be the zero vector (we can't sum the columns of a matrix to produce a vector orthogonal
+to all the columns). There is a very important restriction on the dimension of any
+two orthogonal subspaces:
+\begin{center}
+\includegraphics[width=10cm]{51}
+\end{center}
+For instance, the row space of a matrix is a subspace of dimension $r$ in $n$ space, and its orthogonal complement, by construction, will have dimensionality $n-r$.
+\subsection{Orthogonal complements}
+When two orthogonal subspaces account for the whole space, they are called \textit{orthogonal complements}. The orthogonal complement of $\bm V$ is written as $\bm V^\perp$.
+The row space and the nullspace, as well as the column space and left nullspace, are
+instances of orthogonal complements:
+\begin{center}
+\includegraphics[width=10cm]{52}
+\end{center}
+\subsection{Intuition for $\bm x=\bm x_\text{row}+\bm x_\text{null}$}
+See that because the row space and the nullspace combined span the entire $n$ space, we can say that any vector in $\mathbb{R}^n$ can be expressed as a sum of vectors from 
+both subspaces. That is, any vector $\bm x$ in $\mathbb{R}^n$ is the sum $\bm x=\bm x_\text{row}+\bm x_\text{null}$ of its row space component and its nullspace component.
+Any vector $\bm y$ in $\mathbb{R}^m$ is the sum $\bm y=\bm y_\text{col}+\bm y_\text{null}$ of its column space component and its left nullspace component from 
+$\bm N(\bm A^T)$:
+\begin{center}
+\includegraphics[width=9.8cm]{53}
+\end{center}
+(next page)\newpage
+\subsection{$\bm A$ is invertible from the row space to the column space}
+Consider again the illustration from the previous page:
+\begin{center}
+\includegraphics[width=12cm]{53}
+\end{center}
+Every vector in $\bm{Ax}$ is in the column space; that is obvious. Every $\bm x$ comes from $\mathbb{R}^n$ space, which is made up of the the row space $\bm C(\bm A^T)$ and
+its orthogonal complement, the nullspace $\bm N(\bm A)$. In that context, every candidate $\bm x$ either comes from the nullspace, which would map to $\bm0$, or
+the row space, which would then map to some $\bm b$ in the column space---every $\bm b$ in the column space can be found by some $\bm{Ax}$ with $\bm x$ from the 
+row space.\\
+\vspace{1mm}\\
+We can also go on to say that \textit{every vector $\bm b$ in the column space comes from exactly one vector $\bm x_r$ in the row space}. Proof: If $\bm{Ax}_r=\bm{Ax}_{r}'$,
+the difference $\bm{x}_r-\bm{x}_{r}'$ is in the nullspace (since 
+$\bm A(\bm{x}_r-\bm{x}_{r}')=\bm 0$); however, should $\bm{x}_r$ and $\bm{x}_{r}'$ come from the row space, then $\bm{x}_r-\bm{x}_{r}'$ would also have to be in the row
+space. The only way for a vector to be in both the nullspace and the row space would be if it were the zero vector; so $\bm{x}_r-\bm{x}_{r}'=\bm 0$ and 
+$\bm{x}_r=\bm{x}_{r}'$.\\
+\vspace{1mm}\\
+So $\bm A$ maps every row space component to a specific column space component; see that there is an $r$ by $r$ invertible matrix hiding inside $\bm A$ if we throw away the 
+two nullspaces. $\bm A$ \textit{is invertible from the row space to the column space}.
+\newpage
+
 
 
 
