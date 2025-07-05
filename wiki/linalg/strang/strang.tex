@@ -1064,6 +1064,26 @@ So $\bm A$ maps every row space component to a specific column space component; 
 two nullspaces. $\bm A$ \textit{is invertible from the row space to the column space}.
 \newpage
 
+\section{$\bm A^T\bm A$ is invertible only if $\bm A$ has linearly\\ independent columns}
+$\bm A^T\bm A$ is a square matrix ($n$ by $n$). We prove the above by showing that $\bm A^T\bm A$ \textit{has the same nullspace as} $\bm A$; so that when the columns of 
+$\bm A$ are linearly independent, and its nullspace only contains the zero vector, then $\bm A^T\bm A$, with this same nullspace, is also invertible.\\
+\vspace{1mm}\\
+First we show that a vector in the nullspace of $\bm A$ is also in that of $\bm A^T\bm A$. Let $\bm A$ be any matrix; if $\bm x$ is in the nullspace, then $\bm{Ax}=\bm0$.
+Multiplying by $\bm A^T$ gives $\bm A^T\bm A\bm x=\bm0$, so $\bm x$ is also in the nullspace of $\bm A^T\bm A$.\\
+\vspace{1mm}\\
+Now the other way, we show that a vector in the nullspace of $\bm A^T\bm A$ is in that of $\bm A$. Starting with $\bm A^T\bm A\bm x=\bm 0$, multiplying by $\bm x^T$:
+\begin{center}
+\includegraphics[width=9cm]{60}
+\end{center}
+So if $\bm A^T\bm A\bm x=\bm 0$ then $\bm{Ax}$ has length 0, so $\bm{Ax}=\bm0$.\\
+\vspace{1mm}\\
+Every vector $\bm x$ in one nullspace is in the other nullspace, so if $\bm A^T\bm A$ has dependent columns then so does $\bm A$, and if $\bm A^T\bm A$ has independent 
+columns then so does $\bm A$:
+\begin{center}
+\includegraphics[width=12cm]{61}
+\end{center}
+\newpage
+
 \section{Projections}
 \subsection{Projection onto a line}
 We want to project any $\bm b$ onto the column space of any $m$ by $n$ matrix $\bm A$. This entails finding the point $\bm p$ on that subspace that is closest to our
@@ -1073,14 +1093,14 @@ Considering a one dimensional subspace (a line) with basis $\bm a=(a_1,\ldots,a_
 Along that line, we want the point $\bm p$ closest to $\bm b=(b_1,\ldots,b_m)$; the key to projection is orthogonality: \textit{the line from $\bm b$ to $\bm p$, 
 that is $\bm b-\bm p$, is perpendicular to the vector $\bm a$}.\\
 \vspace{1mm}\\
-We know that the projection $\bm p$ will be some multiple of $\bm a$; call it $\bm p=\hat{\bm x}\bm a$ (so here $\hat{\bm x}$ denotes a constant)---computing this number 
-$\hat{\bm x}$ will give us the vector $\bm p$. We can call the perpendicular line $\bm b-\bm p$ the `error' $\bm e=b-\hat{\bm x}\bm a$, and use the fact that it is 
-perpendicular to $\bm a$ to derive $\hat{\bm x}$:
+We know that the projection $\bm p$ will be some multiple of $\bm a$; call it $\bm p=\hat{x}\bm a$ (so here $\hat{x}$ denotes a constant)---computing this number 
+$\hat{\bm x}$ will give us the vector $\bm p$. We can call the perpendicular line $\bm b-\bm p$ the `error' $\bm e=\bm b-\hat{x}\bm a$, and use the fact that it is 
+perpendicular to $\bm a$ to derive $\hat{x}$:
 \begin{center}
 \includegraphics[width=6cm]{54}\\
 \includegraphics[width=11cm]{55}
 \end{center}
-With that we can compute the projection $\bm p=\hat{\bm x}\bm a$:
+With that we can compute the projection $\bm p=\hat{x}\bm a$:
 \begin{center}
 \includegraphics[width=12cm]{56}
 \end{center}
@@ -1088,19 +1108,64 @@ With that we can compute the projection $\bm p=\hat{\bm x}\bm a$:
 \noindent\textbf{Projection matrix}\\
 We had the projection of $\bm b$ onto the line through $\bm a$ as the vector $\bm p$ given by
 \begin{equation*}
-\bm p=\hat{\bm x}\bm a=\frac{\bm a^T\bm b}{\bm a^T\bm a}\bm a
+\bm p=\hat{x}\bm a=\frac{\bm a^T\bm b}{\bm a^T\bm a}\bm a
 \end{equation*}
 Now comes the \textit{projection matrix}, where we want a matrix $\bm P$ that can be applied to the arbitrary point $\bm b$ to get the desired projection $\bm p$, so 
-$\bm{Pb}=\bm p$. This can found easily; since $\hat{\bm x}$ is a constant, we can rearrange the above equation:
+$\bm{Pb}=\bm p$. This can found easily; since $\hat{x}$ is a constant, we can rearrange the above equation:
 \begin{center}
 \includegraphics[width=12cm]{57}
 \end{center}
 The projection matrix $\bm P$ is a $m$ by $m$ rank one matrix. Notice that the line through $\bm a$, the subspace we are projecting onto, is the column space of $\bm P$.
+\subsection{Projection onto a subspace}
+Now we project onto a $n$-dimensional subspace of $\mathbb{R}^m$. We start with $n$ vectors $\bm a_1,\ldots,\bm a_n$ in $\mathbb{R}^m$, 
+\textit{assume that they are linearly independent}.\\
+\vspace{1mm}\\
+We want to find a projection of $\bm b$ onto the subspace spanned by these vectors, that is, 
+\textit{the combination $\bm p=\hat{x}_1\bm a_1+\cdots+\hat{x}_n\bm a_n$ closest to a given vector $\bm b$}. See that this can be written as $\bm A\hat{\bm x}$, where
+$\hat{\bm x}=(\hat{x}_1,\ldots,\hat{x}_n)$.\\
+\vspace{1mm}\\
+As before, the idea here is that the error vector $\bm e=\bm b-\bm p=\bm b-\bm A\hat{\bm x}$ is perpendicular to the subspace we are projecting onto. Every basis vector is
+perpendicular to this error vector, so
+\begin{center}
+\includegraphics[width=12cm]{58}
+\end{center}
+We have
+\begin{equation*}
+\bm A^T(\bm b-\bm A\hat{\bm x})=\bm 0\implies \bm A^T\bm A\hat{\bm x}=\bm A^T\bm b
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had the projection of $\bm b$ onto the column space of $\bm A$ as $\bm p=\bm A\hat{\bm x}$. We showed that 
+\begin{equation*}
+\bm A^T(\bm b-\bm A\hat{\bm x})=\bm 0\implies \bm A^T\bm A\hat{\bm x}=\bm A^T\bm b
+\end{equation*}
+With this we can derive the projection matrix:
+\begin{center}
+\includegraphics[width=12cm]{59}
+\end{center}
+Again see that this only works if $\bm A^T\bm A$ is invertible, which is only when the column vectors of $\bm A$ are independent. See that the final projection 
+matrix formula is analagous to the formula derived in the one dimensional case.\\
+\vspace{1mm}\\
+The subspace we are projecting onto is the the column space of $\bm A$, that is, $\bm C(\bm A)$. See that the error $\bm e=\bm b-\bm A\hat{\bm x}$ \textit{belongs to the 
+perpendicular subspace} $\bm N(\bm A^T)$ (since $\bm A^T(\bm b-\bm A\hat{\bm x})=\bm 0$).\\
+\vspace{1mm}\\
+\textbf{A note on the projection matrix}\\
+The matrix $\bm P=\bm A(\bm A^T\bm A)^{-1}\bm A^T$ is deceptive. One might try to split $(\bm A^T\bm A)^{-1}$ into $\bm A^{-1}$ times $(\bm A^T)^{-1}$ and find that the
+entire formula reduces to $\bm I$.\\
+\vspace{1mm}\\
+This is wrong because \textit{the matrix $\bm A$ is rectangular and therefore has no inverse}. We cannot split $(\bm A^T\bm A)^{-1}$ into $\bm A^{-1}$ times $(\bm A^T)^{-1}$
+because there is no $\bm A^{-1}$ in the first place.
+\begin{center}
+\includegraphics[width=11.2cm]{62}
+\end{center}
+\newpage
+
+\section{Least Squares Approximations}
 
 
 
 
-
+\newpage
 
 
 
