@@ -1161,6 +1161,77 @@ because there is no $\bm A^{-1}$ in the first place.
 \newpage
 
 \section{Least Squares Approximations}
+\textbf{Illustrative example}\\
+Consider trying to find the closest line to three points $(0,6),(1,0),(2,0)$. No straight line $\bm b=C+D\bm t$ goes through those three points; we want two numbers $C$ and
+$D$ that satisfy a system of three equations (this leads us to a 3 by 2 matrix):
+\begin{center}
+\includegraphics[width=10cm]{63}
+\end{center}
+(This is essentially sampling a straight line at the three time points and comparing it to the desired data points at those times)
+This 3 by 2 system has \textit{no solution}: $\bm b=(6,0,0)$ is not a combination of the columns $(1,1,1)$ and $(0,1,2)$ (of the matrix $\bm A$):
+\begin{center}
+\includegraphics[width=9cm]{64}
+\end{center}
+The idea here is to choose a vector of parameters $\bm x$ that makes $\bm e=\bm b-\bm{Ax}$ as small as possible---so finding a point in the column space of $\bm A$ that is
+\textit{closest to $\bm b$}---see that this is just the projection. So the best $\bm x$, which we denote as $\hat{\bm x}$, is found by
+$\bm A^T\bm A\hat{\bm x}=\bm{A}^T\bm b$, where the projection $\bm p$ of $\bm b$ onto the column space of $\bm A$ is denoted by $\bm p=\bm A\hat{\bm x}$:
+\begin{center}
+\includegraphics[width=12cm]{65}
+\end{center}
+See that the solution to $\bm A\hat{\bm x}=\bm p$ results in the least possible squared error:
+\begin{center}
+\includegraphics[width=10cm]{66}
+\end{center}
+Since any $\bm x$ other than $\hat{\bm x}$ would lead to $||\bm{Ax}-\bm p||^2>0$. (This expression comes from the pythagorean theorem, where the vector from some
+point $\bm{Ax}$ to point $\bm b$, that is $\bm{Ax}-\bm b$, whose length we want to minimise, is the 
+hypotenuse, while the the error $\bm e=\bm b-\bm p$, perpendicular to 
+the vector $\bm{Ax}-\bm p$, are the opposite and adjacent sides respectively)\\
+\vspace{1mm}\\
+By choosing $\bm x=\hat{\bm x}$, we leave the smallest possible error $\bm e=(e_1,e_2,e_3)$ that we can't reduce, while reducing $\bm{Ax}-\bm p$ to zero. 
+There is some ambiguity in the idea of `smallest', but here it means that we minimise the \textit{squared length of $\bm{Ax}-\bm b$}:
+\begin{center}
+\includegraphics[width=11cm]{67}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+By taking $\bm x=\hat{\bm x}$, where $\bm A\hat{\bm x}$ corresponds to the projection of $\bm b$ onto the column space of $\bm A$, we have the $\bm x$ that minimises the 
+squared error $||\bm{Ax}-\bm b||^2$:
+\begin{center}
+\includegraphics[width=11.5cm]{68}
+\end{center}
+Projection allows us to minimise squared error.\\
+\vspace{1mm}\\
+\textbf{Intuition from calculus}\\
+Consider minimising the squared error by calculus. The total squared error of the system, with parameters $C$ and $D$, is
+\begin{center}
+\includegraphics[width=10cm]{69}
+\end{center}
+We take the partial derivative with respect to each parameter and set them to 0:
+\begin{center}
+\includegraphics[width=10cm]{70}
+\end{center}
+Simplifying leaves us with the system
+\begin{center}
+\includegraphics[width=10cm]{71}
+\end{center}
+This system is exactly $\bm A^T\bm A\hat{\bm x}=\bm A^T\bm b$, where optimisation leads us to the exact same system we derived by projection:
+\begin{center}
+\includegraphics[width=10cm]{72}
+\end{center}
+(next page)\newpage
+\noindent\textbf{The big picture for least squares}\\
+The intuition for the four subspaces can be applied here. Given some $\bm b$ that isn't in the column space of $\bm A$, we can split it into the sum of its projection $\bm p$
+in the column space and the minimum error $\bm e$ in the orthogonal subspace; that is, we have $\bm b=\bm p+\bm e$:
+\begin{center}
+\includegraphics[width=12cm]{73}
+\end{center}
+As discussed earlier, see that the row space has a solution for any vector in the column space of $\bm A$, meaning that it contains $\hat{\bm x}$. Also notice that since
+we construct $\bm A$ as having full column rank, its nullspace will just be the zero vector.\\
+(next page)\newpage
+\subsection{Fitting a straight line}
+Fitting a line is the 
+
+
 
 
 

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1751715921 "strang.tex" "strang.pdf" "strang" 1751715922
+["pdflatex"] 1751806858 "strang.tex" "strang.pdf" "strang" 1751806858
   "/etc/texmf/web2c/texmf.cnf" 1718868312 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -147,12 +147,23 @@
   "images//60.png" 1751711591 8775 8efb0cef7181bdee30a1b8f5ea410604 ""
   "images//61.png" 1751711998 10849 7f4422d786cd0b14f9e5f981ff0697e9 ""
   "images//62.png" 1751715811 65879 d940deb533d3fb15b7d165430add00e9 ""
+  "images//63.png" 1751794966 28045 0225deee539d9a53ef26015af0f6d1b6 ""
+  "images//64.png" 1751795767 14983 7ab17a254c027b58d506a0c1a864c614 ""
+  "images//65.png" 1751796593 10921 531db76d6e69d11e398fd88fa5c06d9b ""
+  "images//66.png" 1751797655 9804 24e64dd08f4d696c14a91b3e79271b19 ""
+  "images//67.png" 1751799677 13970 e43841920bfe00545ab04e3834f215ba ""
+  "images//68.png" 1751800468 117734 d62b0cced698d61061cb5bd695658e5e ""
+  "images//69.png" 1751802864 10092 9adfd092341b5e0d577df22851c3bdca ""
   "images//7.png" 1750359351 27387 374affb2deaf9a905f5c5c472d1bcc33 ""
+  "images//70.png" 1751803052 21776 f89a85919f8206a9301e8f53ae8a85cb ""
+  "images//71.png" 1751803221 17962 44fedbf9c170f267ea64e64052224e75 ""
+  "images//72.png" 1751804275 12347 c4e6e8c38fa9f84798be41f277d3e790 ""
+  "images//73.png" 1751805301 100851 5cd615aebdfe4971ba83272646b33b67 ""
   "images//8.png" 1750361129 9713 06ca0cdf5b44c1b72385010752bb3d6d ""
   "images//9.png" 1750704617 17122 8114ceecf475892d068876c863424801 ""
-  "strang.aux" 1751715921 4876 570226240ac1e8257e54f0d7e251dbfb "pdflatex"
-  "strang.tex" 1751715920 59503 b646997125d09554edadb19798bb952c ""
-  "strang.toc" 1751715921 2998 6f8235dd21eb762157851818650bdd2a "pdflatex"
+  "strang.aux" 1751806858 4995 1ae529474281f51ccf95a6fd03332c53 "pdflatex"
+  "strang.tex" 1751806856 63461 1034f1b91dbfc9eee9df16a48af3be1a ""
+  "strang.toc" 1751806858 3076 301a125b554b9e9f674625afcd7bf66d "pdflatex"
   (generated)
   "strang.aux"
   "strang.log"
