@@ -32,5 +32,6 @@
 \contentsline {subsection}{\numberline {4.3.2}Projection onto a subspace}{38}{}%
 \contentsline {section}{\numberline {4.4}Least Squares Approximations}{40}{}%
 \contentsline {subsection}{\numberline {4.4.1}Fitting a straight line}{43}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{44}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{44}{}%
+\contentsline {subsection}{\numberline {4.4.2}}{44}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{45}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{45}{}%

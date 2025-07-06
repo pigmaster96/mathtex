@@ -1229,8 +1229,35 @@ As discussed earlier, see that the row space has a solution for any vector in th
 we construct $\bm A$ as having full column rank, its nullspace will just be the zero vector.\\
 (next page)\newpage
 \subsection{Fitting a straight line}
-Fitting a line is the 
-
+Fitting a line is the clearest application of least squares. It starts with $m>2$ points $b_1,\ldots,b_m$, at times $t_1,\ldots,t_m$.
+The best fit line $C+D\bm t$ misses the point by vertical distances $e_1,\ldots,e_m$. The least squares line minimises $E=e_1^2+\cdots+e_m^2$ 
+(note that this is not the minimum error as in the previous pages).\\
+\vspace{1mm}\\
+A line goes through all $m$ points when we can exactly solve $\bm{Ax}=\bm b$; generally this isn't possible so we want a best fit. 
+Two unknowns $C$ and $D$ determine a line, so $\bm A$ only has $n=2$ columns. To fit $m$ points, we are trying to solve $m$ equations:
+\begin{center}
+\includegraphics[width=9cm]{74}
+\end{center}
+The column space is so thin that $\bm b$ is almost certainly outside of it (if $\bm b$ happens to lie in the column space then $\bm b=\bm p$ and the errors are 
+$\bm e=\bm 0$). The parameters $\hat{\bm x}$ for the line that minimises the squared error $||\bm{Ax}-\bm b||^2$ is found by the projection:
+\begin{center}
+\includegraphics[width=11cm]{75}
+\end{center}
+See that the matrix $\bm A^T\bm A$ looks like
+\begin{center}
+\includegraphics[width=11cm]{76}
+\end{center}
+and $\bm A^T\bm b$,
+\begin{center}
+\includegraphics[width=6cm]{77}
+\end{center}
+The line $C+D\bm{t}$ minimises the error $\bm E(x)=e_1^2+\cdots+e_m^2=||\bm{Ax}-\bm b||^2$ when $\bm A^T\bm A\hat{\bm x}=\bm A^T\bm b$:
+\begin{center}
+\includegraphics[width=7.5cm]{78}
+\includegraphics[width=10cm]{79}
+\end{center}
+(next page)\newpage
+\subsection{}
 
 
 
