@@ -1258,7 +1258,48 @@ The line $C+D\bm{t}$ minimises the error $\bm E(x)=e_1^2+\cdots+e_m^2=||\bm{Ax}-
 \end{center}
 \newpage
 
-\section{}
+\section{Orthonormal Bases}
+The vectors $\bm q_1,\ldots,\bm q_n$ are \textit{orthogonal} when their dot products $\bm q_1\cdots \bm q_j$ are zero---$\bm q_i^T\bm q_j=0$ whenever $i\neq j$. By \textit{
+dividing each vector by its length}, the vectors become orthogonal \textit{unit vectors}---their lengths are all 1---in this case the basis is called \textit{orthonormal}:
+\begin{center}
+\includegraphics[width=12cm]{80}
+\end{center}
+The matrix $\bm Q$ is easy to work with because $\bm Q^T\bm Q=\bm I$ (since each column is orthonormal):
+\begin{center}
+\includegraphics[width=10cm]{81}
+\end{center}
+On the diagonal the unit vectors give $\bm q_i^T\bm q_i=||\bm q_i||^2=1$.
+Note an important implication:
+\begin{center}
+\includegraphics[width=11cm]{82}
+\end{center}
+Note that generally if $m\neq n$ then $\bm{QQ}^T\neq\bm I$; although $\bm Q^T\bm Q=\bm I$ even when
+$\bm Q$ is rectangular, $\bm Q^T$ here is only a 1-sided inverse from the left.
+Only for square matrices do we also have $\bm{QQ}^T=\bm I$ (from the definition of the inverse of square matrices as covered earlier).\\
+\vspace{1mm}\\
+(The matrix must have full column rank since if its columns were to be orthonormal; 
+so we have $m\geq n$. A mapping by $\bm Q$ in the case where $m>n$ is invertible since it has full column rank, but the transpose (size $n$x$m$) doesn't have full column 
+rank and therefore a specific mapping $\bm Q^T\bm x=\bm b$ would have infinite solutions---a $\bm x$ cannot be exactly recovered given a $\bm Q^T$ and $\bm b$. As such only 
+applying $\bm Q$ first works.)\\
+\vspace{1mm}\\
+If we have a \textit{square} $\bm Q$ with orthonormal columns, its transpose is its inverse from both sides; and as such also has orthonormal columns---both the rows 
+and columns of $\bm Q$ are orthonormal. A square matrix with orthonormal columns is called an \textit{orthogonal matrix}.\\
+\vspace{1mm}\\
+Also see that if the columns are only orthogonal and not orthonormal, their dot products still give a diagonal matrix.\\
+(next page)\newpage
+\subsection{Multiplication by any orthogonal matrix preserves length and angle}
+Length is preserved during multiplication with an orthogonal matrix:
+\begin{center}
+\includegraphics[width=12cm]{83}
+\end{center}
+The dot product, and therefore the angle, is also preserved:
+\begin{center}
+\includegraphics[width=11cm]{84}
+\end{center}
+
+
+
+
 
 
 
