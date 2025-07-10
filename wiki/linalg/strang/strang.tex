@@ -1296,7 +1296,24 @@ The dot product, and therefore the angle, is also preserved:
 \begin{center}
 \includegraphics[width=11cm]{84}
 \end{center}
+\subsection{Projections using orthonormal bases}
+Using orthonormal bases for projection greatly simplifies computation. For 
+projections onto subspaces, all formulas involve $\bm A^T\bm A$; suppose the basis vectors are orthonormal, then $\bm A^T\bm A$ simplifies to $\bm Q^T\bm Q=\bm I$. Our 
+projection becomes
+\begin{center}
+\includegraphics[width=12cm]{85}
+\end{center}
+See that no inversion is required---this is the point of an orthonormal basis---the best $\hat{\bm x}=\bm Q^T\bm b$ is just dot products of $\bm q_1,\ldots,\bm q_n$ with 
+$\bm b$:
+\begin{center}
+\includegraphics[width=12cm]{86}
+\end{center}
+Also see that when $\bm Q$ is square (so an orthonormal basis spanning the entire space), $\hat{\bm x}=\bm Q^T\bm b$ leads to $\bm p=\bm Q\hat{\bm x}=\bm Q\bm Q^T\bm b=
+\bm I\bm b=\bm b$. The projection of $\bm b$ onto the basis that spans the entire space
+is $\bm b$ itself. (See that $\bm{QQ}^T=\bm I$ only works for square matrices)
+\newpage
 
+\section{Gram-Schmidt Process}
 
 
 

@@ -34,5 +34,7 @@
 \contentsline {subsection}{\numberline {4.4.1}Fitting a straight line}{43}{}%
 \contentsline {section}{\numberline {4.5}Orthonormal Bases}{44}{}%
 \contentsline {subsection}{\numberline {4.5.1}Multiplication by any orthogonal matrix preserves length and angle}{45}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{46}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{46}{}%
+\contentsline {subsection}{\numberline {4.5.2}Projections using orthonormal bases}{45}{}%
+\contentsline {section}{\numberline {4.6}Gram-Schmidt Process}{46}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{47}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{47}{}%
