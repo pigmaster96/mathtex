@@ -36,5 +36,6 @@
 \contentsline {subsection}{\numberline {4.5.1}Multiplication by any orthogonal matrix preserves length and angle}{45}{}%
 \contentsline {subsection}{\numberline {4.5.2}Projections using orthonormal bases}{45}{}%
 \contentsline {section}{\numberline {4.6}Gram-Schmidt Process}{46}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{47}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{47}{}%
+\contentsline {section}{\numberline {4.7}}{47}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{48}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{48}{}%

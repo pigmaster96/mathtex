@@ -1314,6 +1314,36 @@ is $\bm b$ itself. (See that $\bm{QQ}^T=\bm I$ only works for square matrices)
 \newpage
 
 \section{Gram-Schmidt Process}
+Given three \textit{independent vectors} $a,b,c$, we intend to construct three \textit{orthogonal} vectors $\bm A,\bm B,\bm C$. Then, by dividing $\bm A,\bm B,\bm C$ by
+their lengths, we can produce three orthonormal vectors $\bm q_1=\bm A/||\bm A||,\,\bm q_2=\bm B/||\bm B||,\,\bm q_3=\bm C/||\bm C||$.\\
+\vspace{1mm}\\
+Begin by choosing $\bm A=\bm a$ (we make all other vectors orthogonal to this). The next vector $\bm B$ must be perpendicular to $\bm A$; we \textit{start with $\bm b$ and
+subtract its projection along $\bm A$}. This leaves the perpendicular part, which
+is the orthogonal vector $\bm B$:
+\begin{center}
+\includegraphics[width=9cm]{87}
+\end{center}
+We use the one dimensional projection  of $\bm b$ onto $\bm a$ to produce a vector orthogonal to $\bm a$; then we use it as our next basis vector.\\
+\vspace{1mm}\\
+The third direction starts with $\bm c$. We can say that $\bm c$ is not a comination of $\bm A$ and $\bm B$ because $\bm c$ is not a combination of $\bm a$ and $\bm b$
+(see that $B$ is just a combination of $\bm b$ and $\bm A=\bm a$ since $\hat{\bm x}$ in the one dimensional case is just a constant).
+It is also unlikely that $\bm c$ is already perpendicular to $\bm A$ and $\bm B$; the idea here is that we subtract off its components in those two directions to get a
+perpendicular direction $\bm C$:
+\begin{center}
+\includegraphics[width=11cm]{88}
+\end{center}
+This is the entire idea behind the Gram-Schmidt process; \textit{Subtract from every vector its projections in the directions already set}, repeating for each new basis 
+vector. At the end, or immediately when each one is found, dividing the orthogonal vectors $\bm{A,B,C,D}$ by their lengths leaves us with \textit{orthonormal} results 
+$\bm q_i$
+\begin{center}
+\includegraphics[width=11.5cm]{89}
+\end{center}
+\newpage
+
+\section{}
+
+
+
 
 
 
