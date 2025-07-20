@@ -1340,7 +1340,63 @@ $\bm q_i$
 \end{center}
 \newpage
 
-\section{}
+\section{$\bm A=\bm{QR}$ factorisation}
+Using the Gram-Schmidt process we can derive an orthonormal matrix $\bm Q$ with columns $\bm q_1,\bm q_2,$ and $\bm q_3$ from a matrix $\bm A$ with columns 
+$\bm a$, $\bm b$, and $\bm c$. The vectors $\bm q_1,\bm q_2,\bm q_3$ come from linear combinations of $\bm a,\bm b,\bm c$ and vice versa. As such there must be a third matrix
+that maps $\bm Q$ to $\bm A$.\\ 
+\vspace{1mm}\\
+Matrix $\bm A$ has independent columns, and so any mapping using its column space has a one to one mapping; a mapping to $\bm Q$ in the same 
+dimension suggests a \textit{square invertible matrix} applied to the right of $\bm A$, lets call it $\bm R^{-1}$; so $\bm{AR}^{-1}=\bm Q$ (the linear combinations of the 
+columns of $\bm A$ to produce $\bm Q$ must themselves be linearly independent). This square
+invertible matrix has an inverse $\bm R$, which when applied to the right of this equation, gives us
+\begin{equation*}
+\bm{AR}^{-1}\bm R=\bm A=\bm Q\bm R
+\end{equation*}
+so we can say that there is some $\bm R$ connecting the orthonormal $\bm Q$ back to $\bm A$.\\
+\vspace{1mm}\\
+To find this $\bm R$, we simply multiply the entire expression by $\bm Q^T$:
+\begin{equation*}
+\bm Q^T\bm A=\bm Q^T\bm{QR}=\bm R
+\end{equation*}
+So we have $\bm R=\bm Q^T\bm A$:
+\begin{equation*}
+\bm R=\left[\begin{array}{c}
+\bm q_1^T\\\bm q_2^T\\\bm q_3^T
+\end{array}\right]\left[
+\begin{array}{ccc}
+\bm a&\bm b&\bm c\end{array}\right]=\left[\begin{array}{ccc}
+\bm q_1^T\bm a&\bm q_1^T\bm b&\bm q_1^T\bm c\\
+\bm q_2^T\bm a&\bm q_2^T\bm b&\bm q_2^T\bm c\\
+\bm q_3^T\bm a&\bm q_3^T\bm b&\bm q_3^T\bm c
+\end{array}\right]
+\end{equation*}
+This can be simplified. We know that
+\begin{itemize}
+\item The vectors $\bm a$ and $\bm A$ and $\bm q_1$ are all along a single line
+\item The vectors $\bm a$, $\bm b$ and $\bm A$, $\bm B$ and $\bm q_1$, $\bm q_2$ are all in the same plane
+\item The vectors $\bm a$, $\bm b$, $\bm c$ and $\bm A$, $\bm B$, $\bm C$ and $\bm q_1$, $\bm q_2$, $\bm q_3$ are all in the same 3 dimensional subspace
+\end{itemize}
+The point here is that $q_2$ is orthogonal to that entire first line, and $q_3$ is orthogonal to that entire second plane. Looking back at $\bm R$, see that 
+$\bm q_2^T\bm a=0$ by orthogonality, as well as 
+$\bm q_3^T\bm a$ and $\bm q_3^T\bm b$. Our simplified matrix looks like
+\begin{center}
+\includegraphics[width=11cm]{90}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{center}
+\includegraphics[width=11cm]{90}
+\end{center}
+Intuitively, at every step $\bm a_1,\ldots,\bm a_k$ are combinations of $\bm q_1,\ldots,\bm q_k$, and so column $i$ of $\bm R$, which specifies $\bm a_i$ as a combination of 
+the columns of $\bm Q$, will only have nonzero entries in the rows corresponding to the columns of $\bm Q$ that contribute to that $\bm a_i$.\\
+\vspace{1mm}\\
+See that this leads to $\bm R$ being \textit{triangular}---any $\bm a_j$ only depends on the $\bm q_i$ where $i<j$---so all the entries below the $j$th row in 
+$\bm R$ will be zero. 
+\begin{center}
+\includegraphics[width=12cm]{91}
+\end{center}
+
 
 
 
