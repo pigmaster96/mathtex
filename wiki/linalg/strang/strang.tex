@@ -1396,10 +1396,28 @@ $\bm R$ will be zero.
 \begin{center}
 \includegraphics[width=12cm]{91}
 \end{center}
-
-
-
-
+\textbf{In the context of Least Squares}\\
+See that using our factorisation:
+\begin{equation*}
+\bm{A}^T\bm A=(\bm{QR})^T\bm{QR}=\bm R^T\bm Q^T\bm{QR}=\bm R^T\bm R
+\end{equation*}
+the least squares formula
+\begin{equation*}
+\bm{A}^T\bm A\hat{\bm x}=\bm{A}^T\bm b
+\end{equation*}
+simplifies to
+\begin{align*}
+\bm R^T\bm R\hat{\bm x}&=(\bm{QR})^T\bm b\\\
+\bm R^T\bm R\hat{\bm x}&=\bm R^T\bm Q^T\bm b\\
+\bm R\hat{\bm x}=\bm Q^T\bm b\quad&\text{or}\quad\hat{\bm x}=\bm R^{-1}\bm Q^T\bm b
+\end{align*}
+($\bm R$ is invertible since it has full column rank. It has full row rank too so $\bm R^T$ also has full column rank and is invertible (justifying the last step))\\
+\vspace{1mm}\\
+This allows us to solve for the least squares solution $\hat{\bm x}$ using back substitution (which is very fast). The real cost is the computation for Gram-Schmidt,
+which is needed to construct the orthogonal $\bm Q$ and the triangular $\bm R=\bm Q^T\bm A$.\\
+(next page)\newpage
+\noindent\textbf{Algorithm}\\
+Below
 
 
 

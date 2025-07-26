@@ -37,5 +37,5 @@
 \contentsline {subsection}{\numberline {4.5.2}Projections using orthonormal bases}{45}{}%
 \contentsline {section}{\numberline {4.6}Gram-Schmidt Process}{46}{}%
 \contentsline {section}{\numberline {4.7}$\bm {A}=\bm {QR}$ factorisation}{47}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{49}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{49}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{50}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{50}{}%
