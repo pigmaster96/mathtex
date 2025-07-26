@@ -1416,10 +1416,25 @@ simplifies to
 This allows us to solve for the least squares solution $\hat{\bm x}$ using back substitution (which is very fast). The real cost is the computation for Gram-Schmidt,
 which is needed to construct the orthogonal $\bm Q$ and the triangular $\bm R=\bm Q^T\bm A$.\\
 (next page)\newpage
-\noindent\textbf{Algorithm}\\
-Below
+\noindent\textbf{An algorithm}\\
+Here is an algorithm for the Gram-Schmidt process:
+\begin{center}
+\includegraphics[width=12cm]{92}
+\end{center}
+Which essentially executes
+\begin{center}
+\includegraphics[width=12cm]{93}
+\end{center}
+Where $r$ denotes entries of $\bm R$ and $\bm v$ a column in the original $\bm A$.\\
+\vspace{1mm}\\
+The diagonal entries of $\bm R$ are just the norms of the unnormalised projections in the Gram-schmidt process. For instance 
+\begin{equation*}
+\bm q_2^T\bm b=\bm q_2\cdot\bm b=\cos(\theta)||\bm q_2||\,||\bm b||=\cos(\theta)||\bm b||=||\bm B||
+\end{equation*}
+$\theta$, the angle between $\bm b$ and its projection $\bm q_2$, is the same angle between $\bm b$ and its unnormalised projection $\bm B$.
+\newpage
 
-
+\section{}
 
 
 
