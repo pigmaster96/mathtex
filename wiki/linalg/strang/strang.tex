@@ -1434,7 +1434,7 @@ The diagonal entries of $\bm R$ are just the norms of the unnormalised projectio
 $\theta$, the angle between $\bm b$ and its projection $\bm q_2$, is the same angle between $\bm b$ and its unnormalised projection $\bm B$.
 \newpage
 
-\section{Psuedoinverses}
+\section{Pseudoinverses}
 \textbf{Left Inverse}\\
 Consider a `tall and thin' matrix $\bm A$, where $m>n$ with rank $r=n$. A matrix like this only has a \textit{left sided} inverse (consider that $\bm{x}^T\bm{A}$ would 
 produce a matrix whose rows are combinations of linearly dependent rows---this cannot be `undone' to recover $\bm x^T$ given a result. On the other hand $\bm{Ax}$ can be
@@ -1461,7 +1461,36 @@ A nice \textit{right inverse} is therefore:
 \begin{equation*}
 \bm A^{-1}_{\text{right}}=\bm A^T(\bm A\bm A^T)^{-1}
 \end{equation*}
-where $\bm A\bm A^{-1}_{\text{right}}=\bm I$.
+where $\bm A\bm A^{-1}_{\text{right}}=\bm I$.\\
+\vspace{1mm}\\
+\textbf{Left and right inverses as projections}\\
+If $\bm A$ has full column rank and $\bm{A}^{-1}_{\text{left}}=(\bm A^T\bm A)^{-1}\bm A^T$, applying the left inverse on the right leads us to 
+\begin{equation*}
+\bm{AA}^{-1}_{\text{left}}=\bm A(\bm A^T\bm A)^{-1}\bm A^T=\bm P
+\end{equation*}
+Is just a matrix which projects $\mathbb{R}^m$ onto the \textit{column space} of $\bm A$.\\
+\vspace{1mm}\\
+Similarly, if $\bm A$ has full row rank then 
+\begin{equation*}
+\bm A^{-1}_{\text{right}}\bm A=\bm A^T(\bm A\bm A^T)^{-1}\bm A=\bm P
+\end{equation*}
+Is just a matrix that projects $\mathbb{R}^n$ onto the \textit{row space} of $\bm A$.\\
+(next page)\newpage
+\noindent\textbf{Intuition for the pseudoinverse}\\
+The remaining case to consider is a matrix $\bm A$ for which $r<n$ and $r<m$. The vector $\bm{Ax}$ is always in the column space of $\bm A$; recall that the correspondence
+between vectors $\bm x$ in the ($r$ dimensional) row space and vectors $\bm{Ax}$ in the ($r$ dimensional) column space is one-to-one---meaning that 
+if $\bm x\neq \bm y$ are vectors in the row space of $\bm A$ then $\bm{Ax}\neq\bm{Ay}$ in the column space of $\bm A$---we can show this.\\
+\vspace{1mm}\\
+\textit{Proving that if $\bm x\neq\bm y$ then $\bm{Ax}\neq\bm{Ay}$}: Suppose that the statement is false, then
+we can find $\bm x\neq \bm y$ in the row space of $\bm A$ for which $\bm{Ax}=\bm{Ay}$. But then $\bm{A}(\bm x-\bm y)=\bm 0$ and $\bm x-\bm y$ is in the 
+nullspace of $\bm A$; however since the row space is closed under linear combinations (including subtraction), $\bm x-\bm y$ is also in the row space of $\bm A$. The only
+vector in both the nullspace and row space is the zero vector, so $\bm x-\bm y=\bm 0$,
+and the two vectors must be equal.\\
+\vspace{1mm}\\
+We can therefore conclude that the mapping $\bm x\mapsto\bm{Ax}$ from the row space to the column space is \textit{invertible}. The inverse of this operation is called the
+\textit{pseudoinverse}.
+
+
 
 
 
@@ -1470,6 +1499,9 @@ where $\bm A\bm A^{-1}_{\text{right}}=\bm I$.
 
 \chapter{Determinants}
 \section{Properties of determinants}
+
+
+
 
 
 

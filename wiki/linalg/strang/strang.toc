@@ -37,8 +37,8 @@
 \contentsline {subsection}{\numberline {4.5.2}Projections using orthonormal bases}{45}{}%
 \contentsline {section}{\numberline {4.6}Gram-Schmidt Process}{46}{}%
 \contentsline {section}{\numberline {4.7}$\bm {A}=\bm {QR}$ factorisation}{47}{}%
-\contentsline {section}{\numberline {4.8}Psuedoinverses}{50}{}%
-\contentsline {chapter}{\numberline {5}Determinants}{51}{}%
-\contentsline {section}{\numberline {5.1}Properties of determinants}{51}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{52}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{52}{}%
+\contentsline {section}{\numberline {4.8}Pseudoinverses}{50}{}%
+\contentsline {chapter}{\numberline {5}Determinants}{52}{}%
+\contentsline {section}{\numberline {5.1}Properties of determinants}{52}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{53}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{53}{}%
