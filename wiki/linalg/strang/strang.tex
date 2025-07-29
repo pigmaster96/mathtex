@@ -1434,13 +1434,48 @@ The diagonal entries of $\bm R$ are just the norms of the unnormalised projectio
 $\theta$, the angle between $\bm b$ and its projection $\bm q_2$, is the same angle between $\bm b$ and its unnormalised projection $\bm B$.
 \newpage
 
-\section{}
+\section{Psuedoinverses}
+\textbf{Left Inverse}\\
+Consider a `tall and thin' matrix $\bm A$, where $m>n$ with rank $r=n$. A matrix like this only has a \textit{left sided} inverse (consider that $\bm{x}^T\bm{A}$ would 
+produce a matrix whose rows are combinations of linearly dependent rows---this cannot be `undone' to recover $\bm x^T$ given a result. On the other hand $\bm{Ax}$ can be
+`undone' since this way the mapping $\bm A$ is unique to each $\bm x$.) \\
+\vspace{1mm}\\
+In this case $\bm A$ has independent columns, so $\bm A^T\bm A$ ($n$x$n$) is invertible, and 
+\begin{equation*}
+(\bm A^T\bm A)^{-1}\bm A^T\bm A=\bm I
+\end{equation*}
+We say that 
+\begin{equation*}
+\bm{A}^{-1}_{\text{left}}=(\bm A^T\bm A)^{-1}\bm A^T
+\end{equation*}
+is the \textit{left inverse} of $\bm A$ (there may be other left inverses), where 
+$\bm{A}^{-1}_{\text{left}}\bm A=\bm I$.\\
+\vspace{1mm}\\
+\textbf{Right inverse}\\
+In another case consider if $\bm A$ were `short and fat', where $m<n$ with rank $r=m$. A matrix like this only has a right sided inverse. $\bm A$ has independent rows, so
+now $\bm A\bm A^T$ is invertible and 
+\begin{equation*}
+\bm A\bm A^T(\bm A\bm A^T)^{-1}=\bm I
+\end{equation*}
+A nice \textit{right inverse} is therefore:
+\begin{equation*}
+\bm A^{-1}_{\text{right}}=\bm A^T(\bm A\bm A^T)^{-1}
+\end{equation*}
+where $\bm A\bm A^{-1}_{\text{right}}=\bm I$.
 
 
 
 
 \newpage
 
+\chapter{Determinants}
+\section{Properties of determinants}
+
+
+
+
+
+\newpage
 
 
 
