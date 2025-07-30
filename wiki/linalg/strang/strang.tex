@@ -1499,10 +1499,78 @@ We can therefore conclude that the mapping $\bm x\mapsto\bm{Ax}$ from the row sp
 
 \chapter{Determinants}
 \section{Properties of determinants}
-
-
-
-
+We can derive a number of ideas given the following three properties of determinants:
+\begin{center}
+\includegraphics[width=11cm]{94}
+\end{center}
+For a nice geometric way to think of the determinant, consider a unit cube in $N$ dimensional space: the set of $N$ vectors of length 1 with coordinates 0 or 1 
+in each spot. The determinant of the linear transformation (matrix) $\bm T$ is the \textit{signed volume of the region after applying $\bm T$ to the unit cube}.\\
+\vspace{1mm}\\
+If we apply the identity to the unit cube, we get back the unit cube, with volume 1 (the first property). If we stretch the cube by a constant factor in one direction only, 
+the new volume is that constant; if we stack two blocks together aligned on the same direction, their combined volume is the sum of their volumes---showing that the signed 
+volume is linear in each coordinate (property 3).\\
+(next page)\newpage
+\noindent\textbf{Cont.---linearity in all rows separately}\\
+The third property essentially states that the determinant is linear with respect to row 1; then property 2 leads us further: det($\bm A$) is linear \textit{to every row 
+separately}:
+\begin{align*}
+\text{det}\left[\begin{array}{c}
+\text{row 1}\\c\bm v+d\bm w\\\cdots\\\text{row $n$}
+\end{array}\right]&=
+-\text{det}\left[\begin{array}{c}
+c\bm v+d\bm w\\\text{row 1}\\\cdots\\\text{row $n$}
+\end{array}\right]\\
+&=-c\,\text{det}\left[\begin{array}{c}
+\bm v\\\text{row 1}\\\cdots\\\text{row $n$}
+\end{array}\right]-
+d\,\text{det}\left[\begin{array}{c}
+\bm w\\\text{row 1}\\\cdots\\\text{row $n$}
+\end{array}\right]\\
+&=c\,\text{det}\left[\begin{array}{c}
+\text{row 1}\\\bm v\\\cdots\\\text{row $n$}
+\end{array}\right]+
+d\,\text{det}\left[\begin{array}{c}
+\text{row 1}\\\bm w\\\cdots\\\text{row $n$}
+\end{array}\right]
+\end{align*}
+\subsection{If $\bm A$ has two equal rows, its determinant is 0; row operations don't change the determinant}
+Consider property 2; if $\bm A$ were to have two equal rows, exchanging them would have no effect on $\bm A$. Then det($\bm A$)=$-$det($\bm A$), 
+and det($\bm A$) must be zero.\\
+\vspace{1mm}\\
+Now consider this with property 3, and see that \textit{subtracting $d$ times row $i$ from row $j$ leaves det($\bm A$) unchanged}:
+\begin{equation*}
+\text{det}\left[\begin{array}{c}
+\text{row 1}\\\text{row 2}-d\,\text{row 1}\\\cdots\\\text{row $n$}
+\end{array}\right]=
+\text{det}\left[\begin{array}{c}
+\text{row 1}\\\text{row 2}\\\cdots\\\text{row $n$}
+\end{array}\right]
+-d\,\text{det}\left[\begin{array}{c}
+\text{row 1}\\\text{row 1}\\\cdots\\\text{row $n$}
+\end{array}\right]=\text{det}\left[\begin{array}{c}
+\text{row 1}\\\text{row 2}\\\cdots\\\text{row $n$}
+\end{array}\right]
+\end{equation*}
+See that this means that the elimination steps (excluding row exchanges) \textit{does not change the determinant}, and elimination (without row exchanges) is the way to
+simplify the determinant of a matrix.
+\newpage
+\subsection{Upper triangular and diagonal matrices, Transpose}
+Finally, see that given any \textit{upper triangular matrix}, row exchanges are not required and upward elimination will reduce the matrix to its diagonal. As such, given an
+upper triangular matrix, we can just immediately multiply the diagonal entries to find the determinant:
+\begin{center}
+\includegraphics[width=11cm]{95}
+\end{center}
+Now see that transposing an invertible matrix won't change the diagonals, and if the matrix is invertible its transposed form
+is guaranteed to have an upper triangular form (taking
+into account row exchanges). So by row reductions we can obtain the same diagonal matrix as if we had performed elimination on the orignal matrix:
+\begin{equation*}
+\text{det}(\bm A)=\text{det(rref form)}=\text{det}(\bm A^T)
+\end{equation*}
+and so we can conclude that transposing a matrix $\bm A$ doesn't change the determinant:
+\begin{center}
+\includegraphics[width=9cm]{96}
+\end{center}
+\subsection{Matrix factorisations and permutation matrix}
 
 
 
