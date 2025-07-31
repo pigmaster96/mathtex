@@ -1533,6 +1533,7 @@ d\,\text{det}\left[\begin{array}{c}
 \text{row 1}\\\bm w\\\cdots\\\text{row $n$}
 \end{array}\right]
 \end{align*}
+
 \subsection{If $\bm A$ has two equal rows, its determinant is 0; row operations don't change the determinant}
 Consider property 2; if $\bm A$ were to have two equal rows, exchanging them would have no effect on $\bm A$. Then det($\bm A$)=$-$det($\bm A$), 
 and det($\bm A$) must be zero.\\
@@ -1554,6 +1555,7 @@ Now consider this with property 3, and see that \textit{subtracting $d$ times ro
 See that this means that the elimination steps (excluding row exchanges) \textit{does not change the determinant}, and elimination (without row exchanges) is the way to
 simplify the determinant of a matrix.
 \newpage
+
 \subsection{Upper triangular and diagonal matrices, Transpose}
 Finally, see that given any \textit{upper triangular matrix}, row exchanges are not required and upward elimination will reduce the matrix to its diagonal. As such, given an
 upper triangular matrix, we can just immediately multiply the diagonal entries to find the determinant:
@@ -1570,7 +1572,80 @@ and so we can conclude that transposing a matrix $\bm A$ doesn't change the dete
 \begin{center}
 \includegraphics[width=9cm]{96}
 \end{center}
+\subsection{det$(\bm{AB})=($det$\bm A)($det$\bm B)$}
+For a singular matrix $\bm A$, recall that it can be reduced to an identity matrix by elimination matrices (all of which are invertible); 
+then by using the inverse (which is just the reverse of each row operation) of each elimination matrix, we can express $\bm A$ as 
+\begin{equation*}
+\bm A=\bm{E}_k\bm{E}_{k-1}\cdots\bm{E}_{1}
+\end{equation*} 
+These matrices are also called \textit{elementary row matrices}, which are just identity matrices on which exactly \textit{one elementary row operation has been performed}. 
+These elementary row operations are the same as those executed during elimination---scaling a row, adding a scaled row to another row, and exchanging rows.\\
+\vspace{1mm}\\
+We can write
+\begin{equation*}
+\text{det}(\bm{AB})=\text{det}(\bm{E}_k\bm{E}_{k-1}\cdots\bm{E}_{1}\bm B)
+\end{equation*}
+See that any elementary row operation just scales the determinant by a constant. Scaling a single row scales the entire determinant by that constant, 
+exchanging rows negates the 
+determinant, and adding (or subtracting) a scaled row to (or from) another row doesn't change the determinant. As such,
+\begin{equation*}
+\text{det}(\bm{E}_k\bm{E}_{k-1}\cdots\bm{E}_{1}\bm B)=c_kc_{k-1}\cdots c_1\text{det}(\bm B)=\alpha\,\text{det}(\bm B)
+\end{equation*}
+where $c$ denotes the constants multiplied to the determinant as a result of the row operations.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+\text{det}(\bm{AB})=\text{det}(\bm{E}_k\bm{E}_{k-1}\cdots\bm{E}_{1}\bm B)=c_kc_{k-1}\cdots c_1\text{det}(\bm B)=\alpha\,\text{det}(\bm B)
+\end{equation*}
+Then by setting $\bm B$ to $\bm I$:
+\begin{align*}
+\text{det}(\bm{AI})=\text{det}(\bm{E}_k\bm{E}_{k-1}\cdots\bm{E}_{1}\bm I)&=c_kc_{k-1}\cdots c_1\text{det}(\bm I)=\alpha\,\text{det}(\bm I)\\
+\text{det}(\bm A)&=\alpha
+\end{align*}
+and
+\begin{equation*}
+\text{det}(\bm{AB})=\text{det}(\bm A)\text{det}(\bm B)
+\end{equation*}
+
+\subsection{Orthogonal matrices have determinant 1 or -1}
+We know that
+\begin{equation*}
+\text{det}(\bm A)=\text{det}(\bm A^T)
+\end{equation*}
+and that
+\begin{equation*}
+\text{det}(\bm{AB})=\text{det}(\bm A)\text{det}(\bm B)
+\end{equation*}
+Given an orthogonal matrix $\bm Q$, we know
+\begin{equation*}
+\bm Q^T\bm Q=\bm I
+\end{equation*}
+so
+\begin{equation*}
+\text{det}(\bm Q^T\bm Q)=\text{det}(\bm Q^T)\text{det}(\bm Q)=\text{det}(\bm I)=1
+\end{equation*}
+and since the determinant doesn't change under transposition:
+\begin{equation*}
+(\text{det}(\bm Q))^2=1
+\end{equation*}
+and $\text{det}(\bm Q)$ is $\pm1$.
+
 \subsection{Matrix factorisations and permutation matrix}
+Recall the matrix factorisation $\bm A=\bm{LU}$. $\bm L$ is invertible with 1s along the main diagonal, $\bm U$ is upper triangular. In this case
+\begin{equation*}
+\text{det}\bm A=(\text{det}\bm L)(\text{det}\bm U)=\text{det}\bm U
+\end{equation*}
+Where the determinant can be found by just multiplying down the diagonal.\\
+\vspace{1mm}\\
+Similarly, we could have $\bm{PA}=\bm{LU}$ due to row exchanges being required before elimination. We know that the permutation matrix $\bm P$ is just the identity with 
+row exchanges applied to it, and so we just have to factor in
+$\det\bm P$, which will be equal to 1 or -1 depending on how many row exchanges occur.\\
+\vspace{1mm}\\
+Elimination, followed by multiplying down the diagonal, is how determinants are computed by virtually all computer systems for linear algebra.
+\newpage
+
+\section{}
 
 
 
