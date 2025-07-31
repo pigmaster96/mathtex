@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.20)  31 JUL 2025 20:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.20)  1 AUG 2025 03:43
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -737,39 +737,55 @@ File: ./images//96.png Graphic file (type png)
 Package pdftex.def Info: ./images//96.png  used on input line 1573.
 (pdftex.def)             Requested size: 256.0748pt x 18.47339pt.
  [54 <./images//95.png (PNG copy)> <./images//96.png (PNG copy)>] [55] [56]
+<./images//98.png, id=298, 850.97925pt x 108.405pt>
+File: ./images//98.png Graphic file (type png)
+<use ./images//98.png>
+Package pdftex.def Info: ./images//98.png  used on input line 1841.
+(pdftex.def)             Requested size: 341.43306pt x 43.49355pt.
+<./images//97.png, id=299, 867.24pt x 142.73325pt>
+File: ./images//97.png Graphic file (type png)
+<use ./images//97.png>
+Package pdftex.def Info: ./images//97.png  used on input line 1851.
+(pdftex.def)             Requested size: 341.43306pt x 56.19496pt.
+<./images//99.png, id=300, 847.968pt x 150.5625pt>
+File: ./images//99.png Graphic file (type png)
+<use ./images//99.png>
+Package pdftex.def Info: ./images//99.png  used on input line 1855.
+(pdftex.def)             Requested size: 341.43306pt x 60.62367pt.
+ [57 <./images//98.png (PNG copy)> <./images//97.png (PNG copy)> <./images//99.png (PNG copy)>] [58] [59] [60]
 Appendix A.
-[57
+[61
 
 ]
-<./images//22.png, id=301, 599.23875pt x 103.88812pt>
+<./images//22.png, id=317, 599.23875pt x 103.88812pt>
 File: ./images//22.png Graphic file (type png)
 <use ./images//22.png>
-Package pdftex.def Info: ./images//22.png  used on input line 1707.
+Package pdftex.def Info: ./images//22.png  used on input line 2095.
 (pdftex.def)             Requested size: 284.52756pt x 49.32834pt.
-<./images//23.png, id=302, 640.64343pt x 111.41624pt>
+<./images//23.png, id=318, 640.64343pt x 111.41624pt>
 File: ./images//23.png Graphic file (type png)
 <use ./images//23.png>
-Package pdftex.def Info: ./images//23.png  used on input line 1711.
+Package pdftex.def Info: ./images//23.png  used on input line 2099.
 (pdftex.def)             Requested size: 284.52756pt x 49.48401pt.
-<./images//24.png, id=303, 613.54219pt x 173.89969pt>
+<./images//24.png, id=319, 613.54219pt x 173.89969pt>
 File: ./images//24.png Graphic file (type png)
 <use ./images//24.png>
-Package pdftex.def Info: ./images//24.png  used on input line 1715.
+Package pdftex.def Info: ./images//24.png  used on input line 2103.
 (pdftex.def)             Requested size: 284.52756pt x 80.64491pt.
- [58 <./images//22.png (PNG copy)> <./images//23.png (PNG copy)> <./images//24.png (PNG copy)>] (./strang.aux) ) 
+ [62 <./images//22.png (PNG copy)> <./images//23.png (PNG copy)> <./images//24.png (PNG copy)>] (./strang.aux) ) 
 Here is how much of TeX's memory you used:
- 4433 strings out of 478287
- 69278 string characters out of 5849289
- 354485 words of memory out of 5000000
- 22581 multiletter control sequences out of 15000+600000
+ 4466 strings out of 478287
+ 69845 string characters out of 5849289
+ 375485 words of memory out of 5000000
+ 22614 multiletter control sequences out of 15000+600000
  491673 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,19n,62p,235b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,21n,62p,235b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on strang.pdf (59 pages, 2725004 bytes).
+Output written on strang.pdf (63 pages, 2798179 bytes).
 PDF statistics:
- 401 PDF objects out of 1000 (max. 8388607)
- 199 compressed objects within 2 object streams
+ 418 PDF objects out of 1000 (max. 8388607)
+ 208 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 476 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 491 words of extra memory for PDF output out of 10000 (max. 10000000)
 
