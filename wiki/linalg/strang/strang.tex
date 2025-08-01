@@ -2040,7 +2040,124 @@ m&n&o
 which is the usual `formula' used when computing matrices by hand.
 \newpage
 
+\section{Cofactors, Adjugate, and Inverse}
+The laplace expansion allows us to reduce a $n$ by $n$ determinant to a sum of scaled $(n-1)$ by $(n-1)$ determinants. The \textit{cofactors} in a laplace transform are 
+essentially these smaller determinants, but with alternanting negation to account for
+row exchanges:
+\begin{center}
+\includegraphics[width=11cm]{100}
+\end{center}
+So given a 3 by 3 matrix $\bm A$
+\begin{equation*}
+\bm A=
+\left[\begin{array}{ccc}
+a&b&c\\d&e&f\\g&h&i
+\end{array}\right]
+\end{equation*}
+Taking the cofactor for every entry in the matrix, we can construct a cofactor matrix $\bm C$ as
+\begin{equation*}
+\bm C=
+\left[\begin{array}{ccc}
+\text{det}\left[\begin{array}{cc}e&f\\h&i\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}d&f\\g&i\end{array}\right]&
+\text{det}\left[\begin{array}{cc}d&e\\g&h\end{array}\right]\\
+-\text{det}\left[\begin{array}{cc}b&c\\h&i\end{array}\right]&
+\text{det}\left[\begin{array}{cc}a&c\\g&i\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}a&b\\g&h\end{array}\right]\\
+\text{det}\left[\begin{array}{cc}b&c\\e&f\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}a&c\\d&f\end{array}\right]&
+\text{det}\left[\begin{array}{cc}a&b\\d&e\end{array}\right]
+\end{array}\right]
+\end{equation*}
+We define $\bm C^T$ as the \textit{adjugate matrix}:
+\begin{equation*}
+\bm C^T=
+\left[\begin{array}{ccc}
+\text{det}\left[\begin{array}{cc}e&f\\h&i\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}b&c\\h&i\end{array}\right]&
+\text{det}\left[\begin{array}{cc}b&c\\e&f\end{array}\right]\\
+-\text{det}\left[\begin{array}{cc}d&f\\g&i\end{array}\right]&
+\text{det}\left[\begin{array}{cc}a&c\\g&i\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}a&c\\d&f\end{array}\right]\\
+\text{det}\left[\begin{array}{cc}d&e\\g&h\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}a&b\\g&h\end{array}\right]&
+\text{det}\left[\begin{array}{cc}a&b\\d&e\end{array}\right]
+\end{array}\right]
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+\bm A=
+\left[\begin{array}{ccc}
+a&b&c\\d&e&f\\g&h&i
+\end{array}\right]
+\end{equation*}
+and
+\begin{equation*}
+\bm C^T=
+\left[\begin{array}{ccc}
+\text{det}\left[\begin{array}{cc}e&f\\h&i\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}b&c\\h&i\end{array}\right]&
+\text{det}\left[\begin{array}{cc}b&c\\e&f\end{array}\right]\\
+-\text{det}\left[\begin{array}{cc}d&f\\g&i\end{array}\right]&
+\text{det}\left[\begin{array}{cc}a&c\\g&i\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}a&c\\d&f\end{array}\right]\\
+\text{det}\left[\begin{array}{cc}d&e\\g&h\end{array}\right]&
+-\text{det}\left[\begin{array}{cc}a&b\\g&h\end{array}\right]&
+\text{det}\left[\begin{array}{cc}a&b\\d&e\end{array}\right]
+\end{array}\right]
+\end{equation*}
+Now consider the expression $\bm{AC}^T$. See that computing the \textit{diagonal} of the result is the same as taking the laplace expansion along each row of $\bm A$:
+\begin{equation*}
+\bm{AC}^T=\left[\begin{array}{ccc}
+\text{det}(\bm A)&\cdots&\cdots\\
+\cdots&\text{det}(\bm A)&\cdots\\
+\cdots&\cdots&\text{det}(\bm A)
+\end{array}\right]
+\end{equation*}
+This expression has a unique property---every entry on the off diagonal is 0. This is because computing those entries would be equivalent to the \textit{laplace expansion 
+for the determinant of a matrix with two linearly dependent or identical rows}. For instance consider the $(1,2)$ of $\bm{AC}^T$:
+\begin{equation*}
+(\bm{AC}^T)_{1,2}=-a\,\text{det}\left[\begin{array}{cc}b&c\\h&i\end{array}\right]+b\,
+\text{det}\left[\begin{array}{cc}a&c\\g&i\end{array}\right]
+-c\,\text{det}\left[\begin{array}{cc}a&b\\g&h\end{array}\right]
+\end{equation*}
+See that this is the same as taking the determinant of 	
+\begin{equation*}
+\left[\begin{array}{ccc}
+-a&-b&-c\\
+a&b&c\\
+g&h&i
+\end{array}\right]
+\end{equation*}
+Which is zero because two rows are linearly dependent. This property can be seen in any of the off-diagonal entries. Our final result is
+\begin{equation*}
+\bm{AC}^T=\left[\begin{array}{ccc}
+\text{det}(\bm A)&0&0\\
+0&\text{det}(\bm A)&0\\
+0&0&\text{det}(\bm A)
+\end{array}\right]
+\end{equation*}
+This pattern can be extrapolated to higher order matrices. We have the formula
+\begin{equation*}
+\bm{AC}^T=(\text{det}(\bm A))\bm I
+\end{equation*}
+This gives us a nice formula for the inverse matrix $\bm A^{-1}$:
+\begin{equation*}
+\bm A^{-1}=\frac{1}{\text{det}(\bm A)}\bm C^T
+\end{equation*}
+See that, as expected, the determinant of an invertible matrix cannot be zero.
+\newpage
+
 \section{}
+
+
+
+
+
+\newpage
+
 
 
 \appendix
