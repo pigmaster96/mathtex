@@ -2185,10 +2185,46 @@ and take determinants to get
 \end{center}
 To solve an $n$ by $n$ system, Cramer's rule evaluates $n+1$ determinants (of $\bm A$ and $n$ different $\bm B_i$). Computing each determinant
 would involve $n!$ terms (row permutations of $n$ by $n$ $\bm I$)---totalling $(n+1)!$ terms. This is a very inefficient method for solving equations (although it does give
-an explicit formula).\\
-(next page)\newpage
+an explicit formula).
+\newpage
 \subsection{Inverse formula from Cramer's rule}
+Consider using Cramer's rule to solve for $\bm A^{-1}$. For the 2 by 2 case, $\bm A^{-1}$ has two columns; denoting them by $\bm x$ and $\bm y$, we solve 
+\begin{equation*}
+\bm{AA}^{-1}=\bm{A}\left[\begin{array}{cc}\bm x&\bm y\end{array}\right]=\bm I
+\end{equation*}
+solving each column at a time, 
+\begin{center}
+\includegraphics[width=10cm]{105}
+\end{center}
+Given $|\bm A|$ and the other required determinants
+\begin{center}
+\includegraphics[width=10cm]{106}
+\end{center}
+with that we compute the components as
+\begin{center}
+\includegraphics[width=12cm]{107}
+\end{center}
+When using Cramer's rule to solve $\bm{AA}^{-1}=\bm I$, \textit{the determinant of each $\bm B_j$ is a cofactor of $\bm A$}. Consider the 3 by 3 case; we want the inverse of 
+\begin{equation*}
+\bm A=\left[\begin{array}{ccc}
+a_{11}&a_{12}&a_{13}\\
+a_{21}&a_{22}&a_{23}\\
+a_{31}&a_{32}&a_{33}
+\end{array}\right]
+\end{equation*}
+solving for the first \textit{column} of $\bm A^{-1}$ requires the determinants
+\begin{center}
+\includegraphics[width=12cm]{108}
+\end{center}
+see that these determinants are the same as those on the first \textit{row} of the cofactor matrix 
+(transposing and eliminating downward using row operations, then transposing back gives the exact cofactor). As such we have
+\begin{center}
+\includegraphics[width=11cm]{109}
+\end{center}
+Which leaves us with the inverse matrix formula as derived earlier.
+\newpage
 
+\section{}
 
 
 
