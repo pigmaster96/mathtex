@@ -2150,7 +2150,45 @@ This gives us a nice formula for the inverse matrix $\bm A^{-1}$:
 See that, as expected, the determinant of an invertible matrix cannot be zero.
 \newpage
 
-\section{}
+\section{Cramer's Rule to solve $\bm{Ax}=\bm b$}
+Cramer's rule allows us to procedurally find the components $x_i$, of the solution vector in $\bm{Ax}=\bm b$. The idea here is 
+to construct a matrix starting with $\bm I$; by replacing the first column of 
+$\bm I$ by $\bm x$, \textit{this triangular matrix $\bm M_1$ has a determinant equal to $x_1$}:
+\begin{equation*}
+\text{det}\left[\begin{array}{ccc}
+x_1&0&0\\
+x_2&1&0\\
+x_3&0&1
+\end{array}\right]=x_1
+\end{equation*}
+(consider eliminating downward using row operations then taking the product down the diagonal). By multiplying by $\bm A$, 
+\textit{the first column of the result becomes $\bm{Ax}$
+which is $\bm b$}; the other columns are copied from $\bm A$. We denote this final matrix by $\bm B_1$:
+\begin{center}
+\includegraphics[width=10cm]{101}
+\end{center}
+See that if we had the determinants of $\bm B_1$ and $\bm A$, we can obtain $x_1$:
+\begin{center}
+\includegraphics[width=11cm]{102}
+\end{center}
+This allowed us to obtain the first component of $\bm x$. To obtain the other components we apply the same principle again; to find $x_2$ and $\bm B_2$, we replace the 
+\textit{second column} of $\bm I$ with $\bm x$:
+\begin{center}
+\includegraphics[width=10cm]{103}
+\end{center}
+and take determinants to get
+\begin{equation*}
+(\text{det}\bm A)(x_2)=\text{det}\bm B_2\implies x_2=\frac{\text{det}\bm B_2}{\text{det}\bm A}
+\end{equation*}
+\begin{center}
+\includegraphics[width=12cm]{104}
+\end{center}
+To solve an $n$ by $n$ system, Cramer's rule evaluates $n+1$ determinants (of $\bm A$ and $n$ different $\bm B_i$). Computing each determinant
+would involve $n!$ terms (row permutations of $n$ by $n$ $\bm I$)---totalling $(n+1)!$ terms. This is a very inefficient method for solving equations (although it does give
+an explicit formula).\\
+(next page)\newpage
+\subsection{Inverse formula from Cramer's rule}
+
 
 
 
