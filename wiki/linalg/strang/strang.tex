@@ -1160,6 +1160,44 @@ because there is no $\bm A^{-1}$ in the first place.
 \end{center}
 \newpage
 
+\section{Projection matrices are symmetrical}
+Given a projection matrix $\bm P$, we can decompose any vectors $\bm v$ and $\bm w$ into 
+\begin{align*}
+\bm v&=\bm v_p+\bm v_n\\
+\bm w&=\bm w_p+\bm w_n
+\end{align*}
+With the $p$ subscript indicating the component of the vector in the subspace of $\bm P$, and the $n$ subscript the component outside (normal to) the subspace of $\bm P$.
+(the sum of the projection and its orthogonal `error' make up the original vector before projecion)\\
+\vspace{1mm}\\
+The projection of a vector lies in a subspace. The dot produc of anything in this subspace with anything orthogonal to this subspace is zero. So see that
+\begin{align*}
+(\bm{Pv})\cdot\bm w&=\bm v_p\cdot\bm w\\
+&=\bm v_p\cdot(\bm w_p+\bm w_n)\\
+&=\bm v_p\cdot\bm w_p+\bm v_p\cdot\bm w_n\\
+&=\bm v_p\cdot\bm w_p
+\end{align*}
+and similarly
+\begin{align*}
+\bm v\cdot(\bm{Pw})&=\bm v\cdot\bm w_p\\
+&=(\bm v_p+\bm v_n)\cdot\bm w_p\\
+&=\bm v_p\cdot\bm w_p+\bm v_n\cdot\bm w_p\\
+&=\bm v_p\cdot\bm w_p
+\end{align*}
+As such we can conclude that
+\begin{equation*}
+(\bm{Pv})\cdot\bm w=\bm v\cdot(\bm{Pw})
+\end{equation*}
+and using the definition of the dot product:
+\begin{align*}
+(\bm{Pv})^T\bm w&=\bm v^T\cdot(\bm{Pv})\\
+\bm v^T\bm P^T\bm w&=\bm v^T\bm P\bm w\\
+\end{align*}
+so
+\begin{equation*}
+\bm P^T=\bm P
+\end{equation*}
+\newpage
+
 \section{Least Squares Approximations}
 \textbf{Illustrative example}\\
 Consider trying to find the closest line to three points $(0,6),(1,0),(2,0)$. No straight line $\bm b=C+D\bm t$ goes through those three points; we want two numbers $C$ and
@@ -2224,7 +2262,9 @@ see that these determinants are the same as those on the first \textit{row} of t
 Which leaves us with the inverse matrix formula as derived earlier.
 \newpage
 
-\section{}
+\chapter{Eigenvalues and Eigenvectors}
+\section{Computation}
+
 
 
 
