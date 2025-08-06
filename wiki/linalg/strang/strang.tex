@@ -2264,6 +2264,48 @@ Which leaves us with the inverse matrix formula as derived earlier.
 
 \chapter{Eigenvalues and Eigenvectors}
 \section{Computation}
+$\bm x$ is an eigenvector if
+\begin{equation*}
+\bm{Ax}=\lambda\bm x
+\end{equation*}
+We have
+\begin{align*}
+&\bm{Ax}-\lambda\bm I\bm x=\bm 0\\
+(&\bm{Ax}-\lambda\bm I)\bm x=\bm 0
+\end{align*}
+The matrix $(\bm A-\lambda\bm I)$ times the eigenvector $\bm x$ is the zero vector. \textit{the eigenvectors make up the nullspace of $\bm A-\lambda\bm I$.}\\
+\vspace{1mm}\\
+First we find the eigenvalues. If $(\bm{A}-\lambda\bm I)\bm x=\bm0$ has a nonzero solution, then $(\bm{A}-\lambda\bm I)$ is \textit{not invertible}---the determinant
+of $(\bm{A}-\lambda\bm I)$ must be zero. This gives us a means to find the eigenvalues:
+\begin{center}
+\includegraphics[width=12cm]{110}
+\end{center}
+An $n$ by $n$ $(\bm{A}-\lambda\bm I)$ has $A_{ii}-\lambda$ down the main diagonal. This means that the \textit{characterstic polynomial} $\text{det}(\bm{A}-\lambda\bm I)$ 
+has a degree of $n$---the determinant, after expansion into a polynomial, has $n$ solutions $\lambda_1$ to $\lambda_n$---and $\bm A$ has $n$ eigenvalues:
+\begin{center}
+\includegraphics[width=12cm]{111}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+After obtaining the eigenvalues, we can find the eigenvectors by substituting the eigenvalues back into 
+\begin{equation*}
+(\bm{A}-\lambda\bm I)\bm x=\bm 0 
+\end{equation*}
+and solve for $\bm x$.\\
+\vspace{1mm}\\
+\textbf{Invertibility}\\
+Consider again the intial equation
+\begin{equation*}
+\bm{Ax}=\lambda\bm x
+\end{equation*}
+If $\bm A$ were singular, it has a nontrivial nullspace and 0 is an eigenvalue, with the eigenvectors for $\lambda=0$ filling the nullspace.\\
+\vspace{1mm}\\
+If $\bm A$ were invertible, zero cannot be an eigenvalue. (the nullspace is just the zero vector, so any eigenvector cannot have a zero eigenvalue)
+\begin{center}
+\includegraphics[width=12cm]{112}
+\end{center}
+
+
 
 
 
