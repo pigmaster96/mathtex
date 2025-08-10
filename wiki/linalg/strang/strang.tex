@@ -2304,6 +2304,50 @@ If $\bm A$ were invertible, zero cannot be an eigenvalue. (the nullspace is just
 \begin{center}
 \includegraphics[width=12cm]{112}
 \end{center}
+\newpage
+
+\section{Eigenvalues, Determinant, and Trace}
+Note that if we perform row operations on $\bm A$, the eigenvalues usually change. However, the determinant and trace of a matrix still harbour useful properties.\\
+\vspace{1mm}\\
+\textbf{The determinant of $\bm A$ is the product of its eigenvalues}\\
+We can show that
+\begin{equation*}
+\text{det}(\bm A)=\lambda_1\lambda_2\cdots\lambda_n
+\end{equation*}
+Supposing that $\lambda_1,\ldots,\lambda_n$ are the eigenvalues of $\bm A$, then the $\lambda$ are also the roots of the characteristic polynomial:
+\begin{align*}
+\text{det}(\bm A-\lambda\bm I)=p(\lambda)&=(-1)^n(\lambda-\lambda_1)(\lambda-\lambda_2)\cdots(\lambda-\lambda_n)\\
+&=(-1)(\lambda-\lambda_1)(-1)(\lambda-\lambda_2)\cdots(-1)(\lambda-\lambda_n)\\
+&=(\lambda_1-\lambda)(\lambda_2-\lambda)\cdots(\lambda_n-\lambda)
+\end{align*}
+The leading coefficient $(-1)^n$ can be obtained by considering the contribution of the main diagonal to the determinant (the main diagonal is the only permutation that 
+contributes to the coefficient of $\lambda^n$). Setting $\lambda$ to zero gives us our desired result.\\
+\vspace{1mm}\\
+\textbf{The trace of $\bm A$ is the sum of its eigenvalues}\\
+Look again at the characteristic polynomial. See that it can be rewritten as
+\begin{equation*}
+p(\lambda)=(-1)^n(\lambda^n-(\lambda_1+\cdots+\lambda_n)\lambda^{n-1}+\cdots)
+\end{equation*}
+Looking at the determinant of interest $\text{det}(\bm A-\lambda\bm I)$, see that, in a similar manner to the previous part, the main diagonal is the only permutation that
+contributes to the $\lambda^{n-1}$ coefficient in the result. Consider the laplace expansion along a row $i$, we see that any term involving an off diagonal element 
+$[\bm A-\lambda\bm I]_{ij}$ eliminates $a_{ii}-\lambda$ and $a_{jj}-\lambda$ from the main diagonal (also see that any permutation with an off diagonal entry (most of them) 
+would have to be missing at least two elements on the main diagonal).\\
+\vspace{1mm}\\
+Therefore the coefficient for $\lambda^{n-1}$ comes solely from the main diagonal:
+\begin{equation*}
+(a_{11}-\lambda)(a_{22}-\lambda)\cdots(a_{nn}-\lambda)=\cdots+(-1)^{n-1}(a_{11}+\cdots+a_{nn})\lambda^{n-1}+\cdots
+\end{equation*}
+Comparing coefficients with our characteristic polynomial we get the result
+\begin{equation*}
+a_{11}+\cdots+a_{nn}=\text{tr}(\bm A)=\lambda_1+\cdots+\lambda_n
+\end{equation*}
+\textbf{In short}
+\begin{center}
+\includegraphics[width=12cm]{113}
+\end{center}
+\newpage
+
+\section{Commuting matrices share eigenvectors}
 
 
 
