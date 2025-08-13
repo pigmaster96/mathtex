@@ -2262,6 +2262,8 @@ see that these determinants are the same as those on the first \textit{row} of t
 Which leaves us with the inverse matrix formula as derived earlier.
 \newpage
 
+\section{}
+
 \chapter{Eigenvalues and Eigenvectors}
 \section{Computation}
 $\bm x$ is an eigenvector if
@@ -2348,8 +2350,105 @@ a_{11}+\cdots+a_{nn}=\text{tr}(\bm A)=\lambda_1+\cdots+\lambda_n
 \newpage
 
 \section{Commuting matrices share eigenvectors}
+Say we have two matrices that commute:
+\begin{equation*}
+\bm{AB}=\bm{BA}
+\end{equation*}
+Starting from $\bm{Ax}=\lambda\bm x$, we have
+\begin{equation*}
+\bm{AB}\bm x=\bm{BA}\bm x=\bm B\lambda\bm x=\lambda\bm{Bx}
+\end{equation*}
+So $\bm x$ and $\bm{Bx}$ are both eigenvectors of $\bm A$ with the same eigenvalue.\\
+\vspace{1mm}\\
+If we make a further assumption that the eigenvalues of $\bm A$ are distinct---the eigenspaces of $\bm A$ are one dimensional---then $\bm{Bx}$ must also be a multiple of 
+$\bm x$, making $\bm x$ also an eigenvector of $\bm B$.
 
 
+\newpage
+
+\section{Diagonalisation}
+Suppose the $n$ by $n$ matrix $\bm A$ has $\bm n$ linearly independent eigenvectors $\bm x_1,\ldots,\bm x_n$. Placing those $\bm x_i$ into the columns of an invertible
+\textit{eigenvector matrix} $\bm X$, then $\bm X^{-1}\bm{AX}$ is the diagonal \textit{eigenvalue matrix} $\bm\Lambda$:
+\begin{center}
+\includegraphics[width=10cm]{114}
+\end{center}
+To understand this, see that $\bm{AX}=\bm{X\Lambda}$:
+\begin{center}
+\includegraphics[width=11cm]{115}\\
+\includegraphics[width=12cm]{116}
+\end{center}
+Assuming that $n$ by $n$ $\bm X$ consists of $n$ linearly independent eigenvectors, it then has an inverse, and so
+\begin{center}
+\includegraphics[width=9cm]{117}
+\end{center}
+One benefit of diagonalisation is that it becomes easy to compute matrix powers, $\bm A^k$:
+\begin{center}
+\includegraphics[width=9cm]{118}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Diagonalisability}\\
+We have a condition that guarantees diagonalisability: \textit{Eigenvectors for $n$ different $\lambda$'s are independent}---if the eigenvectors are distinct then we can
+diagonalise $\bm A$:
+\begin{center}
+\includegraphics[width=11cm]{119}
+\end{center}
+\textit{Proof:} Suppose $c_1\bm x_1+c_2\bm x_2=\bm 0$ (suppose two eigenvectors with different eigenvalues are dependent) 
+Multiply the entire expression by $\bm A$:
+\begin{equation*}
+\bm A(c_1\bm x_1+c_2\bm x_2)=c_1\lambda_1\bm x_1+c_2\lambda_2\bm x_2=\bm 0
+\end{equation*}
+now consider the first expression multiplied by $\lambda_2$
+\begin{equation*}
+\lambda_2(c_1\bm x_1+c_2\bm x_2)=c_1\lambda_2\bm x_1+c_2\lambda_2\bm x_2=\bm 0
+\end{equation*}
+subtracting the two expressions gives us
+\begin{equation*}
+c_1\lambda_1\bm x_1-c_1\lambda_2\bm x_1=(\lambda_1-\lambda_2)c_1\bm x_1=\bm 0
+\end{equation*}
+Since $\lambda_1\neq\lambda_2$ and $\bm x_1\neq\bm0$, we must have
+$c_1=0$. See that we can repeat the same process but multiply by $\lambda_1$ instead to show that we must also have $c_2=0$. Only the combination with $c_1=c_2=0$ gives
+$c_1\bm x_1+c_2\bm x_2=\bm 0$---the eigenvectors $\bm x_1$ and $\bm x_2$ must be independent.\\
+\vspace{1mm}\\
+Generalising to $n$ eigenvectors: Suppose that
+\begin{equation*}
+c_1\bm x_1+\cdots+c_n\bm x_n=\bm 0
+\end{equation*}
+First multiply by $\bm A$:
+\begin{equation*}
+c_1\lambda_1\bm x_1+\cdots+c_n\lambda_n\bm x_n=\bm 0
+\end{equation*}
+then multiply that same first expression by $\lambda_n$:
+\begin{equation*}
+c_1\lambda_n\bm x_1+\cdots+c_n\lambda_n\bm x_n=\bm 0
+\end{equation*}
+and subtract the two expressions to get
+\begin{align*}
+&(\lambda_1-\lambda_n)c_1\bm x_1+\cdots+c_n(\lambda_n-\lambda_n)\bm x_n\\
+=&(\lambda_1-\lambda_n)c_1\bm x_1+\cdots+c_{n-1}(\lambda_{n-1}-\lambda_n)\bm x_{n-1}=\bm 0
+\end{align*}
+Now take the result and multiply by $\bm A$ again. Subtract that same expression, but now multiplied by $\lambda_{n-1}$:
+\begin{equation*}
+(\lambda_1-\lambda_n)(\lambda_1-\lambda_{n-1})c_1\bm x_1+\cdots+c_{n-1}(\lambda_{n-1}-\lambda_n)(\lambda_{n-1}-\lambda_{n-1})\bm x_{n-1}=\bm 0
+\end{equation*}
+repeating this process, we eventually end up with
+\begin{equation*}
+(\lambda_1-\lambda_n)(\lambda_1-\lambda_{n-1})\cdots(\lambda_1-\lambda_2)c_1\bm x_1=\bm 0
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We have
+\begin{equation*}
+(\lambda_1-\lambda_n)(\lambda_1-\lambda_{n-1})\cdots(\lambda_1-\lambda_2)c_1\bm x_1=\bm 0
+\end{equation*}
+Forcing $c_1=0$. We can repeat this same process to show that every $c_i=0$; when the $\lambda$ are different, $c_1\bm x_1+\ldots+c_n\bm x_n=\bm 0$ only when $c_i=0$, the 
+eigenvectors are independent.\\
+\vspace{1mm}\\
+\textbf{Repeated eigenvalues don't imply non-diagonalisability}\\
+Distinct eigenvalues guarantee diagonalisability, however this does not mean that repeated eigenvalues implies non-diagonalisability---if all the eigenvalues of a matrix are
+distinct, then the matrix is automatically diagonalisable, but there are plenty of cases where a matrix is diagonalisable, but has repeated eigenvalues.
+\newpage
+
+\section{}
 
 
 

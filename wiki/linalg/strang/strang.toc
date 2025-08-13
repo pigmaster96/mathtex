@@ -50,9 +50,12 @@
 \contentsline {section}{\numberline {5.3}Cofactors, Adjugate, and Inverse}{61}{}%
 \contentsline {section}{\numberline {5.4}Cramer's Rule to solve $\bm {Ax}=\bm {b}$}{63}{}%
 \contentsline {subsection}{\numberline {5.4.1}Inverse formula from Cramer's rule}{64}{}%
-\contentsline {chapter}{\numberline {6}Eigenvalues and Eigenvectors}{65}{}%
-\contentsline {section}{\numberline {6.1}Computation}{65}{}%
-\contentsline {section}{\numberline {6.2}Eigenvalues, Determinant, and Trace}{67}{}%
-\contentsline {section}{\numberline {6.3}Commuting matrices share eigenvectors}{68}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{69}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{69}{}%
+\contentsline {section}{\numberline {5.5}}{65}{}%
+\contentsline {chapter}{\numberline {6}Eigenvalues and Eigenvectors}{66}{}%
+\contentsline {section}{\numberline {6.1}Computation}{66}{}%
+\contentsline {section}{\numberline {6.2}Eigenvalues, Determinant, and Trace}{68}{}%
+\contentsline {section}{\numberline {6.3}Commuting matrices share eigenvectors}{69}{}%
+\contentsline {section}{\numberline {6.4}Diagonalisation}{70}{}%
+\contentsline {section}{\numberline {6.5}}{73}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{74}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{74}{}%
