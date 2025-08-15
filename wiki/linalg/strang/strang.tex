@@ -2262,7 +2262,124 @@ see that these determinants are the same as those on the first \textit{row} of t
 Which leaves us with the inverse matrix formula as derived earlier.
 \newpage
 
-\section{}
+\section{Sign of a permutation and determinants}
+\textbf{Notation}\\
+We introduce the concept of a sign/signature of a permutation of a set of natural numbers. Consider a set of the first $n$ natural numbers
+\begin{equation*}
+1,2,\ldots,n
+\end{equation*}
+We will denote a permuation by
+\begin{equation*}
+\pi(1),\ldots,\pi(n)
+\end{equation*}
+where $\pi(1)$ is the first element of the permutation, $\pi(2)$ is the second, and so on. For instance, a possible permutation of the first 4 natural numbers is 2,1,4,3;
+its elements can be denoted as 
+\begin{equation*}
+\pi(1)=2,\quad\pi(2)=1,\quad\pi(3)=4,\quad\pi(4)=3
+\end{equation*}
+\textbf{Inversions}\\
+Two elements of a permutation $\pi(i)$ and $\pi(j)$ is said to be an inversion if and only if
+\begin{equation*}
+i<j\quad\text{but}\quad\pi(i)>\pi(j)
+\end{equation*}
+in other words, two elements are an inversion if their natural order is inverted. For instance, the permutation 4,1,3,2 has the inversions
+\begin{equation*}
+(4,1),\quad(4,3),\quad(4,2),\quad(3,2)
+\end{equation*}
+\textbf{Parity of a permutation}\\
+A permutation is said to be \textit{even} if and only if the total number of inversions it contains is even. Otherwise it is said to be \textit{odd}.\\
+\vspace{1mm}\\
+In the previous example, the permutation 4,1,3,2 has 4 inversions. As such it is \textit{even}.\\
+\vspace{1mm}\\
+\textbf{Definition of sign}\\
+The sign of a permutation $\pi$, denoted by sgn($\pi$) is a function defined as follows:
+\begin{equation*}
+\text{sgn}(\pi)=\begin{cases}
+1&\text{if $\pi$ is even}\\
+-1&\text{if $\pi$ is odd}\end{cases}
+\end{equation*}
+For instance, the permutation $\pi=\langle 4,1,3,2\rangle$ was even. Therefore sgn$(\pi)=1$.\\
+(next page)\newpage
+\noindent\textbf{Transpositions}\\
+The operation of \textit{interchanging any two distinct elements of a permutation} is called a \textit{transposition}.\\
+\vspace{1mm}\\
+For instance, considering the following permutation of the first five natural numbers:
+\begin{equation*}
+4,3,2,1,5
+\end{equation*}
+The operation of interchanging its second and fourth element so as to obtain the new permuation
+\begin{equation*}
+4,1,2,3,5
+\end{equation*}
+is a transposition. Note the effect of transpositions on parity:
+\begin{itemize}
+\item If a permuation is odd, a transposition makes it even.
+\item If a permutation is even, a transposition makes it odd.
+\end{itemize}
+Intuitively, a transposition either adds or removes an inversion. Either way it makes an odd number of inversions even or an even number of inversions odd.\\
+\vspace{1mm}\\
+\textbf{Definition of determinant}\\
+Let $\bm A$ be a $K$ x $K$ matrix. Let $P$ be the set of all possible permutations of the first $K$ natural numbers.\\
+\vspace{1mm}\\
+The determinant of $\bm A$, denoted by det$(\bm A)$ or $|\bm A|$, is
+\begin{equation*}
+\text{det}=\sum_{\pi\in P}\text{sgn}(\pi)\prod^K_{k=1}A_{k,\pi(k)}
+\end{equation*}
+See how this formally describes the intuitive idea of the determinant as a discussed before. The product
+\begin{equation*}
+\prod^K_{k=1}A_{k,\pi(k)}
+\end{equation*}
+is over $K$ entries of $\bm A$. For each row $k=1,\ldots,K$, we choose the entry located in column $\pi(k)$; there is exactly one chosen entry $A_{k,\pi(k)}$ in each
+column and row. The sign handles the negation (the row exchanges), and we sum over the set $P$ of all possible permuations $\pi$.
+\newpage
+
+\section{Determinants of block-triangular\\matrices and matrices with identity blocks}
+A block matrix is of the form
+\begin{equation*}
+\left[\begin{array}{cc}
+\bm A&\bm B\\
+\bm C&\bm D
+\end{array}\right]
+\end{equation*}
+where 
+\begin{itemize}
+\item $\bm A$ and $\bm B$ have the same number of rows;
+\item $\bm C$ and $\bm D$ have the same number of rows;
+\item $\bm A$ and $\bm C$ have the same number of columns;
+\item $\bm B$ and $\bm D$ have the same number of columns.
+\end{itemize}
+An important fact about block matrices is that their multiplication can be carried out as per standard matrix multiplication
+\begin{center}
+\includegraphics[width=8cm]{120}
+\end{center}
+With the only caveat being that the shape of the blocks must be conformable (for instance the columns of $\bm A$ and the rows of $\bm E$ must coincide.\\
+\vspace{1mm}\\
+\textbf{Determinant of block-diagonal matrix with identity blocks}
+The first result concerns block matrices of the form 
+\begin{equation*}
+\bm\Gamma=\left[\begin{array}{cc}\bm A&\bm 0\\\bm 0&\bm I\end{array}\right]\quad\text{or}\quad\bm\Gamma=\left[\begin{array}{cc}\bm I&\bm 0\\\bm 0&\bm A\end{array}\right]
+\end{equation*}
+Where $\bm I$ denotes the identity and $\bm A$ a square matrix. Block matrices whose off-diagonal blocks are all zero are called block-diagonal.\\
+\vspace{1mm}\\
+We can show that, given one of the above forms,
+\begin{equation*}
+\text{det}(\bm\Gamma)=\text{det}(\bm A)
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We can show that, 
+\begin{equation*}
+\text{det}\left(\left[\begin{array}{cc}\bm A&\bm 0\\\bm 0&\bm I\end{array}\right]\right)=\text{det}(\bm A)=
+\text{det}\left(\left[\begin{array}{cc}\bm I&\bm 0\\\bm 0&\bm A\end{array}\right]\right)
+\end{equation*}
+
+
+
+
+
+
+
+\newpage
 
 \chapter{Eigenvalues and Eigenvectors}
 \section{Computation}
