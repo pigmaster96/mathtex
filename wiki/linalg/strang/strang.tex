@@ -2372,11 +2372,36 @@ We can show that,
 \text{det}\left(\left[\begin{array}{cc}\bm A&\bm 0\\\bm 0&\bm I\end{array}\right]\right)=\text{det}(\bm A)=
 \text{det}\left(\left[\begin{array}{cc}\bm I&\bm 0\\\bm 0&\bm A\end{array}\right]\right)
 \end{equation*}
-
-
-
-
-
+First consider the case where
+\begin{equation*}
+\bm\Gamma=\left[\begin{array}{cc}\bm A&\bm 0\\\bm 0&\bm I\end{array}\right]
+\end{equation*}
+Suppose $\bm A$ is $K$x$K$ and $\bm I$ is 1x1. Then $\bm\Gamma$ is $(K+1)$x$(K+1)$. We use the definition of the determinant:  
+\begin{center}
+\includegraphics[width=9cm]{121}
+\end{center}
+where $P$ is the set of all permutations of the first $K+1$ natural numbers. See that the term $\bm\Gamma_{K,\pi(K+1)}$ is only equal to 1 when $\pi(K+1)=K+1$ 
+(since that row is zero everywhere except on the $(K+1)$th entry).\\
+\vspace{1mm}\\
+Also notice that the sign of the permutations would then only depend on $\pi(1),\ldots,\pi(K)$ (because $\pi(K+1)=K+1$ does not determine any inversion). As such we have
+\begin{center}
+\includegraphics[width=6cm]{122}
+\end{center}
+where $Q$ is the set of permutations of the first $K$ natural numbers.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+The result for the case in which $\bm I$ is not 1x1 is proved recursively. For instance if $\bm I$ is 2x2, we have
+\begin{center}
+\includegraphics[width=6cm]{123}
+\end{center}
+and analagously for larger dimensions. The proof for the other case:
+\begin{equation*}
+\bm\Gamma=\left[\begin{array}{cc}\bm I&\bm 0\\\bm 0&\bm A\end{array}\right]
+\end{equation*}
+Is similar to the one just proved.\\
+\vspace{1mm}\\
+\textbf{Block-upper-triangular matrix}\\
+A
 
 
 \newpage

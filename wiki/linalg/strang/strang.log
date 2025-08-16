@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.20)  16 AUG 2025 03:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2024.6.20)  17 AUG 2025 04:45
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -811,98 +811,115 @@ File: ./images//120.png Graphic file (type png)
 <use ./images//120.png>
 Package pdftex.def Info: ./images//120.png  used on input line 2353.
 (pdftex.def)             Requested size: 227.62204pt x 42.37135pt.
- [67 <./images//120.png (PNG copy)>] [68]
+ [67 <./images//120.png (PNG copy)>]
+<./images//121.png, id=347, 486.618pt x 177.0615pt>
+File: ./images//121.png Graphic file (type png)
+<use ./images//121.png>
+Package pdftex.def Info: ./images//121.png  used on input line 2381.
+(pdftex.def)             Requested size: 256.0748pt x 93.17749pt.
+<./images//122.png, id=348, 371.58826pt x 225.2415pt>
+File: ./images//122.png Graphic file (type png)
+<use ./images//122.png>
+Package pdftex.def Info: ./images//122.png  used on input line 2388.
+(pdftex.def)             Requested size: 170.71652pt x 103.48174pt.
+ [68 <./images//121.png (PNG copy)> <./images//122.png (PNG copy)>]
+<./images//123.png, id=352, 441.44925pt x 355.3275pt>
+File: ./images//123.png Graphic file (type png)
+<use ./images//123.png>
+Package pdftex.def Info: ./images//123.png  used on input line 2395.
+(pdftex.def)             Requested size: 170.71652pt x 137.41145pt.
+ [69 <./images//123.png (PNG copy)>]
 Chapter 6.
-<./images//110.png, id=350, 847.36575pt x 109.6095pt>
+<./images//110.png, id=356, 847.36575pt x 109.6095pt>
 File: ./images//110.png Graphic file (type png)
 <use ./images//110.png>
-Package pdftex.def Info: ./images//110.png  used on input line 2400.
+Package pdftex.def Info: ./images//110.png  used on input line 2425.
 (pdftex.def)             Requested size: 341.43306pt x 44.1658pt.
-<./images//111.png, id=351, 847.968pt x 90.93974pt>
+<./images//111.png, id=357, 847.968pt x 90.93974pt>
 File: ./images//111.png Graphic file (type png)
 <use ./images//111.png>
-Package pdftex.def Info: ./images//111.png  used on input line 2405.
+Package pdftex.def Info: ./images//111.png  used on input line 2430.
 (pdftex.def)             Requested size: 341.43306pt x 36.61668pt.
-[69
+[70
 
  <./images//110.png (PNG copy)> <./images//111.png (PNG copy)>]
-<./images//112.png, id=355, 855.79726pt x 264.38776pt>
+<./images//112.png, id=361, 855.79726pt x 264.38776pt>
 File: ./images//112.png Graphic file (type png)
 <use ./images//112.png>
-Package pdftex.def Info: ./images//112.png  used on input line 2424.
+Package pdftex.def Info: ./images//112.png  used on input line 2449.
 (pdftex.def)             Requested size: 341.43306pt x 105.48293pt.
- [70 <./images//112.png (PNG copy)>]
-<./images//113.png, id=359, 801.59476pt x 84.91725pt>
+ [71 <./images//112.png (PNG copy)>]
+<./images//113.png, id=365, 801.59476pt x 84.91725pt>
 File: ./images//113.png Graphic file (type png)
 <use ./images//113.png>
-Package pdftex.def Info: ./images//113.png  used on input line 2465.
+Package pdftex.def Info: ./images//113.png  used on input line 2490.
 (pdftex.def)             Requested size: 341.43306pt x 36.17033pt.
- [71 <./images//113.png (PNG copy)>] [72]
-<./images//114.png, id=367, 685.3605pt x 121.05225pt>
+ [72 <./images//113.png (PNG copy)>] [73]
+<./images//114.png, id=373, 685.3605pt x 121.05225pt>
 File: ./images//114.png Graphic file (type png)
 <use ./images//114.png>
-Package pdftex.def Info: ./images//114.png  used on input line 2490.
+Package pdftex.def Info: ./images//114.png  used on input line 2515.
 (pdftex.def)             Requested size: 284.52756pt x 50.25421pt.
-<./images//115.png, id=368, 695.59875pt x 118.64325pt>
+<./images//115.png, id=374, 695.59875pt x 118.64325pt>
 File: ./images//115.png Graphic file (type png)
 <use ./images//115.png>
-Package pdftex.def Info: ./images//115.png  used on input line 2494.
+Package pdftex.def Info: ./images//115.png  used on input line 2519.
 (pdftex.def)             Requested size: 312.9803pt x 53.38171pt.
-<./images//116.png, id=369, 819.06pt x 116.8365pt>
+<./images//116.png, id=375, 819.06pt x 116.8365pt>
 File: ./images//116.png Graphic file (type png)
 <use ./images//116.png>
-Package pdftex.def Info: ./images//116.png  used on input line 2495.
+Package pdftex.def Info: ./images//116.png  used on input line 2520.
 (pdftex.def)             Requested size: 341.43306pt x 48.70552pt.
-<./images//117.png, id=370, 566.115pt x 56.6115pt>
+<./images//117.png, id=376, 566.115pt x 56.6115pt>
 File: ./images//117.png Graphic file (type png)
 <use ./images//117.png>
-Package pdftex.def Info: ./images//117.png  used on input line 2499.
+Package pdftex.def Info: ./images//117.png  used on input line 2524.
 (pdftex.def)             Requested size: 256.0748pt x 25.60796pt.
-<./images//118.png, id=371, 596.2275pt x 36.73724pt>
+<./images//118.png, id=377, 596.2275pt x 36.73724pt>
 File: ./images//118.png Graphic file (type png)
 <use ./images//118.png>
-Package pdftex.def Info: ./images//118.png  used on input line 2503.
+Package pdftex.def Info: ./images//118.png  used on input line 2528.
 (pdftex.def)             Requested size: 256.0748pt x 15.7782pt.
- [73 <./images//114.png (PNG copy)> <./images//115.png (PNG copy)> <./images//116.png (PNG copy)> <./images//117.png (PNG copy)> <./images//118.png (PNG copy)>]
-<./images//119.png, id=375, 752.21025pt x 118.64325pt>
+ [74 <./images//114.png (PNG copy)> <./images//115.png (PNG copy)> <./images//116.png (PNG copy)> <./images//117.png (PNG copy)> <./images//118.png (PNG copy)>]
+<./images//119.png, id=381, 752.21025pt x 118.64325pt>
 File: ./images//119.png Graphic file (type png)
 <use ./images//119.png>
-Package pdftex.def Info: ./images//119.png  used on input line 2510.
+Package pdftex.def Info: ./images//119.png  used on input line 2535.
 (pdftex.def)             Requested size: 312.9803pt x 49.36636pt.
- [74 <./images//119.png (PNG copy)>] [75] [76]
+ [75 <./images//119.png (PNG copy)>] [76] [77]
 Appendix A.
-[77
+[78
 
 ]
-<./images//22.png, id=388, 599.23875pt x 103.88812pt>
+<./images//22.png, id=395, 599.23875pt x 103.88812pt>
 File: ./images//22.png Graphic file (type png)
 <use ./images//22.png>
-Package pdftex.def Info: ./images//22.png  used on input line 2628.
+Package pdftex.def Info: ./images//22.png  used on input line 2653.
 (pdftex.def)             Requested size: 284.52756pt x 49.32834pt.
-<./images//23.png, id=389, 640.64343pt x 111.41624pt>
+<./images//23.png, id=396, 640.64343pt x 111.41624pt>
 File: ./images//23.png Graphic file (type png)
 <use ./images//23.png>
-Package pdftex.def Info: ./images//23.png  used on input line 2632.
+Package pdftex.def Info: ./images//23.png  used on input line 2657.
 (pdftex.def)             Requested size: 284.52756pt x 49.48401pt.
-<./images//24.png, id=390, 613.54219pt x 173.89969pt>
+<./images//24.png, id=397, 613.54219pt x 173.89969pt>
 File: ./images//24.png Graphic file (type png)
 <use ./images//24.png>
-Package pdftex.def Info: ./images//24.png  used on input line 2636.
+Package pdftex.def Info: ./images//24.png  used on input line 2661.
 (pdftex.def)             Requested size: 284.52756pt x 80.64491pt.
- [78 <./images//22.png (PNG copy)> <./images//23.png (PNG copy)> <./images//24.png (PNG copy)>] (./strang.aux) ) 
+ [79 <./images//22.png (PNG copy)> <./images//23.png (PNG copy)> <./images//24.png (PNG copy)>] (./strang.aux) ) 
 Here is how much of TeX's memory you used:
- 4697 strings out of 478287
- 74045 string characters out of 5849289
+ 4730 strings out of 478287
+ 74645 string characters out of 5849289
  375485 words of memory out of 5000000
- 22845 multiletter control sequences out of 15000+600000
+ 22878 multiletter control sequences out of 15000+600000
  491673 words of font info for 110 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,21n,62p,235b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmbsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on strang.pdf (79 pages, 3330038 bytes).
+Output written on strang.pdf (80 pages, 3468230 bytes).
 PDF statistics:
- 491 PDF objects out of 1000 (max. 8388607)
- 244 compressed objects within 3 object streams
+ 497 PDF objects out of 1000 (max. 8388607)
+ 246 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 596 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 611 words of extra memory for PDF output out of 10000 (max. 10000000)
 
