@@ -2392,7 +2392,7 @@ where $Q$ is the set of permutations of the first $K$ natural numbers.\\
 \noindent\textbf{Cont.}\\
 The result for the case in which $\bm I$ is not 1x1 is proved recursively. For instance if $\bm I$ is 2x2, we have
 \begin{center}
-\includegraphics[width=6cm]{123}
+\includegraphics[width=5cm]{123}
 \end{center}
 and analagously for larger dimensions. The proof for the other case:
 \begin{equation*}
@@ -2401,9 +2401,50 @@ and analagously for larger dimensions. The proof for the other case:
 Is similar to the one just proved.\\
 \vspace{1mm}\\
 \textbf{Block-upper-triangular matrix}\\
-A
-
-
+An block-upper-triangular matrix is of the form
+\begin{center}
+\includegraphics[width=3cm]{124}
+\end{center}
+We can show that
+\begin{equation*}
+\text{det}(\bm\Gamma)=\text{det}(\bm A)\text{det}(\bm D)
+\end{equation*}
+Suppose that $\bm A$ is $K$x$K$, $\bm D$ is $L$x$L$, $\bm B$ is $K$x$L$ and $\bm 0$ is $L$x$K$. Using subscripts to denote shape, we can factor the matrix as
+\begin{center}
+\includegraphics[width=6cm]{125}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Thus,
+\begin{center}
+\includegraphics[width=9cm]{126}
+\end{center}
+In the last step we have 
+\begin{center}
+\includegraphics[width=4cm]{127}
+\end{center}
+(the determinant is just the product of pivots since we can eliminate upward without changing the determinant) The other two determinants come from
+the earlier derived determinants of matrices with identity blocks.\\
+\vspace{1mm}\\
+\textbf{Block-lower-triangular matrix}\\
+A block-lower-triangular matrix is of the form
+\begin{center}
+\includegraphics[width=3cm]{128}
+\end{center}
+Again we can show that
+\begin{equation*}
+\text{det}(\bm\Gamma)=\text{det}(\bm A)\text{det}(\bm D)
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Suppose that $\bm A$ is $K$x$K$, $\bm D$ is $L$x$L$, $\bm C$ is $L$x$K$ and $\bm 0$ is $K$x$L$. Using subscripts to denote shape, we can factor the matrix as
+\begin{center}
+\includegraphics[width=7cm]{129}
+\end{center}
+Then, similar to the previous proof,
+\begin{center}
+\includegraphics[width=9cm]{130}
+\end{center}
 \newpage
 
 \chapter{Eigenvalues and Eigenvectors}
@@ -2505,7 +2546,18 @@ So $\bm x$ and $\bm{Bx}$ are both eigenvectors of $\bm A$ with the same eigenval
 If we make a further assumption that the eigenvalues of $\bm A$ are distinct---the eigenspaces of $\bm A$ are one dimensional---then $\bm{Bx}$ must also be a multiple of 
 $\bm x$, making $\bm x$ also an eigenvector of $\bm B$.
 
-
+\section{$\bm{AB}$ and $\bm{BA}$ have the same eigenvalues}
+If $\bm v$ is an eigenvector of $\bm{AB}$ with some nonzero eigenvalue $\lambda$, then $\bm{Bv}\neq0$ and
+\begin{equation*}
+\lambda\bm{Bv}=\bm B(\bm{ABv})=(\bm{BA})\bm{Bv}
+\end{equation*}
+so $\bm{Bv}$ is an eigenvector for $\bm{BA}$ with the same eigenvalue.\\
+\vspace{1mm}\\
+For the case of a zero eigenvalue, if 0 is an eigenvalue of $\bm{AB}$, then the matrix is noninvertible and
+\begin{equation*}
+0=\text{det}(\bm{AB})=\text{det}(\bm{A})\text{det}(\bm{B})=\text{det}(\bm{BA})
+\end{equation*}
+so 0 will also be an eigenvalue of $\bm{BA}$.
 \newpage
 
 \section{Diagonalisation}

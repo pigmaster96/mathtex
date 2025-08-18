@@ -52,11 +52,12 @@
 \contentsline {subsection}{\numberline {5.4.1}Inverse formula from Cramer's rule}{64}{}%
 \contentsline {section}{\numberline {5.5}Sign of a permutation and determinants}{65}{}%
 \contentsline {section}{\numberline {5.6}Determinants of block-triangular\\matrices and matrices with identity blocks}{67}{}%
-\contentsline {chapter}{\numberline {6}Eigenvalues and Eigenvectors}{70}{}%
-\contentsline {section}{\numberline {6.1}Computation}{70}{}%
-\contentsline {section}{\numberline {6.2}Eigenvalues, Determinant, and Trace}{72}{}%
-\contentsline {section}{\numberline {6.3}Commuting matrices share eigenvectors}{73}{}%
-\contentsline {section}{\numberline {6.4}Diagonalisation}{74}{}%
-\contentsline {section}{\numberline {6.5}}{77}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{78}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{78}{}%
+\contentsline {chapter}{\numberline {6}Eigenvalues and Eigenvectors}{72}{}%
+\contentsline {section}{\numberline {6.1}Computation}{72}{}%
+\contentsline {section}{\numberline {6.2}Eigenvalues, Determinant, and Trace}{74}{}%
+\contentsline {section}{\numberline {6.3}Commuting matrices share eigenvectors}{75}{}%
+\contentsline {section}{\numberline {6.4}$\bm {AB}$ and $\bm {BA}$ have the same eigenvalues}{75}{}%
+\contentsline {section}{\numberline {6.5}Diagonalisation}{76}{}%
+\contentsline {section}{\numberline {6.6}}{79}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{80}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{80}{}%
