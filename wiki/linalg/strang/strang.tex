@@ -2642,7 +2642,32 @@ Distinct eigenvalues guarantee diagonalisability, however this does not mean tha
 distinct, then the matrix is automatically diagonalisable, but there are plenty of cases where a matrix is diagonalisable, but has repeated eigenvalues.
 \newpage
 
-\section{}
+\section{Similar Matrices}
+Suppose the eigenvalue matrix $\bm\Lambda$ is fixed. As we change the eigenvector matrix $\bm X$, we get a whole family of different matrices 
+$\bm A=\bm{X\Lambda X}^{-1}$---\textit{all with the same eigenvalues in} $\bm\Lambda$. All those matrices $\bm A$ (with the same 
+$\bm\Lambda$) are called \textit{similar}.\\
+\vspace{1mm}\\
+This idea extends to matrices that \textit{can't be diagonalised}.
+We choose one constant matrix $\bm C$ (not necessarily $\bm\Lambda$), and we look at the whole family of matrices 
+$\bm A=\bm{BCB}^{-1}$, allowing all invertible matrices $\bm B$. It turns out that the matrices $\bm C$ and $\bm A$ are 
+similar---they have the same $n$ eigenvalues.\\
+\vspace{1mm}\\
+We say $\bm C$ instead of $\bm\Lambda$ because $\bm C$ need not be diagonal. We only require invertible $\bm B$.
+\begin{center}
+\includegraphics[width=12cm]{131}
+\end{center}
+To show this, see that if $\bm{Cx}=\lambda\bm x$, then $\bm{BCB}^{-1}$ has the same eigenvalue $\lambda$ with new eigenvector $\bm{Bx}$:
+\begin{center}
+\includegraphics[width=11cm]{132}
+\end{center}
+A fixed matrix $\bm C$ produces a family of similar matrices $\bm{BCB}^{-1}$.
+\newpage
+
+\section{Matrix Powers}
+
+
+
+
 
 
 
