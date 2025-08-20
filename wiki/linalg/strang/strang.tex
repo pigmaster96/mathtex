@@ -2767,11 +2767,62 @@ The individual formulas also yield approximations:
 \begin{center}
 \includegraphics[width=10cm]{24}
 \end{center}
+\newpage
 
+\section{Conjugate/Hermitian transpose}
+The conjugate transpose of a matrix $\bm A$ is the matrix $\bm A^*$
+defined by
+\begin{equation*}
+\bm A^*=\bar{\bm{A}}^T=\bar{\bm{A}^T}
+\end{equation*}
+Where $T$ denotes transposition and the bar denotes complex conjugation---transpose, and complex conjugation of all entries. The order in which the
+transposition and conjugation are performed is irrelevant.\\
+\vspace{1mm}\\
+\textbf{Properties}\\
+The properties of conjugate transpostition are immediate consequences of the properties of transposition and conjugation. First, recall that
+for two complex numbers $x=(a+ib)$ and $y=(c+id)$:
+\begin{equation*}
+\bar{(xy)}=\bar x \bar y
+\end{equation*}
+which can be shown:
+\begin{equation*}
+xy=(a+ib)(c+id)=ac-bd+i(ad+bc)
+\end{equation*}
+and
+\begin{equation*}
+\bar x\bar y=(a-ib)(c-id)=ac-bd-i(ad+bc)=\bar{(xy)}
+\end{equation*}
+with that we list some properties of conjugate transpositions:
+\begin{itemize}
+\item $(\bm A^*)^*=\bm A$
+\item $(\bm A+\bm B)^*=\bm A^*+\bm B^*$
+\item $(z\bm A)^*=\bar z\bm A^*$
+\item $(\bm{AB})^*=\bm B^*\bm A^*$
+\item $(\bm A^*)^{-1}=(\bm A^{-1})^*$ (provided $\bm A$ is square invertible)
+\end{itemize}
+The proof of the final point is analagous to the proof of $(\bm{A})^T)^{-1}=(\bm{A}^{-1})^T$.\\
+(next page)\newpage
+\noindent\textbf{Hermitian matrix}\\
+A matrix that is equal to its conjugate transpose is called \textit{Hermitian} or \textit{self-adjoint}. In other words, $\bm A$ is Hermitian if 
+and only if
+\begin{equation*}
+\bm A^*=\bm A
+\end{equation*}
+Denoting $\bm A_{kl}$ as the $(k,l)$-th entry of $\bm A$ and $(\bm A^*)_{kl}$ the $(k,l)$-th entry of $\bm A^*$, we have
+\begin{equation*}
+(\bm A^*)_{kl}=\overline{\bm A_{lk}}
+\end{equation*}
+Therefore, $\bm A$ is Hermitian if and only if
+\begin{equation*}
+\bm A_{kl}=\overline{\bm A_{lk}}
+\end{equation*}
+for all $k$ and $l$. See that this implies that the \textit{diagonal entries of $\bm A$ must be real} in order to satisfy
+\begin{equation*}
+\bm A_{kk}=\overline{\bm A_{kk}}
+\end{equation*}
+\newpage
 
-
-
-
+\section{}
 
 
 

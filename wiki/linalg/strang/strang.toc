@@ -63,3 +63,5 @@
 \contentsline {section}{\numberline {6.8}Algebraic and Geometric multiplicity}{81}{}%
 \contentsline {chapter}{\numberline {A}Misc. topics}{82}{}%
 \contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{82}{}%
+\contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{84}{}%
+\contentsline {section}{\numberline {A.3}}{86}{}%
