@@ -2664,10 +2664,41 @@ A fixed matrix $\bm C$ produces a family of similar matrices $\bm{BCB}^{-1}$.
 \newpage
 
 \section{Matrix Powers}
+The eigenvector matrix $\bm X$ allows us to diagonalise $\bm A$ as
+\begin{equation*}
+\bm A=\bm{X\Lambda X}^{-1}
+\end{equation*}
+This factorisation is particularly useful when computing powers:
+\begin{center}
+\includegraphics[width=11cm]{133}
+\end{center}
+We can intuitively understand $\bm{X\Lambda}^k\bm X^{-1}\bm u_0$. The expression can be constructed as follows:
+\begin{center}
+\includegraphics[width=12cm]{134}
+\end{center}
+We find the initial linear combination of eigenvectors that produces $\bm u_0$, whose coefficients we denote as $\bm c$. 
+Each time we multiply by $\bm A$, 
+we scale each eigenvector by its corresponding eigenvalue, so the result of $\bm{Au}_0$ is just that linear combination with coefficients 
+$\bm\Lambda\bm c$. We scale each coefficient as many times as we like by its corresponding 
+eigenvalue, $\bm\Lambda^k\bm c$; evaluating the final linear combination is precisely our factorisation. That is,
+\begin{center}
+\includegraphics[width=11cm]{135}
+\end{center}
+is the same as
+\begin{equation*}
+\bm A^k\bm u_0=\bm u_k=c_1(\lambda_1)^k\bm x_1+\cdots+c_n(\lambda_n)^k\bm x_n
+\end{equation*}
+which is a result of starting with $\bm u_0$
+\begin{equation*}
+u_0=c_1\bm x_1+\cdots+c_n\bm x_n
+\end{equation*}
+and applying $\bm A$ repeatedly
+\begin{equation*}
+\bm{Au}_0=u_1=c_1(\lambda_1)\bm x_1+\cdots+c_n(\lambda_n)\bm x_n
+\end{equation*}
+\newpage
 
-
-
-
+\section{Algebraic and Geometric multiplicity}
 
 
 
@@ -2675,7 +2706,6 @@ A fixed matrix $\bm C$ produces a family of similar matrices $\bm{BCB}^{-1}$.
 
 
 \newpage
-
 
 
 \appendix

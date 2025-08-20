@@ -60,5 +60,6 @@
 \contentsline {section}{\numberline {6.5}Diagonalisation}{76}{}%
 \contentsline {section}{\numberline {6.6}Similar Matrices}{79}{}%
 \contentsline {section}{\numberline {6.7}Matrix Powers}{80}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{81}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{81}{}%
+\contentsline {section}{\numberline {6.8}Algebraic and Geometric multiplicity}{81}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{82}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{82}{}%
