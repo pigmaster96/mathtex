@@ -2699,6 +2699,9 @@ and applying $\bm A$ repeatedly
 \newpage
 
 \section{Algebraic and Geometric multiplicity}
+We can define \textit{geometric multiplicity} 
+
+
 
 \newpage
 
@@ -2724,17 +2727,28 @@ $\bm A$, \textit{orthogonal to} (and linearly independent from) $\{\bm v_1,\ldot
 \vspace{1mm}\\
 By induction, we can continue to extend $\bm V$ by more eigenvectors until $\bm V=\mathbb C^n$. At this point we then have
 $n$ linearly independent eigenvectors of $\bm A$, providing a basis for its diagonalisation.
-\newpage
 
 \subsection{Eigenvectors of distinct eigenvalues of a symmetric matrix are orthogonal}
-
-
-
-
-
-
-
+For any real matrix $\bm A$ and any vectors $\bm x$ and $\bm y$, we have
+\begin{equation*}
+\langle\bm{Ax},\bm y\rangle=\langle\bm x,\bm A^T\bm y\rangle
+\end{equation*}
+Now assuming that $\bm A$ is symmetric, and that $\bm x$ and $\bm y$ are eigenvectors of $\bm A$ corresponding to distinct eigenvalues $\lambda$
+and $\mu$. Then 
+\begin{align*}
+\lambda\langle\bm x,\bm y\rangle=\langle\lambda\bm x,\bm y\rangle
+=\langle\bm A\bm x,\bm y\rangle&=\langle\bm x,\bm A^T\bm y\rangle
+=\langle\bm x,\bm A\bm y\rangle=\langle\bm x,\mu\bm y\rangle\\
+=&\mu\langle\bm x,\bm y\rangle
+\end{align*}
+Therefore,
+\begin{equation*}
+(\lambda-\mu)\langle\bm x,\bm y\rangle=0
+\end{equation*}
+since $\lambda-\mu\neq0$, then $\langle\bm x,\bm y\rangle=0$, and $\bm x\perp\bm y$.
 \newpage
+
+\section{}
 
 
 \appendix

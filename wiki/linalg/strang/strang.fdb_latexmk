@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1755814083 "strang.tex" "strang.pdf" "strang" 1755814084 0
+["pdflatex"] 1755815830 "strang.tex" "strang.pdf" "strang" 1755815831 0
   "/etc/texmf/web2c/texmf.cnf" 1755598860 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -227,9 +227,9 @@
   "images//97.png" 1755535791 20081 36d6b8f471e2b512863ea3505726f9b5 ""
   "images//98.png" 1755535791 18048 8fd5e3176dc37eec363da7ac9dc976a2 ""
   "images//99.png" 1755535791 25883 97cf03b8fd413abf4b1524575b35e1f0 ""
-  "strang.aux" 1755814084 9506 bb5036e3ab250f9aa0166acac5084b51 "pdflatex"
-  "strang.tex" 1755814081 127007 66659150d94aa8923286814e33b0542a ""
-  "strang.toc" 1755814084 6031 72cc9c17be8c6376a110389ae89c161f "pdflatex"
+  "strang.aux" 1755815831 9598 3a368c14f9e963417930e777c3117a48 "pdflatex"
+  "strang.tex" 1755815828 127807 c7f002cee02c7260fbd6f0f6fb5974cb ""
+  "strang.toc" 1755815831 6082 42a8df6b520d64f9b2c365f1c42a7bd1 "pdflatex"
   (generated)
   "strang.aux"
   "strang.log"

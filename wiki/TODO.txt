@@ -1,4 +1,4 @@
-#####################
+####################
 ####### TODO ########
 #####################
 090525-thorough definition of the riemann and darboux (what is this?) integral (real analysis; appendix 4)
@@ -6,6 +6,7 @@
 210525-Fubini's theorem (analysis)---associativity of convolution sum or just swapping integrals in general
 040625-convergence of fourier series---complex analysis, consider references given by oppenheim signals and systems chap 3
 100625-proof dot product means perpendicular in n dimensions
+220825-Spectral theorem proof
 
 
 

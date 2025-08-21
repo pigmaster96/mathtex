@@ -63,7 +63,8 @@
 \contentsline {section}{\numberline {6.8}Algebraic and Geometric multiplicity}{82}{}%
 \contentsline {section}{\numberline {6.9}Inutition for spectral theorem}{83}{}%
 \contentsline {subsection}{\numberline {6.9.1}Symmetric matrices are always diagonalisable}{83}{}%
-\contentsline {subsection}{\numberline {6.9.2}Eigenvectors of distinct eigenvalues of a symmetric matrix are orthogonal}{84}{}%
+\contentsline {subsection}{\numberline {6.9.2}Eigenvectors of distinct eigenvalues of a symmetric matrix are orthogonal}{83}{}%
+\contentsline {section}{\numberline {6.10}}{84}{}%
 \contentsline {chapter}{\numberline {A}Misc. topics}{85}{}%
 \contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{85}{}%
 \contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{87}{}%
