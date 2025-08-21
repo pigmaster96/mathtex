@@ -2700,6 +2700,35 @@ and applying $\bm A$ repeatedly
 
 \section{Algebraic and Geometric multiplicity}
 
+\newpage
+
+\section{Inutition for spectral theorem}
+\subsection{Symmetric matrices are always diagonalisable}
+If $\bm A$ is an $n$x$n$ symmetric matrix with eigenvector $\bm v$, and $\bm u\in\mathbb{C}$ is such that $\bm u\perp\bm v$, then 
+$\bm{Au}\perp\bm v$. We can show this:
+\begin{equation*}
+\bm v\cdot(\bm{Au})=\bm v^T\bm{Au}=\bm v^T\bm A^T\bm u=(\bm v^T\bm A^T)\bm u=(\bm A\bm v)^T\bm u
+=\lambda\bm v^T\bm u=0
+\end{equation*}
+where $\lambda$ is the eigenvalue of $\bm v$.\\
+\vspace{1mm}\\
+Let $\{\bm v_1,\ldots,\bm v_k\}$ be any set of $k$ linearly independent eigenvectors of $\bm A$. Let $\bm V\subseteq\mathbb C^n$ be the vector
+space spanned by these vectors, and $\bm V^\perp\subseteq\mathbb C^n$ be the orthogonal space, containing all vectors orthogonal to $\bm V$.\\
+\vspace{1mm}\\
+Every vector $\bm u\in\bm V^\perp$ is orthogonal to each $\bm v_i$. By ourfirst statement, so is $\bm{Au}$. Therefore, $\bm V^\perp$ is fixed under
+$\bm A$; we can make a restricted linear transformation $\bm A|_{\bm V^\perp}:\bm V^\perp\to\bm V^\perp$.\\
+\vspace{1mm}\\
+Every linear transformation over a nonzero, finite dimensional space of an algebraically closed field has at least one eigenvector (this can be 
+shown using the fundamental theorem of algebra). If $\bm V^\perp\neq\{\bm 0\}$, then there is another eigenvector $\bm v_{k+1}\in\bm V^\perp$ of
+$\bm A$, \textit{orthogonal to} (and linearly independent from) $\{\bm v_1,\ldots\bm v_k\}$.\\
+\vspace{1mm}\\
+By induction, we can continue to extend $\bm V$ by more eigenvectors until $\bm V=\mathbb C^n$. At this point we then have
+$n$ linearly independent eigenvectors of $\bm A$, providing a basis for its diagonalisation.
+\newpage
+
+\subsection{Eigenvectors of distinct eigenvalues of a symmetric matrix are orthogonal}
+
+
 
 
 
