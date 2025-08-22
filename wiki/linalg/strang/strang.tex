@@ -2767,6 +2767,43 @@ $c_1\bm x_1+\cdots+c_n\bm x_n$ of the eigenvectors, and we can show
 expression is $>0$ if every $\lambda_i>0$.
 
 \subsection{If $\bm S_1$ and $\bm S_2$ are symmetric positive definite, so is $\bm S_1+\bm S_2$}
+We can prove this simply adding energies:
+\begin{equation*}
+\bm x^T(\bm S_1+\bm S_2)\bm x=\bm x^T\bm S_1\bm x+\bm x^T\bm S_2\bm x
+\end{equation*}
+If both $\bm S_1$ and $\bm S_2$ are positive definite, so is their sum.
+\newpage
+
+\section{The $\bm{LDL}^T$ and Cholesky decompositions}
+Let
+
+
+\newpage
+
+\section{Other tests for positive definiteness}
+\subsection{$\bm S=\bm A^T\bm A$}
+A symmetric matrix $\bm S$ is positive definite if
+\begin{equation*}
+\bm S=\bm A^T\bm A\text{ for some matrix $\bm A$ with independent columns}
+\end{equation*}
+See that if $\bm S=\bm A^T\bm A$, then
+\begin{equation*}
+\bm x^T\bm{Sx}=\bm x^T\bm A^T\bm A\bm x=(\bm A\bm x)^T(\bm A\bm x)
+=||\bm{Ax}||^2
+\end{equation*}
+See that the energy is positive (for $\bm x\neq\bm 0$) provided that $\bm{Ax}$ is not the zero vector. To assure that $\bm{Ax}\neq\bm0$ when 
+$\bm x\neq\bm0$, the columns of $\bm A$ must be independent.\\
+\vspace{1mm}\\
+If the columns are not independent, then there will be a nontrivial nullspace and $\bm{Ax}=\bm0$ for some $\bm x$, in which case the energy 
+can then be zero, but \textit{will still never be negative}, meaning
+\begin{equation*}
+\bm x^T\bm{Sx}\geq0
+\end{equation*}
+As such, we can conclude that $\bm S=\bm A^T\bm A$ is at least semidefinite: $\bm x^T\bm{Sx}=||\bm{Ax}||^2$ will be $>0$ if the columns
+of $\bm A$ are independent (positive definite), or it will be $\geq0$ otherwise (positive semidefinite).
+
+
+
 
 
 
