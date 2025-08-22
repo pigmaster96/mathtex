@@ -60,12 +60,13 @@
 \contentsline {section}{\numberline {6.5}Diagonalisation}{77}{}%
 \contentsline {section}{\numberline {6.6}Similar Matrices}{80}{}%
 \contentsline {section}{\numberline {6.7}Matrix Powers}{81}{}%
-\contentsline {section}{\numberline {6.8}Algebraic and Geometric multiplicity}{82}{}%
-\contentsline {section}{\numberline {6.9}Inutition for spectral theorem}{83}{}%
-\contentsline {subsection}{\numberline {6.9.1}Symmetric matrices are always diagonalisable}{83}{}%
-\contentsline {subsection}{\numberline {6.9.2}Eigenvectors of distinct eigenvalues of a symmetric matrix are orthogonal}{83}{}%
-\contentsline {section}{\numberline {6.10}}{84}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{85}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{85}{}%
-\contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{87}{}%
-\contentsline {section}{\numberline {A.3}}{89}{}%
+\contentsline {section}{\numberline {6.8}Inutition for spectral theorem}{82}{}%
+\contentsline {subsection}{\numberline {6.8.1}Symmetric matrices are always diagonalisable}{82}{}%
+\contentsline {subsection}{\numberline {6.8.2}Eigenvectors of distinct eigenvalues of a symmetric matrix are orthogonal}{82}{}%
+\contentsline {section}{\numberline {6.9}Symmetric Positive Definite Matrices}{83}{}%
+\contentsline {subsection}{\numberline {6.9.1}Equivalence of definitions}{83}{}%
+\contentsline {subsection}{\numberline {6.9.2}If $\bm {S}_1$ and $\bm {S}_2$ are symmetric positive definite, so is $\bm {S}_1+\bm {S}_2$}{83}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{84}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{84}{}%
+\contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{86}{}%
+\contentsline {section}{\numberline {A.3}}{88}{}%

@@ -2698,13 +2698,6 @@ and applying $\bm A$ repeatedly
 \end{equation*}
 \newpage
 
-\section{Algebraic and Geometric multiplicity}
-We can define \textit{geometric multiplicity} 
-
-
-
-\newpage
-
 \section{Inutition for spectral theorem}
 \subsection{Symmetric matrices are always diagonalisable}
 If $\bm A$ is an $n$x$n$ symmetric matrix with eigenvector $\bm v$, and $\bm u\in\mathbb{C}$ is such that $\bm u\perp\bm v$, then 
@@ -2748,7 +2741,34 @@ Therefore,
 since $\lambda-\mu\neq0$, then $\langle\bm x,\bm y\rangle=0$, and $\bm x\perp\bm y$.
 \newpage
 
-\section{}
+\section{Symmetric Positive Definite Matrices}
+\subsection{Equivalence of definitions}
+A symmetric matrix is \textit{positive definite} if the energy $\bm x^T\bm{Sx}$ is positive for all vectors $\bm x\neq\bm0$.\\
+\vspace{1mm}\\
+Another definition: A symmetric matrix is positive definite if all its eigenvalues are positive.\\
+\vspace{1mm}\\
+We can show that the two definitions are equivalent:
+\begin{equation*}
+\bm{Sx}=\lambda\bm x\implies\bm x^T\bm{Sx}=\lambda\bm x^T\bm x
+\end{equation*}
+So $\lambda>0$ leads to energy $\bm x^T\bm{Sx}>0$. If the eigenvalues are all positive, then the energy definition holds when $\bm x$ 
+are eigenvectors.\\
+\vspace{1mm}\\
+We can show further that
+if $\bm x^T\bm{Sx}>0$ for the eigenvectors of $\bm S$, then $x^T\bm{Sx}>0$ for every nonzero vector $\bm x$. Recall that symmetric matrices
+are always diagonalisable, and that their eigenvectors can be chosen orthogonal. As such, every $\bm x$ is a combination 
+$c_1\bm x_1+\cdots+c_n\bm x_n$ of the eigenvectors, and we can show
+\begin{align*}
+\bm x^T\bm{Sx}&=(c_1\bm x_1^T+\cdots+c_n\bm x_n^T)\,\bm S\,(c_1\bm x_1+\cdots+c_n\bm x_n)\\
+&=(c_1\bm x_1^T+\cdots+c_n\bm x_n^T)(c_1\lambda_1\bm x_1+\cdots+c_n\lambda_n\bm x_n)\\
+&=(c_1^2\lambda_1\bm x_1^T\bm x_1+\cdots+c_n^2\lambda_n\bm x_n^T\bm x_n)
+\end{align*}
+(In the last step we used the orthogonality of the eigenvectors of $\bm S$, so $\bm x_i^t\bm x_j=0$ for $i\neq j$) See that the entire final 
+expression is $>0$ if every $\lambda_i>0$.
+
+\subsection{If $\bm S_1$ and $\bm S_2$ are symmetric positive definite, so is $\bm S_1+\bm S_2$}
+
+
 
 
 \appendix
