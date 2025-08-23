@@ -2774,10 +2774,74 @@ We can prove this simply adding energies:
 If both $\bm S_1$ and $\bm S_2$ are positive definite, so is their sum.
 \newpage
 
-\section{The $\bm{LDL}^T$ and Cholesky decompositions}
-Let
-
-
+\section{Cholesky decompositions}
+Let $\bm A$ be a $K$ by $K$ matrix. We say that $\bm A$ possesses a cholesky decomposition if and only if there exists a lower triangular 
+$K$ by $K$ matrix $\bm L$ such that its diagonal entries are strictly positive real numbers and 
+\begin{equation*}
+\bm A=\bm{LL}^*
+\end{equation*}
+Where $\bm L^*$ denotes the conjugate transpose of $\bm L$. When $\bm L$ is real, then the conjugate transpose $\bm L^*$ coincides with the 
+transpose $\bm L^T$ and the cholesky factorisation is
+\begin{equation*}
+\bm A=\bm{LL}^T
+\end{equation*}
+When we restrict our attention to real vectors and matrices, then we say that a real matrix $\bm A$ is positive definite if and only if $\bm A$ 
+is symmetric and 
+\begin{equation*}
+\bm x^T\bm{Ax}>0
+\end{equation*}
+for any non-zero real vector $\bm x$.\\
+\vspace{1mm}\\
+We can show that a square matrix possesses a cholesky factorisation if and only if it is positive definite. Since a positive definite matrix $\bm A$
+is Hermitian ($\bm A=\bm A^*$), it can be diagonalised as
+\begin{equation*}
+\bm A=\bm P^*\bm{DP}
+\end{equation*}
+Where $\bm P$ is a unitary matrix (orthogonal but allowed to be complex) and $\bm D$ is a diagonal matrix with the eigenvalues of $\bm A$ on its 
+main diagonal. Since $\bm A$ is positive definite, its eigenvalues are 
+\textit{strictly positive numbers}. Thus we can write
+\begin{equation*}
+\bm D=\bm D^{1/2}\bm D^{1/2}
+\end{equation*}
+where $\bm D^{1/2}$ is a diagonal matrix such that its $(k,k)$-th entry satisfies
+\begin{equation*}
+(\bm D^{1/2})_{kk}=\sqrt{\bm D_{kk}}
+\end{equation*}
+for $\bm k=1,\ldots,K$. Therefore,
+\begin{align*}
+\bm A&=\bm P^*\bm{DP}\\
+&=\bm P^*\bm D^{1/2}\bm D^{1/2}\bm P\\
+&=(\bm D^{1/2}\bm P)^*\bm D^{1/2}\bm P
+\end{align*}
+The matrix $\bm P$ is unitary and therefore full rank. The matrix $\bm D^{1/2}$ is diagonal with strictly positive entries---and is therefore also
+full-rank. The product of two full rank matrices is full rank, and so 
+$\bm D^{1/2}\bm P$ is full-rank.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+$\bm D^{1/2}\bm P$ is full-rank. It therefore has a $\bm{QR}$ decomposition (discussed earlier):
+\begin{equation*}
+\bm D^{1/2}\bm P=\bm{QR}
+\end{equation*}
+where $\bm Q$ is a unitary matrix and $\bm R$ is upper triangular \textit{with strictly positive entries on its main diagonal}. Thus we have
+\begin{align*}
+\bm A&=(\bm D^{1/2}\bm P)^*\bm D^{1/2}\bm P\\
+&=(\bm{QR})^*\bm{QR}\\
+&=\bm R^*\bm Q^*\bm{QR}\\
+&=\bm R^*\bm R\\
+&=\bm{LL}^*
+\end{align*}
+This shows that the all positive definite matrices have cholesky factorisations.\\
+\vspace{1mm}\\
+Say that some $\bm A$ has a cholesky decomposition. Since the diagonal entries of $\bm L$ are strictly positive, $\bm L$ and $\bm L^*$ are
+full-rank. Therefore for any $\bm x\neq\bm 0$, we have
+\begin{equation*}
+\bm L^*\bm x\neq\bm0
+\end{equation*}
+which then satisfies
+\begin{equation*}
+\bm x^*\bm A\bm x=\bm x^*\bm L\bm L^*\bm x=||L^*\bm x||^2\geq0
+\end{equation*}
+for any $\bm x\neq\bm0$. This shows that any matrix with a cholesky factorisation is positive definite. 
 \newpage
 
 \section{Other tests for positive definiteness}
@@ -2801,7 +2865,9 @@ can then be zero, but \textit{will still never be negative}, meaning
 \end{equation*}
 As such, we can conclude that $\bm S=\bm A^T\bm A$ is at least semidefinite: $\bm x^T\bm{Sx}=||\bm{Ax}||^2$ will be $>0$ if the columns
 of $\bm A$ are independent (positive definite), or it will be $\geq0$ otherwise (positive semidefinite).
+\newpage
 
+\subsection{}
 
 
 
