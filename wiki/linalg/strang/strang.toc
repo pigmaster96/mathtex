@@ -69,8 +69,9 @@
 \contentsline {section}{\numberline {6.10}Cholesky decomposition}{84}{}%
 \contentsline {section}{\numberline {6.11}Other tests for positive definiteness}{87}{}%
 \contentsline {subsection}{\numberline {6.11.1}$\bm {S}=\bm {A}^T\bm {A}$}{87}{}%
-\contentsline {subsection}{\numberline {6.11.2}}{88}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{89}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{89}{}%
-\contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{91}{}%
-\contentsline {section}{\numberline {A.3}}{93}{}%
+\contentsline {subsection}{\numberline {6.11.2}$\bm {LDL}^T$ factorisation and positive pivots}{88}{}%
+\contentsline {section}{\numberline {6.12}}{89}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{90}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{90}{}%
+\contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{92}{}%
+\contentsline {section}{\numberline {A.3}}{94}{}%

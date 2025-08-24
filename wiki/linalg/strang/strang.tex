@@ -2930,9 +2930,49 @@ As such, we can conclude that $\bm S=\bm A^T\bm A$ is at least semidefinite: $\b
 of $\bm A$ are independent (positive definite), or it will be $\geq0$ otherwise (positive semidefinite).
 \newpage
 
-\subsection{}
+\subsection{$\bm{LDL}^T$ factorisation and positive pivots}
+\textbf{$\bm{LDL}^T$ factorisation}\\
+Assuming now row exchanges are needed, we have Gaussian elimination as $\bm A=\bm{LU}$ (instead of $\bm{PA}=\bm{LU}$). Looking at the upper triangular $\bm U$, see that
+we can factor out the pivots of each row separately into a diagonal matrix $\bm D$, leaaving 1's along the diagonal of the factored $\bm U_1$:
+\begin{equation*}
+\bm{LU}=\bm L\bm{DU}_1
+\end{equation*}
+If $\bm A$ were symmetric, this implies
+\begin{equation*}
+\bm{LDU}_1=\bm U_1^T\bm D\bm L^T
+\end{equation*}
+assuming that $\bm U$ and $\bm L$ are invertible, then we have
+\begin{equation*}
+(\bm U_1^T)^{-1}\bm{LD}=\bm D\bm L^T\bm U_1^{-1}
+\end{equation*}
+Notice that the matrix on the left hand side is lower triangular, while that on the right hand side is upper triangular. The only way they can be equal is if both
+sides are diagonal.\\
+\vspace{1mm}\\
+$\bm D$ is diagonal, both $(\bm U_1^T)^{-1}\bm{L}$ and $\bm L^T\bm U_1^{-1}$ must be diagonal. Finally, because there are only 1's on the diagonals of both expressions, they
+must both be the identity. Therefore,
+\begin{equation*}
+\bm L=\bm U_1^T,\quad\bm L^T=\bm U_1
+\end{equation*}
+and our original factorisation can be written as
+\begin{equation*}
+\bm A=\bm{LDL}^T
+\end{equation*}
+\textbf{Positive pivots as a test for positive definiteness}\\
+Every positive definite matrix $\bm S$ has a unique cholesky factorisation
+\begin{equation*}
+\bm S=\bm{AA}^T
+\end{equation*}
+Where $\bm A$ has real positive diagonal entries. Working backward, we can factor out the (positive) diagonal entries of $\bm A$, leaving 1's on the diagonals:
+\begin{equation*}
+\bm S=\bm{LD}'\bm D'\bm L^T=\bm{LD}\bm L^T
+\end{equation*}
+Where $\bm D=\bm D'\bm D'$. See that $\bm D$ (the pivots) must have positive entries.\\
+\vspace{1mm}\\
+Since the cholesky decomposition is unique, this factorisation is also unique. See that this means that a positive definite matrix will have \textit{positive pivots}, and
+that elimination of a positive definite matrix \textit{will not require row exchanges}.
+\newpage
 
-
+\section{}
 
 
 
