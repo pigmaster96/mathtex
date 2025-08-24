@@ -66,11 +66,11 @@
 \contentsline {section}{\numberline {6.9}Symmetric Positive Definite Matrices}{83}{}%
 \contentsline {subsection}{\numberline {6.9.1}Equivalence of definitions}{83}{}%
 \contentsline {subsection}{\numberline {6.9.2}If $\bm {S}_1$ and $\bm {S}_2$ are symmetric positive definite, so is $\bm {S}_1+\bm {S}_2$}{83}{}%
-\contentsline {section}{\numberline {6.10}Cholesky decompositions}{84}{}%
-\contentsline {section}{\numberline {6.11}Other tests for positive definiteness}{86}{}%
-\contentsline {subsection}{\numberline {6.11.1}$\bm {S}=\bm {A}^T\bm {A}$}{86}{}%
-\contentsline {subsection}{\numberline {6.11.2}}{87}{}%
-\contentsline {chapter}{\numberline {A}Misc. topics}{88}{}%
-\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{88}{}%
-\contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{90}{}%
-\contentsline {section}{\numberline {A.3}}{92}{}%
+\contentsline {section}{\numberline {6.10}Cholesky decomposition}{84}{}%
+\contentsline {section}{\numberline {6.11}Other tests for positive definiteness}{87}{}%
+\contentsline {subsection}{\numberline {6.11.1}$\bm {S}=\bm {A}^T\bm {A}$}{87}{}%
+\contentsline {subsection}{\numberline {6.11.2}}{88}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{89}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{89}{}%
+\contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{91}{}%
+\contentsline {section}{\numberline {A.3}}{93}{}%

@@ -2774,7 +2774,7 @@ We can prove this simply adding energies:
 If both $\bm S_1$ and $\bm S_2$ are positive definite, so is their sum.
 \newpage
 
-\section{Cholesky decompositions}
+\section{Cholesky decomposition}
 Let $\bm A$ be a $K$ by $K$ matrix. We say that $\bm A$ possesses a cholesky decomposition if and only if there exists a lower triangular 
 $K$ by $K$ matrix $\bm L$ such that its diagonal entries are strictly positive real numbers and 
 \begin{equation*}
@@ -2841,7 +2841,70 @@ which then satisfies
 \begin{equation*}
 \bm x^*\bm A\bm x=\bm x^*\bm L\bm L^*\bm x=||L^*\bm x||^2\geq0
 \end{equation*}
-for any $\bm x\neq\bm0$. This shows that any matrix with a cholesky factorisation is positive definite. 
+for any $\bm x\neq\bm0$. This shows that any matrix with a cholesky factorisation is positive definite.\\
+\vspace{1mm}\\
+\textbf{Uniqueness}\\
+We can show that the cholesky factorisation for any positive definite $\bm A$ is unique. Given that we have
+\begin{equation*}
+\bm A=\bm{LL}^*
+\end{equation*}
+Suppose that there exists another decomposition
+\begin{equation*}
+\bm{A}=\bm{MM}^*
+\end{equation*}
+Then we have
+\begin{equation*}
+\bm{LL}^*=\bm{MM}^*
+\end{equation*}
+and
+\begin{equation*}
+\bm M^{-1}\bm L=\bm M^*(\bm L^*)^{-1}
+\end{equation*}
+where the existence of the inverses $(\bm L^*)^{-1}$ and $\bm M^{-1}$ are guaranteed by the fact that $\bm L$ and $\bm M$ are triangular with 
+strictly positive diagonal entries.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+\bm M^{-1}\bm L=\bm M^*(\bm L^*)^{-1}
+\end{equation*}
+Since $\bm M$ and $\bm L$ are lower triangular, $\bm M^{-1}\bm L$ is lower triangular. Since $\bm M^*$ and $\bm L^*$ are upper triangular,
+$\bm M^*(\bm L^*)^{-1}$ is upper triangular.\\
+\vspace{1mm}\\
+The lower triangular $\bm M^{-1}\bm L$ can be equal to the upper triangular $\bm M^*(\bm L^*)^{-1}$ only if both matrices are diagonal. 
+Therefore,
+\begin{equation*}
+\bm M^{-1}\bm L=\bm D=\bm M^*(\bm L^*)^{-1}
+\end{equation*}
+where $\bm D$ is a diagonal matrix. Now see that
+\begin{align*}
+(\bm D^*)^{-1}&=((\bm M^*(\bm L^*)^{-1})^*)^{-1}\\
+&=(\bm L^{-1}\bm M)^{-1}\\
+&=\bm M^{-1}\bm L=\bm D
+\end{align*}
+and so we can then write
+\begin{equation*}
+\bm{DD}^*=(\bm D^*)^{-1}\bm D^*=\bm I
+\end{equation*}
+This means that any diagonal entry of $\bm D$, which we can denote as $\bm D_{kk}$, satisfies
+\begin{equation*}
+\bm D_{kk}\overline{\bm D_{kk}}=|\bm D_{kk}|^2=1
+\end{equation*}
+See that this means that the diagonal entries of $\bm D$ are all located on the unit circle (the one with the real and complex axes).\\
+\vspace{1mm}\\
+Moreover, $\bm D$ needs to satisfy the constraint
+\begin{equation*}
+\bm L=\bm{MD}
+\end{equation*}
+where the diagonal entries of both $\bm M$ and $\bm L$ are \textit{real and strictly positive}. The only way to satisfy this constraint 
+while remaining on the unit circle is to have
+\begin{equation*}
+\bm D_{kk}=1
+\end{equation*}
+for all $k$. Therefore, $\bm D=\bm I$, and 
+\begin{equation*}
+\bm L=\bm M
+\end{equation*}
 \newpage
 
 \section{Other tests for positive definiteness}
