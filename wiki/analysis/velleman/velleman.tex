@@ -77,9 +77,7 @@ x\in A\cap B=x\in A\land x\in B
 The same can be shown for the union and difference.
 
 \subsection{Distributivity of set operations}
-We show
-\begin{equation*}
-x\in A\cap(B\cup C)\text{ is equivalent to }
+We show \begin{equation*} x\in A\cap(B\cup C)\text{ is equivalent to }
 x\in(A\cap B)\cup(A\cap C)
 \end{equation*}
 By analysing their logical forms:
@@ -105,8 +103,23 @@ x\in(A\cup B)\cap(A\cup C)
 \end{equation*}
 \newpage
 
-\subsection{Distributivity of difference operation}
+\subsection{$x\in A\setminus(B\cap C)=x\in(A\setminus B)\cup(A\setminus C)$}
+We can also show
+\begin{equation*}
+x\in A\setminus(B\cap C)=x\in(A\setminus B)\cup(A\setminus C)
+\end{equation*}
+See that
+\begin{align*}
+&x\in A\setminus(B\cap C)&\\
+&=x\in A\land\neg\,(x\in B\cap C)&\text{(Definition of $\setminus$)}\\
+&=x\in A\land\neg\,(x\in B\land x\in C)&\text{(Definition of $\cap$)}\\
+&=x\in A\land(x\notin B\lor x\notin C)&\text{(De Morgan's)}\\
+&=(x\in A\land x\notin B)\lor(x\in A\land x\notin C)&\text{(Distributivity)}\\
+&=(x\in A\setminus B)\lor(x\in A\setminus C)&\text{(Definition of $\setminus$)}\\
+&=x\in(A\setminus B)\cup(A\setminus C)&\text{(Definition of $\cup$)}
+\end{align*}
 
+\subsection{}
 
 
 
