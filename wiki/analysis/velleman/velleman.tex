@@ -53,6 +53,63 @@ P\land(P\lor Q)\text{ is equivalent to }P
 \end{align*}
 \newpage
 
+\subsection{Set operation definitions}
+The \textit{intersection} of two sets $A$ and $B$ is the set $A\cap B$ defined as follows:
+\begin{align*}
+A\cap B=\{x\,|\,x\in A\text{ and }x\in B\}
+\end{align*}
+The \textit{union} of $A$ and $B$ is the set $A\cup B$ defined as follows:
+\begin{align*}
+A\cup B=\{x\,|\,x\in A\text{ or }x\in B\}
+\end{align*}
+The \textit{difference} of $A$ and $B$ is the set $A\setminus B$ defined as follows:
+\begin{align*}
+A\setminus B=\{x\,|\,x\in A\text{ and }x\notin B\}
+\end{align*}
+See that 
+\begin{equation*}
+x\in A\cap B=x\in\{y\,|\,y\in A\text{ and }y\in B\}
+\end{equation*}
+where $y$ is a dummy variable. So we can also write that
+\begin{equation*}
+x\in A\cap B=x\in A\land x\in B
+\end{equation*}
+The same can be shown for the union and difference.
+
+\subsection{Distributivity of set operations}
+We show
+\begin{equation*}
+x\in A\cap(B\cup C)\text{ is equivalent to }
+x\in(A\cap B)\cup(A\cap C)
+\end{equation*}
+By analysing their logical forms:
+\begin{align*}
+&x\in A\cap(B\cup C)\\
+&=x\in A\land x\in(B\cup C)\\
+&=x\in A\land(x\in B\lor x\in C)
+\end{align*}
+and
+\begin{align*}
+&x\in(A\cap B)\cup(A\cap C)\\
+&=x\in(A\cap B)\lor x\in(A\cap C)\\
+&=(x\in A\land x\in B)\lor(x\in A\land x\in C)\\
+&=[(x\in A\land x\in B)\lor x\in A)]\land[(x\in A\land x\in B)\lor x\in C)]\\
+&=x\in A\land[(x\in A\lor x\in C)\land(x\in B\lor x\in C)]\\
+&=[x\in A\land(x\in A\lor x\in C)]\land(x\in B\lor x\in C)\\
+&=x\in A\land(x\in B\lor x\in C)
+\end{align*}
+We can also show, in a similar manner, that
+\begin{equation*}
+x\in A\cup(B\cap C)\text{ is equivalent to }
+x\in(A\cup B)\cap(A\cup C)
+\end{equation*}
+\newpage
+
+\subsection{Distributivity of difference operation}
+
+
+
+
 
 
 
