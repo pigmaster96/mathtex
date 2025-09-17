@@ -3,4 +3,6 @@
 \contentsline {subsection}{\numberline {1.0.2}Set operation definitions}{3}{}%
 \contentsline {subsection}{\numberline {1.0.3}Distributivity of set operations}{3}{}%
 \contentsline {subsection}{\numberline {1.0.4}$x\in A\setminus (B\cap C)=x\in (A\setminus B)\cup (A\setminus C)$}{4}{}%
-\contentsline {subsection}{\numberline {1.0.5}}{4}{}%
+\contentsline {subsection}{\numberline {1.0.5}$x\in (A\cup B)\setminus (A\cap B)=x\in (A\setminus B)\cup (B\setminus A)$}{4}{}%
+\contentsline {subsection}{\numberline {1.0.6}$(A\cap B)\cap (A\setminus B)=\emptyset $}{4}{}%
+\contentsline {subsection}{\numberline {1.0.7}Conditional and Contrapositive laws}{5}{}%

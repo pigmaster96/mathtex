@@ -119,8 +119,38 @@ See that
 &=x\in(A\setminus B)\cup(A\setminus C)&\text{(Definition of $\cup$)}
 \end{align*}
 
-\subsection{}
+\subsection{$x\in(A\cup B)\setminus(A\cap B)=x\in(A\setminus B)\cup(B\setminus A)$}
+\begin{align*}
+&x\in(A\cup B)\setminus(A\cap B)&\\
+&=(x\in A\lor x\in B)\land\neg\,(x\in A\land x\in B)&(\text{By definition)}\\
+&=(x\in A\lor x\in B)\land(x\notin A\lor x\notin B)&\text{(De Morgan's)}\\
+&=[(x\in A\lor x\in B)\land(x\notin A)]&\\
+&\qquad\qquad\qquad\lor[(x\in A\lor x\in B)\land(x\notin B)]&\text{(Distributivity)}\\
+&=[(x\notin A\land x\in A)\lor(x\notin A\land x\in B)]&\\
+&\qquad\qquad\qquad\lor[(x\notin B\land x\in A)\lor(x\notin B\land x\in B)]&\text{(Distributivity)}\\
+&=(x\notin A\land x\in B)\lor(x\notin B\land x\in A)&\\
+&=(x\in A\land x\notin B)\land(x\in B\land x\notin A)&\text{(Commutativity)}\\
+&=x\in(A\setminus B)\cup(B\setminus A)&\text{(By definition)}
+\end{align*}
 
+\subsection{$(A\cap B)\cap(A\setminus B)=\emptyset$}
+See that
+\begin{align*}
+&x\in(A\cap B)\cap(A\setminus B)&\\
+&=(x\in A\land x\in B)\land(x\in A\land x\notin B)&\text{(Definition)}\\
+&=x\in A\land\underbrace{(x\in B\land x\notin B)}_{\text{Contradiction}}&\text{(Associativity + Commutativity)}
+\end{align*}
+The last statement is a contradiction, so the statement 
+$x\in(A\cap B)\cap(A\setminus B)$ will always be false, no matter what $x$ is. In other words, nothing can be an element of 
+$(A\cap B)\cap(A\setminus B)$, so it must be the case that 
+$(A\cap B)\cap(A\setminus B)=\emptyset$; $A\cap B$ and $A\setminus B$ are disjoint.
+\newpage
+
+\subsection{Conditional and Contrapositive laws}
+\textbf{Conditional Laws}
+\begin{equation*}
+P\to Q\text{ is equivalent to }\neg\,(P\land\neg\,Q)
+\end{equation*}
 
 
 
