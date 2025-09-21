@@ -233,6 +233,40 @@ and
 \begin{equation*}
 \exists x\in A\,P(x)=\exists x(x\in A\land P(x))
 \end{equation*}
+\newpage
+
+\subsection{Negation law for bounded quantifiers}
+We can show
+\begin{equation*}
+\neg\forall x\in A\,P(x)=\exists x\in A\,\neg P(x)
+\end{equation*}
+See that
+\begin{align*}
+&\neg\forall x\in A\,P(x)&\\
+&=\neg\forall x(x\in A\to P(x))&\text{(as defined)}\\
+&=\exists x\neg(x\in A\to P(x))&\text{(negation law)}\\
+&=\exists x\neg\neg(x\in A\land\neg P(x))&\text{(conditional law)}\\
+&=\exists x(x\in A\land\neg P(x))&\\
+&=\exists x\in A\,\neg P(x)&\text{(as defined)}
+\end{align*}
+Similarly we can show
+\begin{equation*}
+\neg\exists x\in A\,P(x)=\forall x\in A\,\neg P(x)
+\end{equation*}
+See that
+\begin{align*}
+&\neg\exists x\in A\,P(x)&\\
+&=\neg\exists x(x\in A\land P(x))&\text{(as defined)}\\
+&=\forall x\neg(x\in A\land P(x))&\text{(negation law)}\\
+&=\forall x(x\in A\to\neg P(x))&\text{(conditional law)}\\
+&=\forall x\in A\,\neg P(x)&\text{(as defined)}
+\end{align*}
+\newpage
+
+\subsection{}
+
+
+
 
 
 
