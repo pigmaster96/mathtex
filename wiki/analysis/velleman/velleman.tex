@@ -192,7 +192,8 @@ Combining the two as $(P\to Q)\land(Q\to P)=P\leftrightarrow Q$ therefore corres
 $P\leftrightarrow Q$ means `$P$ iff $Q$', or `$P$ is a necessary and sufficient condition for $Q$'.
 \newpage
 
-\section{Quantifier Negation Laws}
+\section{Quantificational logic}
+\subsection{Quantifier negation laws}
 We have
 \begin{align*}
 &\neg\exists xP(x)\text{ is equivalent to }\forall x\neg P(x)\\
@@ -205,8 +206,33 @@ the universe of discourse, $P(x)$ is false---meaning $\forall x\neg P(x)$.\\
 Similarly, to say that $\neg\forall xP(x)$ means that it is not the case that for all values of $x$, $P(x)$ is true. This is equivalent to saying that that there is at least one
 value of $x$ for which $P(x)$ is false---so $\exists x\neg P(x)$.
 
-
-
+\subsection{Notation}
+\textbf{`Exactly one' notation}\\
+We write 
+\begin{equation*}
+\exists!xP(x)=\exists x(P(x)\land\neg\exists y(P(y)\land y\neq x))
+\end{equation*}
+As a shorthand way to write `there is exactly one value of $x$ such that $P(x)$ is true', or `there is a unique $x$ such that $P(x)$'.\\
+\vspace{1mm}\\
+\textbf{Specifying quantifiers}\\
+We write
+\begin{equation*}
+\forall x\in A\, P(x)
+\end{equation*}
+to mean that \textit{for every value of $x$ in the set $A$, $P(x)$ is true}. Similarly,
+\begin{equation*}
+\exists x\in A\, P(x)
+\end{equation*}
+means \textit{there is at least one value of $x $ in the set $A$ such that $P(x)$ is true}.\\
+\vspace{1mm}\\
+Formulas containing bounded quantifiers can also be thought of as abbreviations for more complicated formulas containing only normal, unbounded quantifiers. See that 
+\begin{equation*}
+\forall x\in A\, P(x)=\forall x(x\in A\to P(x))
+\end{equation*}
+and
+\begin{equation*}
+\exists x\in A\,P(x)=\exists x(x\in A\land P(x))
+\end{equation*}
 
 
 

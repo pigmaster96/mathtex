@@ -7,4 +7,6 @@
 \contentsline {subsection}{\numberline {1.0.6}$(A\cap B)\cap (A\setminus B)=\emptyset $}{4}{}%
 \contentsline {subsection}{\numberline {1.0.7}Conditional and Contrapositive laws}{5}{}%
 \contentsline {subsection}{\numberline {1.0.8}Biconditional statements}{6}{}%
-\contentsline {section}{\numberline {1.1}Quantifier Negation Laws}{7}{}%
+\contentsline {section}{\numberline {1.1}Quantificational logic}{7}{}%
+\contentsline {subsection}{\numberline {1.1.1}Quantifier negation laws}{7}{}%
+\contentsline {subsection}{\numberline {1.1.2}Notation}{7}{}%
