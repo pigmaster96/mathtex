@@ -192,7 +192,22 @@ Combining the two as $(P\to Q)\land(Q\to P)=P\leftrightarrow Q$ therefore corres
 $P\leftrightarrow Q$ means `$P$ iff $Q$', or `$P$ is a necessary and sufficient condition for $Q$'.
 \newpage
 
-\section{}
+\section{Quantifier Negation Laws}
+We have
+\begin{align*}
+&\neg\exists xP(x)\text{ is equivalent to }\forall x\neg P(x)\\
+&\neg\forall xP(x)\text{ is equivalent to }\exists x\neg P(x)
+\end{align*}
+\textbf{Intuition}\\
+No matter what $P(x)$ stands for, the formula $\neg\exists xP(x)$ means that there is no value of $x$ for which $P(x)$ is true; this is ths same as saying that for every value of $x$ in 
+the universe of discourse, $P(x)$ is false---meaning $\forall x\neg P(x)$.\\
+\vspace{1mm}\\
+Similarly, to say that $\neg\forall xP(x)$ means that it is not the case that for all values of $x$, $P(x)$ is true. This is equivalent to saying that that there is at least one
+value of $x$ for which $P(x)$ is false---so $\exists x\neg P(x)$.
+
+
+
+
 
 
 
