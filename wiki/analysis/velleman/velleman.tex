@@ -6,6 +6,7 @@
 \usepackage{mathtools} %more math
 \usepackage{amssymb} %for QED symbol
 \usepackage{amsthm} %
+\usepackage{mathrsfs} %
 \usepackage{bm}%bold math
 \usepackage{graphicx} %import imaging
 \graphicspath{{./images/}} %set imaging path
@@ -263,11 +264,60 @@ See that
 \end{align*}
 \newpage
 
-\subsection{}
+\subsection{Vacuously true}
+It is clear that if $A=\emptyset$ then $\exists x\in A\,P(x)$ will be false regardless of $P(x)$, since there is nothing in $A$ that makes $P(x)$ come true 
+(since there is nothing in $A$ to being with).\\
+\vspace{1mm}\\
+Now consider $\forall x\in A\,P(x)$. We can reason that
+\begin{equation*}
+\forall x\in A\,P(x)=\neg\exists x\in A\,\neg P(x)\quad\text{(quantifier negation)}
+\end{equation*}
+See that if $A=\emptyset$ then this formula will be true, no matter what $P(x)$ is. In this case we say that the statement is \textit{vacuously true}.\\
+\vspace{1mm}\\
+Another way to see this is to rewrite
+\begin{equation*}
+\forall x\in A\,P(x)=\forall x(x\in A\to P(x))
+\end{equation*}
+The only way this can be false is if there is some value of $x$ such that $x\in A$ is true but $P(x)$ false; but there is no such value of $x$.
+Intuitively, because the condition cannot be met, it is impossible to provide a counterexample to prove something wrong.\\
+\vspace{1mm}\\
+An analogy would be me claiming `i've never lost a race to Usain Bolt'. This is true, but vacuously so.
+\newpage
 
+\subsection{Alternate definition for indexed families}
+Say we are looking for the set $\{p_1,p_2,\ldots,p_{100}\}$; another way of describing this set would be to say that it consists of all numbers $p_i$, for $i$ an element of the set
+$I=\{1,2,3,\ldots,100\}=\{i\in\mathbb{N}|1\leq i\leq 100\}$. We can write
+\begin{equation*}
+P=\{p_i|i\in I\}
+\end{equation*}
+Each element $p_i$ in this set is identified by $i\in I$, called the \textit{index} of each element. A set defined this way is called an \textit{indexed family}, and $I$ the \textit{index set}.
+Although the indices for an indexed family are often numbers, they need not be.\\
+\vspace{1mm}\\
+In general, see that any indexed family
+\begin{equation*}
+A=\{x_i|i\in I\}
+\end{equation*}
+Can also be defined as
+\begin{equation*}
+A=\{x|\exists i\in I\,(x=x_i)\}
+\end{equation*}
+It follows that the statement
+\begin{equation*}
+x\in\{x_i|i\in I\}
+\end{equation*}
+means the same thing as
+\begin{equation*}
+\exists i\in I\,(x=x_i)
+\end{equation*}
+\newpage
 
-
-
+\subsection{Power set}
+Suppose $A$ is as set. The \textit{power set} of $A$, denoted $\mathscr{P}(A)$, is the set whose elements are all subsets of $A$. In other words,
+\begin{equation*}
+\mathscr{P}(A)=\{x|x\subseteq A\}
+\end{equation*}
+For instance, the set $A=\{7,12\}$ has four subsets $\emptyset,\{7\},\{12\}$, and $\{7,12\}$;
+thus, $\mathscr{P}(A)=\{\emptyset,\{7\},\{12\},\{7,12\}\}$. 
 
 
 
