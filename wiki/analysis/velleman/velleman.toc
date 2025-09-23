@@ -14,3 +14,4 @@
 \contentsline {subsection}{\numberline {1.1.4}Vacuously true}{9}{}%
 \contentsline {subsection}{\numberline {1.1.5}Alternate definition for indexed families}{10}{}%
 \contentsline {subsection}{\numberline {1.1.6}Power set}{11}{}%
+\contentsline {subsection}{\numberline {1.1.7}Intersection and union of a family of sets}{11}{}%

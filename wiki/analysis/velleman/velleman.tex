@@ -319,6 +319,20 @@ Suppose $A$ is as set. The \textit{power set} of $A$, denoted $\mathscr{P}(A)$, 
 For instance, the set $A=\{7,12\}$ has four subsets $\emptyset,\{7\},\{12\}$, and $\{7,12\}$;
 thus, $\mathscr{P}(A)=\{\emptyset,\{7\},\{12\},\{7,12\}\}$. 
 
+\subsection{Intersection and union of a family of sets}
+Suppose $\mathcal{F}$ is a family of sets. The \textit{intersection} and \textit{union} of $\mathcal{F}$ are the sets $\bigcap\mathcal{F}$ and $\bigcup\mathcal{F}$ are defined as follows:
+\begin{align*}
+&\bigcap\mathcal F=\{x|\forall A\in\mathcal F(x\in A)\}=\{x|\forall A(A\in\mathcal F\to x\in A)\}\\
+&\bigcup\mathcal F=\{x|\exists A\in\mathcal F(x\in A)\}=\{x|\exists A(A\in\mathcal F\land x\in A)\}
+\end{align*}
+Notice that if $A$ and $B$ are any two sets and $\mathcal F=\{A,B\}$, then $\bigcap\mathcal F=A\cap B$ and $\bigcup\mathcal F=A\cup B$; the definitions of intersection and union of a family of sets
+are generalisations of our old definitions of the intersection and union of two sets.
+
+
+
+
+
+
 
 
 
