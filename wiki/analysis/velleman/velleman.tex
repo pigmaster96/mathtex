@@ -326,10 +326,37 @@ Suppose $\mathcal{F}$ is a family of sets. The \textit{intersection} and \textit
 &\bigcup\mathcal F=\{x|\exists A\in\mathcal F(x\in A)\}=\{x|\exists A(A\in\mathcal F\land x\in A)\}
 \end{align*}
 Notice that if $A$ and $B$ are any two sets and $\mathcal F=\{A,B\}$, then $\bigcap\mathcal F=A\cap B$ and $\bigcup\mathcal F=A\cup B$; the definitions of intersection and union of a family of sets
-are generalisations of our old definitions of the intersection and union of two sets.
+are generalisations of our old definitions of the intersection and union of two sets.\\
+\vspace{1mm}\\
+\textbf{Alternative notation}\\
+An alternative notation is sometimes used for the union or intersection of an indexed family of sets. Suppose $\mathcal F=\{A_i|i\in I\}$, where each $A_i$ is a set,
+then $\bigcap\mathcal F$ and $\bigcup\mathcal F$ could also be written as 
+$\bigcap_{i\in I}A_i$ and $\bigcup_{i\in I}A_i$; as such
+\begin{align*}
+&\bigcap\mathcal F=\bigcap_{i\in I}A_i=\{x|\forall i\in I(x\in A_i)\}\\
+&\bigcup\mathcal F=\bigcup_{i\in I}A_i=\{x|\exists i\in I(x\in A_i)\}
+\end{align*}
+\newpage
 
-
-
+\subsection{More on set notation}
+One generally defines a set using the elementhood test notation
+\begin{equation*}
+\{x|P(x)\}
+\end{equation*}
+Where the set consists of all $x$ that satisfy the specified condition $P(x)$. Sometimes this notation can be modified to allow the $x$ before the vertical line to be replaced
+with a more complex expression. For example, suppose we wanted to define $S$ to be the set of all
+perfect squres, we could write
+\begin{equation*}
+S=\{n^2|n\in\mathbb{N}\}
+\end{equation*}
+This is the same as
+\begin{equation*}
+S=\{x|\exists n\in\mathbb N(x=n^2)\}
+\end{equation*}
+See therefore that 
+\begin{equation*}
+x\in\{n^2|n\in\mathbb{N}\}=\exists n\in\mathbb N(x=n^2)
+\end{equation*}
 
 
 
