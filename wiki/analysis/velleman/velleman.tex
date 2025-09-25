@@ -9,7 +9,10 @@
 \usepackage{mathrsfs} %
 \usepackage{bm}%bold math
 \usepackage{graphicx} %import imaging
+
 \graphicspath{{./images/}} %set imaging path
+\newtheorem*{theorem}{Theorem}
+
 \begin{document}
 \maketitle
 
@@ -358,7 +361,55 @@ See therefore that
 x\in\{n^2|n\in\mathbb{N}\}=\exists n\in\mathbb N(x=n^2)
 \end{equation*}
 
+\chapter{Proof Strategies}
+\subsection{Terminology}
+We want to state the answer to a mathematical question in the form of a \textit{theorem} that says that if certain assumptions called the \textit{hypotheses} of the theorem are true, then
+some conclusion must also be true.\\
+\vspace{1mm}\\
+An assignment of particular values to these variables is called an \textit{instance} of the theorem, and in order for the theorem to be correct it must be the case
+that for every instance of the theorem that makes the hypotheses come out true, the conclusion is also true.\\
+\vspace{1mm}\\
+If there is even one instance
+in which the hypotheses are true but the conclusion is false, then the theorem is incorrect; such an instance is called a \textit{counterexample} to the theorem.\\
+\vspace{1mm}\\
+As in the next section, we will refer to statements that are known or assumed to be true at some point in the course of figuring out the proof as \textit{givens}, and the statements that remains
+to be proven at that point as the \textit{goal}.
+\newpage
 
+\subsection{To prove a conclusion of the form $P\to Q$}
+To prove a conclusion of the form $P\to Q$, we can \textit{assume $P$ is true and then prove $Q$}.\\
+\vspace{1mm}\\
+Assuming that $P$ is true amounts to adding $P$ to the lists of hypotheses. If the conclusion of the theorem we are trying to prove has the form $P\to Q$, then we can \textit{transform the
+problem} by adding $P$ to the list of hypotheses and changing the conclusion form $P\to Q$ to $Q$.\\
+\vspace{1mm}\\
+How we solve this new problem will now then be guided by the logical form of the new conclusion $Q$, and perhaps also that of the new hypothesis $P$.\\
+\vspace{1mm}\\
+This strategy is one that proves the \textit{goal} of $P\to Q$. Even if the conclusion of a theorem is not a conditional statement, if we transform the problem in such a way that the conditional
+statement becomes the goal, then we can apply this strategy as the next step in figuring out the proof.\\
+\vspace{1mm}\\
+\textbf{Example:}
+\begin{theorem}
+Suppose $a$ and $b$ are real numbers. If $0<a<b$ then $a^2<b^2$.
+\end{theorem}
+\begin{proof}
+Suppose $0<a<b$. Multiplying the inequality $a<b$ by the positive number $a$ we can conclude that $a^2<ab$; similarly multiplying by $b$ we get $ab<b^2$. Therefore $a^2<ab<b^2$, so $a^2<b^2$.
+\end{proof}
+\noindent We were given as a hypothesis that $a$ and $b$ are real numbers with a conclusion of the form $P\to Q$, where $P$ is the statement $0<a<b$ and $Q$ the statement $a^2<b^2$. Thus
+we start with these statements as given and goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+$a$ and $b$ are real numbers&$(0<a<b)\to(a^2<b^2)$
+\end{tabular}
+\end{center}
+As per our strategy, we assume that $0<a<b$ and try to use this assumption to prove $a^2<b^2$. In other words we add $0<a<b$ to the list of givenas and make $a^2<b^2$ our goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+$a$ and $b$ are real numbers&$a^2<b^2$\\
+$0<a<b$&
+\end{tabular}
+\end{center}
 
 
 

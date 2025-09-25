@@ -16,3 +16,6 @@
 \contentsline {subsection}{\numberline {1.1.6}Power set}{11}{}%
 \contentsline {subsection}{\numberline {1.1.7}Intersection and union of a family of sets}{11}{}%
 \contentsline {subsection}{\numberline {1.1.8}More on set notation}{12}{}%
+\contentsline {chapter}{\numberline {2}Proof Strategies}{13}{}%
+\contentsline {subsection}{\numberline {2.0.1}Terminology}{13}{}%
+\contentsline {subsection}{\numberline {2.0.2}To prove a conclusion of the form $P\to Q$}{14}{}%
