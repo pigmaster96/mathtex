@@ -18,4 +18,6 @@
 \contentsline {subsection}{\numberline {1.1.8}More on set notation}{12}{}%
 \contentsline {chapter}{\numberline {2}Proof Strategies}{13}{}%
 \contentsline {subsection}{\numberline {2.0.1}Terminology}{13}{}%
-\contentsline {subsection}{\numberline {2.0.2}To prove a conclusion of the form $P\to Q$}{14}{}%
+\contentsline {section}{\numberline {2.1}To prove a conclusion of the form $P\to Q$}{14}{}%
+\contentsline {subsection}{\numberline {2.1.1}Alternative approach}{16}{}%
+\contentsline {section}{\numberline {2.2}Proofs involving negations and conditionals}{18}{}%

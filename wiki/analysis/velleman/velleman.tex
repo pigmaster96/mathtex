@@ -376,7 +376,7 @@ As in the next section, we will refer to statements that are known or assumed to
 to be proven at that point as the \textit{goal}.
 \newpage
 
-\subsection{To prove a conclusion of the form $P\to Q$}
+\section{To prove a conclusion of the form $P\to Q$}
 To prove a conclusion of the form $P\to Q$, we can \textit{assume $P$ is true and then prove $Q$}.\\
 \vspace{1mm}\\
 Assuming that $P$ is true amounts to adding $P$ to the lists of hypotheses. If the conclusion of the theorem we are trying to prove has the form $P\to Q$, then we can \textit{transform the
@@ -443,7 +443,8 @@ $P$&
 \indent Therefore $P\to Q$.\\
 \vspace{1mm}\\
 (next page)\newpage
-\noindent\textbf{Alternative approach}\\
+
+\subsection{Alternative approach}
 Another approach could utilise the contrapositive law, where 
 \begin{equation*}
 P\to Q=\neg\,Q\to\neg\,P
@@ -479,9 +480,45 @@ $\neg\,Q$&
 \indent Therefore $P\to Q$.\\
 \vspace{1mm}\\
 (next page)\newpage
-\noindent\textbf{Another example}\\
-Suppose $a,b$ and $c$
+\noindent\textbf{Example}\\
+Suppose $a,b$ and $c$ are real numbers and $a>b$. Prove that if $ac\leq bc$ then $c\leq0$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+Before using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$a,b$ and $c$ are real numbers&$(ac\leq bc)\to(c\leq0)$\\
+$a>b$&
+\end{tabular}
+\end{center}
+The contrapositive of the goal is $\neg(c\leq0)\to\neg(ac\leq bc)$, or $(c>0)\to(ac>bc)$. As per the previous strategy, we can prove this by adding $c>0$ to the list of givens 
+and making $ac>bc$ our new goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$a,b$ and $c$ are real numbers&$ac>bc$\\
+$a>b$&\\
+$c>0$&
+\end{tabular}
+\end{center}
+\textit{Form of final proof}:\\
+\indent Suppose $c>0$.\\
+\indent\indent [Proof of $ac>bc$ goes here.]\\
+\indent Therefore, if $ac\leq bc$ then $c\leq0$.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $a,b$ and $c$ are real numbers and $a>b$. If $ac\leq bc$ then $c\leq0$.
+\end{theorem}
+\begin{proof}
+We will prove the contrapositive. Suppose $c>0$. Then we can multiply both sides of the given inequality $a>b$ by $c$ and conclude that $ac>bc$. Therefore if $ac\leq bc$ then $c\leq0$.
+\end{proof}
+\newpage
 
+\section{Proofs involving negations and conditionals}
 
 
 
