@@ -21,3 +21,5 @@
 \contentsline {section}{\numberline {2.1}To prove a conclusion of the form $P\to Q$}{14}{}%
 \contentsline {subsection}{\numberline {2.1.1}Alternative approach}{16}{}%
 \contentsline {section}{\numberline {2.2}Proofs involving negations and conditionals}{18}{}%
+\contentsline {subsection}{\numberline {2.2.1}Reexpress}{18}{}%
+\contentsline {subsection}{\numberline {2.2.2}Proof by contradiction}{19}{}%

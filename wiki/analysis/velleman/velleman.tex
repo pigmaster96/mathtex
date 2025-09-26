@@ -519,6 +519,67 @@ We will prove the contrapositive. Suppose $c>0$. Then we can multiply both sides
 \newpage
 
 \section{Proofs involving negations and conditionals}
+\subsection{Reexpress}
+We now consider proofs in which the goal has the form $\neg P$. Usually it's easier to prove a positive statement than a negative statement, so it is often helpful to reexpress the goal before
+proving it. Thus our first strategy for proving negated statements is:\\
+\vspace{1mm}\\
+\indent To prove a goal of the form $\neg P$:\\
+\indent If possible, reexpress the goal in some other form.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Suppose $A\cap C\subseteq B$ and $a\in C$. Prove that $a\notin A\setminus B$.\\
+\vspace{1mm}\\
+\textit{Scratch Work}
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\cap C\subseteq B$&$a\notin A\setminus B$\\
+$a\in C$&
+\end{tabular}
+\end{center}
+We have a negative goal, which we can try to reexpress as a positive statement:
+\begin{align*}
+a\notin A\setminus B&=\neg(a\in A\land a\notin B)&\text{(Definition)}\\
+&=a\in A\to a\in B&\text{(Conditional law)}
+\end{align*}
+This gives us
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\cap C\subseteq B$&$a\in A\to a\in B$\\
+$a\in C$&
+\end{tabular}
+\end{center}
+We can apply the strategy for conditional goals:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\cap C\subseteq B$&$a\in B$\\
+$a\in C$&\\
+$a\in A$&
+\end{tabular}
+\end{center}
+See how the proof is now much more straightforward; from the givens $a\in A$ and $a\in C$ we can conclude $a\in A\cap C$. Since $A\cap C\subseteq B$, it follows that $a\in B$.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem} 
+Suppose $A\cap C\subseteq B$ and $a\in C$. Then $a\notin A\setminus B$.
+\end{theorem}
+\begin{proof} 
+Suppose $a\in A$. Then since $a\in C$, $a\in A\cap C$. Since $A\cap C\subseteq B$ it follows that $a\in B$. Thus it cannot be the case that $a$ is an element of $A$ but not $B$, so 
+$a\notin A\setminus B$.
+\end{proof}
+\noindent(next page)\newpage
+
+\subsection{Proof by contradiction}
+
+
+
+
+
 
 
 
