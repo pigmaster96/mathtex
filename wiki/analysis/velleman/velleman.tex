@@ -575,12 +575,131 @@ $a\notin A\setminus B$.
 \noindent(next page)\newpage
 
 \subsection{Proof by contradiction}
+Say a goal of the form $\neg P$ cannot be reexpressed as a positive statement, in this case one could attempt \textit{proof by contradiction}---start by assuming $P$ is true, and try to use this
+assumption to prove that something one already knows is false.\\
+\vspace{1mm}\\
+Often this is done by proving a statement that contradicts one of the givens; because one knows that the statement proven is false, the assumption that $P$ was true must have been incorrect---the
+only remaining possibility then is that $P$ is false.\\
+\vspace{1mm}\\
+\indent To prove a goal of the form $\neg P$:\\
+\indent Assume $P$ is true and try to reach a contradiction. In which case $P$ must be false.\\
+\vspace{1mm}\\
+\textit{Scratch Work}
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+---&$\neg P$\\
+---&
+\end{tabular}
+\end{center}
+After using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+---&Contradiction\\
+---&\\
+$P$&
+\end{tabular}
+\end{center}
+\textit{Form of final proof}:\\
+\indent Suppose $P$ is true.\\
+\indent\indent [Proof of contradiction goes here.]\\
+\indent Thus, $P$ is false.\\
+\vspace{1mm}\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Prove that if $x^2+y=13$ and $y\neq4$ then $x\neq3$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+The goal is a conditional statement. We treat the antecedent as a given and make the consequent our new goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x^2+y=13$&$x\neq3$\\
+$y\neq4$&
+\end{tabular}
+\end{center}
+Our current idea of the proof structure looks like\\
+\vspace{1mm}\\
+\indent Suppose $x^2+y^2=13$ and $y\neq4$.\\
+\indent\indent [Proof of $x\neq3$ goes here.]\\
+\indent Thus, if $x^2+y^2=13$ and $y\neq4$ then $x\neq3$.\\
+\vspace{1mm}\\
+In this sense, each manipulation of our problem dictates the structure of our final proof. At this point the first and last sentences of the final proof have been produced. 
+What remains is to prove $x\neq 3$ given our manipulated problem.\\
+\vspace{1mm}\\
+The goal $x\neq3$ means $\neg(x=3)$; we try proof by contradiction and transform the problem as follows:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x^2+y=13$&Contradiction\\
+$y\neq4$&\\
+$x=3$&
+\end{tabular}
+\end{center}
+Once again, the proof strategy that suggested this transformation also tells us how to fill in a few more sentences of the final proof:\\
+\vspace{1mm}\\
+\indent Suppose $x^2+y^2=13$ and $y\neq4$.\\
+\indent\indent Suppose $x=3$\\
+\indent\indent\indent [Proof of contradiction goes here.]\\
+\indent\indent Therefore $x\neq3$\\
+\indent Thus, if $x^2+y^2=13$ and $y\neq4$ then $x\neq3$.\\
+\vspace{1mm}\\
+The first and last lines go together and indicate that we are proving a conditional statement by assuming the antecedent and proving the consequent. Between these lines is a proof of
+the consequent $x\neq3$. This inner proof has the form of a proof by contradiction, as indicated by the second first and second last lines; between these lines we still need
+to fill in a proof of a contradiction.\\
+\vspace{1mm}\\
+At this point we don't have a particular statement as a goal; any impossible conclusion will do. We must look closely at the givens to find a contradiction.\\ 
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+If $x^2+y=13$ and $y\neq4$ then $x\neq3$.
+\end{theorem}
+\begin{proof}
+Suppose $x^2+y=13$ and $y\neq4$. Suppose $x=3$. Substituting this into the equation $x^2+y=13$, we get $9+y=13$, so $y=4$. But this contradicts the fact that $y\neq4$. Therefore $x\neq 3$. 
+Thus, if $x^2+y=13$ and $y\neq 4$ then $x\neq 3$.
+\end{proof}
 
-
-
-
-
-
+\subsection{To use a given of the form $\neg P$ in proof by contradiction}
+If attempting a proof by contradiction with a given $\neg P$. Here is a useful strategy;\\
+\vspace{1mm}\\
+\indent To use a given of the form $\neg P$:\\
+\indent Try making $P$ the goal. If one can prove $P$, then the proof is complete, since $P$ contradicts the given $\neg P$.\\
+\vspace{1mm}\\
+\textit{Scratch Work}\\
+Before using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\neg P$&Contradiction\\
+---&\\
+---&
+\end{tabular}
+\end{center}
+After using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\neg P$&$P$\\
+---&\\
+---&
+\end{tabular}
+\end{center}
+\textit{Form of final proof:}\\
+\indent\indent [Proof of $P$ goes here.]\\
+\indent Since we already know $\neg P$, this is a contradiction.\\
+\vspace{1mm}\\
+Note that proof by contradiction is not restricted to goals of the form $\neg P$, and can be used for any goal.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Suppose 
 
 
 

@@ -23,3 +23,4 @@
 \contentsline {section}{\numberline {2.2}Proofs involving negations and conditionals}{18}{}%
 \contentsline {subsection}{\numberline {2.2.1}Reexpress}{18}{}%
 \contentsline {subsection}{\numberline {2.2.2}Proof by contradiction}{19}{}%
+\contentsline {subsection}{\numberline {2.2.3}To use a given of the form $\neg P$ in proof by contradiction}{21}{}%
