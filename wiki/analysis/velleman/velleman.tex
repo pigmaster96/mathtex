@@ -794,7 +794,68 @@ Suppose $x\in A\setminus C$. This means that $x\in A$ and $x\notin C$. Suppose $
 $x\in A\setminus B$, so since $A\setminus B\subseteq C$, $x\in C$. But this contradicts the fact that $x\notin C$. Therefore $x\in B$. Thus, if $x\in A\setminus C$ then $x\in B$.
 \end{proof}
 
-\subsection{}
+\subsection{Given conditionals}
+We consider strategies for using givens of the form $P\to Q$:\\
+\vspace{1mm}\\
+\indent To use a given of the form $P\to Q$:\\
+\indent If also given $P$, or if one can prove $P$, then one can use this to conclude $Q$. Another approach would be to use its equivalence to $\neg Q\to\neg P$; if one can prove that
+$Q$ is false, then one can conclude that $P$ is false.\\
+\vspace{1mm}\\
+The first rule says that if you know both $P$ and $P\to Q$ are true, then $Q$ must also be true; this rule is called \textit{modus ponens}. The second rule, called \textit{modus tollens}, 
+says that if you know $P\to Q$ is true and $Q$ is false, then you can conclude that $P$ must also be false.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Suppose $P\to(Q\to R)$. Prove that $\neg R\to(P\to\neg Q)$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+We start with the following situation:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$P\to(Q\to R)$&$\neg R\to(P\to\neg Q)$\\
+\end{tabular}
+\end{center}
+If either $P$ or $\neg(Q\to R)$ gets added to the givens list, then we should consider using modus ponens or modus tollens. For now we concentrate on the goal; being a conditional statement, 
+we assume the antecedent and set the consequent as the new goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$P\to(Q\to R)$&$P\to\neg Q$\\
+$\neg R$&
+\end{tabular}
+\end{center}
+Our proof currently looks like:\\
+\vspace{1mm}\\
+\indent Suppose $\neg R$.\\
+\indent\indent [Proof of $P\to\neg Q$ goes here.]\\
+\indent Therefore $\neg R\to(P\to\neg Q)$.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+We had
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$P\to(Q\to R)$&$P\to\neg Q$\\
+$\neg R$&
+\end{tabular}
+\end{center}
+The goal is still a conditional. We use the same strategy again:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$P\to(Q\to R)$&$\neg Q$\\
+$\neg R$&\\
+$P$&
+\end{tabular}
+\end{center}
+
+
+
+
 
 
 
