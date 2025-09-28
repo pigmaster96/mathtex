@@ -699,7 +699,102 @@ $\neg P$&$P$\\
 Note that proof by contradiction is not restricted to goals of the form $\neg P$, and can be used for any goal.\\
 (next page)\newpage
 \noindent\textbf{Example}\\
-Suppose 
+Suppose $A,B$ and $C$ are sets, $A\setminus B\subseteq C$, and $x$ is anything at all. Prove that if $x\in A\setminus C$ then $x\in B$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+We're given $A\setminus B\subseteq C$ and our goal is $x\in A\setminus C\to x\in B$. We use the previously discussed strategy for conditionals (assume antecedent and prove consequent):
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\setminus B\subseteq C$&$x\in B$\\
+$x\in A\setminus C$&
+\end{tabular}
+\end{center}
+Our proof currently looks like\\
+\indent Suppose $x\in A\setminus C$.\\
+\indent\indent [Proof of $x\in B$ goes here.]\\
+\indent Thus, if $x\in A\setminus C$ then $x\in B$.\\
+\vspace{1mm}\\
+We attempt proof by contradiction:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\setminus B\subseteq C$&Contradiction\\
+$x\in A\setminus C$&\\
+$x\notin B$&
+\end{tabular}
+\end{center}
+Now our proof looks like\\
+\indent Suppose $x\in A\setminus C$.\\
+\indent\indent Suppose $x\notin B$\\
+\indent\indent\indent [Proof of contradiction goes here.]\\
+\indent\indent Therefore $x\in B$\\
+\indent Thus, if $x\in A\setminus C$ then $x\in B$.\\
+\vspace{1mm}\\
+Because we're doing a proof by contradiction and our last given is now a negated statement, we could try our strategy for using givens of the form $\neg P$. Unfortunately, this strategy suggests
+making $x\in B$ our goal which just gets us back to where we started. We must look at the other givens to try to find the contradiction.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+We have
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\setminus B\subseteq C$&Contradiction\\
+$x\in A\setminus C$&\\
+$x\notin B$&
+\end{tabular}
+\end{center}
+In this case writing out the definition of the second given is key to the proof. By definition $x\in A\setminus C$ means $x\in A$ and $x\notin C$. Replacing this given
+by its definition gives us
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\setminus B\subseteq C$&Contradiction\\
+$x\in A$&\\
+$x\notin C$&\\
+$x\notin B$&
+\end{tabular}
+\end{center}
+Now the third given has the form $\neg P$. We can apply the strategy for using givens of the form $\neg P$ and make $x\in C$ our goal, where showing it would complete the proof by contradicting
+the given $x\notin C$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\setminus B\subseteq C$&$x\in C$\\
+$x\in A$&\\
+$x\notin C$&\\
+$x\notin B$&
+\end{tabular}
+\end{center}
+Once again, we can add a little more to the proof we are gradually forming with each step. We add in the fact that we plan to derive our contradiction by proving $x\in C$; we
+also add the definition of $x\in A\setminus C$ to the proof.\\
+\vspace{1mm}\\
+\indent Suppose $x\in A\setminus C$. This means $x\in A$ and $x\notin C$.\\
+\indent\indent Suppose $x\notin B$\\
+\indent\indent\indent\indent [Proof of $x\in C$ goes here.]\\
+\indent\indent\indent This contradicts the fact that $x\notin C$.\\
+\indent\indent Therefore $x\in B$\\
+\indent Thus, if $x\in A\setminus C$ then $x\in B$.\\
+\vspace{1mm}\\
+We have finally reached a point where the goal follows apparently from the givens---from $x\in A$ and $x\notin B$ we conclude that $x\in A\setminus B$. Since $A\setminus B\subseteq C$ it
+follows that $x\in C$.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $A,B$ and $C$ are sets, $A\setminus B\subseteq C$, and $x$ is anything at all. If $x\in A\setminus C$ then $x\in B$.
+\end{theorem}
+\begin{proof}
+Suppose $x\in A\setminus C$. This means that $x\in A$ and $x\notin C$. Suppose $x\notin B$. Then
+$x\in A\setminus B$, so since $A\setminus B\subseteq C$, $x\in C$. But this contradicts the fact that $x\notin C$. Therefore $x\in B$. Thus, if $x\in A\setminus C$ then $x\in B$.
+\end{proof}
+
+\subsection{}
 
 
 
