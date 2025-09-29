@@ -852,6 +852,47 @@ $\neg R$&\\
 $P$&
 \end{tabular}
 \end{center}
+Now the proof looks like\\
+\vspace{1mm}\\
+\indent Suppose $\neg R$.\\
+\indent\indent Suppose $P$.\\
+\indent\indent\indent [Proof for $\neg Q$ goes here.]\\
+\indent\indent Therefore $P\to\neg Q$.\\
+\indent Therefore $\neg R\to(P\to\neg Q)$.\\
+\vspace{1mm}\\
+Since we know $P\to(Q\to R)$ and $P$, by modus ponens we can infer $Q\to R$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$P\to(Q\to R)$&$\neg Q$\\
+$\neg R$&\\
+$P$&\\
+$Q\to R$&
+\end{tabular}
+\end{center}
+We add one more line to our proof:\\
+\vspace{1mm}\\
+\indent Suppose $\neg R$.\\
+\indent\indent Suppose $P$.\\
+\indent\indent\indent Since $P$ and $P\to(Q\to R)$, it follows that $Q\to R$.\\
+\indent\indent\indent [Proof of $\neg Q$ goes here.]\\
+\indent\indent Therefore $P\to\neg Q$.\\
+\indent Therefore $\neg R\to(P\to\neg Q)$.\\
+\vspace{1mm}\\
+Finally, our last step is to use modus tollens. We now know $Q\to R$ and $\neg R$, so by modus tollens we can conclude $\neg Q$.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $P\to(Q\to R)$. Then $\neg R\to(P\to\neg Q)$.
+\end{theorem}
+\begin{proof}
+Suppose $\neg R$. Suppose $P$. Since $P$ and $P\to(Q\to R)$, it follows that $Q\to R$. But then since $\neg R$, we can conclude $\neg Q$. Thus
+$P\to\neg Q$. Therefore $\neg R\to(P\to\neg Q)$.
+\end{proof}
+
+
 
 
 
