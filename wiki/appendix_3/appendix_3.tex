@@ -18,6 +18,123 @@
 \chapter{Probability}
 
 \section{Fundamental concepts}
+\subsection{Probability Axioms}
+\textbf{Nonnegativity}
+\begin{equation*}
+\mathbb{P}(A)\geq0,\text{ for every event }A.
+\end{equation*}
+\textbf{Additivity}\\
+If $A$ and $B$ are two disjoint (mutually exclusive) events, then the probability of their union satisfies
+\begin{equation*}
+\mathbb P(A\cup B)=\mathbb P(A)+\mathbb P(B)
+\end{equation*}
+More generally, if the sample space has an infinite number of elements and $A_1,A_2,\ldots$ is a sequence of disjoint events, then the probability of their union satisfies
+\begin{equation*}
+\mathbb P(A_1\cup A_2\cup\cdots)=\mathbb P(A_1)+\mathbb P(A_2)+\cdots
+\end{equation*}
+\textbf{Normalisation}\\
+The probability of the entire sample space $\Omega$ is equal to 1, that is, $\mathbb P(\Omega)=1$.
+\newpage
+
+\subsection{Discrete probability law}
+If the sample space consists of a finite number of possible outcomes, then the probability law is specified by the probabilities of the events that consist of a single element. 
+That is, the probability of any event $\{s_1,s_2,\ldots,s_n\}$ is the sum of the probabilities of its elements:
+\begin{equation*}
+\mathbb P(\{s_1,s_2,\ldots,s_n\})=\mathbb P(s_1)+\mathbb P(s_2)+\cdots+\mathbb P(s_n)
+\end{equation*}
+\textbf{Discrete uniform probability law}\\
+If the sample space consists of $n$ possible outcomes which are equally likely (all single-element events have the same given probability), then the probability
+of any event $A$ is given by
+\begin{equation*}
+\mathbb P(A)=\frac{\text{number of elements of $A$}}{n}
+\end{equation*}
+
+\subsection{Some properties of probability laws}
+Consider a probability law, and let $A,B$, and $C$ be events.
+\begin{enumerate}
+\item If $A\subset B$, then $\mathbb P(A)\leq\mathbb P(B)$.
+\item $\mathbb P(A\cup B)=\mathbb P(A)+\mathbb P(B)-\mathbb P(A\cap B)$.
+\item $\mathbb P(A\cup B)\leq \mathbb P(A)+\mathbb P(B)$.
+\item $\mathbb P(A\cup B\cup C)=\mathbb P(A)+\mathbb P(A^c\cap B)+\mathbb P(A^c\cap B^c\cap C)$.
+\end{enumerate}
+Note that the third property can be generalised as follows:
+\begin{equation*}
+\mathbb P(A_1\cup A_2\cup\ldots\cup A_n)\leq\sum^n_{i=1}\mathbb P(A_i)
+\end{equation*}
+which can be shown be recursively applying the property for each element.
+\newpage
+
+\subsection{Properties of conditional probability}
+The conditional probability of an event $A$, given an event $B$ with $\mathbb P(B)>0$, is defined by
+\begin{equation*}
+\mathbb P(A|B)=\frac{\mathbb P(A\cap B)}{\mathbb P(B)}
+\end{equation*}
+If the possible outcomes are finitely many and equally likely, then
+\begin{equation*}
+\mathbb P(A|B)=\frac{\text{number of elements of }A\cap B}{\text{number of elements of }B}
+\end{equation*}
+\textbf{Multiplication rule}\\
+We have
+\begin{equation*}
+\mathbb P(\cap^n_{i=1}A_i)=\mathbb P(A_1)\mathbb P(A_2|A_1)\mathbb P(A_3|A_1\cap A_2)\cdots
+\mathbb P(A_n|\cap^{n-1}_{i=1}A_i)
+\end{equation*}
+This can be verified by
+\begin{equation*}
+\mathbb P(\cap^n_{i=1}A_i)=\mathbb P(A_1)\cdot\frac{\mathbb P(A_1\cap A_2)}{\mathbb P(A_1)}\cdot
+\frac{\mathbb P(A_1\cap A_2\cap A_3)}{\mathbb P(A_1\cap A_2)}\cdots
+\frac{\mathbb P(\cap^n_{i=1}A_i)}{\mathbb P(\cap^{n-1}_{i=1}A_i)}
+\end{equation*}
+
+\subsection{Total probability theorem}
+Let $A_1,\ldots,A_n$ be disjoint events that form a partition of the sample space 
+and assume that $\mathbb P(A_i)>0$ for all $i$. Then, for any event $B$, we have
+\begin{equation*}
+\mathbb P(B)=\mathbb P(A_1\cap B)+\cdots+\mathbb P(A_n\cap B)
+\end{equation*}
+Visualised:
+\begin{center}
+\includegraphics[width=10cm]{3}\\
+\end{center}
+\newpage
+
+\subsection{Bayes' rule}
+Let $A_1,A_2,\ldots,A_n$ be disjoint events that form a partition of the sample space, and assume that $\mathbb P(A_i)>0$ for all $i$. Then, for any event $B$ such that $\mathbb P(B)>0$ we have
+\begin{align*}
+\mathbb P(A_i|B)&=\frac{\mathbb P(A_i)\mathbb P(B|A_i)}{\mathbb P(B)}\\
+&=\frac{\mathbb P(A_i)\mathbb P(B|A_i)}{\mathbb P(A_1)\mathbb P(B|A_1)+\cdots+
+\mathbb P(A_n)\mathbb P(B|A_n)}
+\end{align*}
+
+\subsection{Independence}
+\textbf{Definition}\\
+Two events $\bm A$ and $B$ are said to be independent if
+\begin{equation*}
+\mathbb P(A\cap B)=\mathbb P(A)\mathbb P(B)
+\end{equation*}
+If in addition $\mathbb P(B)>0$, independence is equivalent to the condition
+\begin{equation*}
+\mathbb P(A|B)=\mathbb P(A)
+\end{equation*}
+\textbf{Complement is also independent}\\
+If $A$ and $B$ are independent, so are $A$ and $B^c$. Intuitively, if $\mathbb P(B|A)=\mathbb P(B)$:
+\begin{equation*}
+\mathbb P(B^c)=1-\mathbb P(B)=1-\mathbb P(B|A)=\mathbb P(B^c|A)
+\end{equation*}
+to show the final equality, see that 
+\begin{align*}
+\mathbb P(B^c|A)+\mathbb P(B|A)&=\frac{\mathbb P(B^c\cap A)}{\mathbb P(A)}+\frac{\mathbb P(B\cap A)}{\mathbb P(A)}\\
+&=\frac{\mathbb P(B^c\cap A)+\mathbb P(B\cap A)}{\mathbb P(A)}\\
+&=\frac{\mathbb P(A)}{\mathbb P(A)}=1
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Conditional independence}\\
+Two events
+
+
+
+
+\newpage
 
 \subsection{Permutations and Combinations, Binomial Coefficient}
 \textbf{$k$-permutations}\\
