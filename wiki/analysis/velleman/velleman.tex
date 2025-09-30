@@ -891,6 +891,21 @@ Suppose $P\to(Q\to R)$. Then $\neg R\to(P\to\neg Q)$.
 Suppose $\neg R$. Suppose $P$. Since $P$ and $P\to(Q\to R)$, it follows that $Q\to R$. But then since $\neg R$, we can conclude $\neg Q$. Thus
 $P\to\neg Q$. Therefore $\neg R\to(P\to\neg Q)$.
 \end{proof}
+\newpage
+
+\section{Proofs involving quantifiers}
+\subsection{Goals of form $\forall xP(x)$}
+If you can give a proof of the goal $P(x)$ that would work for all $x$, then you can conclude that $\forall xP(x)$ must
+be true. Thus it is important to start the proof with
+no assumptions about $x$, that is, $x$ must be \textit{arbitrary}; one must not assume that $x$ is already equal
+to any other object already under discussion in the proof.\\
+\vspace{1mm}\\
+If $x$ is already being used in the proof to stand for
+some particular object, then one cannot use it to stand for an
+arbitrary object, and must choose a different variable that is not already being used in the proof, say $y$, and replace 
+$\forall xP(x)$ with the equivalent statement $\forall yP(y)$.\\
+\vspace{1mm}\\
+\indent To prove a goal of the form 
 
 
 
