@@ -129,12 +129,45 @@ to show the final equality, see that
 \end{align*}
 (next page)\newpage
 \noindent\textbf{Conditional independence}\\
-Two events
+Two events $A$ and $B$ are said to be conditionally independent, given another event $C$ with $\mathbb P(C)>0$, if
+\begin{equation*}
+\mathbb P(A\cap B|C)=\mathbb P(A|C)\mathbb P(B|C)
+\end{equation*}
+If in addition, $\mathbb P(B\cap C)>0$, conditional independence is equivalent to the condition
+\begin{equation*}
+\mathbb P(A|B\cap C)=\mathbb P(A|C)
+\end{equation*}
+To derive this alternative characterisation, see
+\begin{align*}
+\mathbb P(A\cap B|C)&=\frac{\mathbb P(A\cap B\cap C)}{\mathbb P(C)}\\
+&=\frac{\mathbb P(C)\mathbb P(B|C)\mathbb P(A|B\cap C)}{\mathbb P(C)}\\
+&=\mathbb P(B|C)\mathbb P(A|B\cap C)
+\end{align*}
+Compare this with the initial definition and eliminate the common factor $\mathbb P(B|C)$ to get what we want.\\
+\vspace{1mm}\\
+Note that independence of two events $A$ and $B$ unconditioned does not imply conditional independence, and vice versa.
 
-
-
-
+\subsection{Independence of a collection of events}
+We say that the events $A_1,A_2,\ldots,A_n$ are independent if
+\begin{equation*}
+\mathbb P\left(\bigcap_{i\in S}A_i\right)=\prod_{i\in S}\mathbb P(A_i),\quad\text{for every subset $S$ of $\{1,2,\ldots,n\}$}
+\end{equation*}
+Take the case of three events $A_1,A_2$, and $A_3$, independence amounts to satisfying the four conditions
+\begin{align*}
+\mathbb P(A_1\cap A_2)&=\mathbb P(A_1)\mathbb P(A_2),\\
+\mathbb P(A_1\cap A_3)&=\mathbb P(A_1)\mathbb P(A_3),\\
+\mathbb P(A_2\cap A_3)&=\mathbb P(A_2)\mathbb P(A_3),\\
+\mathbb P(A_1\cap A_2\cap A_3)&=\mathbb P(A_1)\mathbb P(A_2)\mathbb P(A_3)
+\end{align*}
+The first three conditions simply assert that any two events are independent; this property is called \textit{pairwise independence}. The fourth condition is also a requirement for independence. 
+Note it is not implied by the first three and vice versa---pairwise independence does not imply independence.
 \newpage
+
+
+
+
+
+
 
 \subsection{Permutations and Combinations, Binomial Coefficient}
 \textbf{$k$-permutations}\\

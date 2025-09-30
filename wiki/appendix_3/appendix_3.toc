@@ -7,14 +7,15 @@
 \contentsline {subsection}{\numberline {A.1.5}Total probability theorem}{4}{}%
 \contentsline {subsection}{\numberline {A.1.6}Bayes' rule}{5}{}%
 \contentsline {subsection}{\numberline {A.1.7}Independence}{5}{}%
-\contentsline {subsection}{\numberline {A.1.8}Permutations and Combinations, Binomial Coefficient}{7}{}%
-\contentsline {subsection}{\numberline {A.1.9}Expectation and Variance}{9}{}%
-\contentsline {subsection}{\numberline {A.1.10}Expected value of a function of a RV}{10}{}%
-\contentsline {subsection}{\numberline {A.1.11}Expectation and variance of linear functions}{11}{}%
-\contentsline {subsection}{\numberline {A.1.12}Variance in terms of Moments Expression}{11}{}%
-\contentsline {subsection}{\numberline {A.1.13}Expectation and Variance of Bernoulli}{12}{}%
-\contentsline {subsection}{\numberline {A.1.14}Expectation of Discrete Uniform}{12}{}%
-\contentsline {subsection}{\numberline {A.1.15}Variance of Discrete Uniform}{14}{}%
+\contentsline {subsection}{\numberline {A.1.8}Independence of a collection of events}{6}{}%
+\contentsline {subsection}{\numberline {A.1.9}Permutations and Combinations, Binomial Coefficient}{7}{}%
+\contentsline {subsection}{\numberline {A.1.10}Expectation and Variance}{9}{}%
+\contentsline {subsection}{\numberline {A.1.11}Expected value of a function of a RV}{10}{}%
+\contentsline {subsection}{\numberline {A.1.12}Expectation and variance of linear functions}{11}{}%
+\contentsline {subsection}{\numberline {A.1.13}Variance in terms of Moments Expression}{11}{}%
+\contentsline {subsection}{\numberline {A.1.14}Expectation and Variance of Bernoulli}{12}{}%
+\contentsline {subsection}{\numberline {A.1.15}Expectation of Discrete Uniform}{12}{}%
+\contentsline {subsection}{\numberline {A.1.16}Variance of Discrete Uniform}{14}{}%
 \contentsline {section}{\numberline {A.2}Limit Theorems}{15}{}%
 \contentsline {subsection}{\numberline {A.2.1}Sample mean}{15}{}%
 \contentsline {subsection}{\numberline {A.2.2}Markov Inequality}{16}{}%
