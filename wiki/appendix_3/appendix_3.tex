@@ -163,12 +163,6 @@ The first three conditions simply assert that any two events are independent; th
 Note it is not implied by the first three and vice versa---pairwise independence does not imply independence.
 \newpage
 
-
-
-
-
-
-
 \subsection{Permutations and Combinations, Binomial Coefficient}
 \textbf{$k$-permutations}\\
 Starting with $n$ distinct objects, and letting $k$ be some positive integer where $k\leq n$, 
@@ -238,6 +232,19 @@ can obtain in $n$ trials:
 (think tossing a coin three times and obtaining two heads---the heads might occur on 
 the first and third tosses, or other \textit{combinations} of trials).
 \newpage
+
+\section{Discrete random variables}
+\subsection{Functions of random variables}
+If $Y=g(X)$ is a function of a random variable $X$, then $Y$ is also a random variable, since it provides a
+numerical value for each possible outcome. This is because every outcome in the sample space defines a numerical 
+value of $x$ for $X$, and hence also a numerical value $y=g(x)$ for $Y$.\\
+\vspace{1mm}\\
+If $X$ is discrete with PMF $p_X$, then $Y$ is also discrete, and its PMF $p_Y$ can be calculated using the PMF of
+$X$. In particular, to obtain $p_Y(y)$ for any $y$, we add the probabilities
+of all values of $x$ such that $g(x)=y$:
+\begin{equation*}
+p_Y(y)=\sum_{\{x|g(x)=y\}}p_X(x)
+\end{equation*}
 
 \subsection{Expectation and Variance}
 \textbf{Expectation}\\
