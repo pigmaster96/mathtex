@@ -935,11 +935,45 @@ After using strategy:
 \indent Since $x$ was arbitrary, we can conclude that $\forall xP(x)$.\\
 (next page)\newpage
 \noindent\textbf{Example}\\
-Suppose
-
-
-
-
+Consider a proof covered earlier, but phrased slightly differently: Suppose $A,B$, and $C$ are sets, and $A\setminus B\subseteq C$. Prove that $A\setminus C\subseteq B$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+Before using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\setminus B\subseteq C$&$A\setminus C\subseteq B$
+\end{tabular}
+\end{center}
+As usual we consider the logical form of the goal to plan our strategy. In this case we can write out the definition of $\subseteq$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\setminus B\subseteq C$&$\forall x(x\in A\setminus C\to x\in B)$
+\end{tabular}
+\end{center}
+Because the goal has the form $\forall xP(x)$, where $P(x)$ is the statement $x\in A\setminus C\to x\in B$, we will introduce a new variable $x$ into the proof to stand for an arbitrary object
+and then try to prove $x\in A\setminus C\to x\in B$.\\
+\vspace{1mm}\\
+Note that $x$ is a new variable in the proof; it appeared in the logical form of the goal as a bound variable, but, being a bound variable, didn't represent anything in particular. 
+We also haven't used it as a free variable in any statement so it doesn't stand for any particular object. To make sure $x$ is arbitrary we must be careful not to add any assumptions
+about $x$ to the givens column. Our goal becomes
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\setminus B\subseteq C$&$x\in A\setminus C\to x\in B$
+\end{tabular}
+\end{center}
+Our proof looks like\\
+\vspace{1mm}\\
+\indent Let $x$ be arbitrary.\\
+\indent\indent [Proof of $x\in A\setminus C\to x\in B$ goes here]\\
+\indent Since $x$ was arbitrary, we can conclude that $\forall x(x\in A\setminus C\to x\in B)$,\\
+\indent so $A\setminus C\subseteq B$.\\
+\vspace{1mm}\\
 
 
 
