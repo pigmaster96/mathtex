@@ -905,8 +905,37 @@ some particular object, then one cannot use it to stand for an
 arbitrary object, and must choose a different variable that is not already being used in the proof, say $y$, and replace 
 $\forall xP(x)$ with the equivalent statement $\forall yP(y)$.\\
 \vspace{1mm}\\
-\indent To prove a goal of the form 
-
+\indent To prove a goal of the form  $\forall P(x)$:\\
+\indent Let $x$ stand for an arbitrary object and prove $P(x)$. The letter $x$ must be a new variable in the proof. 
+If $x$ is already being used to stand for something, then choose an unused variable, say $y$, to stand for the arbitrary 
+object, and prove $P(y)$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+Before using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+---&$\forall xP(x)$\\
+---&
+\end{tabular}
+\end{center}
+After using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+---&$P(x)$\\
+---&
+\end{tabular}
+\end{center}
+\textit{Form of final proof:}\\
+\indent Let $x$ be arbitrary.\\
+\indent\indent [Proof of $P(x)$ goes here.]\\
+\indent Since $x$ was arbitrary, we can conclude that $\forall xP(x)$.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Suppose
 
 
 
