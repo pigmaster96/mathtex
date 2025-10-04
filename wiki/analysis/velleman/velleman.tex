@@ -974,6 +974,67 @@ Our proof looks like\\
 \indent Since $x$ was arbitrary, we can conclude that $\forall x(x\in A\setminus C\to x\in B)$,\\
 \indent so $A\setminus C\subseteq B$.\\
 \vspace{1mm}\\
+The problem is now exactly the same as it was in the previous example.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $A,B$, and $C$ are sets, and $A\setminus B\subseteq C$. Then $A\setminus C\subseteq B$.
+\end{theorem}
+\begin{proof}
+Let $x$ be arbitrary. Suppose $x\in A\setminus C$. This means that $x\in A$ and $x\notin C$. Suppose $x\notin B$. Then $x\in A\setminus B$, so since $A\setminus B\subseteq C$, $x\in C$. But
+this contradicts the fact that $x\notin C$. Therefore $x\in B$. Thus, if $x\in A\setminus C$ then $x\in B$. Since $x$ was arbitrary we can conclude that $\forall x(x\in A\setminus C\to x\in B)$, so
+$A\setminus C\subseteq B$.
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Another example}\\
+Suppose $A$ and $B$ are sets. Prove that if $A\cap B=A$ then $A\subseteq B$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+\vspace{1mm}\\
+Our goal is $A\cap B=A\to A\subseteq B$. We add the antecedent to the givens list and make the consequent the goal. We write out the logical form of this new goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\cap B=A$&$\forall x(x\in A\to x\in B)$
+\end{tabular}
+\end{center}
+We let $x$ be arbitrary, assume $x\in A$, and probe $x\in B$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\cap B=A$&$x\in B$\\
+$x\in A$&
+\end{tabular}
+\end{center}
+Our final proof form looks like\\
+\vspace{1mm}\\
+\indent Suppose $A\cap B=A$.\\
+\indent\indent Let $x$ be arbitrary.\\
+\indent\indent\indent Suppose $x\in A$.\\
+\indent\indent\indent\indent [Proof of $x\in B$ goes here.]\\
+\indent\indent\indent Therefore $x\in A\to x\in B$.\\
+\indent\indent Since $x$ was arbitrary, we can conclude that $\forall x(x\in A\to x\in B)$,\\
+\indent\indent so $A\subseteq B$.\\
+\indent Therefore, if $A\cap B=A$ then $A\subseteq B$.\\
+\vspace{1mm}\\
+Since $x\in A$ and $A\cap B=A$, it follows that $x\in A\cap B$, so $x\in B$. (recall $x\in A\cap B$ means $x\in A$ and $x\in B$)\\
+\vspace{1mm}\\
+Oftentimes the statement that $x$ is arbitrary is left out---when a new variable $x$ is introduced into a proof it is usually understood that it is arbitrary and no assumptions are being made 
+about $x$. Many of the proofs written so far end with multiple concluding sentences; oftentimes these are condensed into a single sentence, or skipped entirely.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $A$ and $B$ are sets. If $A\cap B=A$ then $A\subseteq B$.
+\end{theorem}
+\begin{proof}
+Suppose $A\cap B=A$, and suppose $x\in A$. Then since $A\cap B=A$, $x\in A\cap B$, so $x\in B$. Since $x$ was an arbitrary element of $A$, we can conclude that $A\subseteq B$.
+\end{proof}
+\newpage
+
+\subsection{Goals of form $\exists xP(x)$}
+
 
 
 
