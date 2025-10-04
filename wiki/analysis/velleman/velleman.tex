@@ -1034,9 +1034,44 @@ Suppose $A\cap B=A$, and suppose $x\in A$. Then since $A\cap B=A$, $x\in A\cap B
 \newpage
 
 \subsection{Goals of form $\exists xP(x)$}
-
-
-
+Proving a goal of the form $\exists xP(x)$ also involves introducing a new variable $x$ into the proof and proving $P(x)$. But in this case $x$ will not be arbitrary; we only need to prove that 
+$P(x)$ is true for \textit{at least one} $x$. It suffices to assign a particular value to $x$ and prove $P(x)$ for this one value of $x$.\\
+\vspace{1mm}\\
+\indent To prove a goal of the form $\exists xP(x)$:\\
+\indent Try to find a value of $x$ for which $P(x)$ would be true. Start with `Let $x=\text{(decided value)}$' and proceed to prove $P(x)$ for this $x$. Once again if the variable name $x$ 
+is already being used in the proof for some other purpose then one should choose an unused variable, say $y$ and rewrite the goal in the equivalent form $\exists yP(y)$ and proceed as before.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+Before using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+---&$\exists xP(x)$\\
+---&
+\end{tabular}
+\end{center}
+After using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+---&$P(x)$\\
+---&\\
+$x=\text{(the value you decided on)}$&
+\end{tabular}
+\end{center}
+\textit{Form of final proof:}\\
+\vspace{1mm}\\
+\indent Let $x=\text{(the value you decided on)}$.\\
+\indent\indent [Proof of $P(x)$ goes here.]\\
+\indent Thus, $\exists xP(x)$.\\
+\vspace{1mm}\\
+Note that \textit{the reasoning used for finding a specific $x$ will not appear in the final proof}. To justify the conclusion that $\exists xP(x)$ it is only necessary to verify that $P(x)$ comes
+out true when $x$ is assigned some particular value. How one thought of that value is not part of the justification of the conclusion (be it by trial and error etc.).\\
+(next page)
+\newpage
+\noindent\textbf{Example}
 
 
 
