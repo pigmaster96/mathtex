@@ -1071,7 +1071,104 @@ Note that \textit{the reasoning used for finding a specific $x$ will not appear 
 out true when $x$ is assigned some particular value. How one thought of that value is not part of the justification of the conclusion (be it by trial and error etc.).\\
 (next page)
 \newpage
-\noindent\textbf{Example}
+\noindent\textbf{Example}\\
+Prove that for every real number $x$, if $x>0$ then there is a real number $y$ such that $y(y+1)=x$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+Logically, our goal is $\forall x (x>0\to\exists y[y(y+1)=x])$, where the variables $x$ and $y$ in this statement are
+understood to range over $\mathbb R$. We start by letting $x$ be an arbitrary real number, and then assume that $x>0$ and
+try to prove that $\exists y[y(y+1)=x]$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x>0$&$\exists y[y(y+1)=x]$
+\end{tabular}
+\end{center}
+Because our goal has the form $\exists yP(y)$, where $P(y)$ is the statement $y(y+1)=x$, according to our strategy we should
+try to find a value of $y$ for which $P(y)$ is true. In this case we do this by solving the equation $y(y+1)=x$ for $y$.
+\begin{equation*}
+y(y+1)=x\iff y^2+y-x=0\iff y=\frac{-1^2\pm\sqrt{1+4x}}{2}
+\end{equation*}
+Note that $\sqrt{1+4x}$ is defined since we have $x>0$ as a given. Also see that we have found two solutions for $y$, but to
+prove that $\exists y[y(y+1)=x]$ we only need one valid $y$, so either of the the two solutions could be used. 
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x>0$&$y(y+1)=x$\\
+$y=(-1+\sqrt{1+4x})/2$&
+\end{tabular}
+\end{center}
+Our final proof looks like\\
+\vspace{1mm}\\
+\indent Let $x$ be an arbitrary real number.\\
+\indent\indent Suppose $x>0$.\\
+\indent\indent\indent Let $y=(-1+\sqrt{1+4x})/2$.\\
+\indent\indent\indent\indent [Proof of $y(y+1)=x$ goes here.]\\
+\indent\indent\indent Thus, $\exists y[y(y+1)=x]$.\\
+\indent\indent Therefore $x>0\to\exists y[y(y+1)=x]$.\\
+\indent Since $x$ was arbitrary, we can conclude that $\forall x(x>0\to\exists y[y(y+1)=x])$.\\
+\vspace{1mm}\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+For every real number $x$, if $x>0$ then there is a real number $y$ such that $y(y+1)=x$.
+\end{theorem}
+\begin{proof}
+Let $x$ be an arbitrary real number and suppose $x>0$. Let 
+\begin{equation*}
+y=\frac{-1+\sqrt{1+4x}}{2}
+\end{equation*}
+which is defined since $x>0$. Then
+\begin{align*}
+y(y+1)&=\left(\frac{-1+\sqrt{1+4x}}{2}\right)\cdot\left(\frac{-1+\sqrt{1+4x}}{2}+1\right)\\
+&=\left(\frac{\sqrt{1+4x}-1}{2}\right)\cdot\left(\frac{\sqrt{1+4x}+1}{2}\right)\\
+&=\frac{1+4x-1}{4}=\frac{4x}{4}=x\qedhere
+\end{align*}
+\end{proof}
+\newpage
+
+\subsection{Givens of the form $\exists xP(x)$ and $\forall xP(x)$}
+\textbf{Givens of the form $\exists xP(x)$}\\
+This given says that an object with a certain property exists. A good approach would be to introduce a new variable, say 
+$x_0$, to stand for this object, and add $P(x_0)$ to the givens list.\\
+\vspace{1mm}\\
+\indent To use a given of the form $\exists xP(x)$:\\
+\indent Introduce a new variable $x_0$ into the proof to stand for an object for which $P(x_0)$ is true. This means
+that one can now assume that $P(x_0)$ is true.\\
+\vspace{1mm}\\
+Logicians call this \textit{existential instantiation}. Note that this is very different from our treatment of goals of the 
+same form---we can assume that $x_0$ stands for some object for which $P(x_0)$ is true, but we can't assume anything else 
+about $x_0$.\\
+\vspace{1mm}\\
+\textbf{Givens of the form $\forall xP(x)$}\\
+This says that $P(x)$ would be true no matter what value is assigned ot $x$. One can therefore \textit{choose any value} to be
+plugged in for $x$ and use this to conclude $P(x)$.\\
+\vspace{1mm}\\
+\indent To use a given of the form $\forall xP(x)$\\
+\indent Plug in any value, say $a$, for $x$ and use this given to conclude that $P(a)$ is true.\\
+\vspace{1mm}\\
+This is called \textit{universal instantiation}. Usually, if we have a given of the form $\exists xP(x)$, we should apply
+existential instantiation to it immediately. On the other hand,
+we won't be able to apply universal instantiation to a given of the form $\forall xP(x)$ unless we had an idea for
+a particular value $a$ to plug in for $x$; we would probably wait until a suitable object $a$ appears in the proof.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Suppose $\mathcal F$ and $\mathcal G$ are families of sets and $\mathcal F\cap\mathcal G\neq\emptyset$. Prove that 
+$\bigcap\mathcal F\subseteq\bigcup\mathcal G$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+First we analyse the logical form of the goal by writing out the meaning of the subset: 
+$\forall x(x\in\bigcap\mathcal F\to x\in\bigcup\mathcal G)$. We could go further with the logical forms of the union and 
+intersection, but the analysis done so far is sufficient for us to decide how to get started on the proof; their definitions
+might be required later, but it is usually best to do only as much of the analysis as is needed to determine the next step
+of the proof. Going further might introduce unnecessary complication.\\
+\vspace{1mm}\\
+We let $x$ be arbitrary, assume $x\in\bigcap\mathcal F$, and try to prove $x\in\bigcup\mathcal G$.
+
+
 
 
 
