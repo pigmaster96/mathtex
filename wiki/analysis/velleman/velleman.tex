@@ -1167,6 +1167,58 @@ might be required later, but it is usually best to do only as much of the analys
 of the proof. Going further might introduce unnecessary complication.\\
 \vspace{1mm}\\
 We let $x$ be arbitrary, assume $x\in\bigcap\mathcal F$, and try to prove $x\in\bigcup\mathcal G$.
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\mathcal F\cap\mathcal G\neq\emptyset$&$x\in\bigcup\mathcal G$\\
+$x\in\bigcap\mathcal F$&
+\end{tabular}
+\end{center}
+Now we further analyse the logical forms:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\exists A(A\in\mathcal F\cap\mathcal G)$&$\exists A\in\mathcal G(x\in A)$\\
+$\forall A\in\mathcal F(x\in A)$&
+\end{tabular}
+\end{center}
+To prove this new goal means we should try to find a value that would `work' for $A$. The second given starts with $\forall A$, so we may not be able to use it until a likely value for $A$ pops up
+during the course of the proof. The first given, however, starts with $\exists A$, so we should use it immediately; by existential instantiation, we introduce a name, say $A_0$, for this object, 
+and treat $A_0\in\mathcal F\cap\mathcal G$ as a given from now on. It would be redundant to continue to discuss the given statement $\exists A(A\in\mathcal F\cap\mathcal G)$ so we will drop it from 
+our list of givens.
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A_0\in\mathcal F$&$\exists A\in\mathcal G(x\in A)$\\
+$A_0\in\mathcal G$&\\
+$\forall A\in\mathcal F(x\in A)$&
+\end{tabular}
+\end{center}
+An element to plug into the third given has now surfaced, plugging $A_0$ for $A$ we can conclude that $x\in A_0$; we can treat this as a given. See that the goal can now be easily reached.\\
+\vspace{1mm}\\
+Although we translated the statements $x\in\bigcap\mathcal F,x\in\bigcup\mathcal G$, and $\mathcal F\cap\mathcal G\neq\emptyset$ into logical symbols in order to figure out how to use
+them in the proof; these translations are not usually written out it in the final proof---left to the reader to work out their logical forms in order to follow the reasoning.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $\mathcal F$ and $\mathcal G $ are families of sets, and $\mathcal F\cap\mathcal G\neq\emptyset$. Then\\$\bigcap\mathcal F\subseteq\bigcup\mathcal G$.
+\end{theorem}
+\begin{proof}
+Suppose $x\in\bigcap\mathcal F$. Since $\mathcal F\cap\mathcal G=\emptyset$, we can let $A_0$ be an element of $\mathcal F\cap\mathcal G$. Thus, $A_0\in\mathcal F$ and $A_0\in\mathcal G$. Since
+$x\in\bigcap\mathcal F$ and $A_0\in\mathcal F$, it follows that $x\in A_0$. But we also know that $A_0\in\mathcal G$, so we can conclude that $x\in\bigcup\mathcal G$.
+\end{proof}
+\noindent\textbf{Another example}\\
+Suppose $B$ is a set and $\mathcal F$ is a family of sets. Prove that if $\bigcup\mathcal F\subseteq B$ then $\mathcal F\subseteq\mathscr P(B)$\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+We
+
+
+
 
 
 
