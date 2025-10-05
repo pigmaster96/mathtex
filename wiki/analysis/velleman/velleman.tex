@@ -572,7 +572,7 @@ Suppose $A\cap C\subseteq B$ and $a\in C$. Then $a\notin A\setminus B$.
 Suppose $a\in A$. Then since $a\in C$, $a\in A\cap C$. Since $A\cap C\subseteq B$ it follows that $a\in B$. Thus it cannot be the case that $a$ is an element of $A$ but not $B$, so 
 $a\notin A\setminus B$.
 \end{proof}
-\noindent(next page)\newpage
+\newpage
 
 \subsection{Proof by contradiction}
 Say a goal of the form $\neg P$ cannot be reexpressed as a positive statement, in this case one could attempt \textit{proof by contradiction}---start by assuming $P$ is true, and try to use this
@@ -1211,12 +1211,55 @@ Suppose $\mathcal F$ and $\mathcal G $ are families of sets, and $\mathcal F\cap
 Suppose $x\in\bigcap\mathcal F$. Since $\mathcal F\cap\mathcal G=\emptyset$, we can let $A_0$ be an element of $\mathcal F\cap\mathcal G$. Thus, $A_0\in\mathcal F$ and $A_0\in\mathcal G$. Since
 $x\in\bigcap\mathcal F$ and $A_0\in\mathcal F$, it follows that $x\in A_0$. But we also know that $A_0\in\mathcal G$, so we can conclude that $x\in\bigcup\mathcal G$.
 \end{proof}
+\hspace{1mm}\\
 \noindent\textbf{Another example}\\
 Suppose $B$ is a set and $\mathcal F$ is a family of sets. Prove that if $\bigcup\mathcal F\subseteq B$ then $\mathcal F\subseteq\mathscr P(B)$\\
 \vspace{1mm}\\
 \textit{Scratch work}\\
-We
-
+We assume $\bigcup\mathcal F\subseteq B$ and try to prove $\mathcal F\subseteq\mathscr P(B)$, which means $\forall x(x\in\mathcal F\to x\in\mathscr P(B))$, we let $x$ be arbitrary, assume 
+$x\in\mathcal F$, and set $x\in\mathscr P(B)$ as our goal. Note that $x$ in this case is a set:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\bigcup\mathcal F\subseteq B$&$x\in\mathscr P(B)$\\
+$x\in\mathcal F$&\\
+\end{tabular}
+\end{center}
+To further analyse this goal, we use the definition of the power statement $x\in\mathscr P(B)=x\subseteq B$; which further means $\forall y(y\in x\to y\in B)$. We must therefore introduce another
+arbitrary object into the proof; we let $y$ be arbitrary, assume $y\in x$, and try to prove $y\in B$.
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\bigcup\mathcal F\subseteq B$&$y\in B$\\
+$x\in\mathcal F$&\\
+$y\in x$&\\
+\end{tabular}
+\end{center}
+The first given can be written as $\forall z(z\in\bigcup\mathcal F\to z\in B)$, which further means
+$\forall z(\exists A\in\mathcal F(z\in A)\to z\in B)$
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\forall z(\exists A\in\mathcal F(z\in A)\to z\in B)$&$y\in B$\\
+$x\in\mathcal F$&\\
+$y\in x$&\\
+\end{tabular}
+\end{center}
+The conclusion is now easily reachable.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $B$ is a set and $\mathcal F$ is a family of sets. If $\bigcup\mathcal F\subseteq B$ then $\mathcal F\subseteq\mathscr P(B)$.
+\end{theorem}
+\begin{proof}
+Suppose $\bigcup\mathcal F\subseteq B$. Let $x$ be an arbitrary element of $\mathcal F$. Let $y$ be an arbitrary element of $x$. Since $y\in x$ and $x\in\mathcal F$, $y\in\bigcup\mathcal F$.
+But since $\bigcup\mathcal F\subseteq B$, $y\in B$. Since $y$ was an arbitrary element of $x$, we can conclude that $x\subseteq B$, so $x\in\mathscr P(B)$. But $x$ was an arbitrary element of 
+$\mathcal F$, so $\mathcal F\subseteq\mathscr P(B)$, as required.
+\end{proof}
 
 
 
