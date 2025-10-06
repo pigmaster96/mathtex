@@ -1,31 +1,38 @@
-\contentsline {chapter}{\numberline {1}Logic}{2}{}%
-\contentsline {subsection}{\numberline {1.0.1}Logic Factsheet}{2}{}%
-\contentsline {subsection}{\numberline {1.0.2}Set operation definitions}{3}{}%
-\contentsline {subsection}{\numberline {1.0.3}Distributivity of set operations}{3}{}%
-\contentsline {subsection}{\numberline {1.0.4}$x\in A\setminus (B\cap C)=x\in (A\setminus B)\cup (A\setminus C)$}{4}{}%
-\contentsline {subsection}{\numberline {1.0.5}$x\in (A\cup B)\setminus (A\cap B)=x\in (A\setminus B)\cup (B\setminus A)$}{4}{}%
-\contentsline {subsection}{\numberline {1.0.6}$(A\cap B)\cap (A\setminus B)=\emptyset $}{4}{}%
-\contentsline {subsection}{\numberline {1.0.7}Conditional and Contrapositive laws}{5}{}%
-\contentsline {subsection}{\numberline {1.0.8}Biconditional statements}{6}{}%
-\contentsline {section}{\numberline {1.1}Quantificational logic}{7}{}%
-\contentsline {subsection}{\numberline {1.1.1}Quantifier negation laws}{7}{}%
-\contentsline {subsection}{\numberline {1.1.2}Notation}{7}{}%
-\contentsline {subsection}{\numberline {1.1.3}Negation law for bounded quantifiers}{8}{}%
-\contentsline {subsection}{\numberline {1.1.4}Vacuously true}{9}{}%
-\contentsline {subsection}{\numberline {1.1.5}Alternate definition for indexed families}{10}{}%
-\contentsline {subsection}{\numberline {1.1.6}Power set}{11}{}%
-\contentsline {subsection}{\numberline {1.1.7}Intersection and union of a family of sets}{11}{}%
-\contentsline {subsection}{\numberline {1.1.8}More on set notation}{12}{}%
-\contentsline {chapter}{\numberline {2}Proof Strategies}{13}{}%
-\contentsline {subsection}{\numberline {2.0.1}Terminology}{13}{}%
-\contentsline {section}{\numberline {2.1}To prove a conclusion of the form $P\to Q$}{14}{}%
-\contentsline {subsection}{\numberline {2.1.1}Alternative approach}{16}{}%
-\contentsline {section}{\numberline {2.2}Proofs involving negations and conditionals}{18}{}%
-\contentsline {subsection}{\numberline {2.2.1}Reexpress}{18}{}%
-\contentsline {subsection}{\numberline {2.2.2}Proof by contradiction}{19}{}%
-\contentsline {subsection}{\numberline {2.2.3}To use a given of the form $\neg P$ in proof by contradiction}{21}{}%
-\contentsline {subsection}{\numberline {2.2.4}Given conditionals}{24}{}%
-\contentsline {section}{\numberline {2.3}Proofs involving quantifiers}{27}{}%
-\contentsline {subsection}{\numberline {2.3.1}Goals of form $\forall xP(x)$}{27}{}%
-\contentsline {subsection}{\numberline {2.3.2}Goals of form $\exists xP(x)$}{30}{}%
-\contentsline {subsection}{\numberline {2.3.3}Givens of the form $\exists xP(x)$ and $\forall xP(x)$}{33}{}%
+\contentsline {chapter}{\numberline {1}Logic}{3}{}%
+\contentsline {subsection}{\numberline {1.0.1}Logic Factsheet}{3}{}%
+\contentsline {subsection}{\numberline {1.0.2}Set operation definitions}{4}{}%
+\contentsline {subsection}{\numberline {1.0.3}Distributivity of set operations}{4}{}%
+\contentsline {subsection}{\numberline {1.0.4}$x\in A\setminus (B\cap C)=x\in (A\setminus B)\cup (A\setminus C)$}{5}{}%
+\contentsline {subsection}{\numberline {1.0.5}$x\in (A\cup B)\setminus (A\cap B)=x\in (A\setminus B)\cup (B\setminus A)$}{5}{}%
+\contentsline {subsection}{\numberline {1.0.6}$(A\cap B)\cap (A\setminus B)=\emptyset $}{5}{}%
+\contentsline {subsection}{\numberline {1.0.7}Conditional and Contrapositive laws}{6}{}%
+\contentsline {subsection}{\numberline {1.0.8}Biconditional statements}{7}{}%
+\contentsline {section}{\numberline {1.1}Quantificational logic}{8}{}%
+\contentsline {subsection}{\numberline {1.1.1}Quantifier negation laws}{8}{}%
+\contentsline {subsection}{\numberline {1.1.2}Notation}{8}{}%
+\contentsline {subsection}{\numberline {1.1.3}Negation law for bounded quantifiers}{9}{}%
+\contentsline {subsection}{\numberline {1.1.4}Vacuously true}{10}{}%
+\contentsline {subsection}{\numberline {1.1.5}Alternate definition for indexed families}{11}{}%
+\contentsline {subsection}{\numberline {1.1.6}Power set}{12}{}%
+\contentsline {subsection}{\numberline {1.1.7}Intersection and union of a family of sets}{12}{}%
+\contentsline {subsection}{\numberline {1.1.8}More on set notation}{13}{}%
+\contentsline {chapter}{\numberline {2}Proof Strategies}{14}{}%
+\contentsline {subsection}{\numberline {2.0.1}Terminology}{14}{}%
+\contentsline {section}{\numberline {2.1}To prove a conclusion of the form $P\to Q$}{15}{}%
+\contentsline {subsection}{\numberline {2.1.1}Alternative approach}{17}{}%
+\contentsline {section}{\numberline {2.2}Proofs involving negations and conditionals}{19}{}%
+\contentsline {subsection}{\numberline {2.2.1}Reexpress}{19}{}%
+\contentsline {subsection}{\numberline {2.2.2}Proof by contradiction}{20}{}%
+\contentsline {subsection}{\numberline {2.2.3}To use a given of the form $\neg P$ in proof by contradiction}{22}{}%
+\contentsline {subsection}{\numberline {2.2.4}Given conditionals}{25}{}%
+\contentsline {section}{\numberline {2.3}Proofs involving quantifiers}{28}{}%
+\contentsline {subsection}{\numberline {2.3.1}Goals of form $\forall xP(x)$}{28}{}%
+\contentsline {subsection}{\numberline {2.3.2}Goals of form $\exists xP(x)$}{31}{}%
+\contentsline {subsection}{\numberline {2.3.3}Givens of the form $\exists xP(x)$ and $\forall xP(x)$}{34}{}%
+\contentsline {subsection}{\numberline {2.3.4}Example: For all integers $a,b,c$, if $a\mid b$ and $b\mid c$ then $a\mid c$}{37}{}%
+\contentsline {section}{\numberline {2.4}Proofs involving conjunctions and biconditionals}{38}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{39}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{39}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{39}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{39}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{40}{}%

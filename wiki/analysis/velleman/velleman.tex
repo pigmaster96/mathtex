@@ -12,6 +12,9 @@
 
 \graphicspath{{./images/}} %set imaging path
 \newtheorem*{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
 
 \begin{document}
 \maketitle
@@ -1261,8 +1264,50 @@ But since $\bigcup\mathcal F\subseteq B$, $y\in B$. Since $y$ was an arbitrary e
 $\mathcal F$, so $\mathcal F\subseteq\mathscr P(B)$, as required.
 \end{proof}
 
+\subsection{Example: For all integers $a,b,c$, if $a\mid b$ and $b\mid c$ then $a\mid c$}
+For this proof, we need the following definition:
+\begin{definition}
+For any integers $x$ and $y$, we'll say that \textit{$x$ divides $y$} (or \textit{$y$ is divisible by $x$}) if $\exists k\in\mathbb{Z}(kx=y)$. We use the notation $x\mid y$ to mean 
+`$x$ divides $y$' and $x\nmid y$ to mean `$x$ does not divide $y$'.
+\end{definition}
+\begin{theorem}
+For all integers $a,b$, and $c$, if $a\mid b$ and $b\mid c$ then $a\mid c$.
+\end{theorem}
+\begin{proof}
+Let $a,b$, and $c$ be arbitrary integers and suppose $a\mid b$ and $b\mid c$. Since $a\mid b$, we can choose some integer $m$ such that $ma=b$. Similarly, since $b\mid c$, we can choose an integer
+$n$ such that $nb=c$. Therefore $c=nb=nma$, so since $nm$ is an integer, $a\mid c$.
+\end{proof}
+\newpage
+
+\section{Proofs involving conjunctions and biconditionals}
 
 
+
+
+
+
+\appendix
+\chapter{Exercises}
+\section{Ch 3}
+\subsection{$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to\exists xQ(x)$}
+Using logical equivalences:
+\begin{align*}
+\exists x(P(x)\to Q(x))&=\exists x[\neg(P(x)\land\neg Q(x))]&\text{(Definition)}\\
+&=\neg\forall x[P(x)\land\neg Q(x)]&\text{(Quantifier negation)}\\
+&=\neg[\forall xP(x)\land\forall x\neg Q(x)]&\text{(Distributivity over conjuction)}\\
+&=\neg[\forall xP(x)\land\neg\exists xQ(x)]&\text{(Quantifier negation)}\\
+&=\forall xP(x)\to\exists xQ(x)&\text{(Definition)}
+\end{align*}
+
+\subsection{If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to\exists xQ(x)$}
+\begin{proof}
+Suppose $\exists x(P(x)\to Q(x))$. Then we can choose some $x_0$ such that $P(x_0)\to Q(x_0)$. Now suppose that $\forall xP(x)$.
+Then in particular, $P(x_0)$, and since $P(x_0)\to Q(x_0)$, it follows that $Q(x_0)$. Since we have found a particular 
+value of $x$ for which $Q(x)$ holds, we can conclude that $\exists xQ(x)$. Thus $\forall xP(x)\to\exists xQ(x)$.
+\end{proof}
+\newpage
+
+\subsection{}
 
 
 
