@@ -1347,11 +1347,111 @@ element of $A$, we can conclude that $A\subseteq B\setminus C$.
 \newpage
 
 \subsection{Goals and givens of the form $P\leftrightarrow Q$}
+$P\leftrightarrow Q$ is equivalent to $(P\to Q)\land(Q\to P)$; as per the previous strategy, this sshould be treated as two separate givens or goals: $P\to Q$ and $Q\to P$.\\
+\vspace{1mm}\\
+\indent To prove a goal of the for $P\leftrightarrow Q$:\\
+\indent Prove $P\to Q$ and $Q\to P$ separately.\\
+\vspace{1mm}\\
+\indent To use a given of the form $P\leftrightarrow Q$:\\
+\indent Treat this as two separate givens $P\to Q$ and $Q\to P$.
 
+\subsection{Example: Suppose $x$ is an integer. Prove that $x$ is even iff $x^2$ is even}
+We use the definition
+\begin{definition}
+An integer $x$ is \textit{even} if $\exists k\in\mathbb Z(x=2k)$, and $x$ is \textit{odd} if 
+$\exists k\in\mathbb Z(x=2k+1)$.
+\end{definition}
+\noindent We also use the fact that every integer is either even or odd, but not both.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Suppose $x$ is an integer. Prove that $x$ is even iff $x^2$ is even.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+The goal is ($x$ is even)$\leftrightarrow$($x^2$ is even), so we prove the two goals
+($x$ is even)$\to$($x^2$ is even) and ($x^2$ is even)$\to$($x$ is even) separately. So first:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&$x^2$ is even\\
+$x$ is even&\\
+\end{tabular}
+\end{center}
+We reveal the logical forms by writing out the definition of \textit{even}:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&$\exists j\in\mathbb Z(x^2=2j)$\\
+$\exists k\in\mathbb Z(x=2k)$\\
+\end{tabular}
+\end{center}
+The second given starts with $\exists k$, we immediately introduce $k_0$ to stand for some integer for which the enclosed statement is true: $k_0\in\mathbb Z$, and $x=2k_0$.
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&$\exists j\in\mathbb Z(x^2=2j)$\\
+$\exists k\in\mathbb Z(x=2k)$&\\
+$k_0\in\mathbb Z$&\\
+$x=2k_0$&
+\end{tabular}
+\end{center}
+We need an integer $j$ such that $x^2=2j$. Plugging in $2k_0$ for $x$ we get $x^2=4k^2_0=2(2k^2_0)$
+See that $j=2k_0^2$ is a possible choice.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+To prove the second goal ($x^2$ is even)$\to$($x$ is even), we'll prove the contrapositive ($x$ is not even)$\to$($x$ is not even) instead. Since any integer
+is either even or odd but not both, this is equivalent to ($x$ is odd)$\to$($x^2$ is odd):
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&$x^2$ is odd\\
+$x$ is odd&\\
+\end{tabular}
+\end{center}
+Again we write out the definition of \textit{odd} to reveal the logical forms:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&$\exists j\in\mathbb Z(x^2=2j+1)$\\
+$\exists k\in\mathbb Z(x=2k+1)$\\
+\end{tabular}
+\end{center}
+Considering the second given, we use existential instantiation:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&$\exists j\in\mathbb Z(x^2=2j+1)$\\
+$\exists k\in\mathbb Z(x=2k+1)$&\\
+$k\in\mathbb Z$&\\
+$x=2k_0+1$&
+\end{tabular}
+\end{center}
+We must now find an integer $j$ such that $x^2=2j+1$. Plugging in $2k_0+1$ for $x$ we get 
+$x^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1$, so $j=2k^2+2k$ is a possible choice.\\
+\vspace{1mm}\\
+The two conditional statements we've proven can be thought of as representing the two directions $\to$ and $\leftarrow$. The two parts of the proof are sometimes labelled with the symbols
+$\to$ and $\leftarrow$.\\
+\vspace{1mm}\\
+In each part, we prove a statement that asserts the existence
+of a number with certain properties. We called this number $j$, but note that $j$ was not mentioned explicily in the statement of the problem, so we choose not to mention it in the final proof.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $x$ is an integer. Then $x$ is even iff $x^2$ is even.
+\end{theorem}
+\begin{proof}($\rightarrow$) Suppose $x$ is even. Then for some integer $k_0$, $x=2k_0$. Therefore $x^2=4k^2=2(2k^2)$, so since $2k^2$ is an integer, $x^2$ is even. 
+Thus if $x$ is even then $x^2$ is even.\\
+\indent($\leftarrow$) Suppose $x$ is odd. Then $x=2k+1$ for some integer $k$. Therefore $x^2=(2k+1)^2=4k^2+4k+1=2(2k^2+2k)+1$, so since $(2k^2+2k)$ is an integer, $x^2$ is odd. Thus if 
+$x^2$ is even then $x$ is even.
+\end{proof}
+\newpage
 
-
-
-
+\subsection{}
 
 
 
