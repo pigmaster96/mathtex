@@ -1280,6 +1280,78 @@ $n$ such that $nb=c$. Therefore $c=nb=nma$, so since $nm$ is an integer, $a\mid 
 \newpage
 
 \section{Proofs involving conjunctions and biconditionals}
+\subsection{Goals and givens of form $P\land Q$}
+This is fairly straightforward:\\
+\vspace{1mm}\\
+\indent To prove a goal of the form $P\land Q$:\\
+\indent Prove $P$ and $Q$ separately.\\
+\vspace{1mm}\\
+In other words, a goal of the form $P\land Q$ is treated as two separate goals: $P$ and $Q$. The same is true of givens of the form $P\land Q$:\\
+\vspace{1mm}\\
+\indent To use a given of the form $P\land Q$:\\
+\indent Treat this given as two separate givens: $P$ and $Q$.\\
+\vspace{1mm}\\
+We've already used these ideas in previous examples.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Suppose $A\subseteq B$, and $A$ and $C$ are disjoint. Prove that $A\subseteq B\setminus C$.\\
+\vspace{1mm}\\
+\textit{Scratch work}
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\subseteq B$&$A\subseteq B\setminus C$\\
+$A\cap C=\emptyset$&\\
+\end{tabular}
+\end{center}
+The logical form of the goal has the form $\forall x(x\in A\to x\in B\setminus C)$, so we let $x$ be arbitrary, assume $x\in A$, and try to prove $x\in B\setminus C$, which means
+$x\in B\land x\notin C$. As per our strategy we split this into two goals and prove them separately.
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\subseteq B$&$x\in B$\\
+$A\cap C=\emptyset$&$x\notin C$\\
+$x\in A$&
+\end{tabular}
+\end{center}
+The final proof will have the form\\
+\vspace{1mm}\\
+\indent Let $x$ be arbitrary.\\
+\indent\indent Suppose $x\in A$.\\
+\indent\indent\indent [Proof of $x\in B$ goes here.]\\
+\indent\indent\indent [Proof of $x\in B$ goes here.]\\
+\indent\indent\indent Thus, $x\in B\land x\notin C$, so $x\in B\setminus C$.\\
+\indent\indent Therefore $x\in A\to x\in B\setminus C$.\\
+\indent Since $x$ was arbitrary, $\forall x(x\in A\to x\in B\setminus C)$, so $A\subseteq B\setminus C$.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+The first goal, $x\in B$, follows from $x\in A$ and $A\subseteq B$; that much is clear. The second goal, $x\notin C$, follows from $x\in A$ and $A\cap C=\emptyset$; this can be seen
+from analysing the logical form of $A\cap C=\emptyset$:
+\begin{align*}
+A\cap C=\emptyset\text{ is equivalent to }&\neg\exists y(y\in A\land y\in C)&\text{(definition)}\\
+=&\forall y\neg(y\in A\land y\in C)&\text{(Quantifier negation)}\\
+=&\forall y(y\in A\to y\notin C)&\text{(definition)}
+\end{align*}
+From which we can conclude that $x\in A\to x\notin C$.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $A\subseteq B$, and $A$ and $C$ are disjoint. Then $A\subseteq B\setminus C$.
+\end{theorem}
+\begin{proof}
+Suppose $x\in A$. Since $A\subseteq B$, it follows that $x\in B$, and since $A$ and $C$ are disjoint, we must have $x\notin C$. Thus, $x\in B\setminus C$. Since $x$ was an arbitrary
+element of $A$, we can conclude that $A\subseteq B\setminus C$.
+\end{proof}
+\newpage
+
+\subsection{Goals and givens of the form $P\leftrightarrow Q$}
+
+
+
+
+
 
 
 
