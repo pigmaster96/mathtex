@@ -1451,7 +1451,56 @@ $x^2$ is even then $x$ is even.
 \end{proof}
 \newpage
 
+\subsection{Proving $\forall x\neg P(x)\leftrightarrow\neg\exists xP(x)$}
+\textit{Scratch work}\\
+$(\to)$ We first prove $\forall x\neg P(x)\rightarrow\neg\exists xP(x)$, so we assume $\forall x\neg P(x)$ and try to prove $\neg\exists xP(x)$. 
+Our goal is a negated statement, and trying to rexpress it would require the use of the very equivalence we are trying to prove. We therefore try proof by contradiction:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\forall x\neg P(x)$&Contradiction\\
+$\exists xP(x)$&
+\end{tabular}
+\end{center}
+The second given starts with and existential quantifier, so we use it immediately and let $x_0$ stand for some object for which the statement $P(x_0)$ is true. But now plugging $x_0$ into 
+the first given we get $\neg P(x_0)$, which gives us the contradiction we need.\\
+\vspace{1mm}\\
+$(\leftarrow)$ For the other direction we assume $\neg\exists xP(x)$ and try to prove $\forall x\neg P(x)$. We let $x$ be arbitrary and try to prove $\neg P(x)$; once again we have a negated goal
+that can't be reexpressed, so we use proof by contradiction:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\neg\exists xP(x)$&Contradiction\\
+$P(x)$&
+\end{tabular}
+\end{center}
+The first line is a negated statement. This suggests that we could get our contradiction by proving $\exists xP(x)$. We therefore set this as our goal
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\neg\exists xP(x)$&$\exists xP(x)$\\
+$P(x)$&
+\end{tabular}
+\end{center}
+Our second given $P(x)$ tells us that our arbitrary $x$ is the value we need to show the goal.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+$\forall x\neg P(x)\leftrightarrow\neg\exists xP(x)$.
+\end{theorem}
+\begin{proof}
+$(\to)$ Suppose $\forall x\neg P(x)$, and suppose $\exists xP(x)$. Then we can choose some $x_0$ such that $P(x_0)$ is true. But since $\forall x\neg P(x)$, we can conclude that $\neg P(x_0)$, which
+is a contradiction. Therefore $\forall x\neg P(x)\to\neg\exists xP(x)$.\\
+\indent$(\leftarrow)$ Suppose $\neg\exists xP(x)$. Let $x$ be arbitrary, and suppose $P(x)$. Since we have a specific $x$ for which $P(x)$ is true, it follows that $\exists xP(x)$, which is a
+contradiction; therefore $\neg P(x)$. Since $x$ was arbitrary, we can conclude that $\forall x\neg P(x)$, so $\neg\exists xP(x)\to\forall x\neg P(x)$.
+\end{proof}
+\newpage
+
 \subsection{}
+
 
 
 
@@ -1480,7 +1529,6 @@ value of $x$ for which $Q(x)$ holds, we can conclude that $\exists xQ(x)$. Thus 
 \newpage
 
 \subsection{}
-
 
 
 

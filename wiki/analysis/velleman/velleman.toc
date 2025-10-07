@@ -34,7 +34,7 @@
 \contentsline {subsection}{\numberline {2.4.1}Goals and givens of form $P\land Q$}{38}{}%
 \contentsline {subsection}{\numberline {2.4.2}Goals and givens of the form $P\leftrightarrow Q$}{40}{}%
 \contentsline {subsection}{\numberline {2.4.3}Example: Suppose $x$ is an integer. Prove that $x$ is even iff $x^2$ is even}{40}{}%
-\contentsline {subsection}{\numberline {2.4.4}}{42}{}%
+\contentsline {subsection}{\numberline {2.4.4}Proving $\forall x\neg P(x)\leftrightarrow \neg \exists xP(x)$}{42}{}%
 \contentsline {chapter}{\numberline {A}Exercises}{43}{}%
 \contentsline {section}{\numberline {A.1}Ch 3}{43}{}%
 \contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{43}{}%
