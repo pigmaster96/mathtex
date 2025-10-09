@@ -1346,7 +1346,7 @@ element of $A$, we can conclude that $A\subseteq B\setminus C$.
 \end{proof}
 \newpage
 
-\subsection{Goals and givens of the form $P\leftrightarrow Q$}
+\subsection{Goals and givens of the form $P\leftrightarrow Q$ (part 1)}
 $P\leftrightarrow Q$ is equivalent to $(P\to Q)\land(Q\to P)$; as per the previous strategy, this sshould be treated as two separate givens or goals: $P\to Q$ and $Q\to P$.\\
 \vspace{1mm}\\
 \indent To prove a goal of the for $P\leftrightarrow Q$:\\
@@ -1499,7 +1499,24 @@ contradiction; therefore $\neg P(x)$. Since $x$ was arbitrary, we can conclude t
 \end{proof}
 \newpage
 
-\subsection{}
+\subsection{Goals and givens of the form $P\leftrightarrow Q$ (part 2)}
+Sometimes in a proof of a goal of the form $P\leftrightarrow Q$ the steps in the proof of $Q\to P$ are the same as 
+the steps used to prove $P\to Q$, just in reverse order.
+In this case one might be able to simplify the proof by writing it as a string of equivalences, starting with $P$ and ending
+with $Q$.\\
+\vspace{1mm}\\
+For example suppose one could prove $P\to R\to Q$ (which is $P\to R$ and $R\to Q$), and $Q\to R\to P$ 
+(which is $Q\to R$ and $R\to P$). This would be the same as asserting that 
+$P\leftrightarrow R\leftrightarrow Q$ ($P\leftrightarrow R$ and $R\leftrightarrow Q$); as such both statements imply 
+the goal $P\leftrightarrow Q$. One would present this kind
+of proof by simply writing the string of equivalences
+\begin{equation*}
+P\text{ iff }R\text{ iff }Q
+\end{equation*}
+Since this is just an abbreviation for `$P$ iff $R$ and $R$ iff $Q$ (and therefore $P$ iff $Q$)'.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Suppose
 
 
 
