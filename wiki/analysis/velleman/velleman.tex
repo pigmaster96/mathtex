@@ -1516,7 +1516,47 @@ P\text{ iff }R\text{ iff }Q
 Since this is just an abbreviation for `$P$ iff $R$ and $R$ iff $Q$ (and therefore $P$ iff $Q$)'.\\
 \vspace{1mm}\\
 \textbf{Example}\\
-Suppose
+Suppose $A,B$, and $C$ are sets. Prove that $A\cap(B\setminus C)=(A\cap B)\setminus C$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+The equation $A\cap(B\setminus C)=(A\cap B)\setminus C$ means $\forall x(x\in A\cap(B\setminus C)\leftrightarrow x\in(A\cap B)\setminus C)$; it can also mean 
+$[A\cap(B\setminus C)\subseteq(A\cap B)\setminus C]\land[(A\cap B)\setminus C\subseteq A\cap(B\setminus C)]$.\\
+\vspace{1mm}\\
+This suggests two approaches to the proof: we could let $x$ be arbitrary and then prove $x\in A\cap(B\setminus C)\leftrightarrow x\in(A\cap B)\setminus C)$, or we could prove the two statements
+$A\cap(B\setminus C)\subseteq(A\cap B)\setminus C$ and $(A\cap B)\setminus C\subseteq A\cap(B\setminus C)$.\\
+\vspace{1mm}\\
+In this case we use the first approach. Considering the first half $(\rightarrow)$ of the equivalence, we assume $x\in A\cap(B\setminus C)$
+and try to prove $x\in(A\cap B)\setminus C$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in A\cap(B\setminus C)$&$x\in(A\cap B)\setminus C$\\
+\end{tabular}
+\end{center}
+To see the logical forms of the given and goal, we write out their definitions as follows:
+\begin{align*}
+x\in A\cap(B\setminus C)\text{ iff }x\in A\land x\in B\setminus C&\text{ iff }x\in A\land x\in B\land x\notin C\\
+x\in(A\cap B)\setminus C\text{ iff }x\in A\cap B\land x\notin C&\text{ iff }x\in A\land x\in B\land x\notin C
+\end{align*}
+At this point it is clear that the reasoning involved in the $(\leftarrow)$ direction of the proof will be exactly the same, but with the given and goal columns reversed. 
+As such we might try to shorten the proof by writing it as a string of equivalences.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $A,B$, and $C$ are sets. Then $A\cap(B\setminus C)=(A\cap B)\setminus C$.
+\end{theorem}
+\begin{proof}
+Let $x$ be arbitrary. Then
+\begin{align*}
+x\in A\cap(B\setminus C)&\text{ iff }x\in A\land x\in B\setminus C\\
+&\text{ iff }x\in A\land x\in B\land x\notin C\\
+&\text{ iff }x\in A\cap B\land x\notin C\\
+&\text{ iff }x\in(A\cap B)\setminus C
+\end{align*}
+Thus, $\forall x(x\in A\cap(B\setminus C)\leftrightarrow x\in(A\cap B)\setminus C)$, so $A\cap(B\setminus C)=(A\cap B)\setminus C$.
+\end{proof}
 
 
 
