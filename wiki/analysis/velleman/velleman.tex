@@ -1557,7 +1557,52 @@ x\in A\cap(B\setminus C)&\text{ iff }x\in A\land x\in B\setminus C\\
 \end{align*}
 Thus, $\forall x(x\in A\cap(B\setminus C)\leftrightarrow x\in(A\cap B)\setminus C)$, so $A\cap(B\setminus C)=(A\cap B)\setminus C$.
 \end{proof}
+\hspace{1mm}\\
+\textbf{Another example}\\
+A similar technique can be used when proving equations. Consider proving that for any real numbers $a$ and $b$,
+\begin{equation*}
+(a+b)^2-4(a-b)^2=(3b-a)(3a-b)
+\end{equation*}
+\textit{Scratch work}\\
+The goal has the form $\forall a\forall b[(a+b)^2-4(a-b)^2=(3b-a)(3a-b)]$; so we start by letting $a$ and $b$ be arbitrary real numbers
+and try to prove the equation. Multiplying our both sides gives us:
+\begin{align*}
+(a+b)^2-4(a-b)^2&=a^2+2ab+b^2-4(a^2-2ab+b^2)\\
+&=-3a^2+10ab-3b^2;\\
+(3b-a)(3a-b)&=9ab-3a^2-3b^2+ab=-3a^2+10ab-3b^2
+\end{align*}
+Clearly both sides are equal. The simplest way to write the proof is using a string of equalities.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+For any real numbers $a$ and $b$.
+\begin{equation*}
+(a+b)^2-4(a-b)^2=(3b-a)(3a-b)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let $a$ and $b$ be arbitrary real numbers. Then 
+\begin{align*}
+(a+b)^2-4(a-b)^2&=a^2+2ab+b^2-4(a^2-2ab+b^2)\\
+&=-3a^2+10ab-3b^2\\
+&=ab-3a^2-3b^2+ab=(3b-a)(3a-b)\qedhere
+\end{align*}
+\end{proof}
+\newpage
 
+\subsection{Example: For every integer $n$, $6\mid n$ iff $2\mid n$ and $3\mid n$}
+\begin{theorem}
+For every integer $n$, $6\mid n$ iff $2\mid n$ and $3\mid n$.
+\end{theorem}
+\begin{proof}
+$(\rightarrow)$ Suppose $6\mid n$. Then we can choose an integer $k$ such that $6k=n$. Therefore $n=6k=2(3k)$, so $2\mid n$, and
+similarly $n=6k=3(2k)$, so $3\mid n$.\\
+\indent$(\leftarrow)$ Suppose $2\mid n$ and $3\mid n$. Then we can choose integers $j$ and $k$ such that $n=2j$ and $n=3k$.
+Therefore $6(j-k)=6j-6k=3(2j)-2(3k)=3n-2n=n$, so $6\mid n$.
+\end{proof}
+\newpage
+
+\section{Proofs involving disjunctions}
 
 
 
