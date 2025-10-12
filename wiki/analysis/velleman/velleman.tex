@@ -1835,7 +1835,48 @@ Suppose $x$ is an integer, we consider two cases.\\
 \newpage
 
 \subsection{Goal of form $P\lor Q$ (part 2)}
-Sometimes in a proof
+Sometimes in a proof with a goal of the form $P\lor Q$ it may be difficult to figure out how to break the proof into cases.
+Another strategy would be to simply assume that $P$ is true in case 1 and assume that it is false in case 2; since $P$ is either true or false, these cases are exhaustive.\\
+\vspace{1mm}\\
+In the first case, since one assumes $P$ is true, the goal $P\lor Q$ is certainly true and no further reasoning is required. In the second case we assume $P$ is false, and the only way for the 
+goal $P\lor Q$ to be true is if $Q$ is true; thus to complete this case one should try to prove $Q$.
+\begin{quote}
+To prove a goal of the form $P\lor Q$:\\
+If $P$ is true, then clearly the goal $P\lor Q$ is true, so one only needs to consider the case where $P$ is false; one can complete the proof by proving that for that case $Q$ is true.
+\end{quote}
+\textit{Scratch work}\\
+Before using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+---&$P\lor Q$\\
+---&
+\end{tabular}
+\end{center}
+After using strategy:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+---&$Q$\\
+---&\\
+$\neg P$&
+\end{tabular}
+\end{center}
+\textit{Form of final proof:}\\
+\vspace{1mm}\\
+\indent If $P$ is true, then of course $P\lor Q$ is true. Now suppose $P$ is false.\\
+\indent\indent [Proof of $Q$ goes here.]\\
+\indent Thus $P\lor Q$ is true.\\
+\vspace{1mm}\\
+Note that this strategy is the same transformation one would use when proving the goal $\neg P\to Q$. This isn't suprising given that the statements $P\lor Q$ and $\neg P\to Q$ are equivalent.\\
+\vspace{1mm}\\
+Note that the roles of $P$ and $Q$ could also be reversed in this strategy---we can also prove $P\lor Q$ by assuming that $Q$ is false and proving $P$.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Prove that 
+
 
 
 
