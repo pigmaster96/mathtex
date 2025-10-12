@@ -1652,9 +1652,190 @@ $Q$&---\\
 \indent goal must be true.\\
 (next page)\newpage
 \noindent\textbf{Example}\\
-Suppose
+Suppose that $A,B$, and $C$ are sets. Prove that if $A\subseteq C$ and $B\subseteq C$ then $A\cup B\subseteq C$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+We assume that $A\subseteq C$ and $B\subseteq C$ and prove $A\cup B\subseteq C$. Writing out the goal using logical symbols gives us the following givens and goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\subseteq C$&$\forall x(x\in A\cup B\to x\in C)$\\
+$B\subseteq C$&
+\end{tabular}
+\end{center}
+We let $x$ be arbitrary, assume $x\in A\cup B$, and try to prove $x\in C$. Thus we now have a new given $x\in A\cup B$, which we write as $x\in A\lor x\in B$, and our goal is now $x\in C$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\subseteq C$&$x\in C$\\
+$B\subseteq C$&\\
+$x\in A\lor x\in B$&
+\end{tabular}
+\end{center}
+The goal cannot be analysed any further at this point, so we look at the givens. The first and second givens are useful if we ever come across objects that are elements of $A$ or $B$. Moving on to
+the third given, because it has the form $P\lor Q$, we try proof by cases; for the first case we assume $x\in A$ and for the second $x\in B$. For the first case we have
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\subseteq C$&$x\in C$\\
+$B\subseteq C$&\\
+$x\in A$&
+\end{tabular}
+\end{center}
+We've come across an element of $A$; using our first given we can conclude that $x\in C$ proving our goal. The reasoning for the second case is similar, 
+using the second given instead of the first.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+Suppose that $A,B$, and $C$ are sets. If $A\subseteq C$ and $B\subseteq C$ then $A\cup B\subseteq C$.
+\end{theorem}
+\begin{proof}
+Suppose $A\subseteq C$ and $B\subseteq C$, and let $x$ be an arbitrary element of $A\cup B$. Then either $x\in A$ or $x\in B$.\\
+\indent Case 1. $x\in A$. Then since $A\subseteq C$, $x\in C$.\\
+\indent Case 2. $x\in B$. Then since $B\subseteq C$, $x\in C$.\\
+Since we know that either $x\in A$ or $x\in B$, these cases cover all the possibilities, so we can conclude that $x\in C$. Since $x$ was an arbitrary element of $A\cup B$, this means that 
+$A\cup B\subseteq C$.
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Cont.}\\
+Note that the cases in this proof are not exclusive---it is possible for both $x\in A$ and $x\in B$ to be true, so some values of $x$ might fall under both cases. There
+is nothing wrong with this; the cases in a proof by cases must cover all possibilities, there is no harm in covering some possibilities more than once---the cases must be exhaustive, they need
+not be exclusive.
 
+\subsection{Goal of form $P\lor Q$ (part 1)}
+Proof by cases is sometimes also helpful if one is proving a goal of the form $P\lor Q$. If one can
+prove $P$ in some cases and $Q$ in others, then as long as the cases are exhaustive then one 
+can conclude that $P\lor Q$ is true.\\
+\vspace{1mm}\\
+This method is particularly useful if one of the givens also has the form of a disjunction, since that would naturally imply a proof by cases.
+\begin{quote}
+To prove a goal of the form $P\lor Q$:\\
+Break the proof into cases. In each case, either prove $P$ or $Q$.
+\end{quote}
+\textbf{Example}\\
+Suppose that $A,B$ and $C$ are sets. Prove that $A\setminus(B\setminus C)\subseteq(A\setminus B)\cup C$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+The goal has the form $\forall x(x\in A\setminus(B\setminus C)\to x\in(A\setminus B)\cup C)$, we let $x$ be arbitrary, assume $x\in A\setminus(B\setminus C)$, and try to prove 
+$x\in(A\setminus B)\cup C$. Writing these statements out in logical symbols gives us
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in A\land\neg(x\in B\land x\notin C)$&$(x\in A\land x\notin B)\lor x\in C$
+\end{tabular}
+\end{center}
+We split the given into two separate givens $x\in A$ and $\neg(x\in B\land x\notin C)$, and since the second is a negated statement we use De Morgan's law to reexpress it as a positive statement 
+$x\notin B\lor x\in C$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in A$&$(x\in A\land x\notin B)\lor x\in C$\\
+$x\notin B\lor x\in C$&
+\end{tabular}
+\end{center}
+Now the second given and the goal are both disjunctions, so we try considering the two cases $x\notin B$ and $x\in C$ suggested by the second given.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+If in each case we can either prove $x\in A\land x\notin B$ or $x\in C$, then the proof will be complete. For the first case we assume $x\notin B$
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in A$&$(x\in A\land x\notin B)\lor x\in C$\\
+$x\notin B$&
+\end{tabular}
+\end{center}
+In this case the goal is clearly true. For the second case we assume $x\in C$, and once again the goal is clearly true.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+Suppose that $A,B$, and $C$ are sets. Then $A\setminus(B\setminus C)\subseteq(A\setminus B)\cup C$.
+\end{theorem}
+\begin{proof}
+Suppose $x\in A\setminus(B\setminus C)$. Then $x\in A$ and $x\notin B\setminus C$. Since $x\notin B\setminus C$ it follows that either $x\notin B$ or $x\in C$. We will consider these
+cases separately.
+\begin{quote}
+Case 1. $x\notin B$. Then since $x\in A$, $x\in A\setminus B$, so $x\in(A\setminus B)\cup C$.\\
+Case 2. $x\in C$. Then clearly $x\in(A\setminus B)\cup C$.
+\end{quote}
+Since $x$ was an arbitrary element of $A\setminus(B\setminus C)$, we can conclude that $A\setminus(B\setminus C)\subseteq(A\setminus B)\cup C$.
+\end{proof}
 
+\subsection{Example: For integer $x$, the remainder when $x^2$ is divided by 4 is either 0 or 1}
+Sometimes one may find it useful to break a proof into cases even if the cases are not naturally suggested by a given of the form $P\lor Q$. Any proof can be broken into cases at any time,
+as long as the cases exhaust all of the possibilities.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Prove that for every integer $x$, the remainder when $x^2$ is divided by 4 is either 0 or 1.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+We start by letting $x$ be an arbitrary integer and then try to prove that the remainder when $x^2$ is divided by 4 is either 0 or 1:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&($x^2\div4$ has remainder 0) $\lor$ ($x^2\div4$ has remainder 1)\\
+\end{tabular}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Since the goal is a disjunction, breaking the proof into cases seems like a probable approach, but there is no given that suggests what cases to use. However, trying out a few values for $x$
+suggests the right cases
+\begin{center}
+\begin{tabular}{cccc}
+$x$&$x^2$&quotient of $x^2\div4$&remainder of $x^2\div4$\\
+\hline
+1&1&0&1\\
+2&4&1&0\\
+3&9&2&1\\
+4&16&4&0\\
+5&25&6&1\\
+6&36&9&0
+\end{tabular}
+\end{center}
+It appears that the remainder is 0 when $x$ is even and 1 when $x$ is odd. These are the cases we will use. Thus for case 1 we assume $x$ is even and try to prove that the remainder is 0, and for
+case 2 we assume $x$ is odd and prove that the remainder is 1. Because every integer is either even or odd, these cases are exhaustive.\\
+\vspace{1mm}\\
+Filling in the definition of \textit{even}, here are our givens and goal for case 1:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&$x^2\div4$ has remainder 0\\
+$\exists k\in\mathbb Z(x=2k)$&
+\end{tabular}
+\end{center}
+Immediately using the second given and letting $k$ stand for some particular integer in which $x=2k$, then $x^2=(2k)^2=4k^2$, so clearly when we divide $x^2$ by 4 the quotient is $k^2$
+and the remainder is 0. Case 2 is quite similar:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\in\mathbb Z$&$x^2\div4$ has remainder 1\\
+$\exists k\in\mathbb Z(x=2k+1)$&
+\end{tabular}
+\end{center}
+Once again we use the second given immediately and let $k$ stand for an integer for which $x=2k+1$. Then $x^2=(2k+1)^2=4k^2+4k+1=4(k^2+k)+1$, so when
+$x^2$ is divided by 4 the quotient is $k^2+k$ and the remainder is 1.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+For every integer $x$, the remainder when $x^2$ is divided by 4 is either 0 or 1.
+\end{theorem}
+\begin{proof}
+Suppose $x$ is an integer, we consider two cases.\\
+\indent Case 1. $x$ is even. Then $x=2k$ for some integer $k$, so $x^2=4k^2$. Clearly the remainder when $x^2$ is divided by 4 is 0.\\
+\indent Case 2. $x$ is odd. Then $x=2k+1$ for some integer $k$, so $x^2=4k^2+4k+1=4(k^2+k)+1$. Clearly in this case the remainder when $x^2$ is divided by 4 is 1.
+\end{proof}
+\newpage
+
+\subsection{Goal of form $P\lor Q$ (part 2)}
+Sometimes in a proof
 
 
 

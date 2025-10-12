@@ -38,8 +38,11 @@
 \contentsline {subsection}{\numberline {2.4.5}Goals and givens of the form $P\leftrightarrow Q$ (part 2)}{43}{}%
 \contentsline {subsection}{\numberline {2.4.6}Example: For every integer $n$, $6\mid n$ iff $2\mid n$ and $3\mid n$}{45}{}%
 \contentsline {section}{\numberline {2.5}Proofs involving disjunctions}{46}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{48}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{48}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{48}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{48}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{49}{}%
+\contentsline {subsection}{\numberline {2.5.1}Goal of form $P\lor Q$ (part 1)}{48}{}%
+\contentsline {subsection}{\numberline {2.5.2}Example: For integer $x$, the remainder when $x^2$ is divided by 4 is either 0 or 1}{49}{}%
+\contentsline {subsection}{\numberline {2.5.3}Goal of form $P\lor Q$ (part 2)}{51}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{52}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{52}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{52}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{52}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{53}{}%
