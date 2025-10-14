@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1760376117 "bondy.tex" "bondy.pdf" "bondy" 1760376117 0
+["pdflatex"] 1760394583 "bondy.tex" "bondy.pdf" "bondy" 1760394583 0
   "/etc/texmf/web2c/texmf.cnf" 1749907355 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -83,10 +83,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1749907589 4623455 fa0568a71dd9a288d6c226ee477506c6 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1749907621 7879978 fb3af9b14ad15a82c6d33c1f97125660 ""
-  "bondy.aux" 1760376117 316 ac7f0f322fd9073ea80e13f028d4fef6 "pdflatex"
-  "bondy.tex" 1760376117 3949 639269d0ac2fabf8363a7278b5dbd349 ""
-  "bondy.toc" 1760376117 126 8df3db55e62ecd6977de80a60ff8e50e "pdflatex"
-  "images//1.png" 1760372869 21590 ddbe50dcaf090f6800dbf5b2aafb95ea ""
+  "bondy.aux" 1760394583 316 ac7f0f322fd9073ea80e13f028d4fef6 "pdflatex"
+  "bondy.tex" 1760394574 3950 c138dc6bb2a5b2cc3449ab714c83426e ""
+  "bondy.toc" 1760394583 126 8df3db55e62ecd6977de80a60ff8e50e "pdflatex"
+  "images//1.png" 1760394542 21590 ddbe50dcaf090f6800dbf5b2aafb95ea ""
   (generated)
   "bondy.aux"
   "bondy.log"

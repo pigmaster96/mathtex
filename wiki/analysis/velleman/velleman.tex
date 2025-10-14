@@ -1875,8 +1875,48 @@ Note that this strategy is the same transformation one would use when proving th
 Note that the roles of $P$ and $Q$ could also be reversed in this strategy---we can also prove $P\lor Q$ by assuming that $Q$ is false and proving $P$.\\
 (next page)\newpage
 \noindent\textbf{Example}\\
-Prove that 
+Prove that for every real number $x$, if $x^2\geq x$ then either $x\leq0$ or $x\geq1$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+Our goal is $\forall x(x^2\geq x\to(x\leq0\lor x\geq1))$, so to start we let $x$ be an arbitrary real number, assume $x^2\geq x$, and set $x\leq0\lor x\geq1$ as our goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x^2\geq x$&$x\leq0\lor x\geq1$\\
+\end{tabular}
+\end{center}
+As per our strategy, to prove this we can either assume $x>0$ and prove $x\geq1$ or assume $x<1$ and prove $x\leq0$. We take the first approach.
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x^2\geq x$&$x\geq1$\\
+$x>0$&
+\end{tabular}
+\end{center}
+The proof is now easy. Since $x>0$, we can divide the given inequality $x^2\geq x$ by $x$ to get the goal $x\geq1$.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+For every real number $x$, if $x^2\geq x$ then either $x\leq0$ or $x\geq1$.
+\end{theorem}
+\begin{proof}
+Suppose $x^2\geq x$. If $x\leq0$, then of course $x\leq0$ or $x\geq1$. Now suppose $x>0$. Then we can divide both sides of the inequality $x^2\geq x$ by $x$ to conclude that $x\geq 1$. Thus either
+$x\leq0$ or $x\geq1$.
+\end{proof}
+\newpage
 
+\subsection{Given of form $P\lor Q$ (part 2)}
+The equivalence of $P\lor Q$ and $\neg P\to Q$ suggests a rule of inference called \textit{disjunctive syllogism} for using a given statement of the form $P\lor Q$:
+\begin{quote}
+To use a given of the form $P\lor Q$:\\
+If one knows $\neg P$, or if one can prove $P$ is false, then one can use this given to conclude that $Q$ is true. Similarly if given $\neg Q$ or if one can prove $Q$ is false, 
+then one can conclude that $P$ is true.
+\end{quote}
+\newpage
+
+\section{Existence and Uniqueness proofs}
 
 
 

@@ -41,8 +41,10 @@
 \contentsline {subsection}{\numberline {2.5.1}Goal of form $P\lor Q$ (part 1)}{48}{}%
 \contentsline {subsection}{\numberline {2.5.2}Example: For integer $x$, the remainder when $x^2$ is divided by 4 is either 0 or 1}{49}{}%
 \contentsline {subsection}{\numberline {2.5.3}Goal of form $P\lor Q$ (part 2)}{51}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{53}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{53}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{53}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{53}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{54}{}%
+\contentsline {subsection}{\numberline {2.5.4}Given of form $P\lor Q$ (part 2)}{53}{}%
+\contentsline {section}{\numberline {2.6}Existence and Uniqueness proofs}{54}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{55}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{55}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{55}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{55}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{56}{}%
