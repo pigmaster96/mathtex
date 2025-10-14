@@ -1917,6 +1917,26 @@ then one can conclude that $P$ is true.
 \newpage
 
 \section{Existence and Uniqueness proofs}
+We consider proofs in which the goal has the form $\exists!xP(x)$, meaning `there is exactly one $x$ such that $P(x)$'. This can be thought as an abbreviation for the formula 
+$\exists x(P(x)\land\neg\exists y(P(y)\land y\neq x))$.\\
+\vspace{1mm}\\
+As discussed, we could prove this goal by finding a particular $x$ for which we could prove both $P(x)$ and $\neg\exists y(P(y)\land y\neq x))$. The second part would involve proving a negated
+statement, but we can reexpress it as an equivalent positive statement:
+\begin{align*}
+\neg\exists y(P(y)\land y\neq x))&\\
+\text{is equivalent to }&\forall y\neg(P(y)\land y\neq x)&\text{(quantifier negation law)}\\
+\text{which is equivalent to }&\forall y(P(y)\to y=x)&\text{(conditional law)}\\
+\end{align*}
+Thus see that $\exists!xP(x)$ could also be written as $\exists x(P(x)\land\forall y(P(y)\to y=x))$. 
+We can prove that the following are all equivalent:
+\begin{enumerate}
+\item$\exists x(P(x)\land\forall y(P(y)\to y=x))$
+\item$\exists x\forall y(P(y)\leftrightarrow y=x)$
+\item$\exists xP(x)\land\forall y\forall z((P(y)\land P(z))\to y=z)$ 
+\end{enumerate}
+\textit{Scratch work}\\
+We have three biconditionals 
+
 
 
 
