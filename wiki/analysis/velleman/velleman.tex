@@ -1935,7 +1935,58 @@ We can prove that the following are all equivalent:
 \item$\exists xP(x)\land\forall y\forall z((P(y)\land P(z))\to y=z)$ 
 \end{enumerate}
 \textit{Scratch work}\\
-We have three biconditionals 
+We have three biconditionals to prove: statement 1 iff statement 2, statement 1 iff statement 3, and statement 2 iff statement 3. Rather that proving 6 different conditionals, 
+we will prove that statement 1 implies statement 2, 
+statement 2 implies statement 3, and statement 3 implies statement 1.\\
+\vspace{1mm}\\
+Although we will not give a separate proof of the reverse direction, they are implied by these three proofs; 
+for instance statement 2 implies 3 which implies 1, so statement 2 implies statement 1.\\
+\vspace{1mm}\\
+Because we'll be proving three conditional statements, our proof will have three parts, which we will label
+$1\to2,2\to3,$ and $3\to1$. We'll need to consider each part separately.\\
+(next page)\newpage
+\noindent\textbf{1$\to$2}: $\exists x(P(x)\land\forall y(P(y)\to y=x))\to\exists x\forall y(P(y)\leftrightarrow y=x)$\\
+We assume statement 1 and prove statement 2. Given the existential quantifier in the given we choose a name, say $x_0$, for some object where both $P(x_0)$ and $\forall y(P(y)\to y=x_0)$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$P(x_0)$&$\exists x\forall y(P(y)\leftrightarrow y=x)$\\
+$\forall y(P(y)\to y=x_0)$&
+\end{tabular}
+\end{center}
+Our goal starts with an existential quantifier, so we should try to find a value of $x$ 
+that makes the rest of the statement come out true. The obvious choice here is $x=x_0$; plugging in $x_0$, we must now prove $\forall y(P(y)\leftrightarrow y=x_0)$. We let $y$ be arbitrary and prove
+both directions of the biconditional. $(\rightarrow)$ is clear by the second given. For $(\leftarrow)$, suppose $y=x_0$; since we have $P(x_0)$ as a given, we have $P(y)$.\\
+\vspace{1mm}\\
+\textbf{2$\to$3}: $\exists x\forall y(P(y)\leftrightarrow y=x)\to\exists xP(x)\land\forall y\forall z((P(y)\land P(z))\to y=z)$ \\
+As per our usual strategy for existential given statements, we let $x_0$ be some object such that $\forall y(P(y)\leftrightarrow y=x_0)$. The goal is a conjunction, so we treat it as two
+separate goals:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\forall y(P(y)\leftrightarrow y=x_0)$&$\exists xP(x)$\\
+&$\forall y\forall z((P(y)\land P(z))\to y=z)$
+\end{tabular}
+\end{center}
+To prove the first goal we choose $x=x_0$ and try to prove $P(x_0)$; plugging in $x_0$ for $y$ in the given, we get $P(x_0)\leftrightarrow x_0=x_0$. Since $x_0=x_0$ is always true, we get $P(x_0)$
+by the $\leftarrow$ direction of the bicondidtional.
+For the second goal, we let $y$ and $z$ be arbitrary, assume $P(y)$ and $P(z)$, and try to prove $y=z$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\forall y(P(y)\leftrightarrow y=x_0)$&$y=z$\\
+$P(y)$&\\
+$P(z)$&
+\end{tabular}
+\end{center}
+Plugging in each of $y$ and $z$ into the first given we get $P(y)\leftrightarrow y=x_0$ and 
+$P(z)\leftrightarrow z=x_0$. Since we've assumed $P(y)$ and $P(z)$ we use the $\rightarrow$
+directions of these biconditionals to conclude that $y=x_0$ and $z=x_0$; our goal $y=z$ clearly follows.\\
+(next page)\newpage
+\noindent\textbf{3$\to$1}:
 
 
 
