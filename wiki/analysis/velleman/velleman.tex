@@ -2036,8 +2036,22 @@ As per the previous section, the following are equivalent:
 \item$\exists x\forall y(P(y)\leftrightarrow y=x)$
 \item$\exists xP(x)\land\forall y\forall z((P(y)\land P(z))\to y=z)$ 
 \end{enumerate}
-
-
+Since all three of the statements in the theorem are equivalent to $\exists!xP(x)$, we can prove a goal of this form by proving any of the three statements in the theorem. 
+The most common approach is using statement 3:
+\begin{quote}
+To prove a goal of the form $\exists!xP(x)$:\\
+Prove $\exists xP(x)$ and $\forall y\forall z((P(y)\land P(z))\to y=z)$. The first of these goals shows \textit{existence}, the next \textit{uniqueness}.
+\end{quote}
+\textit{Form of final proof:}\\
+\vspace{1mm}\\
+\indent Existence: [Proof of $\exists xP(x)$ goes here.]\\
+\indent Uniqueness: [Proof of $\forall y\forall z((P(y)\land P(z))\to y=z)$ goes here.]\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Prove that there is a unique set $A$ such that for every set $B$, $A\cup B=B$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+Our
 
 
 
