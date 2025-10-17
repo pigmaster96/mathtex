@@ -1986,7 +1986,67 @@ Plugging in each of $y$ and $z$ into the first given we get $P(y)\leftrightarrow
 $P(z)\leftrightarrow z=x_0$. Since we've assumed $P(y)$ and $P(z)$ we use the $\rightarrow$
 directions of these biconditionals to conclude that $y=x_0$ and $z=x_0$; our goal $y=z$ clearly follows.\\
 (next page)\newpage
-\noindent\textbf{3$\to$1}:
+\noindent\textbf{3$\to$1}:$\exists xP(x)\land\forall y\forall z((P(y)\land P(z))\to y=z)\to\exists x(P(x)\land\forall y(P(y)\to y=x))$\\
+We treat the given conjunction as two separate givens. The first is an existential statement so we let $x_0$ stand for some object such that $P(x_0)$ is true. The goal is an existential statement, 
+we let $x=x_0$, leaving us with this situation:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$P(x_0)$&$P(x_0)\land\forall y(P(y)\to y=x_0)$\\
+$\forall y\forall z((P(y)\land P(z))\to y=z)$&
+\end{tabular}
+\end{center}
+The first part of the goal is already proven. We only need to consider the second; we let $y$ be arbitrary, assume $P(y)$ and make $y=x_0$ our goal:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$P(x_0)$&$y=x_0$\\
+$\forall y\forall z((P(y)\land P(z))\to y=z)$&\\
+$P(y)$&
+\end{tabular}
+\end{center}
+We know both $P(y)$ and $P(x_0)$. The goal follows from the second given.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+The following are equivalent:
+\begin{enumerate}
+\item$\exists x(P(x)\land\forall y(P(y)\to y=x))$
+\item$\exists x\forall y(P(y)\leftrightarrow y=x)$
+\item$\exists xP(x)\land\forall y\forall z((P(y)\land P(z))\to y=z)$ 
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+$1\to2$. By statement 1, we can let $x_0$ be some object such that $P(x_0)$ and $\forall y(P(y)\to y=x_0)$ To prove statement 2 we will show that $\forall y(P(y)\leftrightarrow y=x_0)$. Let $y$ be 
+arbitrary. We already know the $\rightarrow$ direction of the biconditional. For the $\leftarrow$ direction, suppose $y=x_0$. Then since we know $P(x_0)$, we can conclude $P(y)$.\\
+\indent$2\to3$. By statement 2, choose $x_0$ such that $\forall y(P(y)\leftrightarrow y=x_0)$. Then, in particular, $P(x_0)\leftrightarrow x_0=x_0$, and since clearly $x_0=x_0$, it follows that
+$P(x_0)$ is true. Thus $\exists xP(x)$. To prove the second half of statement 3, let $y$ and $z$ be arbitrary and suppose $P(y)$ and $P(z)$. Then by our choice of $x_0$ (as something for which 
+$\forall y(P(y)\leftrightarrow y=x_0)$ is true), it follows that $y=x_0$ and $z=x_0$, so $y=z$.\\
+\indent$3\to1$. By the first half of statement 3, let $x_0$ be some object such that $P(x_0)$. We will prove that $\forall y(P(y)\to y=x_0)$, so suppose $P(y)$. Since we have both
+$P(x_0)$ and $P(y)$, by the second half of statement 3 we can conclude that $y=x_0$, as required.
+\end{proof}
+\newpage
+
+\subsection{Strategies and examples}
+As per the previous section, the following are equivalent:
+\begin{enumerate}
+\item$\exists x(P(x)\land\forall y(P(y)\to y=x))$
+\item$\exists x\forall y(P(y)\leftrightarrow y=x)$
+\item$\exists xP(x)\land\forall y\forall z((P(y)\land P(z))\to y=z)$ 
+\end{enumerate}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
