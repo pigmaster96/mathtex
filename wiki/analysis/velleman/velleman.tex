@@ -2051,8 +2051,46 @@ Prove $\exists xP(x)$ and $\forall y\forall z((P(y)\land P(z))\to y=z)$. The fir
 Prove that there is a unique set $A$ such that for every set $B$, $A\cup B=B$.\\
 \vspace{1mm}\\
 \textit{Scratch work}\\
-Our
-
+Our goal is $\exists!AP(A)$, where $P(A)$ is the statement $\forall B(A\cup B=B)$.
+As per our strategy we prove existence and uniqueness separately.\\
+\vspace{1mm}\\
+For the existence half of the proof we must show $\exists AP(A)$, so we try to find a value of $A$ that makes $P(A)$ true. 
+There is no formula for finding this $A$, but one might eventually realise that the right choice is $A=\emptyset$. Plugging in this value we see that to complete the existence
+half of the proof we must show $\forall B(\emptyset\cup B=B)$, which is clearly true (this can be proven).\\
+\vspace{1mm}\\
+For the uniqueness half of the proof we prove $\forall C\forall D((P(C)\land P(D))\to C=D)$. We let $C$ and $D$ be arbitrary, assume $P(C)$ and $P(D)$, and prove $C=D$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\forall B(C\cup B=B)$&$C=D$\\
+$\forall B(D\cup B=B)$&
+\end{tabular}
+\end{center}
+We plug in $D$ for $B$ in the first given, and $C$ for $B$ in the second. We get $C\cup D=D$ and $D\cup C=C$. But clearly $C\cup D=D\cup C$ (this can be proven). 
+The goal $C=D$ follows immediately.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+There is a unique set $A$ such that for every set $B$, $A\cup B=B$.
+\end{theorem}
+\begin{proof}
+Existence: Clearly $\forall B(\emptyset\cup B=B)$, so $\emptyset$ has the required property.\\
+\indent Uniqueness: Suppose $\forall B(C\cup B=B)$ and $\forall B(D\cup B=B)$. Applying the first of these assumptions to $D$ we see that $C\cup D=D$, and applying the second to $C$ we get 
+$D\cup C=C$. But clearly $C\cup D=D\cup C$, so $C=D$.
+\end{proof}
+\noindent\textbf{Alternative approach}\\
+The other equivalences can also be used. Statement 1 leads to the strategy:
+\begin{quote}
+To prove a goal of the for $\exists!xP(x)$:\\
+Prove $\exists x(P(x)\land\forall y(P(y)\to y=x))$, using strategies from previous sections.
+\end{quote}
+\textbf{Example}\\
+Prove that for every real number $x$, if $x\neq2$ then there is a unique real number $y$ such that $2y/(y+1)=x$.\\
+\vspace{1mm}\\
+\textit{Scratch work}\\
+Our goal
 
 
 
