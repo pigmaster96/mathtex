@@ -2090,13 +2090,58 @@ Prove $\exists x(P(x)\land\forall y(P(y)\to y=x))$, using strategies from previo
 Prove that for every real number $x$, if $x\neq2$ then there is a unique real number $y$ such that $2y/(y+1)=x$.\\
 \vspace{1mm}\\
 \textit{Scratch work}\\
-Our goal
+Our goal is $\forall x(x\neq 2\to\exists!y(2y/(y_1)=x))$. We let $x$ be arbitrary, assume $x\neq2$, and prove $\exists!y(2y/(y+1)=x)$. 
+As per our strategy, we can prove this goal by proving the equivalent statement
+\begin{equation*}
+\exists y\left(\frac{2y}{y+1}=x\land\forall z\left(\frac{2z}{z+1}=x\to z=y\right)\right)
+\end{equation*}
+We start by trying to find some $y$ that will make the equation $2y/(y+1)=x$ come out true. In other words, we solve this equation for $y$:
+\begin{equation*}
+\frac{2y}{y+1}=x\implies2y=x(y+1)\implies y(2-x)=x\implies y=\frac{x}{2-x}
+\end{equation*}
+Note that we have $x\neq2$ so the last step makes sense. These steps will not appear in the proof; we simply let $y=x/(2-x)$ and try to prove $2/(y+1)=x$ and $\forall z(2z/(z+1)=x\to z=y)$.
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\neq2$&$\frac{2y}{y+1}=x$\\
+$y=\frac{x}{2-x}$&$\forall z\left(\frac{2z}{z+1}=x\to z=y\right)$
+\end{tabular}
+\end{center}
+The first goal is easy to verify by simply plugging in our candidate $y$.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+For the second goal, we let $z$ be arbitrary, assume $2z(z+1)=x$, and prove $z=y$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$x\neq2$&$z=y$\\
+$y=\frac{x}{2-x}$&\\
+$\frac{2z}{z+1}=x$&
+\end{tabular}
+\end{center}
+We can now show that $z=y$ by solving for $z$ in the third given:
+\begin{equation*}
+\frac{2z}{z+1}=x\implies2z=x(z+1)\implies z(2-x)=x\implies z=\frac{x}{2-x}=y
+\end{equation*}
+Note that the steps we use here are exactly the same as the steps we used earlier in solving for $y$. This is a common pattern in existence and uniqueness proofs. Although the scratch
+work for figuring out an existence proof should not appear in the proof, this scratch work, or reasoning similar to it, can be sometimes used to demonstrate uniqueness.\\
+\vspace{1mm}\\
+\textit{Solution}
+\begin{theorem}
+For every real number $x$, if $x\neq2$ then there is a unique real number $y$ such that $2y/(y+1)=x$.
+\end{theorem}
+\begin{proof}
+Let $x$ be an arbitrary real number, and suppose $x\neq 2$. Let $y=x/(2-x)$, which is defined since $x\neq2$. Then
+\begin{equation*}
+\frac{2y}{y+1}=\frac{\frac{2x}{2-x}}{\frac{x}{2-x}+1}=\frac{\frac{2x}{2-x}}{\frac{2}{2-x}}=\frac{2x}{2}=x
+\end{equation*}
+To see that this solution is unique, suppose $2z/(z+1)=x$. Then $2z=x(z+1)$, so $z(2-x)=x$. Since $x\neq2$ we can divide both sides by $2-x$ to get $z=x/(2-x)=y$.
+\end{proof}
+\newpage
 
-
-
-
-
-
+\subsection{Given of the form $\exists!xP(x)$}
 
 
 
