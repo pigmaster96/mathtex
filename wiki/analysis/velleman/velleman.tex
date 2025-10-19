@@ -2142,8 +2142,52 @@ To see that this solution is unique, suppose $2z/(z+1)=x$. Then $2z=x(z+1)$, so 
 \newpage
 
 \subsection{Given of the form $\exists!xP(x)$}
-
-
+The three statements discussed earlier can also be used for givens of the form $\exists!xP(x)$. 
+Once again, statement 3 of the theorem is the one used most often.
+\begin{quote}
+To use a given of the form $\exists!xP(x)$:\\
+Treat this as two given statements $\exists xP(x)$ and $\forall y\forall z((P(y)\land P(z))\to y=z)$. To use the first statement one should probably choose some $x_0$ to stand for some object 
+where $P(x_0)$ is true. For the second, if one ever comes across two objects $y$ and $z$ such that $P(y)$ and $P(z)$ are both true, then one can conclude that $y=z$.
+\end{quote}
+\textbf{Example}\\
+Suppose $A,B$ and $C$ are sets, $A$ and $B$ are not disjoint, $A$ and $C$ are not disjoint, and $A$ has exactly one element. Prove that $B$ and $C$ are not disjoint.\\
+\vspace{1mm}\\
+\textit{Scratch work}
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$A\cap B=\emptyset$&$B\cap C=\emptyset$\\
+$A\cap C=\emptyset$&\\
+$\exists!x(x\in A)$&
+\end{tabular}
+\end{center}
+We treat the last given as two separate givens, as suggested by our strategy. We also analyse the logical forms of the other givens and the goal.
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$\exists x(x\in A\land x\in B)$&$\exists x(x\in B\land x\in C)$\\
+$\exists x(x\in A\land x\in C)$&\\
+$\exists x(x\in A)$&\\
+$\forall y\forall z((y\in A\land z\in A)\to y=z)$&
+\end{tabular}
+\end{center}
+The first given tells use that we can choose a name, say $b$, for something such that $b\in A$ and $b\in B$. Similarly, by the second given we can let $c$ be something such that
+$c\in A$ and $c\in C$. At this point the third given is redundant; we already know that there's something in $A$, so we may as well skip to the last given.\\
+\vspace{1mm}\\
+We know $b\in A$ and $c\in A$, so by the last given we can conclude that $b=c$. Since $b\in B$ and $b=c\in C$, we have found something that is an element of both $B$ and $C$, as is required to 
+prove the goal.\\
+(next page)\newpage
+\noindent\textbf{Example cont.}\\
+\textit{Solution}
+\begin{theorem}
+Suppose $A,B$ and $C$ are sets, $A$ and $B$ are not disjoint, $A$ and $C$ are not disjoint, and $A$ has exactly one element. Then $B$ and $C$ are not disjoint.
+\end{theorem}
+\begin{proof}
+Since $A$ and $B$ are not disjoint, we can let $b$ be something such that $b\in A$ and $b\in B$. Similarly, since $A$ and $C$ are not disjoint, then there is some object $c$ such that $c\in A$ and
+$c\in C$. Since $A$ has only one element, we must have $b=c$. Thus $b=c\in B\cap C$ and therefore $B$ and $C$ are not disjoint.
+\end{proof}
 
 
 
