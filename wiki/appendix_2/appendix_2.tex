@@ -4176,4 +4176,76 @@ which is the convolution $(y*w)(T)$---the system response is the convolution of 
 
 
 
+
+
+
+\newpage
+
+\section{First order systems}
+\subsection{Solving a linear system by elimination}
+A 2x2 first order linear system of ODEs with constant coefficients is a collection of equations
+\begin{align*}
+\dot x=ax+by\\
+\dot y=cx+dy
+\end{align*}
+where $a,b,c$ and $d$ are constants. We'll shorten this to \textit{first order linear system} or \textit{linear system}.\\
+\vspace{1mm}\\
+Given dependent variables $x_1,\ldots,x_n$; one can define $n$x$n$ first order linear systems (with constant coefficients) in exactly the same way:
+\begin{align*}
+\dot x_1&=a_{11}x_1+\ldots+a_{1n}x_n\\
+&\cdots\\
+\dot x_n&=a_{n1}x_1+\ldots+a_{nn}x_n
+\end{align*}
+where the $a_{ij}$ are constants. In this set of notes we analyse 2x2 systems, which all generalise in fairly straightforward fashion to $n$x$n$ systems.\\
+\vspace{1mm}\\
+The naive way to solve a linear system of ODE's with constant coefficients is by eliminating variables, so as to change it into a single higher order equation of one dependent variable. This is best
+illustrated with a worked example.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Let us consider the system of equations
+\begin{align*}
+\dot x&=0.3x+0.1y\\
+\dot y&=0.2x+0.4y
+\end{align*}
+\textit{Step 1:} First transform the equations to get a second order ODE for $x$. Using the first equation we have
+\begin{equation*}
+y=10\dot x-3x
+\end{equation*}
+Plug this into the second equation to get
+\begin{equation*}
+10\ddot x-3\dot x=.2x+4\dot x-1.2x\iff10\ddot x-7\dot x+x=0
+\end{equation*}
+\textit{Step 2:} Solve the ODE for $x$. The characteristic equation is
+\begin{equation*}
+10s^2-7s+1=0\iff s^2-.7s+.1=0
+\end{equation*}
+which has roots $r_1=.5$ and $r_2=.2$. Thus we get two basic solutions,
+\begin{equation*}
+x_1=e^{.5t}\quad\text{and}\quad x_2=e^{.2t}
+\end{equation*}
+\textit{Step 3:} Solution for $y$. Each basic solution for $x$ gives a corresponding solution for $y$ using our earlier expression for $y$ in terms of $\dot x$ and $x$:
+\begin{equation*}
+y_1=2e^{.5t}\quad\text{and}\quad y_2=-e^{.2t}
+\end{equation*}
+\textit{Step 4:} Using superposition we get the general solution
+\begin{align*}
+x(t)&=c_1e^{.5t}+c_2e^{.2t}\\
+y(t)&=2c_1e^{.5t}-c_2e^{.2t}
+\end{align*}
+It is important to understand that the constants $c_1$ and $c_2$ are the same for $x$ and $y$; this follows from calculating $y$ based on some $cx$.\\
+\vspace{1mm}\\
+We chose to eliminate $y$ to have a second 
+order equation in terms of $x$, but note we could have also chosen to eliminate $x$ to get an equation in $y$, which may have been easier.\\
+\vspace{1mm}\\
+This approach---converting systems of equations into one higher order equation\\---will not be our preferred technique. In both theoretical and numerical work it is usually preferable to go the
+opposite way and convert a higher order ODE into a system of first order equations and then use matrix methods.
+
+
+
+
+
+
+
+
+
 \end{document}
