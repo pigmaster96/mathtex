@@ -66,3 +66,6 @@
 \contentsline {subsection}{\numberline {A.3.20}Green's Formula}{126}{}%
 \contentsline {section}{\numberline {A.4}First order systems}{128}{}%
 \contentsline {subsection}{\numberline {A.4.1}Solving a linear system by elimination}{128}{}%
+\contentsline {subsection}{\numberline {A.4.2}Notation}{130}{}%
+\contentsline {subsection}{\numberline {A.4.3}Companion matrix}{131}{}%
+\contentsline {subsection}{\numberline {A.4.4}Worked example for alternative approach}{132}{}%

@@ -4239,6 +4239,133 @@ order equation in terms of $x$, but note we could have also chosen to eliminate 
 \vspace{1mm}\\
 This approach---converting systems of equations into one higher order equation\\---will not be our preferred technique. In both theoretical and numerical work it is usually preferable to go the
 opposite way and convert a higher order ODE into a system of first order equations and then use matrix methods.
+\newpage
+
+\subsection{Notation}
+A general 2x2 linear system is given by
+\begin{align*}
+\dot x&=ax+by\\
+\dot y&=cx+dy
+\end{align*}
+We can express this as
+\begin{equation*}
+\left(\begin{array}{c}
+\dot x\\\dot y
+\end{array}\right)=
+\left(\begin{array}{cc}
+a&b\\c&d
+\end{array}\right)
+\left(\begin{array}{c}
+x\\y
+\end{array}\right)
+\end{equation*}
+Should we have
+\begin{equation*}
+\bm u=\left(\begin{array}{c}
+x\\y
+\end{array}\right),\quad
+\dot{\bm u}=\left(\begin{array}{c}
+\dot x\\\dot y
+\end{array}\right),\quad 
+A=\left(\begin{array}{cc}
+a&b\\c&d
+\end{array}\right)
+\end{equation*}
+Then the system is simply
+\begin{equation*}
+\dot{\bm u}=A\bm u
+\end{equation*}
+\textbf{Example}\\
+In the previous section we had the system
+\begin{align*}
+\dot x&=0.3x+0.1y\\
+\dot y&=0.2x+0.4y
+\end{align*}
+This has the matrix form 
+\begin{equation*}
+\left(\begin{array}{c}
+\dot x\\\dot y
+\end{array}\right)=
+\left(\begin{array}{cc}
+0.3&0.1\\0.2&0.4
+\end{array}\right)
+\left(\begin{array}{c}
+x\\y
+\end{array}\right)
+\end{equation*}
+We solved this system earlier by elimination to get the solutions
+\begin{align*}
+x(t)&=c_1e^{.5t}+c_2e^{.2t}\\
+y(t)&=2c_1e^{.5t}-c_2e^{.2t}
+\end{align*}
+Written in vector form we have
+\begin{equation*}
+\bm u=
+\left(\begin{array}{c}
+c_1e^{.5t}+c_2e^{.2t}\\
+2c_1e^{.5t}-c_2e^{.2t}
+\end{array}\right)
+\end{equation*}
+See that we can rewrite this as
+\begin{equation*}
+\bm u=c_1e^{.5t}\left(\begin{array}{c}
+1\\2
+\end{array}\right)+
+c_2e^{.2t}\left(\begin{array}{c}
+1\\-1
+\end{array}\right)
+\end{equation*}
+where 
+\begin{equation*}
+\bm u_1=e^{.5t}\left(\begin{array}{c}
+1\\2
+\end{array}\right)\quad\text{and}\quad\bm u_2=
+e^{.2t}\left(\begin{array}{c}
+1\\-1
+\end{array}\right)
+\end{equation*}
+Are the \textit{basic independent solutions} or \textit{normal modes}.
+\newpage
+
+\subsection{Companion matrix}
+Here we see hwo to convert a second order ODE to a linear system, in a manner opposite to the first section. Suppose we have a second order homogeneous linear equation, say
+\begin{equation*}
+\ddot x+b\dot x+kx=0
+\end{equation*}
+We can derive a first order linear system from this. By introducing a second variable defined as
+\begin{equation*}
+y=\dot x
+\end{equation*}
+Our original equation becomes
+\begin{equation*}
+\dot y+by+kx=0\implies\dot y=-kx-by
+\end{equation*}
+We now have a first order system
+\begin{align*}
+\dot x&=y\\
+\dot y&=-kx-by
+\end{align*}
+with the corresponding coefficient matrix
+\begin{equation*}A=
+\left(\begin{array}{cc}
+0&1\\-k&-b
+\end{array}\right)
+\end{equation*}
+This is called the \textit{companion matrix} of the higher order equation. In this case, the solution vector $\bm u=(x,\dot x)$.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Consider the equation $\ddot x-\dot x+5/4x=0$. The companion matrix is 
+\begin{equation*}A=
+\left(\begin{array}{cc}
+0&1\\-5/4&1
+\end{array}\right)
+\end{equation*}
+\newpage
+
+\subsection{Worked example for alternative approach}
+Consider the system 
+
+
 
 
 
