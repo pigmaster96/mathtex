@@ -4364,6 +4364,181 @@ Consider the equation $\ddot x-\dot x+5/4x=0$. The companion matrix is
 
 \subsection{Worked example for alternative approach}
 Consider the system 
+\begin{equation*}
+\left(\begin{array}{c}
+x'\\y'
+\end{array}\right)=
+\left(\begin{array}{cc}
+1&3\\1&-1
+\end{array}\right)
+\left(\begin{array}{c}
+x\\y
+\end{array}\right)
+\end{equation*}
+We will now show a new method for solving this system. Recall that two modal solutions to the system are
+\begin{equation*}
+e^{2t}\left(\begin{array}{c}
+3\\1
+\end{array}\right)\quad\text{and}\quad
+e^{-2t}\left(\begin{array}{c}
+-1\\1
+\end{array}\right)
+\end{equation*}
+Based on this, we will try to look for solutions of the form 
+\begin{equation*}
+\left(\begin{array}{c}
+x\\y
+\end{array}\right)=
+e^{\lambda t}\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)
+\end{equation*}
+where $a_1,a_2$ and $\lambda$ are unknown constants. We substitute this into the system to get
+\begin{equation*}
+\lambda e^{\lambda t}\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=e^{\lambda t}
+\left(\begin{array}{cc}
+1&3\\1&-1
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)
+\end{equation*}
+Canceling the factor $e^{\lambda t}$ from both sides,
+\begin{equation*}
+\lambda\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{cc}
+1&3\\1&-1
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)
+\end{equation*}
+Written as a pair of equations:
+\begin{align*}
+\lambda a_1&=a_1+3a_2\\
+\lambda a_2&=a_1-a_2
+\end{align*}
+this can be rewritten as
+\begin{align*}
+(1-\lambda)a_1+3a_2&=0\\
+a_1+(-1-\lambda)a_2&=0
+\end{align*}
+This can be recognised as forming a square system of homogeneous linear equations. 
+\begin{equation*}
+\left(\begin{array}{cc}
+1-\lambda&3\\1&-1-\lambda
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=0
+\end{equation*}
+Recall that a nonzero solution for the $a$ only exists if the determinant of the coefficient matrix is 0:
+\begin{equation*}
+\left|\begin{array}{cc}
+1-\lambda&3\\1&-1-\lambda
+\end{array}\right|=0
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+\left|\begin{array}{cc}
+1-\lambda&3\\1&-1-\lambda
+\end{array}\right|=0
+\end{equation*}
+Using the formula for the determinant we get
+\begin{equation*}
+\lambda^2-4=0
+\end{equation*}
+We get the roots $2$ and $-2$; we have non-trivial solutions for $a$ when $\lambda=2$ or $\lambda=-2$. Substituting these values back into the earlier system of equations we get
+\begin{align*}
+-a_1+3a_2&=0&3a_1+3a_2&=0\\
+a_1-3a_2&=0&a_1+a_2&=0\\
+\text{(for $\lambda=2$)}&&\text{(for $\lambda=-2$)}&
+\end{align*}
+Note that it is no accident that in each case the two equations of the system become dependent since only noninvertible matrices (with linearly dependent rows and columns)
+will have a zero determinant. Our choice of $\lambda$ is contingent on the determinant being 0, so the resulting system of equations will be dependent.\\
+\vspace{1mm}\\
+To conclude we solve the two systems above. Note that since we have a entire one dimensional nullspace of solutions this means that just finding one solution is sufficient
+(scaling that by any constant gives another solution). One strategy is to just assign a value of 1 to one of the unknowns and solve for the other:
+\begin{equation*}
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{c}
+3\\1
+\end{array}\right)\quad\text{for}\quad\lambda=2;\quad
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{c}
+1\\-1
+\end{array}\right)\quad\text{for}\quad\lambda=-2
+\end{equation*}
+which gives us the two modal solutions as found before:
+\begin{equation*}
+e^{2t}\left(\begin{array}{c}
+3\\1
+\end{array}\right)\quad\text{and}\quad
+e^{-2t}\left(\begin{array}{c}
+1\\-1
+\end{array}\right)
+\end{equation*}
+With elimination the basic normal solutions could be multiplied by an arbitrary nonzero constant without changing the validity of the general solution. Here, this behaviour corresponds to the fact
+that the one dimensional nullspace of our coefficient matrix leads to any scalar multiple of our particular solution being valid.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Recall that earlier we had to convert our matrix expression back into a system of equations, this was because given
+\begin{equation*}
+\lambda\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{cc}
+1&3\\1&-1
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)
+\end{equation*}
+Subtracting the left side to the right leads to incompatible matrix arithmetic.
+The idea here is to replace $\lambda$ with $\lambda\bm I$:
+\begin{equation*}
+\left(\begin{array}{cc}
+\lambda&0\\0&\lambda
+\end{array}\right)\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{cc}
+1&3\\1&-1
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)
+\end{equation*}
+Where now it makes sense to subtract the left side from the right
+\begin{equation*}
+\left(\begin{array}{cc}
+1-\lambda&3\\1&-1-\lambda
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{c}
+0\\0
+\end{array}\right)
+\end{equation*}
+\newpage
+
+\subsection{}
+
+
+
+
+
 
 
 
