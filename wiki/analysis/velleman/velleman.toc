@@ -5,8 +5,9 @@
 \contentsline {subsection}{\numberline {1.0.4}$x\in A\setminus (B\cap C)=x\in (A\setminus B)\cup (A\setminus C)$}{5}{}%
 \contentsline {subsection}{\numberline {1.0.5}$x\in (A\cup B)\setminus (A\cap B)=x\in (A\setminus B)\cup (B\setminus A)$}{5}{}%
 \contentsline {subsection}{\numberline {1.0.6}$(A\cap B)\cap (A\setminus B)=\emptyset $}{5}{}%
-\contentsline {subsection}{\numberline {1.0.7}Conditional and Contrapositive laws}{6}{}%
-\contentsline {subsection}{\numberline {1.0.8}Biconditional statements}{7}{}%
+\contentsline {subsection}{\numberline {1.0.7}Symmetric difference}{6}{}%
+\contentsline {subsection}{\numberline {1.0.8}Conditional and Contrapositive laws}{6}{}%
+\contentsline {subsection}{\numberline {1.0.9}Biconditional statements}{7}{}%
 \contentsline {section}{\numberline {1.1}Quantificational logic}{8}{}%
 \contentsline {subsection}{\numberline {1.1.1}Quantifier negation laws}{8}{}%
 \contentsline {subsection}{\numberline {1.1.2}Notation}{8}{}%
