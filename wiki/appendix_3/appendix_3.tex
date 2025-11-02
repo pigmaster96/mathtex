@@ -413,6 +413,156 @@ Therefore, the desired variance is given by the first case, but instead with $n=
 \end{equation*}
 \newpage
 
+\subsection{Joint PMFs of multiple random variables}
+We extend the concepts of PMF to multiple variables. Consider two discrete random variables $X$ and $Y$ associated with the same experiment. The probabilities
+of the values that $X$ and $Y$ can take are captured by the \textit{joint PMF} of $X$ and $Y$, denoted $p_{XY}$.\\
+\vspace{1mm}\\
+If $(x,y)$ is a pair of possible values of $X$ and $Y$, the probability mass of 
+$(x,y)$ is the probability of the event $\{X=x,Y=y\}$:
+\begin{equation*}
+p_{XY}(x,y)=\bm P(X=x,Y=y)
+\end{equation*}
+We use the abbreviated notation $\bm P(X=x,Y=y)$ instead of the more precise notations $\bm P(\{X=x\}\cap\{Y=y\})$ or $\bm P(X=x\text{ and }Y=y)$.\\
+\vspace{1mm}\\
+If $A$ is the set of all pairs $(x,y)$ that have a certain property, then
+\begin{equation*}
+\bm P((X,Y)\in A)=\sum_{(x,y)\in A}p_{X,Y}(x,y)
+\end{equation*}
+In fact we can calculate the PMFs of $X$ and $Y$ using the formulas
+\begin{equation*}
+p_X(x)=\sum_yp_{X,Y}(x,y),\quad p_Y(y)=\sum_xp_{X,Y}(x,y)
+\end{equation*}
+This comes from the total probability theorem
+\begin{align*}
+p_X(x)&=\bm P(X=x)\\
+&=\sum_y\bm P(X=x,Y=y)\\
+&=\sum_yp_{X,Y}(x,y)
+\end{align*}
+Where the second equality follows by noting that the event $\{X=x\}$ is the union of the disjoint events $\{X=x,Y=y\}$ as $y$ ranges over all the different values of $Y$.  The formula for 
+$p_Y(y)$ is verified similarly. We may refer to $p_X$ and $p_Y$ as the \textit{marginal} PMFs. Illustration on next page.\\
+(next page)\newpage
+\noindent\textbf{Cont.}
+\begin{center}
+\includegraphics[width=10cm]{4}\\
+\end{center}
+\textbf{Functions of Multiple Random Variables}\\
+A function $Z=g(X,Y)$ of the random variables $X$ and $Y$ defines another random variable. Its PMF 
+can be calculated from the joint PMF $p_{X,Y}$ according to
+\begin{equation*}
+p_Z(z)=\sum_{\{(x,y)|g(x,y)=z\}}p_{X,Y}(x,y)
+\end{equation*}
+Furthermore, the expected value rule for functions natrually extends and takes the form
+\begin{equation*}
+\bm E[g(X,Y)]=\sum_x\sum_yg(x,y)p_{X,Y}(x,y)
+\end{equation*}
+Where the verification for this is very similar to the earlier case for a function of a single random variable. In the special case where $g$ is linear and of the form
+$aX+bY+c$, where $a,b$, and $c$ are given scalars, we have
+\begin{equation*}
+\bm E[aX+bY+c]=a\bm E[X]+b\bm E[Y]+c
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{More random variables}\\
+The joint PMF of three random variables $X,Y,Z$ is defined analagously as
+\begin{equation*}
+p_{X,Y,Z}(x,y,z)=\bm P(X=x,Y=y,Z=z)
+\end{equation*}
+for all possible triplets of $(x,y,z)$. The corresponding marginal PMFs are analagously obtained using 
+\begin{equation*}
+p_{X,Y}(x,y)=\sum_zp_{X,Y,Z}(x,y,z)
+\end{equation*}
+and
+\begin{equation*}
+p_{X}(x)=\sum_y\sum_zp_{X,Y,Z}(x,y,z)
+\end{equation*}
+The expected value rule for functions is given by
+\begin{equation*}
+\bm E[g(X,Y,Z)]=\sum_x\sum_y\sum_zg(x,y,z)p_{X,Y,Z}(x,y,z)
+\end{equation*}
+where if $g$ is linear and has the form $aX+bY+cZ+d$, then
+\begin{equation*}
+\bm E[aX+bY+cZ+d]=a\bm E[X]+b\bm E[Y]+c\bm E[Z]+d
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{4}\\
+\end{center}
+\newpage
+
+\subsection{Conditioning}
+A \textit{conditional PMF} of a random variable $X$, conditioned on a particular event $A$ with $\bm P(A)>0$, is defined by
+\begin{equation*}
+p_{X|A}(x)=\bm P(X=x|A)=\frac{\bm P(\{X=x\}\cap A)}{\bm P(A)}
+\end{equation*}
+By the total probability theorem we have
+\begin{equation*}
+\bm P(A)=\sum_x\bm P(\{X=x\}\cap A)
+\end{equation*}
+Combining the two formulas, see that
+\begin{equation*}
+\sum_xp_{X|A}(x)=1
+\end{equation*}
+which reinforces the idea that $p_{X|A}(x)$ is a PMF.\\
+\vspace{1mm}\\
+\textbf{Conditioning one random variable on another}\\
+Let $X$ and $Y$ be two random variables associated with the same experiment. If we know that $Y$ is some particular $y$ with some nonzero probability, this provides partial knowledge about
+the value of $X$.\\
+\vspace{1mm}\\
+This knowledge is captured by the \textit{condiional} PMF $p_{X|Y}$ of $X$ given $Y$, which is defined by specialising the definition of $p_{X|A}$ to events $A$ of the form
+$\{Y=y\}$:
+\begin{equation*}
+p_{X|Y}(x|y)=\bm P(X=x|Y=y)
+\end{equation*}
+By the definition of conditional probabilities, we have
+\begin{equation*}
+p_{X|Y}(x|y)=\frac{\bm P(X=x,Y=y)}{\bm P(Y=y)}=\frac{p_{X,Y}(x,y)}{p_Y(y)}
+\end{equation*}
+Intuitively, let us fix some $y$ with $p_Y(y)>0$, and consider $p_{X|Y}(x|y)$ as a function of $x$. This gives us a PMF for that specific $y$, with
+\begin{equation*}
+\sum_xp_{X|Y}(x|y)=1
+\end{equation*}
+which can be verified in a similar manner to earlier. Visualisation on next page.\\
+(next page)\newpage
+\noindent\textbf{Cont.}
+\begin{center}
+\includegraphics[width=10cm]{6}\\
+\end{center}
+The conditional PMF is often convenient for the calculation of the joint PMF, using a sequential approach and the formulas
+\begin{equation*}
+p_{X,Y}(x,y)=p_Y(y)p_{X|Y}(x|y)
+\end{equation*}
+or
+\begin{equation*}
+p_{X,Y}(x,y)=p_X(x)p_{Y|X}(y|x)
+\end{equation*}
+See that the conditional PMF can then also be used to calculate the marginal PMFs:
+\begin{equation*}
+p_X(x)=\sum_yp_{X,Y}(x,y)=\sum_yp_Y(y)p_{X|Y}(x|y)
+\end{equation*}
+We finally note that one can define conditional PMFs involving more than two random variables such as
+$p_{X,Y|Z}(x,y|z)$ or$p_{X|Y,Z}(x|y,z)$. The concepts and methods described above generalise easily.\\
+(next page)\newpage
+\noindent\textbf{Cont.}
+\begin{center}
+\includegraphics[width=10cm]{7}\\
+\end{center}
+To justify the second part of the third point:
+\begin{align*}
+p_{X|B}(x)&=\frac{\bm P(\{X=x\}\cap B)}{\bm P(B)}\\
+&=\frac{\sum^n_{i=1}\bm P(\{X=x\}\cap B\cap A_i)}{\bm P(B)}\\
+&=\frac{\sum^n_{i=1}\bm P(A_i\cap B)\bm P(\{X=x\}|A_i\cap B)}{\bm P(B)}\\
+&=\frac{\sum^n_{i=1}\bm P(B)\bm P(A_i|B)\bm P(\{X=x\}|A_i\cap B)}{\bm P(B)}
+\end{align*}
+\newpage
+
+\subsection{Conditional Expectation}
+
+
+
+
+
+
+
+\newpage
+
 \section{Limit Theorems}
 \subsection{Sample mean}
 \textbf{Definition}\\

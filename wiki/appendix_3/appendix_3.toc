@@ -18,14 +18,16 @@
 \contentsline {subsection}{\numberline {A.2.6}Expectation and Variance of Bernoulli}{12}{}%
 \contentsline {subsection}{\numberline {A.2.7}Expectation of Discrete Uniform}{12}{}%
 \contentsline {subsection}{\numberline {A.2.8}Variance of Discrete Uniform}{14}{}%
-\contentsline {section}{\numberline {A.3}Limit Theorems}{15}{}%
-\contentsline {subsection}{\numberline {A.3.1}Sample mean}{15}{}%
-\contentsline {subsection}{\numberline {A.3.2}Markov Inequality}{16}{}%
-\contentsline {subsection}{\numberline {A.3.3}Chebyshev Inequality}{18}{}%
-\contentsline {subsection}{\numberline {A.3.4}Weak law of large numbers}{19}{}%
-\contentsline {subsection}{\numberline {A.3.5}}{20}{}%
-\contentsline {chapter}{\numberline {B}Supplementary Notes}{21}{}%
-\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{21}{}%
-\contentsline {section}{\numberline {B.2}Telescoping series}{22}{}%
-\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{23}{}%
-\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{24}{}%
+\contentsline {subsection}{\numberline {A.2.9}Joint PMFs of multiple random variables}{15}{}%
+\contentsline {subsection}{\numberline {A.2.10}Conditioning}{18}{}%
+\contentsline {section}{\numberline {A.3}Limit Theorems}{21}{}%
+\contentsline {subsection}{\numberline {A.3.1}Sample mean}{21}{}%
+\contentsline {subsection}{\numberline {A.3.2}Markov Inequality}{22}{}%
+\contentsline {subsection}{\numberline {A.3.3}Chebyshev Inequality}{24}{}%
+\contentsline {subsection}{\numberline {A.3.4}Weak law of large numbers}{25}{}%
+\contentsline {subsection}{\numberline {A.3.5}}{26}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{27}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{27}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{28}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{29}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{30}{}%
