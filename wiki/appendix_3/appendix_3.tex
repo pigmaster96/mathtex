@@ -451,7 +451,7 @@ can be calculated from the joint PMF $p_{X,Y}$ according to
 \begin{equation*}
 p_Z(z)=\sum_{\{(x,y)|g(x,y)=z\}}p_{X,Y}(x,y)
 \end{equation*}
-Furthermore, the expected value rule for functions natrually extends and takes the form
+Furthermore, the expected value rule for functions naturally extends and takes the form
 \begin{equation*}
 \bm E[g(X,Y)]=\sum_x\sum_yg(x,y)p_{X,Y}(x,y)
 \end{equation*}
@@ -538,7 +538,7 @@ See that the conditional PMF can then also be used to calculate the marginal PMF
 p_X(x)=\sum_yp_{X,Y}(x,y)=\sum_yp_Y(y)p_{X|Y}(x|y)
 \end{equation*}
 We finally note that one can define conditional PMFs involving more than two random variables such as
-$p_{X,Y|Z}(x,y|z)$ or$p_{X|Y,Z}(x|y,z)$. The concepts and methods described above generalise easily.\\
+$p_{X,Y|Z}(x,y|z)$ or $p_{X|Y,Z}(x|y,z)$. The concepts and methods described above generalise easily.\\
 (next page)\newpage
 \noindent\textbf{Cont.}
 \begin{center}
@@ -554,9 +554,24 @@ p_{X|B}(x)&=\frac{\bm P(\{X=x\}\cap B)}{\bm P(B)}\\
 \newpage
 
 \subsection{Conditional Expectation}
-
-
-
+We define the conditional expectation and describe a few of its properties:
+\begin{center}
+\includegraphics[width=10cm]{8}\\
+\end{center}(next page)
+\newpage\noindent\textbf{Cont}\\
+The last three equalities apply in different contexts, but are essentially equivalent; we refer to them as the \textit{total expectation theorem}. To verify the first of the three,
+since we have 
+\begin{equation*}
+p_X(x)=\sum^n_{i=1}p_{X,A}(x,A_i)=\sum^n_{i=1}P(A_i)p_{X|A_i}(x|A_i)
+\end{equation*}
+We can express the expectation as
+\begin{align*}
+E[X]&=\sum_xxp_X(x)\\
+&=\sum_xx\sum^n_{i=1}P(A_i)p_{X|A_i}(x|A_i)\\
+&=\sum^n_{i=1}P(A_i)\sum_xxp_{X|A_i}(x|A_i)\\
+&=\sum^n_{i=1}P(A_i)E[X|A_i]
+\end{align*}
+The remaining two equalities are verified similarly.
 
 
 
@@ -750,6 +765,9 @@ is a high probability that $M_n$ falls in that interval; as $n\to\infty$, this p
 \newpage
 
 \subsection{}
+
+
+
 
 
 
