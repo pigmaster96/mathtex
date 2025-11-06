@@ -572,6 +572,69 @@ E[X]&=\sum_xxp_X(x)\\
 &=\sum^n_{i=1}P(A_i)E[X|A_i]
 \end{align*}
 The remaining two equalities are verified similarly.
+\newpage
+
+\subsection{Independence}
+We say that the random variable $X$ is independent of the event $A$ if
+\begin{equation*}
+P(X=x\text{ and }A)=P(X=x)P(A)=p_X(x)P(A)\quad\text{for all $x$}
+\end{equation*}
+From the definition of the conditional PMF, we have
+\begin{equation*}
+P(X=x\text{ and }A)=p_{X|A}(x)P(A)
+\end{equation*}
+So that as long as $P(A)>0$, independence is the same as the condition
+\begin{equation*}
+p_{X|A}(x)=p_X(x)\quad\text{for all $x$}
+\end{equation*}
+\textbf{Two random variables}\\
+We say that two random variables $X$ and $Y$ are independent if
+\begin{equation*}
+p_{X,Y}(x,y)=p_X(x)p_Y(y)\quad\text{for all $x,y$}
+\end{equation*}
+This is the same as requiring that the two events $\{X=x\}$ and $\{Y=y\}$ be independent for every $x$ and $y$. 
+The formula
+\begin{equation*}
+p_{X,Y}(x,y)=p_{X|Y}(x|y)p_Y(y)
+\end{equation*}
+Leads us to
+\begin{equation*}
+p_{X|Y}(x|y)=p_X(x)\quad\text{for all $y$ with $p_Y(y)>0$ and all $x$}
+\end{equation*}
+\textbf{Conditional independence}\\
+Random variables $X$ and $Y$ are said to be conditionally independent given a positive probability event $A$, if
+\begin{equation*}
+P(X=x,Y=y|A)=P(X=x|A)P(Y=y|A)\quad\text{for all $x,y$}
+\end{equation*}
+or in a more compact notation
+\begin{equation*}
+p_{X,Y|A}(x,y)=p_{X|A}(x)p_{Y|A}(y)\quad\text{for all $x,y$}
+\end{equation*}
+in a manner analagous to the previous ideas, this is equivalent to
+\begin{equation*}
+p_{X|Y,A}(x|y)=p_{X|A}(x)\quad\text{for all $x,y$ such that $p_{Y|A}(y)>0$}
+\end{equation*}
+As mentioned previously, note that conditional independence may not imply unconditional independence and vice versa.
+\newpage
+\subsection{Expectation of independent variables}
+If $X$ and $Y$ are independent random variables, then
+\begin{equation*}
+E[XY]=E[X]E[Y]
+\end{equation*}
+this can be shown:
+\begin{align*}
+E[XY]&=\sum_x\sum_yxyp_{XY}(x,y)\\
+&=\sum_x\sum_yxyp_{X}(x)p_{Y}(y)\quad\text{(independence)}\\
+&=\sum_xxp_X(x)\sum_yyp_Y(y)\\
+&=E[X]E[Y]
+\end{align*}
+It is proven that if $X$ and $Y$ are independent, then the same is true for $g(X)$ and $h(Y)$ (not proven here). Given this, it is clear that if $X$ and $Y$ are independent, then
+\begin{equation*}
+E[g(X)h(Y)]=E[g(X)]E[h(Y)]
+\end{equation*}
+
+
+
 
 
 

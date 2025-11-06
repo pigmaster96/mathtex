@@ -21,14 +21,16 @@
 \contentsline {subsection}{\numberline {A.2.9}Joint PMFs of multiple random variables}{16}{}%
 \contentsline {subsection}{\numberline {A.2.10}Conditioning}{19}{}%
 \contentsline {subsection}{\numberline {A.2.11}Conditional Expectation}{22}{}%
-\contentsline {section}{\numberline {A.3}Limit Theorems}{24}{}%
-\contentsline {subsection}{\numberline {A.3.1}Sample mean}{24}{}%
-\contentsline {subsection}{\numberline {A.3.2}Markov Inequality}{25}{}%
-\contentsline {subsection}{\numberline {A.3.3}Chebyshev Inequality}{27}{}%
-\contentsline {subsection}{\numberline {A.3.4}Weak law of large numbers}{28}{}%
-\contentsline {subsection}{\numberline {A.3.5}}{29}{}%
-\contentsline {chapter}{\numberline {B}Supplementary Notes}{30}{}%
-\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{30}{}%
-\contentsline {section}{\numberline {B.2}Telescoping series}{31}{}%
-\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{32}{}%
-\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{33}{}%
+\contentsline {subsection}{\numberline {A.2.12}Independence}{24}{}%
+\contentsline {subsection}{\numberline {A.2.13}Expectation of independent variables}{25}{}%
+\contentsline {section}{\numberline {A.3}Limit Theorems}{26}{}%
+\contentsline {subsection}{\numberline {A.3.1}Sample mean}{26}{}%
+\contentsline {subsection}{\numberline {A.3.2}Markov Inequality}{27}{}%
+\contentsline {subsection}{\numberline {A.3.3}Chebyshev Inequality}{29}{}%
+\contentsline {subsection}{\numberline {A.3.4}Weak law of large numbers}{30}{}%
+\contentsline {subsection}{\numberline {A.3.5}}{31}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{32}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{32}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{33}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{34}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{35}{}%
