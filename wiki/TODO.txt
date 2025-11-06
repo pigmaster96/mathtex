@@ -7,7 +7,7 @@
 040625-convergence of fourier series---complex analysis, consider references given by oppenheim signals and systems chap 3
 100625-proof dot product means perpendicular in n dimensions
 220825-Spectral theorem proof
-
+071125-functions of independent random variables are also independent.
 
 
 
