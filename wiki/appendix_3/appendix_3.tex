@@ -634,8 +634,54 @@ E[g(X)h(Y)]=E[g(X)]E[h(Y)]
 \end{equation*}
 
 \subsection{For independent $X,Y$, $\text{var}(X+Y)=\text{var}(X)+\text{var}(Y)$}
-Consider now the sum $
+Consider now the sum $X+Y$ of two independent varables $X$ and $Y$, and let us calculate its variance. Since the variance of a random variable is unchanged when it is shifted by a constant, it is
+convenient to work with the zero-mean random variables
+$\tilde X=X-E[X]$ and $\tilde Y=Y-E[Y]$. We have
+\begin{align*}
+\text{var}(X+Y)&=\text{var}(\tilde X+\tilde Y)\\
+&=E[(\tilde X+\tilde Y)^2]\\
+&=E[\tilde X^2+2\tilde X\tilde Y+\tilde Y^2]\\
+&=E[\tilde X^2]+2E[\tilde X\tilde Y]+E[\tilde Y^2]\\
+&=E[\tilde X^2]+E[\tilde Y^2]\\
+&=\text{var}(\tilde X)+\text{var}(\tilde Y)\\
+&=\text{var}(X)+\text{var}(Y)
+\end{align*}
+Where the property $E[\tilde X\tilde Y]=0$ is justified by the idea that functions of independent random variables are independent, so $\tilde X=X-E[X]$ and $\tilde Y=Y-E[Y]$ are independent. 
+Since they have zero-mean, we obtain
+\begin{equation*}
+E[\tilde X\tilde Y]=E[\tilde X]E[\tilde Y]=0
+\end{equation*}
+The variance of the sum of two independent random variables is equal to the sum of their variances. This is different from the mean, where the mean of the sum of two random variables is always equal
+to the sum of their means even if they are not independent.
+\newpage
 
+\subsection{Summary for independent random variables}
+\begin{center}
+\includegraphics[width=10cm]{9}\\
+\end{center}
+
+\subsection{Independence of several random variables}
+The preceding discussion extends naturally to the case of more than two random variables; three random variables $X,Y$ and $Z$ are said to be independent if
+\begin{equation*}
+p_{X,Y,Z}(x,y,z)=p_X(x)p_Y(y)p_Z(z),\quad\text{for all }x,y,z
+\end{equation*}
+As before (although we didn't prove this), if $X,Y,Z$ are independent random variables, then any three random variables of the form $f(X)$, $g(Y)$, and $h(Z)$ are also independent.\\
+\vspace{1mm}\\
+Similarly, any two random variables of the form $g(X,Y)$ and $h(Z)$ are independent. Note however that random variables of the form $g(X,Y)$ and $h(Y,Z)$ are usually not independent because they 
+are both affected by $Y$.\\
+\vspace{1mm}\\
+Properties such as these are intuitively clear; they can be formally verified but this is sometimes tedious. Fortunately there is a general agreement between intuition and what is
+mathematically correct.
+\newpage
+
+\subsection{Variance of sum of independent random variables}
+If $X_1,X_2,\ldots,X_n$ are independent random variables, then
+\begin{equation*}
+\text{var}(X_1+X_2+\cdots+X_n)=\text{var}(X_1)+\text{var}(X_2)+\cdots+\text{var}(X_n)
+\end{equation*}
+This can be verified by repeated use of the formula $\text{var}(X+Y)$ for two independent random variables $X$ and $Y$.
+
+\subsection{Mean and variance of Possion}
 
 
 
