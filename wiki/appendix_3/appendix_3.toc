@@ -27,15 +27,17 @@
 \contentsline {subsection}{\numberline {A.2.15}Summary for independent random variables}{26}{}%
 \contentsline {subsection}{\numberline {A.2.16}Independence of several random variables}{26}{}%
 \contentsline {subsection}{\numberline {A.2.17}Variance of sum of independent random variables}{27}{}%
-\contentsline {subsection}{\numberline {A.2.18}Mean and variance of Possion}{27}{}%
-\contentsline {section}{\numberline {A.3}Limit Theorems}{28}{}%
-\contentsline {subsection}{\numberline {A.3.1}Sample mean}{28}{}%
-\contentsline {subsection}{\numberline {A.3.2}Markov Inequality}{29}{}%
-\contentsline {subsection}{\numberline {A.3.3}Chebyshev Inequality}{31}{}%
-\contentsline {subsection}{\numberline {A.3.4}Weak law of large numbers}{32}{}%
-\contentsline {subsection}{\numberline {A.3.5}}{33}{}%
-\contentsline {chapter}{\numberline {B}Supplementary Notes}{34}{}%
-\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{34}{}%
-\contentsline {section}{\numberline {B.2}Telescoping series}{35}{}%
-\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{36}{}%
-\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{37}{}%
+\contentsline {subsection}{\numberline {A.2.18}Mean and variance of the Possion}{27}{}%
+\contentsline {subsection}{\numberline {A.2.19}Mean and variance of the Binomial}{28}{}%
+\contentsline {subsection}{\numberline {A.2.20}Mean and variance of the Geometric}{29}{}%
+\contentsline {section}{\numberline {A.3}Limit Theorems}{30}{}%
+\contentsline {subsection}{\numberline {A.3.1}Sample mean}{30}{}%
+\contentsline {subsection}{\numberline {A.3.2}Markov Inequality}{31}{}%
+\contentsline {subsection}{\numberline {A.3.3}Chebyshev Inequality}{33}{}%
+\contentsline {subsection}{\numberline {A.3.4}Weak law of large numbers}{34}{}%
+\contentsline {subsection}{\numberline {A.3.5}}{35}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{36}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{36}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{37}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{38}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{39}{}%

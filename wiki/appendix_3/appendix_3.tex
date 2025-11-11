@@ -681,7 +681,51 @@ If $X_1,X_2,\ldots,X_n$ are independent random variables, then
 \end{equation*}
 This can be verified by repeated use of the formula $\text{var}(X+Y)$ for two independent random variables $X$ and $Y$.
 
-\subsection{Mean and variance of Possion}
+\subsection{Mean and variance of the Possion}
+The mean of the Poisson PMF
+\begin{equation*}
+p_X(k)=e^{-\lambda}\frac{\lambda^k}{k!},\quad k=0,1,2,\ldots
+\end{equation*}
+can be calculated as follows:
+\begin{align*}
+E[X]&=\sum^\infty_{k=0}ke^{-\lambda}\frac{\lambda^k}{k!}\\
+&=\sum^\infty_{k=1}ke^{-\lambda}\frac{\lambda^k}{k!}\quad\text{(the $k=0$ term is zero)}\\
+&=\lambda\sum^\infty_{k=1}e^{-\lambda}\frac{\lambda^{k-1}}{(k-1)!}\\
+&=\lambda\sum^\infty_{m=0}e^{-\lambda}\frac{\lambda^{m}}{m!}\quad\text{(let $m=k-1$)}\\
+&=\lambda
+\end{align*}
+where the last equality is obtained by noting that
+\begin{equation*}
+\sum^\infty_{m=0}e^{-\lambda}\frac{\lambda^{m}}{m!}=\sum^\infty_{k=0}p_X(m)=1
+\end{equation*}
+Which is the normalisation property for the Poisson PMF.
+(next page)\newpage
+\noindent\textbf{Variance of the Poisson}\\
+We have
+\begin{align*}
+E[X^2]&=\sum^{\infty}_{k=1}k^2e^{-\lambda}\frac{\lambda^k}{k!}\quad\text{($k=0$ term is 0)}\\
+&=\lambda\sum^{\infty}_{k=1}ke^{-\lambda}\frac{\lambda^{k-1}}{(k-1)!}\\
+&=\lambda\sum^{\infty}_{m=0}(m+1)e^{-\lambda}\frac{\lambda^{m}}{m!}\\
+&=\lambda(E[X]+1)\\
+&=\lambda(\lambda+1)
+\end{align*}
+from which
+\begin{equation*}
+\text{var}(X)=E[X^2]-(E[X])^2=\lambda(\lambda+1)-\lambda^2=\lambda
+\end{equation*}
+
+\subsection{Mean and variance of the Binomial}
+For each $i$, we let $X_i$ be an independent bernoulli random variable. Then $X=X_1+X_2+\cdots+X_n$ is a binomial random variable. Its mean is $E[X]=E[X_1]+E[X_2]+\ldots+E[X_n]=np$.\\
+\vspace{1mm}\\
+The variance of single bernoulli random variable is $E[X^2]-(E[X])^2=p-p^2=p(1-p)$. By independence of the bernoullis, the variance of the binomial is
+\begin{equation*}
+\text{var}(X)=\sum^n_{i=1}\text{var}(X_i)=np(1-p)
+\end{equation*}
+\newpage
+
+\subsection{Mean and variance of the Geometric}
+
+
 
 
 
