@@ -806,8 +806,96 @@ The entire area under the graph of the PDF must sum to 1.
 \newpage
 
 \subsection{Continuous Uniform Random Variable}
+Consider a random variable $X$ that takes values in an interval $[a,b]$, and that any two subintervals of the same 
+length have the same probability. We refer to this type of random variable as \textit{uniform}. Its PDF has the form
+\begin{equation*}
+f_X(x)=\begin{cases}
+\frac{1}{b-a},&\text{if $a\leq x\leq b$},\\
+0,&\text{otherwise}
+\end{cases}
+\end{equation*}
 
 
+The constant value of the PDF within $[a,b]$ is determined from the normalisation property. We have
+\begin{equation*}
+1=\int^\infty_{-\infty}f(x)dx=\int^b_a\frac{1}{b-a}dx
+\end{equation*}
+
+\subsection{Summary of PDF properties}
+
+
+\newpage
+
+\subsection{Expectation}
+The \textit{expected value/expectation/mean} of a continuous random variable $X$ is defined by
+\begin{equation*}
+E[X]=\int^\infty_{-\infty}xf_X(x)dx
+\end{equation*}
+If $X$ is a continuous random variable with a given PDF, any real-valued function $Y=g(X)$ of $X$ is also a random variable.
+In which case the mean of $g(X)$ satisfies the \textit{expected value rule}
+\begin{equation*}
+E[g(X)]=\int^\infty_{-\infty}g(x)f_X(x)dx
+\end{equation*}
+In complete analogy with the discrete case. The idea of moments of expectation and variance are also the
+same as that for the discrete case.
+
+
+
+\newpage
+
+\subsection{Mean and variance of the Uniform Random Variable}
+Consider a uniform PDF over an interval $[a,b]$. We have
+\begin{align*}
+E[X]&=\int^\infty_{-\infty}xf_X(x)dx=\int^b_ax\cdot\frac{1}{b-a}dx\\
+&=\left.\frac{1}{b-a}\cdot\frac{1}{2}x^2\right|^b_a\\
+&=\frac{1}{b-a}\cdot\frac{b^2-a^2}{2}\\
+&=\frac{a+b}{2}
+\end{align*}
+To obtain the variance we calculate the second moment. We have
+\begin{align*}
+E[X^2]&=\int^b_a\frac{x^2}{b-a}dx=\frac{1}{b-a}\int^b_ax^2dx\\
+&=\left.\frac{1}{b-a}\cdot\frac{1}{3}x^3\right|^b_a=\frac{b^3-a^3}{3(b-a)}\\
+&=\frac{a^2+ab+b^2}{3}
+\end{align*}
+Thus the variance is obtained as
+\begin{equation*}
+\text{var}(X)=E[X^2]-(E[X])^2=\frac{a^2+ab+b^2}{3}-\frac{(a+b)^2}{4}=\frac{(b-a)^2}{12}
+\end{equation*}
+\newpage
+
+\subsection{Exponential Random Variable}
+An exponential random variable has a PDF of the form
+\begin{equation*}
+f_X(x)=\begin{cases}
+\lambda e^{-\lambda x},&\text{if $x\geq0$}\\
+0,&\text{otherwise}
+\end{cases}
+\end{equation*}
+where $\lambda$ is a positive parameter characterising the PDF.
+
+
+This is a legitimate PDF because
+\begin{equation*}
+\int^\infty_{-\infty}f_X(x)dx=\int^\infty_0\lambda e^{-\lambda x}dx=\left.-e^{-\lambda x}\right|^\infty_0=1
+\end{equation*}
+The probability that $X$ exceeds a certain value decreases exponentially. For any $a\geq0$, we have
+\begin{equation*}
+P(X\geq a)=\int^\infty_a\lambda e^{-\lambda x}dx=\left.-e^{-\lambda x}\right|^\infty_a=e^{-\lambda a}
+\end{equation*}
+The mean and variance can be calculated as
+\begin{equation*}
+E[X]=\frac{1}{\lambda},\quad\text{var}(X)=\frac{1}{\lambda^2}
+\end{equation*}
+We verify the mean using integration by parts,
+\begin{align*}
+E[X]&=\int^\infty_0x\lambda e^{-\lambda x}dx\\
+&=\left.(-xe^{-\lambda x})\right|^\infty_0+\int^\infty_0e^{-\lambda x}dx\\
+&=0-\left.\frac{e^{-\lambda x}}{\lambda}\right|^\infty_0\\
+&=\frac{1}{\lambda}
+\end{align*}
+Again using integration by parts, we have the second moment as
+\begin{align*}
+\end{align*}
 
 
 
