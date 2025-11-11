@@ -30,14 +30,17 @@
 \contentsline {subsection}{\numberline {A.2.18}Mean and variance of the Possion}{27}{}%
 \contentsline {subsection}{\numberline {A.2.19}Mean and variance of the Binomial}{28}{}%
 \contentsline {subsection}{\numberline {A.2.20}Mean and variance of the Geometric}{29}{}%
-\contentsline {section}{\numberline {A.3}Limit Theorems}{30}{}%
-\contentsline {subsection}{\numberline {A.3.1}Sample mean}{30}{}%
-\contentsline {subsection}{\numberline {A.3.2}Markov Inequality}{31}{}%
-\contentsline {subsection}{\numberline {A.3.3}Chebyshev Inequality}{33}{}%
-\contentsline {subsection}{\numberline {A.3.4}Weak law of large numbers}{34}{}%
-\contentsline {subsection}{\numberline {A.3.5}}{35}{}%
-\contentsline {chapter}{\numberline {B}Supplementary Notes}{36}{}%
-\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{36}{}%
-\contentsline {section}{\numberline {B.2}Telescoping series}{37}{}%
-\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{38}{}%
-\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{39}{}%
+\contentsline {subsection}{\numberline {A.2.21}Summary of results for some PMFs}{30}{}%
+\contentsline {section}{\numberline {A.3}General Random Variables}{31}{}%
+\contentsline {subsection}{\numberline {A.3.1}Continuous random variables and PDFs}{31}{}%
+\contentsline {section}{\numberline {A.4}Limit Theorems}{32}{}%
+\contentsline {subsection}{\numberline {A.4.1}Sample mean}{32}{}%
+\contentsline {subsection}{\numberline {A.4.2}Markov Inequality}{33}{}%
+\contentsline {subsection}{\numberline {A.4.3}Chebyshev Inequality}{35}{}%
+\contentsline {subsection}{\numberline {A.4.4}Weak law of large numbers}{36}{}%
+\contentsline {subsection}{\numberline {A.4.5}}{37}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{38}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{38}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{39}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{40}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{41}{}%

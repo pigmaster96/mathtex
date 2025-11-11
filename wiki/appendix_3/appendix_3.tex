@@ -724,7 +724,64 @@ The variance of single bernoulli random variable is $E[X^2]-(E[X])^2=p-p^2=p(1-p
 \newpage
 
 \subsection{Mean and variance of the Geometric}
+A geometric random variable $X$ has the PMF
+\begin{equation*}
+p_X(k)=(1-p)^{k-1}p,\quad k=1,2,\ldots
+\end{equation*}
+The mean and variance are given by
+\begin{equation*}
+E[X]=\sum^{\infty}_{k=1}k(1-p)^{k-1}p,\quad\text{var}(X)=\sum^{\infty}_{k=1}(k-E[X])^2(1-p)^{k-1}p
+\end{equation*}
+evaluating these sums is somewhat tedious. As an alternative here we will apply the total expectation theorem, with $A_1=\{X=1\}=\{\text{first try is a success}\}$, and $A_2=\{X>1\}=\{\text{first try is a failiure}\}$, and end up with a much simpler calculation.\\
+\vspace{1mm}\\
+If the first try is successful, we have $X=1$, and
+\begin{equation*}
+E[X|X=1]=1
+\end{equation*}
+Intuitively, if the first try fails then $(X>1)$; we have wasted one try and are back to where we started. So the expected number of remaining tries is $E[X]$, and
+\begin{equation*}
+E[X|X>1]=1+E[X]
+\end{equation*}
+Thus,
+\begin{align*}
+E[X]&=P(X=1)E[X|X=1]+P(X>1)E[X|X>1]\\
+&=p+(1-p)(1+E[X])
+\end{align*}
+From which we obtain
+\begin{equation*}
+E[X]=\frac{1}{p}
+\end{equation*}
+With similar reasoning we also have 
+\begin{equation*}
+E[X^2|X=1]=1,\quad E[X^2|X>1]=E[(1+X)^2]=1+2E[X]+E[X^2]
+\end{equation*}
+so that
+\begin{equation*}
+E[X^2]=p\cdot 1+(1-p)(1+2E[X]+E[X^2])
+\end{equation*}
+from which we obtain
+\begin{equation*}
+E[X^2]=\frac{1+2(1-p)E[X]}{p}
+\end{equation*}
+and using our formula $E[X]=1/p$,
+\begin{equation*}
+E[X^2]=\frac{2}{p^2}-\frac{1}{p}
+\end{equation*}
+and we conclude that
+\begin{equation*}
+\text{var}(X)=E[X^2]-(E[X])^2=\frac{2}{p^2}-\frac{1}{p}-\frac{1}{p^2}=\frac{1-p}{p^2}
+\end{equation*}
+\newpage
 
+\subsection{Summary of results for some PMFs}
+\begin{center}
+\includegraphics[width=10cm]{10}\\
+\includegraphics[width=10cm]{11}
+\end{center}
+\newpage
+
+\section{General Random Variables}
+\subsection{Continuous random variables and PDFs}
 
 
 
