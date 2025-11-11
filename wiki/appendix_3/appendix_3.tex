@@ -782,6 +782,32 @@ and we conclude that
 
 \section{General Random Variables}
 \subsection{Continuous random variables and PDFs}
+A random variable $X$ is \textit{continuous} if there is a nonnegative function $f_X$ calld the probability density function of $X$, or PDF for short, such that
+\begin{equation*}
+P(X\in B)=\int_B f_X(x)dx
+\end{equation*}
+for every subset $B$ of the real line. In particular, the probability that the value of $X$ falls within an interval is
+\begin{equation*}
+P(a\leq X\leq b)=\int^b_af_X(x)dx
+\end{equation*}
+and can be interpreted as the area under a graph of the PDF:
+\begin{center}
+\includegraphics[width=10cm]{12}\\
+\end{center}
+For any single value $a$, we have $\int^a_af_X(x)dx=0$. For this reason, including or excluding the endpoints of an interval has no effect on its probability:
+\begin{equation*}
+P(a\leq X\leq b)=P(a<X<b)=P(a\leq X<b)=P(a<X\leq b)
+\end{equation*}
+Note that to qualify as a PDF, a function $f_X$ must be nonnegative, meaning $f_X(x)\geq0$ for every $x$, and must also have the normalisation property
+\begin{equation*}
+\int^\infty_{-\infty}f_X(x)dx=P(-\infty<X<\infty)=1
+\end{equation*}
+The entire area under the graph of the PDF must sum to 1.
+\newpage
+
+\subsection{Continuous Uniform Random Variable}
+
+
 
 
 
