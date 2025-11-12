@@ -38,14 +38,14 @@
 \contentsline {subsection}{\numberline {A.3.4}Expectation}{33}{}%
 \contentsline {subsection}{\numberline {A.3.5}Mean and variance of the Uniform Random Variable}{34}{}%
 \contentsline {subsection}{\numberline {A.3.6}Exponential Random Variable}{35}{}%
-\contentsline {section}{\numberline {A.4}Limit Theorems}{36}{}%
-\contentsline {subsection}{\numberline {A.4.1}Sample mean}{36}{}%
-\contentsline {subsection}{\numberline {A.4.2}Markov Inequality}{37}{}%
-\contentsline {subsection}{\numberline {A.4.3}Chebyshev Inequality}{39}{}%
-\contentsline {subsection}{\numberline {A.4.4}Weak law of large numbers}{40}{}%
-\contentsline {subsection}{\numberline {A.4.5}}{41}{}%
-\contentsline {chapter}{\numberline {B}Supplementary Notes}{42}{}%
-\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{42}{}%
-\contentsline {section}{\numberline {B.2}Telescoping series}{43}{}%
-\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{44}{}%
-\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{45}{}%
+\contentsline {section}{\numberline {A.4}Limit Theorems}{37}{}%
+\contentsline {subsection}{\numberline {A.4.1}Sample mean}{37}{}%
+\contentsline {subsection}{\numberline {A.4.2}Markov Inequality}{38}{}%
+\contentsline {subsection}{\numberline {A.4.3}Chebyshev Inequality}{40}{}%
+\contentsline {subsection}{\numberline {A.4.4}Weak law of large numbers}{41}{}%
+\contentsline {subsection}{\numberline {A.4.5}}{42}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{43}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{43}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{44}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{45}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{46}{}%

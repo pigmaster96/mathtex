@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.19)  12 NOV 2025 05:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.6.14)  13 NOV 2025 06:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -285,30 +285,53 @@ File: ./images//12.png Graphic file (type png)
 <use ./images//12.png>
 Package pdftex.def Info: ./images//12.png  used on input line 795.
 (pdftex.def)             Requested size: 284.52756pt x 136.88214pt.
- [31 <./images//12.png (PNG copy)>] [32] [33] [34] [35] [36]
-<./images//2.png, id=149, 1081.03876pt x 577.15625pt>
+ [31 <./images//12.png (PNG copy)>]
+<./images//13.png, id=133, 331.2375pt x 109.91063pt>
+File: ./images//13.png Graphic file (type png)
+<use ./images//13.png>
+Package pdftex.def Info: ./images//13.png  used on input line 818.
+(pdftex.def)             Requested size: 284.52756pt x 94.41562pt.
+<./images//14.png, id=134, 372.64218pt x 185.94469pt>
+File: ./images//14.png Graphic file (type png)
+<use ./images//14.png>
+Package pdftex.def Info: ./images//14.png  used on input line 827.
+(pdftex.def)             Requested size: 312.9803pt x 156.17827pt.
+ [32 <./images//13.png (PNG copy)> <./images//14.png (PNG copy)>]
+<./images//15.png, id=138, 368.87813pt x 324.46219pt>
+File: ./images//15.png Graphic file (type png)
+<use ./images//15.png>
+Package pdftex.def Info: ./images//15.png  used on input line 844.
+(pdftex.def)             Requested size: 284.52756pt x 250.26736pt.
+ [33 <./images//15.png (PNG copy)>] [34]
+<./images//17.png, id=145, 274.77657pt x 116.68594pt>
+File: ./images//17.png Graphic file (type png)
+<use ./images//17.png>
+Package pdftex.def Info: ./images//17.png  used on input line 878.
+(pdftex.def)             Requested size: 284.52756pt x 120.8377pt.
+ [35 <./images//17.png (PNG copy)>] [36] [37]
+<./images//2.png, id=156, 1081.03876pt x 577.15625pt>
 File: ./images//2.png Graphic file (type png)
 <use ./images//2.png>
-Package pdftex.def Info: ./images//2.png  used on input line 976.
+Package pdftex.def Info: ./images//2.png  used on input line 982.
 (pdftex.def)             Requested size: 284.52756pt x 151.90648pt.
- [37 <./images//2.png>] [38] [39] [40] [41]
+ [38 <./images//2.png>] [39] [40] [41] [42]
 Appendix B.
-[42
+[43
 
-] [43] [44] [45] (./appendix_3.aux) ) 
+] [44] [45] [46] (./appendix_3.aux) ) 
 Here is how much of TeX's memory you used:
- 3568 strings out of 476091
- 54604 string characters out of 5794081
+ 3612 strings out of 476091
+ 55360 string characters out of 5794081
  1863330 words of memory out of 5000000
- 23904 multiletter control sequences out of 15000+600000
+ 23948 multiletter control sequences out of 15000+600000
  528479 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,62p,299b,300s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on appendix_3.pdf (46 pages, 1562279 bytes).
+Output written on appendix_3.pdf (47 pages, 1774791 bytes).
 PDF statistics:
- 253 PDF objects out of 1000 (max. 8388607)
- 156 compressed objects within 2 object streams
+ 260 PDF objects out of 1000 (max. 8388607)
+ 158 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
