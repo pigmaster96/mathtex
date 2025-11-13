@@ -959,7 +959,51 @@ F_{\text{exp}}(n\delta)=F_{\text{geo}}(n)\quad n-1,2,\ldots
 \newpage
 
 \subsection{Normal random variables}
-A continuous random variable
+A continuous random variable $X$ is said to be \textit{normal/gaussian} if it has a PDF of the form
+\begin{equation*}
+f_X(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-(x-\mu)^2/2\sigma^2}
+\end{equation*}
+where $\mu$ and $\sigma$ are two scalar parameters characterising the PDF, with $\sigma$ assumed positive. It can be verified that the normalisation property holds:
+\begin{equation*}
+\frac{1}{\sqrt{2\pi}\sigma}\int^\infty_{-\infty}e^{-(x-\mu)^2/2\sigma^2}dx=1
+\end{equation*}
+\begin{center}
+\includegraphics[width=11cm]{22}\\
+\end{center}
+The mean and variance can be calculated to be
+\begin{equation*}
+E[X]=\mu,\quad\text{var}(X)=\sigma^2
+\end{equation*}
+To see this, note that the PDF is symmetric around $\mu$, so intuitively the mean can only be $\mu$. The variance is given by
+\begin{equation*}
+\text{var}(X)=\frac{1}{\sqrt{2\pi}\sigma}\int^\infty_{-\infty}(x-\mu)^2e^{-(x-\mu)^2/2\sigma^2}dx
+\end{equation*}
+Changing variables $y=(x-\mu)/\sigma$ and integration by parts using $u=y$ and $dv=ye^{-y^2/2}$, we have
+\begin{align*}
+\text{var}(X)&=\frac{\sigma^2}{\sqrt{2\pi}}\int^\infty_{-\infty}y^2e^{-y^2/2}dy\\
+&=\frac{\sigma^2}{\sqrt{2\pi}}\left.\left(-ye^{-y^2/2}\right)\right|^\infty_{-\infty}+
+\frac{\sigma^2}{\sqrt{2\pi}}\int^\infty_{-\infty}e^{-y^2/2}dy\\
+&=\frac{\sigma^2}{\sqrt{2\pi}}\int^\infty_{-\infty}e^{-y^2/2}dy\\
+&=\sigma^2
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+The last equality was obtained using the fact that
+\begin{equation*}
+\frac{1}{\sqrt{2\pi}}\int^\infty_{-\infty}e^{-y^2/2}dy=1
+\end{equation*}
+which is just the normalisation property of the normal PDF in the case where $\mu=0$ and $\sigma=1$.\\
+\vspace{1mm}\\
+Another important property of the normal PDF (proved later):
+\begin{center}
+\includegraphics[width=12cm]{23}\\
+\end{center}
+
+\subsection{The Standard Normal RV}
+
+
+
+
 
 
 
