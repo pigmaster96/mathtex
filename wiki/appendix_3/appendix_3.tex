@@ -901,7 +901,51 @@ E[X]&=\int^\infty_0x\lambda e^{-\lambda x}dx\\
 \noindent\textbf{Cont.}\\
 Again using integration by parts, we have the second moment as
 \begin{align*}
+E[X^2]&=\int^\infty_0x^2\lambda e^{-\lambda x}dx\\
+&=\left.(-x^2e^{-\lambda x})\right|^\infty_0+\int^\infty_02xe^{-\lambda x}dx\\
+&=0+\frac{2}{\lambda}E[X]\\
+&=\frac{2}{\lambda^2}
 \end{align*}
+Finally, using var$(X)=E[X^2]-(E[X])^2$, we obtain
+\begin{equation*}
+\text{var}(X)=\frac{2}{\lambda^2}-\frac{1}{\lambda^2}=\frac{1}{\lambda^2}
+\end{equation*}
+\newpage
+
+\subsection{Cumulative distribution functions}
+The CDF of a random variable $X$ is denoted $F_X$ and provides the probability $P(X\leq x)$. In particular, for every $x$ we have
+\begin{equation*}
+F_X(x)=P(X\leq x)=\begin{cases}
+\sum_{k\leq x}p_X(k),&\text{if $X$ is discrete},\\
+\int^x_{-\infty}f_X(t)dt,&\text{if $X$ is continuous}.
+\end{cases}
+\end{equation*}
+\begin{center}
+\includegraphics[width=9.8cm]{18}\\
+\includegraphics[width=10cm]{19}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}
+\begin{center}
+\includegraphics[width=11cm]{20}\\
+\end{center}
+\newpage
+
+\subsection{The geometric and exponential CDFs}
+Let $X$ be a geometric random variable with parameter $p$; that is, $X$ is the number of trials until the first success in a sequence of independent bernoulli trials, where the probability
+of success at each trial is $p$. For $k=1,2,\ldots$, we have $P(X=k)=p(1-p)^{k-1}$ and the CDF is given by
+\begin{equation*}
+F_{\text{geo}}(n)=\sum^n_{k=1}p(1-p)^{k-1}=p\frac{1-(1-p)^n}{1-(1-p)}=1-(1-p)^n,\quad\text{for }n=1,2,\ldots
+\end{equation*}
+Suppose now that $X$ is an exponential random variable with parameter $\lambda>0$. Its CDF is given by
+\begin{equation*}
+F_{\text{exp}}(x)=P(X\leq x)=0,\quad\text{for $x\leq0$}
+\end{equation*}
+and
+\begin{equation*}
+F_{\text{exp}}(x)=\int^x_0\lambda e^{-\lambda t}dt=\left.-e^{-\lambda t}\right|^x_0=1-e^{-\lambda x},\quad\text{for }x>0
+\end{equation*}
+
 
 
 
