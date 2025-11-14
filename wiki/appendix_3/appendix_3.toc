@@ -42,14 +42,15 @@
 \contentsline {subsection}{\numberline {A.3.8}The geometric and exponential CDFs}{39}{}%
 \contentsline {subsection}{\numberline {A.3.9}Normal random variables}{40}{}%
 \contentsline {subsection}{\numberline {A.3.10}The Standard Normal RV}{41}{}%
-\contentsline {section}{\numberline {A.4}Limit Theorems}{42}{}%
-\contentsline {subsection}{\numberline {A.4.1}Sample mean}{42}{}%
-\contentsline {subsection}{\numberline {A.4.2}Markov Inequality}{43}{}%
-\contentsline {subsection}{\numberline {A.4.3}Chebyshev Inequality}{45}{}%
-\contentsline {subsection}{\numberline {A.4.4}Weak law of large numbers}{46}{}%
-\contentsline {subsection}{\numberline {A.4.5}}{47}{}%
-\contentsline {chapter}{\numberline {B}Supplementary Notes}{48}{}%
-\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{48}{}%
-\contentsline {section}{\numberline {B.2}Telescoping series}{49}{}%
-\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{50}{}%
-\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{51}{}%
+\contentsline {subsection}{\numberline {A.3.11}Joint PDFs of multiple random variables}{44}{}%
+\contentsline {section}{\numberline {A.4}Limit Theorems}{45}{}%
+\contentsline {subsection}{\numberline {A.4.1}Sample mean}{45}{}%
+\contentsline {subsection}{\numberline {A.4.2}Markov Inequality}{46}{}%
+\contentsline {subsection}{\numberline {A.4.3}Chebyshev Inequality}{48}{}%
+\contentsline {subsection}{\numberline {A.4.4}Weak law of large numbers}{49}{}%
+\contentsline {subsection}{\numberline {A.4.5}}{50}{}%
+\contentsline {chapter}{\numberline {B}Supplementary Notes}{51}{}%
+\contentsline {section}{\numberline {B.1}The sum of the first $n$ natural numbers is $n(n+1)/2$}{51}{}%
+\contentsline {section}{\numberline {B.2}Telescoping series}{52}{}%
+\contentsline {section}{\numberline {B.3}Sum of series of products of consecutive integers}{53}{}%
+\contentsline {section}{\numberline {B.4}Sum of sequence of squares}{54}{}%

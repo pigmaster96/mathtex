@@ -1000,8 +1000,41 @@ Another important property of the normal PDF (proved later):
 \end{center}
 
 \subsection{The Standard Normal RV}
+A normal random variable $Y$ with zero mean and unit variance is said to be a \textit{standard normal}. Its CDF is denoted by $\Phi$:
+\begin{equation*}
+\Phi(y)=P(Y\leq y)=P(Y<y)=\frac{1}{\sqrt{2\pi}}\int^y_{-\infty}e^{-t^2/2}dt
+\end{equation*}
+The CDF values at each point is recorded in a table on the next page. Note that the table only provies values for $\Phi(y)$ for $y\geq0$, because the omitted values can be found using 
+symmetry of the PDF. More generally, we have
+\begin{equation*}
+\Phi(-y)=1-\Phi(y),\quad\text{for all $y$}
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{25}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{Standard Normal Table}
+\begin{center}
+\includegraphics[width=12cm]{24}\\
+\end{center}
+(next page)\newpage
+\noindent\textbf{Standardising a normal RV}\\
+Let $X$ be a normal random variable with mean $\mu$ and variance $\sigma^2$. We `standardise' $X$ by defining a new random variable $Y$ given by
+\begin{equation*}
+Y=\frac{X-\mu}{\sigma}
+\end{equation*}
+Since $Y$ is a linear function of $X$, it is normal. Furthermore,
+\begin{equation*}
+E[Y]=\frac{E[X]-\mu}{\sigma}=0,\quad\text{var}(Y)=\frac{\text{var}(X)}{\sigma^2}=1
+\end{equation*}
+So $Y$ is a standard normal random variable. As such given some event in terms of $X$, we can redefine it in tertms of $Y$, and then use the standard random table.
+\begin{center}
+\includegraphics[width=12cm]{26}\\
+\end{center}
+\newpage
 
-
+\subsection{Joint PDFs of multiple random variables}
+We say
 
 
 
