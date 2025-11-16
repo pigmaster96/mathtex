@@ -4533,9 +4533,146 @@ a_1\\a_2
 \end{equation*}
 \newpage
 
-\subsection{}
+\subsection{General Case: Eigenvalues and Eigenvectors}
+Consider the general case of a linear 2 x 2 system:
+\begin{align*}
+\dot{x}&=ax+by\\
+\dot{y}&=cx+dy
+\end{align*}
+where $a,b,c,d$ are constants. Our system looks like
+\begin{equation*}
+\left(\begin{array}{c}
+\dot x\\\dot y
+\end{array}\right)=
+\left(\begin{array}{cc}
+a&b\\c&d
+\end{array}\right)
+\left(\begin{array}{c}
+x\\y
+\end{array}\right)\iff\dot{\bm x}=\bm{Ax}
+\end{equation*}
+we look for solutions of the form
+\begin{equation*}
+\left(\begin{array}{c}
+x\\y
+\end{array}\right)=
+e^{\lambda t}\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{c}
+a_1e^{\lambda t}\\a_2e^{\lambda t}
+\end{array}\right)\iff\bm x=e^{\lambda t}\bm a
+\end{equation*}
+where $a_1,a_2$, and $\lambda$ are unknown constants. We substitute this into the system; since $D(ae^{\lambda t})=\lambda ae^{\lambda t})$, we arrive at
+\begin{equation*}
+\lambda e^{\lambda t}\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=e^{\lambda t}
+\left(\begin{array}{cc}
+a&b\\c&d
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)\iff
+\lambda e^{\lambda t}\bm a=e^{\lambda t}\bm A
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)
+\end{equation*}
+We can cancel the factor $\lambda e^{\lambda t}$ from both sides, getting
+\begin{equation*}
+\lambda\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{cc}
+a&b\\c&d
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)\iff\lambda\bm a=\bm A
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)
+\end{equation*}
+As it stands, we cannot combine the two sides by subtraction, since the scalar $\lambda$ cannot be subtracted from the square matrix to the right. 
+As in the previous example, the trick is to replace the scalar $\lambda$ by the diagonal matrix $\lambda\bm I$. This gives
+\begin{equation*}
+\left(\begin{array}{cc}
+\lambda&0\\0&\lambda
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{cc}
+a&b\\c&d
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)\iff
+\lambda\bm I\bm a=\bm A
+\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)
+\end{equation*}
+Subtracting the left side from the right and using the distributive law for matrix addition and multiplication, we get a 2 x 2 homogeneous linear system of equations:
+\begin{equation*}
+\left(\begin{array}{cc}
+a-\lambda&b\\c&d-\lambda
+\end{array}\right)\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{c}
+0\\0
+\end{array}\right)\iff
+(\bm A-\lambda\bm I)\bm a=\bm 0
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{equation*}
+\left(\begin{array}{cc}
+a-\lambda&b\\c&d-\lambda
+\end{array}\right)\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{c}
+0\\0
+\end{array}\right)\iff
+(\bm A-\lambda\bm I)\bm a=\bm 0
+\end{equation*}
+this system has nontrivial solutions for the $\bm a$ if and only if the determinant of the coefficients are 0, meaning
+\begin{equation*}
+\left|\begin{array}{cc}
+a-\lambda&b\\c&d-\lambda
+\end{array}\right|=0\iff|\bm A-\lambda\bm I|=0
+\end{equation*}
+Evaluating the determinant we get a quadratic equation in terms of $\lambda$:
+\begin{equation*}
+\lambda^2-(a+d)\lambda+(ad-bc)=0
+\end{equation*}
+This is called the \textit{chracteristic equation} of the matrix 
+\begin{equation*}
+\bm A=
+\left(\begin{array}{cc}
+a&b\\c&d
+\end{array}\right)
+\end{equation*}
+and is often denoted as $p_{\bm A}(\lambda)$. Its roots $\lambda_1$ and $\lambda_2$ are the \textit{eigenvalues} or \textit{characteristic values} of the matrix $\bm A$.\\
+\vspace{1mm}\\
+A useful shortcut; the characteristic equation for a 2 x 2 matrix $\bm A$ can be written as
+\begin{equation*}
+\lambda^2-(\text{tr}\bm A)\lambda+(\text{det}\bm A)=0
+\end{equation*}
+There are now various cases to consider, depending on whether the eigenvalues of $\bm A$ are:
+\begin{enumerate}
+\item Two distinct real numbers,
+\item A single repeated real number,
+\item A pair of conjugate complex numbers.
+\end{enumerate}
+\newpage
 
-
+\subsection{Real distinct eigenvalues}
+Given real distinct eigenvalues, the respective solutions $\bm a=\bm v_1$ and $\bm a=\bm v_2$ to the system 
 
 
 

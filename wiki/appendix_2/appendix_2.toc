@@ -69,4 +69,5 @@
 \contentsline {subsection}{\numberline {A.4.2}Notation}{130}{}%
 \contentsline {subsection}{\numberline {A.4.3}Companion matrix}{131}{}%
 \contentsline {subsection}{\numberline {A.4.4}Worked example for alternative approach}{132}{}%
-\contentsline {subsection}{\numberline {A.4.5}}{135}{}%
+\contentsline {subsection}{\numberline {A.4.5}General Case: Eigenvalues and Eigenvectors}{135}{}%
+\contentsline {subsection}{\numberline {A.4.6}Real distinct eigenvalues}{137}{}%
