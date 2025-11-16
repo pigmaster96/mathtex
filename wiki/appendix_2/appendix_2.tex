@@ -4672,8 +4672,53 @@ There are now various cases to consider, depending on whether the eigenvalues of
 \newpage
 
 \subsection{Real distinct eigenvalues}
-Given real distinct eigenvalues, the respective solutions $\bm a=\bm v_1$ and $\bm a=\bm v_2$ to the system 
-
+We had
+\begin{equation*}
+\left(\begin{array}{cc}
+a-\lambda&b\\c&d-\lambda
+\end{array}\right)\left(\begin{array}{c}
+a_1\\a_2
+\end{array}\right)=
+\left(\begin{array}{c}
+0\\0
+\end{array}\right)\iff
+(\bm A-\lambda\bm I)\bm a=\bm 0
+\end{equation*}
+and
+\begin{equation*}
+\left|\begin{array}{cc}
+a-\lambda&b\\c&d-\lambda
+\end{array}\right|=0\iff|\bm A-\lambda\bm I|=0
+\end{equation*}
+Given real distinct eigenvalues, the respective solutions $\bm a=\bm v_1$ and $\bm a=\bm v_2$ to the system are called \textit{eigenvectors/characteristic vectors}, each correponding to
+their respective eigenvalue.\\
+\vspace{1mm}\\
+If done correctly, substituting in the eigenvalues into the coefficient matrix will make it noninvertible; this is expected since we specifically looked for matrices with zero determinant. \\
+\vspace{1mm}\\
+The solution $\bm v$ is determined only up to an arbitrary nonzero constant factor (a one dimensional eigenspace): if $\bm v$ is an eigenvector for $\lambda$ then so is $c\bm v$ for any real 
+constant $c$. As such this line through $\bm v$ is sometimes called an \textit{eigenline}. 
+A convenient way of finding one eigenvector in this family of solutions is to assign 1 to one of the $a_i$, then solve for the other.\\
+\vspace{1mm}\\
+Once the eigenvalues and their corresponding eigenvectors have been found, we have two independent solutions to the system:
+\begin{equation*}
+\bm x_1(t)=e^{\lambda_1t}\bm v_1,\quad\bm x_2(t)=e^{\lambda_2t}\bm v_2,\quad\text{where}\quad
+\bm x_i(t)=\left(\begin{array}{c}
+x_i\\y_i\end{array}\right)
+\end{equation*}
+These are usually called the \textit{normal modes}. Using superposition, the general solution to the system is
+\begin{equation*}
+\bm x=c_1\bm x_1+c_2\bm x_2=c_1e^{\lambda_1t}\bm v_1+c_2e^{\lambda_2t}\bm v_2
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Worked example}\\
+Say we want to find the general solution to 
+\begin{equation*}
+\dot{\bm u}=A\bm{u},\quad\text{where}\quad A=
+\left(\begin{array}{cc}
+-2&1\\-4&3
+\end{array}\right)
+\end{equation*}
+with the initial conditions $\bm u(0)=(1,0)^T$. 
 
 
 
