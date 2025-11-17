@@ -4719,13 +4719,118 @@ Say we want to find the general solution to
 \end{array}\right)
 \end{equation*}
 with the initial conditions $\bm u(0)=(1,0)^T$. 
+First we write down $A-\lambda I$ 
+\begin{equation*}
+A-\lambda I=\left(\begin{array}{cc}
+-2-\lambda&1\\
+-4&3-\lambda
+\end{array}\right)
+\end{equation*}
+We find the characteristic equation of $A$:
+\begin{equation*}
+p_A(\lambda)=\text{det}(A-\lambda I)=\lambda^2-\lambda-2
+\end{equation*}
+We want the eigenvalues of $A$, which are the roots of the characteristic equation. Completing the square,
+\begin{equation*}
+p_A(\lambda)=(\lambda-1/2)^2-9/4
+\end{equation*}
+The roots are $1/2\pm3/2$, so $\lambda_1=-1$ and $\lambda_2=2$. Now we want to find the associated eigenvectors $\bm a$; 
+first we consider $\lambda_1$, we substitute it into the eigenvector equation:
+\begin{align*}
+(A-(-1)I)\bm a=\bm0&\iff\left(\begin{array}{cc}
+-2+1&1\\-4&3+1
+\end{array}\right)\left(\begin{array}{c}
+a_1\\a_2\end{array}\right)=
+\left(\begin{array}{c}
+0\\0\end{array}\right)\\
+&\iff\left(\begin{array}{cc}
+-1&1\\-4&4
+\end{array}\right)\left(\begin{array}{c}
+a_1\\a_2\end{array}\right)=
+\left(\begin{array}{c}
+0\\0\end{array}\right)
+\end{align*}
+There is a whole dimension of eigenvectors corresponding to this eigenvalue, and we just need one (scaling this one vector can yield any other vector in that dimension). 
+Setting $a_1=1$ gives $a_2=1$; one eigenvector for $\lambda_1$ is $(1,1)^T$.\\
+\vspace{1mm}\\
+For the second eigenvector $\lambda_2$, this is a vector $(a_1,a_2)^T$ that must satisfy
+\begin{equation*}
+(A-2I)\bm a=\bm0\iff\left(\begin{array}{cc}
+-2-2&1\\-4&3-2
+\end{array}\right)\left(\begin{array}{c}
+a_1\\a_2\end{array}\right)=
+\left(\begin{array}{c}
+0\\0\end{array}\right)
+\end{equation*}
+Setting $a_1=1$ gives $a_2=4$, thus one eigenvector for $\lambda_2$ is $(1,4)^T$.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Given our eigenvectors and eigenvalues, we can write down the normal modes as
+\begin{equation*}
+e^{-t}\left(\begin{array}{c}
+1\\1\end{array}\right)\quad\text{and}\quad
+e^{2t}\left(\begin{array}{c}
+1\\4\end{array}\right)
+\end{equation*}
+and the general solution is
+\begin{equation*}
+\bm u(t)=c_1e^{-t}\left(\begin{array}{c}
+1\\1\end{array}\right)+
+c_2e^{2t}\left(\begin{array}{c}
+1\\4\end{array}\right)
+\end{equation*}
+Finally we solve for $c_1$ and $c_2$ using our initial condition. From our expression from the general solution, $\bm u(0)=c_1(1,1)^T+c_2(1,4)^T=(1,0)^T$. Solving this system of equations 
+gives $c_2=-1/3,c_1=4/3$. The particular solution therefore is
+\begin{equation*}
+\bm u(t)=\frac{4}{3}e^{-t}\left(\begin{array}{c}
+1\\1\end{array}\right)-
+\frac{1}{3}e^{2t}\left(\begin{array}{c}
+1\\4\end{array}\right)
+\end{equation*}
+\newpage
 
-
-
-
-
-
-
+\subsection{Complex Eigenvalues}
+Previously we obtained the solutions to a homogeneous linear system with constant coefficients
+\begin{equation*}
+\dot{\bm x}=A\bm x
+\end{equation*}
+Under the assumption that the roots of its characteristic equation
+\begin{equation*}
+|A-\lambda I|=0
+\end{equation*}
+---the eigenvalues of $A$---were real and distinct.\\
+\vspace{1mm}\\
+Now we consider the case where the eigenvalues are complex. Since the characteristic equation has real coefficients, its complex roots must occur in conjugate pairs:
+\begin{equation*}
+\lambda=a+bi,\quad\bar\lambda=a-bi
+\end{equation*}
+Starting with the eigenvalue $a+bi$, we want to solve for
+\begin{equation*}
+(A-\lambda I)\bm v=\bm0
+\end{equation*}
+Since $\lambda$ is complex, the $a_i$ will also be complex, and therefore, the eigenvector
+$\bm v$ corresponding to $\lambda$ will have complex components. Putting together 
+the eigenvector and eigenvalue would give us the solution
+\begin{equation*}
+\bm x=e^{(a+bi)t}\bm v
+\end{equation*}
+We want real solutions to the system, since it was real to start with. Consider the following theorem.\\
+\vspace{1mm}\\
+\textbf{Theorem.} Given a system $\dot{\bm x}=A\bm x$, where $A$ is a real matrix, if $\bm x=\bm x_1+i\bm x_2$ is a complex solution, then its real and imaginary parts $\bm x_1,\bm x_2$ are also
+solutions to the system.\\
+\vspace{1mm}\\
+\textit{Proof.} Since $\bm x=x_1+i\bm x_2$ is a solution, we have
+\begin{equation*}
+(\bm x_1+i\bm x_2)'=A(\bm x_1+i\bm x_2)=A\bm x_1+iA\bm x_2
+\end{equation*}
+equating the real and imaginary parts of this equation,
+\begin{equation*}
+\bm x_1'=A\bm x_1,\quad\bm x_2'=A\bm x_2
+\end{equation*}
+shows exactly that the real vectors $\bm x_1$ and $\bm x_2$ are solutions to $\bm x'=A\bm x$.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Say
 
 
 

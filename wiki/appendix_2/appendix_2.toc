@@ -71,3 +71,4 @@
 \contentsline {subsection}{\numberline {A.4.4}Worked example for alternative approach}{132}{}%
 \contentsline {subsection}{\numberline {A.4.5}General Case: Eigenvalues and Eigenvectors}{135}{}%
 \contentsline {subsection}{\numberline {A.4.6}Real distinct eigenvalues}{137}{}%
+\contentsline {subsection}{\numberline {A.4.7}Complex Eigenvalues}{140}{}%
