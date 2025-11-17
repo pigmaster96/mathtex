@@ -4830,7 +4830,69 @@ equating the real and imaginary parts of this equation,
 shows exactly that the real vectors $\bm x_1$ and $\bm x_2$ are solutions to $\bm x'=A\bm x$.\\
 (next page)\newpage
 \noindent\textbf{Example}\\
-Say
+Say we have a system $\bm x'=A\bm x$ with the complex eigenvalue and corresponding eigenvector:
+\begin{equation*}
+\lambda=-1+2i,\quad\bm v=
+\left(\begin{array}{c}
+i\\2-2i\end{array}\right)
+\end{equation*}
+We write $v$ in terms of its real and imaginary parts:
+\begin{equation*}
+\bm v=
+\left(\begin{array}{c}
+0\\2\end{array}\right)+
+i\left(\begin{array}{c}
+1\\-2\end{array}\right)
+\end{equation*}
+The complex solution to the system can then be written as
+\begin{equation*}
+\bm x=e^{\lambda t}\bm v=
+e^{-t}(\cos(2t)+i\sin(2t))
+\left(\left(\begin{array}{c}
+0\\2\end{array}\right)+
+i\left(\begin{array}{c}
+1\\-2\end{array}\right)\right)
+\end{equation*}
+Now using the theorem, the real and imaginary parts of $\bm x$ are
+\begin{align*}
+x_1&=e^{-t}\left(\left(\begin{array}{c}
+0\\2\end{array}\right)\cos(2t)-\left(\begin{array}{c}
+1\\-2\end{array}\right)\sin(2t)\right)
+=e^{-t}\left(\begin{array}{c}
+-\sin(2t)\\2\cos(2t)+2\sin(2t)\end{array}\right)\\
+x_2&=e^{-t}\left(\left(\begin{array}{c}
+1\\-2\end{array}\right)\cos(2t)+\left(\begin{array}{c}
+0\\2\end{array}\right)\sin(2t)\right)
+=e^{-t}\left(\begin{array}{c}
+\cos(2t)\\-2\cos(2t)+2\sin(2t)\end{array}\right)
+\end{align*}
+These are two distinct real solutions to the system.\\
+\vspace{1mm}\\
+More generally, if the complex eigenvalue is $a+bi$, to get the real solutions to the system
+we write the corresponding complex eigenvector $\bm v$ in terms of its real and imaginary part:
+\begin{equation*}
+\bm v=\bm v_1+i\bm v_2,\quad\text{where}\quad\bm v_1,\bm v_2\quad\text{are real vectors};
+\end{equation*}
+We can calculate the complex solution as
+\begin{equation*}
+\bm x=e^{\lambda t}\bm v=e^{at}(\cos(bt)+i\sin(bt))(\bm v_1+i\bm v_2)
+\end{equation*}
+So that the real and imaginary parts of $\bm x$ give respectively the two real solutions
+\begin{align*}
+\bm x_1&=e^{at}(\bm v_1\cos(bt)-\bm v_2\sin(bt))\\
+\bm x_2&=e^{at}(\bm v_1\sin(bt)+\bm v_2\cos(bt))
+\end{align*}
+These solutions are linearly independent. The general solution is given by their linear combinations
+\begin{equation*}
+c_1\bm x_1+c_2\bm x_2
+\end{equation*}
+Note that using the other eigenvector---the complex conjugate $a-bi$---gives us the same two solutions, simply scaled by a negative sign.\\
+(next page)\newpage
+\noindent\textbf{Another example}\\
+Say we want to solve the system
+
+
+
 
 
 
