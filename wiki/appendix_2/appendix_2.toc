@@ -72,3 +72,5 @@
 \contentsline {subsection}{\numberline {A.4.5}General Case: Eigenvalues and Eigenvectors}{135}{}%
 \contentsline {subsection}{\numberline {A.4.6}Real distinct eigenvalues}{137}{}%
 \contentsline {subsection}{\numberline {A.4.7}Complex Eigenvalues}{140}{}%
+\contentsline {subsection}{\numberline {A.4.8}Repeated Eigenvalues}{143}{}%
+\contentsline {subsection}{\numberline {A.4.9}}{145}{}%

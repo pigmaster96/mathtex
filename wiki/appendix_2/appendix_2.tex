@@ -4889,7 +4889,175 @@ c_1\bm x_1+c_2\bm x_2
 Note that using the other eigenvector---the complex conjugate $a-bi$---gives us the same two solutions, simply scaled by a negative sign.\\
 (next page)\newpage
 \noindent\textbf{Another example}\\
-Say we want to solve the system
+Say we want to solve the system $\dot{\bm u}=A\bm u$, where 
+\begin{equation*}
+A=
+\left(\begin{array}{cc}
+1&2\\-2&1
+\end{array}\right)
+\end{equation*}
+We write down $A-\lambda I$:
+\begin{equation*}
+\left(\begin{array}{cc}
+1-\lambda&2\\-2&1-\lambda
+\end{array}\right)
+\end{equation*}
+We find the characteristic equation of $A$ as
+\begin{equation*}
+p_A(\lambda)=\text{det}(A-\lambda I)=\lambda^2-2\lambda+5
+\end{equation*}
+We find the eigenvalues of $A$ as the roots to the characteristic equation
+\begin{equation*}
+p_A(\lambda)=(\lambda-1)^2+4,\quad\lambda_1=1+2i,\quad\lambda_2=1-2i
+\end{equation*}
+The eigenvalues are complex, so we'll only need one eigenvector $\bm a$. Say we choose $\lambda_1=1+2i$, then it must satisfy
+\begin{align*}
+(A-(1+2i)I)\bm a=\bm 0\iff
+\left(\begin{array}{cc}
+-2i&2\\-2&-2i
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2\end{array}\right)=
+\left(\begin{array}{c}
+0\\0\end{array}\right)
+\end{align*}
+It is reassuring to check that the rows/columns are dependent. Picking $a_1=1$, this implies $a_2=i$. Thus an eigenvector for $\lambda_1$ is $\bm a_1=\left(\begin{array}{c}
+1\\i\end{array}\right)$.\\
+\vspace{1mm}\\
+Now we find the real and imaginary parts of the complex solution associated with $\lambda_1$.
+The complex solution is
+\begin{equation*}
+e^{\lambda_1t}\bm a_1=e^{(1+2i)t}
+\left(\begin{array}{c}
+1\\i\end{array}\right)=
+e^t(\cos(2t)+i\sin(2t))
+\left(\begin{array}{c}
+1\\i\end{array}\right)
+\end{equation*}
+This has real and imaginary parts
+\begin{equation*}
+\bm u_1=e^t\left(\begin{array}{c}
+\cos(2t)\\-\sin(2t)\end{array}\right),\quad
+\bm u_2=e^t\left(\begin{array}{c}
+\sin(2t)\\\cos(2t)\end{array}\right)
+\end{equation*}
+so we have the general solution
+\begin{equation*}
+\bm u=c_1e^t\left(\begin{array}{c}
+\cos(2t)\\-\sin(2t)\end{array}\right)+
+c_2e^t\left(\begin{array}{c}
+\sin(2t)\\\cos(2t)\end{array}\right)
+\end{equation*}
+\newpage
+
+\subsection{Repeated Eigenvalues}
+Starting with the real 2 x 2 system
+\begin{equation*}
+\dot{\bm x}=A\bm x
+\end{equation*}
+We say an eigenvalue $\lambda_1$ of $A$ is repeated if it is a multiple root of the characteristic equation of $A$.\\
+\vspace{1mm}\\
+We need to find two linearly independent solutions to the system; we can get one solution the usual way, by solving the system
+\begin{equation*}
+(A-\lambda_1I)\bm a=\bm0
+\end{equation*}
+Where $\bm a$ would be an eigenvector corresponding to $\lambda_1$. This gives us a solution $\bm x_1=e^{\lambda_1t}\bm a$ to the system. The issue here is finding a second solution.
+To do this we have to distinguish between 2 cases: complete and defective.\\
+\vspace{1mm}\\
+\textbf{Complete case}\\
+Still assuming $\lambda_1$ is a real double root of the characteristic equation of $A$, we say that $\lambda_1$ is a \textit{complete} eigenvalue if there are two linearly independent eigenvectors
+$\bm v_1$ and $\bm v_2$ corresponding to $\lambda_1$.\\
+\vspace{1mm}\\
+In the 2 x 2 case, this only occurs when $A$ is a \textit{scalar matrix}, $A=\lambda_1I$, and \textit{every vector is an eigenvector}. 
+It is easy to find two independent solutions; the usual choices are
+\begin{equation*}
+e^{\lambda_1t}\left(\begin{array}{c}
+1\\0\end{array}\right)\quad\text{and}\quad
+e^{\lambda_1t}\left(\begin{array}{c}
+0\\1\end{array}\right)
+\end{equation*}
+and our general solution is
+\begin{equation*}
+c_1e^{\lambda_1t}\left(\begin{array}{c}
+1\\0\end{array}\right)+c_2e^{\lambda_1t}\left(\begin{array}{c}
+0\\1\end{array}\right)
+\end{equation*}
+Of course, we could choose any other pair of independent eigenvectors to generate a valid solution, say for instance
+\begin{equation*}
+e^{\lambda_1t}\left(\begin{array}{c}
+5\\1\end{array}\right)\quad\text{and}\quad
+e^{\lambda_1t}\left(\begin{array}{c}
+1\\-1\end{array}\right)
+\end{equation*}
+For $n=3$ and above the solution is more complicated (not discussed here).\\
+(next page)\newpage
+\noindent\textbf{Defective case}\\
+If the eigenvalue $\lambda$ is a double root of the characteristic equation, but the system has only one nonzero solution $\bm v_1$ (up to constant multiples), then the eigenvalue\
+is said to be \textit{incomplete/defective} and $\bm x_1=e^{\lambda_1t}\bm v_1$ is the unique normal mode (the geometric multiplicity is lower than the algebraic multiplicity, this has to
+do with the generalised eigenspace).\\
+\vspace{1mm}\\
+However, a second order system needs two independent solutions. Our experience with repeated roots for a univariate second order ODE suggests mutiplying our normal solution by $t$. 
+It turns out this doesn't quite work, but can be fixed as follows: a second independent solution is given by
+\begin{equation*}
+\bm x_2=e^{\lambda_1t}(t\bm v_1+\bm v_2)
+\end{equation*}
+where $\bm v_2$ is any vector satisfying 
+\begin{equation*}
+(A-\lambda_1I)\bm v_2=\bm v_1
+\end{equation*}
+\textbf{Example}\\
+Say we want to solve the system $\dot{\bm u}=A\bm u$, where 
+\begin{equation*}
+A=
+\left(\begin{array}{cc}
+-2&1\\-1&0
+\end{array}\right)
+\end{equation*}
+We write down $A-\lambda I$
+\begin{equation*}
+\left(\begin{array}{cc}
+-2-\lambda&1\\-1&-\lambda
+\end{array}\right)
+\end{equation*}
+The characteristic equation is given by
+\begin{equation*}
+p_A(\lambda)=\lambda^2+2\lambda+1=(\lambda+1)^2
+\end{equation*}
+This has a repeated root $\lambda_1=-1$. Since the matrix $A$ is not a scalar matrix, it must be the case that it is defective. We find the first eigenvector by solving
+\begin{align*}
+(A+I)\bm v_1=0\iff
+\left(\begin{array}{cc}
+-1&1\\-1&1
+\end{array}\right)
+\left(\begin{array}{c}
+a_1\\a_2\end{array}\right)=
+\left(\begin{array}{c}
+0\\0\end{array}\right)
+\end{align*}
+Setting $a_1=1$ gives $a_2=1$. Thus one eigenvector is $\bm v_1=(1,1)^T$. All other eigenvectors for $\lambda_1$ are multiples of this. Now we find $v_2$, this vector $(b_1,b_2)^T$ must satisfy
+\begin{equation*}
+(A-\lambda_1I)\bm v_2=\bm v_1\iff
+\left(\begin{array}{cc}
+-1&1\\-1&1
+\end{array}\right)
+\left(\begin{array}{c}
+b_1\\b_2\end{array}\right)=
+\left(\begin{array}{c}
+1\\1\end{array}\right)
+\end{equation*}
+Setting $b_1=0$ gives $b_2=1$; so $\bm v_2=(0,1)^T$ is suitable. Our general solution is
+\begin{equation*}
+\bm u=c_1e^{-t}\left(\begin{array}{c}
+1\\1\end{array}\right)+
+c_2(te^{-t}\left(\begin{array}{c}
+1\\1\end{array}\right)+
+e^{-t}\left(\begin{array}{c}
+0\\1\end{array}\right))
+\end{equation*}
+\newpage
+
+\subsection{}
+
 
 
 
