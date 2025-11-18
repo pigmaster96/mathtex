@@ -5056,7 +5056,52 @@ e^{-t}\left(\begin{array}{c}
 \end{equation*}
 \newpage
 
-\subsection{}
+\subsection{Sketching General linear systems}
+We describe how to sketch the general system
+\begin{equation*}
+\bm x'=A\bm x,\quad A=\text{2 x 2 constant matrix}
+\end{equation*}
+\textbf{Case 1.} Suppose the eigenvalues $\lambda_1$ and $\lambda_2$ are real and distinct. Say they had opposite signs: $\lambda_1>0,\lambda_2<0$; this is an \textit{unstable saddle}.\\
+\vspace{1mm}\\
+We consider each normal mode in isolation 
+\begin{equation*}
+\bm x=c_1\overrightarrow{a_1}e^{\lambda_1t},\quad\bm x=c_2\overrightarrow{a_2}e^{\lambda_2t}
+\end{equation*}
+See that it is sufficient to consider
+\begin{equation*}
+\bm x=\pm\overrightarrow{a_1}e^{\lambda_1t},\quad\bm x=\pm\overrightarrow{a_2}e^{\lambda_2t}
+\end{equation*}
+since $e^{\lambda t}$ will cover all of $(0,\infty)$, encompassing any $c$. Their trajectories are sketched as
+\begin{center}
+\includegraphics[width=5cm]{58}\\
+\end{center}
+Consider $\bm x=\overrightarrow{a_1}e^{\lambda_1t}$. We think of $e^{\lambda_1t}$
+as a scaling factor changing the length of $\bm x$; as $t$ increases from $-\infty$ to $\infty$, this scaling factor increases from 0 to $\infty$ since $\lambda>0$. The tip of this lengthening
+vector represents the trajectory of the solution $\bm x=\overrightarrow{a_1}e^{\lambda_1t}$,
+which is therefore a ray going out from the origin in the direction of the vector $\overrightarrow{a_1}$. Similarly, the trajectory 
+of $\bm x=-\overrightarrow{a_1}e^{\lambda_1t}$ is a ray going out from the origin in the opposite direction: that of vector $-\overrightarrow{a_1}$.\\
+\vspace{1mm}\\
+The trajectories of $\pm\overrightarrow{a_2}e^{\lambda_2t}$ will be similar, except that since $\lambda_2<0$, so the scaling factor $e^{\lambda_2t}$ decreases as $t$ 
+increases---the solution vector will be shrinking as $t$ increases. The trajectory traced out by its tip will be a ray having the direction of $\overrightarrow{a_2}$ or $-\overrightarrow{a_2}$, but 
+traversed toward the origin as $t$ increases, getting arbitrarily close but never reaching it in finite time.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+To complete the picture, we sketch some nearby trajectories. They are those of the solutions
+\begin{equation*}
+\bm x=c_1\overrightarrow{a_1}e^{\lambda_1t}+c_2\overrightarrow{a_2}e^{\lambda_2t}
+\end{equation*}
+for different $c_1,c_2$. 
+\begin{center}
+\includegraphics[width=11cm]{59}\\
+\end{center}
+Consider some $c_1\overrightarrow{a_1}e^{\lambda_1t}+c_2\overrightarrow{a_2}e^{\lambda_2t}$, when $t$ is very negative, the normal mode corresponding to the negative $\lambda$ will be much higher
+than that of the positive $\lambda$, and thus the solution will follow the trajectory of the ray corresponding to that node (see that on the sketch the solutions start off in the same direction  
+as $\pm\overrightarrow{a_2}$ (the eigenvector for the negative eigenvalue)).\\
+\vspace{1mm}\\
+When $t$ nears/crosses 0 and becomes more and more positive, the positive eigenvalue normal mode will become much higher, and so the solution will start to follow the trajectory of the ray
+corresponding to that node.\\
+(next page)\newpage
+\noindent\textbf{Case 2.} $\lambda_1$ and $\lambda_2$ are real, distinct, and negative: say $\lambda_1<\lambda_2<0$; this is an \textit{asymptotically stable sink node}.
 
 
 
