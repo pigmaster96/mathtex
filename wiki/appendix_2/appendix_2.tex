@@ -5101,7 +5101,39 @@ as $\pm\overrightarrow{a_2}$ (the eigenvector for the negative eigenvalue)).\\
 When $t$ nears/crosses 0 and becomes more and more positive, the positive eigenvalue normal mode will become much higher, and so the solution will start to follow the trajectory of the ray
 corresponding to that node.\\
 (next page)\newpage
-\noindent\textbf{Case 2.} $\lambda_1$ and $\lambda_2$ are real, distinct, and negative: say $\lambda_1<\lambda_2<0$; this is an \textit{asymptotically stable sink node}.
+\noindent\textbf{Case 2.} $\lambda_1$ and $\lambda_2$ are real, distinct, and negative: say $\lambda_1<\lambda_2<0$; this is an \textit{asymptotically stable sink node}.\\
+\vspace{1mm}\\
+The solutions are written the same way as in the first case and we draw their trajectories as before, only now the difference is that all four trajectories are represented as rays
+coming in towards the origin as $t$ increases, since both of the $\lambda_i$ are negative:
+\begin{center}
+\includegraphics[width=5cm]{60}\\
+\end{center}
+To understand the behaviour of the solutions, understand that \textit{near the origin} corresponds to a large positive $t$ ($t\gg1$), since both terms would be small;
+and \textit{far from the origin} corresponds to large 
+negative $t$ ($t\ll-1$). As before the general solution has the form
+\begin{equation*}
+\bm x=c_1\overrightarrow{a_1}e^{\lambda_1t}+c_2\overrightarrow{a_2}e^{\lambda_2t},\quad\lambda_1<\lambda_2<0
+\end{equation*}
+Intuitively, for $t\gg1$, the exponential corresponding to the less negative $\lambda$ dominates, while for $t\ll-1$, that corresponding to the more negative $\lambda$ dominates. To better see this,
+first say $t\gg1$, then since $\lambda_1=\lambda_2<0$,
+\begin{equation*}
+\frac{e^{\lambda_1t}}{e^{\lambda_2t}}=e^{(\lambda_1-\lambda_2)t}\approx0,\quad t\gg1
+\end{equation*}
+The ratio of the exponential of the more negative $\lambda$ to that of the less negative lambda goes to 0, so we can neglect the more negative lambda, getting
+\begin{equation*}
+\bm x\sim c_2\overrightarrow{a_2}e^{\lambda_2t}\quad\text{for $t\gg1$ (near the origin)}
+\end{equation*}
+the solution follows the ray corresponding $\lambda_2$ near the origin.\\
+\vspace{1mm}\\
+Similarly if $t\ll-1$, then $\bm x$ is far from the origin since both terms are large. 
+See that in this case the ratio above is now large, so the first term dominates the expression, meaning
+\begin{equation*}
+\bm x\sim c_1\overrightarrow{a_1}e^{\lambda_1t}\quad\text{for $t\ll-1$ (far from the origin)}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Case 3.} $\lambda_1$ and $\lambda_2$ are distinct and positive: say $\lambda_1>\lambda_2>0$; this is an \textit{unstable source node}.\\
+\vspace{1mm}\\
+The 
 
 
 
