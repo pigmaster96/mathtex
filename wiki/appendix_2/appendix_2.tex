@@ -5133,7 +5133,109 @@ See that in this case the ratio above is now large, so the first term dominates 
 (next page)\newpage
 \noindent\textbf{Case 3.} $\lambda_1$ and $\lambda_2$ are distinct and positive: say $\lambda_1>\lambda_2>0$; this is an \textit{unstable source node}.\\
 \vspace{1mm}\\
-The 
+Sketching this is similar to the previous case except that the direction of motion of motion on the four rays coming from the origin is outwards, since the $\lambda_i>0$.
+\begin{center}
+\includegraphics[width=9cm]{61}\\
+\end{center}
+\textbf{Case 4.} Eigenvalues are purely imaginary: $\lambda=\pm bi$, $b>0$; \textit{stable center}\\
+Since the roots are always complex conjugates of each other, the solutions to the linear system have the form
+\begin{equation*}
+\bm x=\bm c_1\cos bt+\bm c_2\sin bt,\quad \bm c_1,\bm c_2\text{ constant vectors.}
+\end{equation*}
+There is no exponential factor since the real part of $\lambda$ is zero. Since every component of the solution is periodic, with period $2\pi/b$, the moving point representing it retraces its 
+path at intervals of $2\pi/b$. The trajectories therefore are closed curves, ellipses, in fact.
+The system equation $\bm x'=A\bm x$ can be used to calculate a single velocity vector $\bm x'$ in order to determine the direction of movement of this ellipse. 
+\begin{center}
+\includegraphics[width=6cm]{62}\\
+\end{center}
+\textit{Stable} here means that each trajectory stays for all time within some circle centered about some critical point. \textit{Asymptotically stable} is a stronger requirement: each trajectory
+must approach the critical point (in this case the origin) as $t\to\infty$.\\
+(next page)\newpage
+\noindent\textbf{Case 5.} The eigenvalues are complex, but not purely imaginary. There are two cases:
+\begin{align*}
+a\pm bi,&\quad a<0,b>0;\quad\text{\textit{asymptotically stable/sink spiral}};\\
+a\pm bi,&\quad a>0,b>0;\quad\text{\textit{unstable/source spiral}};
+\end{align*}
+Here the solutions to the linear system have the form 
+\begin{equation*}
+\bm x=e^{at}(\bm c_1\cos bt+\bm c_2\sin bt),\quad \bm c_1,\bm c_2\text{ constant vectors.}
+\end{equation*}
+They look like solutions to the purely imaginary case, except for a scalar factor $e^{at}$ which either
+\begin{align*}
+&\text{\textit{decreases towards 0 as $t\to\infty$}}\quad(a<0),\quad\text{or}\\
+&\text{\textit{increases towards $\infty$ as $t\to\infty$}}\quad(a>0)
+\end{align*}
+\begin{center}
+\includegraphics[width=7cm]{63}\\
+\end{center}
+again the direction of motion can be calculated using a single velocity vector.\\
+\vspace{1mm}\\
+\textbf{Other cases}\\
+Repeated real eigenvalue $\lambda\neq0$, defective: \textit{unstable defective node} if $\lambda>0$; \textit{asymptotically stable defective node} if $\lambda<0$.
+\begin{center}
+\includegraphics[width=7cm]{64}\\
+\end{center}
+Repeated real eigenvalue $\lambda\neq0$, complete: \textit{unstable star node} if $\lambda>0$; \textit{asymptotically stable star node} if $\lambda<0$.
+\begin{center}
+\includegraphics[width=7cm]{65}\\
+\end{center}
+\newpage
+
+\subsection{Sketching summary}
+In summary, the procedure of sketching trajectories of the 2 x 2 linear homogeneous system
+$\bm x'=A\bm x$, where $A$ is a constant matrix, is as follows.\\
+\vspace{1mm}\\
+Begin by finding the eigenvalues of $A$.
+\begin{enumerate}
+\item If they are real, distinct, and non-zero:
+\begin{enumerate}
+\item Find the corresponding eigenvectors;
+\item Draw in the individual nodes as rays. Use the sign of the eigenvalue to determine the direction of motion as $t$ increase;
+\item Draw in some nearby smooth curves, with arrowheads indicating the direction of motion:
+\begin{enumerate}
+\item If the eigenvalues have opposite signs, this is easy;
+\item If the eigenvalues have the same sign, determine which is the dominant term in the solution for $t\gg1$ and $t\ll-1$, and use this to determine which rays the trajectories are tangent to,
+near the origin, and which rays they are parallel to, away from the origin.
+\end{enumerate}
+\end{enumerate}
+\item If the eigenvalues are complex, $a\pm bi$, the trajectories will be
+\begin{enumerate}
+\item Ellipses if $a=0$;
+\item Spirals if $a\neq0$; inward if $a<0$, outward if $a>0$
+\end{enumerate}
+In either case, determine the direction of motion by using the system $\bm x'=A\bm x$ to find one velocity vector.
+\end{enumerate}
+\newpage
+
+\subsection{Trace-Determinant Diagram}
+Recall that the \textit{characteristic polynomial} of a square matrix $A$ is defined to be
+\begin{equation*}
+p(\lambda)=\text{det}(A-\lambda I)
+\end{equation*}
+Recall also that in the 2 x 2 case there is a shortcut, where it can be written as
+\begin{equation*}
+p(\lambda)=\lambda^2-\text{tr}A\lambda+\text{det}A
+\end{equation*}
+We'll abbreviate $T=\text{tr}A$ and $D=\text{det}A$, so we can write the characteristic polynomial as
+$p(\lambda)=\lambda^2-T\lambda+D$. The eigenvalues are the roots of $p(\lambda)$:
+\begin{equation*}
+\lambda=\frac{-T\pm\sqrt{T^2-4D}}{2} 
+\end{equation*}
+See that there are three cases:
+\begin{enumerate}
+\item If $D<0$, the eigenvalues are real and of opposite sign, so the phase portrait is a saddle (always unstable).
+\item If $0<D<T^2/4$, the eigenvalues are real, distinct, and of the same sign, and the phase portrait is a node, stable if $T<0$, unstable if $T>0$.
+\item If $0<T^2/4<D$, the eigenvalues are neither real nor purely imaginary, and the phase portrait is a spiral, stable if $T<0$, unstable if $T>0$.
+\end{enumerate}
+We can plot a curve, using trace as the y axis and determinant as the x axis, of $T^2-4D$. The eigenvalues will be real only if $T^2-4D>0$ and complex only if $T^2-4D<0$:
+\begin{center}
+\includegraphics[width=12cm]{66}\\
+\end{center}
+\newpage
+
+\subsection{}
+
+
 
 
 

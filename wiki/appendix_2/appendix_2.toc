@@ -74,3 +74,6 @@
 \contentsline {subsection}{\numberline {A.4.7}Complex Eigenvalues}{140}{}%
 \contentsline {subsection}{\numberline {A.4.8}Repeated Eigenvalues}{143}{}%
 \contentsline {subsection}{\numberline {A.4.9}Sketching General linear systems}{145}{}%
+\contentsline {subsection}{\numberline {A.4.10}Sketching summary}{150}{}%
+\contentsline {subsection}{\numberline {A.4.11}Trace-Determinant Diagram}{151}{}%
+\contentsline {subsection}{\numberline {A.4.12}}{152}{}%
