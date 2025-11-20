@@ -1,2 +1,5 @@
 \contentsline {chapter}{\numberline {1}Flows on a line}{2}{}%
-\contentsline {section}{\numberline {1.1}Geometric intuition}{2}{}%
+\contentsline {section}{\numberline {1.1}Introduction}{2}{}%
+\contentsline {section}{\numberline {1.2}Geometric intuition}{3}{}%
+\contentsline {subsection}{\numberline {1.2.1}Instructive example}{3}{}%
+\contentsline {subsection}{\numberline {1.2.2}Fixed points and stability}{6}{}%

@@ -22,7 +22,86 @@
 \tableofcontents
 
 \chapter{Flows on a line}
+\section{Introduction}
+We have the general system as
+\begin{align*}
+\dot x_1=&f_1(x_1,\ldots,x_n)\\
+&\vdots\\
+\dot x_n=&f_n(x_1,\ldots,x_n)
+\end{align*}
+its solutions can be intuitively visualised as trajectories flowing through an $n$-dimensional phase space. In these early sections we start with the simple case where $n=1$; then we get a single
+equation of the form
+\begin{equation*}
+\dot x=f(x)
+\end{equation*}
+We call such systems one-dimensional or first-order systems.\\
+\vspace{1mm}\\
+We clarify the following:
+\begin{enumerate}
+\item The word \textit{system} is being used here in the context of a dynamical system, not in the classical sense of a collection of two or more equations. Thus a single equation can be called a
+`system'.
+\item We do not allow $f$ to depend explicitly on time. Time-dependent or `nonautonomous' equations of the form $\dot x=f(x,t)$ are more complicated because they require two variables. Such a system
+in this case would be regarded as a two-dimensional system, to be discussed later.
+\end{enumerate}
+\newpage
+
 \section{Geometric intuition}
+\subsection{Instructive example}
+Consider the following nonlinear differential equation:
+\begin{equation*}
+\dot x=\sin x
+\end{equation*}
+This particular equation can be solved in closed form; using separation of variables then integration we get
+\begin{equation*}
+t=\ln\left|\frac{\csc x_0+\cot x_0}{\csc x+\cot x}\right|
+\end{equation*}
+where $x=x_0$ at $t=0$. Although the result is exact, it isn't really possible to interpret. For instance consider the following
+\begin{enumerate}
+\item Suppose $x_0=\pi/4$. Describe the qualitative features of the solution $x(t)$ for all $t>0$. What happens as $t\to\infty$?
+\item For an arbitrary initial condition $x_0$, what is the behaviour of $x(t)$ as $t\to\infty$?
+\end{enumerate}
+The formula above is not transparent. We consider instead a graphical analysis; the differential equation $\dot x=\sin x$ represents a \textit{vector field} on the line: it dictates the velocity
+vector $\dot x$ at each $x$. To sketch this vector field, it is convenient to plot $\dot x$ vs $x$, drawing arrows on the $x$-axis to indicate the corresponding velocity vector at each $x$.
+The arrows point to the right when $\dot x>0$ and to the left when $\dot x<0$:
+\begin{center}
+\includegraphics[width=10cm]{1}
+\end{center}
+The \textit{flow} is to the right when $\dot x>0$ and to the left when $\dot x<0$; at points where $\dot x=0$, there is no flow, and such points are therefore called \textit{fixed points}. Solid
+dots represent \textit{stable} fixed points (often called \textit{attractors/sinks}, bscause the flow is toward them). Open dots represent \textit{unstable} fixed points (also known as \textit{repellers/sources}).\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had
+\begin{center}
+\includegraphics[width=9cm]{1}
+\end{center}
+We start at $x_0$ and watch how $x$ is carried along by the flow. Consider now the questions proposed earlier.
+\begin{enumerate}
+\item Starting at $x_0=\pi/4$, the flow moves to the right faster and faster until $x$ crosses $\pi/2$ (where $\sin x$ reaches its maximum). Then the flow slows down and eventually approaches
+the stable fixed point $x=\pi$ from the left. As such the qualitative form of the solution is as follows
+\begin{center}
+\includegraphics[width=7cm]{2}
+\end{center}
+See that the curve is concave up at first, then concave down; this change in concavity corresponds to the initial acceleration for $x<\pi/2$, followed by the deceleration toward $x=\pi$.\\
+(next page)\newpage
+\item The same reasoning applies to any initial condition $x_0$. If $\dot x>0$ initially, the flow is to the right and $x$ asymptotically approaches the nearest stable point, and similarly to the left for the
+other case where $\dot x<0$. If $\dot x=0$, then $x$ remains constant. The qualitative form of the solution for any initial condition can be sketched: 
+\begin{center}
+\includegraphics[width=6cm]{3}
+\end{center}
+\end{enumerate}
+\noindent Note that the picture can't tell us certain \textit{quantitative} things: for instance we don't know the time at which the speed $|\dot x|$ is greatest. But in many cases the \textit{qualitative}
+information is what we care about. In this case these sketches are useful.
+\newpage
+
+\subsection{Fixed points and stability}
+
+
+
+
+
+
+
+
 
 
 

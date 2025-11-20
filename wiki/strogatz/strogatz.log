@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.6.14)  20 NOV 2025 05:23
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.6.14)  20 NOV 2025 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -229,20 +229,42 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 Chapter 1.
 [2
 
-] (./strogatz.aux) ) 
+]
+<./images//1.png, id=21, 322.20375pt x 123.46124pt>
+File: ./images//1.png Graphic file (type png)
+<use ./images//1.png>
+Package pdftex.def Info: ./images//1.png  used on input line 67.
+(pdftex.def)             Requested size: 284.52756pt x 109.02863pt.
+ [3 <./images//1.png (PNG copy)>]
+File: ./images//1.png Graphic file (type png)
+<use ./images//1.png>
+Package pdftex.def Info: ./images//1.png  used on input line 75.
+(pdftex.def)             Requested size: 256.0748pt x 98.12671pt.
+<./images//2.png, id=27, 220.57407pt x 110.66344pt>
+File: ./images//2.png Graphic file (type png)
+<use ./images//2.png>
+Package pdftex.def Info: ./images//2.png  used on input line 82.
+(pdftex.def)             Requested size: 199.16928pt x 99.9288pt.
+ [4 <./images//2.png (PNG copy)>]
+<./images//3.png, id=31, 186.6975pt x 258.21469pt>
+File: ./images//3.png Graphic file (type png)
+<use ./images//3.png>
+Package pdftex.def Info: ./images//3.png  used on input line 89.
+(pdftex.def)             Requested size: 170.71652pt x 236.12227pt.
+ [5 <./images//3.png (PNG copy)>] [6] (./strogatz.aux) ) 
 Here is how much of TeX's memory you used:
- 3479 strings out of 476091
- 53489 string characters out of 5794081
- 1850330 words of memory out of 5000000
- 23817 multiletter control sequences out of 15000+600000
- 527262 words of font info for 89 fonts, out of 8000000 for 9000
+ 3517 strings out of 476091
+ 54067 string characters out of 5794081
+ 1857330 words of memory out of 5000000
+ 23848 multiletter control sequences out of 15000+600000
+ 527608 words of font info for 90 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 57i,6n,62p,237b,220s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on strogatz.pdf (3 pages, 57628 bytes).
+ 57i,9n,62p,248b,269s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on strogatz.pdf (7 pages, 169845 bytes).
 PDF statistics:
- 39 PDF objects out of 1000 (max. 8388607)
- 23 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
