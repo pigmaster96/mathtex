@@ -112,7 +112,45 @@ An equilibrium is defined to be stable if all sufficiently small disturbances aw
 represented geometrically by stable fixed points. Conversely, unstable equilibria, in which disturbances grow over time, are represented by unstable points.\\
 (next page)\newpage
 \noindent\textbf{Instructive examples}\\
-Say we want to find all the fixed points for $\dot x=x^2-1$, and then classify their stability.
+Say we want to find all the fixed points for $\dot x=x^2-1$, and then classify their stability.\\
+\vspace{1mm}\\
+Here $f(x)=x^2-1$. To find the fixed points we set $f(x^*)=0$ and solve for $x^*$; thus $x^*=\pm1$. To determine stability we plot $x^2-1$ and then sketch the vector field:
+\begin{center}
+\includegraphics[width=7cm]{5}
+\end{center}
+The flow is to the right when $x^2-1>0$ and to the left where $x^2-1<0$. $x^*=-1$ is stable and $x^*=1$ is unstable.\\
+\vspace{1mm}\\
+Note that the definition of stable equilibrium is based on \textit{small} disturbances; certain large disturbances may fail to decay. In this case see that all small disturbances to 
+$x^*=-1$ will decay, but a large disturbance that sends $x$ to the right of $x=1$ will \textit{not} decay---and will in fact be repelled out to $+\infty$. To emphasise this we sometimes say that
+$x^*=-1$ is \textit{locally stable}, but not globally stable.\\
+\vspace{1mm}\\
+On the other hand consider the vector field for the RC circuit equation
+\begin{equation*}
+\dot Q=f(Q)=\frac{V_0}{R}-\frac{Q}{RC}
+\end{equation*}
+\begin{center}
+\includegraphics[width=5cm]{6}
+\end{center}
+In this case the flow is always towards $Q^*$; it is a \textit{stable} fixed point. In fact, it is \textit{globally stable}, in the sense that it is approached from \textit{all} initial 
+conditions.\\
+(next page)\newpage
+\noindent\textbf{Another example}\\
+Say we want to sketch the phase portrait corresponding to $\dot x=x-\cos x$, and determine the stability of all the fixed points.\\
+\vspace{1mm}\\
+Our approach would be to plot $x-\cos x$ and then sketch the associated vector field. This method is valid, but it requires one to figure out what the graph of $x-\cos x$ looks like. 
+An easier approach would be to plot both $y=x$ and $y=\cos x$ separately; we plot both graphs on the same axes and then observe that they intersect at exactly one point:
+\begin{center}
+\includegraphics[width=8cm]{7}
+\end{center}
+This intersection corresponds to a fixed point since $x^*=\cos x^*$ and therefore $f(x^*)=0$. When the line lies above the cosine curve, we have $x>\cos x$ and so $\dot x>0$; the flow is to the
+right. Similarly, the flow is to the left when the line is below the cosine curve.\\
+\vspace{1mm}\\
+Hence $x^*$ is the only fixed point and is unstable. See that we can classify its stability even though we don't know exactly where it is.
+\newpage
+
+\section{}
+
+
 
 
 
