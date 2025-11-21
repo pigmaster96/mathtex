@@ -148,14 +148,34 @@ right. Similarly, the flow is to the left when the line is below the cosine curv
 Hence $x^*$ is the only fixed point and is unstable. See that we can classify its stability even though we don't know exactly where it is.
 \newpage
 
-\section{}
-
-
-
-
-
-
-
+\section{Linear stability analysis}
+One may want to have a more quantitative measure of stability, such as the rate of decay to a stable fixed point. This sort of information
+may be obtained by \textit{linearising} about a fixed point.\\
+\vspace{1mm}\\
+Let $x^*$ be a fixed point, and let
+\begin{equation*}
+x(t)=x^*+u(t)
+\end{equation*}
+where 
+\begin{equation*}
+u(t)=x(t)-x^*
+\end{equation*}
+differentiation yields
+\begin{equation*}
+\dot u=\frac{d}{dt}(x-x^*)=\dot x
+\end{equation*}
+Thus $\dot u=\dot x=f(x)=f(x^*+u)$. Now using Taylor's expansion we obtain
+\begin{equation*}
+f(x^*+u)=f(x^*)+f'(x^*)u+O(u^2)
+\end{equation*}
+where $O(u^2)$ denotes quadratically small terms in $u$. Finally observe that $f'(x^*)=0$ since $x^*$ is a fixed point. Hence
+\begin{equation*}
+\dot u=f'(x^*)u+O(u^2)
+\end{equation*}
+If $f'(x^*)\neq0$, the $O(u^2)$ terms are negligible in comparison to the linear term, so we may write the approximation
+\begin{equation*}
+\dot u\approx f'(x^*)u
+\end{equation*}
 
 
 
