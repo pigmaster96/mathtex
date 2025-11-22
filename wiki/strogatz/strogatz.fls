@@ -364,6 +364,10 @@ INPUT ./images//7.png
 INPUT ./images//7.png
 INPUT ./images//7.png
 INPUT ./images//7.png
+INPUT ./images//8.png
+INPUT ./images//8.png
+INPUT ./images//8.png
+INPUT ./images//8.png
 INPUT strogatz.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb

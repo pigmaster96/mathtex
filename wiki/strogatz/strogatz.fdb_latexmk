@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1763740508 "strogatz.tex" "strogatz.pdf" "strogatz" 1763740509 0
+["pdflatex"] 1763806286 "strogatz.tex" "strogatz.pdf" "strogatz" 1763806287 0
   "/etc/texmf/web2c/texmf.cnf" 1749907355 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -92,9 +92,10 @@
   "images//5.png" 1763658978 9783 f34fb76d255f8b52f8388f7f0866a3bd ""
   "images//6.png" 1763659548 6771 052b05996c7fa43fa1381d1ad9b8af6b ""
   "images//7.png" 1763661225 12167 7538e9b12d282d773ff0823a47ba8f93 ""
-  "strogatz.aux" 1763740509 773 92ae9ee2ef4cda47d07c243815b68121 "pdflatex"
-  "strogatz.tex" 1763740507 9873 678714145abb1b328d54f2da77e20ec5 ""
-  "strogatz.toc" 1763740509 418 2282c5a4d6c109ea444b564dfdc880fe "pdflatex"
+  "images//8.png" 1763803778 5115 e51762d5966510e168fa20534e4aefeb ""
+  "strogatz.aux" 1763806287 888 3372fda8dff73a298f0b647124f1fb12 "pdflatex"
+  "strogatz.tex" 1763806285 12202 67726218fe49bd839e9c9b50a69462ba ""
+  "strogatz.toc" 1763806287 492 023b4bf2ec22e8aec2e3e9bd505c9b45 "pdflatex"
   (generated)
   "strogatz.aux"
   "strogatz.log"

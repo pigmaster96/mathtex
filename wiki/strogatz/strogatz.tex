@@ -176,9 +176,42 @@ If $f'(x^*)\neq0$, the $O(u^2)$ terms are negligible in comparison to the linear
 \begin{equation*}
 \dot u\approx f'(x^*)u
 \end{equation*}
+This linear differential equation for $u$ is called the \textit{linearisation} about $x^*$. The linearisation shows that $u(t)$ grows exponentially if $f'(x^*)>0$ and decays exponentially if 
+$f'(x^*)<0$. If $f'(x^*)=0$, the $O(u^2)$ can't be ignored and a nonlinear analysis is needed to determine stability.\\
+\vspace{1mm}\\
+The slope $f'(x^*)$ at the fixed point determines its stability. The importance of the \textit{sign} of $f'(x^*)$ was clear from our graphical approach; now we also
+have a measure of \textit{how} stable a fixed point is---determined by the \textit{magnitude} of $f'(x^*)$. Its reciprocal $1/|f'(x^*)|$ is a \textit{characteristic time scale}; it determines the 
+time required for $x(t)$ to vary significantly in the neighbourhood of $x^*$.
+\newpage
 
-
-
+\section{Existence and uniqueness}
+\textbf{Instructive example}\\
+We can show that the solution to $\dot x=x^{1/3}$ starting from $x_0=0$ is \textit{not} unique.\\
+\vspace{1mm}\\
+The point $x=0$ is a fixed point, so one obvious solution is $x(t)=0$ for all $t$. 
+The suprising fact is that there is another solution. By separating variables and integrating:
+\begin{equation*}
+\int x^{-1/3}dx=\int dt
+\end{equation*}
+so $3/2x^{2/3}=t+C$. Imposing an initial condition $x(0)=0$ yields $C=0$, and hence $x(t)=(2/3t)^{3/2}$ is also a solution.\\
+\vspace{1mm}\\
+To find the source of the non-uniqueness, a hint comes from the vector field:
+\begin{center}
+\includegraphics[width=5cm]{8}
+\end{center}
+See that the fixed point $x^*=0$ is very unstable---the slope of $f(0)$ is infinite---a jump discontinuity in $x$. We state the existence and uniqueness theorem as follows\\
+\vspace{1mm}\\
+\textbf{Existence and uniqueness Theorem}: Consider the initial value problem
+\begin{equation*}
+\dot x=f(x),\quad x(0)=x_0
+\end{equation*}
+Suppose that $f(x)$ and $f'(x)$ are continuous on an open interval $R$ of the $x$ axis, and suppose that $x_0$ is a point in $R$. Then the initial
+value problem has a solution $x(t)$ on some time interval $(-\tau,\tau)$ about $t=0$, and the solution is unique.\\
+\vspace{1mm}\\
+This theorem says that if $f(x)$ is \textit{smooth enough}, then solutions exist and they are unique. Even so, note that there's \textit{no guarantee that solutions exist for all time}.
+(next page)\newpage
+\noindent\textbf{Instructive example}\\
+Consider
 
 
 
