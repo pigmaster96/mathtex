@@ -2201,7 +2201,40 @@ $c\in C$. Since $A$ has only one element, we must have $b=c$. Thus $b=c\in B\cap
 \end{proof}
 
 \chapter{Relations}
-\section{Ordered pairs}
+\section{Ordered pairs and Cartesian product}
+\textbf{Justification}\\
+Suppose $P(x,y)$ is a statement with two free variables $x$ and $y$. We can't speak of this statement as being true or false until we have specified two values---one for $x$ and $y$.
+Thus if we want the truth set to identify which assignment of values make the statement come out true, then the truth set will have to contain not individual variables, but pairs of
+values. We will specify a pair of values by writing the two values in parantheses separated by a comma.\\
+\vspace{1mm}\\
+For example, let $D(x,y)$ mean ``$x$ divides $y$''. Then $D(6,18)$ is true, but $D(18,6)$ is false.
+We must therefore distinguish between the pairs $(18,6)$ and $(6,18)$.\\
+\vspace{1mm}\\
+Since the order of values in the pair makes a difference, we will refer to a pair $(a,b)$ as an \textit{ordered pair}, with \textit{first coordinate} $a$ and \textit{second coordinate} $b$. Note 
+that ordered pairs can have anything at all as their coordinates, and are not just restricted to real numbers.\\
+(next page)\newpage
+\noindent\textbf{Cartesian product}\\
+In general, if $P(x,y)$ is a statement in which $x$ ranges over some set $A$ and $y$ ranges over a set $B$, then the only assignments of values to $x$ and $y$ that will make sense 
+in $P(x,y)$ will be ordered pairs in which the first coordinate is an element of $A$ and the second from $B$. We therefore make the following definition:
+\definition Suppose $A$ and $B$ are sets. Then the \textit{Cartesian product} of $A$ and $B$, denoted $A\times B$, is the set of all ordered pairs in which the first coordinate is an element
+of $A$ and the second an element of $B$. In other words,
+\begin{equation*}
+A\times B=\{(a,b)|\,a\in A\text{ and }b\in B\}
+\end{equation*}
+\textbf{Examples}\\
+If $A=\{\text{red, green}\}$ and $B=\{2,3,5\}$ then 
+\begin{equation*}
+A\times B=\{(\text{red, 2}),(\text{red, 3}),(\text{red, 5}),(\text{green, 2}),
+(\text{green, 3}),(\text{green, 5})\}
+\end{equation*}
+for another example:
+\begin{equation*}
+\mathbb{R}\times\mathbb{R}=\{(x,y)|\,\text{$x$ and $y$ are real numbers}\}
+\end{equation*}
+(These are the coordinates of all the points in the plane. For obvious reasons, this set is sometimes written $\mathbb R^2$.)
+\newpage
+
+\subsection{Properties of the Cartesian product}
 
 
 
