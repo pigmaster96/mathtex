@@ -2235,6 +2235,28 @@ for another example:
 \newpage
 
 \subsection{Properties of the Cartesian product}
+\begin{theorem} Suppose $A,B,C$ and $D$ are sets. $A\times(B\cap C)=(A\times B)\cap(A\times C)$
+\end{theorem}
+\begin{proof} Let $p$ be an arbitrary element of $A\times(B\cap C)$. Then by the definition of the Cartesian product, $p$ must be an ordered pair whose first coordinate is an element of $A$ and whose 
+second coordinate is an element of $B\cap C$. In other words, $p=(x,y)$ for some $x\in A$ and $y\in B\cap C$. Since $y\in B\cap C$, $y\in B$ and $y\in C$. Since $x\in A$ and $y\in B$, 
+$p=(x,y)\in A\times B$, and similarly $p\in A\times C$. Since $p$ was an arbitrary element of $A\times(B\cap C)$, it follows that $A\times(B\cap C)\subseteq(A\times B)\cap(A\times C)$.\\
+\indent Now let $p$ be an arbitrary element of $(A\times B)\cap(A\times C)$. Then $p\in A\times B$, so $p=(x,y)$ for some $x\in A$ and $y\in B$. Also $(x,y)=p\in A\times C$, so $y\in C$. Since 
+$y\in B$ and $y\in C$, $y\in B\cap C$. Thus $p=(x,y)\in A\times(B\cap C)$. Since $p$ was an arbitrary element of $(A\times B)\cap(A\times C)$ we can conclude that 
+$(A\times B)\cap(A\times C)\subseteq A\times(B\cap C)$. So $A\times(B\cap C)=(A\times B)\cap(A\times C)$.
+\end{proof}
+\noindent In the first part we let $p$ be an arbitrary element of $A\times(B\cap C)$ and then prove $p\in(A\times B)\cap(A\times C)$. Because $p\in A\times (B\cap C)$ means 
+$\exists x\exists y(x\in A\land y\in B\cap C\land p=(x,y)$; and we immediately introduct the variables $x$ and $y$ by existential instantiation. The rest of the proof is straightforward.\\
+\vspace{1mm}\\
+In both parts of this proof we introduced an arbitrary object $p$ that turned out to be an ordered pair, and we were therefore able to say that $p=(x,y)$ for some objects $x$ and $y$. In most proofs
+involving Cartesian products mathematicians suppress this step. If it is clear from the beginning that an object will turn out to be an ordered pair, it is usually just called $(x,y)$ from the
+outset. We will follow this practice in our proofs.\\
+(next page)\newpage
+\begin{theorem}
+\end{theorem}
+
+
+
+
 
 
 
