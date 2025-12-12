@@ -2377,12 +2377,49 @@ is to be called a relation from $A$ to $B$.\\
 \end{enumerate}
 \newpage
 
-\subsection{}
+\subsection{Domain, Range, Inverse, Composition}
+\begin{definition}
+Suppose $R$ is a relation from $A$ to $B$. Then the \textit{domain} of $R$ is the set
+\begin{equation*}
+\text{Dom}(R)=\{a\in A|\exists b\in B((a,b)\in R)\}
+\end{equation*}
+\end{definition}
+\noindent\textit{Intuition:} The domain of a relation from $A$ to $B$ is the set containing all the first coordinates of ordered pairs in the relation. This will in general be a subset of $A$, but it need
+not be all of $A$.
+\begin{definition}
+The \textit{range} of $R$ is the set
+\begin{equation*}
+\text{Ran}(R)=\{b\in B|\exists a\in A((a,b)\in R)\}
+\end{equation*}
+\end{definition}
+\noindent\textit{Intuition:} In a manner similar to the domain, the range of a relation is the set containing all the second coordinates of its ordered pairs, this set need not be all of $B$.
+\begin{definition}
+The \textit{inverse} of $R$ is the relation $R^{-1}$ from $B$ to $A$ defined as follows:
+\begin{equation*}
+R^{-1}=\{(b,a)\in B\times A|(a,b)\in R\}
+\end{equation*}
+\end{definition}
+\noindent\textit{Intuition:} The inverse of a relation contains exactly the same ordered pairs as the original relation, but with the order of the coordinates of each pair reversed.
+\begin{definition}
+Suppose $R$ is a relation from $A$ to $B$ and $S$ is a relation from $B$ to $C$. Then the \textit{composition} of $S$ and $R$ is the relation $S\circ R$ from $A$ to $C$ defined as
+\begin{equation*}
+S\circ R=\{(a,c)\in A\times C|\exists b\in B((a,b)\in R\text{ and }(b,c)\in S)\}
+\end{equation*}
+\end{definition}
+\noindent\textit{Intuition:} $(a,c)\in S\circ R$ iff there is some $b$ such that $(a,b)\in R\text{ and }(b,c)\in S$. This notation may seem backward at first---if $(a,b)\in R\text{ and }(b,c)\in S$,
+one might be tempted to write $(a,c)\in R\circ S$---but according to our definition, the proper
+notation is $(a,c)\in S\circ R$.\\
+(next page)\newpage
+\noindent\textbf{Properties}
+\begin{theorem}
+\end{theorem}
+
 
 
 
 
 \newpage
+
 
 
 

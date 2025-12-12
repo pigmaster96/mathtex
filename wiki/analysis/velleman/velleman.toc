@@ -51,9 +51,9 @@
 \contentsline {subsection}{\numberline {3.1.1}Properties of the Cartesian product}{64}{}%
 \contentsline {subsection}{\numberline {3.1.2}Truth sets}{68}{}%
 \contentsline {section}{\numberline {3.2}Relations}{69}{}%
-\contentsline {subsection}{\numberline {3.2.1}}{70}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{71}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{71}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{71}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{71}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{72}{}%
+\contentsline {subsection}{\numberline {3.2.1}Domain, Range, Inverse, Composition}{70}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{72}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{72}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{72}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{72}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{73}{}%
