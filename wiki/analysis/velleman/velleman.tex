@@ -2312,9 +2312,78 @@ Suppose $A,B,C,$ and $D$ are sets.
 \item $A\times\emptyset=\emptyset\times A=\emptyset$.
 \end{enumerate}
 \end{theorem}
+\noindent(next page)\newpage
+\begin{theorem}
+Suppose $A$ and $B$ are sets. Then $A\times B=B\times A$ iff either $A=\emptyset,B=\emptyset$, or $A=B$.
+\end{theorem}
+\begin{proof}
+($\rightarrow$) Suppose $A\times B=B\times A$. If either $A=\emptyset$ or $B=\emptyset$, then there is nothing more to prove, so suppose $A\neq\emptyset$ and $B\neq\emptyset$;
+we will show that $A=B$. Let $x$ be arbitrary, and suppose $x\in A$. Since $B\neq\emptyset$ we can choose some $y\in B$. Then $(x,y)\in A\times B=B\times A$, so $x\in B$.\\
+\indent Now suppose $x\in B$. Since $A\neq\emptyset$ we can choose some $z\in A$. Therefore $(x,z)\in B\times A=A\times B$, so $x\in A$. Thus $A=B$ as required.\\
+\indent($\leftarrow$) Suppose either $A=\emptyset,B=\emptyset$, or $A=B$.\\
+Case 1: $A=\emptyset$. Then $A\times B=\emptyset\times B=\emptyset=B\times\emptyset=B\times A$.\\
+Case 2: $B=\emptyset$. Similar to case 1.\\
+Case 3: $A=B$. Then $A\times B=A\times A=B\times A$.
+\end{proof}
+\noindent The statement to be proven here is an iff statement so we prove both directions separately. For the $\rightarrow$ direction, our goal is $A=\emptyset\lor B=\emptyset\lor A=B$, which can
+also be written as $(A=\emptyset\lor B=\emptyset)\lor A=B$.
+We proceed using proof by cases, assuming $\neg(A=\emptyset\lor B=\emptyset)$ and proving $A=B$.
+(By de morgan's laws $\neg(A=\emptyset\lor B=\emptyset)$ is equivalent to $A\neq\emptyset\land B\neq\emptyset$). Of course we could have proceeded differently, say by assuming 
+$A\neq B$ and $B\neq\emptyset$ and then proving $A=\emptyset$; but since $A=\emptyset$ and $B=\emptyset$ are actually negative statements, we're better off negating both of them, and then 
+proving the positive statement $A=B$. The assumptions $A\neq\emptyset$ and $B\neq\emptyset$ are existential statements, so they are used in the proof to justify $y$ and $z$. The proof $A=B$ then
+proceeds as per usual. For the other direction we use naturally use proof by cases.
+\newpage
+
+\subsection{Truth sets}
+\begin{definition}
+Suppose $P(x,y)$ is a statement with two free variables in which $x$ ranges over a set $A$ and $y$ ranges over another set $B$. Then $A\times B$ is the set of all assignments of values to $x$ and
+$y$ that make sense in the statement $P(x,y)$. The \textit{truth set} of $P(x,y)$ is the subset of $A\times B$ consisting of those assignments that make the statement come out true. 
+In other words, the truth set of $P(x,y)$ is the set $\{(a,b)\in A\times B|P(a,b)\}$.
+\end{definition}
+\noindent\textbf{Example 1}\\
+Consider the statement `$x$ is located in $y$,' where $x$ ranges over the set $C$ of all cities and $y$ ranges over the set $N$ of all countries.\\
+\vspace{1mm}\\
+Its truth set is $\{(c,n)\in C\times N|\text{the city $c$ is located in the country $n$}\}=\{$(New York, United States), (Tokyo, Japan), (Paris, France), $\ldots\}$.\\
+\vspace{1mm}\\
+\textbf{Example 2}\\
+Consider the statement `$y=2x-3$' where $x$ and $y$ range over $\mathbb R$.\\
+\vspace{1mm}\\
+Its truth set is $\{(x,y)\in\mathbb R\times\mathbb R|y=2x-3\}=\{(0,-3),(1,-1),(2,1),\ldots\}$. This
+is just points along the line specified in the statement. One can think of the graph of an 
+equation as a picture of its truth set.\\
+\vspace{1mm}\\
+\textbf{More coordinates}\\
+Although we may concentrate on ordered pairs, it is possible to work with ordered triples, ordered quadruples, and so on. These might be used to 
+talk about truth sets for statements containing three or more free variables.
+\newpage
+
+\section{Relations}
+Suppose $P(x,y)$ is a statement with two free variables $x$ and $y$. Often such a statement can be thought of as expressing a \textit{relationship} between $x$ and $y$. 
+The truth set of the statement $P(x,y)$ is a set of ordered pairs that records when this relationship holds. It is often useful to think of any set of ordered pairs in this way, as a record
+of when some relationship holds. This is the motivation behind the following definition.
+\begin{definition}
+Suppose $A$ and $B$ are sets. Then a set $R\subseteq A\times B$ is called a \textit{relation from $A$ to $B$}.
+\end{definition}
+\noindent If $x$ ranges over $A$ and $y$ ranges over $B$, then clearly the truth set of any statement $P(x,y)$ will be a relation from $A$ to $B$. Note however that the definition does not require 
+that the set of ordered pairs be defined as the truth set of some statement in order for that set to be a relation; although truth sets motivated the definition, \textit{any} subset of $A\times B$ 
+is to be called a relation from $A$ to $B$.\\
+\vspace{1mm}\\
+\textbf{Examples}
+\begin{enumerate}
+\item Let $A=\{1,2,3\}$, $B=\{3,4,5\}$, and $R=\{(1,3),(1,5),(3,3)\}$. Then $R\subseteq A\times B$, so $R$ is a relation from $A$ to $B$.
+\item Let $G=\{(x,y)\in\mathbb R\times\mathbb R|x>y\}$. Then $G$ is a relation from $\mathbb R$ to $\mathbb R$.
+\item Let $A=\{1,2\}$ and $B=\mathscr P(A)=\{\emptyset,\{1\},\{2\},\{1,2\}\}$. Let $E=\{(x,y)\in A\times B|x\in y\}$. Then $E$ is a relation from $A$ to $B$. In this case $E=\{(1,\{1\}),(1,\{1,2\}),
+(2,\{2\}),(2,\{1,2\})\}$.
+\end{enumerate}
 \newpage
 
 \subsection{}
+
+
+
+
+\newpage
+
 
 
 
