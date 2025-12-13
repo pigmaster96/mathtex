@@ -2352,6 +2352,14 @@ Its truth set is $\{(x,y)\in\mathbb R\times\mathbb R|y=2x-3\}=\{(0,-3),(1,-1),(2
 is just points along the line specified in the statement. One can think of the graph of an 
 equation as a picture of its truth set.\\
 \vspace{1mm}\\
+\textbf{Properties}\\
+Many facts about truth sets for statements with one free variable carry over to truth sets for statements with two free variables. For example, suppose $T$ is the truth set of a statement $P(x,y)$, 
+where $x$ ranges over some set $A$ and $y$ ranges over $B$. Then for any $a\in A$ and $b\in B$ the statement $(a,b)\in T$ means the same thing as $P(a,b)$.\\
+\vspace{1mm}\\
+If $P(x,y)$ is true for every $x\in A$ and $y\in B$, then $T=A\times B$; if $P(x,y)$ is false for every $x\in A$ and $y\in B$, then $T=\emptyset$. If $S$ is the truth set of another statement
+$Q(x,y)$, then the truth set of the statement $P(x,y)\land Q(x,y)$ is $T\cap S$, and the truth set of $P(x,y)\lor Q(x,y)$ is $T\cup S$.
+\\
+\vspace{1mm}\\
 \textbf{More coordinates}\\
 Although we may concentrate on ordered pairs, it is possible to work with ordered triples, ordered quadruples, and so on. These might be used to 
 talk about truth sets for statements containing three or more free variables.
@@ -2412,7 +2420,26 @@ notation is $(a,c)\in S\circ R$.\\
 (next page)\newpage
 \noindent\textbf{Properties}
 \begin{theorem}
+Suppose $R$ is a relation from $A$ to $B$. Then $(R^{-1})^{-1}=R$.
 \end{theorem}
+\begin{proof}
+First of all, note that $R^{-1}$ is a relation from $B$ to $A$, so $(R^{-1})^{-1}$ is a relation from $A$ to $B$, just like $R$. To see that $(R^{-1})^{-1}=R$, let
+$(a,b)$ be an arbitrary ordered pair in $A\times B$. Then
+\begin{equation*}
+(a,b)\in(R^{-1})^{-1}\text{ iff }(b,a)\in R^{-1}\text{ iff }(a,b)\in R\qedhere
+\end{equation*}
+\end{proof}
+\noindent The statement we are trying to prove means $\forall p(p\in(R^{-1})^{-1}\leftrightarrow p\in R)$. We introduce an arbitrary ordered pair and prove the equivalence.
+\begin{theorem}
+Suppose $R$ is a relation from $A$ to $B$. Then $\text{Dom}(R^{-1})=\text{Ran}(R)$.
+\end{theorem}
+\begin{proof}
+First note that $\text{Dom}(R^{-1})$ and $\text{Ran}(R)$ are both subsets of $B$. Now let $b$ be an arbitrary element of $B$. Then 
+\begin{align*}
+b\in\text{Dom}(R^{-1})&\text{ iff }\exists a\in A((b,a)\in R^{-1})\\
+&\text{ iff }\exists a\in A((a,b)\in R)\text{ iff }b\in\text{Ran}(R)\qedhere
+\end{align*}
+\end{proof}
 
 
 
