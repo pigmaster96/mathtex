@@ -2454,8 +2454,19 @@ a\in\text{Ran}(R^{-1})&\text{ iff }\exists b((b,a)\in R^{-1})\\
 Suppose $R$ is a relation from $A$ to $B$, $S$ is a relation from $B$ to $C$, and $T$ is a relation from $C$ to $D$. Then $T\circ(S\circ R)=(T\circ S)\circ R$.
 \end{theorem}
 \begin{proof}
-
+Clearly $T\circ(S\circ R)$ and $(T\circ S)\circ R$ are both relations from $A$ to $D$. Let $(a,d)$ be an arbitrary element of $A\times D$.\\
+\indent First, suppose $(a,d)\in T\circ(S\circ R)$. By the definition of composition, this means that we can choose some $c\in C$ such that $(a,c)\in S\circ R$ and $(c,d)\in T$.
+Since $(a,c)\in S\circ R$, we can again use the definition of composition and choose some $b\in B$ such that $(a,b)\in R$ and $(b,c)\in S$. Now since $(b,c)\in S$ and $(c,d)\in T$, we can conclude
+that $(b,d)\in T\circ S$. Similarly, since $(a,b)\in R$ and $(b,d)\in T\circ S$ it follows that
+$(a,d)\in(T\circ S)\circ R$.\\
+\indent Now suppose $(a,d)\in(T\circ S)\circ R$. We can choose some $b\in B$ such that $(a,b)\in R$ and $(b,d)\in T\circ S$. Again we can declare some $c\in C$ such that $(b,c)\in S$, $(c,d)\in T$.
+Now since $(b,c)\in S$ and $(a,b)\in R$, $(a,c)\in S\circ R$. Since $(c,d)\in T$, $(a,d)\in T\circ(S\circ R)$.
 \end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+\end{theorem}
+
+
 
 
 
