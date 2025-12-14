@@ -2568,10 +2568,26 @@ this means $(y,x)\in R$, so $yRx$. Thus $\forall x\in A\forall y\in A(xRy\to yRx
 \end{proof}
 \noindent(next page)\newpage
 \begin{theorem}
-Suppose $R$ is a relation on set $A$. $R$ is transistive iff $R\circ R\subseteq R$.
+Suppose $R$ is a relation on set $A$. $R$ is transitive iff $R\circ R\subseteq R$.
 \end{theorem}
 \begin{proof}
+($\rightarrow$) Suppose $R$ is transitive. Now let $(a,b)$ be an arbitrary element of $R\circ R$. By the definition of the composition, we can declare some $c\in A$ such that $(a,c)\in R$ and 
+$(c,b)\in R$. Since $R$ is transitive, $(a,b)\in R$. Since $(a,b)$ was arbitrary, $R\circ R\subseteq R$.\\
+\indent ($\leftarrow$) Suppose $R\circ R\subseteq R$. Let $x,y,z$ be arbitrary elements of $A$. Suppose $(xRy\land yRz)$, then by the definition of the composition $(x,z)\in R$. Since $x,y,z$ were
+arbitrary, $\forall x\in A\forall y\in A\forall z\in A((xRy\land yRz)\to xRz)$, meaning $R$ is transitive.
 \end{proof}
+\noindent To summarise
+\begin{theorem}
+Suppose $R$ is a relation on set $A$. 
+\begin{enumerate}
+\item $R$ is reflexive iff $i_A\subseteq R$, where $i_A$ is the identity relation on $A$
+\item $R$ is symmetric iff $R=R^{-1}$
+\item $R$ is transitive iff $R\circ R\subseteq R$
+\end{enumerate}
+\end{theorem}
+\newpage
+
+\section{Ordering relations}
 
 
 
