@@ -2521,7 +2521,8 @@ S=\{(&x,y)\in B\times B|x\subseteq y\}\\
 \end{align*}
 Then $S$ is a relation on $B$.
 \item Suppose $A$ is a set. Let $i_A=\{(x,y)\in A\times A|x=y\}$. Then $i_A$ is a relation on $A$
-(called the \textit{identity relation} on $A$.) For instance if $A=\{1,2,3\}$, then $i_A=\{(1,1),(2,2),(3,3)\}$.
+(called the \textit{identity relation} on $A$.) For instance if $A=\{1,2,3\}$, then $i_A=\{(1,1),(2,2),(3,3)\}$. Note that $i_A$ could also be defined
+by writing $i_A=\{(x,x)|x\in A\}$.
 \item For each positive real number $r$, let $D_r=\{(x,y)\in\mathbb R\times\mathbb R|x$ and $y$ differ by less than $r$, or in other words $|x-y|<r\}$. Then $D_r$ is a relation on $\mathbb R$.
 \end{enumerate}
 Suppose $R$ is a relation on set $A$. If we used the method described earlier to draw a picture of $R$, we would be drawing two copies of $A$ with
@@ -2536,11 +2537,38 @@ by saying that $S$ is \textit{reflexive}.\\
 (next page)\newpage
 \definition Suppose $R$ is a relation on $A$. 
 \begin{enumerate}
-
-
+\item $R$ is said to be \textit{reflexive} on $A$ (or just \textit{reflexive}, if $A$ is clear from context) if $\forall x\in A(xRx)$, or in other words $\forall x\in A((x,x)\in R)$.
+\item $R$ is \textit{symmetric} if $\forall x\in A\forall y\in A(xRy\to yRx)$.
+\item $R$ is \textit{transitive} if $\forall x\in A\forall y\in A\forall z\in A((xRy\land yRz)\to xRz)$.
 \end{enumerate}
-
-
+\textbf{Intuition}\\
+If $R$ were reflexive on $A$, then the directed graph representing $R$ would have loops at all vertices. If $R$ were symmetric, then whenever there is an edge from $x$ to $y$, there will also be an
+edge from $y$ to $x$. If $R$ were transitive, then whenever there was an edge from $x$ to $y$ and $y$ to $z$, there would also be an edge from $x$ to $z$.\\
+\vspace{1mm}\\
+\textbf{Properties}
+\begin{theorem}
+Suppose $R$ is a relation on set $A$. $R$ is reflexive iff $i_A\subseteq R$, where
+$i_A$ is the identity relation on $A$.
+\end{theorem}
+\begin{proof}
+($\rightarrow$) Suppose $R$ is reflexive, let $(a,b)$ be an arbitrary element of $i_A$. Then by the definition of $i_A$, $(a,b)\in\{(x,y)\in A\times A|x=y\}$, so $a=b\in A$. Since $R$ is reflexive,
+meaning $\forall x\in A((x,x)\in R)$, $(a,b)=(a,a)\in R$. Since $(a,b)$ is arbitrary, $i_A\subseteq R$.\\
+\indent ($\leftarrow$) Suppose $i_A\subseteq R$. Let $x$ be an arbitrary element of $A$. Then $(x,x)\in i_A$, and since $i_A\subseteq R$, $(x,x)\in R$. Since $x$ was an arbitrary element of $A$, 
+$\forall x\in A((x,x)\in R)$, meaning $R$ is reflexive.
+\end{proof}
+\begin{theorem}
+Suppose $R$ is a relation on set $A$. $R$ is symmetric iff $R=R^{-1}$.
+\end{theorem}
+\begin{proof}
+($\rightarrow$) Suppose $R$ is symmetric. Let $(x,y)$ be an arbitrary element of $R$. Then $xRy$, so since $R$ is symmetric, $yRx$. Thus, $(y,x)\in R$, so by the definition of $R^{-1}$, 
+$(x,y)\in R^{-1}$. Since $(x,y)$ was arbitrary, it follows that $R\subseteq R^{-1}$.\\
+\indent Now suppose $(x,y)\in R^{-1}$. Then $(y,x)\in R$, so since $R$ is symmetric, $(x,y)\in R$. Thus $R^{-1}\subseteq R$, so $R=R^{-1}$.\\
+\indent($\leftarrow$) Suppose $R=R^{-1}$, and let $x$ and $y$ be arbitrary elements of $A$. Suppose $xRy$. Then $(x,y)\in R$, so since $R=R^{-1}$, $(x,y)\in R^{-1}$. By the definition of $R^{-1}$
+this means $(y,x)\in R$, so $yRx$. Thus $\forall x\in A\forall y\in A(xRy\to yRx)$, so $R$ is symmetric.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+\end{theorem}
 
 
 
