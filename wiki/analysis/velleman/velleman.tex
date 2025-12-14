@@ -2467,8 +2467,80 @@ Now since $(b,c)\in S$ and $(a,b)\in R$, $(a,c)\in S\circ R$. Since $(c,d)\in T$
 Suppose $R$ is a relation from $A$ to $B$, and $S$ is a relation from $B$ to $C$. Then $(S\circ R)^{-1}=R^{-1}\circ S^{-1}$.
 \end{theorem}
 \begin{proof}
-$(S\circ R)^{-1}$ and $R^{-1}\circ S^{-1}$ are both relations from 
+$(S\circ R)^{-1}$ and $R^{-1}\circ S^{-1}$ are both relations from $C$ to $A$. Let $(c,a)$ be an arbitrary element of $C\times A$.\\
+\indent First suppose $(c,a)\in(S\circ R)^{-1}$. Then $(a,c)\in S\circ R$ and we can choose some $b$ such that $(a,b)\in R$ and $(b,c)\in S$. We can then say that $(b,a)\in R^{-1}$ and 
+$(c,b)\in S^{-1}$, and $(c,a)\in R^{-1}\circ S^{-1}$.\\
+\indent Now suppose $(c,a)\in R^{-1}\circ S^{-1}$. Then we can choose some $b$ such that $(c,b)\in S^{-1}$ and $(b,a)\in R^{-1}$, and so $(b,c)\in S$ and $(a,b)\in R$.
+We can then say that $(a,c)\in S\circ R$ and $(c,a)\in(S\circ R)^{-1}$. Thus $(S\circ R)^{-1}=R^{-1}\circ S^{-1}$.
 \end{proof}
+\noindent To summarise:
+\begin{theorem}
+Suppose $R$ is a relation from $A$ to $B$, $S$ is a relation from $B$ to $C$, and $T$ is a relation from $C$ to $D$. Then:
+\begin{enumerate}
+\item$(R^{-1})^{-1}=R$
+\item$\text{Dom}(R^{-1})=\text{Ran}(R)$
+\item$\text{Ran}(R^{-1})=\text{Dom}(R)$
+\item$T\circ(S\circ R)=(T\circ S)\circ R$
+\item$(S\circ R)^{-1}=R^{-1}\circ S^{-1}$
+\end{enumerate}
+\end{theorem}
+\newpage
+
+\subsection{Alternate notation and visual representation}
+\textbf{Alternate notation}\\
+If $R$ is a relation from $A$ to $B$, $x\in A$, and $y\in B$, the notation $xRy$ is sometimes written to mean $(x,y)\in R$.\\
+\vspace{1mm}\\
+For instance, the definition of composition of relations, rewritten in this notation, looks like
+$S\circ R=\{(a,c)\in A\times C|\exists b\in B(aRb\land bSc)\}$, where $R$ is a relation from $A$
+to $B$ and $S$ is a relation from $B$ to $C$.\\
+\vspace{1mm}\\
+\textbf{Visual representation}\\
+Another way to think about relations is to draw pictures of them. Consider a visual representation of the relation $R=\{(1,3),(1,5),(3,3)\}$ from the set $A=\{1,2,3\}$ to the set 
+$B=\{3,4,5\}$:
+\begin{center}
+\includegraphics[width=8cm]{1}
+\end{center}
+Each of these sets is represented by an oval, with the elements of the set represented by dots inside the oval. Each ordered pair $(a,b)\in R$ is represented by an arrow from the dot representing 
+$a$ to the dot representing $b$.\\
+\vspace{1mm}\\
+In general, any relation $R$ from set $A$ to set $B$ can be represented by such a picture. The dots representing the elements of $A$ and $B$ are called
+\textit{vertices}, and the arrows representing the ordered pairs in $R$ are called \textit{edges}. 
+It doesn't matter exactly how the vertices representing elements of $A$ and $B$ are arranged on the page; what's important is that the edges correspond precisely to the ordered pairs in $R$.\\
+\vspace{1mm}\\
+One should be able to convince oneself that the domain of $R$ can be found by locating the vertices in $A$ that have edges pointing away from them. Similarly the range of $R$ would consist
+of those elements of $B$ whose vertices have edges pointing toward them. A picture of $R^{-1}$ would look just like a picture of $R$ but with the directions of all the arrows reversed.
+\newpage
+
+\subsection{Binary relations}
+A relation $R$ from $A$ to $A$ is called a \textit{relation on} $A$ (or a \textit{binary relation on} $A$). Relations of this type come up often, for example:
+\begin{enumerate}
+\item Let $A=\{1,2\}$ and $B=\mathscr P(A)=\{\emptyset,\{1\},\{2\},\{1,2\}\}$. If we had
+\begin{align*}
+S=\{(&x,y)\in B\times B|x\subseteq y\}\\
+=\{(&\emptyset,\emptyset),(\emptyset,\{1\}),(\emptyset,\{2\}),(\emptyset,\{1,2\}),(\{1\},\{1\}),(\{1\},\{1,2\}),\\&(\{2\},\{2\}),(\{2\},\{1,2\}),(\{1,2\},\{1,2\})\}
+\end{align*}
+Then $S$ is a relation on $B$.
+\item Suppose $A$ is a set. Let $i_A=\{(x,y)\in A\times A|x=y\}$. Then $i_A$ is a relation on $A$
+(called the \textit{identity relation} on $A$.) For instance if $A=\{1,2,3\}$, then $i_A=\{(1,1),(2,2),(3,3)\}$.
+\item For each positive real number $r$, let $D_r=\{(x,y)\in\mathbb R\times\mathbb R|x$ and $y$ differ by less than $r$, or in other words $|x-y|<r\}$. Then $D_r$ is a relation on $\mathbb R$.
+\end{enumerate}
+Suppose $R$ is a relation on set $A$. If we used the method described earlier to draw a picture of $R$, we would be drawing two copies of $A$ with
+edges representing each ordered pair in $R$. An easier way to draw the picture would be to draw
+just one copy of $A$ and then connect the vertices represening the elements of $A$ with edges to represent the ordered pairs in $R$; for instance the first example looks like
+\begin{center}
+\includegraphics[width=7cm]{2}
+\end{center}
+Pictures like this one are called \textit{directed graphs}. Note that in this directed graph there is an edge from $\emptyset$ to itself, because $(\emptyset,\emptyset)\in S$. Edges such as this one
+that go from a vertex to itself are called \textit{loops}. In fact in this case there is a loop at every vertex---$S$ has the property that $\forall x\in B((x,x)\in S)$. We describe this situation
+by saying that $S$ is \textit{reflexive}.\\
+(next page)\newpage
+\definition Suppose $R$ is a relation on $A$. 
+\begin{enumerate}
+
+
+\end{enumerate}
+
+
 
 
 
