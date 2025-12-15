@@ -2588,6 +2588,39 @@ Suppose $R$ is a relation on set $A$.
 \newpage
 
 \section{Ordering relations}
+\begin{definition}
+Suppose $R$ is a relation on set $A$. Then $R$ is said to be \textit{antisymmetric} if $\forall x\in A\forall y\in A((xRy\land yRx)\to x=y)$.
+\end{definition}
+\noindent\textbf{Intuition and examples}\\
+For a first example, consider the relation $L=\{(x,y)\in\mathbb R\times\mathbb R|x\leq y\}$. This relation is clearly reflexive and transitive, but not symmetric. Notice further that it fails
+to be symmetric in a rather extreme way because there are many pairs $(x,y)$ such that $xLy$ is true but $yLx$ is false. In fact, the only way $xLy$ and $yLx$ can both be true is if
+$x\leq y$ and $y\leq x$, and thus $x=y$. We therefore say that $L$ is \textit{antisymmetric}.\\
+\vspace{1mm}\\
+For another example, let $A=\{1,2\},B=\mathscr P(A)$, and $S=\{(x,y)\in B\times B|x\subseteq y\}$.
+If $x$ and $y$ are elements of $B$, then $xSy$ means $x\subseteq y$. $S$ is reflexive and transitive, but not symmetric. In fact, $S$ is also antisymmetric, because for any sets
+$x$ and $y$, if $x\subseteq y$ and $y\subseteq x$ then $x=y$.\\
+\vspace{1mm}\\
+See that both of these relations specifies an \textit{order} $x$ and $y$ come in (in the sense that if $(x,y)$ is present in the relation, then $(y,x)$ will not be present unless $y=x$). This
+motivates the next definition.
+\begin{definition}
+Suppose $R$ is a relation on set $A$. Then $R$ is called a \textit{partial order on} $A$ (or just a \textit{partial order} if $A$ is clear from context) if it is reflexive, transitive, 
+and antisymmetric. It is called a \textit{total order on} $A$ (or just a \textit{total order}) if it is a partial order, and in addition has the following property:
+\begin{equation*}
+\forall x\in A\forall y\in A(xRy\lor yRx)
+\end{equation*}
+\end{definition}
+\noindent\textbf{Intuition}\\
+Both $L$ and $S$ (the two examples above) are partial orders. $S$ is not a total order, because it is not true that $\forall x\in B\forall y\in B(x\subseteq y\lor y\subseteq x)$; although we can
+think of the relation $S$ as specifying an order between elements, it does not give us a way of
+comparing \textit{every} pair of elements of $B$---for some pairs (such as $\{1\}$ and $\{2\}$), $S$ doesn't pick out either one as being `at least as large' as the other---this is the sense in
+which the ordering is \textit{partial}.\\
+\vspace{1mm}\\
+On the other hand, $L$ is a total order, because if $x$ and $y$ are any two real numbers, then either $x\leq y$ or $y\leq x$. $L$ gives us a way of comparing \textit{any} two real numbers.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Consider the relation $G=\{(x,y)\in\mathbb R\times\mathbb R|x\geq y\}$. One should be able to check that $G$ is a total order.
+
+
 
 
 
