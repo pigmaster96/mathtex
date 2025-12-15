@@ -2616,9 +2616,46 @@ comparing \textit{every} pair of elements of $B$---for some pairs (such as $\{1\
 which the ordering is \textit{partial}.\\
 \vspace{1mm}\\
 On the other hand, $L$ is a total order, because if $x$ and $y$ are any two real numbers, then either $x\leq y$ or $y\leq x$. $L$ gives us a way of comparing \textit{any} two real numbers.\\
-(next page)\newpage
+\vspace{1mm}\\
 \noindent\textbf{Example}\\
-Consider the relation $G=\{(x,y)\in\mathbb R\times\mathbb R|x\geq y\}$. One should be able to check that $G$ is a total order.
+Consider the relation $G=\{(x,y)\in\mathbb R\times\mathbb R|x\geq y\}$. One should be able to check that $G$ is a total order. Notice that in this case the order goes in the other way---the
+definition of partial order, though motivated by thinking about orderings that go in one direction, actually applies to orderings in either direction.
+\newpage
+
+\subsection{Smallest and minimal element}
+\begin{definition}
+Suppose $R$ is a partial order on a set $A$, $B\subseteq A$, and $b\in B$. Then $b$ is called an $R$-\textit{smallest} element of $B$ (or just a \textit{smallest} element if $R$ is clear
+from context) if $\forall x\in B(bRx)$. It is called the $R$-\textit{minimal} element (or just a \textit{minimal} element) if $\neg\exists x\in B(xRb\land x\neq b)$.
+\end{definition}
+\noindent\textbf{Example}\\
+Let $A$ be the set of words in english, and let $R=\{(x,y)\in A\times A|$ all the letters in the word $x$ appear, consecutively, and in the right order, in the word $y\}$. For example,
+(can, cannot), (tar, start), and (ball, ball) are all elements of $R$, but (can, anchor) and (can, carnival) are not.\\
+\vspace{1mm}\\
+One can check that $R$ is reflexive, transitive, and antisymmetric, so $R$ is a partial order. Now consider the set $B=\{$me, men, tame, mental$\}\subseteq A$. If we think of $xRy$ as meaning that
+$y$ is in some sense at least as large as $x$, then we could say that the word \textit{me} is the \textit{smallest} element of $B$, in the sense that a relation exists between all other elements and it, 
+and in each relation it is deemed to be `smaller'.\\
+\vspace{1mm}\\
+Now consider the set $C=\{$a, me, men, tame, mental$\}\subseteq A$. Each of the words \textit{men, tame,} and \textit{mental} is `larger' than at least one word in the set, but neither \textit{a}
+nor \textit{me} is larger than anything else in the set; they are \textit{minimal} elements of $C$---neither can be determined to be the \textit{smallest} element of $C$ since the relation 
+doesn't contain an ordered pair with both \textit{me} and \textit{a}, but they are `smaller' than everything else that they can be compared to.\\
+\vspace{1mm}\\
+\textbf{Another example}\\
+Let $S=\{(X,Y)\in\mathscr P(\mathbb N)\times\mathscr P(\mathbb N)|X\subseteq Y\}$, which is a partial order on the set $\mathscr P(\mathbb N)$. Let $\mathcal F=\{X\in\mathscr P(\mathbb N)|2\in X
+\text{ and }3\in X\}$. Does $\mathcal F$ have any $S$-smallest or $S$-minimal elements?\\
+\vspace{1mm}\\
+The set $\{2,3\}$ is a smallest element of $\mathcal F$, since 2 and 3 are elements of every set in $\mathcal F$, and therefore $\forall X\in\mathcal F(\{2,3\}\subseteq X)$. It is also a minimal
+element, since no other element of $\mathcal F$ is a subset of it.\\
+\vspace{1mm}\\
+Now consider the set $\mathcal G=\{X\in\mathscr P(\mathbb N)|2\in X\text{ or }3\in X\}$.\\
+\vspace{1mm}\\
+The set $\mathcal G$ has two minimal elements, $\{2\}$ and $\{3\}$. Every other set in $\mathcal G$ must contain one of these two as a subset. Neither set is smallest, since neither is a subset of 
+the other.\\
+(next page)
+\newpage
+\noindent\textbf{Properties}
+\begin{theorem}
+\end{theorem}
+
 
 
 
