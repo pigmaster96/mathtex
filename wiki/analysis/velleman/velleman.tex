@@ -2729,7 +2729,22 @@ We say that $b$ is the \textit{largest} element of $B$ if $\forall x\in B(xRb)$,
 \textit{maximal} element of $B$ if $\neg\exists x\in B(bRx\land b\neq x)$.
 \newpage
 
-\subsection{}
+\subsection{Upper and lower bounds}
+\begin{definition}
+Suppose $R$ is a partial order on $A$, $B\subseteq A$, and $a\in A$. Then $a$ is called a \textit{lower bound} for $B$ if $\forall x\in B(aRx)$. Similarly, it is an \textit{upper bound} for $B$ if
+$\forall x\in B(xRa)$.
+\end{definition}
+\noindent Note that a lower bound for $B$ need not be an element of $B$. This is the only difference between lower bounds and smallest elements. A smallest element of $B$ is just a lower bound that
+is also an element of $B$.
+\begin{definition}
+Suppose $R$ is a partial order on $A$ and $B\subseteq A$. Let $U$ be the set of all upper bounds for $B$, and let $L$ be the set of all lower bounds. If $U$ has a smallest element, then
+this smallest element is called the \textit{least upper bound} of $B$. If $L$ has a largest element, then this largest element is called the \textit{greatest lower bound} of $B$. The phrases
+\textit{least upper bound} and \textit{greatest lower bound} are sometimes abbreviated as
+\textit{l.u.b} and \textit{g.l.b}.
+\end{definition}
+
+
+
 
 
 

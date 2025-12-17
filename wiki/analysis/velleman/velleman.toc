@@ -56,7 +56,7 @@
 \contentsline {subsection}{\numberline {3.2.3}Binary relations}{74}{}%
 \contentsline {section}{\numberline {3.3}Ordering relations}{77}{}%
 \contentsline {subsection}{\numberline {3.3.1}Smallest and minimal element}{78}{}%
-\contentsline {subsection}{\numberline {3.3.2}}{82}{}%
+\contentsline {subsection}{\numberline {3.3.2}Upper and lower bounds}{82}{}%
 \contentsline {chapter}{\numberline {A}Exercises}{83}{}%
 \contentsline {section}{\numberline {A.1}Ch 3}{83}{}%
 \contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{83}{}%
