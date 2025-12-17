@@ -2710,6 +2710,29 @@ Suppose $R$ is a partial order on set $A$, and $B\subseteq A$.
 \item If $R$ is total order and $b$ is a minimal element of $B$, then $b$ is the smallest element of $B$.
 \end{enumerate}
 \end{theorem}
+\noindent(next page)\newpage
+\noindent\textbf{Application}\\
+When comparing subsets of some set $A$, mathematicians often use the partial order $S=\{(X,Y)\in\mathscr P(A)\times\mathscr P(A)|X\subseteq Y\}$, although this is not always made explicit.\\
+\vspace{1mm}\\
+In this case, if $\mathcal F\subseteq\mathscr P(A)$ and $X\in\mathcal F$, then $X$ is the $S$-smallest element of $F$ iff $\forall Y\in\mathcal F(X\subseteq Y)$---to say that an element of
+$\mathcal F$ is the smallest element means that it is a subset of every element of $\mathcal F$. Similarly, mathematicians sometimes talk of a set being the smallest one with a certain
+property. Generally this means that the set has the property in question, ant furthermore that it is a subset of every set that has the property.\\
+\vspace{1mm}\\
+\textbf{Example}\\
+Say we want to find the smallest set of real numbers $X$ such that $5\in X$ and for all real numbers $x$ and $y$, if $x\in X$ and $x<y$ then $y\in X$.\\
+\vspace{1mm}\\
+Another way to phrase this question would be to say that we are looking for the smallest element of the family of sets $\mathcal F=\{X\subseteq\mathbb R|5\in X$ and 
+$\forall x\forall y((x\in X\land x<y)\to y\in X)$\}. In particular since $5\in X$ we can say that $\forall y(5<y\to y\in X)$. See that $A=\{y\in R|5\leq y\}$ is the smallest element of $\mathcal F$.\\\vspace{1mm}\\
+\textbf{Maximal and largest elements}\\
+Following a similar principle, suppose $R$ is a partial order on $A$, $B\subseteq A$, and $b\in B$.
+We say that $b$ is the \textit{largest} element of $B$ if $\forall x\in B(xRb)$, and it is a
+\textit{maximal} element of $B$ if $\neg\exists x\in B(bRx\land b\neq x)$.
+\newpage
+
+\subsection{}
+
+
+
 
 
 
