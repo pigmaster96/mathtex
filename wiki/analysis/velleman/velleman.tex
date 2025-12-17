@@ -2654,13 +2654,40 @@ the other.\\
 \newpage
 \noindent\textbf{Properties}
 \begin{theorem}
+If $B$ has a smallest element, then this smallest element is unique. Thus we can speak of \textbf{the} smallest element of $B$ rather than \textbf{a} smallest element.
 \end{theorem}
-
-
-
-
-
-
+\begin{proof}
+Suppose $b$ is a smallest element of $B$, and suppose $c$ is also a smallest element of $B$. Since $b$ is a smallest element, $\forall x\in B(bRx)$, so in particular $bRc$. Similarly,
+since $c$ is a smallest element, $cRb$. But now since $R$ is a partial order, it must be antisymmetric, so from $bRc$ and $cRb$ we can conclude $b=c$.
+\end{proof}
+\noindent We want to show ($B$ has a smallest element)$\to$(this smallest element is unique).
+This translates to $\exists b\in B(\forall x\in B(bRx))\to\forall c\in B(\forall x\in B(cRx)\to b=c)$. The proof proceeds as expected, then we use antisymmetry to complete it.
+\begin{theorem}
+Suppose $b$ is the smallest element of $B$. Then $b$ is also a minimal element of $B$, and it is the only minimal element. 
+\end{theorem}
+\begin{proof}
+Let $x$ be an arbitrary element of $B$ and suppose that $xRb$. Since $b$ is the smallest element of $B$, so we must have $bRx$, and now by antisymmetry it follows that $x=b$. Thus there can be no 
+$x\in B$ such that $xRb$ and $x\neq b$, so $b$ is a minimal element.\\
+\indent To see that it is the only one, suppose $c$ is also a minimal element. Since $b$ is the smallest element of $B$, $bRc$. But then since $c$ is minimal we must have $b=c$. Thus $b$ is the only
+minimal element of $B$.
+\end{proof}
+\noindent Given that $b$ is the smallest element of $B$, we want to show ($b$ is a minimal element of $B$)$\land$(it is the only minimal element). This can be rewritten as
+\begin{equation*}
+\neg\exists x\in B(xRb\land x\neq b)\land\forall c\in B(\neg\exists x\in B(xRc\land x\neq c)\to c=b)
+\end{equation*}
+The key here is to simplify $\neg\exists x\in B(xRb\land x\neq b)$:
+\begin{align*}
+\neg\exists x\in B(xRb\land x\neq b)&\leftrightarrow \forall x\in B\neg(xRb\land x\neq b)\\
+&\leftrightarrow\forall x\in B(xRb\to x=b)
+\end{align*}
+and so our goal now looks like
+\begin{equation*}
+\forall x\in B(xRb\to x=b)\land\forall c\in B(\forall x\in B(xRc\to x=c)\to c=b)
+\end{equation*}
+Both goals are now fairly straightforward, the first goal can be completed using antisymmetry. 
+(next page)\newpage
+\begin{theorem}
+\end{theorem}
 
 
 
