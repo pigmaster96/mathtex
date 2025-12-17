@@ -2684,9 +2684,31 @@ and so our goal now looks like
 \begin{equation*}
 \forall x\in B(xRb\to x=b)\land\forall c\in B(\forall x\in B(xRc\to x=c)\to c=b)
 \end{equation*}
-Both goals are now fairly straightforward, the first goal can be completed using antisymmetry. 
+Both goals are now fairly straightforward, the first goal can be completed using antisymmetry.\\
 (next page)\newpage
 \begin{theorem}
+Suppose $B\subseteq A$. If $R$ is a total order on $A$ and $b$ is a minimal element of $B$, then $b$ is the smallest element of $B$. 
+\end{theorem}
+\begin{proof}
+Suppose $R$ is a total order and $b$ is a minimal element of $B$. Let $x$ be an arbitrary element of $B$. If $x=b$, then since $R$ is reflexive, $bRx$. Now suppose $x\neq b$; since $R$ is a total
+order, we know that either $xRb$ or $bRx$. However since $b$ is minimal, $xRb$ cannot be true. Thus
+$bRx$ must be true. Since $x$ was arbitrary, we can conclude that $\forall x\in B(bRx)$, so $b$ is the smallest element of $B$.
+\end{proof}
+\noindent The proof in the book wants to use a disjunctive syllogism involving the total order property, since we have $xRb\lor bRx$, to show $bRx$ 
+(since $xRb\lor bRx\leftrightarrow\neg xRb\to bRx$). They do this by using proof by cases $x=b$ and $x\neq b$. The first case is straightforward using reflexivity, and the second
+uses the disjunctive syllogism, using the minimal property to show $\neg xRb$ and combining that with the total order property to show $bRx$.\\
+\vspace{1mm}\\
+(I felt that it might be more straightforward to immediately use the total order property to show 
+$xRb\lor bRx$, then go from there using proof by cases.)\\
+\vspace{1mm}\\
+To summarise
+\begin{theorem}
+Suppose $R$ is a partial order on set $A$, and $B\subseteq A$.
+\begin{enumerate}
+\item If $B$ has a smallest element, then this smallest element is unique. Thus we can speak of \textbf{the} smallest element of $B$ rather than \textbf{a} smallest element.
+\item Suppose $b$ is the smallest element of $B$. Then $b$ is also a minimal element of $B$, and it is the only minimal element. 
+\item If $R$ is total order and $b$ is a minimal element of $B$, then $b$ is the smallest element of $B$.
+\end{enumerate}
 \end{theorem}
 
 
