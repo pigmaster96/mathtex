@@ -2743,13 +2743,35 @@ this smallest element is called the \textit{least upper bound} of $B$. If $L$ ha
 \textit{l.u.b} and \textit{g.l.b}.
 \end{definition}
 \begin{theorem}
-Suppose $A$ is a set, $\mathcal F\subseteq\mathscr P(A)$, and $\mathcal F\neq\emptyset$. Then the least upper bound of $\mathcal F$ (in the subset partial order) is $\bigcup\mathcal F$ and the
-greatest lower bound of $\mathcal F$ is $\bigcap\mathcal F$.
+Suppose $A$ is a set, $\mathcal F\subseteq\mathscr P(A)$, and $\mathcal F\neq\emptyset$. Then the least upper bound of $\mathcal F$ (in the subset partial order) is $\bigcup\mathcal F$.
 \end{theorem}
-
-
-
-
+\begin{proof}
+(my proof) First we show that $\bigcup\mathcal F$ is an upper bound. Let $x$ be an arbitrary of $\mathcal F$. Let $y$ be an arbitrary element of $x$. Since $y\in x\in \mathcal F$, then 
+$y\in\bigcup F$. Since $y$ was an arbitrary element of $x$, then $x\subseteq\bigcup\mathcal F$. Since $x$ was arbitrary, $\forall x\in\mathcal F(x\subseteq\bigcup\mathcal F)$, and 
+$\bigcup\mathcal F$ is an upper bound.\\
+\indent Now we show that $\bigcup\mathcal F$ is the least upper bound. Let $x$ be an arbitrary element of $\mathscr P(A)$; suppose $x$ is in the set of upper bounds. Suppose $y$ is an arbitrary 
+element of $\bigcup\mathcal F$; then we can declare some $B$ such that $B\in\mathcal F$ and $y\in B$. Since $x$ is in the set of upper bounds, $B\subseteq x$, and so $y\in x$. Since $y$ was 
+arbitrary, $\bigcup\mathcal F\subseteq x$. Since $x$ was arbitrary, $\bigcup\mathcal F$ is the least upper bound.
+\end{proof}
+\noindent The idea here was to prove ($\bigcup\mathcal F$ is an upper bound)$\land$($\bigcup\mathcal F$ is smaller than all the elements in the set of upper bounds (the smallest upper bound)). 
+This translated to
+\begin{equation*}
+\forall x\in\mathcal F(xR\bigcup\mathcal F)\land\forall x\in\{X\in\mathscr P(A)|\forall x\in\mathcal F(xRX)\}(\bigcup\mathcal FRx)
+\end{equation*}
+where the second term can be rewritten as
+\begin{equation*}
+\forall x\in\mathscr P(A)(\forall y\in\mathcal F(yRx)\to\bigcup\mathcal FRx)
+\end{equation*}
+and the subset partial order is defined as
+\begin{equation*}
+R=\{(X,Y)\in\mathscr P(A)\times\mathscr P(A)|X\subseteq Y\}
+\end{equation*}
+It is also assumed that $\bigcup\mathcal F\in\mathscr P(A)$. Although this would be fairly straightforward to prove.\\
+(next page)\newpage
+\begin{theorem}
+Suppose $A$ is a set, $\mathcal F\subseteq\mathscr P(A)$, and $\mathcal F\neq\emptyset$. Then the
+greatest lower bound of $\mathcal F$ (in the subset partial order) is $\bigcap\mathcal F$.
+\end{theorem}
 
 
 
