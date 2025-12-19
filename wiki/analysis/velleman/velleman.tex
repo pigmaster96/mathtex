@@ -2787,7 +2787,42 @@ arbitrary, all elements within the set of lower bounds is a subset of $\bigcap\m
 Where the second term can be rewritten in a manner similar to that in the previous proof.
 \newpage
 
-\section{}
+\section{Equivalence relations}
+\begin{definition}
+Suppose $R$ is a relation on set $A$. Then $R$ is called an \textit{equivalence relation on} $A$.
+(or just an \textit{equivalence relation} if $A$ is clear from context) if it is reflexive, symmetric, and transitive.
+\end{definition}
+\noindent\textbf{Intuition and examples}\\
+For instance, let $T$ be the set of all triangles, and let $C$ be the relation $C=\{(s,t)\in T\times T|$ the triangle $s$ is congruent to the triangle $t\}$ (a triangle is congruent
+to another if it can be moved without distorting it so that it coincides with the other). Clearly every triangle is congruent to itself, so $C$ is reflexive. If triangle $s$ is congruent to 
+triangle $t$, then $t$ is congruent to $s$, so $C$ is symmetric; if $r$ is congruent to $s$, and $s$ is congruent to $t$, then $r$ is congruent to $t$, so $C$ is transitive. 
+Thus $C$ is an equivalence relation on $T$.\\
+\vspace{1mm}\\
+For another example, let $P$ be the set of all people, and let $B=\{(p,q)\in P\times P|$ the person $p$ has the same birthday as the person $q\}$. (By `same birthday' we mean same month and day,
+but not necessarily the same year.) It is straightforward to see that this relation is reflexive, symmetric, and transitive---$B$ is an equivalence relation.\\
+\vspace{1mm}\\
+Consider $B$ more closely, we can think of this relation as splitting the set $P$ of all people into 366 categories, one for each possible birthday (taking into account Feb 29th on leap years).
+An ordered pair of people will only be an element of $B$ if they both come from the same category.
+They will not be an element of $B$ if both people came from different categories. As such we could think of these categories as forming a family of subsets of $P$, 
+which we could write as an indexed family as follows:\\
+\vspace{1mm}\\
+First let $D$ be the set of all possible birthdays $D=\{$Jan. 1, Jan. 2, Jan. 3, \ldots, Dec. 30, Dec. 31$\}$. 
+Then the family $\mathcal F=\{P_d|d\in D\}$ is an indexed family of subsets of $P$. The elements of $\mathcal F$ (each subset) are called \textit{equivalence classes} for the relation $B$, and 
+every person is an element of exactly one of these equivalence classes. The relation $B$ consists
+of those pairs $(p,q)\in P\times P$ such that the people $p$ and $q$ are in the same equivalence class:
+\begin{align*}
+B&=\{(p,q)\in P\times P|\exists d\in D(p\in P_d\text{ and }q\in P_d)\}\\
+&=\{(p,q)\in P\times P|\exists d\in D((p,q)\in P_d\times P_d)\}\\
+&=\bigcup_{d\in D}(P_d\times P_d)
+\end{align*}
+We will call the family $\mathcal F$ a \textit{partition} because it breaks the set $P$ into disjoint pieces.
+\newpage
+
+\subsection{}
+
+
+
+
 
 
 
