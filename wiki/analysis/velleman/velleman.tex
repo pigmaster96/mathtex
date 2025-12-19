@@ -2772,19 +2772,28 @@ It is also assumed that $\bigcup\mathcal F\in\mathscr P(A)$. Although this would
 Suppose $A$ is a set, $\mathcal F\subseteq\mathscr P(A)$, and $\mathcal F\neq\emptyset$. Then the
 greatest lower bound of $\mathcal F$ (in the subset partial order) is $\bigcap\mathcal F$.
 \end{theorem}
+\begin{proof}(my proof)
+First we show that $\bigcap\mathcal F$ is a lower bound. Let $x$ be an arbitrary element of $\mathcal F$. Suppose $y$ is an arbitrary element of $\bigcap\mathcal F$. Then $y\in x$; since $y$ is
+arbitrary, $\bigcap\mathcal F\subseteq x$. Since $x$ is an arbitrary element of $\mathcal F$, $\bigcap\mathcal F$ is a lower bound.\\
+\indent Now we show that $\bigcap\mathcal F$ is the greatest lower bound.
+Let $x$ be an arbitrary element of $\mathscr P(A)$. Suppose $x$ is within the set of lower bounds. Let $y$ be an arbitrary element of $x$. Since $x$ is a lower bound, 
+$\forall B\in\mathcal F(x\subseteq B)$, and since $y\in x$, $\forall B\in\mathcal F(y\in B)$, so $y\in\bigcap\mathcal F$. Since $y$ is arbitrary, $x\subseteq\bigcap\mathcal F$ since $x$ is
+arbitrary, all elements within the set of lower bounds is a subset of $\bigcap\mathcal F$, so $\bigcap\mathcal F$ is the greatest lower bound.
+\end{proof}
+\noindent I show ($\bigcap\mathcal F$ is a lower bound)$\land$($\bigcap\mathcal F$ is the greatest element in the set of lower bounds). This translates to
+\begin{equation*}
+\forall x\in\mathcal F(\bigcap\mathcal FRx)\land\forall x\in\{X\in\mathscr P(A)|\forall y\in\mathcal F(XRy)\}(xR\bigcap\mathcal F)
+\end{equation*}
+Where the second term can be rewritten in a manner similar to that in the previous proof.
+\newpage
 
+\section{}
 
 
 
 
 
 \newpage
-
-
-
-
-
-
 
 \appendix
 \chapter{Exercises}

@@ -57,8 +57,9 @@
 \contentsline {section}{\numberline {3.3}Ordering relations}{77}{}%
 \contentsline {subsection}{\numberline {3.3.1}Smallest and minimal element}{78}{}%
 \contentsline {subsection}{\numberline {3.3.2}Upper and lower bounds}{82}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{84}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{84}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{84}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{84}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{85}{}%
+\contentsline {section}{\numberline {3.4}}{84}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{85}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{85}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{85}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{85}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{86}{}%
