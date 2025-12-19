@@ -59,8 +59,8 @@
 \contentsline {subsection}{\numberline {3.3.2}Upper and lower bounds}{82}{}%
 \contentsline {section}{\numberline {3.4}Equivalence relations}{84}{}%
 \contentsline {subsection}{\numberline {3.4.1}More definitions}{85}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{86}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{86}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{86}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{86}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{87}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{87}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{87}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{87}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{87}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{88}{}%

@@ -2835,10 +2835,23 @@ No two sets of $\mathcal F$ have any elements in common, so $\mathcal F$ is disj
 \vspace{1mm}\\
 On the other hand, the family $\mathcal G=\{\{1,2\},\{1,3\},\{4\}\}$ is not pairwise disjoint because $\{1,2\}\cap\{1,3\}=\{1\}\neq\emptyset$. The family 
 $\mathcal H=\{\emptyset,\{2\},\{1,3\},\{4\}\}$ is also not a partition of $A$ because it violates the third requirement in the definition.
-
-
-
-
+\begin{definition}
+Suppose $R$ is an equivalence relation on set $A$, and $x\in A$. Then the \textit{equivalence class of} $x$ \textit{with respect to} $R$ is the set
+\begin{equation*}
+[x]_R=\{y\in A|yRx\}
+\end{equation*}
+If $R$ is clear from context then we just write $[x]$ instead of $[x]_R$. The set of all equivalence classes of elements of 
+$A$ is called $A$ \textit{modulo} $R$, and is denoted by $A/R$. Thus,
+\begin{equation*}
+A/R=\{[x]_R|x\in A\}=\{X\subseteq A|\exists x\in A(X=[x]_R)\}
+\end{equation*}
+\end{definition}
+\noindent\textbf{Note to self}\\
+(Recall that set notation can be written in multiple ways; for instance $\{n^2|n\in\mathbb N\}=\{x|\exists n\in\mathbb N(x=n^2)\}$. Also recall that 
+an element can appear more than once in a set and that set will still be considered to be the same as one with all unique elements. For instance
+$\{14,3,7\}$ and $\{3,7,14,7\}$ are the same set.)\\
+(next page)\newpage
+\noindent\textbf{a}
 
 
 
