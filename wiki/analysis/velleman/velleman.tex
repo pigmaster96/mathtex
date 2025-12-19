@@ -2818,9 +2818,23 @@ B&=\{(p,q)\in P\times P|\exists d\in D(p\in P_d\text{ and }q\in P_d)\}\\
 We will call the family $\mathcal F$ a \textit{partition} because it breaks the set $P$ into disjoint pieces.
 \newpage
 
-\subsection{}
-
-
+\subsection{More definitions}
+\begin{definition}
+Suppose $A$ is a set and $\mathcal F\subseteq\mathscr P(A)$. We will say that $\mathcal F$ is \textit{pairwise disjoint} if every pair of distinct elements of $\mathcal F$ are disjoint, or in other
+words $\forall X\in\mathcal F\forall Y\in\mathcal F(X\neq Y\to X\cap Y=\emptyset)$. $\mathcal F$ is called a \textit{partition} of $A$ if it has the following properties:
+\begin{enumerate}
+\item $\bigcup\mathcal F=A$
+\item $\mathcal F$ is pairwise disjoint
+\item $\forall X\in\mathcal F(X\neq\emptyset)$
+\end{enumerate}
+\end{definition}
+\noindent\textbf{Example}\\
+For instance, suppose $A=\{1,2,3,4\}$ and $\mathcal F=\{\{2\},\{1,3\},\{4\}\}$. Then $\bigcup\mathcal F=\{2\}\cup\{1,3\}\cup\{4\}=\{1,2,3,4\}=A$, so $\mathcal F$ satisfies the the first clause in
+the definition of partition.
+No two sets of $\mathcal F$ have any elements in common, so $\mathcal F$ is disjoint, and clearly all the sets in $\mathcal F$ are nonempty. Thus, $\mathcal F$ is a partition of $A$.\\
+\vspace{1mm}\\
+On the other hand, the family $\mathcal G=\{\{1,2\},\{1,3\},\{4\}\}$ is not pairwise disjoint because $\{1,2\}\cap\{1,3\}=\{1\}\neq\emptyset$. The family 
+$\mathcal H=\{\emptyset,\{2\},\{1,3\},\{4\}\}$ is also not a partition of $A$ because it violates the third requirement in the definition.
 
 
 
