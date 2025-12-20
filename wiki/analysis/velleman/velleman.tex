@@ -2851,7 +2851,64 @@ A/R=\{[x]_R|x\in A\}=\{X\subseteq A|\exists x\in A(X=[x]_R)\}
 an element can appear more than once in a set and that set will still be considered to be the same as one with all unique elements. For instance
 $\{14,3,7\}$ and $\{3,7,14,7\}$ are the same set.)\\
 (next page)\newpage
-\noindent\textbf{a}
+\noindent\textbf{Example}\\
+Let $S$ be the relation $\mathbb R$ defined as follows:
+\begin{equation*}
+S=\{(x,y)\in\mathbb R\times\mathbb R|x-y\in\mathbb Z\}
+\end{equation*}
+For example, $(5.73,2.73)\in S$ and $(-1.27,2.73)\in S$, since $5.73-2.73=3\in\mathbb Z$ and 
+$-1.27-2.73=-4\in\mathbb Z$, but $(1.27,2.73)\notin S$ since $1.27-2.73=-1.46\notin\mathbb Z$.\\
+\vspace{1mm}\\
+Clearly for any $x\in\mathbb R, x-x=0\in\mathbb Z$, so $(x,x)\in S$ and $S$ is reflexive. To see that $S$ is symmetric, suppose $(x,y)\in S$; by the definition of $S$ this means that 
+$x-y\in\mathbb\in Z$; but then $y-x=-(x-y)\in\mathbb Z$ too, since the negative of any integer is also an integer, so $(y,x)\in S$. Because $(x,y)$ was an arbitrary element of $S$, 
+$S$ is symmetric. Finally, to see that $S$ is transitive, suppose that $(x,y)\in S$ and $(y,z)\in S$; then $x-y\in\mathbb Z$ and $y-z\in\mathbb Z$. Because the sum of any two integers is an integer,
+it follows that $x-z=(x-y)+(y-z)\in\mathbb Z$, so $(x,z)\in S$ as required. Thus $S$ is an equivalence relation on $\mathbb R$.\\
+\vspace{1mm}\\
+What would the equivalence classes for this equivalence relation look like? We know $(5.73,2.73)\in S$ and $(-1.27,2.73)\in S$, so $5.73\in[2.73]$ and $-1.27\in[2.73]$. Intuitively, the other 
+elements of this equivalence class would look like
+\begin{equation*}
+[2.73]=\{\ldots,-1.27,-0.27,0.73,1.73,2.73,3.73,4.73,5.73,\ldots\}
+\end{equation*}
+In general, for any real number $x$, the equivalence class of $x$ will contain all real numbers that differ from $x$ by an integer amount:
+\begin{equation*}
+[x]=\{\ldots,x-3,x-2,x-1,x,x+1,x+2,x+3,\ldots\}
+\end{equation*}
+It turns out that $x$ is always an element of $[x]$. It also turns out that if we choose any number $x\in[2.73]$, then $[x]$ will be exactly the same as $[2.73]$. For instance taking $x=4.73$ we
+find that
+\begin{equation*}
+[4.73]=\{\ldots,-1.27,-0.27,0.73,1.73,2.73,3.73,4.73,5.73,\ldots\}=[2.73]
+\end{equation*}
+Thus $[4.73]$ and $[2.73]$ are just two different names for the same set. But if we choose $x\notin[2.73]$, then $[x]$ will be different from $[2.73]$. For example,
+\begin{equation*}
+[1.3]=\{\ldots,-1.7,-0.7,0.3,1.3,2.3,3.3,4.3,\ldots\}
+\end{equation*}
+$[1.3]$ is actually \textit{disjoint} from $[2.73]$. In general, for any two real numbers $x$ and $y$, the equivalence classes $[x]$ and $[y]$ are either identical or disjoint. each equivalence
+classes has many different names, but different equivalent classes are disjoint.\\
+(next page)\newpage
+\noindent I wrote this proof myself, may contain errors.
+\begin{theorem}
+Suppose $R$ is an equivalence relation on $\mathbb R$. Then $\forall x\in\mathbb R\forall y\in\mathbb R(([x]=[y])\lor([x]\cap[y]=\emptyset)$; that is, the equivalence classes of any two real
+numbers are either identical or disjoint.
+\end{theorem}
+\begin{proof}
+Let $x$ and $y$ be arbitrary real numbers.\\
+\indent Case 1: $x\in[y]$, then by the definition of the equivalence class, $xRy$.\\
+\indent($\rightarrow$) Let $z$ be an arbitrary real number. Suppose $z\in[x]$, then $zRx$. Since $xRy$, then by transitivity $zRy$, and by the definition of the equivalence class $z\in[y]$.
+Since $z$ was arbitrary, $[x]\subseteq[y]$.\\
+\indent($\leftarrow$) Let $z$ be an arbitrary real number. Suppose $z\in[y]$, then $zRy$. Since $xRy$ by symmetry $yRx$ and then by transitivity $zRx$; so $z\in[x]$. Since $z$ was arbitrary,
+$[y]\subseteq[x]$. So we have $[x]=[y]$.\\
+\indent Case 2: $x\notin[y]$. Suppose $[x]\cap[y]\neq\emptyset$, then $\exists z\in\mathbb R(z\in[x]\land z\in[y])$, and we can declare some $z$ such that $z\in[x]$ and $z\in[y]$, meaning $zRx$ and 
+$zRy$. By symmetry $xRz$, then by transitivity $xRy$. Since this means $x\in[y]$, this contradicts our initial assumption that $x\notin[y]$, so $[x]\cap[y]=\emptyset$.
+\end{proof}
+\newpage
+
+\subsection{Equivalence relations and partitions}
+
+
+
+
+
+
 
 
 
