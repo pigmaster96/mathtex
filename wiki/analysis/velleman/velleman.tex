@@ -2965,10 +2965,36 @@ $X\cap Y\neq\emptyset\to X=Y$. Either way, the important part here is that the d
 \begin{equation*}
 A/R=\{[x]_R|x\in A\}=\{X\subseteq A|\exists x\in A(X=[x])\}
 \end{equation*}
-So $X\in A/R$ implies the existential statement $\exists x\in A(X=[x])$, and we go from there.\\
-(next page)\newpage
+So $X\in A/R$ implies the existential statement $\exists x\in A(X=[x])$, and we go from there.
+\newpage
+
+\subsection{More on equivalence relations and partitions}
 \begin{theorem}
+Suppose $A$ is a set and $\mathcal F$ is a partition of $A$. Then there is an equivalence relation $R$ on $A$ such that $A/R=\mathcal F$.
 \end{theorem}
+\noindent\textbf{Intuition}\\
+The conclusion of the theorem is an existential statement, we should find an equivalence relation $R$ such that $A/R=\mathcal F$. Clearly for different choices
+of $\mathcal F$ we need to choose $R$ differently, so the definition of $R$ should depend on $\mathcal F$ in some way.\\
+\vspace{1mm}\\
+Recall the same birthday example at the beginning of this section. The equivalence relation $B$ consisted of all pairs of people $(p,q)$ such that $p$ and $q$ were in the same set in the partition
+$\{P_d|d\in D\}$. In fact, we found that we could also express this by saying that $B=\bigcup_{d\in D}(P_d\times P_d)$.\\
+\vspace{1mm}\\
+Consider applying the same principle to this theorem. We should let $R$ be the set of all pairs $(x,y)\in A\times A$ such that $x$ and $y$ are in the same set in the partition $\mathcal F$. That is,
+$R=\bigcup_{X\in\mathcal F}(X\times X)$.\\
+\vspace{1mm}\\
+Naturally, the reasoning that led us to the formula $R=\bigcup_{X\in\mathcal F}(X\times X)$ will not be part of the proof. When we write the proof, we can simply define $R$ in this way
+and then verify that it is an equivalence relation on $A$ and that $A/R=\mathcal F$.\\
+(next page)\newpage
+\begin{lemma}
+Suppose $A$ is a set and $\mathcal F$ is a partition of $A$. Let $R=\bigcup_{X\in\mathcal F}(X\times X)$. Then $R$ is an equivalence relation on $A$. We will call $R$ the equivalence relation
+determined by $\mathcal F$.
+\end{lemma}
+\begin{proof}
+
+
+\end{proof}
+
+
 
 
 
