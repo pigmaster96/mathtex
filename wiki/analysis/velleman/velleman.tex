@@ -12,8 +12,10 @@
 
 \graphicspath{{./images/}} %set imaging path
 \newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
 \theoremstyle{definition}
 \newtheorem*{definition}{Definition}
+
 
 
 \begin{document}
@@ -2900,11 +2902,73 @@ $[y]\subseteq[x]$. So we have $[x]=[y]$.\\
 \indent Case 2: $x\notin[y]$. Suppose $[x]\cap[y]\neq\emptyset$, then $\exists z\in\mathbb R(z\in[x]\land z\in[y])$, and we can declare some $z$ such that $z\in[x]$ and $z\in[y]$, meaning $zRx$ and 
 $zRy$. By symmetry $xRz$, then by transitivity $xRy$. Since this means $x\in[y]$, this contradicts our initial assumption that $x\notin[y]$, so $[x]\cap[y]=\emptyset$.
 \end{proof}
+\noindent I also had some doubts regarding the definition of $A/R$:
+\begin{equation*}
+A/R=\{[x]_R|x\in A\}=\{X\subseteq A|\exists x\in A(X=[x]_R)\}
+\end{equation*}
+Particularly regarding the bit where $X\subseteq A$. Since the existential part of the second equality made sense but not the part where $X\subseteq A$. So I wrote another proof
+\begin{theorem}
+Suppose $R$ is an equivalence relation on $A$. Then $\forall X(\exists x\in A(X=[x])\to X\subseteq A)$. That is, if $X$ is an equivalence class in $A$, then $X\subseteq A$.
+\end{theorem}
+\begin{proof}
+Let $X$ be some arbitrary set, suppose $\exists x\in A(X=[x])\to X\subseteq A)$, then we can declare some $x\in A$ such that $X=[x]$. Now let $y$ be some arbitrary element of $X$, then $y\in[x]$.
+From the definition of the equivalence class, this means that $y\in A$. Since $y$ was arbitrary, 
+$X\subseteq A$.
+\end{proof}
 \newpage
 
 \subsection{Equivalence relations and partitions}
-
-
+The set of all of the equivalence classes $\mathbb R/S$, is a partition of $\mathbb R$.
+The proof of this will be easier to understand if we first prove a few facts about equivalence classes. Facts that are proven primarily for the purpose of using them to prove a theorem are usually
+called \textit{lemmas}.
+\begin{theorem}
+Suppose $R$ is an equivalence relation on set $A$. Then $A/R$ is a partition of $A$.
+\end{theorem}
+\begin{lemma}
+Suppose $R$ is an equivalence relation on $A$. Then:
+\begin{enumerate}
+\item For every $x\in A$, $x\in[x]$.
+\item For every $x\in A$ and $y\in A$, $y\in[x]$ iff $[y]=[x]$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}\hspace{1mm}
+\begin{enumerate}
+\item Let $x\in A$ be arbitrary. Since $R$ is reflexive, $xRx$. Therefore, by the definition of the equivalence class, $x\in[x]$.
+\item ($\rightarrow$) Let $x$, $y$ be arbitrary elements of $A$. Suppose $y\in[x]$, then by the definition of the equivalence class, $yRx$.\\
+($\rightarrow$) Now let $z$ be an arbitrary element in $[y]$. Then $zRy$. Since $zRy$ and $yRx$, by transitivity, we can conclude that $zRx$, so $z\in[x]$. Since $z$ was arbitrary, 
+$[y]\subseteq[x]$.\\
+($\leftarrow$) Now suppose $z\in[x]$, so $zRx$. We already know $yRx$, so by symmetry $xRy$, then by transitivity $zRy$, so $z\in[y]$. Therefore $[x]\subseteq[y]$, and $[x]=[y]$.\\
+($\leftarrow$) Again let $x$, $y$ be arbitrary elements of $A$. Suppose $[y]=[x]$, by part 1 we know that $y\in[y]$, so since $[y]=[x]$, it follows that $y\in[x]$.\qedhere
+\end{enumerate}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}
+To prove that $A/R$ is a partition of $A$, we must prove the three properties that define a partition. First we must show that $\bigcup(A/R)=A$, or in other words 
+$\bigcup_{x\in A}[x]=A$. Since every equivalence class in $A/R$ is a subset of $A$, it should be clear that their union is also a subset of $A$ (Suppose arbitrary $x\in\bigcup(A/R)$, then then use 
+$\exists_B\in A/R(x\in B)$ to declare some $B$, then use $B\subseteq A$ to show $x\in A$). Thus 
+$\bigcup(A/R)\subseteq A$. Now we show $A\subseteq\bigcup(A/R)$. To prove this, suppose $x\in A$, then by the first lemma $x\in[x]$, and of course $[x]\in A/R$, so $x\in\bigcup(A/R)$. Thus $\bigcup(A/R)=A$.\\
+\indent Next we show that $A/R$ is pairwise disjoint. Let $X$ and $Y$ be two elements of $A/R$, and suppose $X\neq Y$. Now suppose that $X\cap Y\neq\emptyset$. By the definition of $A/R$, since 
+$X\in A/R$ and $Y\in A/R$, we can
+declare some $x,y\in A$ such that $X=[x]$ and $Y=[y]$. Since $X\cap Y\neq\emptyset$, we can choose some $z$ such that $z\in X\cap Y=[x]\cap[y]$, meaning $z\in[x]$ and $z\in[y]$. By the second
+lemma, it follows that $[x]=[z]=[y]$, so $X=Y$. Since this contradicts our initial assumption that
+$X\neq Y$, $X\cap Y=\emptyset$. So $A/R$ is pairwise disjoint.\\
+\indent Finally we show that $\forall X\in A/R(X\neq\emptyset)$. Suppose $X\in A/R$. As before, we can then declare some $x\in A$ such that $X=[x]$. Now by the first lemma, $x\in[x]=X$, so 
+$X\neq\emptyset$, as required.
+\end{proof}
+\noindent The book gave an intuitive reasoning for why $\bigcup(A/R)\subseteq A$. I included an outline for a formal proof within the parentheses. For the part where we show that $A/R$ is pairwise disjoint,
+we are trying to show
+\begin{equation*}
+\forall X\in A/R\,\forall Y\in A/R(X\neq Y\to X\cap Y=\emptyset)
+\end{equation*}
+I used a proof by contradiction, supposing $X\neq Y$ and using a contradiction to show $X\cap Y=\emptyset$. The book considers proving the contrapositive, meaning showing 
+$X\cap Y\neq\emptyset\to X=Y$. Either way, the important part here is that the definition of $A/R$,
+\begin{equation*}
+A/R=\{[x]_R|x\in A\}=\{X\subseteq A|\exists x\in A(X=[x])\}
+\end{equation*}
+So $X\in A/R$ implies the existential statement $\exists x\in A(X=[x])$, and we go from there.\\
+(next page)\newpage
+\begin{theorem}
+\end{theorem}
 
 
 
