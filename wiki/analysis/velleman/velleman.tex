@@ -2995,7 +2995,7 @@ $B\in\mathcal F$ such that $x\in B$, and so $(x,x)\in B\times B$, and $(x,x)\in\
 \indent Now we show that $R$ symmetric. Let $x,y$ be arbitrary elements of $A$. Suppose $(x,y)\in R=\bigcup_{X\in\mathcal F}(X\times X)$. Then we can declare some $B\in\mathcal F$ such that 
 $(x,y)\in B\times B$; so by the definition of the cartesian product, $x\in B$ and $y\in B$, and $(y,x)\in B\times B$. So $(y,x)\in\bigcup_{X\in\mathcal F}(X\times X)=R$. Since $x$ and $y$ are
 arbitrary, $R$ is symmetric.\\
-\indent Finally we show that $R$ is transitive. Let $x,y,z$ be arbitrary elements in $A$. Suppose $(x,y)\in R$ and $(y,z)\in R$, where $R=\in\bigcup_{X\in\mathcal F}(X\times X)$. 
+\indent Finally we show that $R$ is transitive. Let $x,y,z$ be arbitrary elements in $A$. Suppose $(x,y)\in R$ and $(y,z)\in R$, where $R=\bigcup_{X\in\mathcal F}(X\times X)$. 
 As such we can declare some $B,C$ in $\mathcal F$ such that $(x,y)\in B\times B$ and $(y,z)\in C\times C$.
 Then $x\in B$, $y\in B$, $y\in C$, $z\in C$; since $B$ and $C$ are both in $\mathcal F$, and $\mathcal F$ is a partition, $B$ and $C$ are pairwise disjoint, so since $B\cap C\neq\emptyset$, $B=C$.
 So since $z\in C=B$ and $x\in B$, $(x,z)\in B\times B$ and $(x,z)\in\bigcup_{X\in\mathcal F}(X\times X)=R$. Since $x,y,z$ are arbitrary, $R$ is transitive.
@@ -3017,9 +3017,42 @@ where using the contrapositive, this is equivalent to
 \forall X\in\mathcal F\forall Y\in\mathcal F(X\cap Y\neq\emptyset\to X=Y)
 \end{equation*}
 (next page)\newpage
+\noindent For clarity, here is a proof written by me that shows that $R$, defined as $R=\bigcup_{X\in\mathcal F}(X\times X)$, is a relation on $A$. Meaning $R\subseteq A\times A$.
+\begin{theorem}
+Let $\mathcal F$ be a partition on some set $A$, and let $R=\bigcup_{X\in\mathcal F}(X\times X)$. Then $R$ is a relation on $A$.
+\end{theorem}
+\begin{proof} (by me)
+Let $(x,y)$ be an arbitrary element in $R$. Then we can declare some $B\in\mathcal F$ such that $x\in B$ and $y\in B$. Since $\bigcup\mathcal F$ is defined as the set 
+$\{x|\exists X\in\mathcal F(x\in X)\}$, both $x$ and $y$ are in $\bigcup\mathcal F$. Since $\mathcal F$ is a partition on $A$, $\bigcup\mathcal F=A$. So both $x$ and $y$ are in $A$, and therefore
+$(x,y)\in A\times A$. Since $(x,y)$ was arbitrary, $R\subseteq A\times A$.
+\end{proof}
 \begin{lemma}
+Suppose $A$ is a set and $\mathcal F$ is a partition of $A$. Let $R$ be the equivalence determined by $\mathcal F$. Suppose $X\in\mathcal F$ and $x\in X$. Then $[x]_R=X$.
 \end{lemma}
+\begin{proof}
+Let $y$ be an arbitrary element of $[x]_R$. Then $(y,x)\in R$, so by the definition of $R$ there must be some $Y\in\mathcal F$ such that $y\in Y$ and $x\in Y$. Since $x\in X$ and $x\in Y$, 
+$X\cap Y\neq\emptyset$, and since $\mathcal F$ is pairwise disjoint it follows that
+$X=Y$. Thus since $y\in Y$, $y\in X$. Since $y$ was arbitrary, $[x]_R\subseteq X$.\\
+\indent Now let $y$ be an arbitrary element of $X$. Then $(y,x)\in X\times X$, so $(y,x)\in R$ and
+therefore $y\in[x]_R$. Since $y$ was arbitrary, $X\subseteq[x]_R$, and $[x]_R=X$.
+\end{proof}
+\noindent In the first part of this proof we use the contrapositive of the pairwise disjointness clause.\\
+\vspace{1mm}\\
+Now we prove the initial theorem.
+\begin{theorem}
+Suppose $A$ is a set and $\mathcal F$ is a partition of $A$. Then there is an equivalence relation $R$ on $A$ such that $A/R=\mathcal F$.
+\end{theorem}
+\begin{proof}
+Let $R=\bigcup_{X\in\mathcal F}(X\times X)$. We have already seen that $R$ is an equivalence relation, so we need only check that $A/R=\mathcal F$. To see this, let $X$ be an arbitrary
+element of $A/R$. Then this means $X=[x]$ for some $x\in A$. Since $\mathcal F$ is a partition, we know that $\bigcup\mathcal F=A$, so $x\in\bigcup\mathcal F$, and therefore we can choose
+some $Y\in\mathcal F$ such that $x\in Y$. But then by the second lemma, $[x]=Y$. Thus $X=Y\in\mathcal F$, so $A/R\subseteq\mathcal F$.\\
+\indent Now let $X$ be an arbitrary element of $\mathcal F$. Then since $\mathcal F$ is a partition, $X\neq\emptyset$, so we can choose some $x\in X$. By the second lemma, 
+$X=[x]\in A/R$ so $\mathcal F\subseteq A/R$, and $A/R=\mathcal F$.
+\end{proof}
+\noindent We use the third clause in the definition of the parition for the second part of the proof.
+\newpage
 
+\subsection{}
 
 
 

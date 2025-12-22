@@ -61,8 +61,9 @@
 \contentsline {subsection}{\numberline {3.4.1}More definitions}{85}{}%
 \contentsline {subsection}{\numberline {3.4.2}Equivalence relations and partitions}{88}{}%
 \contentsline {subsection}{\numberline {3.4.3}More on equivalence relations and partitions}{90}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{93}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{93}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{93}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{93}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{94}{}%
+\contentsline {subsection}{\numberline {3.4.4}}{93}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{94}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{94}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{94}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{94}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{95}{}%
