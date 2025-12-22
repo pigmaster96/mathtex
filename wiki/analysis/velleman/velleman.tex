@@ -2990,11 +2990,35 @@ Suppose $A$ is a set and $\mathcal F$ is a partition of $A$. Let $R=\bigcup_{X\i
 determined by $\mathcal F$.
 \end{lemma}
 \begin{proof}
-
-
+First we show that $R$ is reflexive. Let $x$ be an arbitrary element of $A$. Since $\mathcal F$ is a partition of $A$, $\bigcup\mathcal F=A$, so $x\in\bigcup\mathcal F$. Thus we can choose some 
+$B\in\mathcal F$ such that $x\in B$, and so $(x,x)\in B\times B$, and $(x,x)\in\bigcup_{X\in\mathcal F}(X\times X)=R$. Since $x$ is arbitrary, $R$ is reflexive.\\
+\indent Now we show that $R$ symmetric. Let $x,y$ be arbitrary elements of $A$. Suppose $(x,y)\in R=\bigcup_{X\in\mathcal F}(X\times X)$. Then we can declare some $B\in\mathcal F$ such that 
+$(x,y)\in B\times B$; so by the definition of the cartesian product, $x\in B$ and $y\in B$, and $(y,x)\in B\times B$. So $(y,x)\in\bigcup_{X\in\mathcal F}(X\times X)=R$. Since $x$ and $y$ are
+arbitrary, $R$ is symmetric.\\
+\indent Finally we show that $R$ is transitive. Let $x,y,z$ be arbitrary elements in $A$. Suppose $(x,y)\in R$ and $(y,z)\in R$, where $R=\in\bigcup_{X\in\mathcal F}(X\times X)$. 
+As such we can declare some $B,C$ in $\mathcal F$ such that $(x,y)\in B\times B$ and $(y,z)\in C\times C$.
+Then $x\in B$, $y\in B$, $y\in C$, $z\in C$; since $B$ and $C$ are both in $\mathcal F$, and $\mathcal F$ is a partition, $B$ and $C$ are pairwise disjoint, so since $B\cap C\neq\emptyset$, $B=C$.
+So since $z\in C=B$ and $x\in B$, $(x,z)\in B\times B$ and $(x,z)\in\bigcup_{X\in\mathcal F}(X\times X)=R$. Since $x,y,z$ are arbitrary, $R$ is transitive.
 \end{proof}
-
-
+\noindent Note that $\bigcup_{X\in\mathcal F}(X\times X)$ implies an existential statement.
+\begin{equation*}
+(x,y)\in\bigcup_{X\in\mathcal F}(X\times X)\leftrightarrow\exists X\in\mathcal F((x,y)\in X\times X)
+\end{equation*}
+For the symmetry part of the proof, we use the first clause in the definition of the partition $\bigcup\mathcal F=A$., and the definition of the cartesian product:
+\begin{equation*}
+A\times B=\{a,b|a\in A\land b\in B\}
+\end{equation*}
+Finally for the transitive part, we use the fact that $\mathcal F$ is a partition on $A$, meaning it has the property of pairwise disjointness (second clause):
+\begin{equation*}
+\forall X\in\mathcal F\forall Y\in\mathcal F(X\neq Y\to X\cap Y=\emptyset)
+\end{equation*}
+where using the contrapositive, this is equivalent to
+\begin{equation*}
+\forall X\in\mathcal F\forall Y\in\mathcal F(X\cap Y\neq\emptyset\to X=Y)
+\end{equation*}
+(next page)\newpage
+\begin{lemma}
+\end{lemma}
 
 
 
