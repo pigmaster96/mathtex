@@ -3087,12 +3087,63 @@ exists such that $A/S=\mathcal F$. So $A/S=\mathcal F=A/R$. By the previous lemm
 \end{proof}
 \newpage
 
-\subsection{}
+\subsection{Congruence modulo $m$}
 Recall the definition of $x|y$.
 \begin{definition}
 For any integers $x$ and $y$, we'll say that \textit{$x$ divides $y$} (or \textit{$y$ is divisible by $x$}) if $\exists k\in\mathbb{Z}(kx=y)$. We use the notation $x\mid y$ to mean 
 `$x$ divides $y$' and $x\nmid y$ to mean `$x$ does not divide $y$'.
 \end{definition}
+\begin{definition}
+Suppose $m$ is a positive integer. For any integers $x$ and $y$, we will say that $x$ is \textit{congruent to $y$ modulo $m$} if $\exists k\in\mathbb Z(x-y=km)$. In other words,
+$x$ is congruent to $y$ modulo $m$ iff $m|(x-y)$. We will use the notation $x\equiv y$ (mod $m$) to mean that $x$ is congruent to $y$ modulo $m$.
+\end{definition}
+\noindent\textbf{Example}\\
+For example, $12\equiv27$ (mod 5), since $12-27=-15=(-3)\cdot5$.\\
+\vspace{1mm}\\
+\textbf{Intuition}\\
+Now for any positive integer $m$ we can consider the relation
+\begin{equation*}
+\{(x,y)\in\mathbb Z\times\mathbb Z|x\equiv y\text{ (mod $m$)}\}
+\end{equation*}
+We will use the symbol $\equiv_m$ to denote this relation. For any integers $x$ and $y$, $x\equiv_m y$ means the same thing as $x\equiv y\text{ (mod $m$)}$. It turns out that this relation is an
+equivalence relation. We will prove the following theorem:
+\begin{theorem}
+For every positive integer $m$, $\equiv_m$ is an equivalence relation on $\mathbb Z$.
+\end{theorem}
+\begin{lemma}
+For integers $a,b,c$, if $a|b$ and $a|c$, then $a|(b+c)$.
+\end{lemma}
+\begin{proof}
+Suppose $a|b$ and $a|c$, then we can declare some integers $k_0$ and $k_1$ such that $ak_0=b$ and $ak_1=c$. Then $a(k_0+k_1)=b+c$. Since $(k_0+k_1)$ is an integer, $a|(b+c)$.
+\end{proof}
+\begin{proof}(my proof)
+First we consider reflexivity. Let $x$ be an arbitrary integer. Choosing $k=0$, $km=(x-x)=0$, and therefore $x\equiv_m x$. Since $x$ is arbitrary, $\equiv_m$ is reflexive.\\
+\indent Now we show symmetry. Let $x$ and $y$ be arbitrary integers. Suppose $x\equiv_m y$; then we can declare some integer $k_0$ such that $k_0m=(x-y)$. Then $-k_0m=(y-x)$; since $-k_0$ is also 
+an integer, $y\equiv_m x$. Since $x$ and $y$ are arbitrary, $\equiv_m$ is symmetric.\\
+\indent Finally we show transitivity. Let $x,y,z$ be arbitrary integers. Suppose that $x\equiv m y$ and $y\equiv_m z$. This means that $m|(x-y)$ and $m|(y-z)$. Therefore by the previous lemma,
+$m|[(x-y)+(y-z)]$. But $(x-y)+(y-z)=x-z$, so it follows that $m|(x-z)$, and therefore $x\equiv_m z$.
+Since $x,y,z$ were arbitrary, $\equiv_m$ is transitive.
+\end{proof}
+\newpage
+
+\chapter{Functions}
+\subsection{Definition}
+\begin{definition}
+Suppose $F$ is a relation from $A$ to $B$. Then $F$ is called a \textit{function from $A$ to $B$} if for every $a\in A$ there is exactly one $b\in B$ such that 
+$(a,b)\in F$. In other words, to say that $F$ is a function from $A$ to $B$ means:
+\begin{equation*}
+\forall a\in A\exists!b\in B((a,b)\in F)
+\end{equation*}
+To indicate that $F$ is a function from $A$ to $B$, we will write $F:A\to B$.
+\end{definition}
+\noindent\textbf{`Exactly one' notation}\\
+To recapitulate, we write 
+\begin{equation*}
+\exists!xP(x)=\exists x(P(x)\land\neg\exists y(P(y)\land y\neq x))
+\end{equation*}
+As a shorthand way to write `there is exactly one value of $x$ such that $P(x)$ is true', or `there is a unique $x$ such that $P(x)$'.\\
+\vspace{1mm}\\
+\textbf{Examples}
 
 
 

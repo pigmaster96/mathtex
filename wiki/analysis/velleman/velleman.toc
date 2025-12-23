@@ -62,9 +62,11 @@
 \contentsline {subsection}{\numberline {3.4.2}Equivalence relations and partitions}{88}{}%
 \contentsline {subsection}{\numberline {3.4.3}More on equivalence relations and partitions}{90}{}%
 \contentsline {subsection}{\numberline {3.4.4}Even more on equivalence relations and partitions}{93}{}%
-\contentsline {subsection}{\numberline {3.4.5}}{94}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{95}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{95}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{95}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{95}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{96}{}%
+\contentsline {subsection}{\numberline {3.4.5}Congruence modulo $m$}{94}{}%
+\contentsline {chapter}{\numberline {4}Functions}{95}{}%
+\contentsline {subsection}{\numberline {4.0.1}Definition}{95}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{96}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{96}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{96}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{96}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{97}{}%
