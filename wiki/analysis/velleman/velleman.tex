@@ -3052,6 +3052,41 @@ $X=[x]\in A/R$ so $\mathcal F\subseteq A/R$, and $A/R=\mathcal F$.
 \noindent We use the third clause in the definition of the parition for the second part of the proof.
 \newpage
 
+\subsection{Even more on equivalence relations and partitions}
+We have seen how an equivalence relation $R$ on a set $A$ can be used to define a partition $A/R$ of $A$; recall the theorem:
+\begin{theorem}
+Suppose $R$ is an equivalence relation on set $A$. Then $A/R$ is a partition of $A$.
+\end{theorem}
+\noindent We've also seen how a partition $\mathcal F$ of $A$ can be used to define an equivalence relation $\bigcup X\in\mathcal F(X\times X)$ on $A$. The proof of the theorem from the previous
+section demonstrates an interesting relationship between these operations:
+\begin{theorem}
+Suppose $A$ is a set and $\mathcal F$ is a partition of $A$. Then there is an equivalence relation $R$ on $A$ such that $A/R=\mathcal F$.
+\end{theorem}
+\noindent The proof showed that if we start with a partition $\mathcal F$ on $A$, and use $\mathcal F$ to define the equivalence relation $Q=\bigcup X\in\mathcal F(X\times X)$, and then used 
+$Q$ to define a partition $A/Q$, this partition would be equal to $\mathcal F$.\\
+\vspace{1mm}\\
+One might wonder whether if we started with an equivalence relation $R$, and used $R$ to define a partition $\mathcal F=A/R$, and then used $\mathcal F$ to define an equivalence relation 
+$S=\bigcup X\in\mathcal F(X\times X)$, would this final equivalence relation $S$ be the same as the original equivalence relation $R$?
+\begin{lemma}
+Suppose $R$ and $S$ are equivalence relations on $A$ and $A/R=A/S$. Then $R=S$.
+\end{lemma}
+\begin{proof}(my proof)
+First we show $S\subseteq R$. Let $(x,y)$ be an arbitrary element in $S$. It was shown earlier that $y\in[y]_S$, and since $xSy$, then $x$ and $y$ are both in $[y]_S\in A/S$.
+Since $A/S=A/R$, $[y]_S\in A/R$, so there exists some $z\in A$ such that $[y]_S=[z]_R$. 
+So $x\in[z]_R$ and $y\in[z]_R$, so $xRz$ and $yRz$. By symmetry $zRy$, and by transitivity, $xRy$; so $(x,y)\in R$. Since $(x,y)$ was arbitrary, $S\subseteq R$.\\
+\indent Now we show $R\subseteq S$. Let $(x,y)$ be an arbitrary element of $R$. Then similarly, $x\in[y]_R$ and $y\in[y]_R$. Since $[y]_R\in A/R=A/S$, we can declare some $z\in A$ such that
+$[y]_R=[z]_S$. So $x\in[z]_S$ and $y\in[z]_S$, meaning $xSz$ and $ySz$. By symmetry, $zSy$, and by transitivity, $xSy$, so $(x,y)\in S$. Since $(x,y)$ was arbitrary, $R\subseteq S$ and $R=S$.
+\end{proof}
+\begin{theorem}
+Suppose $R$ is an equivalence relation on $A$. Let $\mathcal F=A/R$, and let $S$ be the equivalence relation determined by $\mathcal F$. In other words, $S=\bigcup X\in\mathcal F(X\times X)$. 
+Then $S=R$.
+\end{theorem}
+\begin{proof}
+We've shown that $\mathcal F=A/R$ is a partition of $A$. By the theorem derived in the previous section, the equivalence relation determined by $\mathcal F$, $\bigcup X\in\mathcal F(X\times X)=S$, 
+exists such that $A/S=\mathcal F$. So $A/S=\mathcal F=A/R$. By the previous lemma, since $R$ and $S$ are both equivalence relations, $S=R$.
+\end{proof}
+\newpage
+
 \subsection{}
 
 
