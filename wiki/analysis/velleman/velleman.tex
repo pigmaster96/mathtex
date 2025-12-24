@@ -3143,7 +3143,52 @@ To recapitulate, we write
 \end{equation*}
 As a shorthand way to write `there is exactly one value of $x$ such that $P(x)$ is true', or `there is a unique $x$ such that $P(x)$'.\\
 \vspace{1mm}\\
-\textbf{Examples}
+\textbf{Examples}\\
+Let $A=\{1,2,3\}$, $B=\{4,5,6\}$, and $F=\{(1,5),(2,4),(3,5)\}$. 1 is paired with 5 in the relation $F$, and is not paired with any other element of $B$. Similarly,
+2 is paired only with 4, and 3 with 5; $F$ is therefore a function. Note that the definition of the function does \textit{not} require that each element of $B$ be paired 
+with exactly one element of $A$ (see that 5 is paired with 1 and 3), only that each element of $A$ maps to only one $B$.\\
+\vspace{1mm}\\
+Now let $A=\{1,2,3\}$, $B=\{4,5,6\}$, and $G=\{(1,5),(2,4),(1,6)\}$. $G$ is not a function for multiple reasons; firstly 3 isn't paired with any element of $B$ in the relation $G$, which violates
+the requirement that every element of $A$ must be paired with some element of $B$. Second, 1 is paired with two different elements of $B$, 5 and 6, which violates the requirement that each element
+of $A$ be paired with \textit{only one} element of $B$.\\
+(next page)\newpage
+\noindent\textbf{More examples}\\
+Let $A$ be any set, recall that $i_A=\{(a,a)|a\in A\}$ is called the identity relation on $A$. This is also a function from $A$ to $A$. 
+Each $a\in A$ is paired in the relation $i_A$ with exactly one element of $A$, namely $a$ itself.\\
+\vspace{1mm}\\
+Let $f=\{(x,y)\in\mathbb R\times\mathbb R|y=x^2\}$. $f$ is a function from $\mathbb R$ to $\mathbb R$; for each real number $x$ there is exactly one value of $y$, namely $y=x^2$, such
+that $(x,y)\in f$.\\
+\vspace{1mm}\\
+\textbf{Terminology and specification by rule}\\
+Suppose $f:A\to B$. If $a\in A$, then we know that there is exactly one $b\in B$ such that $(a,b)\in f$. This unique $b$ is called ``the value of $f$ at $a$'' or ``the image of $a$ under $f$'' or 
+``the result of applying $f$ to $a$'', or just ``$f$ of $a$'', and it is written $f(a)$. That is, for every $a\in A$ and $b\in B$, $b=f(a)$ iff $(a,b)\in f$.
+For example, for the function $F=\{(1,5),(2,4),(3,5)\}$, we could say that $F(1)=5$, since $(1,5)\in F$; similarly $F(2)=4$ and $F(3)=5$.\\
+\vspace{1mm}\\
+A function $f$ from a set $A$ to a set $B$ is often specified by giving a rule that can be used to determine $f(a)$ from any $a\in A$. For example, if $A$ is the set of all people and 
+$B=\mathbb R^+$, we could define a function $f$ from $A$ to $B$ by the rule that for every $a\in A, f(a)=a$'s height in inches.
+This is another way of defining a function; although this definition doesn't say explicitly which ordered pairs are elements of $f$, recall that for all $a\in A$ and $b\in B$,
+$b=f(a)$ iff $(a,b)\in f$. From this equivalence we can say
+\begin{equation*}
+f=\{(a,b)\in A\times B|b=f(a)\}
+\end{equation*}
+then using the given rule, this becomes
+\begin{equation*}
+=\{(a,b)\in A\times B|b=a\text{'s height in inches}\}
+\end{equation*}
+This idea of thinking of a function as representing a rule that associates, with each $a\in A$, some corresponding object $b=f(a)\in B$ is useful. However it is important 
+to remember that although a function can be defined by giving such a rule, it need not be defined in this way---any subset of $A\times B$ that satisfies the requirements outlined in the definition 
+is a function from $A$ to $B$.\\
+\vspace{1mm}\\
+For another example, we can define a function $g$ from $\mathbb Z$ to $\mathbb R$ by the rule that for every $x\in\mathbb Z$, $g(x)=2x+3$. Then 
+\begin{align*}
+g&=\{(x,y)\in\mathbb Z\times\mathbb R|y=g(x)\}\\
+&=\{(x,y)\in\mathbb Z\times\mathbb R|y=2x+3\}\\
+&=\{\ldots,(-2,-1),(-1,1),(0,3),(1,5),(2,7),\ldots\}
+\end{align*}
+Note that when a function $f$ from $A$ to $B$ is specified by giving a rule for finding $f(a)$, the rule must determine the value of $f(a)$ for \textit{every} $a\in A$.\\
+(next page)\newpage
+\noindent Since
+
 
 
 
