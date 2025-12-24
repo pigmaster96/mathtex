@@ -3127,7 +3127,7 @@ Since $x,y,z$ were arbitrary, $\equiv_m$ is transitive.
 \newpage
 
 \chapter{Functions}
-\subsection{Definition}
+\section{Definition}
 \begin{definition}
 Suppose $F$ is a relation from $A$ to $B$. Then $F$ is called a \textit{function from $A$ to $B$} if for every $a\in A$ there is exactly one $b\in B$ such that 
 $(a,b)\in F$. In other words, to say that $F$ is a function from $A$ to $B$ means:
@@ -3185,12 +3185,53 @@ g&=\{(x,y)\in\mathbb Z\times\mathbb R|y=g(x)\}\\
 &=\{(x,y)\in\mathbb Z\times\mathbb R|y=2x+3\}\\
 &=\{\ldots,(-2,-1),(-1,1),(0,3),(1,5),(2,7),\ldots\}
 \end{align*}
-Note that when a function $f$ from $A$ to $B$ is specified by giving a rule for finding $f(a)$, the rule must determine the value of $f(a)$ for \textit{every} $a\in A$.\\
+Note that when a function $f$ from $A$ to $B$ is specified by giving a rule for finding $f(a)$, the rule must determine the value of $f(a)$ for \textit{every} $a\in A$.
+\newpage
+
+\subsection{Function equality}
+Since a function $f$ from $A$ to $B$ is completely determined by the rule for finding $f(a)$, two functions that are defined by equivalent rules must be equal:
+\begin{theorem}
+Suppose $f$ and $g$ are functions from $A$ to $B$. If $\forall a\in A(f(a)=g(a)$, then $f=g$.
+\end{theorem}
+\begin{proof}
+Suppose $\forall a\in A(f(a)=g(a))$. Let $(a,b)$ be an arbitrary element of $f$. Then $b=f(a)$. But
+by our assumption $f(a)=g(a)$, so $b=g(a)$ and therefore $(a,b)\in g$. Thus, $f\subseteq g$. 
+A similar argument shows $g\subseteq f$, so $f=g$.
+\end{proof}
+\noindent Now that we have proven this, we have another method for showing that two functions $f$ and $g$ from a set $A$ to another set $B$ are equal. In the future, 
+we may prove $\forall a\in A(f(a)=g(a))$ and then apply this theorem.\\
+\vspace{1mm}\\
+\textbf{Domain, Range, Composition}\\
+Recall these ideas from the previous chapter
+\begin{definition}
+Suppose $R$ is a relation from $A$ to $B$. Then the \textit{domain} of $R$ is the set
+\begin{equation*}
+\text{Dom}(R)=\{a\in A|\exists b\in B((a,b)\in R)\}
+\end{equation*}
+The \textit{range} of $R$ is the set
+\begin{equation*}
+\text{Ran}(R)=\{b\in B|\exists a\in A((a,b)\in R)\}
+\end{equation*}
+\end{definition}
+\begin{definition}
+Suppose $R$ is a relation from $A$ to $B$ and $S$ is a relation from $B$ to $C$. Then the \textit{composition} of $S$ and $R$ is the relation $S\circ R$ from $A$ to $C$ defined as
+\begin{equation*}
+S\circ R=\{(a,c)\in A\times C|\exists b\in B((a,b)\in R\text{ and }(b,c)\in S)\}
+\end{equation*}
+\end{definition}
+\noindent\textbf{Properties}\\
+Since functions are relations, these concepts can be applied here as well. For instance suppose $f:A\to B$. Then $f$ is a relation from $A$ to $B$ so it makes sense to talk about the 
+domain of $f$, which is a subset of $A$, and the range of $f$, which is a subset of $B$.\\
+\vspace{1mm}\\
+According to the definition of the function, every element of $A$ must appear as the first coordinate of exactly one ordered pair in $f$, so the domain of $f$ must be all of $A$. But the range
+of $f$ need not be all of $B$. The elements of the range of $f$ will be the second coordinate 
+of all the ordered pairs in $f$, also called the image of the first coordinate; thus the range of $f$ could also be described as the set of all images of the elements of $A$ under $f$:
+\begin{equation*}
+\text{Ran}(f)=\{f(a)|a\in A\}
+\end{equation*}
 (next page)\newpage
-\noindent Since
-
-
-
+\noindent\textbf{Cont.}\\
+The
 
 
 
