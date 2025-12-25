@@ -3188,7 +3188,7 @@ g&=\{(x,y)\in\mathbb Z\times\mathbb R|y=g(x)\}\\
 Note that when a function $f$ from $A$ to $B$ is specified by giving a rule for finding $f(a)$, the rule must determine the value of $f(a)$ for \textit{every} $a\in A$.
 \newpage
 
-\subsection{Function equality}
+\subsection{Function equality, Domain/Range/Composition}
 Since a function $f$ from $A$ to $B$ is completely determined by the rule for finding $f(a)$, two functions that are defined by equivalent rules must be equal:
 \begin{theorem}
 Suppose $f$ and $g$ are functions from $A$ to $B$. If $\forall a\in A(f(a)=g(a)$, then $f=g$.
@@ -3231,7 +3231,70 @@ of all the ordered pairs in $f$, also called the image of the first coordinate; 
 \end{equation*}
 (next page)\newpage
 \noindent\textbf{Cont.}\\
-The
+The definition of composition of relations can also be applied to functions. If $f:A\to B$ and $g:B\to C$, then $f$ is a relation from $A$ to $B$ and $g$ is a relation from $B$ to $C$. So $g\circ f$
+will be a relation from $A$ to $C$. In fact it turns out that $g\circ f$ is a function from $A$ to $C$.
+\begin{theorem}
+Suppose $f:A\to B$ and $g:B\to C$. Then $g\circ f:A\to C$, and for any $a\in A$, the value of $g\circ f$ at $a$ is given by the formula $(g\circ f)(a)=g(f(a))$.
+\end{theorem}
+\noindent\textbf{Existence and uniqueness}\\
+Before proving this theorem, recall the definition of a function. To show that $g\circ f:A\to C$ we must prove that $\forall x\in A\exists!c\in C((a,c)\in g\circ f)$ meaning
+that for all $a\in A$ there exists a unique $c$ (exactly one) such that $(a,c)\in g\circ f$.\\
+\vspace{1mm}\\
+The idea of `exactly one' implies existence and uniqueness:
+\begin{equation*}
+\exists!xP(x)=\exists x(P(x)\land\neg\exists y(P(y)\land y\neq x))=\exists x(P(x)\land\forall y(P(y)\to y=x))
+\end{equation*}
+Recall from the section on this that the following are equivalent:
+\begin{enumerate}
+\item$\exists x(P(x)\land\forall y(P(y)\to y=x))$
+\item$\exists x\forall y(P(y)\leftrightarrow y=x)$
+\item$\exists xP(x)\land\forall y\forall z((P(y)\land P(z))\to y=z)$ 
+\end{enumerate}
+(see that the existence and uniqueness only `goes one way'; in the sense that there must exist only one $b$ for each $a$, but nothing is said about there being multiple $a$ for each $b$.)
+In this proof we take the third approach; proving existence and uniqueness separately.\\
+\vspace{1mm}\\
+We are trying to show that $g\circ f$ is a function from $A$ to $C$, meaning 
+$\forall a\in A\exists!c\in C((a,c)\in g\circ f)$. Breaking down the `exactly' one part we get the final expression
+\begin{align*}
+\forall a\in A(&\exists c\in C((a,c)\in g\circ f)\\&\land\forall c_1\in C\forall c_2\in C(((a,c_1)\in g\circ f\land(a,c_2)\in g\circ f)\to c_1=c_2))
+\end{align*}
+(next page)\newpage
+\begin{theorem}
+Suppose $f:A\to B$ and $g:B\to C$. Then $g\circ f:A\to C$, and for any $a\in A$, the value of $g\circ f$ at $a$ is given by the formula $(g\circ f)(a)=g(f(a))$. 
+\end{theorem}
+\begin{proof}
+Let $a$ be an arbitrary element of $A$. We wil show existence and uniqueness separately.\\
+\indent Existence: Let $b=f(a)\in B$. Let $c=g(b)\in C$. Then $(a,b)\in f$ and $(b,c)\in g$, so by the definition of composition of relations, $(a,c)\in g\circ f$. Thus, 
+$\exists c\in C((a,c)\in g\circ f)$.\\
+\indent Uniqueness: Suppose $(a,c_1)\in g\circ f$ and $(a,c_2)\in g\circ f$. Then by the definition
+of composition, we can choose $b_1\in B$ such that $(a,b_1)\in f$ and $(b_1,c_1)\in g$, and we can
+choose $b_2\in B$ such that $(a,b_2)\in f$ and $(b_2,c_2)\in g$. Since $f$ is a function, there can be only one $b\in B$ such that $(a,b)\in f$. Thus since $(a,b_1)$ and $(a,b_2)$ are elements of 
+$f$, it follows that $b_1=b_2$. But now applying the same reasoning to $g$, since $(b_1,c_1)\in g$ and $(b_1,c_2)=(b_2,c_2)\in g$, it follows that $c_1=c_2$ as required.\\
+\indent This completes the proof that $g\circ f$ is a function from $A$ to $C$. Finally, to derive the formula for $(g\circ f)(a)$, note that we showed in the existence half of the proof 
+that for any $a\in A$, if we let $b=f(a)$ and $c=g(b)$, then $(a,c)\in g\circ f$. Thus
+\begin{equation*}
+(g\circ f)(a)=c=g(b)=g(f(a))\qedhere
+\end{equation*}
+\end{proof}
+\noindent I felt that the existence part and the last part of this proof were a bit opaque. I've included my own proof of those parts here:
+\begin{proof}Let $a$ be an arbitrary$\ldots$\\
+\indent\vdots\\
+\indent Existence: Since $a\in A$ and $f$ is a function from $A$ to $B$ we can declare some $b\in B$ such that $(a,b)\in f$. Then since $g$ is a function from $B$ to $C$ we can declare some $c\in C$ such
+that $(b,c)\in g$. Then by the definition of composition of functions, $(a,c)\in g\circ f$, thus $\exists c\in C((a,c)\in g\circ f)$.\\
+\indent\vdots\\
+\indent Finally to show the formula for $(g\circ f)(a)$, revisit the existence part of this proof, which found that for $a\in A$, we could declare $b\in B$ such that $b=f(a)$, and then that we could
+declare $c\in C$ such that $c=g(b)$. We then found that $(a,c)\in g\circ f$, which means 
+$(g\circ f)(a)=c$. Thus
+\begin{equation*}
+(g\circ f)(a)=c=g(b)=g(f(a))\qedhere
+\end{equation*}
+\end{proof}
+\noindent Remember that functions are just relations of a special kind. Everything proven about compositions of relations applies to composition of functions. (for instance associativity which 
+was proven in an earlier section)
+\newpage
+
+\section{}
+
 
 
 
