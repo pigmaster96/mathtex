@@ -3293,7 +3293,37 @@ $(g\circ f)(a)=c$. Thus
 was proven in an earlier section)
 \newpage
 
-\section{}
+\section{One-to-One and Onto}
+\begin{definition}
+Suppose $f:A\to B$. We will say that $f$ is \textit{one-to-one} if 
+\begin{equation*}
+\neg\exists a_1\in A\exists a_2\in A(f(a_1)=f(a_2)\land a_1\neq a_2)
+\end{equation*}
+We say that $f$ \textit{maps onto} $B$ (or just \textit{is onto} if $B$ is clear from context) if
+\begin{equation*}
+\forall b\in B\exists a\in A(f(a)=b)
+\end{equation*}
+One-to-one functions are sometimes also called \textit{injections}, and onto functions are sometimes called \textit{surjections}.
+\end{definition}
+\noindent\textbf{Intuition}\\
+Note that our definition of one-to-one starts with the negation symbol. In other words, to say that $f$ is one-to-one means that a certain situation does \textit{not} occur. Namely, it must not be
+the case that there are two different elements of the domain of $f$, $a_1$ and $a_2$, such that $f(a_1)=f(a_2)$:
+\begin{center}
+\includegraphics[width=11cm]{3}
+\end{center}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+If $f:A\to B$, then to say that $f$ is onto means that every element of $B$ is the image under $f$ of some element of $A$. In other words, in the diagram of $f$, 
+every element of $B$ has an edge pointing to it. In the figure on the previous page, neither of the functions are onto, because in both cases there are elements of $B$ without edges
+pointing to them.
+The following two functions are onto:
+\begin{center}
+\includegraphics[width=11cm]{4}
+\end{center}
+\textbf{Example}
+
+
+
 
 
 
