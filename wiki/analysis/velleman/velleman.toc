@@ -1,74 +1,75 @@
-\contentsline {chapter}{\numberline {1}Logic}{3}{}%
-\contentsline {subsection}{\numberline {1.0.1}Logic Factsheet}{3}{}%
-\contentsline {subsection}{\numberline {1.0.2}Set operation definitions}{4}{}%
-\contentsline {subsection}{\numberline {1.0.3}Distributivity of set operations}{4}{}%
-\contentsline {subsection}{\numberline {1.0.4}$x\in A\setminus (B\cap C)=x\in (A\setminus B)\cup (A\setminus C)$}{5}{}%
-\contentsline {subsection}{\numberline {1.0.5}$x\in (A\cup B)\setminus (A\cap B)=x\in (A\setminus B)\cup (B\setminus A)$}{5}{}%
-\contentsline {subsection}{\numberline {1.0.6}$(A\cap B)\cap (A\setminus B)=\emptyset $}{5}{}%
-\contentsline {subsection}{\numberline {1.0.7}Symmetric difference}{6}{}%
-\contentsline {subsection}{\numberline {1.0.8}Conditional and Contrapositive laws}{6}{}%
-\contentsline {subsection}{\numberline {1.0.9}Biconditional statements}{7}{}%
-\contentsline {section}{\numberline {1.1}Quantificational logic}{8}{}%
-\contentsline {subsection}{\numberline {1.1.1}Quantifier negation laws}{8}{}%
-\contentsline {subsection}{\numberline {1.1.2}Notation}{8}{}%
-\contentsline {subsection}{\numberline {1.1.3}Negation law for bounded quantifiers}{9}{}%
-\contentsline {subsection}{\numberline {1.1.4}Vacuously true}{10}{}%
-\contentsline {subsection}{\numberline {1.1.5}Alternate definition for indexed families}{11}{}%
-\contentsline {subsection}{\numberline {1.1.6}Power set}{12}{}%
-\contentsline {subsection}{\numberline {1.1.7}Intersection and union of a family of sets}{12}{}%
-\contentsline {subsection}{\numberline {1.1.8}More on set notation}{13}{}%
-\contentsline {chapter}{\numberline {2}Proof Strategies}{14}{}%
-\contentsline {subsection}{\numberline {2.0.1}Terminology}{14}{}%
-\contentsline {section}{\numberline {2.1}To prove a conclusion of the form $P\to Q$}{15}{}%
-\contentsline {subsection}{\numberline {2.1.1}Alternative approach}{17}{}%
-\contentsline {section}{\numberline {2.2}Proofs involving negations and conditionals}{19}{}%
-\contentsline {subsection}{\numberline {2.2.1}Reexpress}{19}{}%
-\contentsline {subsection}{\numberline {2.2.2}Proof by contradiction}{20}{}%
-\contentsline {subsection}{\numberline {2.2.3}To use a given of the form $\neg P$ in proof by contradiction}{22}{}%
-\contentsline {subsection}{\numberline {2.2.4}Given conditionals}{25}{}%
-\contentsline {section}{\numberline {2.3}Proofs involving quantifiers}{28}{}%
-\contentsline {subsection}{\numberline {2.3.1}Goals of form $\forall xP(x)$}{28}{}%
-\contentsline {subsection}{\numberline {2.3.2}Goals of form $\exists xP(x)$}{31}{}%
-\contentsline {subsection}{\numberline {2.3.3}Givens of the form $\exists xP(x)$ and $\forall xP(x)$}{34}{}%
-\contentsline {subsection}{\numberline {2.3.4}Example: For all integers $a,b,c$, if $a\mid b$ and $b\mid c$ then $a\mid c$}{37}{}%
-\contentsline {section}{\numberline {2.4}Proofs involving conjunctions and biconditionals}{38}{}%
-\contentsline {subsection}{\numberline {2.4.1}Goals and givens of form $P\land Q$}{38}{}%
-\contentsline {subsection}{\numberline {2.4.2}Goals and givens of the form $P\leftrightarrow Q$ (part 1)}{40}{}%
-\contentsline {subsection}{\numberline {2.4.3}Example: Suppose $x$ is an integer. Prove that $x$ is even iff $x^2$ is even}{40}{}%
-\contentsline {subsection}{\numberline {2.4.4}Proving $\forall x\neg P(x)\leftrightarrow \neg \exists xP(x)$}{42}{}%
-\contentsline {subsection}{\numberline {2.4.5}Goals and givens of the form $P\leftrightarrow Q$ (part 2)}{43}{}%
-\contentsline {subsection}{\numberline {2.4.6}Example: For every integer $n$, $6\mid n$ iff $2\mid n$ and $3\mid n$}{45}{}%
-\contentsline {section}{\numberline {2.5}Proofs involving disjunctions}{46}{}%
-\contentsline {subsection}{\numberline {2.5.1}Goal of form $P\lor Q$ (part 1)}{48}{}%
-\contentsline {subsection}{\numberline {2.5.2}Example: For integer $x$, the remainder when $x^2$ is divided by 4 is either 0 or 1}{49}{}%
-\contentsline {subsection}{\numberline {2.5.3}Goal of form $P\lor Q$ (part 2)}{51}{}%
-\contentsline {subsection}{\numberline {2.5.4}Given of form $P\lor Q$ (part 2)}{53}{}%
-\contentsline {section}{\numberline {2.6}Existence and Uniqueness proofs}{54}{}%
-\contentsline {subsection}{\numberline {2.6.1}Strategies and examples}{57}{}%
-\contentsline {subsection}{\numberline {2.6.2}Given of the form $\exists !xP(x)$}{60}{}%
-\contentsline {chapter}{\numberline {3}Relations}{62}{}%
-\contentsline {section}{\numberline {3.1}Ordered pairs and Cartesian product}{62}{}%
-\contentsline {subsection}{\numberline {3.1.1}Properties of the Cartesian product}{64}{}%
-\contentsline {subsection}{\numberline {3.1.2}Truth sets}{68}{}%
-\contentsline {section}{\numberline {3.2}Relations}{69}{}%
-\contentsline {subsection}{\numberline {3.2.1}Domain, Range, Inverse, Composition}{70}{}%
-\contentsline {subsection}{\numberline {3.2.2}Alternate notation and visual representation}{73}{}%
-\contentsline {subsection}{\numberline {3.2.3}Binary relations}{74}{}%
-\contentsline {section}{\numberline {3.3}Ordering relations}{77}{}%
-\contentsline {subsection}{\numberline {3.3.1}Smallest and minimal element}{78}{}%
-\contentsline {subsection}{\numberline {3.3.2}Upper and lower bounds}{82}{}%
-\contentsline {section}{\numberline {3.4}Equivalence relations}{84}{}%
-\contentsline {subsection}{\numberline {3.4.1}More definitions}{85}{}%
-\contentsline {subsection}{\numberline {3.4.2}Equivalence relations and partitions}{88}{}%
-\contentsline {subsection}{\numberline {3.4.3}More on equivalence relations and partitions}{90}{}%
-\contentsline {subsection}{\numberline {3.4.4}Even more on equivalence relations and partitions}{93}{}%
-\contentsline {subsection}{\numberline {3.4.5}Congruence modulo $m$}{94}{}%
-\contentsline {chapter}{\numberline {4}Functions}{95}{}%
-\contentsline {section}{\numberline {4.1}Definition}{95}{}%
-\contentsline {subsection}{\numberline {4.1.1}Function equality, Domain/Range/Composition}{97}{}%
-\contentsline {section}{\numberline {4.2}One-to-One and Onto}{100}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{102}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{102}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{102}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{102}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{103}{}%
+\contentsline {chapter}{\numberline {1}Logic}{4}{}%
+\contentsline {subsection}{\numberline {1.0.1}Logic Factsheet}{4}{}%
+\contentsline {subsection}{\numberline {1.0.2}Set operation definitions}{5}{}%
+\contentsline {subsection}{\numberline {1.0.3}Distributivity of set operations}{5}{}%
+\contentsline {subsection}{\numberline {1.0.4}$x\in A\setminus (B\cap C)=x\in (A\setminus B)\cup (A\setminus C)$}{6}{}%
+\contentsline {subsection}{\numberline {1.0.5}$x\in (A\cup B)\setminus (A\cap B)=x\in (A\setminus B)\cup (B\setminus A)$}{6}{}%
+\contentsline {subsection}{\numberline {1.0.6}$(A\cap B)\cap (A\setminus B)=\emptyset $}{6}{}%
+\contentsline {subsection}{\numberline {1.0.7}Symmetric difference}{7}{}%
+\contentsline {subsection}{\numberline {1.0.8}Conditional and Contrapositive laws}{7}{}%
+\contentsline {subsection}{\numberline {1.0.9}Biconditional statements}{8}{}%
+\contentsline {section}{\numberline {1.1}Quantificational logic}{9}{}%
+\contentsline {subsection}{\numberline {1.1.1}Quantifier negation laws}{9}{}%
+\contentsline {subsection}{\numberline {1.1.2}Notation}{9}{}%
+\contentsline {subsection}{\numberline {1.1.3}Negation law for bounded quantifiers}{10}{}%
+\contentsline {subsection}{\numberline {1.1.4}Vacuously true}{11}{}%
+\contentsline {subsection}{\numberline {1.1.5}Alternate definition for indexed families}{12}{}%
+\contentsline {subsection}{\numberline {1.1.6}Power set}{13}{}%
+\contentsline {subsection}{\numberline {1.1.7}Intersection and union of a family of sets}{13}{}%
+\contentsline {subsection}{\numberline {1.1.8}More on set notation}{14}{}%
+\contentsline {chapter}{\numberline {2}Proof Strategies}{15}{}%
+\contentsline {subsection}{\numberline {2.0.1}Terminology}{15}{}%
+\contentsline {section}{\numberline {2.1}To prove a conclusion of the form $P\to Q$}{16}{}%
+\contentsline {subsection}{\numberline {2.1.1}Alternative approach}{18}{}%
+\contentsline {section}{\numberline {2.2}Proofs involving negations and conditionals}{20}{}%
+\contentsline {subsection}{\numberline {2.2.1}Reexpress}{20}{}%
+\contentsline {subsection}{\numberline {2.2.2}Proof by contradiction}{21}{}%
+\contentsline {subsection}{\numberline {2.2.3}To use a given of the form $\neg P$ in proof by contradiction}{23}{}%
+\contentsline {subsection}{\numberline {2.2.4}Given conditionals}{26}{}%
+\contentsline {section}{\numberline {2.3}Proofs involving quantifiers}{29}{}%
+\contentsline {subsection}{\numberline {2.3.1}Goals of form $\forall xP(x)$}{29}{}%
+\contentsline {subsection}{\numberline {2.3.2}Goals of form $\exists xP(x)$}{32}{}%
+\contentsline {subsection}{\numberline {2.3.3}Givens of the form $\exists xP(x)$ and $\forall xP(x)$}{35}{}%
+\contentsline {subsection}{\numberline {2.3.4}Example: For all integers $a,b,c$, if $a\mid b$ and $b\mid c$ then $a\mid c$}{38}{}%
+\contentsline {section}{\numberline {2.4}Proofs involving conjunctions and biconditionals}{39}{}%
+\contentsline {subsection}{\numberline {2.4.1}Goals and givens of form $P\land Q$}{39}{}%
+\contentsline {subsection}{\numberline {2.4.2}Goals and givens of the form $P\leftrightarrow Q$ (part 1)}{41}{}%
+\contentsline {subsection}{\numberline {2.4.3}Example: Suppose $x$ is an integer. Prove that $x$ is even iff $x^2$ is even}{41}{}%
+\contentsline {subsection}{\numberline {2.4.4}Proving $\forall x\neg P(x)\leftrightarrow \neg \exists xP(x)$}{43}{}%
+\contentsline {subsection}{\numberline {2.4.5}Goals and givens of the form $P\leftrightarrow Q$ (part 2)}{44}{}%
+\contentsline {subsection}{\numberline {2.4.6}Example: For every integer $n$, $6\mid n$ iff $2\mid n$ and $3\mid n$}{46}{}%
+\contentsline {section}{\numberline {2.5}Proofs involving disjunctions}{47}{}%
+\contentsline {subsection}{\numberline {2.5.1}Goal of form $P\lor Q$ (part 1)}{49}{}%
+\contentsline {subsection}{\numberline {2.5.2}Example: For integer $x$, the remainder when $x^2$ is divided by 4 is either 0 or 1}{50}{}%
+\contentsline {subsection}{\numberline {2.5.3}Goal of form $P\lor Q$ (part 2)}{52}{}%
+\contentsline {subsection}{\numberline {2.5.4}Given of form $P\lor Q$ (part 2)}{54}{}%
+\contentsline {section}{\numberline {2.6}Existence and Uniqueness proofs}{55}{}%
+\contentsline {subsection}{\numberline {2.6.1}Strategies and examples}{58}{}%
+\contentsline {subsection}{\numberline {2.6.2}Given of the form $\exists !xP(x)$}{61}{}%
+\contentsline {chapter}{\numberline {3}Relations}{63}{}%
+\contentsline {section}{\numberline {3.1}Ordered pairs and Cartesian product}{63}{}%
+\contentsline {subsection}{\numberline {3.1.1}Properties of the Cartesian product}{65}{}%
+\contentsline {subsection}{\numberline {3.1.2}Truth sets}{69}{}%
+\contentsline {section}{\numberline {3.2}Relations}{70}{}%
+\contentsline {subsection}{\numberline {3.2.1}Domain, Range, Inverse, Composition}{71}{}%
+\contentsline {subsection}{\numberline {3.2.2}Alternate notation and visual representation}{74}{}%
+\contentsline {subsection}{\numberline {3.2.3}Binary relations}{75}{}%
+\contentsline {section}{\numberline {3.3}Ordering relations}{78}{}%
+\contentsline {subsection}{\numberline {3.3.1}Smallest and minimal element}{79}{}%
+\contentsline {subsection}{\numberline {3.3.2}Upper and lower bounds}{83}{}%
+\contentsline {section}{\numberline {3.4}Equivalence relations}{85}{}%
+\contentsline {subsection}{\numberline {3.4.1}More definitions}{86}{}%
+\contentsline {subsection}{\numberline {3.4.2}Equivalence relations and partitions}{89}{}%
+\contentsline {subsection}{\numberline {3.4.3}More on equivalence relations and partitions}{91}{}%
+\contentsline {subsection}{\numberline {3.4.4}Even more on equivalence relations and partitions}{94}{}%
+\contentsline {subsection}{\numberline {3.4.5}Congruence modulo $m$}{95}{}%
+\contentsline {chapter}{\numberline {4}Functions}{96}{}%
+\contentsline {section}{\numberline {4.1}Definition}{96}{}%
+\contentsline {subsection}{\numberline {4.1.1}Function equality, Domain/Range/Composition}{98}{}%
+\contentsline {section}{\numberline {4.2}One-to-One and Onto}{101}{}%
+\contentsline {subsection}{\numberline {4.2.1}Composition of functions}{105}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{106}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{106}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{106}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{106}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{107}{}%

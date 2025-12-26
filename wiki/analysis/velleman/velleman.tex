@@ -3320,8 +3320,81 @@ The following two functions are onto:
 \begin{center}
 \includegraphics[width=11cm]{4}
 \end{center}
-\textbf{Example}
+\textbf{Example}\\
+Consider the function $g$ from $\mathbb Z$ to $\mathbb R$ defined by $g(x)=2x+3$. To decide whether $g$ is one-to-one, we must determine whether there are integers $n_1$ and $n_2$ such that 
+$g(n_1)=g(n_2)$ and $n_1\neq n_2$. According to the definition of $g$, we have
+\begin{align*}
+g(n_1)=g(n_2)&\text{ iff }2n_1+3=2n_2+3\\
+&\text{ iff }2n_1=2n_2\\
+&\text{ iff }n_1=n_2
+\end{align*}
+Thus there can be no integers $n_1$ and $n_2$ for which $g(n_1)=g(n_2)$ and $n_1\neq n_2$. So $g$ is one-to-one.\\
+\vspace{1mm}\\
+However, $g$ is not onto; for example there is no integer $n$ for which $g(n)=0$. To
+see why suppose $n$ is an integer and $g(n)=0$. Then by the definition of $g$ we have $2n+3=0$ and $n=-3/2$, contradicting the fact that $n$ is an integer. Since the domain of $g$ is $\mathbb Z$, 
+for $g$ to be onto it must be the case that for every real number $y$ there is an \textit{integer} $n$ such that $g(n)=y$. This counterexample allows us to conclude that $g$ is not onto.
+(next page)\newpage
+\begin{theorem}
+Suppose $f:A\to B$.
+\begin{enumerate}
+\item $f$ is one-to-one iff $\forall a_1\in A\forall a_2\in A(f(a_1)=f(a_2)\to a_1=a_2)$.
+\item $f$ is onto iff $\text{Ran}(f)=B$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}\hspace{1mm}
+\begin{enumerate}
+\item We have
+\begin{align*}
+f\text{ is one-to-one}&\text{ iff }\neg\exists a_1\in A\exists a_2\in A(f(a_1)=f(a_2)\land a_1\neq a_2)\\
+&\text{ iff }\forall a_1\in A\forall a_2\in A\neg(f(a_1)=f(a_2)\land a_1\neq a_2)\\
+&\text{ iff }\forall a_1\in A\forall a_2\in A(f(a_1)=f(a_2)\to a_1=a_2)
+\end{align*}
+\item First see that we have the equivalence:
+\begin{align*}
+f\text{ is onto}&\text{ iff }\forall b\in B\exists a\in A(f(a)=b)\\
+&\text{ iff }\forall b\in B\exists a\in A((a,b)\in f)\\
+&\text{ iff }\forall b\in B (b\in\text{Ran}(f))\\
+&\text{ iff }B\subseteq\text{Ran}(f)
+\end{align*}
+($\rightarrow$) Suppose $f$ is onto. By the equivalence just derived we have $B\subseteq\text{Ran}(f)$. and by the definition of range we have $\text{Ran}(f)\subseteq B$. Thus it follows
+that $\text{Ran}(f)=B$.\\
+($\leftarrow$) Suppose $\text{Ran}(f)=B$. Then certainly $B\subseteq\text{Ran}(f)$, so by the equivalence, $f$ is onto.\qedhere
+\end{enumerate}
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Example.} Let $A=\mathbb R\backslash\{-1\}$, and define $f:A\to\mathbb R$ by the formula 
+\begin{equation*}
+f(a)=\frac{2a}{a+1}
+\end{equation*}
+Prove that $f$ is one-to-one but not onto.
+\begin{proof}
+To see that $f$ is one-to-one, let $a_1$ and $a_2$ be arbitrary elements of $A$ and suppose that $f(a_1)=f(a_2)$. Applying the definition of $f$, it follows that $2a_1/(a_1+1)=2a_2/(a_2+1)$. 
+Multiplying out both sides gives us $2a_1a_2+2a_1=2a_1a_2+2a_2$, so $2a_1=2a_2$ and therefore $a_1=a_2$.\\
+\indent To show that $f$ is not onto we will prove that $\forall a\in A(f(a)\neq2)$. Suppose $a\in A$ and $f(a)=2$. Applying the definition of $f$, we get $2a/(a+1)=2$. Thus, $2a=2a+2$ which is
+clearly impossible. Thus $f(a)\neq2$ for arbitrary $a$ and $f$ is not onto.
+\end{proof}
+\noindent\textbf{Intuition for proof}\\
+By the previous theorem we can prove $f$ is one-to-one by proving the equivalent statement $\forall a_1\in A\forall a_2\in A(f(a_1)=f(a_2)\to a_1=a_2)$. The one-to-one part of the proof is
+fairly straightforward from there.\\
+\vspace{1mm}\\
+To show that $f$ is not onto we prove $\neg\forall x\in\mathbb R\exists a\in A(f(a)=x)$. This is equivalent to showing $\exists x\in\mathbb R\forall a\in A(f(a)\neq x)$, so we should try to find
+a particular real number $x$ such that $\forall a\in A(f(a)\neq x)$. Unfortunately it is not clear what value we should use for $x$. We consider a somewhat unusual procedure to get around this:
+consider trying to prove that $f$ \textit{is} onto; we expect this won't work, but it might hint at the value of $x$ we are trying to find.\\
+\vspace{1mm}\\
+We would have to prove $\forall x\in\mathbb R\exists a\in A(f(a)=x)$ so we let $x$ be an arbitrary
+real number and try to find some $a\in A$ such that $f(a)=x$. Using the definition of $f$, we 
+must find some $a\in A$ such that 
+\begin{equation*}
+\frac{2a}{a+1}=x
+\end{equation*}
+expression in terms of $a$ gives us
+\begin{equation*}
+\frac{2a}{a+1}=x\leftrightarrow2a=ax+x\leftrightarrow a(2-x)=x\leftrightarrow a=\frac{x}{2-x}
+\end{equation*}
+Now see that the last step in this derivation wouldn't work if $x=2$, giving us a candidate value for $x$. The rest of the proof is fairly straightforward; we use contradiction.
+\newpage
 
+\subsection{Composition of functions}
 
 
 
