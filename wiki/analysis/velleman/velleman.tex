@@ -3191,7 +3191,7 @@ Note that when a function $f$ from $A$ to $B$ is specified by giving a rule for 
 \subsection{Function equality, Domain/Range/Composition}
 Since a function $f$ from $A$ to $B$ is completely determined by the rule for finding $f(a)$, two functions that are defined by equivalent rules must be equal:
 \begin{theorem}
-Suppose $f$ and $g$ are functions from $A$ to $B$. If $\forall a\in A(f(a)=g(a)$, then $f=g$.
+Suppose $f$ and $g$ are functions from $A$ to $B$. If $\forall a\in A(f(a)=g(a))$, then $f=g$.
 \end{theorem}
 \begin{proof}
 Suppose $\forall a\in A(f(a)=g(a))$. Let $(a,b)$ be an arbitrary element of $f$. Then $b=f(a)$. But
@@ -3448,7 +3448,33 @@ f^{-1}(b)&=\text{the unique $a\in A$ such that }(b,a)\in f^{-1}\\
 \end{align*}
 \newpage
 
-\subsection{}
+\subsection{Identity function}
+Recall the theorem proved earlier regarding function equality. To prove that two functions are equal we usually apply this theorem.
+\begin{theorem}
+Suppose $f$ and $g$ are functions from $A$ to $B$. If $\forall a\in A(f(a)=g(a))$, then $f=g$.
+\end{theorem}
+\begin{theorem}
+Suppose $f$ is a function from $A$ to $B$, and suppose that $f^{-1}$ is a function from $B$ to $A$. Then $f^{-1}\circ f=i_A$ and $f\circ f^{-1}=i_B$.
+\end{theorem}
+\begin{proof}
+Let $a$ be an arbitrary element of $A$. Then $b=f(a)\in B$. Then $(a,b)\in f$, so $(b,a)\in f^{-1}$ and therefore $f^{-1}(b)=a$. Thus
+\begin{equation*}
+(f^{-1}\circ f)(a)=f^{-1}(f(a))=f^{-1}(b)=a=i_A(a)
+\end{equation*}
+Since $a$ was arbitrary, we have shown that $\forall a\in A((f^{-1}\circ f)(a)=i_A(a))$, so $f^{-1}\circ f=i_A$.\\
+\indent Now let $b$ be an arbitrary element of $B$. Then $a=f^{-1}(b)$ and $(b,a)\in f^{-1}$. Then $(a,b)\in f$ and $f(a)=b$. Thus
+\begin{equation*}
+(f\circ f^{-1})(b)=f(f^{-1}(b))=f(a)=b=i_B(b)
+\end{equation*}
+Since $b$ was arbitrary, we have shown that $\forall b\in B((f\circ f^{-1})(b)=i_B(b))$, so $f\circ f^{-1}=i_B$.
+\end{proof}
+\noindent This theorem essentially says that if $f:A\to B$ and $f^{-1}:B\to A$, then each function undoes the effect of the other.
+For any $a\in A$, applying the function $f$ gives us $f(a)\in B$. According to the theorem, $f^{-1}(f(a))=(f^{-1}\circ f)(a)=i_A(a)=a$, thus undoing the effect of applying $f$.
+Similarly for any $b\in B$, applying $f^{-1}$ we get $f^{-1}(b)\in A$, and we can undo the effect of applying $f^{-1}$ by applying $f$, since $f(f^{-1}(b))=b$.\\
+(next page)\newpage
+\begin{theorem}
+
+\end{theorem}
 
 
 
