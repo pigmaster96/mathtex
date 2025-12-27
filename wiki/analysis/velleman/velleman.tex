@@ -3395,8 +3395,60 @@ Now see that the last step in this derivation wouldn't work if $x=2$, giving us 
 \newpage
 
 \subsection{Composition of functions}
+\begin{theorem}
+Suppose $f:A\to B$ and $g:B\to C$. As we saw earlier, it follows that $g\circ f:A\to C$. 
+\begin{enumerate}
+\item If $f$ and $g$ are both one-to-one, then so is $g\circ f$.
+\item If $f$ and $g$ are both onto, then so is $g\circ f$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}\hspace{1mm}
+\begin{enumerate}
+\item Suppose $f$ and $g$ are both one-to-one. Let $a_1$ and $a_2$ be arbitrary elements of $A$ and suppose that $(g\circ f)(a_1)=(g\circ f)(a_2)$. By an earlier theorem this means that 
+$g(f(a_1))=g(f(a_2))$. Since $g$ is one-to-one it follows that $f(a_1)=f(a_2)$, and similarly since $f$ is one-to-one we can then conclude that $a_1=a_2$. Thus $g\circ f$ is one-to-one.
+\item Suppose $f$ and $g$ are both onto. Let $c$ be an arbitrary element of $C$. Since $g$ is onto, we can find some $b\in B$ such that $c=g(b)$. Similarly since $f$ is onto, there is some $a\in A$
+such that $b=f(a)$.
+Then $(g\circ f)(a)=g(f(a))=g(b)=c$. Thus $g\circ f$ is onto.\qedhere
+\end{enumerate}
+\end{proof}
+\noindent Functions that are both one-to-one and onto are sometimes called \textit{one-to-one correspondences} or \textit{bijections}. 
+\newpage
 
+\section{Inverses of functions}
+One may question whether the inverse of a function from $A$ to $B$ is always a function from $B$ to $A$. Consider the function $F$, where $A=\{1,2,3\}$, $B=\{4,5,6\}$, and $F=\{(1,5),(2,4),(3,5)\}$.
+$F$ is a function from $A$ to $B$. But consider $F^{-1}$, which by definition is $F^{-1}=\{(5,1),(4,2),(5,3)\}$, which is clearly a relation from $B$ to $A$, but fails to be a function from $B$ 
+to $A$ for two reasons: firstly $6\in B$ but isn't paired with any element of $A$ in the relation $F^{-1}$. Second, 5 is paired with two different elements of $A$, 1 and 3.\\
+\vspace{1mm}\\
+The inverse of a function from $A$ to $B$ is not always a function from $B$ to $A$.
+\begin{theorem}
+Suppose $f:A\to B$. If $f$ is one-to-one and onto, then $f^{-1}:B\to A$.
+\end{theorem}
+\begin{proof}
+Suppose $f$ is one-to-one and onto, and let $b$ be an arbitrary element of $B$. To show $f^{-1}$ is a function form $B$ to $A$. We must prove that $\exists!a\in A((a,b)\in f^{-1})$, so we
+prove existence and uniqueness separately.\\
+\indent Existence: Since $f$ is onto, there is some $a\in A$ such that $b=f(a)$. Thus $(a,b)\in f$, so $(b,a)\in f^{-1}$.\\
+\indent Uniqueness: Suppose $(b,a_1)\in f^{-1}$ and $(b,a_2)\in f^{-1}$ for some $a_1,a_2\in A$. Then $(a_1,b)\in f$ and $(a_2,b)\in f$, so $f(a_1)=b=f(a_2)$. Since $f$ is one-to-one, it follows that $a_1=a_2$.
+\end{proof}
+\noindent The form of this proof is guided by the logical form of the statement $f^{-1}:B\to A$, meaning $\forall b\in B\exists!a\in A((b,a)\in f^{-1})$. We let $b$ be arbitrary and prove existence
+and uniqueness separately. Note that the assumption that $f$ is onto is the key to the existence half of the proof, and the assumption that $f$ is one-to-one is the key to the uniqueness half.\\
+\vspace{1mm}\\
+\textbf{Sufficient, Necessary, Converse}\\
+Recall that saying that $A$ is a sufficient condition for $B$ means $A\to B$. Saying that $A$ is a necessary condition for $B$ means $\neg A\to\neg B$; by contrapositivity this is equivalent to 
+$B\to A$---the converse of $A\to B$.\\
+\vspace{1mm}\\
+Suppose $f$ is any function from the set $A$ to a set $B$. the previous theorem says that a sufficient condition for $f^{-1}$ to be a function from $B$ to $A$ is that $f$ is one-to-one and onto.\\
+\vspace{1mm}\\
+\textbf{Intuition}\\
+Again suppose $f:A\to B$. If $f^{-1}:B\to A$, then by definition, for every $b\in B$ there is exactly one $a\in A$ such that
+$(b,a)\in f^{-1}$ and
+\begin{align*}
+f^{-1}(b)&=\text{the unique $a\in A$ such that }(b,a)\in f^{-1}\\
+&=\text{the unique $a\in A$ such that }(a,b)\in f\\
+&=\text{the unique $a\in A$ such that }f(a)=b
+\end{align*}
+\newpage
 
+\subsection{}
 
 
 
