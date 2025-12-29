@@ -3527,7 +3527,11 @@ $1\to2$. This is precisely what the first theorem says.\\
 \end{proof}
 \newpage
 
-\subsection{}
+\subsection{More implications}
+\textbf{Intuition}\\
+Say some $g$ and $f$ are functions from $\mathbb R$ to $\mathbb R$, where $g\circ f=i_{\mathbb R}$ and $f\circ g=i_R$. It follows from the previous theorem that $f$ must be one-to-one and onto, and 
+$f^{-1}$ must also be a function from $\mathbb R$ to $\mathbb R$. One may wonder what is $f^{-1}$; a logical guess would be that $f^{-1}=g$, but this doesn't actually follow from the theorems we've
+proven. The following theorem shows that $f^{-1}$ must be equal to $g$.
 \begin{lemma}
 Suppose $A$ and $B$ are sets,
 \begin{enumerate}
@@ -3547,6 +3551,20 @@ Now let $(a,b)$ be an arbitrary element of $R$. Then $b\in B$ and $(b,b)\in i_B$
 $R\subseteq i_B\circ R$, so $i_B\circ R=R$.\qedhere
 \end{enumerate}
 \end{proof}
+\begin{theorem}
+Suppose $f:A\to B$, $g:B\to A$, $g\circ f=i_A$, and $f\circ g=i_B$. Then $g=f^{-1}$.
+\end{theorem}
+\begin{proof}
+By the previous theorem, $f^{-1}:B\to A$. By a theorem from the first subsection, $f^{-1}\circ f=i_A$. Thus
+\begin{align*}
+g&=i_A\circ g&(\text{lemma})\\
+&=(f^{-1}\circ f)\circ g&\\
+&=f^{-1}\circ(f\circ g)&(\text{associativity, proven earlier})\\
+&=f^{-1}\circ i_B&\\
+&=f^{-1}&(\text{lemma})
+\end{align*}
+\end{proof}
+\newpage
 
 
 

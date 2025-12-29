@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1766976236 "velleman.tex" "velleman.pdf" "velleman" 1766976237 0
+["pdflatex"] 1767009778 "velleman.tex" "velleman.pdf" "velleman" 1767009778 0
   "/etc/texmf/web2c/texmf.cnf" 1749907355 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -60,6 +60,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb" 1248133631 32716 08e384dc442464e7285e891af9f45947 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1248133631 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb" 1248133631 34694 ad62b13721ee8eda1dcc8993c8bd7041 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb" 1248133631 35309 940e81a5b9e04201a07e8b33a3ae6e64 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb" 1229303445 16077 4737ac34f0fb5608550f3780a0202c22 ""
   "/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1461363279 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty" 1591045760 12594 0d51ac3a545aaaa555021326ff22a6cc ""
@@ -100,9 +101,9 @@
   "images//2.png" 1765697707 8878 ff05dc4297e98e2b1f7c8a702299680a ""
   "images//3.png" 1766646694 19313 4049eabee0138790555fa7891b99b1b4 ""
   "images//4.png" 1766647322 20507 863b1ac73b35a9687efe53e59871b439 ""
-  "velleman.aux" 1766976237 10365 561bab9b747157e4af65a62dfeb2aac3 "pdflatex"
-  "velleman.tex" 1766976236 194974 608e53a95921a6e8889027f5acc84d62 ""
-  "velleman.toc" 1766976237 6712 4267208e36efee68298b475a3539711d "pdflatex"
+  "velleman.aux" 1767009778 10382 1a001b847a9b7373dfaad546dc800a4d "pdflatex"
+  "velleman.tex" 1767009777 195936 cfc260e896b8c14ae7d5c32c1e1826c1 ""
+  "velleman.toc" 1767009778 6729 16431a98b82fd596732e9c6d191b8d52 "pdflatex"
   (generated)
   "velleman.aux"
   "velleman.log"

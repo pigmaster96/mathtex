@@ -71,7 +71,7 @@
 \contentsline {section}{\numberline {4.3}Inverses of functions}{106}{}%
 \contentsline {subsection}{\numberline {4.3.1}Identity function}{107}{}%
 \contentsline {subsection}{\numberline {4.3.2}Circle of implications}{109}{}%
-\contentsline {subsection}{\numberline {4.3.3}}{110}{}%
+\contentsline {subsection}{\numberline {4.3.3}More implications}{110}{}%
 \contentsline {chapter}{\numberline {A}Exercises}{111}{}%
 \contentsline {section}{\numberline {A.1}Ch 3}{111}{}%
 \contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{111}{}%
