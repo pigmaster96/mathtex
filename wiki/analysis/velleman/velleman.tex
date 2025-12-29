@@ -3528,6 +3528,27 @@ $1\to2$. This is precisely what the first theorem says.\\
 \newpage
 
 \subsection{}
+\begin{lemma}
+Suppose $A$ and $B$ are sets,
+\begin{enumerate}
+\item For every relation $R$ from $A$ to $B$, $R\circ i_A=R$.
+\item For every relation $R$ from $A$ to $B$, $i_B\circ R=R$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}\hspace{1mm}
+\begin{enumerate}
+\item Let $R$ be some relation from $A$ to $B$. Let $(a,b)$ be an arbitrary element of $R\circ i_A$. Then we can declare some $a_0\in A$ such that $(a,a_0)\in i_A$ and $(a_0,b)\in R$. Since 
+$(a,a_0)\in i_A$, $a=a_0$. So $(a,b)=(a_0,b)\in R$. Since $(a,b)$ was arbitrary, $R\circ i_A\subseteq R$.\\
+Now let $(a,b)$ be an arbitrary element of $R$. Then $a\in A$, so $(a,a)\in i_A$. Since $(a,a)\in i_A$ and $(a,b)\in R$, $(a,b)\in R\circ i_A$. Since $(a,b)$ was arbitrary,
+$R\subseteq R\circ i_A$ and $R\circ i_A=R$.
+\item Let $R$ be some relation from $A$ to $B$. Let $(a,b)$ be an arbitrary element of $i_B\circ R$. Then we can declare some $b_0\in B$
+such that $(a,b_0)\in R$ and $(b_0,b)\in i_B$. Since $(b_0,b)\in i_B$. $b=b_0$. so $(a,b)=(a,b_0)\in R$. Since $(a,b)$ is arbitrary, $i_B\circ R\subseteq R$.\\
+Now let $(a,b)$ be an arbitrary element of $R$. Then $b\in B$ and $(b,b)\in i_B$. Since $(a,b)\in R$ and $(b,b)\in i_B$, $(a,b)\in i_B\circ R$. Since $(a,b)$ was arbitrary, 
+$R\subseteq i_B\circ R$, so $i_B\circ R=R$.\qedhere
+\end{enumerate}
+\end{proof}
+
+
 
 
 
