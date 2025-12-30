@@ -3600,8 +3600,25 @@ For another example, let $f:\mathbb R\to\mathbb R$ and $g:\mathbb R\to R$ be def
 \vspace{1mm}\\
 For every natural number $n$, $n+1$ is also a natural number, so $\mathbb N$ is closed under $f$. However $\mathbb N$ is not closed under $g$, because $0\in N$ but $g(0)=-1\notin\mathbb N$.\\
 \vspace{1mm}\\
-\textbf{Intuition}\\
-We saw
+\textbf{Intuition for closures}\\
+We saw in the second example that $\mathbb N$ is not closed under the function $g:\mathbb R\to\mathbb R$ defined by the formula $g(x)=x-1$. Suppose we wanted to add elements to $\mathbb N$ to get a
+set that is closed under $g$. Since $0\in\mathbb N$ we'd need to add $g(0)=-1$. But if we added $-1$ to the set, then it would also have to contain $g(-1)=-2$, and if we added $-2$ in we'd 
+need to add $g(-2)=-3$. Continuing in this way it should be clear that we'd have to add all the negative integers to $\mathbb N$, giving us the set of all integers $\mathbb Z$. Notice that 
+$\mathbb Z$ is closed under $g$, because for every integer $n$, $n-1$ is also an integer; so we have succeeded in enlarging $\mathbb N$ to get a set closed under $g$.\\
+\vspace{1mm}\\
+When we enlarged $\mathbb N$ to $\mathbb Z$, the numbers we added---the negative integers---were numbers that \textit{had} to be added if we wanted the resulting set to be closed under $g$. 
+It follows that $\mathbb Z$ is the smallest set containing $\mathbb N$ is closed under $g$. Note that we use the word \textit{smallest} here in the sense of the subset partial order
+\begin{equation*}
+S=\{(X,Y)\in\mathscr P(A)\times\mathscr P(A)|X\subseteq Y\}
+\end{equation*}
+That is, if we let $\mathcal F=\{C\subseteq\mathbb R|\mathbb N\subseteq C$ and $C$ is closed under $g\}$, then $\mathbb Z$ is the smallest element of $\mathcal F$, meaning 
+$\mathbb Z$ is an element of $\mathcal F$, and it is a subset of every element of $\mathcal F$. We say that $\mathbb Z$ is the \textit{closure} of $\mathbb N$ under $g$.\\
+(next page)
+\newpage
+\begin{definition}
+
+\end{definition}
+
 
 
 
