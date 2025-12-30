@@ -3566,6 +3566,44 @@ g&=i_A\circ g&(\text{lemma})\\
 \end{proof}
 \newpage
 
+\subsection{With regard to equivalence relations}
+Recall the following theorems proven in the section on equivalence relations:
+\begin{theorem}
+Suppose $A$ is a set and $\mathcal F$ is a partition of $A$. Then there is an equivalence relation $R$ on $A$ such that $A/R=\mathcal F$.
+\end{theorem}
+\begin{theorem}
+Suppose $R$ is an equivalence relation on $A$. Let $\mathcal F=A/R$, and let $S$ be the equivalence relation determined by $\mathcal F$. In other words, $S=\bigcup X\in\mathcal F(X\times X)$. 
+Then $S=R$.
+\end{theorem}
+\noindent\textbf{Intuition}\\
+Suppose $A$ is any set, let $\mathcal E$ be the set of all equivalence relations on $A$, and let $\mathcal P$ be the set of all partitions of $A$. Define a function $f:\mathcal E\to\mathcal P$
+by the formula $f(R)=A/R$, and define another function $g:\mathcal P\to\mathcal E$ by the formula
+\begin{align*}
+g(\mathcal F)&=\text{the equivalence relation determined by $\mathcal F$.}\\
+&=\bigcup_{X\in\mathcal F}(X\times X)
+\end{align*}
+See that the first theorem shows $f\circ g=i_{\mathcal P}$, and the second theorem shows that
+$g\circ f=i_{\mathcal E}$. Thus $f$ is one-to-one and onto, and $g=f^{-1}$.
+\newpage
+
+\section{Closures}
+\begin{definition}
+Suppose $f:A\to A$ and $C\subseteq A$. We wil say that $C$ is closed under $f$ if $\forall x\in C(f(x)\in C)$.
+\end{definition}
+\noindent\textbf{Examples}\\
+Say $A=\{a,b,c,d\}$ and $f=\{(a,c),(b,b),(c,d),(d,c)\}$. Then $f:A\to A$.
+Let $C_1=\{a,c,d\}$ and $C_2=\{a,b\}$.\\
+\vspace{1mm}\\
+The set $C_1$ is closed under $f$ because $f(a)=f(d)=c\in C_1$ and $f(c)=d\in C_1$. However $C_2$ is not closed under $f$, because $a\in C_2$ but $f(a)=c\notin C_2$.\\
+\vspace{1mm}\\
+For another example, let $f:\mathbb R\to\mathbb R$ and $g:\mathbb R\to R$ be defined by the formulas $f(x)=x+1$ and $g(x)=x-1$. Is $\mathbb N$ closed under $f$? Is it closed under $g$?\\
+\vspace{1mm}\\
+For every natural number $n$, $n+1$ is also a natural number, so $\mathbb N$ is closed under $f$. However $\mathbb N$ is not closed under $g$, because $0\in N$ but $g(0)=-1\notin\mathbb N$.\\
+\vspace{1mm}\\
+\textbf{Intuition}\\
+We saw
+
+
 
 
 
