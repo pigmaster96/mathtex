@@ -2787,6 +2787,23 @@ arbitrary, all elements within the set of lower bounds is a subset of $\bigcap\m
 \forall x\in\mathcal F(\bigcap\mathcal FRx)\land\forall x\in\{X\in\mathscr P(A)|\forall y\in\mathcal F(XRy)\}(xR\bigcap\mathcal F)
 \end{equation*}
 Where the second term can be rewritten in a manner similar to that in the previous proof.
+\begin{theorem}
+Suppose $R$ is a partial order on $A$, $B\in A$, and $b\in B$.
+\begin{enumerate}
+\item If $b$ is the smallest element of $B$, then it is also the greatest lower bound of $B$.
+\item If $b$ is the largest element of $B$, then it is also the least upper bound of $B$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}\hspace{1mm}
+\begin{enumerate}
+\item Suppose $b$ is the smallest element of $B$. Since $B\subseteq A$, $b$ is in the set of lower bounds. 
+Let $x$ be an arbitrary element in the set of lower bounds. Then $x$ is smaller than all the elements in $B$. Since $b\in B$, $x$ must be smaller than $b$. Since $x$ is arbitrary, $b$ is the
+greatest lower bound.
+\item Suppose $b$ is the largest element of $B$. Since $B\subseteq A$, $b$ is in the set of upper bounds.
+Let $x$ be an arbitrary element in the set of upper bounds. Then $x$ is larger than all the elements in $B$. Since $b\in B$, $x$ must be larger than $b$. Since $x$ is arbitrary, $b$ is the 
+least upper bound.\qedhere
+\end{enumerate}
+\end{proof}
 \newpage
 
 \section{Equivalence relations}
@@ -3616,8 +3633,18 @@ $\mathbb Z$ is an element of $\mathcal F$, and it is a subset of every element o
 (next page)
 \newpage
 \begin{definition}
-
+Suppose $f:A\to A$ and $B\subseteq A$. Then the \textit{closure} of $B$ under $f$ is the smallest set $C\subseteq A$ such that $B\subseteq C$ and $C$ is closed under $f$, if there
+is such a smallest set. In other words, a set $C\subseteq A$ is the closure of $B$ under $f$ if it has the following properties:
+\begin{enumerate}
+\item $B\subseteq C$.
+\item $C$ is closed under $f$.
+\item For every set $D\subseteq A$, if $B\subseteq D$ and $D$ is closed under $f$ then $C\subseteq D$.
+\end{enumerate}
 \end{definition}
+\noindent\textbf{Intuition}\\
+Recall from the section on ordering relations that if a set has a smallest element, then it can have only one smallest element. Thus if a set $B$ has a closure under a function $f$, then this 
+closure must be unique, so it makes sense to call it \textit{the} closure rather than \textit{a} closure. Not all families of sets have smallest elements, so it is not immediately clear 
+if sets always have closures under functions.
 
 
 
