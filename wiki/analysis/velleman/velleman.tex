@@ -3644,14 +3644,61 @@ is such a smallest set. In other words, a set $C\subseteq A$ is the closure of $
 \noindent\textbf{Intuition}\\
 Recall from the section on ordering relations that if a set has a smallest element, then it can have only one smallest element. Thus if a set $B$ has a closure under a function $f$, then this 
 closure must be unique, so it makes sense to call it \textit{the} closure rather than \textit{a} closure. Not all families of sets have smallest elements, so it is not immediately clear 
-if sets always have closures under functions.
+if sets always have closures under functions.\\
+\vspace{1mm}\\
+We want to prove that closures always exist. Suppose $f:A\to A$ and $B\subseteq A$. We know that the closure of $B$ under $f$, if it exists, must be the smallest element of the family 
+$\mathcal F=\{C\subseteq A|B\subseteq C\land C\text{ is closed under }f\}$. Recall from the section on ordering relations that the smallest element of a set is also always the greatest lower 
+bound of the set, and that the g.l.b of any nonempty family of sets $\mathcal F$ is $\bigcap\mathcal F$. This gives us a starting point for the proof.
+\begin{lemma}
+If $\mathcal F$ is a family of sets and $A\in\mathcal F$, then $\bigcap\mathcal F\subseteq A$.
+\end{lemma}
+\begin{proof}
+Suppose $A\in\mathcal F$. Let $x$ be an arbitrary element in $\bigcap\mathcal F$. Then since $A\in\mathcal F$, $x\in A$. Since $x$ was arbitrary, $\bigcap\mathcal F\subseteq A$.
+\end{proof}
+\begin{theorem}
+Suppose that $f:A\to A$ and $B\subseteq A$. Then $B$ has a closure under $f$.
+\end{theorem}
 
 
 
 
 
+\newpage
 
-
+\subsection{On the union and intersection of empty sets}
+\textbf{Union}
+\begin{theorem}
+If $\mathcal F=\emptyset$, then the statement $x\in\bigcup\mathcal F$ will be false no matter what $x$ is. It follows that $\bigcup\emptyset=\emptyset$.
+\end{theorem}
+\begin{proof}
+Suppose $\mathcal F=\emptyset$. Let $x$ be arbitrary and suppose $x\in\bigcup F$. Then we would be able to declare some $A\in\mathcal F$ such that $x\in A$. But this would
+contradict the statement that $\mathcal F=\emptyset$. So $x\notin\bigcup\mathcal F$. Since $x$ is arbitrary, $\forall x(x\notin\bigcup\mathcal F)$. This means $\bigcup\mathcal F=\emptyset$.
+\end{proof}
+\noindent\textbf{Intersection}\\
+Recall that the statement
+\begin{equation*}
+\forall x\in\emptyset P(x)
+\end{equation*}
+is always \textit{vacuously true}. We can show that if $\mathcal F=\emptyset$, then the statement $x\in\bigcap\mathcal F$ will be true no matter what $x$ is, since
+\begin{equation*}
+\forall A\in\emptyset(x\in A)
+\end{equation*}
+is vacuously true. In a context where it is clear what the universe of discourse $U$ is, we might therefore want to say that $\bigcap\emptyset=U$. However this means that the notation
+$\bigcap\emptyset=U$ will mean different things depending on the universe of discourse.\\
+\vspace{1mm}\\
+Furthermore, when working with sets whose elements are sets, mathematicians often do not use a universe of discourse at all. To understand this, consider discussing sets whose elements are sets; it
+may seem natural to consider the universe of discourse to be the set of all sets. Assuming such a set, however, leads to a contradiction:\\
+\vspace{1mm}\\
+Suppose $U$ were the set of all sets. Note that in particular $U$ is a set, so we would have $U\in U$ (which, although unusual, isn't a contradiction). But this suggests that the sets
+in the universe $U$ could be split into two categories: the unusual sets, like $U$ itself, that are
+elements of themselves, and the more typical sets that are not. Let $R$ be the set of sets in 
+that second category, meaning $R=\{A\in U|A\notin A\}$. This means that for any set $A$ in the universe $U$, $A$ will be an element of $R$ if $A\notin A$. So
+\begin{equation*}
+\forall A\in U(A\in R\leftrightarrow A\notin A)
+\end{equation*}
+Now see that applying this last fact to the set $R$ itself leads to a contradiction. This contradiction is known as Russell's paradox. Some mathematicians consider the notation $\bigcap\emptyset$ 
+to therefore be meaningless. In this set of notes we will avoid this problem by using the notation
+$\bigcup\mathcal F$ only in contexts in which we can be sure that $\mathcal F\neq\emptyset$.
 \newpage
 
 \appendix
