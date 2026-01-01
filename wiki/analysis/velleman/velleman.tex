@@ -3725,7 +3725,24 @@ a smallest set. In other words, a set $C\subseteq A$ is the closure of $B$ under
 \item For every set $D\subseteq A$, if $B\subseteq D$ and $D$ is closed under $f$ then $C\subseteq D$.
 \end{enumerate}
 \end{definition}
+\begin{theorem}
+Suppose that $f:A\times A\to A$ and $B\subseteq A$. Then $B$ has a closure under $f$.
+\end{theorem}
+\begin{proof}
+Let $\mathcal F=\{C\subseteq A|B\subseteq C\text{ and $C$ is closed under $f$}\}$. First we show that $\mathcal F\neq\emptyset$. We know $B\subseteq A$. Let $x,y$ be arbitrary elements of $A$. 
+Since $f$ is a function, there exists some $f(x,y)\in A$. Therefore $A$ is closed under $f$, and $A\in\mathcal F$. So $\mathcal F\neq\emptyset$. By the previous lemma, we can also conclude that
+$\bigcap\mathcal F\subseteq A$. We will show that $\bigcap\mathcal F$ is the closure under $B$ by proving the three required properties.\\
+\indent First we show that $B\subseteq\bigcap\mathcal F$. Suppose $x\in B$. Let $D$ be an arbitrary element of $\mathcal F$. Then by the definition of $\mathcal F$, $B\subseteq D$ so $x\in D$.
+Since $D$ was arbitrary this shows that $\forall D\in\mathcal F(x\in D)$, so $x\in\bigcap\mathcal F$. Thus $B\subseteq\bigcap\mathcal F$.\\
+\indent Next we show that $\bigcap\mathcal F$ is closed under $f$. Let $x$ and $y$ be arbitrary elements of $\bigcap\mathcal F$. Let $D$ be an arbitrary element of $\mathcal F$. Then since
+$x,y\in\bigcap\mathcal F$, $x,y\in D$. By the definition of $\mathcal F$, $D$ is closed under $f$, so $f(x,y)\in D$. Since $D$ was arbitrary we can conclude that $f(x,y)\in\bigcap\mathcal F$. 
+Thus $\bigcap\mathcal F$ is closed under $f$.\\
+\indent Finally we show that $\forall D((B\subseteq D\subseteq A\land(\text{$D$ is closed under $f$}))\to\bigcup\mathcal F\subseteq D)$. Let $D$ be arbitrary, suppose $B\subseteq D\subseteq A$ and
+$D$ is closed under $f$. Then $D\in\mathcal F$, and by the previous lemma $\bigcup\mathcal F\subseteq D$.
+\end{proof}
+\newpage
 
+\chapter{Mathematical Induction}
 
 
 
