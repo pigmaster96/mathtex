@@ -3658,11 +3658,18 @@ Suppose $A\in\mathcal F$. Let $x$ be an arbitrary element in $\bigcap\mathcal F$
 \begin{theorem}
 Suppose that $f:A\to A$ and $B\subseteq A$. Then $B$ has a closure under $f$.
 \end{theorem}
-
-
-
-
-
+\begin{proof}
+Let $\mathcal F=\{C\subseteq A|B\subseteq C\text{ and $C$ is closed under $f$}\}$. First we show that $\mathcal F\neq\emptyset$. See that $B\subseteq A$, now let $a$ be an arbitrary element of $A$,
+since $f$ is a function we can always declare some $b\in A$ such that $f(a)=b\in A$. Since $a$ is arbitrary, $\forall a\in A(f(a)\in A)$, so $A\in\mathcal F$ and $\mathcal F\neq\emptyset$.
+See that by the previous lemma, $\bigcap\mathcal F\subseteq A$.
+We wil show that $\bigcap\mathcal F$ is the closure under $B$ by proving the three required properties.\\
+\indent First we show $B\subseteq\bigcap\mathcal F$. Suppose $x\in B$. Let $D$ be an arbitrary element of $\mathcal F$. Then by the definition of $\mathcal F$, $B\subseteq D$ so $x\in D$. 
+Since $D$ was arbitrary, this shows that $\forall D\in\mathcal F(x\in D)$, so $x\in\bigcap\mathcal F$. Thus $B\subseteq\bigcap\mathcal F$.\\
+\indent Next we show $\bigcap\mathcal F$ is closed under $f$. Suppose $x\in\bigcap\mathcal F$ and let $D$ be an arbitrary element of $\mathcal F$. Then since $x\in\bigcap\mathcal F$, $x\in D$. Now 
+since $D\in\mathcal F$, $D$ is closed under $f$, so $f(x)\in D$. Since $D$ was arbitrary we can conclude that $f(x)\in\bigcap\mathcal F$. Thus $\bigcap\mathcal F$ is closed under $f$.\\
+\indent Finally we show that $\forall D((B\subseteq D\subseteq A\land(\text{$D$ is closed under $f$}))\to(\bigcap F\subseteq D))$. 
+Let $D$ be arbitrary, suppose $B\subseteq D\subseteq A$ and $D$ is closed under $f$. Then $D\in\mathcal F$, and by the previous lemma $\bigcap\mathcal F\subseteq D$.
+\end{proof}
 \newpage
 
 \subsection{On the union and intersection of empty sets}
@@ -3699,6 +3706,31 @@ that second category, meaning $R=\{A\in U|A\notin A\}$. This means that for any 
 Now see that applying this last fact to the set $R$ itself leads to a contradiction. This contradiction is known as Russell's paradox. Some mathematicians consider the notation $\bigcap\emptyset$ 
 to therefore be meaningless. In this set of notes we will avoid this problem by using the notation
 $\bigcup\mathcal F$ only in contexts in which we can be sure that $\mathcal F\neq\emptyset$.
+\newpage
+
+\subsection{Functions of two variables and closures}
+Closed sets and closures also come up in the study of functions of more than one variable. If $f:A\times A\to A$, then $f$ is called a \textit{function of two variables}. An element of the domain
+of $f$ would be an ordered pair $(x,y)$, where $x,y\in A$. The result of applying $f$ to this pair would be written $f((x,y))$, but it is customary to leave out one pair of parentheses and 
+just write $f(x,y)$.
+\begin{definition}
+Suppose $f:A\times A\to A$ and $C\subseteq A$. We will say that $C$ is \textit{closed under} $f$ if $\forall x\in C\forall y\in C(f(x,y)\in C)$.
+\end{definition}
+\noindent As before we can define the closure of a set under a function of two variables to be the smallest closed set containing it, and we can prove that such closures always exist.
+\begin{definition}
+Suppose $f:A\times A\to A$ and $B\subseteq A$. Then the \textit{closure of $B$ under $f$} is the smallest set $C\subseteq A$ such that $B\subseteq C$ and $C$ is closed under $f$, if there is such 
+a smallest set. In other words, a set $C\subseteq A$ is the closure of $B$ under $f$ if it has the following properties:
+\begin{enumerate}
+\item $B\subseteq C$.
+\item $C$ is closed under $f$.
+\item For every set $D\subseteq A$, if $B\subseteq D$ and $D$ is closed under $f$ then $C\subseteq D$.
+\end{enumerate}
+\end{definition}
+
+
+
+
+
+
 \newpage
 
 \appendix
