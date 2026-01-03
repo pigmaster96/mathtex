@@ -3739,10 +3739,22 @@ $x,y\in\bigcap\mathcal F$, $x,y\in D$. By the definition of $\mathcal F$, $D$ is
 Thus $\bigcap\mathcal F$ is closed under $f$.\\
 \indent Finally we show that $\forall D((B\subseteq D\subseteq A\land(\text{$D$ is closed under $f$}))\to\bigcup\mathcal F\subseteq D)$. Let $D$ be arbitrary, suppose $B\subseteq D\subseteq A$ and
 $D$ is closed under $f$. Then $D\in\mathcal F$, and by the previous lemma $\bigcup\mathcal F\subseteq D$.
-\end{proof}
+\end{proof}\newpage
+\noindent\textbf{Convention}\\ 
+A function from $A\times A$ to $A$ could be thought of as an operation that can be applied to a pair of objects $(x,y)\in A\times A$ to produce another element of $A$. Often an operation 
+to be performed on a pair of mathematical objects $(x,y)$ is represented by a symbol written between $x$ and $y$; for instance $x+y$ or $x\cup y$. Imitating this notation, when defining a function
+from $A\times A$ to $A$, it is sometimes represented with a symbol between $x$ and $y$ rather than a letter in front of the pair. When written in this way, it is usually called a \textit{binary
+relation} on $A$.
 \newpage
 
 \chapter{Mathematical Induction}
+\section{Proof by Mathematical Induction}
+Suppose we want to prove that every natural number $\mathbb N=\{0,1,2,3,\ldots\}$ has some property $P$.
+Of course there are infinitely many numbers in this list, so one can't check one-by-one that they all have property $P$.\\
+\vspace{1mm}\\
+The key idea behind mathematical induction is that to list all the natural numbers all one has to do is start with 0 and repeatedly add 1. 
+Thus one can show that every natural number has the property $P$ by showing 0 has the property $P$, and that whenever one adds 1 to a number that has the property $P$, the resulting number also has
+the property $P$. This would gaurantee that, as one goes through the list of all natural numbers, starting with 0 and repeatedly adding 1, every number one encounters must have property $P$
 
 
 
