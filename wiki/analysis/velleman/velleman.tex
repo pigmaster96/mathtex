@@ -3754,8 +3754,47 @@ Of course there are infinitely many numbers in this list, so one can't check one
 \vspace{1mm}\\
 The key idea behind mathematical induction is that to list all the natural numbers all one has to do is start with 0 and repeatedly add 1. 
 Thus one can show that every natural number has the property $P$ by showing 0 has the property $P$, and that whenever one adds 1 to a number that has the property $P$, the resulting number also has
-the property $P$. This would gaurantee that, as one goes through the list of all natural numbers, starting with 0 and repeatedly adding 1, every number one encounters must have property $P$
+the property $P$. This would gaurantee that, as one goes through the list of all natural numbers, starting with 0 and repeatedly adding 1, every number one encounters must have property $P$:\\
+\vspace{1mm}\\
+\indent\textbf{To prove a goal of the form }$\forall n\in\mathbb NP(n)$:\\
+\indent First prove $P(0)$, and then prove $\forall n\in\mathbb N(P(n)\to P(n+1))$. The first of these proofs is sometimes called the \textit{base case} and the second the 
+\textit{induction step}.\\
+\vspace{1mm}\\
+\textit{Form of final proof:}\\
+\indent Base case: [Proof of $P(0)$ goes here.]\\
+\indent Induction step: [Proof of $\forall n\in\mathbb N(P(n)\to P(n+1))$ goes here.]
+\newpage
 
+\subsection{Examples}
+\textbf{Example 1}\\
+The following suggests a pattern:
+\begin{align*}
+2^0&=1=2^1-1\\
+2^0+2^1&=1+2=3=2^2-1\\
+2^0+2^1+2^2&=1+2+4=7=2^3-1\\
+2^0+2^1+2^2+2^3&=1+2+4+8=15=2^4-1
+\end{align*}
+\begin{theorem}
+For every natural number $n$, $2^0+2^1+\cdots+2^n=2^{n+1}-1$.
+\end{theorem}
+\noindent\textit{Scratch work}\\
+Our goal is to prove the statement $\forall n\in\mathbb NP(n)$, where $P(n)$ is the statement $2^0+2^1+\cdots+2^n=2^{n+1}-1$. According to our strategy, we can do this by proving two other
+statements, $P(0)$ and $\forall n\in\mathbb N(P(n)\to P(n+1))$.\\
+\vspace{1mm}\\
+Plugging in 0 for $n$, we see that $P(0)$ is simply the statement $2^0=2^1-1$. This part is easy, just verifying that both sides are equal to 1. Often the base case is easy, and the induction 
+step more complex.\\
+\vspace{1mm}\\
+For the induction step, we must prove $\forall n\in\mathbb N(P(n)\to P(n+1))$. As expected, we do this by letting $n$ be an arbitrary natural number, assuming that $P(n)$ is true, and then proving
+that $P(n+1)$ is true. In this case, we'll let $n$ be an arbitrary natural number, assume that 
+$2^0+2^1+\cdots+2^n=2^{n+1}-1$, and then prove $2^0+2^1+\cdots+2^{n+1}=2^{n+2}-1$:
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+
+
+\end{tabular}
+\end{center}
 
 
 
