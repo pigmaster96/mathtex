@@ -3791,11 +3791,40 @@ $2^0+2^1+\cdots+2^n=2^{n+1}-1$, and then prove $2^0+2^1+\cdots+2^{n+1}=2^{n+2}-1
 \begin{tabular}{c|c}
 \textit{Givens}&\textit{Goal}\\
 \hline
-
-
+$n\in\mathbb N$&$2^0+2^1+\cdots+2^{n+1}=2^{n+2}-1$\\
+$2^0+2^1+\cdots+2^n=2^{n+1}-1$&
 \end{tabular}
 \end{center}
-
+The key to this proof is to recognise that the left side of the equation in the goal is exactly the same as the left side of the given, but with the extra term $2^{n+1}$ added on. So we try
+adding $2^{n+1}$ to both sides of the second given:
+\begin{equation*}
+(2^0+2^1+\cdots+2^n)+2^{n+1}=(2^{n+1}-1)+2^{n+1}
+\end{equation*}
+or in other words,
+\begin{equation*}
+2^0+2^1+\cdots+2^{n+1}=2^{n+2}-1
+\end{equation*}
+which is our goal.\\
+(next page)\newpage
+\noindent\textbf{Cont.}
+\begin{theorem}
+For every natural number $n$, $2^0+2^1+\cdots+2^n=2^{n+1}-1$.
+\end{theorem}
+\begin{proof}
+We use mathematical induction.\\
+\indent Base case: Setting $n=0$, we get $2^0=1=2^1-1$ as required.\\
+\indent Induction step: Let $n$ be an arbitrary natural number and suppose that $2^0+2^1+\cdots+2^n=2^{n+1}-1$. Then
+\begin{align*}
+2^0+2^1+\cdots+2^{n+1}&=(2^0+2^1+\cdots+2^n)+2^{n+1}\\
+&=(2^{n+1}-1)+2^{n+1}\\
+&=2\cdot2^{n+1}-1\\
+&=2^{n+2}-1\qedhere
+\end{align*}
+\end{proof}
+\noindent The hardest proof by mathematical induction is usually the induction step $\forall n\in\mathbb N(P(n)\to P(n+1))$. 
+Generally we would let $n$ be an arbitrary natural number, assume $P(n)$ is true,
+and then prove $P(n+1)$ is true. The assumption that $P(n)$ is true is sometimes called the 
+\textit{inductive hypothesis}, and the key to the proof is usually to work out some relationship between the inductive hypothesis $P(n)$ and the goal $P(n+1)$.
 
 
 
