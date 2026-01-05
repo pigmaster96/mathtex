@@ -3826,12 +3826,95 @@ Generally we would let $n$ be an arbitrary natural number, assume $P(n)$ is true
 and then prove $P(n+1)$ is true. The assumption that $P(n)$ is true is sometimes called the 
 \textit{inductive hypothesis}, and the key to the proof is usually to work out some relationship between the inductive hypothesis $P(n)$ and the goal $P(n+1)$.\\
 \vspace{1mm}\\
-\textbf{Example}
+\textbf{Example 2}
 \begin{theorem}
 For every natural number $n$, $3|(n^3-n)$.
 \end{theorem}
 \noindent\textit{Scratch work}\\
-The base case is easy. For the induction step, we let $n$ be an arbitrary natural number and assume 
+The base case is easy. For the induction step, we let $n$ be an arbitrary natural number and assume that $3|(n^3-n)$, and we must prove that $3|((n+1)^3-(n+1))$.
+Filling in the definition of divides, we have
+\begin{center}
+\begin{tabular}{c|c}
+\textit{Givens}&\textit{Goal}\\
+\hline
+$n\in\mathbb N$&$\exists j\in\mathbb Z(3j=(n+1)^3-(n+1)$\\
+$\exists k\in\mathbb Z(3k=n^3-n)$&
+\end{tabular}
+\end{center}
+The second given is the inductive hypothesis. We use it and let $k$ stand for a particular integer such that $3k=n^3-n$. To complete the proof we need to find some $j$ satisfying the goal:
+\begin{align*}
+(n+1)^3-(n+1)&=n^3+3n^2+3n+1-n-1\\
+&=(n^3-n)+3n^2+3n\\
+&=3k+3n^2+3n\\
+&=3(k+n^2+n)
+\end{align*}
+It should be clear now that we can complete the proof by letting $j=k+n^2+n$.\\
+(next page)\newpage
+\begin{theorem}
+For every natural number $n$, $3|(n^3-n)$.
+\end{theorem}
+\begin{proof}
+We use mathematical induction.\\
+\indent Base case: If $n=0$, then $n^3-n=0=3\cdot 0$, so $3|(n^3-n)$.
+\indent Induction step: Let $n$ be an arbitrary natural number and suppose 
+$3|(n^3-n)$. Then we can choose an integer $k$ such that $3k=n^3-n$. Thus
+\begin{align*}
+(n+1)^3-(n+1)&=n^3+3n^2+3n+1-n-1\\
+&=(n^3-n)+3n^2+3n\\
+&=3k+3n^2+3n\\
+&=3(k+n^2+n)
+\end{align*}
+Therefore $3|((n+1)^3-(n+1))$, as required.
+\end{proof}
+\noindent\textbf{Example 3}\\
+Consider the following values
+\begin{center}
+\begin{tabular}{cccc}
+$n$&$n^2$&$2^n$&Which is larger?\\
+\hline
+$0$&$0$&$1$&$2^n$\\
+$1$&$1$&$2$&$2^n$\\
+$2$&$4$&$4$&tie\\
+$3$&$9$&$8$&$n^2$\\
+$4$&$16$&$16$&tie\\
+$5$&$25$&$32$&$2^n$\\
+$6$&$36$&$64$&$2^n$\\
+\end{tabular}
+\end{center}
+It seems that for $n\geq5$, $2^n$ will be greater than $n^2$. 
+\begin{theorem}
+For every natural number $n\geq5$, $2^n>n^2$.
+\end{theorem}
+\noindent\textit{Scratch work}\\
+The base case $n=5$ has already been checked in the table. For the induction step, we let $n\geq 5$ be arbitrary, assume $2^n>n^2$, and try to prove that $2^{n+1}>(n+1)^2$. How can we relate the
+inductive hypothesis to the goal? Multiplying both sides of the inductive hypothesis by 2 we get
+$2^{n+1}>2n^2$. We want to show $2^{n+1}>(n+1)^2$, so perhaps we can show $2n^2\geq(n+1)^2$.\\
+\vspace{1mm}\\
+Expanding the inequality we want to show, we want to show $2n^2\geq n^2+2n+1$. Starting from $2n^2$ and the other given $n\geq 5$, we have $2n^2=n^2+n^2\geq n^2+5n=n^2+2n+3n>n^2+2n+1$.\\
+(next page)\newpage
+\begin{theorem}
+For every natural number $n\geq5$, $2^n>n^2$.
+\end{theorem}
+\begin{proof}
+By mathematical induction.\\
+\indent Base case: When $n=5$ we have $2^n=32>25=n^2$.\\
+\indent Induction step: Let $n\geq 5$ be arbitrary, and suppose that $2^n>n^2$. Then
+\begin{align*}
+2^{n+1}&=2\cdot2^n&\\
+&>2n^2&\text{(inductive hypothesis)}\\
+&=n^2+n^2&\\
+&\geq n^2+5n&\text{(since $n\geq5$)}\\
+&=n^2+2n+3n&\\
+&>n^2+2n+1=(n+1)^2&
+\end{align*}
+Thus $2^{n+1}>(n+1)^2$, as required.
+\end{proof}
+\newpage
+
+\subsection{More examples}
+
+
+
 
 
 
