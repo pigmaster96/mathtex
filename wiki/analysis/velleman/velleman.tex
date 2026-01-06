@@ -3916,6 +3916,44 @@ Thus $2^{n+1}>(n+1)^2$, as required.
 \begin{theorem}
 Suppose $R$ is a partial order on a set $A$. Then every finite, nonempty set $B\subseteq A$ has an $R$-mininal element.
 \end{theorem}
+\noindent\textit{Scratch work}\\
+It is not immediately obvious that mathematical induction could be used here---the goal doesn't seem to have the form $\forall n\in\mathbb N P(n)$. Natural numbers
+enter into the problem when we recognise that to say that $B$ is finite and nonempty means that it has $n$ elements, for some $n\in\mathbb N$, $n\geq 1$ (this will be elaborated on).
+The goal here is $\forall n\geq1\forall B\subseteq A(B\text{ has $n$ elements}\to B\text{ has a minimal element})$.\\
+\vspace{1mm}\\
+In the base case we have $n=1$, and we must prove that if $B$ has one element then it has a minimal element. It is easy to check that in this case that the one element of $B$ must be minimal.\\
+\vspace{1mm}\\
+For the induction step we want to show 
+\begin{align*}
+\forall n\geq1(\forall&B\subseteq A(B\text{ has $n$ elements}\to B\text{ has a minimal element})\\\to
+&\forall B\subseteq A(B\text{ has $n+1$ elements}\to B\text{ has a minimal element}))
+\end{align*}
+So we let $n\geq1$ be arbitrary, assume that
+$\forall B\subseteq A(B\text{ has $n$ elements}\to B\text{ has a minimal element})$, and try to prove that $\forall B\subseteq A(B\text{ has $n+1$ elements}\\\to B\text{ has a minimal element})$.
+Guided by the form of the goal, we let $B$ be an arbitary subset of $A$, assume $B$ has $n+1$ elements, and try to prove that $B$ has a minimal element.\\
+\vspace{1mm}\\
+How can we use the inductive hypothesis to reach our goal? It tells us that if we had a subset of $A$ with $n$ elements, then it would have a minimal element. To apply it 
+we need a subset of $A$ with $n$ elements. Our arbitrary set $B$ is a subset of $A$, and we have assumed that it has $n+1$ elements. Thus a simple way to produce a subset of $A$ with $n$ elements 
+would be to remove one element from $B$. It is not clear where this reasoning would lead, but it seems to be the simplest way to make use of the inductive hypothesis.\\
+(next page)\newpage
+\noindent\textit{Scratch work continued}\\
+Let $b$ be any element of $B$, and let $B'=B\backslash\{b\}$. Then $B'$ is a subset of $A$ with $n$ elements, so by the inductive hypothesis, $B'$ has a minimal element.
+This is an existential statement, so we immediately introduce a new variable $c$ to stand for a minimal element of $B'$.\\
+\vspace{1mm}\\
+Our goal is to prove that $B$ has a minimal element, which is also an existential statement, so we should try to come up with a minimal element of $B$. We only know about two elements of $B$ at this
+point, $b$ and $c$, so we should probably try to prove that one of these is a minimal element of $B$. Which one? It may depend on whether one of them is smaller than the other in $R$, suggesting 
+proof by cases. In our proof we use the cases $bRc$ and $\neg bRc$, where in the first case
+we show that $b$ is a minimal element of $B$, and in the second that $c$ is a minimal element of $B$. In both cases saying something is a minimal element is a negative statement, so we use proof
+by contradiction.
+\begin{theorem}
+Suppose $R$ is a partial order on a set $A$. Then every finite, nonempty set $B\subseteq A$ has an $R$-mininal element.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+
+
 
 
 
