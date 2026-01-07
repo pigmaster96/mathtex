@@ -3949,8 +3949,25 @@ by contradiction.
 Suppose $R$ is a partial order on a set $A$. Then every finite, nonempty set $B\subseteq A$ has an $R$-mininal element.
 \end{theorem}
 \begin{proof}
-
+We will show by induction that for every natural number $n\geq 1$, every subset of $A$ with $n$ elements has a minimal element.\\
+\indent Base case: $n=1$. Suppose $B\subseteq A$ and $B$ has one element. Then $B=\{b\}$ for some $b\in A$. Clearly $\neg\exists x\in B(x\neq b)$, so clearly $\neg\exists x\in B(xRb\land x\neq b)$. 
+Thus $b$ is minimal. (This is a bit opaque, a better approach may be to suppose $b$ is not $R$ minimal, which would lead to a contradiction.)\\
+\indent Induction step: Suppose $n\geq 1$, and suppose that every subset of $A$ with $n$ elements has a minimal element. Now let $B$ be an arbitrary subset of $A$ with $n+1$ elements.
+Let $b$ be any element of $B$, and let $B'=B\backslash\{b\}$, a subset of $A$ with $n$ elements. By the inductive hypothesis, we can choose a minimal element $c\in B'$.\\
+\indent Case 1: $bRc$. We will show that $b$ is a minimal element of $B$. To justify this, suppose it isn't. Then we can choose some $x\in B$ such that $xRb$ and $x\neq b$. 
+Since $x\neq b$, $x\in B'$. Also since $xRb$ and $bRc$, by transitivity of $R$ it follows that $xRc$. Since $c$ is a minimal element of $B'$, we must have $x=c$. But then since
+$xRb$ we have $cRb$, and we also know $bRc$, so by antisymmetry of $B$ it follows that $b=c$. But this is clearly impossible since $c\in B'=B\backslash\{b\}$.
+Thus, $b$ must be a minimal element of $B$.\\
+\indent Case 2: $\neg bRc$. We will show that $c$ is a minimal element of $B$. To justify this, suppose it isn't. Then we can choose some $x\in B$ such that $xRc$ and $x\neq c$. 
+Since $c$ is a minimal element of $B'$, we can't have $x\in B'$, so since $x\in B$ the only other possibility is $x=b$. Then since $xRc$ we must have $bRc$, which contradicts the assumption that
+$\neg bRc$. Thus $c$ is a minimal element of $B$.
+(or show by contradiction that $x\neq b$ so $x\in B'$, but since $xRc$ and $x\neq c$ this would contradict the fact that $c$ is minimal).
 \end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Example 2}
+\begin{theorem}
+Suppose $A$ is a finite set and $R$ is a partial order on $A$. Then there is a total order $T$ on $A$ such that $R\subseteq T$.
+\end{theorem}
 
 
 
