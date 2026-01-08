@@ -3968,6 +3968,52 @@ $\neg bRc$. Thus $c$ is a minimal element of $B$.
 \begin{theorem}
 Suppose $A$ is a finite set and $R$ is a partial order on $A$. Then there is a total order $T$ on $A$ such that $R\subseteq T$.
 \end{theorem}
+\noindent\textit{Scratch work}\\
+The idea here is to prove by induction that $\forall n\in\mathbb N\forall A\forall R[(\text{$A$ has $n$ elements and}\\
+\text{$R$ is a partial order on 
+$A$})\to\exists T(\text{$T$ is a total order on $A$ and $R\subseteq T$})]$.\\
+\vspace{1mm}\\
+The base case is fairly straightforward. The induction step is
+\begin{align*}
+\forall n\in\mathbb N[\forall A\forall R&[(\text{$A$ has $n$ elements and $R$ is a partial order on $A$})\\
+&\to\exists T(\text{$T$ is a total order on $A$ and $R\subseteq T$})]\\
+\to\forall A\forall R&[(\text{$A$ has $n+1$ elements and $R$ is a partial order on $A$})\\
+&\to\exists T(\text{$T$ is a total order on $A$ and $R\subseteq T$})]]
+\end{align*}
+$R$ is a partial order on a set $A$ with $n+1$ elements, we remove one element, call it $a$, from $A$, and apply the inductive hypothesis
+to the remaining set $A'=A\backslash\{a\}$, giving us total order $T'$ on $A'$.
+To complete the proof we must somehow come up with a total order $T$ on $A$ such that $R\subseteq T$.\\
+\vspace{1mm}\\
+The relation $T'$ tells us how to compare two elements of $A'$, but it doesn't tell us how to compare $a$ to elements of $A'$. This is what we
+must decide in order to define $T$; the main diffculty in this step is making this decision in a way such that we end up with $R\subseteq T$. 
+This is done by choosing $a$ to be an $R$-minimal element of $A$, and then we define $T$ by making $a$ smaller in $T$ than every 
+element of $A'$. We us the theorem in the previous example, taking $B=A$, to guarantee that $A$ has an $R$-minimal element.\\
+(next page)\newpage
+\begin{theorem}
+Suppose $A$ is a finite set and $R$ is a partial order on $A$. Then there is a total order $T$ on $A$ such that $R\subseteq T$.
+\end{theorem}
+\begin{proof}
+We will show by induction on $n$ that every partial order on a set with $n$ elements can be extended to a total order.\\
+\indent Base case: $n=0$. Suppose $R$ is a partial order on $A$ and $A$ has 0 elements. Then clearly $A=R=\emptyset$. 
+Then all the properties making $\emptyset$ a total order on $A$ hold vacuously. So we are done.\\
+\indent Induction step: Let $n$ be an arbitrary natural number, and suppose that every partial order on a set with $n$ elements can be extended
+to a total order. Now suppose that $A$ has $n+1$ elements and $R$ is a partial order on $A$. By the previous theorem, 
+there must be some $a\in A$ such that $a$ is an $R$-minimal element of $A$. Let $A'=A\backslash\{a\}$ and let $R'=R\cap(A'\times A')$.\\
+\indent We will now show that $R'=R\cap(A'\times A')$ is a partial order on $A'$. We must prove that $R'$ is reflexive, transitive, 
+and antisymmetric on $A'$. For the first, suppose $x\in A'$. Since $R$ is reflexive on $A$ and $x\in A$, $(x,x)\in R\cap(A'\times A')=R'$. So
+$R'$ is reflexive.\\
+\indent Next suppose that $(x,y)\in R'$ and $(y,z)\in R'$. Then $(x,y)\in R$, $(y,z)\in R$, and $x,y,z\in A'$. Since $R$ is transitive, 
+$(x,z)\in R$, so $(x,z)\in R\cap(A'\times A')=R'$. Therefore $R'$ is transitive.\\
+\indent Finally suppose that $(x,y)\in R'$ and $(y,x)\in R'$. Then $(x,y)\in R$ and $(y,x)\in R$, so since $R$ is antisymmetric, $x=y$. 
+Thus $R'$ is antisymmetric. $R'$ is a partial order on $A'$.\\
+\indent Now by the inductive hypothesis, we can let $T'$ be a total order on $A'$ such that $R'\subseteq T'$. Now let $T=T'\cup(\{a\}\times A)$.
+We will now show that $T$ is a total order on $A$ and $R\subseteq T$.\\
+\indent To see that $T$ is reflexive, suppose $x\in A$. If $x=a$, then $(x,x)=(a,a)\in(\{a\}\times A)\subseteq T$. Now if $x\neq a$. Then
+$x\in A'$, so since $R'$ is reflexive, $(x,x)\in R'\subseteq T'\subseteq T$.\\
+\indent For transitivity
+
+
+\end{proof}
 
 
 
