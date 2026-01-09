@@ -4010,12 +4010,54 @@ Thus $R'$ is antisymmetric. $R'$ is a partial order on $A'$.\\
 We will now show that $T$ is a total order on $A$ and $R\subseteq T$.\\
 \indent To see that $T$ is reflexive, suppose $x\in A$. If $x=a$, then $(x,x)=(a,a)\in(\{a\}\times A)\subseteq T$. Now if $x\neq a$. Then
 $x\in A'$, so since $R'$ is reflexive, $(x,x)\in R'\subseteq T'\subseteq T$.\\
-\indent For transitivity
-
-
+\indent For transitivity, suppose that $(x,y)\in T$ and $(y,z)\in T$. 
+If $x=a$ then $(x,z)=(a,z)\in\{a\}\times A\subseteq T$. Now suppose $x\neq a$. Then $(x,y)\notin\{a\}\times A$,
+so since $(x,y)\in T=T'\cup(\{a\}\times A)$, we must have $(x,y)\in T'$.
+But $T'\subseteq A'\times A'$, so $y\in A'$ and therefore $y\neq a$.
+Similar reasoning now shows that $(y,z)\in T'$. Since $T'$ is transitive, it follows that $(x,z)\in T'\subseteq T$.\\
+\indent For antisymmetry, suppose $(x,y)\in T$ and $(y,x)\in T$. If $x\in a$ then $(y,x)\notin T'$, so $(y,x)\in\{a\}\times A$ and therefore 
+$y=a=x$. Similarly if $y=a$ then $x=y$. Now suppose $x\neq a$ and $y\neq a$. 
+Then as in the proof of transitivity it follows that $(x,y)\in T'$ and $(y,x)\in T'$, so by antisymmetry of $T'$, $x=y$.\\
+\indent We now know that $T$ is a partial order. To see that it is total, suppose $x\in A$ and $y\in A$. 
+If $x=a$ then $(x,y)\in\{a\}\times A\subseteq T$. Similarly if $y=a$ then $(y,x)\in T$. Now suppose that $x\neq a$ and $y\neq a$. Then $x\in A'$
+and $y\in A'$, so since $T'$ is a total order, either $(x,y)\in T'\subseteq T$ or $(y,x)\in T'\subseteq T$.\\
+\indent Finally, to see that $R\subseteq T$, suppose that $(x,y)\in R$. If $x=a$ then $(x,y)\in\{a\}\times A\subseteq T$. 
+Now suppose $x\neq a$. If $y=a$ then the fact that $(x,y)\in R$ would contradict the $R$-minimality of $a$. Therefore $y\neq a$. But then $(x,y)\in R\cap(A'\times A')=R'\subseteq T'\subseteq T$.
 \end{proof}
+\newpage
 
-
+\subsection{Even more examples}
+\begin{theorem}
+For all $n\geq3$, if $n$ distinct points on a circle are connected in consecutive order with straight lines, then the interior angles of the resulting polygon add up to $(n-2)180^\circ$. For example, here is $n=4$:
+\begin{center}
+\includegraphics[width=8cm]{5}
+\end{center}
+\end{theorem}
+\begin{proof}
+We use induction on $n$.\\
+\indent Base case: Suppose $n=3$. Then the polygon is a triangle, and it is well known that the interior angles of a triangle add up to $180^\circ$.\\
+\indent Induction step: Let $n$ be an arbitrary natural number, $n\geq 3$, and assume that the statement is true for $n$. Now consider the polygon $P$ formed by connecting 
+some $n+1$ distinct points $A_1,A_2,\ldots,A_{n+1}$ on a circle. If we skip the last point $A_{n+1}$ then we get a polygon $P'$ with only $n$ vertices, and by the inductive hypothesis the interior angles of this polygon add
+up to $(n-2)180^\circ$.
+\begin{center}
+\includegraphics[width=8cm]{6}
+\end{center}
+But now the sum of the interior angles of $P$ is equal to the sum of the interior angles of $P'$ plus the sum of the interior angles of the triangle $A_1A_nA_{n+1}$. Since the sum of the interior angles of the triangle
+is $180^\circ$, we can conclude that the sum of the interior angles of $P$ is
+\begin{equation*}
+(n-2)180^\circ+180^\circ=((n+1)-2)180^\circ
+\end{equation*}
+As required.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+For any positive integer $n$, a $2^n\times 2^n$ square grid with any one square removed can be covered with L-shaped tiles that look like \includegraphics[width=0.4cm]{7}. For instance here is the $n=2$ case
+\begin{center}
+\includegraphics[width=9cm]{8}
+\end{center}
+\end{theorem}
+\noindent\textit{Scratch work}\\
+We'll use induction.
 
 
 

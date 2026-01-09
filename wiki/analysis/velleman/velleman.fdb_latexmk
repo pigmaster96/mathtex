@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1767857506.92902 "velleman.tex" "velleman.pdf" "velleman" 1767857507.68309 0
+["pdflatex"] 1767946291.13457 "velleman.tex" "velleman.pdf" "velleman" 1767946291.87265 0
   "/etc/texmf/web2c/texmf.cnf" 1767433088.34546 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -101,9 +101,13 @@
   "images/2.png" 1767433362.12355 8878 ff05dc4297e98e2b1f7c8a702299680a ""
   "images/3.png" 1767433362.12355 19313 4049eabee0138790555fa7891b99b1b4 ""
   "images/4.png" 1767433362.12355 20507 863b1ac73b35a9687efe53e59871b439 ""
-  "velleman.aux" 1767857507.62839 11417 565f98264bb6c23626d3948023f14279 "pdflatex"
-  "velleman.tex" 1767857506.59237 227090 49fd0367f502c963bcd99a9d98f059e6 ""
-  "velleman.toc" 1767857507.63239 7360 71b95f53adc8f9324326a77458d7a6db "pdflatex"
+  "images/5.png" 1767944396.03743 14689 ec7f5ca5bbde1bc5995ec6b8653ce12d ""
+  "images/6.png" 1767945498.44467 13374 61940f0f9104768cb1035052974c51a0 ""
+  "images/7.png" 1767946082.25454 180 7f8a7393fad67d0b146142a45dfd6394 ""
+  "images/8.png" 1767946217.23281 8137 63bd576dd672f2d4c2088f0644aeef4a ""
+  "velleman.aux" 1767946291.81806 11532 817d6bc76d39718a7dff18733ea2ed67 "pdflatex"
+  "velleman.tex" 1767946290.39403 230324 fbc191da1412b44a9848f09a8aeed19c ""
+  "velleman.toc" 1767946291.81806 7434 aef3be9f03007c9d40248c028619d778 "pdflatex"
   (generated)
   "velleman.aux"
   "velleman.log"
