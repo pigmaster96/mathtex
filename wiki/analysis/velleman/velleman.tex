@@ -4057,8 +4057,59 @@ For any positive integer $n$, a $2^n\times 2^n$ square grid with any one square 
 \end{center}
 \end{theorem}
 \noindent\textit{Scratch work}\\
-We'll use induction.
+We'll use induction. Since we're only interested in positive $n$, the base case will be $n=1$. In this case we have a $2\times2$ grid with one square removed. This can clearly be covered with one
+L-shaped tile.\\
+\vspace{1mm}\\
+For the induction step, we let $n$ be an arbitrary positive integer and assume that a $2^n\times2^n$ grid with any one square removed can be covered with L-shaped tiles. Now
+suppose we have a $2^{n+1}\times2^{n+1}$ with any one square removed. To use our inductive hypothesis we must somehow relate this to the 
+$2^n\times2^n$ grid. Since $2^{n+1}=2^n\cdot2$, the $2^{n+1}\times2^{n+1}$ grid is twice as wide and twice as high as the $2^n\times2^n$ grid. In other words, 
+by dividing the $2^{n+1}\times2^{n+1}$ grid in half both vertically and horizontally, we can split it into four $2^n\times2^n$ ``subgrids'':
+\begin{center}
+\includegraphics[width=5cm]{9}
+\end{center}
+The one square that has been removed will be in one of the subgrids, as shown. The inductive hypothesis tells us that it is possible to cover the upper right subgrid. 
+But what about the other three?\\
+(next page)\newpage
+\begin{theorem}
+For any positive integer $n$, a $2^n\times 2^n$ square grid with any one square removed can be covered with L-shaped tiles.
+\end{theorem}
+\begin{proof}
+We use induction on $n$.\\
+\indent Base case: Suppose $n=1$. Then the grid is a $2\times 2$ grid with one square removed, which can clearly be covered with one L-shaped tile.\\
+\indent Induction step: Let $n$ be an arbitrary positive integer and suppose that a $2^n\times2^n$ grid with any one square removed can be covered with L-shaped tiles. Now consider a 
+$2^{n+1}\times2^{n+1}$ grid with one square removed. Cut the grid in half both vertically and horizontally, splitting it into four $2^n\times2^n$ subgrids.
+The one square that has been removed comes from one of these subgrids, so by the inductive hypothesis the rest of that subgrid can be covered with L-shaped tiles. To cover the other three subgrids,
+first place one L-shaped tile in the center so that it covers one square from each of the three remaining subgrids:
+\begin{center}
+\includegraphics[width=5cm]{10}
+\end{center}
+The area remaining to be covered now contains every square except one in each of the subgrids, so by applying the inductive hypothesis to each subgrid we can see that this area can be covered
+with tiles.
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Intuition}\\
+It is interesting to note that the previous proof can be used to figure out how to place tiles on a particular grid. For example consider the $8\times 8$ case:
+\begin{center}
+\includegraphics[width=3cm]{11}
+\end{center}
+According to the proof, the first step is to split the grid into four $4\times4$ subgrids and place one tile in the center, covering one square from each subgrid except the upper left:
+\begin{center}
+\includegraphics[width=3cm]{12}
+\end{center}
+The area remaining now consists of four $4\times 4$ subgrids each with one square removed. Now to cover the remaining four subgrids we use the same method; we divide each subgrid 
+again into four $2\times 2$ 
+subgrids and put one tile in the middle. Now we've reached the base case for each subgrid, where each can be covered with one tile. For instance the upper right subgrid looks like
+\begin{center}
+\includegraphics[width=3cm]{13}
+\end{center}
+The remaining three $4\times 4$ subgrids are completed by a similar procedure:
+\begin{center}
+\includegraphics[width=3cm]{14}
+\end{center}
+This is an example of a \textit{recursive} procedure, where we repeat algorithmic steps until we reach a base case.
+\newpage
 
+\section{Recursion}
 
 
 
