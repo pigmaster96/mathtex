@@ -4154,8 +4154,68 @@ Such a definition is usually easier to work with.
 \newpage
 
 \subsection{Examples}
+Many familiar functions are most easily defined using recursive definitions.\\
+\vspace{1mm}\\
+For a first example, for any number $a$, we could determine $a^n$ with the following recursive definition:
+\begin{align*}
+&a^0=1;\\
+&\text{for every }n\in\mathbb N,a^{n+1}=a^n\cdot a
+\end{align*}
+Where using this definition we would compute $a^4$ like:
+\begin{align*}
+a^4&=a^3\cdot a\\
+&=a^2\cdot a\cdot a\\
+&=a^1\cdot a\cdot a\cdot a\\
+&=a^0\cdot a\cdot a\cdot a\cdot a\\
+&=1\cdot a\cdot a\cdot a\cdot a
+\end{align*}
+For another example, consider the sum $2^0+2^1+2^2+\cdots+2^n$. The ellipsis suggests that we might be able to use a recursive definition. 
+If we let $f(n)=2^0+2^1+2^2+\cdots+2^n$, then notice that for every $n\in\mathbb N$, $f(n+1)=2^0+2^1+2^2+\cdots+2^n+2^{n+1}=f(n)+2^{n+1}$. Thus we could define $f$ recursively as follows:
+\begin{align*}
+&f(0)=2^0=1;\\
+&\text{for every }n\in\mathbb N,f(n+1)=f(n)+2^{n+1}
+\end{align*}
+As a check that this definition is right, consider the $n=3$ case:
+\begin{align*}
+f(3)&=f(2)+2^3\\
+&=f(1)+2^2+2^3\\
+&=f(0)+2^1+2^2+2^3\\
+&=2^0+2^1+2^2+2^3=15
+\end{align*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+If $a_0,a_1,\ldots,a_n$ is a list of numbers, then the sum of these numbers is written 
+$\sum^n_{i=0}a_i$. This is read ``the sum as $i$ goes from 0 to $n$ of $a_i$''. For example:
+\begin{equation*}
+\sum^n_{i=0}2^i=2^0+2^1+2^2+\cdots+2^n
+\end{equation*}
+More generaly, if $n\geq m$, then 
+\begin{equation*}
+\sum^n_{i=m}a_i=a_m+a_{m+1}+a_{m+2}+\cdots+a_n
+\end{equation*}
+For example,
+\begin{equation*}
+\sum^6_{i=3}i^2=3^2+4^2+5^2+6^2=86
+\end{equation*}
+The letter $i$ in these formulas is a bound variable and therefore can be replaced by a new variable without changing the meaning of the formula. 
+Now we try to give a recursive definition for this notation. We let $m$ be an arbitrary integer, and then proceed by recursion on $n$. 
+Just as the base case for an induction proof need not be $n=0$, the base case for a recursive definition can also be a number other than 0. In this case we are only interested in $n\geq m$, so we
+take $n=m$ as the base for our recursion:
+\begin{align*}
+&\sum^m_{i=m}a_i=a_m;\\
+&\text{for every }n\geq m,\sum^{n+1}_{i=m}a_i=\sum^{n}_{i=m}a_i+a_{n+1}
+\end{align*}
+Trying this definition out on the previous example we get
+\begin{align*}
+\sum^6_{i=3}i^2&=\sum^5_{i=3}i^2+6^2\\
+&=\sum^4_{i=3}i^2+5^2+6^2\\
+&=\sum^3_{i=3}i^2+4^2+5^2+6^2\\
+&=3^2+4^2+5^2+6^2=86
+\end{align*}
+Just as we wanted.
+\newpage
 
-
+\subsection{More examples}
 
 
 
