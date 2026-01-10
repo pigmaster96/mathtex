@@ -4132,8 +4132,28 @@ The two equations give us a rule that determines a unique value $f(n)$ for each 
 Definitions of thie kind are called \textit{recursive} definitions.\\
 (next page)\newpage
 \noindent\textbf{Cont.}\\
-Sometimes
+Sometimes we'll work backwards using a recursive definition to evaluate a function. For instance for the function from the previous page:
+\begin{align*}
+&f(0)=1;\\
+&\text{for every }n\in\mathbb N,f(n+1)=(n+1)\cdot f(n)
+\end{align*}
+Suppose we want to compute $f(6)$. We then have the following calculation:
+\begin{align*}
+f(6)&=6\cdot f(5)\\
+&=6\cdot5\cdot f(4)\\
+&=6\cdot5\cdot4\cdot f(3)\\
+&=6\cdot5\cdot4\cdot3\cdot f(2)\\
+&=6\cdot5\cdot4\cdot3\cdot2\cdot f(1)\\
+&=6\cdot5\cdot4\cdot3\cdot2\cdot1\cdot f(0)\\
+&=6\cdot5\cdot4\cdot3\cdot2\cdot1\cdot1\\
+&=720
+\end{align*}
+One might recognise this function, where for any positive integer $f(n)=n\cdot(n-1)\cdot(n-2)\cdots1$, and $f(0)=1$. The number $f(n)$ is called $n$ \textit{factorial}, and is denoted $n!$; for 
+example $6!=720$. Often, if a function can be written as a formula with an ellipsis $(\ldots)$ in it, then the ellipsis can be avoided by using a recursive definition for the function. 
+Such a definition is usually easier to work with.
+\newpage
 
+\subsection{Examples}
 
 
 
