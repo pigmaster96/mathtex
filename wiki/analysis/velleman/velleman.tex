@@ -4110,6 +4110,32 @@ This is an example of a \textit{recursive} procedure, where we repeat algorithmi
 \newpage
 
 \section{Recursion}
+\textbf{Intuition}\\
+The principle behind induction can be used when defining functions. Recall that we usually
+defined a function $f$ by specifying how to compute $f(n)$ for any $n$ in the domain of $f$; if the domain of $f$ is the set of all natural numbers, an alternative method to define $f$ would be to
+say what $f(0)$ is and then, for any natural number $n$, say how we could compute $f(n+1)$ if we already knew the value of $f(n)$. Such a definition would enable us to run through all natural
+numbers in order computing the image of each one under $f$.\\
+\vspace{1mm}\\
+For example, we might use the following equations to define a function $f$ with domain $\mathbb N$:
+\begin{align*}
+&f(0)=1;\\
+&\text{for every }n\in\mathbb N,f(n+1)=(n+1)\cdot f(n)
+\end{align*}
+The second equation tells us how to compute $f(n+1)$ given $f(n)$. Although we cannot use this equation to tell us directly what the image of any number is under $f$, 
+we \textit{can} use it to run through all the natural numbers in order and compute their images.\\
+\vspace{1mm}\\
+In this case we start with $f(0)$, which we know from the first equation is equal to 1.
+Plugging in $n=0$ in the second equation, we see that $f(1)=1\cdot f(0)=1\cdot1=1$, so we've determined the value of $f(1)$; now that we know $f(1)=1$ we find that $f(2)=2\cdot f(1)=2\cdot1=2$.
+Similarly, setting $n=2$ in the second equation we get $f(3)=3\cdot f(2)=3\cdot2=6$. Continuing this way we can compute $f(n)$ for any natural number $n$.\\
+\vspace{1mm}\\
+The two equations give us a rule that determines a unique value $f(n)$ for each natural number $n$, so they define a function $f$ with domain $\mathbb N$. 
+Definitions of thie kind are called \textit{recursive} definitions.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Sometimes
+
+
+
 
 
 

@@ -82,8 +82,8 @@
 \contentsline {subsection}{\numberline {5.1.2}More examples}{122}{}%
 \contentsline {subsection}{\numberline {5.1.3}Even more examples}{126}{}%
 \contentsline {section}{\numberline {5.2}Recursion}{130}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{131}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{131}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{131}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{131}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{132}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{132}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{132}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{132}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{132}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{133}{}%
