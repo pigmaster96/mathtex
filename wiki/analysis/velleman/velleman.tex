@@ -4262,6 +4262,82 @@ a^{m+(n+1)}&=a^{(m+n)+1}\\
 \end{align*}
 Which is what we wanted.
 \end{proof}
+\noindent\textbf{Example}\\
+Say we have a sequence of numbers $a_0,a_1,a_2,\ldots$ defined recursively as follows:
+\begin{align*}
+&a_0=0;\\
+&\text{for every }n\in\mathbb N,a_{n+1}=2a_n+1
+\end{align*}
+and we want to find a formula for $a_n$ and prove it is correct.\\
+\vspace{1mm}\\
+It may be a good idea to compute the first few terms of a sequence for intuition. We know $a_0=0$, so plugging in $n=0$ in the second equation we get $a_1=1$. Continuing this way we get the
+table of values:
+\begin{center}
+\begin{tabular}{c|cccccccc}
+n&0&1&2&3&4&5&6&$\cdots$\\
+\hline
+$a_n$&0&1&3&7&15&31&63&$\cdots$
+\end{tabular}
+\end{center}
+A plausible formula might be $a_n=2^n-1$. We will prove this by induction.\\
+(next page)\newpage
+\begin{theorem}
+For a sequence of numbers $a_0,a_1,a_2,\ldots$ defined recursively as follows:
+\begin{align*}
+&a_0=0;\\
+&\text{for every }n\in\mathbb N,a_{n+1}=2a_n+1
+\end{align*}
+for every natural number $n$, $a_n=2^n-1$.
+\end{theorem}
+\begin{proof}
+By induction,\\
+\indent Base case: $a_0=0=2^0-1$.\\
+\indent Induction step: Suppose $a_n=2^n-1$. Then
+\begin{align*}
+a_{n+1}&=2a_n+1&\text{(definition of $a_{n+1}$)}\\
+&=2(2^n-1)+1&\text{(inductive hypothesis)}\\
+&=2^{n+1}-2+1=2^{n+1}-1
+\end{align*}
+Which is what we wanted.
+\end{proof}
+\begin{theorem}
+For every $x>-1$ and every natural number $n$, $(1+x)^n>nx$.
+\end{theorem}
+\noindent\textit{Scratch work}\\
+A natural way to proceed would be to let $x>-1$ be arbitrary, and then use induction on $n$. In the induction step we assume that $(1+x)^n>nx$ and then try to prove $(1+x)^{n+1}>(n+1)x$. Because 
+we've assumed $x>-1$, we have $(1+x)>0$ so we can multiply both sides of the
+inductive hypothesis to get
+\begin{align*}
+(1+x)^{n+1}&>(1+x)nx\\
+&=nx+nx^2
+\end{align*}
+But the conclusion we want is $(1+x)^{n+1}>(n+1)x$, and it is not clear how to get this conclusion from the inequality we've derived.\\
+\vspace{1mm}\\
+The key here is to replace the original problem with a problem that appears to be harder but is actually easier. Instead of proving the inequality $(1+x)^n>nx$ directly, we'll
+prove $(1+x)^n\geq1+nx$, ad then observe that since $1+nx>nx$, it follows immediately that 
+$(1+x)^n>nx$. \\
+(next page)\newpage
+\begin{theorem}
+For every $x>-1$ and every natural number $n$, $(1+x)^n>nx$.
+\end{theorem}
+\begin{proof}
+Let $x>-1$ be arbitrary. We will prove by induction that for every natural number $n$, $(1+x)^n\geq1+nx$, from which it clearly follows that $(1+x)^n>nx$.\\
+\indent Base case: If $n=0$, then $(1+x)^n=(1+x)^0=1=1+0=1+nx$.\\
+\indent Induction step: Suppose $(1+x)^n\geq1+nx$. Then
+\begin{align*}
+(1+x)^{n+1}&=(1+x)(1+x)^n\\
+&\geq(1+x)(1+nx)^n&\text{(inductive hypothesis)}\\
+&=1+x+nx+nx^2\\
+&\geq1+(n+1)x&\text{(since $nx^2\geq0$)}
+\end{align*}
+Which is what we wanted.
+\end{proof}
+\newpage
+
+\section{Strong induction}
+
+
+
 
 
 
