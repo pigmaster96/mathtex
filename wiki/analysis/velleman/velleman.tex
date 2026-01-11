@@ -4216,8 +4216,52 @@ Just as we wanted.
 \newpage
 
 \subsection{More examples}
-
-
+\begin{theorem} 
+For every $n\geq4,n!>2^n$.
+\end{theorem}
+\noindent\textit{Scratch work}\\
+Because the problem involves factorial and exponentiation, both of which are defined recursively, induction seems apt here. Recall the recursive definitions; first the factorial
+\begin{align*}
+&0!=f(0)=1;\\
+&\text{for every }n\in\mathbb N,(n+1)!=f(n+1)=(n+1)\cdot f(n)=(n+1)\cdot n!
+\end{align*}
+and then exponentiation
+\begin{align*}
+&a^0=1;\\
+&\text{for every }n\in\mathbb N,a^{n+1}=a^n\cdot a
+\end{align*}
+The base case will be $n=4$. For the induction step, our inductive hypothesis will be $n!>2^n$, and we must prove that $(n+1)!>2^{n+1}$.
+Naturally, the way to relate the inductive hypothesis to the goal is to use the recursive definitions of factorial and exponentiation.
+\begin{proof}
+By mathematical induction.\\
+\indent Base case: When $n=4$ we have $n!=24>16=2^n$.\\
+\indent Induction step: Let $n\geq4$ be arbitrary and suppose that $n!>2^n$. Then
+\begin{align*}
+(n+1)!&=(n+1)\cdot n!&\\
+&>(n+1)\cdot2^n&\text{(inductive hypothesis)}\\
+&>2\cdot2^n=2^{n+1}
+\end{align*}
+Which is what we wanted.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+Prove that for every real number $a$ and all natural numbers $m$ and $n$, $a^{m+n}=a^m\cdot a^n$.
+\end{theorem}
+\noindent\textit{Scratch work}\\
+There are three universal quantifiers here. We'll treat the first two differently from the third. We'll let $a$ and $m$ be arbitrary and then use mathematical induction
+to prove that $\forall n\in\mathbb N(a^{m+n}=a^m\cdot a^n)$. The key part of this proof is the formula $a^{n+1}=a^n\cdot a$ from the recursive definition of exponentiation.
+\begin{proof}
+Let $a$ be an arbitrary real number and $m$ an arbitrary natural number. We now proceed by induction on $n$.\\
+\indent Base case: When $n=0$, we have $a^{m+n}=a^{m+0}=a^m=a^m\cdot1=a^m\cdot a^0=a^m\cdot a^n$.\\
+\indent Induction step: Suppose $a^{m+n}=a^m\cdot a^n$. Then 
+\begin{align*}
+a^{m+(n+1)}&=a^{(m+n)+1}\\
+&=a^{m+n}\cdot a&\text{(definition of exponentiation)}\\
+&=a^m\cdot a^n\cdot a&\text{inductive hypothesis}\\
+&=a^m\cdot a^{n+1}&\text{(definition of exponentiation)}
+\end{align*}
+Which is what we wanted.
+\end{proof}
 
 
 
