@@ -85,8 +85,8 @@
 \contentsline {subsection}{\numberline {5.2.1}Examples}{132}{}%
 \contentsline {subsection}{\numberline {5.2.2}More examples}{134}{}%
 \contentsline {section}{\numberline {5.3}Strong induction}{138}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{139}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{139}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{139}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{139}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{140}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{140}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{140}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{140}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{140}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{141}{}%

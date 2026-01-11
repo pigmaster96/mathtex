@@ -4335,7 +4335,38 @@ Which is what we wanted.
 \newpage
 
 \section{Strong induction}
-
+\textbf{Intuition}\\
+In the induction step of a proof by mathematical induction, we prove that a natural number has some property based on the assumption that the previous number has the same property.\\
+\vspace{1mm}\\
+In some cases this assumption isn't strong enough to make the proof work, and we need to assume that \textit{all} smaller numbers have the property. This is the idea behind a variant of mathematical
+induction sometimes called \textit{strong induction}:
+\vspace{1mm}\\
+\indent\textbf{To prove a goal of the form }$\forall n\in\mathbb NP(n)$:\\
+\indent Prove that $\forall n[(\forall k<nP(k))\to P(n)]$, where both $n$ and $k$ range over the natural numbers in this statement. The most direct way to prove this is to let $n$ be an arbitrary
+natural number, assume that $\forall k<nP(k)$, then prove $P(n)$.\\
+\vspace{1mm}\\
+No base case is necessary in a proof by strong induction. All that is needed is the modified induction step in which we prove that if every natural number smaller than $n$ has the property
+$P$, then $n$ has the property $P$. In a proof by strong induction, we also refer to this assumption as the \textit{inductive hypothesis}.\\
+\vspace{1mm}\\
+In ordinary induction, the base case gets the process started, and the induction step shows that the process can always be continued. See that by the time we check that some $n$ has the 
+property $P$, we've already checked that \textit{all smaller numbers} have the property, meaning we already know that $\forall k<nP(k)$. The idea behind strong
+induction is that we should be allowed to use this information in our proof of $P(n)$.\\
+\vspace{1mm}\\
+Suppose that we follow the strong induction proof strategy, and we've proven the statement
+$\forall n[(\forall k<nP(k))\to P(n)]$. Then plugging in 0 for $n$, we can conclude that 
+$(\forall k<0P(k))\to P(0)$. But because there are no natural numbers smaller than 0, the statement
+$\forall k<0P(k)$
+is vacuously true, and $P(0)$ follows (this explains why the base case doesn't have to be checked separately, 
+since $P(0)$ follows from the inductive hypothesis).
+Similarly, plugging in 1 for $n$ we can conclude that $(\forall k<1P(k))\to P(1)$. The only natural number less than 1 is 0 and we've just shown that $P(0)$ is true, 
+so the statement $\forall k<1P(k)$ is true, allowing us to declare $P(1)$. Now $P(0)$ and $P(1)$ are true, and plugging in 2 for $n$ we get 
+$(\forall k<2P(k))\to P(2)$, and we can declare $P(2)$.\\
+\vspace{1mm}\\
+Continuing this way, we can show that $P(n)$ is true for every natural number $n$, as required.\\
+(next page)\newpage
+\noindent\textbf{Alternative justification}
+\begin{theorem}
+\end{theorem}
 
 
 
