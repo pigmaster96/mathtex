@@ -4365,8 +4365,31 @@ $(\forall k<2P(k))\to P(2)$, and we can declare $P(2)$.\\
 Continuing this way, we can show that $P(n)$ is true for every natural number $n$, as required.\\
 (next page)\newpage
 \noindent\textbf{Alternative justification}
+\begin{lemma}
+Suppose all variables range over $\mathbb N$. Then 
+$\forall n\forall k<nP(k)\leftrightarrow\forall nP(n)$.
+\begin{proof}
+$(\rightarrow)$ Suppose that $\forall n\forall k<nP(k)$. Let $n$ be arbitrary. Then $\forall k<n+1P(k)$. In particular, since
+$n<n+1$, $P(n)$ is true. Since $n$ was arbitrary, this shows that $\forall nP(n)$.\\
+\indent$(\leftarrow)$ Suppose that $\forall nP(n)$. Then for any $n$, it is clearly true that 
+$\forall k<nP(k)$. So $\forall n\forall k<nP(k)$.
+\end{proof}
 \begin{theorem}
+Suppose all variables range over $\mathbb N$. Suppose $\forall n[(\forall k<nP(k))\to P(n)]$. Then $\forall n P(n)$.
 \end{theorem}
+\begin{proof}
+Now we use ordinary induction to show $\forall n\forall k<nP(k)$, which then allows us to use the lemma we just derived.\\
+\indent Base case: $n=0$. Then $\forall k<0P(k)$ is vacuously true.\\
+\indent Induction step: Suppose $\forall k<nP(k)$. Then by our initial assumption $P(n)$ is true. Therefore
+$\forall k<n+1P(k)$. So we are done.
+\end{proof}
+
+
+
+
+
+\end{lemma}
+
 
 
 
