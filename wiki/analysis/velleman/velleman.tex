@@ -4368,6 +4368,7 @@ Continuing this way, we can show that $P(n)$ is true for every natural number $n
 \begin{lemma}
 Suppose all variables range over $\mathbb N$. Then 
 $\forall n\forall k<nP(k)\leftrightarrow\forall nP(n)$.
+\end{lemma}
 \begin{proof}
 $(\rightarrow)$ Suppose that $\forall n\forall k<nP(k)$. Let $n$ be arbitrary. Then $\forall k<n+1P(k)$. In particular, since
 $n<n+1$, $P(n)$ is true. Since $n$ was arbitrary, this shows that $\forall nP(n)$.\\
@@ -4383,14 +4384,39 @@ Now we use ordinary induction to show $\forall n\forall k<nP(k)$, which then all
 \indent Induction step: Suppose $\forall k<nP(k)$. Then by our initial assumption $P(n)$ is true. Therefore
 $\forall k<n+1P(k)$. So we are done.
 \end{proof}
+\newpage
 
+\subsection{Division algorithm}
+\begin{theorem}
+(Division algorithm) For all natural numbers $n$ and $m$, if $m>0$ then there are natural numbers $q$ and $r$ such that $n=qm+r$ and $r<m$. (The numbers $q$ and $r$ are called the quotient
+and remainder when $n$ is divided by $m$.)
+\end{theorem}
+\noindent\textit{Scratch work}\\
+We want to prove
+\begin{equation*}
+\forall m>0\,\forall n\exists q\exists r(n=qm+r\land r<m)
+\end{equation*}
+We let $m$ be an arbitrary positive integer and then use strong induction to prove that 
+$\forall n\exists q\exists r(n=qm+r\land r<m)$. This means that we should
+let $n$ be an arbitrary natural number, assume that $\forall k<n\exists q\exists r(k=qm+r\land r<m)$, and prove that 
+$\exists q\exists r(n=qm+r\land r<m)$.\\
+\vspace{1mm}\\
+Our goal is existential statement, we should try to come up with values of $q$ and $r$ with the required properties. If $n<m$ then we can let $q=0$ and $r=n$. But if $n\geq m$, this same strategy 
+won't work, since we must have $r<m$. So we try something different. The inductive hypothesis starts with $\forall k<n$, so we should try to find some natural number smaller
+than $n$ to plug in for $k$. If we think of division as repeated subtraction, then dividing $n$ by $m$ involves subtracting $m$ from $n$ repeatedly. The first step in this process would be to 
+compute $n-m$, which is a natural number smaller than $n$ since $m>0$, giving us a candidate for $k$. It is not clear where this will lead but its worth a try. 
+\begin{proof}
+We let $m$ be an arbitrary positive integer and then proceed by strong induction on $n$.\\
+\indent Suppose $n$ is a natural number, and for every $k<n$ there are natural numbers $q$ and $r$ such that $k=qm+r$ and $r<m$.\\
+\indent Case 1. $n<m$. Let $q=0$ and $r=n$. Then clearly $n=qm+r$ and $r<m$.
+\indent Case 2. $n\geq m$. Let $k=n-m<n$ and note that since $n\geq m$, $k$ is a natural number.
+By the inductive hypothesis we can choose $q'$ and $r'$ such that $k=q'm+r'$ and $r'<m$. Then 
+$n-m=q'm+r'$, so $n=q'm+r'+m=(q'+1)m+r'$. Thus if we let $q=q'+1$ and $r=r'$ then we have $n=qm+r$ and $r<m$, as required.
+\end{proof}
+\noindent The terminology here is somewhat unfortunate since what we are calling the division algorithm is really a theorem and not an algorithm. Nevertheless this terminology is common.
+\newpage
 
-
-
-
-\end{lemma}
-
-
+\subsection{}
 
 
 
