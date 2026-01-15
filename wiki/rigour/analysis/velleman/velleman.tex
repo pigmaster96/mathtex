@@ -4437,6 +4437,87 @@ of primes. But then since $n=ab$, $n$ is a product of (two or more) primes.
 \newpage
 
 \subsection{Example: Fibonacci numbers}
+The method of recursion also has a `strong' form. Consider the following definition of a sequence of numbers, called the \textit{fibonacci numbers}.
+\begin{align*}
+&F_0=0;\\
+&F_1=1;\\
+&\text{for every }n\geq2,F_n=F_{n-2}+F_{n-1}
+\end{align*}
+For example, plugging in $n=2$ into the last equation we find $F_2=F_0+F_1=0+1=1$. Similarly, $F_3=F_1+F_2=1+1=2$ and $F_4=F_2+F_3=1+2=3$. Continuing this way:
+\begin{center}
+\begin{tabular}{c|cccccccccc}
+$n$&0&1&2&3&4&5&6&7&8&$\cdots$\\
+\hline
+$F_n$&0&1&1&2&3&5&8&13&21&$\cdots$
+\end{tabular}
+\end{center}
+Note that, starting with $F_2$, each fibonacci number is computed using, not just the previous number in the sequence, but also the one before that. It is in this sense
+that the recursion is `strong'. It shouldn't be suprising, therefore, that proofs involving fibonacci numbers often require strong induction rather than ordinary induction.\\
+\vspace{1mm}\\
+We'll prove the following formula for the fibonacci numbers:
+\begin{equation*}
+F_n=\frac{
+\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n}{\sqrt{5}}
+\end{equation*}
+It is hard to believe that this formula is right. Nevertheless, a proof by strong induction shows that it is correct.
+\begin{theorem}
+If $F_n$ is the $n$th Fibonacci number, then
+\begin{equation*}
+F_n=\frac{
+\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n}{\sqrt{5}}
+\end{equation*}
+\end{theorem}
+\noindent\textit{Scratch work}\\
+Because $F_0$ and $F_1$ are defined separately from $F_n$ for $n\geq2$, we check the formula for these cases separately. For $n\geq2$, the definition of $F_n$ suggests that we should use $F_{n-2}$ 
+and $F_{n-1}$. Because we need to know that the formula works for \textit{two} previous cases, we must use strong induction rather than ordinary induction. 
+The rest of the proof is straightforward.\\
+(next page)\newpage
+\begin{proof}
+We use strong induction. Let $n$ be an arbitrary natural number, and suppose that for all $k<m$,
+\begin{equation*}
+F_k=\frac{
+\left(\frac{1+\sqrt{5}}{2}\right)^k-\left(\frac{1-\sqrt{5}}{2}\right)^k}{\sqrt{5}}
+\end{equation*}
+Case 1. $n=0$. Then
+\begin{align*}
+\frac{\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n}{\sqrt{5}}
+&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^0-\left(\frac{1-\sqrt{5}}{2}\right)^0}{\sqrt{5}}\\
+&=\frac{1-1}{\sqrt5}=0=F_0
+\end{align*}
+Case 2. $n=1$. Then
+\begin{align*}
+\frac{\left(\frac{1+\sqrt{5}}{2}\right)^n-\left(\frac{1-\sqrt{5}}{2}\right)^n}{\sqrt{5}}
+&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^1-\left(\frac{1-\sqrt{5}}{2}\right)^1}{\sqrt{5}}\\
+&=\frac{\sqrt5}{\sqrt5}=1=F_1
+\end{align*}
+Case 3. $n\geq2$. Then applying the inductive hypothesis to $n-2$ and $n-1$ we get
+\begin{align*}
+F_n&=F_{n-2}+F_{n-1}\\
+&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n-2}-\left(\frac{1-\sqrt{5}}{2}\right)^{n-2}}{\sqrt{5}}
++\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n-1}-\left(\frac{1-\sqrt{5}}{2}\right)^{n-1}}{\sqrt{5}}\\
+&=\frac{\left[\left(\frac{1+\sqrt{5}}{2}\right)^{n-2}+\left(\frac{1+\sqrt{5}}{2}\right)^{n-1}\right]-\left[\left(\frac{1-\sqrt{5}}{2}\right)^{n-2}+\left(\frac{1-\sqrt{5}}{2}\right)^{n-1}\right]}
+{\sqrt{5}}\\
+&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n-2}\left[1+\frac{1+\sqrt{5}}{2}\right]-\left(\frac{1-\sqrt{5}}{2}\right)^{n-2}\left[1+\frac{1-\sqrt{5}}{2}\right]}{\sqrt5}
+\end{align*}
+Now note that 
+\begin{equation*}
+\left(\frac{1+\sqrt{5}}{2}\right)^{2}=\frac{1+2\sqrt5+5}{4}=\frac{6+2\sqrt5}{4}=\frac{3+\sqrt5}{2}
+=1+\frac{1+\sqrt5}{2}
+\end{equation*}
+and similarly
+\begin{equation*}
+\left(\frac{1-\sqrt{5}}{2}\right)^{2}=1+\frac{1-\sqrt5}{2}
+\end{equation*}
+(next page)\newpage
+\noindent Substituting into the formula for $F_n$, we get
+\begin{align*}
+F_n&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n-2}\left(\frac{1+\sqrt{5}}{2}\right)^{2}-\left(\frac{1-\sqrt{5}}{2}\right)^{n-2}\left(\frac{1-\sqrt{5}}{2}\right)^{2}}{\sqrt5}\\
+&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n}-\left(\frac{1-\sqrt{5}}{2}\right)^{n}}{\sqrt5}\qedhere
+\end{align*}
+\end{proof}
+\newpage
+
+\subsection{Example: Well-ordering principle}
 
 
 
