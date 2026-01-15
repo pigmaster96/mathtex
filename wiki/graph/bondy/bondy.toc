@@ -1,2 +1,0 @@
-\contentsline {chapter}{\numberline {1}Graphs}{2}{}%
-\contentsline {section}{\numberline {1.1}Definitions and examples}{2}{}%

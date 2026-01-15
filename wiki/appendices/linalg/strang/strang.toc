@@ -1,0 +1,77 @@
+\contentsline {chapter}{\numberline {1}Vectors and Matrices}{4}{}%
+\contentsline {section}{\numberline {1.1}Intuition for Dot product, Cosine formula, Schwarz and Triangle inequalities}{4}{}%
+\contentsline {section}{\numberline {1.2}Intuition for column rank being equal to row rank}{6}{}%
+\contentsline {section}{\numberline {1.3}Ways to multiply $\bm {AB}=\bm {C}$}{9}{}%
+\contentsline {chapter}{\numberline {2}Solving linear equations $\bm {Ax}=\bm {b}$}{10}{}%
+\contentsline {section}{\numberline {2.1}Solutions to $\bm {Ax}=\bm {b}$}{11}{}%
+\contentsline {section}{\numberline {2.2}Elimination and Back Substitution}{12}{}%
+\contentsline {section}{\numberline {2.3}Elimination matrices and inverse matrices}{15}{}%
+\contentsline {section}{\numberline {2.4}Gauss-Jordan elimination}{17}{}%
+\contentsline {section}{\numberline {2.5}Proving $\bm {A}=\bm {LU}$}{18}{}%
+\contentsline {section}{\numberline {2.6}Permutation matrices}{20}{}%
+\contentsline {section}{\numberline {2.7}Transposes and symmetric matrices}{22}{}%
+\contentsline {subsection}{\numberline {2.7.1}The transpose of $\bm {AB}$ is $\bm {B}^T\bm {A}^T$: Intuition}{22}{}%
+\contentsline {subsection}{\numberline {2.7.2}Showing $(\bm {A}^T)^{-1}=(\bm {A}^{-1})^T$}{22}{}%
+\contentsline {subsection}{\numberline {2.7.3}$\bm {A}^T\bm {A}$ is symmetric}{22}{}%
+\contentsline {chapter}{\numberline {3}The Four Fundamental Subspaces}{23}{}%
+\contentsline {section}{\numberline {3.1}Reduced Row Echelon Form}{23}{}%
+\contentsline {section}{\numberline {3.2}$\bm {A}=\bm {CR}$ factorisation}{25}{}%
+\contentsline {section}{\numberline {3.3}Systematic nullspace computation}{26}{}%
+\contentsline {section}{\numberline {3.4}The complete solution to $\bm {Ax}=\bm {b}$}{28}{}%
+\contentsline {subsection}{\numberline {3.4.1}Rank and solution}{29}{}%
+\contentsline {section}{\numberline {3.5}Intuition for four subspaces}{31}{}%
+\contentsline {section}{\numberline {3.6}$\bm {A}=\bm {CR}$ and Block elimination}{32}{}%
+\contentsline {chapter}{\numberline {4}Orthogonality}{34}{}%
+\contentsline {section}{\numberline {4.1}Orthogonal subspaces}{34}{}%
+\contentsline {subsection}{\numberline {4.1.1}Orthogonal complements}{35}{}%
+\contentsline {subsection}{\numberline {4.1.2}Intuition for $\bm {x}=\bm {x}_\text {row}+\bm {x}_\text {null}$}{35}{}%
+\contentsline {subsection}{\numberline {4.1.3}$\bm {A}$ is invertible from the row space to the column space}{36}{}%
+\contentsline {section}{\numberline {4.2}$\bm {A}^T\bm {A}$ is invertible only if $\bm {A}$ has linearly\\ independent columns}{37}{}%
+\contentsline {section}{\numberline {4.3}Projections}{38}{}%
+\contentsline {subsection}{\numberline {4.3.1}Projection onto a line}{38}{}%
+\contentsline {subsection}{\numberline {4.3.2}Projection onto a subspace}{39}{}%
+\contentsline {section}{\numberline {4.4}Projection matrices are symmetrical}{41}{}%
+\contentsline {section}{\numberline {4.5}Least Squares Approximations}{42}{}%
+\contentsline {subsection}{\numberline {4.5.1}Fitting a straight line}{45}{}%
+\contentsline {section}{\numberline {4.6}Orthonormal Bases}{46}{}%
+\contentsline {subsection}{\numberline {4.6.1}Multiplication by any orthogonal matrix preserves length and angle}{47}{}%
+\contentsline {subsection}{\numberline {4.6.2}Projections using orthonormal bases}{47}{}%
+\contentsline {section}{\numberline {4.7}Gram-Schmidt Process}{48}{}%
+\contentsline {section}{\numberline {4.8}$\bm {A}=\bm {QR}$ factorisation}{49}{}%
+\contentsline {section}{\numberline {4.9}Pseudoinverses}{52}{}%
+\contentsline {chapter}{\numberline {5}Determinants}{54}{}%
+\contentsline {section}{\numberline {5.1}Properties of determinants}{54}{}%
+\contentsline {subsection}{\numberline {5.1.1}If $\bm {A}$ has two equal rows, its determinant is 0; row operations don't change the determinant}{55}{}%
+\contentsline {subsection}{\numberline {5.1.2}Upper triangular and diagonal matrices, Transpose}{56}{}%
+\contentsline {subsection}{\numberline {5.1.3}det$(\bm {AB})=($det$\bm {A})($det$\bm {B})$}{56}{}%
+\contentsline {subsection}{\numberline {5.1.4}Orthogonal matrices have determinant 1 or -1}{57}{}%
+\contentsline {subsection}{\numberline {5.1.5}Matrix factorisations and permutation matrix}{57}{}%
+\contentsline {section}{\numberline {5.2}Intuition for determinant formula}{58}{}%
+\contentsline {section}{\numberline {5.3}Cofactors, Adjugate, and Inverse}{62}{}%
+\contentsline {section}{\numberline {5.4}Cramer's Rule to solve $\bm {Ax}=\bm {b}$}{64}{}%
+\contentsline {subsection}{\numberline {5.4.1}Inverse formula from Cramer's rule}{65}{}%
+\contentsline {section}{\numberline {5.5}Sign of a permutation and determinants}{66}{}%
+\contentsline {section}{\numberline {5.6}Determinants of block-triangular\\matrices and matrices with identity blocks}{68}{}%
+\contentsline {chapter}{\numberline {6}Eigenvalues and Eigenvectors}{73}{}%
+\contentsline {section}{\numberline {6.1}Computation}{73}{}%
+\contentsline {section}{\numberline {6.2}Eigenvalues, Determinant, and Trace}{75}{}%
+\contentsline {section}{\numberline {6.3}Commuting matrices share eigenvectors}{76}{}%
+\contentsline {section}{\numberline {6.4}$\bm {AB}$ and $\bm {BA}$ have the same eigenvalues}{76}{}%
+\contentsline {section}{\numberline {6.5}Diagonalisation}{77}{}%
+\contentsline {section}{\numberline {6.6}Similar Matrices}{80}{}%
+\contentsline {section}{\numberline {6.7}Matrix Powers}{81}{}%
+\contentsline {section}{\numberline {6.8}Inutition for spectral theorem}{82}{}%
+\contentsline {subsection}{\numberline {6.8.1}Symmetric matrices are always diagonalisable}{82}{}%
+\contentsline {subsection}{\numberline {6.8.2}Eigenvectors of distinct eigenvalues of a symmetric matrix are orthogonal}{82}{}%
+\contentsline {section}{\numberline {6.9}Symmetric Positive Definite Matrices}{83}{}%
+\contentsline {subsection}{\numberline {6.9.1}Equivalence of definitions}{83}{}%
+\contentsline {subsection}{\numberline {6.9.2}If $\bm {S}_1$ and $\bm {S}_2$ are symmetric positive definite, so is $\bm {S}_1+\bm {S}_2$}{83}{}%
+\contentsline {section}{\numberline {6.10}Cholesky decomposition}{84}{}%
+\contentsline {section}{\numberline {6.11}Other tests for positive definiteness}{87}{}%
+\contentsline {subsection}{\numberline {6.11.1}$\bm {S}=\bm {A}^T\bm {A}$}{87}{}%
+\contentsline {subsection}{\numberline {6.11.2}$\bm {LDL}^T$ factorisation and positive pivots}{88}{}%
+\contentsline {section}{\numberline {6.12}}{89}{}%
+\contentsline {chapter}{\numberline {A}Misc. topics}{90}{}%
+\contentsline {section}{\numberline {A.1}Taylor series, Difference approximations}{90}{}%
+\contentsline {section}{\numberline {A.2}Conjugate/Hermitian transpose}{92}{}%
+\contentsline {section}{\numberline {A.3}}{94}{}%

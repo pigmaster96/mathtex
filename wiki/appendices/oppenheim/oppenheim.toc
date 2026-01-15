@@ -1,0 +1,45 @@
+\contentsline {chapter}{\numberline {1}Introduction}{3}{}%
+\contentsline {section}{\numberline {1.1}Signal Energy and Power}{3}{}%
+\contentsline {section}{\numberline {1.2}Even and Odd signals}{6}{}%
+\contentsline {section}{\numberline {1.3}Differences between continuous and\\discrete periodic complex exponentials}{7}{}%
+\contentsline {section}{\numberline {1.4}A note on Discrete-time complex\\ exponential frequencies}{11}{}%
+\contentsline {section}{\numberline {1.5}Intuition for discrete-time periodicity}{12}{}%
+\contentsline {section}{\numberline {1.6}Difference in harmonic relations in discrete and\\continuous periodic exponentials}{14}{}%
+\contentsline {section}{\numberline {1.7}More on complex exponential and sinusoidal signals}{15}{}%
+\contentsline {section}{\numberline {1.8}Unit impulse and Unit step functions}{17}{}%
+\contentsline {section}{\numberline {1.9}Basic system properties 1}{23}{}%
+\contentsline {section}{\numberline {1.10}Basic system properties 2}{28}{}%
+\contentsline {chapter}{\numberline {2}Linear Time-Invariant Systems}{34}{}%
+\contentsline {section}{\numberline {2.1}Discrete-time convolution sum}{34}{}%
+\contentsline {section}{\numberline {2.2}Discrete-time convolution sum---examples}{39}{}%
+\contentsline {section}{\numberline {2.3}Continuous-time---the convolution integral}{47}{}%
+\contentsline {section}{\numberline {2.4}Convolution integral---examples}{51}{}%
+\contentsline {section}{\numberline {2.5}Properties of LTI systems 1}{56}{}%
+\contentsline {section}{\numberline {2.6}Properties of LTI systems 2}{60}{}%
+\contentsline {section}{\numberline {2.7}The Unit Step Response of an LTI system}{67}{}%
+\contentsline {section}{\numberline {2.8}Causal LTI systems described by differential and difference equations}{68}{}%
+\contentsline {section}{\numberline {2.9}Block diagram representations of first-order systems described by differential and difference equations}{72}{}%
+\contentsline {section}{\numberline {2.10}The Unit impulse as an idealised short\\pulse}{75}{}%
+\contentsline {section}{\numberline {2.11}Defining the unit impulse through convolution}{78}{}%
+\contentsline {section}{\numberline {2.12}Utility of singularity functions}{80}{}%
+\contentsline {chapter}{\numberline {3}Fourier series representation of periodic signals}{85}{}%
+\contentsline {section}{\numberline {3.1}The response of LTI systems to complex\\exponentials}{85}{}%
+\contentsline {section}{\numberline {3.2}Linear combinations of harmonically related complex exponentials}{88}{}%
+\contentsline {section}{\numberline {3.3}Fourier series representation of real periodic signals}{89}{}%
+\contentsline {section}{\numberline {3.4}Determination of the fourier series\\representation of a continuous-time periodic signal}{91}{}%
+\contentsline {section}{\numberline {3.5}Convergence of fourier series}{93}{}%
+\contentsline {section}{\numberline {3.6}Properties of continuous-time fourier series 1}{98}{}%
+\contentsline {section}{\numberline {3.7}Properties of continuous-time fourier series 2}{101}{}%
+\contentsline {section}{\numberline {3.8}Summary of properties (continuous)}{106}{}%
+\contentsline {section}{\numberline {3.9}Linear combinations of harmonically related complex exponentials (discrete)}{107}{}%
+\contentsline {section}{\numberline {3.10}Determination of the fourier series\\representation of a discrete-time periodic signal}{108}{}%
+\contentsline {section}{\numberline {3.11}Convergence in discrete-time\\representation}{111}{}%
+\contentsline {section}{\numberline {3.12}Properties of discrete-time fourier series}{113}{}%
+\contentsline {section}{\numberline {3.13}Summary of properties (discrete)}{116}{}%
+\contentsline {section}{\numberline {3.14}Fourier series and LTI systems}{117}{}%
+\contentsline {section}{\numberline {3.15}Frequency-selective filters}{119}{}%
+\contentsline {chapter}{\numberline {4}The continuous-time fourier transform}{120}{}%
+\contentsline {section}{\numberline {4.1}Development of the fourier transform\\representation of an aperiodic signal}{120}{}%
+\contentsline {section}{\numberline {4.2}Convergence of fourier transforms}{123}{}%
+\contentsline {chapter}{\numberline {A}Other proofs}{124}{}%
+\contentsline {section}{\numberline {A.1}Sum of geometric series}{124}{}%
