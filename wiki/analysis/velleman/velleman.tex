@@ -4386,7 +4386,7 @@ $\forall k<n+1P(k)$. So we are done.
 \end{proof}
 \newpage
 
-\subsection{Division algorithm}
+\subsection{Example: Division algorithm}
 \begin{theorem}
 (Division algorithm) For all natural numbers $n$ and $m$, if $m>0$ then there are natural numbers $q$ and $r$ such that $n=qm+r$ and $r<m$. (The numbers $q$ and $r$ are called the quotient
 and remainder when $n$ is divided by $m$.)
@@ -4416,7 +4416,30 @@ $n-m=q'm+r'$, so $n=q'm+r'+m=(q'+1)m+r'$. Thus if we let $q=q'+1$ and $r=r'$ the
 \noindent The terminology here is somewhat unfortunate since what we are calling the division algorithm is really a theorem and not an algorithm. Nevertheless this terminology is common.
 \newpage
 
-\subsection{}
+\subsection{Example: Either prime or a product of two or more primes}
+\begin{theorem}
+Every integer $n>1$ is either prime or a product of two or more primes. 
+\end{theorem}
+\noindent\textit{Scratch work}\\
+The goal here is $\forall n\in\mathbb N[n>1\to(n\text{ is prime }\lor\text{ $n$ is a product of primes})]$. We use strong induction; we let $n$ be natural, we assume our inductive hypothesis
+$\forall k<n[k>1\to(k\text{ is prime }\lor\text{ $k$ is a product of primes})]$ and want to show 
+$n>1\to(n\text{ is prime }\lor\text{ $n$ is a product of primes})$.
+We assume $n>1$. Then we assume $n$ is not prime and prove that it must be a product of primes.
+The assumption that $n$ is not prime means $\exists a\exists b(n=an\land a<n\land b<n)$. We immediately use existential instantiation to introduce the new variables $a$ and $b$ into the proof.
+Applying the inductive hypothesis to $a$ and $b$ leads to the desired conclusion.
+\begin{proof}
+We use strong induction. Let $n$ be an arbitrary real number and suppose that for every natural $k$, if $1<k<n$ then $k$ is either a prime or a product of primes. 
+Suppose $n>1$, then suppose $n$ is not prime. Then we
+can choose positive integers $a$ and $b$ such that $n=ab,a<n$ and $b<n$.
+Note that since $a<n=ab$ (and since $n$ is nonzero), it follows that $b>1$, and similarly we must have $a>1$. Thus by the inductive hypothesis, each of $a$ and $b$ is either prime or a product 
+of primes. But then since $n=ab$, $n$ is a product of (two or more) primes.
+\end{proof}
+\newpage
+
+\subsection{Example: Fibonacci numbers}
+
+
+
 
 
 
