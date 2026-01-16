@@ -212,6 +212,36 @@ Combining the two as $(P\to Q)\land(Q\to P)=P\leftrightarrow Q$ therefore corres
 $P\leftrightarrow Q$ means `$P$ iff $Q$', or `$P$ is a necessary and sufficient condition for $Q$'.
 \newpage
 
+\subsection{Associativity of the conditional connective}
+The truth table for the conditional is as follows:
+\begin{center}
+\begin{tabular}{ccc}
+$P$&$Q$&$P\to Q$\\
+\hline
+F&F&T\\
+F&T&T\\
+T&F&F\\
+T&T&T
+\end{tabular}
+\end{center}
+This may be better understood using the equivalence $(P\to Q)\leftrightarrow\neg(P\land\neg Q)$.\\
+\vspace{1mm}\\
+Now for a counterexample demonstrating that the conditional connective is not associative:
+\begin{center}
+\begin{tabular}{ccc|cc|cc}
+$P$&$Q$&$R$&$P\to Q$&$Q\to R$&$(P\to Q)\to R$&$P\to(Q\to R)$\\
+\hline
+F&F&F&T&T&F&T
+\end{tabular}
+\end{center}
+
+\subsection{$(A\to (B\to C))\leftrightarrow((A\land B)\to C)$}
+\begin{proof}
+($\rightarrow$) Suppose $(A\to (B\to C))$. Then suppose $A\land B$. Then since $A$ is true, $B\to C$ will be true. Then since $B$ is true $C$ must be true.\\
+\indent($\leftarrow$) Suppose $(A\land B)\to C)$. Suppose $A$. Then suppose $B$. Then since both $A$ and $B$ are true, $C$ is true.
+\end{proof}
+\newpage
+
 \section{Quantificational logic}
 \subsection{Quantifier negation laws}
 We have
@@ -4518,8 +4548,31 @@ F_n&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n-2}\left(\frac{1+\sqrt{5}}{2}\rig
 \newpage
 
 \subsection{Example: Well-ordering principle}
-
-
+\begin{theorem}
+(Well-ordering principle) Every nonempty set of natural numbers has a smallest element. 
+\end{theorem}
+\noindent\textit{Scratch work}\\
+Formally this means
+\begin{equation*}
+\forall S[(S\subseteq\mathbb N\land S\neq\emptyset)\to(\exists x\in S\forall y\in A(x\leq y)]
+\end{equation*}
+which is the same as
+\begin{equation*}
+\forall S\subseteq\mathbb N(S\neq\emptyset\to\exists x\in S\forall y\in A(x\leq y))
+\end{equation*}
+After letting $S$ be an arbitrary subset of $\mathbb N$, we'll prove the contrapositive, assuming $S$ has no smallest element and proving $S=\emptyset$. For a set $S\subseteq\mathbb N$, to say that 
+$S=\emptyset$ is the same as saying that $\forall n\in\mathbb N(n\notin S)$ (it can be shown 
+that $S\subseteq\mathbb N\to(S=\emptyset\leftrightarrow\forall x\in\mathbb N(x\notin S))$.) We'll prove 
+$\forall n\in\mathbb N(n\notin S)$ by strong induction.
+\begin{proof}
+Suppose $S\subseteq\mathbb N$, and then suppose $S$ does not have a smallest element. We will prove that 
+$\forall n\in\mathbb N(n\notin S)$, so $S=\emptyset$. Thus if $S\neq\emptyset$ then $S$ must have a smallest element.\\
+\indent We use strong induction to prove $\forall n\in\mathbb N(n\notin S)$. Suppose that $n\in\mathbb N$ and $\forall k<n(k\notin S)$. Now suppose that $n\in S$. Using the contrapositive of the 
+inductive hypothesis, $n$ is the smallest element of $S$, contradicting the assumption that $S$ has no smallest element. Therefore $n\notin S$.
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Applying the Well-ordering principle}\\
+Sometimes,
 
 
 
