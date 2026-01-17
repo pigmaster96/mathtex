@@ -1444,7 +1444,7 @@ We need an integer $j$ such that $x^2=2j$. Plugging in $2k_0$ for $x$ we get $x^
 See that $j=2k_0^2$ is a possible choice.\\
 (next page)\newpage
 \noindent\textbf{Example cont.}\\
-To prove the second goal ($x^2$ is even)$\to$($x$ is even), we'll prove the contrapositive ($x$ is not even)$\to$($x$ is not even) instead. Since any integer
+To prove the second goal ($x^2$ is even)$\to$($x$ is even), we'll prove the contrapositive ($x$ is not even)$\to$($x^2$ is not even) instead. Since any integer
 is either even or odd but not both, this is equivalent to ($x$ is odd)$\to$($x^2$ is odd):
 \begin{center}
 \begin{tabular}{c|c}
@@ -4572,7 +4572,31 @@ inductive hypothesis, $n$ is the smallest element of $S$, contradicting the assu
 \end{proof}
 \noindent(next page)\newpage
 \noindent\textbf{Applying the Well-ordering principle}\\
-Sometimes,
+Sometimes proofs that could be done by induction are written instead as applications of the well-ordering principle.
+\begin{theorem}
+$\sqrt2$ is irrational.
+\end{theorem}
+\noindent Irrational means not rational. Our goal is a negative statement, so we proceed using proof by contradiction, assuming that $\sqrt2$ is rational. This means
+that there exists integers $p$ and $q$ such that $p/q=\sqrt2$, and since $\sqrt2$ is positive, we may as well restrict our attention to positive $p$ and $q$. 
+Since this is an existential statement, we let $p$ and $q$ stand for positive integers such that $p/q=\sqrt2$. Simple algebraic manipulations allow us to conclude that $p$ and $q$ must both be even.
+Thus in the fraction $p/q$ we can cancel a 2 from both the numerator and denominator, getting a new fraction with smaller numerator and denominator that is equal to $\sqrt2$.\\
+\vspace{1mm}\\
+The key idea is to note that our reasoning would apply to \textit{any} fraction that is equal to $\sqrt2$. Thus in any such fraction we can endlessly cancel a factor of 2 from the numerator and 
+denominator, and therefore there can be no smallest possible numerator or denominator. This would
+violate the well-ordering principle, leading to our contradiction.
+\begin{proof}
+Suppose that $\sqrt2$ is rational. This means that $\exists q\in\mathbb Z^+\exists p\in\mathbb Z^+(p/q=\sqrt2)$, so the set $S=\{q\in\mathbb Z^+|\exists p\in\mathbb Z^+(p/q=\sqrt2)\}$ is nonempty.
+By the well-ordering principle we can declare some $q$ to be the smallest element of $S$.
+Since $q\in S$, we can choose some $p\in\mathbb Z^+$ such that $p/q=\sqrt2$. Therefore $p^2/q^2=2$, so $p^2=2q^2$ and therefore $p^2$ is even. In an earlier theorem
+we proved that for any integer $x$, $x$ is even iff $x^2$ is even. Since $p^2$ is even, $p$ must be even, so we can choose some $p'\in\mathbb Z^+$ such that $p=2p'$.
+Therefore $p^2=4p'^2$, and substituting this into the equation $p^2=2q^2$ we get $4p'^2=2q^2$ and then $2p'^2=q^2$, so $q^2$ is even. Using the earlier theorem again $q$ must then be even. So we
+can choose some $q'\in\mathbb Z^+$ such that $q=2q'$. But then $\sqrt2=p/q=(2p')/(2q')=p'/q'$, so
+$q'\in S$. Clearly $q'<q$, contradicting the fact that $q$ was chosen to be the smallest element of $S$. Therefore $\sqrt2$ is irrational.
+\end{proof}
+\newpage
+
+\section{}
+
 
 
 
