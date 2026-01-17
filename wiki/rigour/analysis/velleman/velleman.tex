@@ -3777,6 +3777,31 @@ from $A\times A$ to $A$, it is sometimes represented with a symbol between $x$ a
 relation} on $A$.
 \newpage
 
+\section{Images and Inverse Images}
+Suppose $f:A\to B$. We have already seen that we can think of $f$ matching each element of $A$ with exactly one element of $B$. $f$ can also be thought of as
+matching \textit{subsets} of $A$ with subsets of $B$ and vice-versa.
+\begin{definition}
+Suppose $f:A\to B$ and $X\subseteq A$. Then the \textit{image} of $X$ under $f$ is the set $f(X)$
+defined as
+\begin{align*}
+f(X)&=\{f(x)|x\in X\}\\
+&=\{b\in B|\exists x\in X(f(x)=b)\}
+\end{align*}
+(Note that the image of the whole domain $A$ under $f$ is $\{f(a)|a\in A\}$, which is the same as the range of $f$.)\\
+\vspace{1mm}\\
+If $Y\subseteq B$, then the \textit{inverse image} $Y$ under $f$ is the set $f^{-1}(Y)$ defined as
+\begin{equation*}
+f^{-1}(Y)=\{a\in A|f(a)\in Y\}
+\end{equation*}
+\end{definition}
+\noindent Note that the function $f$ may fail to be one-to-one or onto, and as a result $f^{-1}$ may not be a function from $B$ to $A$, and for $y\in B$, the notation 
+``$f^{-1}(y)$'' may be meaningless.
+Notice that the definition still assigns a meaning to the notation $f^{-1}(Y)$ for $Y\subseteq B$; 
+it doesn't treat $f^{-1}$ as a function, and refers only to the results of applying $f$ to elements
+of $A$. Not the results of applying $f^{-1}$ to elements of $B$.
+
+\newpage
+
 \chapter{Mathematical Induction}
 \section{Proof by Mathematical Induction}
 Suppose we want to prove that every natural number $\mathbb N=\{0,1,2,3,\ldots\}$ has some property $P$.
