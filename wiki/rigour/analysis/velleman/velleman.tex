@@ -3799,7 +3799,20 @@ f^{-1}(Y)=\{a\in A|f(a)\in Y\}
 Notice that the definition still assigns a meaning to the notation $f^{-1}(Y)$ for $Y\subseteq B$; 
 it doesn't treat $f^{-1}$ as a function, and refers only to the results of applying $f$ to elements
 of $A$. Not the results of applying $f^{-1}$ to elements of $B$.
-
+\begin{theorem}
+Suppose $f:A\to B$, and $W$ and $X$ are subsets of $A$. Then $f(W\cap X)\subseteq f(W)\cap f(X)$. Furthermore, if $f$ is one-to-one, then $f(W\cap X)=f(W)\cap f(X)$.
+\end{theorem}
+\begin{proof}
+Suppose first that $y$ is an arbitrary element of $f(W\cap X)$. By the definition of $f(W\cap X)$, this means that $y=f(x)$ for some $x\in W\cap X$. Since $x\in W\cap X$, it follows that 
+$x\in W$ and $x\in X$. But now we have $y=f(x)$ and $x\in W$, so we can conclude that 
+$y\in f(W)$. Similarly, since $y=f(x)$ and $x\in X$, it follows that $y\in f(X)$. 
+Thus $y\in f(W)\cap f(X)$. This completes the first half of the proof.\\
+\indent Now suppose that $y\in f(W)\cap f(X)$ and that $f$ is one-to-one. 
+Then $y\in f(W)$, so there is some $w\in W$ such that $f(w)=y$, similarly since $y\in f(X)$, there is some $x\in X$ such that 
+$y=f(x)$.
+Since $f(w)=y=f(x)$ and $f$ is one-to-one, $w=x$. So $w\in W\cap X$ and $f(w)=y$, meaning 
+$y\in f(W\cap X)$. 
+\end{proof}
 \newpage
 
 \chapter{Mathematical Induction}
@@ -4620,7 +4633,7 @@ $q'\in S$. Clearly $q'<q$, contradicting the fact that $q$ was chosen to be the 
 \end{proof}
 \newpage
 
-\section{}
+\section{Closures again}
 
 
 
