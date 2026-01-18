@@ -4634,6 +4634,28 @@ $q'\in S$. Clearly $q'<q$, contradicting the fact that $q$ was chosen to be the 
 \newpage
 
 \section{Closures again}
+Recall that if $f:A\to A$ and $B\subset A$ then the closure of $B$ under $f$ is the smallest set $C\subseteq A$ such that $B\subset C$ and $C$ is closed under $f$. 
+In this section we'll show that we can find this set $C$ by starting with $B$ and then adding only those elements that \textit{must} be added to end up with a set closed under $f$. 
+\begin{theorem}
+Suppose $B\subseteq C\subseteq A$, $f:A\to A$, and $C$ is closed under $f$, then $\forall x\in B(f(x)\in C)$. Furthermore, $\forall x\in B(f(x)\in C)\leftrightarrow f(B)\subseteq C$.
+\end{theorem}
+\begin{proof}
+First we show $\forall x\in B(f(x)\in C)$. Suppose $x\in B$. Then since $B\subseteq C$, $x\in C$. Since $C$ is closed under $f$, $f(x)\in C$.\\
+\indent Now we show the equivalence. First note that
+\begin{equation*}
+f(B)\leftrightarrow \{x|\exists y\in B(f(y)=x)\}
+\end{equation*}
+\indent ($\rightarrow$) Suppose $\forall x\in B(f(x)\in C)$. Let $x\in f(B)$, then we can declare some $y\in B$ such that $f(y)=x$. Since $\forall x\in B(f(x)\in C)$, $x=f(y)\in C$.\\
+\indent ($\leftarrow$) Now suppose $f(B)\subseteq C$. Let $x$ be an arbitrary element of $B$.
+Since $x\in B\subseteq A$, and $f:A\to A$, we can declare some $y\in A$ such that $f(x)=y$.
+Since $x\in B$ and $f(x)=y$, $y\in f(B)$, so $f(x)=y\in C$.
+\end{proof}
+\noindent If we want to find a set $C\subseteq A$ such that $B\subseteq C$ and $C$ is closed under $f$, then for every $x\in B$, we must have $f(x)\in C$, or in other words, $f(B)\subseteq C$, where
+$f(B)$ is the image of $B$ under $f$.\\
+\vspace{1mm}\\
+A similar reasoning implies that the image of $f(B)$ under $f$ must also be a subset of $C$, that is, $f(f(B))\subseteq C$. Continuing
+
+
 
 
 
