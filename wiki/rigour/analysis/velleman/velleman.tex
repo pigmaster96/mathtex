@@ -4653,8 +4653,31 @@ Since $x\in B$ and $f(x)=y$, $y\in f(B)$, so $f(x)=y\in C$.
 \noindent If we want to find a set $C\subseteq A$ such that $B\subseteq C$ and $C$ is closed under $f$, then for every $x\in B$, we must have $f(x)\in C$, or in other words, $f(B)\subseteq C$, where
 $f(B)$ is the image of $B$ under $f$.\\
 \vspace{1mm}\\
-A similar reasoning implies that the image of $f(B)$ under $f$ must also be a subset of $C$, that is, $f(f(B))\subseteq C$. Continuing
+A similar reasoning implies that the image of $f(B)$ under $f$ must also be a subset of $C$, that is, $f(f(B))\subseteq C$. Continuing this way leads to a sequence of sets that must be contained
+in $C$: $B$, $f(B)$, $f(f(B))$, and so on. We will prove that putting these sets together by taking their union will give us the closure of $B$ under $f$.\\
+\vspace{1mm}\\
+The idea here is that if we let $B_0=B,B_1=f(B),B_2=f(f(B)),\ldots,$ then the closure of $B$ under $f$ is $B_0\cup B_1\cup B_2\cup\cdots$. The use of ellipses suggests that we could use a recursive
+definition and induction to prove this.\\
+(next page)\newpage
+\begin{theorem}
+Suppose $f:A\to A$ and $B\subseteq A$. Let the sets $B_0$, $B_1$, $B_2,\ldots$ be defined recursively as follows:
+\begin{align*}
+&B_0=B;\\
+&\text{for all $n\in\mathbb N$, $B_{n+1}=f(B_n)$}
+\end{align*}
+Then the closure of $B$ under $f$ is the set $\bigcup_{n\in\mathbb N}B_n$.
+\end{theorem}
+\begin{proof}
+Let $C=\bigcup_{n\in\mathbb N}B_n$. First we prove by induction that each set $B_n$ is a subset of $A$.\\
+\indent Base case: $B_0=B\subseteq A$.\\
+\indent Induction step: Suppose $n\in\mathbb N$ and $B_n\in A$. Now suppose $x$ is an element of $B_{n+1}$, which by definition is equal to $f(B_n)$, so $x\in f(B_n)$. Since $f:A\to A$ and $B_n\subseteq A$, by definition $x\in A$, so $B_{n+1}\subseteq A$.\\
+\indent Now we show that $C\subseteq A$. Let $x$ be an arbitrary element of $C$. Then for some $n\in\mathbb N$ we can declare $x\in B_n$ (union on an indexed family). Since we know $\forall n\in\mathbb N B_n\subseteq A$,
+$x\in A$.\\
+\indent We now have proven $C\subseteq A$. To show that $C$ is a closure, we must check that 
 
+
+
+\end{proof}
 
 
 
