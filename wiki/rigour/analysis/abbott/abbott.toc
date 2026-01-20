@@ -1,2 +1,3 @@
 \contentsline {chapter}{\numberline {1}The real numbers}{2}{}%
 \contentsline {section}{\numberline {1.1}Definitions and the necessity for real numbers}{2}{}%
+\contentsline {section}{\numberline {1.2}The axiom of completeness}{4}{}%
