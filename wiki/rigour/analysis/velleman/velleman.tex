@@ -4634,7 +4634,7 @@ $q'\in S$. Clearly $q'<q$, contradicting the fact that $q$ was chosen to be the 
 \newpage
 
 \section{Closures again}
-Recall that if $f:A\to A$ and $B\subset A$ then the closure of $B$ under $f$ is the smallest set $C\subseteq A$ such that $B\subset C$ and $C$ is closed under $f$. 
+Recall that if $f:A\to A$ and $B\subseteq A$ then the closure of $B$ under $f$ is the smallest set $C\subseteq A$ such that $B\subseteq C$ and $C$ is closed under $f$. 
 In this section we'll show that we can find this set $C$ by starting with $B$ and then adding only those elements that \textit{must} be added to end up with a set closed under $f$. 
 \begin{theorem}
 Suppose $B\subseteq C\subseteq A$, $f:A\to A$, and $C$ is closed under $f$, then $\forall x\in B(f(x)\in C)$. Furthermore, $\forall x\in B(f(x)\in C)\leftrightarrow f(B)\subseteq C$.
@@ -4673,10 +4673,20 @@ Let $C=\bigcup_{n\in\mathbb N}B_n$. First we prove by induction that each set $B
 \indent Induction step: Suppose $n\in\mathbb N$ and $B_n\in A$. Now suppose $x$ is an element of $B_{n+1}$, which by definition is equal to $f(B_n)$, so $x\in f(B_n)$. Since $f:A\to A$ and $B_n\subseteq A$, by definition $x\in A$, so $B_{n+1}\subseteq A$.\\
 \indent Now we show that $C\subseteq A$. Let $x$ be an arbitrary element of $C$. Then for some $n\in\mathbb N$ we can declare $x\in B_n$ (union on an indexed family). Since we know $\forall n\in\mathbb N B_n\subseteq A$,
 $x\in A$.\\
-\indent We now have proven $C\subseteq A$. To show that $C$ is a closure, we must check that 
-
-
-
+\indent We now have proven $C\subseteq A$. To show that $C$ is a closure, we must check that $B\subseteq C$, $C$ is closed under $f$, and for every set $D\subseteq A$, if $B\subseteq D$ and $D$ is
+closed under $f$ then $C\subseteq D$.\\
+\indent For the first requirement, suppose $x$ in $B$. Then since $x\in B=B_0$, $x\in\bigcup_{n\in\mathbb N}B_n=C$. So $B\subseteq C$.\\
+\indent For the second, suppose that $x\in C$, then we can declare some $m\in\mathbb N$ such that $x\in B_m$. Then by the definition of the image of a function, $f(x)\in f(B_n)=B_{n+1}$. 
+So $f(x)\in\bigcup_{n\in\mathbb N}B_n=C$. Since $x$ was an arbitrary element of $C$, $C$ is closed under $f$.\\
+\indent For the final requirement, suppose $B\subseteq D\subseteq A$, and that $D$ is closed under $f$. We need to show $C\subseteq D$. At this point, we will first show that 
+$\forall n\in\mathbb N(B_n\subseteq D)$ implies $C=\bigcup_{n\in\mathbb N}B_n\subseteq D$. 
+Supposing that $\forall n\in\mathbb N(B_n\subseteq D)$, we let $x$ be an arbitrary element of $C$.
+Then we can declare some $n\in\mathbb N$ such that $x\in B_n$. By our assumption 
+$\forall n\in\mathbb N(B_n\subseteq D)$, $B_n\subseteq D$, so $x\in D$. So $C\subseteq D$, proving the conditional statement.\\
+\indent Now we show $\forall n\in\mathbb N(B_n\subseteq D)$. We will prove this by induction. The base case holds since $B_0=B\subseteq D$ by assumption. For thse induction step,
+suppose that $n\in\mathbb N$ and $B_n\subseteq D$. Now suppose $x\in B_{n+1}$. By definition
+this means $x\in f(B_n)$, so there is some $b\in B_n$ such that $f(b)=x$. By the inductive hypothesis $B_n\subseteq D$ so $b\in D$, and since $D$ is closed under $f$, $x=f(b)\in D$. 
+Since $x$ was arbitrary, $B_{n+1}\subseteq D$.
 \end{proof}
 
 
