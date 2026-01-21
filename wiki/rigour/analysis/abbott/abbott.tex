@@ -75,13 +75,57 @@ What exactly is a real number? We got as far as saying that the set $\mathbb R$ 
 length along the number line---such as $\sqrt2$---corresponds to a real number.\\
 \vspace{1mm}\\
 One will want to improve on this definition, and we could; continuing to use this unprecise definition would mean that whatever precise statements we formulate will rest on unproven assumptions and 
-undefined terms. However, at some point we must draw a line and confess that this is what we have decidd to accept as a reasonable place to start.
+undefined terms. However, at some point we must draw a line and confess that this is what we have decided to accept as a reasonable place to start.
 Naturally there is some debate as to where this line should be drawn. The majority of the material covered in these notes is attributable to many prominent mathematicians; the interesting
 point is that nearly all of this work was done using intuitive assumptions about the nature of 
 $\mathbb R$ quite similar to our own informal understanding at this point. It was these very theorems that motivated a rigorous construction of $\mathbb R$; not the other way around.\\
 \vspace{1mm}\\
 We will follow this historical model: our own rigorous construction of $\mathbb R$ from $\mathbb Q$ will be postponed till much later, when the need for such a construction will be more justified and easier to appreciate.
 
+\subsection{An initial definition for $\mathbb R$}
+$\mathbb R$ is a set containing $\mathbb Q$. The operations of addition and multiplication on $\mathbb Q$ extend to all $\mathbb R$ in such a way that every element of $\mathbb R$ has an additive 
+inverse and every nonzero element of $\mathbb R$ has a multiplicative inverse. We assume $\mathbb R$ is a \textit{field}, meaning that addition and multiplication of real numbers are commutative,
+associative, and distributive.
+We also assume that the familiar properties of ordering on $\mathbb Q$ extend to all of $\mathbb R$ (for instance if $a<b$ and $c>0$ then $ac<bc$). More formally, we assume
+that $\mathbb R$ is an \textit{ordered field}, which contains $\mathbb Q$ as a subfield (rigorous definitions left to the end).\\
+\vspace{1mm}\\
+This brings us to the final, and most distinctive, assumption about the real number system. We must find some way to clearly articulate what we mean by insisting that 
+$\mathbb R$ does not contain the gaps that permeate $\mathbb Q$. This is the defining difference between real numbers and rational numbers, and is referred to as the 
+\textit{Axiom of Completeness}:\\
+\vspace{1mm}\\
+\textbf{Axiom of Completeness.} \textit{Every nonempty set of real numbers that is bounded above has a least upper bound}.\\
+\vspace{1mm}\\
+Explaining this statement is the focus of the rest of the section.
+\newpage
+
+\subsection{Least Upper Bounds and Greatest Lower Bounds}
+\begin{definition}
+A set $A\subseteq\mathbb R$ is \textit{bounded above} if there exists a number $b\in\mathbb R$ such that $a\leq b$ for all $a\in A$. The number $b$ is called an \textit{upper bound} for $A$.\\
+\indent Similarly, the set $A$ is \textit{bounded below} if there exists a \textit{lower bound} $l\in\mathbb R$ satisfying $l\leq a$ for every $a\in A$.
+\end{definition}
+\begin{definition}
+A real number $s$ is the \textit{least upper bound} for a set $A\subseteq\mathbb R$ if it meets the following two criteria:
+\begin{enumerate}
+\item $s$ is an upper bound for $A$;
+\item if $b$ is any upper bound for $A$, then $s\leq b$.
+\end{enumerate}
+The least upper bound is frequently called the \textit{supremum} of the set $A$. Although the notation $s=\text{lub}A$ is sometimes used, we will always write
+$s=\sup A$ for the least upper bound.\\
+\indent The \textit{greatest lower bound} or \textit{infimum} for $A$ is defined in a similar way. A real number $l$ is the greatest lower bound for the set $A\subseteq\mathbb R$ if
+\begin{enumerate}
+\item $l$ is a lower bound for $A$;
+\item if $b$ is any lower bound for $A$, then $b\leq l$.
+\end{enumerate}
+\end{definition}
+\begin{definition}
+A real number $a_0$ is the \textit{maximum} of the set $A$ if $a_0$ is an element of $A$ and $a_0\geq a$ for all $a\in A$. Similarly, a number $a_1$ is a \textit{minimum} of $A$ if $a_1\in A$ and 
+$a_1\leq a$ for every $a\in A$.
+\end{definition}
+\noindent\textbf{Axiom of Completeness.} \textit{Every nonempty set of real numbers that is bounded above has a least upper bound}.\\
+\vspace{1mm}\\
+The axiom of completeness asserts that every nonempty bounded set does have a least upper bound. We are not going to prove this. An \textit{axiom} in mathematics
+is an accepted assumption, to be used without proof. Perferably, an axiom should be an elementary
+statement about the system in question so fundamental that it seems to need no justification. 
 
 
 
