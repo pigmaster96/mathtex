@@ -4400,6 +4400,28 @@ Let $x>-1$ be arbitrary. We will prove by induction that for every natural numbe
 \end{align*}
 Which is what we wanted.
 \end{proof}
+\begin{theorem}
+For all positive integers $a$ and $b$,
+\begin{equation*}
+(2^b-1)\cdot\sum^{a-1}_{k=0}2^{kb}=2^{ab}-1
+\end{equation*}
+\end{theorem}
+\begin{proof}
+We let $b$ be an arbitrary positive integer and then proceed by induction on $a$.\\
+\indent Base case: When $a=1$ we have
+\begin{align*}
+(2^b-1)\cdot\sum^{a-1}_{k=0}2^{kb}&=(2^b-1)\cdot\sum^{0}_{k=0}2^{kb}\\
+&=(2^b-1)\cdot1\\
+&=2^{ab}-1
+\end{align*}
+\indent Induction step: suppose $a\geq1$ and $(2^b-1)\cdot\sum^{a-1}_{k=0}2^{kb}=2^{ab}-1$. Then
+\begin{align*}
+(2^b-1)\cdot\sum^{a}_{k=0}2^{kb}&=(2^b-1)\cdot\left(\sum^{a-1}_{k=0}2^{kb}+2^{ab}\right)\\
+&=(2^b-1)\cdot\sum^{a-1}_{k=0}2^{kb}+2^b\cdot2^{ab}-2^{ab}\\
+&=2^{ab}-1+2^{b+ab}-2^{ab}\\
+&=2^{(a+1)b}-1\qedhere
+\end{align*}
+\end{proof}
 \newpage
 
 \section{Strong induction}
@@ -4688,6 +4710,10 @@ suppose that $n\in\mathbb N$ and $B_n\subseteq D$. Now suppose $x\in B_{n+1}$. B
 this means $x\in f(B_n)$, so there is some $b\in B_n$ such that $f(b)=x$. By the inductive hypothesis $B_n\subseteq D$ so $b\in D$, and since $D$ is closed under $f$, $x=f(b)\in D$. 
 Since $x$ was arbitrary, $B_{n+1}\subseteq D$.
 \end{proof}
+\newpage
+
+\chapter{Number Theory}
+
 
 
 
