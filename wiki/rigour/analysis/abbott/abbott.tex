@@ -126,7 +126,23 @@ $a_1\leq a$ for every $a\in A$.
 The axiom of completeness asserts that every nonempty bounded set does have a least upper bound. We are not going to prove this. An \textit{axiom} in mathematics
 is an accepted assumption, to be used without proof. Perferably, an axiom should be an elementary
 statement about the system in question so fundamental that it seems to need no justification. 
+\newpage
 
+\subsection{Uniqueness of least upper bound}
+\begin{theorem}(Antisymmetry)
+$\forall x\in\mathbb R\forall y\in\mathbb R((x\leq y)\land(y\leq x)\to y=x)$
+\end{theorem}
+\begin{proof}(by me)
+Let $x$ and $y$ be arbitrary real numbers. Suppose $x\leq y$ and $y\leq x$. Then $x-y\leq0$ and $0\leq x-y$. Then $0\leq x-y\leq0$, so $x-y=0$ and $x=y$.
+\end{proof}
+\begin{theorem}
+If $s\in\mathbb R$ is a least upper bound of $A\subseteq\mathbb R$, then $s$ is the unique upper bound on $A$.
+\end{theorem}
+\begin{proof}(by me)
+Suppose $s\in\mathbb R$ is a least upper bound of $A\subseteq\mathbb R$. Now suppose $x\in\mathbb R$ is also a least upper bound of $A$. Then since $s\in\mathbb R$ and $x$ is a least upper bound, 
+$x\leq s$. But since $x\in\mathbb R$ and $s$ is a least upper bound, $s\leq x$. By antisymmetry, 
+we have $x=s$, showing that $s$ is unique.
+\end{proof}
 
 
 
