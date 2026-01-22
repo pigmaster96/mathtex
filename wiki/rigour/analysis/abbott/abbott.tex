@@ -144,6 +144,29 @@ $x\leq s$. But since $x\in\mathbb R$ and $s$ is a least upper bound, $s\leq x$. 
 we have $x=s$, showing that $s$ is unique.
 \end{proof}
 
+\subsection{sup(c+A)=c+sup A}
+\begin{theorem}
+Let $A\subseteq\mathbb R$ be nonempty and bounded above, and let $c\in\mathbb R$. Defining the set $c+A$ by
+\begin{equation*}
+c+A=\{c+a\mid a\in A\}
+\end{equation*}
+Then $\sup(c+A)=c+\sup(A)$
+\end{theorem}
+\begin{proof} (by me)
+Denoting $\alpha=\sup(c+A)$ and $\beta=\sup(A)$, we will show $\alpha\leq c+\beta$ and $c+\beta\leq\alpha$.\\
+\indent Starting with $\alpha\leq c+\beta$, we first show that $c+\beta$ is an upper bound on $c+A$. Supposing arbitrary $a\in c+A$, we can declare some $x\in A$ such that $a=c+x$. Since $x\in A$
+and $\beta=\sup(A)$, $x\leq\beta$, so $a=c+x\leq c+\beta$, and $c+\beta$ is an upper bound on $c+A$. Since $\alpha=\sup(c+A)$, $\alpha\leq c+\beta$.\\
+\indent Next we show $c+\beta\leq\alpha$. We will show that $\alpha-c$ is an upper bound on $A$. Supposing arbitrary $a\in A$, then $c+a\in c+A$. Since $\alpha=\sup(c+A)$, then $c+a\leq\alpha$ and 
+$a\leq\alpha-c$, so $\alpha-c$ is an upper bound on $A$. Now, since $\beta=\sup(A)$, 
+$\beta\leq\alpha-c$, so $c+\beta\leq\alpha$. By the antisymmetry of real numbers, $\alpha=c+\beta$, and $\sup(c+A)=c+\sup(A)$.
+\end{proof}
+\noindent\textit{Commentary}\\
+To prove that for real numbers $x$ and $y$, $x=y$, one strategy is to prove $x\leq y$ and $y\leq x$. This is particularly relevant here because the definition of the supremum involves inequalities.
+\newpage
+
+\subsection{}
+
+
 
 
 
