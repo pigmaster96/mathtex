@@ -164,7 +164,43 @@ $\beta\leq\alpha-c$, so $c+\beta\leq\alpha$. By the antisymmetry of real numbers
 To prove that for real numbers $x$ and $y$, $x=y$, one strategy is to prove $x\leq y$ and $y\leq x$. This is particularly relevant here because the definition of the supremum involves inequalities.
 \newpage
 
+\subsection{Alternative way of defining Supremum and Infimum}
+Recall the defintion of least upper bounds, which has two parts. Part 1 says that $\sup A$ must be an upper bound, and part 2 states that it must be the smallest one. The following lemma offers an 
+alternative way to restate part 2.
+\begin{lemma}
+Assume $s\in\mathbb R$ is an upper bound for the set $A\subseteq\mathbb R$. Then $s=\sup A$ if and only if, for every choice of $\epsilon>0$, there exists an element $a\in A$ satisfying
+$s-\epsilon<a$.
+\end{lemma}
+\begin{proof}
+($\rightarrow$) Suppose $s=\sup A$. For arbitrary $\epsilon>0$, $s-\epsilon<s$. Using the contrapositive of the second condition in the definition of the supremum, we can declare some $a\in A$
+such that $s-\epsilon<a$. \\
+\indent($\leftarrow$) Conversely, suppose that for every $\epsilon>0$ there exists $a\in A$ satisfying $s-\epsilon<a$. Let $b\in\mathbb R$ be some upper bound on $A$. 
+Let $b\in\mathbb R$ be some upper bound on $A$. Suppose now that $b<s$, then $s-b>0$. We would then be able to declare some $a\in A$ such that $s-(s-b)<a$, and $b<a$; but this contradicts the 
+assumption that $b$ is an upper bound on $A$, so $s\leq b$ and $s$ is the least upper bound.
+\end{proof}
+\noindent\textit{Commentary}\\
+To rephrase: given that $s$ is an upper bound, $s$ is the least upper bound if and only if any number smaller than $s$ is not an upper bound.
+\begin{lemma}
+Assume $l\in\mathbb R$ is a lower bound for a set $A\subseteq\mathbb R$. Then $l=\inf A$ if and only if, for every choice of $\epsilon>0$, there exists an element $a\in A$ satisfying $a<l+\epsilon$.
+\end{lemma}
+\begin{proof}
+($\rightarrow$) Suppose $l=\inf A$. For arbitrary $\epsilon>0$, $l+\epsilon>l$. Since $l=\inf A$, using the contrapositive of the second condition in the definition of the infimum, we can declare some $a\in A$ 
+such that $a<l+\epsilon$.\\
+\indent($\leftarrow$) Now suppose that for every $\epsilon>0$ there exists $a\in A$ satisfying $a<l+\epsilon$. Let $b\in\mathbb R$ be some lower bound on $A$ and suppose $l<b$. Then $b-l>0$ and we 
+can declare some $a\in A$ such that $a<l+b-l$, so $a<b$; but this contradicts the fact that $b$ is a lower bound, so $b\leq l$ and $l$ is the greatest lower bound.
+\end{proof}
+\noindent\textit{Commentary}\\
+Given that $l$ is a lower bound, $l$ is the greatest lower bound if and only if any number greater than $l$ is not a lower bound.
+\newpage
+
 \subsection{}
+
+
+
+
+
+
+
 
 
 

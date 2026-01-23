@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769102607.79714 "abbott.tex" "abbott.pdf" "abbott" 1769102608.17139 0
+["pdflatex"] 1769194169.24607 "abbott.tex" "abbott.pdf" "abbott" 1769194169.61426 0
   "/etc/texmf/web2c/texmf.cnf" 1767433088.34546 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -84,9 +84,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1767433103 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1767433139 3348620 54815ecd3cfca19d87f06e16fc1eb500 ""
-  "abbott.aux" 1769102608.13747 1067 8ae7ee21a6497f2b2a38eb6faa55c873 "pdflatex"
-  "abbott.tex" 1769102606.88145 11140 e97838ddc76651a82cb66e98030f14fb ""
-  "abbott.toc" 1769102608.13747 630 398e6d7bc8aa3cf2c01a709b332a26c4 "pdflatex"
+  "abbott.aux" 1769194169.5781 1210 102cc726e8abba5db191a0dc24a58240 "pdflatex"
+  "abbott.tex" 1769194167.83807 13568 62cad6f7a765c0b56b119ca34aba3bea ""
+  "abbott.toc" 1769194169.5781 732 645884127b57feade32192f2e6742c36 "pdflatex"
   "images/1.png" 1768641077.31371 1972 72c9f7154231ae462d6470fdf1d0103f ""
   (generated)
   "abbott.aux"

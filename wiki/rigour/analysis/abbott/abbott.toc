@@ -5,4 +5,5 @@
 \contentsline {subsection}{\numberline {1.2.2}Least Upper Bounds and Greatest Lower Bounds}{5}{}%
 \contentsline {subsection}{\numberline {1.2.3}Uniqueness of least upper bound}{6}{}%
 \contentsline {subsection}{\numberline {1.2.4}sup(c+A)=c+sup A}{6}{}%
-\contentsline {subsection}{\numberline {1.2.5}}{7}{}%
+\contentsline {subsection}{\numberline {1.2.5}Alternative way of defining Supremum and Infimum}{7}{}%
+\contentsline {subsection}{\numberline {1.2.6}}{8}{}%
