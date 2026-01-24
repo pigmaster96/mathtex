@@ -322,9 +322,18 @@ this result makes the plausible statement that the distance from $a$ to $b$ is l
 to the distance from $a$ to $c$ plus the distance from $c$ to $b$. Pretending for a moment that 
 these are points on a plane instead of a line, it should be evident why this is referred to as the
 ``triangle inequality''.
-\newpage
 
-\subsection{}
+\subsection{Another way of showing equality between two real numbers}
+\begin{theorem}
+Two real numbers $a$ and $b$ are equal if and only if for every real number $\epsilon>0$ it follows
+that $|a-b|<\epsilon$.
+\end{theorem}
+\begin{proof}
+($\rightarrow$) Suppose two real numbers $a$ and $b$ are equal. Then $a-b=0$ and then $|a-b|=0$. For arbitrary $\epsilon>0$, $\epsilon>|a-b|$.\\
+\indent($\leftarrow$) Suppose that for every real $\epsilon>0$ it follows that $|a-b|>\epsilon$. 
+Now suppose $a\neq b$. Then $a-b$ is nonzero. Since it must be the case that $|a-b|\geq0$, 
+$|a-b|>0$. Therefore $\epsilon_0=|a-b|>0$ contradicts the initial assumption, and it must be that $a=b$.
+\end{proof}
 
 
 

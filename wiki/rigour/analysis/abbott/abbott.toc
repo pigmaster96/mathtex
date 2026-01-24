@@ -7,4 +7,4 @@
 \contentsline {subsection}{\numberline {1.2.4}sup(c+A)=c+sup A}{6}{}%
 \contentsline {subsection}{\numberline {1.2.5}Alternative way of defining Supremum and Infimum}{7}{}%
 \contentsline {subsection}{\numberline {1.2.6}Triangle inequality and Absolute value function}{8}{}%
-\contentsline {subsection}{\numberline {1.2.7}}{11}{}%
+\contentsline {subsection}{\numberline {1.2.7}Another way of showing equality between two real numbers}{10}{}%
