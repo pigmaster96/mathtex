@@ -23,7 +23,7 @@
 
 \tableofcontents
 
-\chapter{The real numbers}
+\chapter{The Real Numbers}
 \section{Definitions and the necessity for real numbers}
 We begin with the \textit{natural numbers}
 \begin{equation*}
@@ -70,7 +70,7 @@ filling in the gaps in $\mathbb Q$. Wherever there is a hole, a new \textit{irra
 are the union of these irrational numbers together with the more familiar rational ones.
 \newpage
 
-\section{The axiom of completeness}
+\section{The Axiom of Completeness}
 What exactly is a real number? We got as far as saying that the set $\mathbb R$ of real numbers is an extension of the rational numbers $\mathbb Q$ in which there are no holes or gaps, where every
 length along the number line---such as $\sqrt2$---corresponds to a real number.\\
 \vspace{1mm}\\
@@ -193,14 +193,138 @@ can declare some $a\in A$ such that $a<l+b-l$, so $a<b$; but this contradicts th
 Given that $l$ is a lower bound, $l$ is the greatest lower bound if and only if any number greater than $l$ is not a lower bound.
 \newpage
 
+\subsection{Triangle inequality and Absolute value function}
+\begin{definition}
+The \textit{absolute value function} is so important that it merits the special notation $|x|$ in place of the usual $f(x)$ or $g(x)$. It is defined for every real number via the piecewise
+definition
+\begin{equation*}
+f(x)=|x|=\begin{cases}
+x&\text{if }x\geq0\\
+-x&\text{if }x<0
+\end{cases}
+\end{equation*}
+\end{definition}
+\begin{theorem}
+$\forall a\in\mathbb R\forall b\in\mathbb R(|ab|=|a||b|)$
+\end{theorem}
+\begin{proof} Let $a$ and $b$ be arbitrary real numbers.\\
+\indent Case 1: $a\geq0,b\geq0$. Then $ab\geq0$, and
+\begin{equation*}
+|a||b|=ab=|ab|
+\end{equation*}
+\indent Case 2: $a\geq0,b<0$.\\
+\indent Case 2a: $a=0$. Then $ab=0$, and
+\begin{equation*}
+|a||b|=0=|ab|
+\end{equation*}
+\indent Case 2b: $a>0,b<0$. Then $ab<0$, and 
+\begin{equation*}
+|a||b|=(a)(-b)=-ab=|ab|
+\end{equation*}
+\indent Case 3: $a<0,b\geq0$.\\
+\indent Case 3a: $b=0$. Then $ab=0$, and
+\begin{equation*}
+|a||b|=0=|ab|
+\end{equation*}
+\indent Case 3b: $b>0$. Then $ab<0$, and
+\begin{equation*}
+|a||b|=(-a)b=-ab=|ab|
+\end{equation*}
+\indent Case 4: $a<0,b<0$. Then $ab>0$, and
+\begin{equation*}
+|a||b|=(-a)(-b)=ab=|ab|
+\end{equation*}
+In all cases $|a||b|=|ab|$, so we are done.
+\end{proof}
+\noindent(next page)\newpage
+\begin{lemma}
+$\forall x\in\mathbb R(x^2=|x|^2)$
+\end{lemma}
+\begin{proof}
+Case 1: $x\geq0$. Then
+\begin{equation*}
+|x|^2=(x)^2=x^2
+\end{equation*}
+\indent Case 2: $x<0$. Then
+\begin{equation*}
+|x|^2=(-x)^2=x^2\qedhere
+\end{equation*}
+\end{proof}
+\begin{lemma}
+$\forall x\in\mathbb R(|x|\geq x)$
+\end{lemma}
+\begin{proof}
+Case 1: $x\geq0$. Then $|x|=x$.\\
+\indent Case 2: $x<0$. Then $|x|=-x>0>x$.
+\end{proof}
+\begin{lemma}
+$\forall x\in\mathbb R(|x|\geq0)$
+\end{lemma}
+\begin{proof}
+Case 1: $x\geq0$. Then $|x|=x\geq0$.\\
+\indent Case 2: $x<0$. Then $|x|=-x>0$.
+\end{proof}
+\begin{lemma}
+$\forall x\in\mathbb R\forall y\in\mathbb R[(x^2\geq y^2\land x\geq0\land y\geq0)\to x\geq y]$
+\end{lemma}
+\begin{proof}
+Let $x$ and $y$ be arbitrary real numbers. Suppose $x^2\geq y^2$, $x\geq0$, and $y\geq0$. Now suppose $x<y$; we know $x\geq0$ and $y\geq0$, which leads to the following cases:\\
+\indent Case 1: $x=0,y=0$. This is immediately contradicted by $x<y$.\\
+\indent Case 2: $x>0,y=0$. Then $x>y$, which is immediately contradicted by $x<y$.\\
+\indent Case 3: $x=0,y>0$. Then $x^2=0<y^2$, contradicting $x^2\geq y^2$.\\
+\indent Case 4: $x>0,y>0$. Then since $x<y$, $x^2<yx$ and $yx<y^2$. So $x^2<y^2$, contradicting $x^2\geq y^2$.\\
+In all possible cases the assumption $x<y$ leads to a contradiction, so $x\geq y$.
+\end{proof}
+\begin{theorem}
+(Triangle inequality) $\forall a\in\mathbb R\forall b\in\mathbb R(|a+b|\leq|a|+|b|)$.
+\end{theorem}
+\begin{proof}
+Let $a$ and $b$ be arbitrary real numbers.
+First we show $(a+b)^2\leq (|a|+|b|)^2$.  See that
+\begin{align*}
+(|a|+|b|)^2&=|a|^2+|b|^2+2|a||b|\\
+&=a^2+b^2+2|ab|\\
+&\geq a^2+b^2+2ab=(a+b)^2
+\end{align*}
+Now we show the inequality. See that
+\begin{equation*}
+|a+b|^2=(a+b)^2\leq(|a|+|b|)^2=||a|+|b||^2
+\end{equation*}
+We've shown $\forall x\in\mathbb R(|x|\geq0)$. So using the last lemma, 
+\begin{equation*}
+||a|+|b||\geq|a+b|
+\end{equation*}
+and
+\begin{equation*}
+|a|+|b|\geq|a+b|\qedhere
+\end{equation*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+$\forall a\in\mathbb R\forall b\in\mathbb R\forall c\in\mathbb R(|a-b|\leq|a-c|+|c-b|)$
+\end{theorem}
+\begin{proof}
+ Given three real numbers $a,b$ and $c$, we certainly have
+\begin{equation*}
+|a-b|=|(a-c)+(c-b)|
+\end{equation*}
+So by the triangle inequality, 
+\begin{equation*}
+|(a-c)+(c-b)|\leq|a-c|+|c-b|
+\end{equation*}
+and
+\begin{equation*}
+|a-b|\leq|a-c|+|c-b|\qedhere
+\end{equation*}
+\end{proof}
+\noindent The expression $|a-b|$ is equal to $|b-a|$ and is best understood as the \textit{distance} between two points $a$ and $b$ on the number line. With this interpretation, 
+this result makes the plausible statement that the distance from $a$ to $b$ is less than or equal 
+to the distance from $a$ to $c$ plus the distance from $c$ to $b$. Pretending for a moment that 
+these are points on a plane instead of a line, it should be evident why this is referred to as the
+``triangle inequality''.
+\newpage
+
 \subsection{}
-
-
-
-
-
-
-
 
 
 

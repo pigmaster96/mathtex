@@ -1,9 +1,10 @@
-\contentsline {chapter}{\numberline {1}The real numbers}{2}{}%
+\contentsline {chapter}{\numberline {1}The Real Numbers}{2}{}%
 \contentsline {section}{\numberline {1.1}Definitions and the necessity for real numbers}{2}{}%
-\contentsline {section}{\numberline {1.2}The axiom of completeness}{4}{}%
+\contentsline {section}{\numberline {1.2}The Axiom of Completeness}{4}{}%
 \contentsline {subsection}{\numberline {1.2.1}An initial definition for $\mathbb R$}{4}{}%
 \contentsline {subsection}{\numberline {1.2.2}Least Upper Bounds and Greatest Lower Bounds}{5}{}%
 \contentsline {subsection}{\numberline {1.2.3}Uniqueness of least upper bound}{6}{}%
 \contentsline {subsection}{\numberline {1.2.4}sup(c+A)=c+sup A}{6}{}%
 \contentsline {subsection}{\numberline {1.2.5}Alternative way of defining Supremum and Infimum}{7}{}%
-\contentsline {subsection}{\numberline {1.2.6}}{8}{}%
+\contentsline {subsection}{\numberline {1.2.6}Triangle inequality and Absolute value function}{8}{}%
+\contentsline {subsection}{\numberline {1.2.7}}{11}{}%
