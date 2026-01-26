@@ -4727,8 +4727,39 @@ this set is called the \textit{greatest common divisor} of $a$ and $b$, denoted 
 is 6, so $\gcd(18,12)=6$.\\
 (next page)\newpage
 \begin{theorem}
-
+Suppose $R$ is a total order on set $A$. Prove that every finite, nonempty set $B\subseteq A$ has an $R$-smallest element and an $R$-largest element.
 \end{theorem}
+\noindent\textit{Scratch work}
+\begin{align*}
+\forall n\geq1\forall B\subset A&(B\text{ has $n$ elements}\\&\to B\text{ has an $R$-smallest element}\land B\text{ has an $R$-largest element})
+\end{align*}
+Where $n$ is a natural number.
+\begin{proof}
+We proceed by induction.\\
+\indent Base case: $n=1$. Let $B$ be an arbitrary subset of $A$, suppose $B$ has 1 element. Then since $B$ has one element, we can declare some $x\in B$. Then by reflexivity, $xRx$, since $x$ 
+is the only element in $B$, $\forall b\in B(xRb)$, and it is the $R$-smallest element in $B$. Similarly $\forall b\in B(bRx)$, so it is also the $R$-largest element in $b$.\\
+\indent Induction step: Suppose $n$ is an arbitrary natural number where $n\geq1$. Suppose that for
+any arbitary subset of $A$ with $n$ elements, that subset has an $R$-smallest and an $R$-largest element. Let $B$ be an arbitrary subset of $A$, and suppose $B$ has $n+1$ elements. 
+We can declare $x_0$ to be some element of $B$, and we can denote $B'=B\backslash\{x_0\}$, which has $n$ elements. We need to show that $B$ has an $R$-smallest element and an $R$-largest element.\\
+\indent First we show that $B$ has an $R$-smallest element. Since $B'$ has $n$ elements, by the inductive hypothesis we can declare $x_1$ to be the $R$-smallest element of $B'$. We consider
+two cases:\\
+\indent Case 1: $x_0Rx_1$. We will show that $x_0$ is the smallest element of $B$. Let $b$ be an arbitrary element of $B$. Case 1a: $b=x_0$. Then by reflexivity, $x_0Rx_0=x_0Rb$. 
+Case 1b: $b\neq x_0$. Then $b\in B'$, and $x_1Rb$; since $x_0Rx_1$, by transitivity we have $x_0Rb$. Since $b$ was arbitrary, $x_0$ is the smallest element in $B$.\\
+\indent Case 2: $\neg x_0Rx_1$. Now we will show that $x_1$ is the smallest element of $B$. Again let $b$ to be some arbitrary element of $B$. 
+First see that since $R$ is a total order, $(x_0Rx_1\lor x_1Rx_0)$, so $(\neg x_0Rx_1\to x_1Rx_0)$, and
+$x_1Rx_0$. Case 2a: $b=x_0$. Then by reflexivity, $x_0Rx_0$ and $x_0Rb$. By transitivity, $x_1Rb$. Case 2b: $b\neq x_0$. Then $b\in B'$ and $x_1Rb$. Since $b$ was arbitrary, 
+$x_1$ is the smallest element of $b$.\\
+\indent Next we show that $B$ has an $R$-largest element. Since $B'$ has $n$ elements, by the inductive hypothesis we can declare $x_2$ to be the $R$-largest element of $B'$.\\
+\indent Case 1: $x_2Rx_0$. We will show that $x_0$ is the largest element of $B$. Let $b$ be an arbitrary element of $B$. Case 1a: $b=x_0$. Then by reflexivity, $x_0Rx_0$ and $bRx_0$. 
+Case 1b: $b\neq x_0$. Then $b\in B'$ and $bRx_2$. By transitivity $bRx_0$. Since $b$ was arbitrary, $x_0$ is the largest element in $B$.\\
+\indent Case 2: $\neg x_2Rx_0$. Now we will show that $x_2$ is the largest element of $B$. Again let $b$ be some arbitrary element of $B$. 
+First see that since $R$ is a total order, $(x_2Rx_0\lor x_0Rx_2)$, meaning $(\neg x_2Rx_0\to x_0Rx_2)$, so $x_0Rx_2$. Case 2a: $b=x_0$. Then by reflexivity $x_0Rx_0=bRx_0$. 
+By transitivity $bRx_2$. Case 2b: $b\neq x_0$. Then $b\in B'$ and $bRx_2$. Since $b$ was arbitrary, $x_2$ is the largest element in $B$.
+\end{proof}
+\noindent(next page)
+\newpage
+\begin{lemma}
+\end{lemma}
 
 
 
