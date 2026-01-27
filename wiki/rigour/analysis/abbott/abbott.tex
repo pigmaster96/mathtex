@@ -334,10 +334,30 @@ that $|a-b|<\epsilon$.
 Now suppose $a\neq b$. Then $a-b$ is nonzero. Since it must be the case that $|a-b|\geq0$, 
 $|a-b|>0$. Therefore $\epsilon_0=|a-b|>0$ contradicts the initial assumption, and it must be that $a=b$.
 \end{proof}
+\newpage
 
-
-
-
+\section{Consequences of Completeness}
+\subsection{Nested interval property}
+\begin{theorem}
+(Nested Interval Property). For each $n\in\mathbb N$, assume we are given a closed interval $I_n=[a_n,b_n]=\{x\in\mathbb R\mid a_n\leq x\leq b_n\}$.
+Assume also that each $I_n$ contains $I_{n+1}$. Then the resulting nested sequence of closed intervals
+\begin{equation*}
+I_1\supseteq I_2\supseteq I_3\supseteq I_4\supseteq\cdots
+\end{equation*}
+has a nonempty intersection; that is, $\bigcap^\infty_{n=1}I_n\neq\emptyset$.
+\end{theorem}
+\begin{proof}
+Consider the set
+\begin{equation*}
+A=\{a_n\mid n\in\mathbb N\}
+\end{equation*}
+\indent First we will show that $\forall n\in\mathbb N(\forall a\in A(a\leq b_n))$, meaning that for every $n\in\mathbb N$, $b_n$ serves as an upper bound for $A$. Suppose $n$ is an arbitrary 
+natural number. Let $a$ be an arbitrary element of $A$. Then there exists $x\in\mathbb N$ such that $a=a_x$. We have two cases:\\
+\indent Case 1: $n\geq x$. Then $I_x\supseteq I_n$. We know $b_n\in I_n\subseteq I_x$, so $b_n\in I_x$ and $a=a_x\leq b_n$.\\
+\indent Case 2: $n<x$. Then $I_n\supseteq I_x$. We know $a_x\in I_x\subseteq I_n$, so $a_x\in I_n$ and $a=a_x\leq b_n$. Since $a$ was an arbitrary element of $A$, and $n$ 
+was an arbitrary natural number, for every $n\in\mathbb N$, $b_n$ is an upper bound of $A$.\\
+\indent Now
+\end{proof}
 
 
 
