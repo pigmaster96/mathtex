@@ -4759,7 +4759,45 @@ By transitivity $bRx_2$. Case 2b: $b\neq x_0$. Then $b\in B'$ and $bRx_2$. Since
 \noindent(next page)
 \newpage
 \begin{lemma}
+For any positive integer $a$, 1 and $a$ are always elements of $D(a)$. 
 \end{lemma}
+\begin{proof}
+Suppose $a$ is a positive integer. 1 is an element of $D(a)$ because $a=a\cdot 1$. This expression also shows that $a$ is an element of $D(a)$.
+\end{proof}
+\noindent It is clear that for any two positive integers $a$ and $b$, $D(a)\cap D(b)$ is nonempty since $1\in D(a)$ and $1\in D(b)$. It is also obvious (though not rigorously shown), that
+$D(a)\cap D(b)$ is a finite set since $D(a)$ is a finite set. By the previous theorem we can therefore say that $D(a)\cap D(b)$ contains a largest element, meaning $\gcd(a,b)$ is always defined.
+\begin{lemma}
+For a positive integer $a$, $a$ is the largest element of $D(a)$.
+\end{lemma}
+\begin{proof}
+Suppose $x$ is an arbitrary element of $D(a)$. Then $x\in\mathbb Z^+$ and we can declare some integer $k$ such that $a=kx$. Since $a$ and $x$ are both positive integers, $k=a/x$ is a positive
+integer, so since $a=kx$, $x\leq a$.
+\end{proof}
+\noindent Since $D(a)\cap D(b)=D(b)\cap D(a)$, $\gcd(a,b)=\gcd(b,a)$. In other words, in the notation for the greatest common divisor of two positive integers,
+it doesn't matter which integer we list first. We will often find it convenient to list the larger integer first; in particular when compute $\gcd(a,b)$, we will assume that $a\geq b$.
+Recall the division algorithm mentioned earlier:
+\begin{theorem}
+(Division algorithm) For all natural numbers $n$ and $m$, if $m>0$ then there are natural numbers $q$ and $r$ such that $n=qm+r$ and $r<m$. (The numbers $q$ and $r$ are called the quotient
+and remainder when $n$ is divided by $m$.)
+\end{theorem}
+\begin{theorem}
+Suppose $a$ and $b$ are positive integers with $a\geq b$. Let $r$ be the remainder when we divide $a$ by $b$. If $r=0$ then $\gcd(a,b)=b$ and if $r>0$ then $\gcd(a,b)=\gcd(b,r)$.
+\end{theorem}
+\begin{proof}
+For natural numbers $q,b$, we have $a=qb+r$ (the division algorithm guarantees this). First we show that if $r=0$ then $\gcd(a,b)=b$. Suppose $r=0$, then $a=qb$, so $b\in D(a)$. We know that
+$b\in D(b)$, so $b\in D(a)\cap D(b)$. Let $x$ be an arbitrary element of $D(a)\cap D(b)$. We know
+that $b$ is the largest element of $D(b)$ and $x\in D(b)$, so $x\leq b$.\\
+\indent Now we show that if $r>0$ then $\gcd(a,b)=\gcd(b,r)$. Suppose $r>0$. We will show that $D(a)\cap D(b)=D(b)\cap D(r)$.\\
+\indent$(\rightarrow)$ Suppose first that $d\in D(a)\cap D(b)$. Then $d\mid a$ and $d\mid b$, so there are integers $j$ and $k$ such that $a=jd$ and $b=kd$. From the equation $a=qb+r$ we get
+$r=a-qb$ and then $r=jd-qkd=(j-qk)d$, so $d\mid r$ and $d\in D(r)$.
+As such we have $d\in D(b)\cap D(r)$.\\
+\indent$(\leftarrow)$ Suppose now that $d\in D(b)\cap D(r)$. Then $d\mid b$ and $d\mid r$, so there are integers $j$ and $k$ such that $b=jd$ and $r=kd$. From the equation $a=qb+r$ we get
+$a=(qjd+kd)=(qj+k)d$, so $d\mid a$ and $d\in D(a)$. So we have $d\in D(a)\cap D(b)$, and $D(a)\cap D(b)=D(b)\cap D(r)$. By the definition of the greatest common divisor, it follows that 
+$\gcd(a,b)=\gcd(b,r)$.
+\end{proof}
+\newpage
+\noindent\textbf{Computation}\\
+Given
 
 
 
