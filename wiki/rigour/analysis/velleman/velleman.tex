@@ -4795,10 +4795,63 @@ As such we have $d\in D(b)\cap D(r)$.\\
 $a=(qjd+kd)=(qj+k)d$, so $d\mid a$ and $d\in D(a)$. So we have $d\in D(a)\cap D(b)$, and $D(a)\cap D(b)=D(b)\cap D(r)$. By the definition of the greatest common divisor, it follows that 
 $\gcd(a,b)=\gcd(b,r)$.
 \end{proof}
-\noindent(next page)
-\newpage
+
+\subsection{Computation and Euclidean algorithm}
 \noindent\textbf{Computation}\\
-Given
+Given two positive integers $a$ and $b$, we can come up with a good way to determine their gcd.
+Suppose we want to find $\gcd(672,161)$. We begin by dividing $a=672$ by $b=161$, which gives us a quotient $q=4$ and remainder $r=28$:
+\begin{equation*}
+672=4\cdot161+28
+\end{equation*}
+By the previous theorem, we can conclude that $\gcd(672,161)=\gcd(a,b)=\gcd(b,r)=\gcd(161,28)$. So we try to compute $\gcd(161,28)$, which seems like an easier problem.\\
+\vspace{1mm}\\
+We can apply the same method again. We divide 161 by 28, to get a quotient of 5 and a remainder of 21:
+\begin{equation*}
+161=5\cdot28+21
+\end{equation*}
+Since $\gcd(161,28)=\gcd(28,21)$, we now try to compute $\gcd(28,21)$:
+\begin{equation*}
+28=1\cdot21+7
+\end{equation*}
+Finally, $\gcd(28,21)=\gcd(21,7)$, but $21=3\cdot 7+0$, so $7\mid21$ and therefore $\gcd(21,7)=7$. This is the answer to our original problem:
+\begin{equation*}
+\gcd(672,161)=\gcd(161,28)=\gcd(28,21)=\gcd(21,7)=7
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Now we generalise. Suppose we want to find $\gcd(a,b)$ for positive integers $a$ and $b$ where $a\geq b$. We define a sequence of natural numbers $r_0,r_1,r_2,\ldots$ recursively as follows.
+To start off the sequence, we let $r_0=a$ and $r_1=b$ (notice that $r_0\geq r_1$). Then we let 
+$q_2$ and $r_2$ be the quotient and remainder when we divide $r_0$ by $r_1$:
+\begin{equation*}
+r_0=q_2\cdot r_1+r_2,\quad 0\leq r_2<r_1
+\end{equation*}
+If $r_2\neq0$, we divide $r_1$ by $r_2$ to get a quotient $q_3$ and remainder $r_3$. In general, having computed $r_0,r_1,\ldots,r_n$, if $r_n\neq0$ then we divide $r_{n-1}$ by $r_n$ to produce a 
+quotient and remainder $q_{n+1}$ and $r_{n+1}$:
+\begin{equation*}
+r_{n-1}=q_{n+1}\cdot r_n+r_{n+1},\quad 0\leq r_{n+1}<r_n
+\end{equation*}
+The calculation stops when we reach a remainder of 0.\\
+\vspace{1mm}\\
+Note that we can be sure that we will eventually have a remainder of 0. If we didn't, then the sequence of divisions would go on forever and we would end up with an infinite sequence of positive
+integers $r_0,r_1,r_2,\ldots$ with $r_0\geq r_1>r_2\cdots$. $\{r_0,r_1,r_2\ldots\}$ would be 
+a nonempty set of natural numbers with no smallest element, contradicting the well-ordering principle.\\
+\vspace{1mm}\\
+Suppose $m$ is the largest index for which $r_m\neq0$. Then $r_{m+1}=0$ and there are $m$ divisions, which can be summarised as
+\begin{align*}
+r_0&=q_2\cdot r_1+r_2\\
+r_1&=q_3\cdot r_2+r_3\\
+&\vdots\\
+r_{m-1}&=q_{m+1}\cdot r_m+0\\
+\end{align*}
+As per the previous theorem, we can conclude that
+\begin{equation*}
+\gcd(a,b)=\gcd(r_0,r_1)=\gcd(r_1,r_2)=\cdots=\gcd(r_{m-1},r_m)=r_m
+\end{equation*}
+$\gcd(a,b)$ is the last nonzero value in the sequence $r_0,r_1,r_2,\ldots$. This method of computing the gcd of two positive integers is called the \textit{Euclidean algorithm}, named for Euclid.
+\newpage
+
+\subsection{}
+
 
 
 
