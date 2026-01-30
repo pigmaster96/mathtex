@@ -4850,7 +4850,7 @@ As per the previous theorem, we can conclude that
 $\gcd(a,b)$ is the last nonzero value in the sequence $r_0,r_1,r_2,\ldots$. This method of computing the gcd of two positive integers is called the \textit{Euclidean algorithm}, named for Euclid.
 \newpage
 
-\subsection{Linear combinations}
+\subsection{Linear combinations---Extended Euclidean\\algorithm}
 \textbf{Intuition}\\
 Consider finding the greatest common divisor of 444 and 1392. We apply the euclidean algorithm with $a=1392$ and $b=444$:
 \begin{center}
@@ -4881,9 +4881,48 @@ See that each remainder can be written in the form $sa+tb$ for some integers $s$
 the last nonzero remainder is the greatest common divisor of $a$ and $b$, so we conclude that $\gcd(a,b)=r_4=15a-47b$.\\
 (next page)\newpage
 \begin{theorem}
-
+For all positive integers $a$ and $b$ there are integers $s$ and $t$ such that $\gcd(a,b)=sa+tb$.
 \end{theorem}
+\begin{proof}
+As usual we may assume $a\geq b$; if not we can simply reverse the values of $a$ and $b$. Let $r_0,r_1,\ldots,r_{m+1}$ be the sequence of numbers produced by the euclidean algorithm 
+(this is guaranteed by the division algorithm), where 
+$r_m\neq0$ and $r_{m+1}=0$. We will show that for every natural number $n\leq m$, $r_n$ is a linear
+combination of $a$ and $b$. In other words, for every natural number $n$, if $n\leq m$ then there are integers $s_n$ and $t_n$ such that $r_n=s_na+t_nb$. We proceed by strong induction.\\
+\indent Suppose $n$ is a natural number and $n\leq m$, and suppose also that for all $k<n$, $r_k$ is a linear combination of $a$ and $b$. We consider three cases:\\
+\indent Case 1: $n=0$. Then $r_n=r_0=a=s_0a+t_0b$, where $s_0=1$ and $t_0=0$.\\
+\indent Case 2: $n=1$. Then $r_n=r_1=b=s_1a+t_1b$, where $s_1=0$ and $t_1=1$.
+\indent Case 3: $n\geq2$. Then $r_n$ is the remainder when $r_{n-2}$ is divided by $r_{n-1}$:
+\begin{equation*}
+r_{n-2}=q_n\cdot r_{n-1}+r_n
+\end{equation*}
+By the inductive hypothesis, there are integers $s_{n-1},s_{n-2},t_{n-1}$, and $t_{n-2}$ such that
+\begin{equation*}
+r_{n-1}=s_{n-1}a+t_{n-1}b,\quad r_{n-2}=s_{n-2}a+t_{n-2}b
+\end{equation*}
+Therefore
+\begin{align*}
+r_n&=r_{n-2}-q_n\cdot r_{n-1}=(s_{n-2}a+t_{n-2}b)-q_n(s_{n-1}a+t_{n-1}b)\\
+&=(s_{n-2}-q_ns_{n-1})a+(t_{n-2}-q_nt_{n-1})b
+\end{align*}
+so $r_n=s_na+t_nb$, where $s_n=s_{n-2}-q_ns_{n-1}$ and $t_n=t_{n-2}-q_nt_{n-1}$.\\
+\indent This completes the inductive proof that for every $n\leq m$, $r_n$ is a linear combination of $a$ and $b$. Applying this statement in the case $n=m$, we conclude that
+$\gcd(a,b)=r_m$ is a linear combination of $a$ and $b$.
+\end{proof}
+\noindent One advantage of this proof is that it provides us with a method to find integers $s$ and $t$ such that $\gcd(a,b)=sa+tb$. While carrying out the euclidean
+algorithm, we can compute numbers $s_n$ and $t_n$ recursively by using the formulas
+\begin{center}
+\begin{tabular}{cc}
+$s_0=1$,&$t_0=0$,\\
+$s_1=0$,&$t_1=1$,\\
+for $n\geq2$, $s_n=s_{n-2}-q_ns_{n-1}$,&$t_n=t_{n-2}-q_nt_{n-1}$.
+\end{tabular}
+\end{center}
+If $m$ is the largest index for which $r_m\neq0$, then $\gcd(a,b)=r_m=s_ma+t_mb$.
+This version of the euclidean algorithm where we can keep track of these extra numbers $s_n$ and $t_n$ is called the \textit{extended Euclidean Algorithm}.\\
+(next page)
+\newpage
 
+\subsection{}
 
 
 

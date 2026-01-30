@@ -96,9 +96,10 @@
 \contentsline {chapter}{\numberline {6}Number Theory}{151}{}%
 \contentsline {section}{\numberline {6.1}Greatest Common Divisors}{151}{}%
 \contentsline {subsection}{\numberline {6.1.1}Computation and Euclidean algorithm}{154}{}%
-\contentsline {subsection}{\numberline {6.1.2}Linear combinations}{156}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{158}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{158}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{158}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{158}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{159}{}%
+\contentsline {subsection}{\numberline {6.1.2}Linear combinations---Extended Euclidean\\algorithm}{156}{}%
+\contentsline {subsection}{\numberline {6.1.3}}{158}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{159}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{159}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{159}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{159}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{160}{}%
