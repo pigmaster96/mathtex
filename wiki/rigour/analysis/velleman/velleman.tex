@@ -4850,7 +4850,39 @@ As per the previous theorem, we can conclude that
 $\gcd(a,b)$ is the last nonzero value in the sequence $r_0,r_1,r_2,\ldots$. This method of computing the gcd of two positive integers is called the \textit{Euclidean algorithm}, named for Euclid.
 \newpage
 
-\subsection{}
+\subsection{Linear combinations}
+\textbf{Intuition}\\
+Consider finding the greatest common divisor of 444 and 1392. We apply the euclidean algorithm with $a=1392$ and $b=444$:
+\begin{center}
+\begin{tabular}{cccc}
+$n$&$q_n$&$r_n$&Division\\
+\hline
+0&&1392&\\
+1&&444&$1392=3\cdot444+60$\\
+2&3&60&$444=7\cdot60+24$\\
+3&7&24&$60=2\cdot24+12$\\
+4&2&12&$24=2\cdot12+0$\\
+5&2&0&
+\end{tabular}
+\end{center}
+It is instructive to see how the remainders were computed with respect to the initial inputs $a$ and $b$. Rearranging the equations, see that
+\begin{equation*}
+r_2=60=1392-3\cdot444=a-3b
+\end{equation*}
+From the second equation we get
+\begin{equation*}
+r_3=24=444-7\cdot60=b-7r_2=b-7(a-3b)=-7a+22b
+\end{equation*}
+and the third equation gives
+\begin{equation*}
+r_4=12=60-2\cdot24=r_2=2r3=(a-3b)-2(-7a+22b)=15a-47b
+\end{equation*}
+See that each remainder can be written in the form $sa+tb$ for some integers $s$ and $t$. We say that each remaindr is a \textit{linear combination} of $a$ and $b$. But
+the last nonzero remainder is the greatest common divisor of $a$ and $b$, so we conclude that $\gcd(a,b)=r_4=15a-47b$.\\
+(next page)\newpage
+\begin{theorem}
+
+\end{theorem}
 
 
 
