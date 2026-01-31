@@ -4980,8 +4980,21 @@ Suppose $p$ is prime and $p\mid ab$. From the previous theorem, if $p\nmid a$ th
 \noindent We use a disjunctive syllogism here.\\
 (next page)\newpage
 \begin{theorem}
-
+Suppose $p$ is a prime number. For positive integers $a_1,a_2,\ldots,a_k$, if $p\mid(a_1a_2\cdots a_k)$, then for some $i\in\{1,2,\ldots,k\}$, $p\mid a_i$.
 \end{theorem}
+\noindent\textit{Scratch work}\\
+The goal here is 
+\begin{equation*}
+\forall k\geq1(\forall a_1\in\mathbb Z^+\cdots\forall a_k\in\mathbb Z^+(p\mid(a_1\cdots a_k)\to\exists i\in\{1\ldots k\}(p\mid a_i)))
+\end{equation*}
+\begin{proof}
+We prove this theorem by induction on $k$.\\
+\indent Base case: $k=1$. Then if $p\mid a_1$ for arbitrary $a_1\in\mathbb Z^+$, this is exactly the goal, taking $i=1$.\\
+\indent Induction step: Now assuming that the statement holds for any $k$ integers, let $a_1,a_2,\ldots,a_{k+1}$ be positive integers such that $p\mid(a_1a_2\cdots a_ka_{k+1})$. 
+Since $a_1a_2\cdots a_ka_{k+1}=(a_1a_2\cdots a_k)a_{k+1}$, by the previous theorem, either $p\mid(a_1a_2\cdots a_k)$ or $p\mid a_{k+1}$. In the first case, by the inductive hypothesis we have $p\mid a_i$ for some $i\in\{1,2,\ldots,k\}$, and in the second we have $p\mid a_i$ where $i=k+1$.
+\end{proof}
+
+
 
 
 
