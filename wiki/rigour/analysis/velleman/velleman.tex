@@ -4515,7 +4515,7 @@ The goal here is $\forall n\in\mathbb N[n>1\to(n\text{ is prime }\lor\text{ $n$ 
 $\forall k<n[k>1\to(k\text{ is prime }\lor\text{ $k$ is a product of primes})]$ and want to show 
 $n>1\to(n\text{ is prime }\lor\text{ $n$ is a product of primes})$.
 We assume $n>1$. Then we assume $n$ is not prime and prove that it must be a product of primes.
-The assumption that $n$ is not prime means $\exists a\exists b(n=an\land a<n\land b<n)$. We immediately use existential instantiation to introduce the new variables $a$ and $b$ into the proof.
+The assumption that $n$ is not prime means $\exists a\exists b(n=ab\land a<n\land b<n)$. We immediately use existential instantiation to introduce the new variables $a$ and $b$ into the proof.
 Applying the inductive hypothesis to $a$ and $b$ leads to the desired conclusion.
 \begin{proof}
 We use strong induction. Let $n$ be an arbitrary real number and suppose that for every natural $k$, if $1<k<n$ then $k$ is either a prime or a product of primes. 
@@ -4921,8 +4921,67 @@ If $m$ is the largest index for which $r_m\neq0$, then $\gcd(a,b)=r_m=s_ma+t_mb$
 This version of the euclidean algorithm where we can keep track of these extra numbers $s_n$ and $t_n$ is called the \textit{extended Euclidean Algorithm}.\\
 (next page)
 \newpage
+\noindent\textbf{Example---Extended Euclidean algorithm}\\
+We use the Extended Euclidean algorithm to find $\gcd(574,168)$, and express it as a linear combination of 574 and 168.
+\begin{center}
+\includegraphics[width=10cm]{15}
+\end{center}
+We conclude that $\gcd(574,168)=14=5\cdot574-17\cdot168$.
+\begin{theorem}
+For all positive integers $a,b$ and $d$, if $d\mid a$ and $d\mid b$ then $d\mid\gcd(a,b)$.
+\end{theorem}
+\begin{proof}
+Let $a,b,d$ be arbitrary positive integers and suppose that $d\mid a$ and $d\mid b$. Then there are integers $j$ and $k$ such that $a=jd$ and $b=kd$. Now by the previous theorem we can declare
+$s$ and $t$ to be integers such that $\gcd(a,b)=sa+tb$. Then
+\begin{equation*}
+\gcd(a,b)=sa+tb=sjd+tkd=(sj+tk)d
+\end{equation*}
+so $d\mid\gcd(a,b)$.
+\end{proof}
+\newpage
 
-\subsection{}
+\section{Prime factorization}
+Recall that saying some number $n$ is prime means $\neg\exists a\exists b(n=ab\land a<n\land b<n)$.
+Recall from the section on induction that
+\begin{theorem}
+Every integer $n>1$ is either prime or a product of two or more primes. 
+\end{theorem}
+\noindent We mean this to say that every integer $n>1$ has a \textit{prime factorisation}.
+
+\subsection{Relatively prime}
+\begin{definition}
+If $a$ and $b$ are positive integers and $\gcd(a,b)=1$, then we say that $a$ and $b$ are \textit{relatively prime}.
+\end{definition}
+\noindent That is, $a$ and $b$ are relatively prime if their only common divisor is 1. For example, $D(50)=\{1,2,5,10,25,50\}$ and $D(63)=\{1,3,7,9,21,63\}$. $\gcd(50,63)=1$, so 50 and 63 are
+relatively prime.
+\begin{theorem}
+For all positive integers $a,b$, and $c$, if $c\mid ab$ and $\gcd(a,c)=1$ then $c\mid b$.
+\end{theorem}
+\begin{proof}
+Suppose $c\mid ab$ and $\gcd(a,c)=1$. Then there is some integer $j$ such that $ab=jc$, and by a previous theorem, we can declare integers $s$ and $t$ such that $sa+tc=1$. Therefore
+\begin{equation*}
+b=b\cdot1=b\cdot(sa+tc)=sab+tbc=sjc+tbc=(sj+tb)c
+\end{equation*}
+so $c\mid b$.
+\end{proof}
+\begin{theorem}
+Assuming that if $p$ is a prime number then $D(p)=\{1,p\}$, if $p\nmid a$ then $\gcd(a,p)=1$.
+\end{theorem}
+\begin{proof}
+We know $D(p)=\{1,p\}$. Suppose $p\nmid a$. Then $p\notin D(a)$ and $p\notin D(p)\cap D(a)$. So only $1\in D(p)\cap D(a)$ and $\gcd(a,p)=1$.
+\end{proof}
+\noindent We will intuitively assume that if $p$ is a prime number then $D(p)=\{1,p\}$.
+\begin{theorem}
+For all positive integers $a,b$ and $p$, if $p$ is prime and $p\mid ab$ then either $p\mid a$ or $p\mid b$.
+\end{theorem}
+\begin{proof}
+Suppose $p$ is prime and $p\mid ab$. From the previous theorem, if $p\nmid a$ then $a$ and $p$ are relatively prime. By the theorem before that, $p\mid b$. Thus either $p\mid a$ or $p\mid b$.
+\end{proof}
+\noindent We use a disjunctive syllogism here.\\
+(next page)\newpage
+\begin{theorem}
+
+\end{theorem}
 
 
 
@@ -4951,7 +5010,6 @@ value of $x$ for which $Q(x)$ holds, we can conclude that $\exists xQ(x)$. Thus 
 \newpage
 
 \subsection{}
-
 
 
 

@@ -210,6 +210,10 @@ INPUT ./images/14.png
 INPUT ./images/14.png
 INPUT ./images/14.png
 INPUT ./images/14.png
+INPUT ./images/15.png
+INPUT ./images/15.png
+INPUT ./images/15.png
+INPUT ./images/15.png
 INPUT velleman.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
