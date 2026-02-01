@@ -4941,14 +4941,14 @@ so $d\mid\gcd(a,b)$.
 \newpage
 
 \section{Prime factorization}
-Recall that saying some number $n$ is prime means $\neg\exists a\exists b(n=ab\land a<n\land b<n)$.
+Recall that saying some number $n\in\mathbb Z^+$ is prime means $\neg\exists a\in\mathbb Z^+\exists b\in\mathbb Z^+(n=ab\land a<n\land b<n)$.
 Recall from the section on induction that
 \begin{theorem}
 Every integer $n>1$ is either prime or a product of two or more primes. 
 \end{theorem}
 \noindent We mean this to say that every integer $n>1$ has a \textit{prime factorisation}.
 
-\subsection{Relatively prime}
+\subsection{Relatively prime and more}
 \begin{definition}
 If $a$ and $b$ are positive integers and $\gcd(a,b)=1$, then we say that $a$ and $b$ are \textit{relatively prime}.
 \end{definition}
@@ -4982,8 +4982,7 @@ Suppose $p$ is prime and $p\mid ab$. From the previous theorem, if $p\nmid a$ th
 \begin{theorem}
 Suppose $p$ is a prime number. For positive integers $a_1,a_2,\ldots,a_k$, if $p\mid(a_1a_2\cdots a_k)$, then for some $i\in\{1,2,\ldots,k\}$, $p\mid a_i$.
 \end{theorem}
-\noindent\textit{Scratch work}\\
-The goal here is 
+\noindent\textit{Scratch work}
 \begin{equation*}
 \forall k\geq1(\forall a_1\in\mathbb Z^+\cdots\forall a_k\in\mathbb Z^+(p\mid(a_1\cdots a_k)\to\exists i\in\{1\ldots k\}(p\mid a_i)))
 \end{equation*}
@@ -4993,6 +4992,48 @@ We prove this theorem by induction on $k$.\\
 \indent Induction step: Now assuming that the statement holds for any $k$ integers, let $a_1,a_2,\ldots,a_{k+1}$ be positive integers such that $p\mid(a_1a_2\cdots a_ka_{k+1})$. 
 Since $a_1a_2\cdots a_ka_{k+1}=(a_1a_2\cdots a_k)a_{k+1}$, by the previous theorem, either $p\mid(a_1a_2\cdots a_k)$ or $p\mid a_{k+1}$. In the first case, by the inductive hypothesis we have $p\mid a_i$ for some $i\in\{1,2,\ldots,k\}$, and in the second we have $p\mid a_i$ where $i=k+1$.
 \end{proof}
+\begin{theorem}
+Suppose that $p_1,p_2,\ldots p_k$ and $q_1,q_2,\ldots q_m$ are prime numbers, $p_1\leq p_2\leq\cdots\leq p_k$, $q_1\leq q_2\leq\cdots\leq q_m$, and $p_1p_2\cdots p_k=q_1q_2\cdots q_m$. Then 
+$k=m$ and for all $i\in\{1,\ldots,k\}$, $p_i=q_i$.
+\end{theorem}
+\noindent\textit{Scratch work}
+\begin{align*}
+\forall k\geq1\forall m\geq1(&[\forall p_1\ldots\forall p_k\forall q_1\ldots\forall q_m(p_1\ldots p_k\text{ are prime}\land q_1\ldots q_m\text{ are prime}\\
+&\land p_1\leq p_2\leq\ldots p_k\land q_1\leq q_2\leq\ldots q_m\land p_1p_2\cdots p_k=q_1q_2\cdots q_m]\\
+&\to k=m\land\forall i\in\{1\cdots k\}p_i=q_i))
+\end{align*}
+\begin{proof}
+The proof will be by induction on $k$. We are essentially showing that for all $k\geq1$, if the product of some \textit{nondecreasing list} of $k$ prime numbers is equal to the product of another 
+nondecreasing list of prime numbers, then the two lists must be the same.\\
+\indent Base case: When $k=1$, we have $p_1=q_1q_2\cdots q_m$. If $m>1$ then this contradicts the fact that $p_1$ is prime. Therefore $m=1$ and $p_1=q_1$.\\
+\indent Induction step: Suppose the statement is true for products of nondecreasing lists of $k$ prime numbers, let $m\geq1$ be arbitrary and suppose that 
+$p_1,p_2,\ldots,p_{k+1}$ and $q_1,q_2,\ldots q_m$ are prime numbers, $p_1\leq p_2\cdots\leq p_{k+1}$, $q_1\leq q_2\leq\cdots\leq q_m$, and $p_1p_2\cdots p_{k+1}=q_1q_2\cdots q_m$. 
+First notice that if $k+1\geq1$, so if $m=1$ then $p_1p_2\cdots p_{k+1}=q_1$, and as in the base case this contradicts the fact that $q_1$ is prime, so $m>1$ (the point of this statement will be 
+apparent by the end of the proof).\\
+\indent Clearly $p_{k+1}\mid(p_1p_2\cdots p_{k+1})$, so $p_{k+1}\mid(q_1q_2\cdots q_m)$; by the previous theorem it follows that $p_{k+1}\mid q_i$ for some $i\in\{1,\ldots,m\}$. 
+Therefore $p_{k+1}\leq q_i\leq q_m$. A similar argument shows that $q_m\mid p_j$ for some $j\in\{1,\ldots,k+1\}$, so $q_m\leq p_j\leq p_{k+1}$. Since $p_{k+1}\leq q_m$ and $q_m\leq p_{k+1}$, we conclude that $p_{k+1}=q_m$. Cancelling these factors from the equation 
+$p_1p_2\cdots p_{k+1}=q_1q_2\cdots q_m$ we get $p_1p_2\cdots p_{k}=q_1q_2\cdots q_{m-1}$, and now the inductive hypothesis tells us that the remaining factors on both sides of the equation are 
+equal, as required. (the statement confirming $m>1$ is necessary since we use $q_{m-1}$).
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Cont.}\\
+See that the previous theorem used the intuitive assumption that $a\mid b\to b\leq a$. I now use this to show that for a prime number $p$, $D(p)=\{1,p\}$.
+\begin{theorem}
+For a prime number $p$, $D(p)=\{1,p\}$.
+\end{theorem}
+\noindent\textit{Scratch work}\\
+Saying some number $n\in\mathbb Z^+$ is prime means $\neg\exists a\in\mathbb Z^+\exists b\in\mathbb Z^+(n=ab\land a<n\land b<n)$. Our goal is to show
+\begin{equation*}
+\neg\exists x\in\mathbb Z^+(x\neq1\land x\neq p\land x\mid p)
+\end{equation*}
+\begin{proof}
+Suppose there exists some $x\in\mathbb Z^+$ in $D(p)$ that isn't 1 or $p$. Then we can declare some $k\in\mathbb Z$ such that $kx=p$. Since $x\mid p$ we can say that $x\leq p$, and since $x\neq p$, $x<p$. 
+Similarly since $kx=p$ for positive integers $x$ and $p$, and $k$ is an integer, we can say that $k\mid p$, so $k\leq p$. But since $x\neq1$ and $kx=p$, $k\neq p$; so $k<p$. Since we have $kx=p$,  
+$x<p$, and $k<p$ for positive integers $x$ and $k$, this contradicts the fact that $p$ is prime.
+\end{proof}
+\newpage
+
+\subsection{Existence and uniqueness of prime factorisations}
 
 
 
