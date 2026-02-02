@@ -336,6 +336,24 @@ $|a-b|>0$. Therefore $\epsilon_0=|a-b|>0$ contradicts the initial assumption, an
 \end{proof}
 \newpage
 
+\subsection{Greatest lower bounds and AoC}
+\begin{theorem}
+Let $A$ be nonempty and bounded below, and define B as
+\begin{equation*}
+B=\{b\in\mathbb R\mid b\text{ is a lower bound for $A$}\} 
+\end{equation*}
+Then $\sup B$ exists, and $\sup B=\inf A$.
+\end{theorem}
+\begin{proof}
+Since $A$ is bounded below, by definition $B$ is nonempty. Since $A$ is nonempty, we can declare $a\in\mathbb R$ such that $a\in A$. For arbitrary $b\in B$, by definition $b\leq a$, so $a$ is an 
+upper bound on $B$ and $B$ is bounded above. As such by the AoC, $\sup B$ exists, which we will denote as $\alpha$.\\
+\indent Now we show $\alpha=\inf A$. First we show that $\alpha$ is a lower bound on $A$. Let $a$ be an arbitrary element of $A$, denoting $b$ as an arbitrary element of $B$, by definition $b$ is 
+smaller than every element in $A$, so $b\leq a$ and $a$ is an upper bound on $B$. Since $\alpha=\sup B$, it is the least upper bound and $\alpha\leq a$. So $\alpha$ is a lower bound on $A$.\\
+\indent Next we show that $\alpha$ is the greatest lower bound on $A$. Let $b\in\mathbb R$ be some lower bound on $A$. Then $b\in B$. Since $\alpha=\sup B$, $\alpha$ is an upper bound on $B$ so 
+$b\leq\alpha$ and $\alpha$ is the greatest lower bound on $A$. This completes the proof.
+\end{proof}
+\noindent The AoC does not need to address lower bounds; we can use it to prove the that if $A$ nonempty and bounded below, it has an infimum.
+
 \subsection{}
 
 

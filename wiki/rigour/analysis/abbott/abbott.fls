@@ -142,6 +142,8 @@ INPUT ./images/1.png
 INPUT ./images/1.png
 INPUT ./images/1.png
 INPUT ./images/1.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
 INPUT ./images/2.png
 INPUT ./images/2.png
 INPUT ./images/2.png
