@@ -5031,11 +5031,15 @@ Suppose there exists some $x\in\mathbb Z^+$ in $D(p)$ that isn't 1 or $p$. Then 
 Similarly since $kx=p$ for positive integers $x$ and $p$, and $k$ is an integer, we can say that $k\mid p$, so $k\leq p$. But since $x\neq1$ and $kx=p$, $k\neq p$; so $k<p$. Since we have $kx=p$,  
 $x<p$, and $k<p$ for positive integers $x$ and $k$, this contradicts the fact that $p$ is prime.
 \end{proof}
-\newpage
 
 \subsection{Existence and uniqueness of prime factorisations}
-
-
+\begin{theorem}
+(Fundamental theorem of arithmetic) For every integer $n>1$ there are unique prime numbers $p_1,p_2,\ldots p_k$ such that $p_1\leq p_2\leq\cdots\leq p_k$ and $n=p_1p_2\cdots p_k$.
+\end{theorem}
+\begin{proof}
+By an earlier theorem, every integer greater than 1 is either prime or a product of primes. Listing
+the primes from smallest to largest gives us the required nondecreasing prime factorisation. Uniqueness of the factorisation follows from the second last theorem in the previous subsection.
+\end{proof}
 
 
 

@@ -99,9 +99,9 @@
 \contentsline {subsection}{\numberline {6.1.2}Linear combinations---Extended Euclidean\\algorithm}{156}{}%
 \contentsline {section}{\numberline {6.2}Prime factorization}{159}{}%
 \contentsline {subsection}{\numberline {6.2.1}Relatively prime and more}{159}{}%
-\contentsline {subsection}{\numberline {6.2.2}Existence and uniqueness of prime factorisations}{162}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{163}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{163}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{163}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{163}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{164}{}%
+\contentsline {subsection}{\numberline {6.2.2}Existence and uniqueness of prime factorisations}{161}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{162}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{162}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{162}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{162}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{163}{}%
