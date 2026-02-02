@@ -167,7 +167,7 @@ To prove that for real numbers $x$ and $y$, $x=y$, one strategy is to prove $x\l
 \subsection{Alternative way of defining Supremum and Infimum}
 Recall the defintion of least upper bounds, which has two parts. Part 1 says that $\sup A$ must be an upper bound, and part 2 states that it must be the smallest one. The following lemma offers an 
 alternative way to restate part 2.
-\begin{lemma}
+\begin{lemma}\label{alt_def_sup_inf}
 Assume $s\in\mathbb R$ is an upper bound for the set $A\subseteq\mathbb R$. Then $s=\sup A$ if and only if, for every choice of $\epsilon>0$, there exists an element $a\in A$ satisfying
 $s-\epsilon<a$.
 \end{lemma}
@@ -336,6 +336,15 @@ $|a-b|>0$. Therefore $\epsilon_0=|a-b|>0$ contradicts the initial assumption, an
 \end{proof}
 \newpage
 
+\subsection{}
+
+
+
+
+
+
+\newpage
+
 \section{Consequences of Completeness}
 \subsection{Nested interval property}
 \begin{theorem}
@@ -370,10 +379,48 @@ We showed that the supremum of the set $A=\{a_n\mid n\in\mathbb N\}$ was in ever
 \end{center}
 \newpage
 
+\subsection{Density of Q in R}
+\begin{theorem}\label{archimedian}
+(Archimedian property) Given any number $x\in\mathbb R$, there exists an $n\in\mathbb N$ satisfying $n>x$.
+\end{theorem}
+\begin{proof}
+Assume, for contradiction, that $\mathbb N$ is bounded above. By the axiom of completeness, $\mathbb N$ should then have a least upper bound, and we can set $\alpha=\sup\mathbb N$. Then by 
+lemma \ref{alt_def_sup_inf} if we consider $\alpha-1$, we can declare some $n\in\mathbb N$ such that $\alpha-1<n$; this is equivalent to $\alpha<n+1$. However,
+since $\mathbb N$ is closed under addition, $\alpha<n+1\in\mathbb N$, contradicting the fact that $\alpha$ is supposed to be an upper bound for $\mathbb N$.
+\end{proof}
+\begin{theorem}
+Given any real number $y>0$, there exists an $n\in\mathbb N$ satisfying $1/n<y$.
+\end{theorem}
+\begin{proof}
+$1/y$ is a real number since $y>0$. By theorem \ref{archimedian} we can declare some $n\in\mathbb N$ such that $n>1/y$. Since $n>0$ and $y>0$, $1/n<y$.
+\end{proof}
+\begin{theorem}(Density of $\mathbb Q$ in $\mathbb R$) For every two real numbers $a$ and $b$ with $a<b$, there exists a rational number $r$ satisfying $a<r<b$.
+\end{theorem}
+\begin{proof}
+A rational number is a quotient of integers, so we must produce $m\in\mathbb Z$ and $n\in\mathbb N$ such that 
+\begin{equation*}
+a<\frac{m}{n}<b
+\end{equation*}
+Using the archimedian property, since $a<b$ we can declare $n\in\mathbb N$ such that
+\begin{equation}\label{arc_in_density}
+\frac{1}{n}<b-a
+\end{equation}
+The inequality we are trying to prove is equivalent to $na<m<nb$. The idea now is to choose $m$ to be the smallest integer greater than $na$. In other words, pick $m\in\mathbb Z$ so that
+\begin{equation*}
+m-1\leq na<m
+\end{equation*}
+First see that this immediately yields $a<m/n$. Inequality \ref{arc_in_density} is equivalent to
+$a<b-1/n$, so we can write
+\begin{align*}
+m&\leq na+1\\
+&<n\left(b-\frac{1}{n}\right)+1\\
+&=nb
+\end{align*}
+where $m<nb$ implies $m/n<b$, so we have $a<m/n<b$, as desired.
+\end{proof}
+\newpage
+
 \subsection{}
-
-
-
 
 
 
