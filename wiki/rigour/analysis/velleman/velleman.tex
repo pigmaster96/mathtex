@@ -5040,6 +5040,49 @@ $x<p$, and $k<p$ for positive integers $x$ and $k$, this contradicts the fact th
 By an earlier theorem, every integer greater than 1 is either prime or a product of primes. Listing
 the primes from smallest to largest gives us the required nondecreasing prime factorisation. Uniqueness of the factorisation follows from the second last theorem in the previous subsection.
 \end{proof}
+\noindent If we write the product of a list of prime numbers $p_1,p_2,\ldots,p_k$ in the form 
+$1\cdot p_1,p_2,\ldots,p_k$, then it is natural to introduce the convention
+that the product of the empty list is 1. With this convention we can extend the fundamental theorem of arithmetic to say that every positive integer has a unique prime factorisation, where the
+factorisation of the number 1 is the product of the empty list of prime numbers.\\
+(next page)\newpage
+\noindent\textbf{Computation}\\
+The most straightforward way to find the prime factorisation of a positive integer is to search for its smallest prime divisor, factor it out, and repeat untill all factors are prime. For an example, the prime factorisations of 275, 276, and 277 are:
+\begin{align*}
+275&=5\cdot55=5\cdot5\cdot11\\
+276&=2\cdot138=2\cdot2\cdot69=2\cdot2\cdot3\cdot23\\
+277&=277
+\end{align*}
+When there are repeated primes in the prime factorisation of an integer, we often use exponent notation; in this case $275=5^2\cdot11$ and $276=2^2\cdot3\cdot23$.\\
+\vspace{1mm}\\
+More generally, we can write the prime factorisation of a positive integer $n$ in the form 
+$n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$, where $p_1,p_2,\ldots,p_k$ are prime numbers, 
+$p_1<p_2<\cdots<p_k$, and $e_1,e_2,\ldots,e_k$ are positive integers. Again, by the fundmaental theorem of arithmetic, this representation of $n$ is unique.\\
+\vspace{1mm}\\
+\textbf{Divisors}\\
+The theorem can provide insight into a number of concepts in number theory. Suppose $n$ and $d$ are positive integers and $d\mid n$. Then there is some positive integer $c$ such that $cd=n$.
+Now let the prime factorisations of $c$ and $d$ be $c=p_1p_2\cdots p_k$ and $d=q_1q_2\cdots q_m$. Then $n=cd=p_1p_2\cdots p_kq_1q_2\cdots q_m$. If we rearrange the primes
+into nondecreasing order, then this must be the unique prime factorisation of $n$.\\
+\vspace{1mm}\\
+Rephrasing this using exponent notation, suppose the prime factorisation of $n$ is $n=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$. Then the divisors of $n$ are precisely the numbers of the form $p_1^{f_1}p_2^{f_2}\cdots p_k^{f_k}$, where for all $i\in\{1,2,\ldots,k\}$, $0\leq f_i\leq e_i$.\\
+\vspace{1mm}\\
+This can be applied to greatest common divisors. Suppose $a$ and $b$ are positive integers. Let $p_1,p_2,\cdots,p_k$ be a list of all primes that occur in the prime factorisation of \textit{either}
+$a$ or $b$. We can write $a$ and $b$ in the form
+\begin{equation*}
+a=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k},\quad b=p_1^{f_1}p_2^{f_2}\cdots p_k^{f_k}
+\end{equation*}
+Where some of the exponnenets $e_i$ and $f_i$ might be 0. The common divisors of $a$ and $b$ are all numbers of the form $p_1^{g_1}p_2^{g_2}\cdots p_k^{g_k}$, where for every 
+$i\in\{1,\ldots,k\}$, $g_i\leq e_i$ and $g_i\leq f_i$ (if either condition is breached the number is no longer a common divisor). 
+The greatest common divisor can be found by letting each $g_i$ have the largest possible value without violating the two conditions. This is $\min(e_i,f_i)$, which is the minimum of $e_i$ and $f_i$.
+In other words 
+\begin{equation*}
+\gcd(a,b)=p_1^{\min(e_1,f_1)}p_2^{\min(e_2,f_2)}\cdots p_k^{\min(e_k,f_k)}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+For example,
+
+
+
 
 
 
