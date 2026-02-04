@@ -5079,8 +5079,55 @@ In other words
 \end{equation*}
 (next page)\newpage
 \noindent\textbf{Cont.}\\
-For example,
+For example, we could calculate $\gcd(1392,444)=12$. Their prime factors can be written as
+\begin{align*}
+1392&=2^4\cdot3\cdot29=2^4\cdot3^1\cdot29^1\cdot37^0\\
+444&=2^2\cdot3\cdot37=2^2\cdot3^1\cdot29^0\cdot37^1
+\end{align*}
+so the gcd is
+\begin{align*}
+\gcd(1392,444)&=2^{\min(4,2)}\cdot3^{\min(1,1)}\cdot29^{\min(1,0)}\cdot37^{\min(0,1)}\\
+&=2^2\cdot3^1\cdot29^0\cdot37^0=12
+\end{align*}
+Usually the Euclidean algorithm is a more efficient way to find the gcd compared to prime factorisation, but if one already knows the prime factorisation, the gcd can be computed easily.\\
+\vspace{1mm}\\
+\noindent\textbf{Least common multiple}\\
+For any positive integers $a$ and $b$, the \textit{least common multiple} of $a$ and $b$, denoted $\text{lcm}(a,b)$, is the smallest possible integer $m$ such that $a\mid m$ and $b\mid m$. 
+Suppose that as before, 
+\begin{equation*}
+a=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k},\quad b=p_1^{f_1}p_2^{f_2}\cdots p_k^{f_k}
+\end{equation*}
+For each $i\in\{1,\ldots,k\}$, any common multiple of $a$ and $b$ must include a factor $p_i^{g_i}$
+in its prime factorisation, where $g_i\geq e_i$ and $g_i\geq f_i$ (the common multiple must 
+contain the prime factorisations of both $a$ and $b$). The smallest possible value of each $g_i$ is the maximum of $e_i$ and $f_i$, which we will denote $\max(e_i,f_i)$, so
+\begin{equation*}
+\text{lcm}(a,b)=p_1^{\max(e_1,f_1)}p_2^{\max(e_2,f_2)}\cdots p_k^{\max(e_k,f_k)}
+\end{equation*}
+It is not hard to show that for any numbers $e$ and $f$, $\min(e,f)+\max(e,f)=e+f$ (by cases). So
+\begin{align*}
+&\gcd(a,b)\cdot\text{lcm}(a,b)\\&=\left(p_1^{\min(e_1,f_1)}p_2^{\min(e_2,f_2)}\cdots p_k^{\min(e_k,f_k)}\right)\cdot\left(p_1^{\max(e_1,f_1)}p_2^{\max(e_2,f_2)}\cdots p_k^{\max(e_k,f_k)}\right)\\
+&=p_1^{\min(e_1,f_1)+\max(e_1,f_1)}\cdots p_k^{\min(e_k,f_k)+\max(e_k,f_k)}\\
+&=p_1^{e_1+f_1}\cdots p_k^{e_k+f_k}\\
+&=(p_1^{e_1}\cdots p_k^{e_k})\cdot(p_1^{f_1}\cdots p_k^{f_k})=ab
+\end{align*}
+This gives us another way to compute $\text{lcm}(a,b)$:
+\begin{equation*}
+\text{lcm}(a,b)=\frac{ab}{\gcd(a,b)}
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Example}\\
+We can compute $\text{lcm}(1392,444)$ two ways:
+\begin{align*}
+\text{lcm}(1392,444)&=2^{\max(4,2)}\cdot3^{\max(1,1)}\cdot29^{\max(1,0)}\cdot37^{\max(0,1)}\\
+&=2^4\cdot3^1\cdot29^1\cdot37^1=51504
+\end{align*}
+and
+\begin{equation*}
+\text{lcm}(1392,444)=\frac{1392\cdot444}{\gcd(1392,444)}=\frac{618048}{12}=51504
+\end{equation*}
+\newpage
 
+\section{Modular Arithmetic}
 
 
 
