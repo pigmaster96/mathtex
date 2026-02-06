@@ -337,7 +337,7 @@ $|a-b|>0$. Therefore $\epsilon_0=|a-b|>0$ contradicts the initial assumption, an
 \newpage
 
 \subsection{Greatest lower bounds and AoC}
-\begin{theorem}
+\begin{theorem}\label{aoc and glb}
 Let $A$ be nonempty and bounded below, and define B as
 \begin{equation*}
 B=\{b\in\mathbb R\mid b\text{ is a lower bound for $A$}\} 
@@ -354,7 +354,58 @@ $b\leq\alpha$ and $\alpha$ is the greatest lower bound on $A$. This completes th
 \end{proof}
 \noindent The AoC does not need to address lower bounds; we can use it to prove the that if $A$ nonempty and bounded below, it has an infimum.
 
-\subsection{}
+\subsection{More supremum proofs}
+\begin{theorem}
+Suppose $A\subseteq\mathbb R$ is nonempty and bounded above. Letting $c\in\mathbb R$, where $c\geq0$. Defining
+$cA$ as
+\begin{equation*}
+cA=\{ca\mid a\in A\}
+\end{equation*}
+Then $\sup(cA)=c\sup(A)$.
+\end{theorem}
+\begin{proof}
+First we show that $\sup(cA)$ exists. Since $A$ is nonempty and bounded above, by the AoC, $\sup A$ exists, which we will denote as $\alpha$. First see that since $A$ is nonempty we can define 
+$a\in\mathbb R$ such that $a\in A$; by definition $ca\in cA$, so $cA$ is nonempty.\\
+\indent Now we show that $c\alpha$ is an upper bound on $cA$. Let $b$ be an arbitrary element of $cA$. Then we can declare some $a\in A$ such that $b=ca$. Since $\alpha=\sup A$, $a\leq\alpha$; and
+since $c\geq0$, $b=ca\leq c\alpha$ and $c\alpha$ is an upper bound on $cA$. We have shown $cA$ nonempty and bounded above. By the AoC, $\sup(cA)$ exists.\\
+(next page)\newpage
+We know $\sup A$ and $\sup(cA)$ exist; we denote them as $\alpha$ and $\beta$ respectively. We now show $\sup(cA)=c\sup A$ for $c\geq0$. 
+The $c=0$ case is trivial since $\sup\{0\}=0$.\\
+\indent For the $c>0$ case, first we show $\beta\leq c\alpha$. To do this we show that $c\alpha$ is an upper bound on $cA$. Let $b$ be an arbitrary element of $cA$, then there exists $a\in A$ such 
+that $b=ca$. Since $\alpha=\sup A$, $a\leq\alpha$ and since $c>0$, $b=ca\leq c\alpha$. $c\alpha$ is an upper bound on $cA$. Now since $\beta=\sup(cA)$, $\beta\leq c\alpha$.\\
+\indent Now we show $c\alpha\leq\beta$. To do this we show that $\beta/c$ is an upper bound on $A$.
+Let $a$ be an arbitrary element of $A$; then $ca\in cA$. Since $\beta=\sup(cA)$, $ca\leq\beta$. Since $c>0$, $a\leq\beta/c$. Since $\beta/c$ is an upper bound on $A$, $\alpha\leq\beta/c$ and $c\alpha\leq\beta$. So $c\alpha=\beta$.
+\end{proof}
+\begin{theorem}
+Suppose $A\subseteq\mathbb R$ is nonempty and bounded below. Letting $c\in\mathbb R$, where $c<0$. Defining
+$cA$ as
+\begin{equation*}
+cA=\{ca\mid a\in A\}
+\end{equation*}
+Then $\sup(cA)=c\inf A$.
+\end{theorem}
+\begin{proof}
+First we show $\sup(cA)$ exists. Since $A$ is nonempty, we can declare $a\in A$; so $ca\in cA$ and $cA$ is nonempty. Since $A$ is bounded below, we can declare $x\in\mathbb R$ to be some lower
+bound on $A$. We will show that $cx$ is an upper bound on $cA$. Let $b$ be some element of $cA$. Then there exists some $a\in A$ such that $b=ca$. Since $x$ is a lower bound on $A$, $x\leq a$.
+Since $c<0$, $cx\geq ca=b$ so $cx$ is an upper bound on $cA$. Since $cA$ is nonempty and bounded above, by the AoC, $\sup(cA)$ exists.\\
+\indent We've shown $\sup(cA)$ exists. By theorem \ref{aoc and glb} we also know that $\inf A$ exists. We denote $\inf A$ as $\alpha$ and $\sup(cA)$ as $\beta$.\\
+\indent First we show $\beta\leq c\alpha$. To do this we show that $c\alpha$ is an upper bound on $cA$. Let $b$ be an arbitrary element of $cA$, then we can declare some $a\in A$ such that 
+$b=ca$. Since $\alpha=\inf A$, $a\geq\alpha$ so $b=ca\leq c\alpha$. $c\alpha$ is an upper bound on $cA$; since $\beta=\sup(cA)$, $\beta\leq c\alpha$.\\
+\indent Now we show $c\alpha\leq\beta$. To do this we show that $\beta/c$ is a lower bound on $A$.
+Let $a$ be an arbitrary element of $A$. Then $ca\in cA$ and $ca\leq\beta$. Since $c<0$, $\beta/c\leq a$. $\beta/c$ is a lower bound on $A$, so since $\alpha=\inf A$, $\beta/c\leq\alpha$ and
+$c\alpha\leq\beta$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+Given sets $A$ and $B$ and defining
+\begin{equation*}
+A+B=\{a+b\mid a\in A\land b\in B\}
+\end{equation*}
+Suppose $A$ and $B$ are nonempty and bounded above. Then $\sup(A+B)=\sup A+\sup B$.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
 
 
 
