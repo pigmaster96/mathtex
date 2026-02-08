@@ -5130,7 +5130,7 @@ and
 \section{Modular Arithmetic}
 \begin{definition}
 Suppose $m$ is a positive integer. For any integers $x$ and $y$, we will say that $x$ is \textit{congruent to $y$ modulo $m$} if $\exists k\in\mathbb Z(x-y=km)$. In other words,
-$x$ is congruent to $y$ modulo $m$ iff $m|(x-y)$. We will use the notation $x\equiv y$ (mod $m$) to mean that $x$ is congruent to $y$ modulo $m$.
+$x$ is congruent to $y$ modulo $m$ iff $m\mid(x-y)$. We will use the notation $x\equiv y$ (mod $m$) to mean that $x$ is congruent to $y$ modulo $m$.
 \end{definition}
 \noindent First consider an extension of the earlier proof of the division algorithm.
 \begin{theorem}
@@ -5139,9 +5139,23 @@ Suppose $n$ and $m$ are integers and $m>0$. Prove that there are integers $q$ an
 \begin{proof}
 We want to show
 \begin{equation*}
+\forall n\in\mathbb Z\forall m\in\mathbb Z(m>0\to\exists q\in\mathbb Z\exists r\in\mathbb Z(n=qm+r\land0\leq r<m))
 \end{equation*}
-
+\indent Let $n$ be some arbitrary integer.\\
+\indent Case 1: $n\geq0$. We proceed by strong induction. Suppose that for all integers $k$ where $0\leq k<n$, the division algorithm is satisfied. Let $m$ be some positive integer.\\
+\indent Case 1a: $n<m$. This case is trivial. Letting $q'=0$ and $r'=n<m$, $n=q'm+r'$.\\
+\indent Case 1b: $n\geq m$. Since $m>0$, $0\leq n-m<n$. By the inductive hypothesis $n-m$ satisfies the division algorithm, meaning that we can declare integers $q$ and $r$ such that 
+$n-m=qm+r$ and $0\leq r<m$. We can simplify the equality to $n=(q+1)m+r$. Taking $q'=q+1$ and $r'=r$, $n=q'm+r'$ for integers $q'$ and $r'$ and $0\leq r'<m$. We've now shown that the division
+algorithm holds for $n\geq0$.\\
+\indent Case 2: $n<0$. Then $-n>0$ and since $n$ is an integer, $-n-1\geq0$. Let $m$ be some positive integer. Then by the previous case we can declare integers $q$ and $r$ such that $-n-1=qm+r$, 
+where $0\leq r<m$. The equality is equivalent to $n=-qm-r-1=-qm-m+m-r-1=(-q-1)m+(m-r-1)$. 
+Since $r\geq0$, $m-r\leq m$; and since $r<m$, $0<m-r$. Together we get $0<m-r\leq m$ and $0\leq m-r-1<m$. Taking $q'=-q-1$ and $r'=m-r-1$, we now have integers $q'$ and $r'$ where $n=q'm+r'$ and 
+$0\leq r'<m$. This completes the proof.
 \end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+
+\end{theorem}
 
 
 
