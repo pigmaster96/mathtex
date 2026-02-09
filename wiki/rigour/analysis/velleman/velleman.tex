@@ -3167,7 +3167,7 @@ Suppose $a|b$ and $a|c$, then we can declare some integers $k_0$ and $k_1$ such 
 First we consider reflexivity. Let $x$ be an arbitrary integer. Choosing $k=0$, $km=(x-x)=0$, and therefore $x\equiv_m x$. Since $x$ is arbitrary, $\equiv_m$ is reflexive.\\
 \indent Now we show symmetry. Let $x$ and $y$ be arbitrary integers. Suppose $x\equiv_m y$; then we can declare some integer $k_0$ such that $k_0m=(x-y)$. Then $-k_0m=(y-x)$; since $-k_0$ is also 
 an integer, $y\equiv_m x$. Since $x$ and $y$ are arbitrary, $\equiv_m$ is symmetric.\\
-\indent Finally we show transitivity. Let $x,y,z$ be arbitrary integers. Suppose that $x\equiv m y$ and $y\equiv_m z$. This means that $m|(x-y)$ and $m|(y-z)$. Therefore by the previous lemma,
+\indent Finally we show transitivity. Let $x,y,z$ be arbitrary integers. Suppose that $x\equiv_m y$ and $y\equiv_m z$. This means that $m|(x-y)$ and $m|(y-z)$. Therefore by the previous lemma,
 $m|[(x-y)+(y-z)]$. But $(x-y)+(y-z)=x-z$, so it follows that $m|(x-z)$, and therefore $x\equiv_m z$.
 Since $x,y,z$ were arbitrary, $\equiv_m$ is transitive.
 \end{proof}
@@ -5130,7 +5130,7 @@ and
 \section{Modular Arithmetic}
 \begin{definition}
 Suppose $m$ is a positive integer. For any integers $x$ and $y$, we will say that $x$ is \textit{congruent to $y$ modulo $m$} if $\exists k\in\mathbb Z(x-y=km)$. In other words,
-$x$ is congruent to $y$ modulo $m$ iff $m\mid(x-y)$. We will use the notation $x\equiv y$ (mod $m$) to mean that $x$ is congruent to $y$ modulo $m$.
+$x$ is congruent to $y$ modulo $m$ iff $m\mid(x-y)$. We will use the notation $x\equiv y$ (mod $m$) or $\equiv_m$ to mean that $x$ is congruent to $y$ modulo $m$.
 \end{definition}
 \noindent First consider an extension of the earlier proof of the division algorithm.
 \begin{theorem}
@@ -5153,8 +5153,41 @@ Since $r\geq0$, $m-r\leq m$; and since $r<m$, $0<m-r$. Together we get $0<m-r\le
 $0\leq r'<m$. This completes the proof.
 \end{proof}
 \noindent(next page)\newpage
+\noindent\textbf{Intuition}\\
+Consider the earlier proven theorems for reference:
 \begin{theorem}
-
+For every positive integer $m$, $\equiv_m$ is an equivalence relation on $\mathbb Z$.
+\end{theorem}
+\begin{definition}
+Suppose $A$ is a set and $\mathcal F\subseteq\mathscr P(A)$. We will say that $\mathcal F$ is \textit{pairwise disjoint} if every pair of distinct elements of $\mathcal F$ are disjoint, or in other
+words $\forall X\in\mathcal F\forall Y\in\mathcal F(X\neq Y\to X\cap Y=\emptyset)$. $\mathcal F$ is called a \textit{partition} of $A$ if it has the following properties:
+\begin{enumerate}
+\item $\bigcup\mathcal F=A$
+\item $\mathcal F$ is pairwise disjoint
+\item $\forall X\in\mathcal F(X\neq\emptyset)$
+\end{enumerate}
+\end{definition}
+\begin{theorem}
+Suppose $R$ is an equivalence relation on set $A$. Then $A/R$ is a partition of $A$.
+\end{theorem}
+\noindent We've proven earlier that $\equiv_m$ is an equivalence relation on $\mathbb Z$. For any integer $a$, let $[a]_m$ be the equivalence class of $a$ with respect to the equivalence
+relation $\equiv_m$. The set of all these equivalence classes is denoted $\mathbb Z/\equiv_m$:
+\begin{equation*}
+[a]_m=\{b\in\mathbb Z\mid b\equiv_m a\},\quad\mathbb Z/\equiv_m=\{[a]_m\mid a\in\mathbb Z\}
+\end{equation*}
+Since $\equiv_m$ is an equivalence relation on $\mathbb Z$, $\mathbb Z/\equiv_m$ is a partition of $\mathbb Z$.\\
+\vspace{1mm}\\
+Consider the case $m=3$. Three equivalence classes partition the integers:
+\begin{align*}
+[0]_3&=\{b\in\mathbb Z\mid b\equiv0\text{ (mod 3)}\}=\{0,3,6,9,\ldots,-3,-6,-9\}\\
+[1]_3&=\{b\in\mathbb Z\mid b\equiv1\text{ (mod 3)}\}=\{1,4,7,10,\ldots,-2,-5,-8\}\\
+[2]_3&=\{b\in\mathbb Z\mid b\equiv2\text{ (mod 3)}\}=\{2,5,8,11,\ldots,-1,-4,-7\}
+\end{align*}
+Every integer is congruent modulo 3 to exactly one of the numbers 0, 1, and 2. This is an instance of the following general theorem.\\
+(next page)
+\newpage
+\begin{theorem}
+Suppose $m$ is a positive integer. Then for every integer $a$ there is exactly one integer $r$ such that $0\leq r<m$ and $a\equiv r$ (mod $m$).
 \end{theorem}
 
 
