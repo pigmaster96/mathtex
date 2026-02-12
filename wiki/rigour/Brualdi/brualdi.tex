@@ -1,0 +1,53 @@
+\documentclass{report} 
+\title{Brualdi}
+\date{Started Feb 26}
+\author{Malcolm}
+\usepackage{amsmath} %import math
+\usepackage{mathtools} %more math
+\usepackage{amssymb} %for QED symbol
+\usepackage{amsthm} %
+\usepackage{mathrsfs} %
+\usepackage{bm}%bold math
+\usepackage{graphicx} %import imaging
+
+\graphicspath{{./images/}} %set imaging path
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\newpage
+\chapter{Permutations and Combinations}
+\section{Counting principles}
+\begin{definition}
+Let $S$ be a set. A \textit{partition} of $S$ is a collection $S_1,S_2,\ldots,S_m$ of subsets of $S$ such that each element of $S$ is 
+in exactly one of those subsets:
+\begin{align*}
+S=S_1\cup S_2&\cup\cdots\cup S_m,\\
+S_i\cap S_j=\emptyset&,\quad (i\neq j).
+\end{align*}
+See that the sets $S_1,S_2,\ldots,S_m$ are pairwise disjoint with union $S$. The subsets $S_1,S_2,\ldots,S_m$ are the \textit{parts} of
+the partition. Note that in this definition a part of a partition may be empty, but there is usually no advantage to this. 
+The \textit{number of objects} in a set $S$ is denoted $|S|$ and is sometimes called the \textit{size} of $S$.
+\end{definition}
+\noindent (The following are results of set theory, but are intuitive enough to be given without proofs)
+\begin{theorem} (Addition principle)
+Suppose that a set $S$ is partitioned into pairwise disjoint parts $S_1,S_2,\ldots,S_m$. The number of objects in $S$ can be determined
+by finding the number of objects in each of the parts, and adding the numbers so obtained:
+\begin{equation*}
+|S|=|S_1|+|S_2|+\ldots+|S_m|
+\end{equation*}
+\end{theorem}
+
+
+
+
+
+\end{document}

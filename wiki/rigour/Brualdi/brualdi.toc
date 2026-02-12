@@ -1,0 +1,2 @@
+\contentsline {chapter}{\numberline {1}Permutations and Combinations}{2}{}%
+\contentsline {section}{\numberline {1.1}Counting principles}{2}{}%
