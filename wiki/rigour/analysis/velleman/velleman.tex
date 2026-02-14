@@ -5197,8 +5197,44 @@ and transitivity of the equivalence relation $\equiv_m$, $r_1\equiv_mr_2$. So we
 Now since $0\leq r_1<m$ and $-m<-r_2\leq0$, we have $r_1-r_2\leq r_1<m$ and $r_1-r_2\geq0-r_2>-m$. Together we have $-m<r_1-r_2<m$. So
 $-m<dm<m$ and $-1<d<1$. Since $d$ is an integer, we must have $d=0$. Therefore $r_1-r_2=dm=0$, and $r_1=r_2$.
 \end{proof}
-\noindent This is an existence and uniqueness proof. We prove the two separately.
+\noindent This is an existence and uniqueness proof. We prove the two separately.\\
+\vspace{1mm}\\
+The theorem says that every integer is modulo $m$ to exactly one element of the set $\{0,1,\ldots,m-1\}$. We say this set is a \textit{complete residue system modulo} $m$. 
+Note that since $\equiv_m$ is an equivalence relation; as derived earlier, this means
+\begin{equation*}
+a\equiv_m r\quad\text{iff}\quad a\in[r]_m\quad\text{iff}\quad[a]_m=[r]_m
+\end{equation*}
+and that every equivalence class in $\mathbb Z/\equiv_m$ is equal to exactly one of the equivalence classes in the list $[0]_m,[1]_,\ldots,[m-1]_m$. Thus these $m$ equivalent classes are
+distinct, and $\mathbb Z/\equiv_m=\{[0]_m,[1]_m,\ldots,[m-1]_m\}$.
+\newpage
 
+\subsection{Sums and products between equivalence classes}
+\begin{lemma}
+Suppose $m$ is a positive integer. Then for all integers $a,a',b$, and $b'$, if $a'\equiv_ma$ and 
+$b'\equiv_mb$, then $a'+b'\equiv_ma+b$ and $a'b'\equiv_mab$.
+\end{lemma}
+\begin{proof}
+Suppose $a'\equiv_ma$ and $b'\equiv_mb$. Then we can declare integers $k_0$ and $k_1$ such that $a'-a=k_0m$ and $b'-b=k_1m$.
+Thus we have $a'=k_0m+a$ and $b'=k_1m+b$.\\
+\indent We have $a'+b'=(k_0+k_1)m+(a+b)$, and then $(a'+b')-(a+b)=(k_0+k_1)m$. So $a'+b'\equiv_ma+b$.\\
+\indent We also have $a'b'=(k_0m+a)(k_1m+b)=k_0k_1m^2+k_0bm+k_1am+ab=(k_0k_1m+k_0b+k_1a)m+ab$. So
+\begin{equation*}
+a'b'-ab=(k_0k_1m+k_0b+k_1a)m
+\end{equation*}
+and $a'b'\equiv_mab$.
+\end{proof}
+\noindent Consider any two equivalence classes $X$ and $Y$ in $\mathbb Z/\equiv_m$. Something suprising happens if we add or multiply elements of $X$ and $Y$. It turns out
+that all sums of the form $x+y$, where $x\in X$ and $y\in Y$, belong to the same equivalence class, and all products $xy$ also belong to the same equivalence class. In other words:
+\begin{theorem}
+Suppose $m$ is a positive integer and $X$ and $Y$ are elements of $\mathbb Z/\equiv_m$. Then:
+\begin{enumerate}
+\item There is a unique $S\in\mathbb Z/\equiv_m$ such that $\forall x\in X\forall y\in Y(x+y\in S)$.
+\item There is a unique $P\in\mathbb Z/\equiv_m$ such that $\forall x\in X\forall y\in Y(xy\in P)$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+
+\end{proof}
 
 
 
