@@ -5238,17 +5238,33 @@ Since $X$ and $Y$ are elements of $\mathbb Z/\equiv_m$, we can let $a$ and $b$ b
 Now let $x\in X$ and $y\in Y$ be arbitrary, then $x\in[a]_m$ and $y\in[b]_m$, so $x\equiv_ma$ and $y\equiv_mb$. By the previous lemma, it follows that $x+y\equiv_ma+b$, and $x+y\in[a+b]_m=S$.
 Since $x$ and $y$ were arbitrary, we conclude that $\forall x\in X\forall y\in Y(x+y\in S)$.\\
 \indent Now suppose $S'$ is another equivalence class such that $\forall x\in X\forall y\in Y(x+y\in S')$. Since $a\in X$ and $b\in Y$, we have $a+b\in S$ and $a+b\in S'$. Therefore $S$ and $S'$ 
-are not pairwise disjoint, and since $\mathbb Z/\equiv_m$ is pairwise disjoint, this implies that 
+are not disjoint, and since $\mathbb Z/\equiv_m$ is a partition, this implies that 
 $S=S'$.\\
 \noindent(next page)\newpage
-\indent Now for part 2. We know that $ab$ is an integer, so
-
-
-
-
-
-
+\indent Now for part 2. We know that $ab$ is an integer, so we can let $p=[ab]_m$. Let $x\in X$ and $y\in Y$ be arbitrary. Then $x\in[a]_m$ and $y\in[b]_m$ so $x\equiv_ma$ and $y\equiv_mb$. 
+By the previous lemma it follows then that $xy\equiv_mab$, and $xy\in[ab]_m$.
+Since $x$ and $y$ were arbitrary, we conclude that $\forall x\in X \forall y\in Y(xy\in[ab]_m)$.\\
+\indent Now suppose $P'$ is some arbitrary set such that $\forall x\in X \forall y\in Y(xy\in P')$.
+Since $a\in X$ and $b\in Y$ we have $ab\in P'$; but we also have $ab\in[ab]_m$, so $P'$ and $[ab]_m$ are not disjoint. Since $\mathbb Z/\equiv_m$ is a partition, we then must have
+$P'=[ab]_m$. We are done.
 \end{proof}
+\begin{definition}
+Suppose $X$ and $Y$ are elements of $\mathbb Z/\equiv_m$. Then we define the sum and product of $X$ and $Y$, denoted by $X+Y$ and $X\cdot Y$, as follows:
+\begin{align*}
+X+Y&=\text{the unique $S\in\mathbb Z/\equiv_m$ such that $\forall x\in X\forall y\in Y(x+y\in S)$}\\
+X\cdot Y&=\text{the unique $P\in\mathbb Z/\equiv_m$ such that $\forall x\in X\forall y\in Y(xy\in P)$}
+\end{align*}
+\end{definition}
+\noindent The proof shows that if $X=[a]_m$ and $Y=[b]_m$, then the sum of $X$ and $Y$ is the equivalence class $S=[a+b]_m$ and the product is $P=[ab]_m$. As such we have the
+following theorem.
+\begin{theorem}
+For any positive integer $m$ and any integers $a$ and $b$,
+\begin{equation*}
+[a]_m+[b]_m=[a+b]_m\quad\text{and}\quad[a]_m\cdot[b]_m=[ab]_m
+\end{equation*}
+\end{theorem}
+
+
 
 
 
