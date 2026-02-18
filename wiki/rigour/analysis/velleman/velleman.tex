@@ -5292,7 +5292,39 @@ Suppose $m$ is a positive integer. Then for all equivalence classes $X,Y$, and $
 \begin{proof}
 Since $X,Y,Z\in\mathbb Z/\equiv_m$, there are integers $a,b$, and $c$ such that $X=[a]_m$, $Y=[b]_m$, and $Z=[c]_m$.
 \begin{enumerate}
-\item a
+\item We have
+\begin{equation*}
+X+Y=[a]_m+[b]_m=[a+b]_m=[b+a]_m=[b]_m+[a]_m=Y+X
+\end{equation*}
+Where we have used the commutativity of addition of integers.
+\item We have 
+\begin{align*}
+(X+Y)+Z&=([a]_m+[b]_m)+[c]_m\\
+&=[a+b]_m+[c]_m\\
+&=[(a+b)+c]_m\\
+&=[a+(b+c)]_m\\
+&=[a]_m+[b+c]_m\\
+&=[a]_m+([b]_m+[c]_m)=X+(Y+Z)
+\end{align*}
+\item We have
+\begin{equation*}
+X+[0]_m=[a]_m+[0]_m=[a+0]_m=[a]_m=X
+\end{equation*}
+(next page)
+\newpage
+\item Letting $X'=[-a]_m$, 
+\begin{equation*}
+X+X'=[a]_m+[-a]_m=[a+(-a)]_m=[0]_m
+\end{equation*}
+\item We have
+\begin{equation*}
+X\cdot Y=[a]_m\cdot[b]_m=[ab]_m=[ba]_m=[b]_m\cdot[a]_m=Y\cdot X
+\end{equation*}
+\item We have
+\begin{align*}
+(X\cdot Y)\cdot Z
+\end{align*}
+
 
 
 \end{enumerate}

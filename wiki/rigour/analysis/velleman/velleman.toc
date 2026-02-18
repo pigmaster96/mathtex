@@ -103,8 +103,8 @@
 \contentsline {section}{\numberline {6.3}Modular Arithmetic}{165}{}%
 \contentsline {subsection}{\numberline {6.3.1}Sums and products between equivalence classes}{168}{}%
 \contentsline {subsection}{\numberline {6.3.2}Properties of operations between equivalence classes}{170}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{171}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{171}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{171}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{171}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{172}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{172}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{172}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{172}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{172}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{173}{}%
