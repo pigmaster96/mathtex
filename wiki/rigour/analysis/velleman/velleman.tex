@@ -5322,18 +5322,103 @@ X\cdot Y=[a]_m\cdot[b]_m=[ab]_m=[ba]_m=[b]_m\cdot[a]_m=Y\cdot X
 \end{equation*}
 \item We have
 \begin{align*}
-(X\cdot Y)\cdot Z
+(X\cdot Y)\cdot Z&=([a]_m\cdot[b]_m)\cdot[c]_m=[ab]_m\cdot[c]_m=[(ab)c]_m=[a(bc)]_m\\
+&=[a]_m\cdot[bc]_m=[a]_m\cdot([b]_m\cdot[c]_m)=X\cdot(Y\cdot Z)
 \end{align*}
-
-
-
+Where we have used the associativity of multiplication of integers.
+\item We have
+\begin{equation*}
+X\cdot[1]_m=[a]_m\cdot[1]_m=[a\cdot1]_m=[a]_m=X
+\end{equation*}
+\item We have
+\begin{equation*}
+X\cdot[0]_m=[a]_m\cdot[0]_m=[a\cdot0]_m=[0]_m
+\end{equation*}
+\item We have
+\begin{align*}
+X\cdot(Y+Z)&=[a]_m\cdot([b]_m+[c]_m)=[a]_m\cdot[b+c]_m=[a(b+c)]_m\\
+&=[ab+ac]_m=[ab]_m+[ac]_m=([a]_m\cdot[b]_m)+([a]_m\cdot[c]_m)\\
+&=(X\cdot Y)+(X\cdot Z)\qedhere
+\end{align*}
 \end{enumerate}
+\end{proof}
+\begin{theorem}
+Suppose $m$ is a positive integer. The additive identity in $Z/\equiv_m$ is unique.
+\end{theorem}
+\begin{proof}
+We have already demonstrated existence. We now show uniqueness. That is:
+\begin{align*}
+\forall Z_1\in\mathbb Z/\equiv_m&\forall Z_2\in\mathbb Z/\equiv_m([\forall X\in\mathbb Z/\equiv_m(X+Z_1=X)\\
+&\land\forall X\in\mathbb Z/\equiv_m(X+Z_2=X)]\to Z_1=Z_2)
+\end{align*}
+Let $Z_1$ and $Z_2$ be arbitrary elements of $\mathbb Z/\equiv_m$. Suppose that they are both additive identities. Then $Z_2+Z_1=Z_2$ and $Z_1+Z_2=Z_1$, meaning
+\begin{equation*}
+Z_1=Z_1+Z_2=Z_2+Z_1=Z_2
+\end{equation*}
+Using commutativity of addition between equivalence classes.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+Suppose $m$ is a positive integer. Any element $X\in\mathbb Z/\equiv_m$ has a unique additive inverse.
+\end{theorem}
+\begin{proof}
+Let $X$ be some arbitrary element in $Z/\equiv_m$.
+We have already demonstrated existence. Now we show uniqueness. That is
+\begin{align*}
+\forall Z_1\in\mathbb Z/\equiv_m\forall Z_2\in\mathbb Z/\equiv_m(&[X+Z_1=[0]_m\land X+Z_2=[0]_m]\\
+&\to Z_1=Z_2)
+\end{align*}
+Suppose $Z_1$ and $Z_2$ are arbitrary elements of $\mathbb Z/\equiv_m$ such that $X+Z_1=[0]_m$ and 
+$X+Z_2=[0]_m$. Then
+$Z_1+[0]_m=Z_1+X+Z_2$ and $[0]+Z_2=Z_1+X+Z_2$ (using commutativity).
+So since $[0]_m$ is the additive identity,
+\begin{equation*}
+Z_1=Z_1+[0]_m=Z_1+X+Z_2=[0]+Z_2=Z_2\qedhere
+\end{equation*}
+\end{proof}
+\begin{theorem}
+Suppose $m$ is a positive integer. The multiplicative identity in $\mathbb Z/\equiv_m$ is unique.
+\end{theorem}
+\begin{proof}
+We have already demonstrated existence. Now we show uniqueness. That is:
+\begin{align*}
+\forall Z_1\in\mathbb/\equiv_m\forall Z_2\in\mathbb Z/\equiv_m(&[\forall X\in\mathbb Z/\equiv_m(X\cdot Z_1=X)\\
+&\forall X\in\mathbb Z/\equiv_m(X\cdot Z_2=X)]\to Z_1=Z_2)
+\end{align*}
+Let $Z_1$ and $Z_2$ be arbitrary elements of $\mathbb Z/\equiv_m$ and suppose they are both multiplicative identities. Then $Z_1\cdot Z_2=Z_1$ and $Z_2\cdot Z_1=Z_2$, so
+\begin{equation*}
+Z_1=Z_1\cdot Z_2=Z_2\cdot Z_1=Z_2
+\end{equation*}
+Using commutativity of products of equivalence classes.
+\end{proof}
+\noindent We've shown that the identity elements for addition ($[0]_m$) and multiplication ($[1]_m$) are unique. We've also shown that the additive identity always exists and is unique. We will
+denote the additive inverse of $X$ by $-X$. For example, $[4]_5+[1]_5=[0]_5$, so $-[4]_m=[1]_5$.\\
+\vspace{1mm}\\
+What about multiplicative inverses? If $X\in\mathbb Z/\equiv_m$, $X'\in\mathbb Z/\equiv_m$, and $X\cdot X'=[1]_m$, then we say that $X'$ is a multiplicative inverse of $X$. For instance recall
+the multiplication table for $\mathbb Z/\equiv_5$; every element except $[0]_5$ has a multiplicative inverse. We can show that multiplicative inverses, when they exist, are unique.\\
+(next page)\newpage
+\begin{theorem}
+Suppose $m$ is a positive integer. For any element $X$ in $\mathbb Z/\equiv_m$, assuming $X$ has a multiplicative inverse, this inverse is unique.
+\end{theorem}
+\begin{proof}
+Assuming that a multiplicative inverse exists, we show 
+\begin{equation*}
+\forall Z_1\in\mathbb Z/\equiv_m\forall Z_2\in\mathbb Z/\equiv_m([X\cdot Z_1=[1]_m\land
+X\cdot Z_2=[1]_m]\to Z_1=Z_2)
+\end{equation*}
+Suppose $Z_1$ and $Z_2$ are arbitrary elements of $\mathbb Z/\equiv_m$ such that they are multiplicative inverses of $X$.
+Then $Z_2\cdot[1]_m=Z_2\cdot(X\cdot Z_1)$ and $[1]\cdot Z_1=(Z_2\cdot X)\cdot Z_1$. So since $[1]_m$ is the multiplicative identity, using commutativity and associativity:
+\begin{equation*}
+Z_1=[1]_m\cdot Z_1=(Z_2\cdot X)\cdot Z_1=Z_2\cdot(X\cdot Z_1)=Z_2\cdot[1]_m=Z_2\qedhere
+\end{equation*}
+\end{proof}
+\noindent When does an equivalence class have a multiplicative inverse? 
+\begin{theorem}
+Suppose that $a$ and $m$ are positive integers. Then $[a]_m$ has a multiplicative inverse iff $m$ and $a$ are relatively prime.
+\end{theorem}
+\begin{proof}
 
 \end{proof}
-
-
-
-
 
 
 
