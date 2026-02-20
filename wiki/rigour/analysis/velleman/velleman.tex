@@ -5412,14 +5412,23 @@ Then $Z_2\cdot[1]_m=Z_2\cdot(X\cdot Z_1)$ and $[1]\cdot Z_1=(Z_2\cdot X)\cdot Z_
 Z_1=[1]_m\cdot Z_1=(Z_2\cdot X)\cdot Z_1=Z_2\cdot(X\cdot Z_1)=Z_2\cdot[1]_m=Z_2\qedhere
 \end{equation*}
 \end{proof}
-\noindent When does an equivalence class have a multiplicative inverse? 
+\noindent In general, if $X\in\mathbb Z/\equiv_m$, then the multiplicative inverse, when it exists, is denoted $X^{-1}$. 
+When does an equivalence class have a multiplicative inverse? First recall the theorem.
+\begin{theorem}
+For all positive integers $a$ and $b$ there are integers $s$ and $t$ such that $\gcd(a,b)=sa+tb$.
+\end{theorem}
 \begin{theorem}
 Suppose that $a$ and $m$ are positive integers. Then $[a]_m$ has a multiplicative inverse iff $m$ and $a$ are relatively prime.
 \end{theorem}
 \begin{proof}
-
+Suppose first that $[a]_m$ has a multiplicative inverse, which we can write as $[a']_m$ for some $a'\in\mathbb Z$, then $[a]_m\cdot[a']_m=[aa']_m=[1]_m$. So we have $aa'\equiv_m1$; this means
+we can declare some $k\in\mathbb Z$ such that $aa'-1=km$, or equivalently 
+$1=-km+aa'$. Thus 1 is a linear combination of $m$ and $a$, and it follows that $m$ and $a$ are relatively prime.\\
+\indent For the other direction, assume that $m$ and $a$ are relatively prime. Then there are positive integers $s$ and $t$ such that $sm+ta=1$. Therefore $ta-1=-sm$, and $ta\equiv_m1$.
+We conclude that $[a]_m\cdot[t]_m=[at]_m=[1]_m$, so $[t]_m$ is the multiplicative inverse of $[a]_m$.
 \end{proof}
-
+\noindent This theorem shows that for any positive integers $m$ and $a$, we can use the extended euclidean algorithm to find $[a]_m^{-1}$; if the algorithm shows that $\gcd(m,a)\neq1$, then
+$[a]^{-1}$ doesn't exist; and if we find that $\gcd(m,a)=1=sm+ta$ then $[a]_m^{-1}=[t]_m$.
 
 
 
