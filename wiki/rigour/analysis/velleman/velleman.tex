@@ -5429,6 +5429,31 @@ We conclude that $[a]_m\cdot[t]_m=[at]_m=[1]_m$, so $[t]_m$ is the multiplicativ
 \end{proof}
 \noindent This theorem shows that for any positive integers $m$ and $a$, we can use the extended euclidean algorithm to find $[a]_m^{-1}$; if the algorithm shows that $\gcd(m,a)\neq1$, then
 $[a]^{-1}$ doesn't exist; and if we find that $\gcd(m,a)=1=sm+ta$ then $[a]_m^{-1}=[t]_m$.
+\newpage
+
+\subsection{Application}
+\textbf{Example}\\
+A class has 25 students. The teacher bought several cartons of eggs, each containing a dozen eggs, and then distributed the eggs among the students. After giving an equal number
+of eggs to each student, she had 7 eggs left over. What is the smallest number of cartons of eggs she could have bought?\\
+\vspace{1mm}\\
+We must find the smallest positive integer $x$ satisfying $25\mid(12x-7)$, which means $12x\equiv_{25}7$. We can turn this into an equation by
+working with equivalence classes. Our congruence is equivalent to the equation $[12]_{25}\cdot[x]_{25}=[7]_{25}$. 
+First we try to find the multiplicative inverse of $[12]_{25}$. Applying the extended euclidean algorithm, we find that $\gcd(25,12)=1=1\cdot25-2\cdot12$ (25 and 12 are relatively
+prime so the inverse exists!), so $[12]^{-1}_{25}=[-2]_{25}=[23]_{25}$.
+See now that
+\begin{align*}
+[12]_{25}\cdot[x]_{25}&=[7]_{25}\\
+[12]^{-1}_{25}\cdot([12]_{25}\cdot[x]_{25})&=[12]^{-1}_{25}\cdot[7]_{25}\\
+([12]^{-1}_{25}\cdot[12]_{25})\cdot[x]_{25}&=[23]_{25}\cdot[7]_{25}\\
+[1]_{25}\cdot[x]_{25}&=[161]_{25}=[11]_{25}\\
+[x]_{25}&=[11]_{25}
+\end{align*}
+We are trying to solve $[12]_{25}\cdot[x]_{25}=[7]_{25}$. As such any element of $[11]_25$ are postitive integer solutions, and the smallest positive integer solution would then be $x=11$.\\
+\vspace{1mm}\\
+See that we were lucky in this example that 25 and 12 were relatively prime, since the multiplicative inverse was necessary in our manipulation.
+\newpage
+
+\subsection{}
 
 
 
