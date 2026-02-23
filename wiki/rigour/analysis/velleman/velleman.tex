@@ -5450,10 +5450,54 @@ See now that
 \end{align*}
 We are trying to solve $[12]_{25}\cdot[x]_{25}=[7]_{25}$. As such any element of $[11]_25$ are postitive integer solutions, and the smallest positive integer solution would then be $x=11$.\\
 \vspace{1mm}\\
-See that we were lucky in this example that 25 and 12 were relatively prime, since the multiplicative inverse was necessary in our manipulation.
+See that we were lucky in this example that 25 and 12 were relatively prime, since the multiplicative inverse was necessary in our manipulation. The next subsection elaborates a bit more on ways around this.
 \newpage
 
-\subsection{}
+\subsection{Alternative approaches}
+\begin{theorem}
+Suppose $m$ and $a$ are positive integers, and let $d=\gcd(m,a)$. Then for every integer $b$, if $d\nmid b$ then thre is no integer $x$ such that $ax\equiv_mb$.
+\end{theorem}
+\begin{proof}
+Since $d=\gcd(m,a)$, we can declare integers $k_0,k_1$ such that $m=k_0d$ and $a=k_1d$.
+Let $b$ be some arbitrary integer, and suppose $d\nmid b$. Now, for contradiction, suppose there exists some integer $x$ such that $ax\equiv_mb$.
+Then we can declare the integer $k_2$ such that $ax-b=k_2m$. So we have $b=ax-k_2m=xk_1d-k_2k_0d=(xk_1-k_2k_0)d$; this would contradict the assumption that $d\nmid b$, so we are done.
+\end{proof}
+\begin{theorem}
+Suppose $n$ and $m$ are positive integers. Then for all integers $a$ and $b$, 
+\begin{equation*}
+na\equiv_{nm}nb\leftrightarrow a\equiv_mb
+\end{equation*}
+\end{theorem}
+\begin{proof}
+We have the string of equivalences:
+\begin{align*}
+na\equiv_{nm}nb&\leftrightarrow\exists k\in\mathbb Z(na-nb=knm)\\
+&\leftrightarrow\exists k\in\mathbb Z(a-b=km)\leftrightarrow a\equiv_mb\qedhere
+\end{align*}
+\end{proof}
+\noindent\textbf{Example}\\
+Say we want to solve the following congruences:
+\begin{equation*}
+77x\equiv_{374}120,\quad77x\equiv_{374}121
+\end{equation*}
+We begin by computing $\gcd(374,77)=11$ (so $[77]_{374}$ has no multiplicative inverse and our earlier strategy doesn't work). Since $11\nmid120$, the first theorem tells us that the first 
+congruence $77x\equiv_{374}120$ has no solution.\\
+\vspace{1mm}\\
+To solve the second congruence (see that the first theorem doesn't apply in this case), we first rewrite it as $11\cdot7x\equiv_{374}11\cdot11$. By the second theorem this is equivalent to
+$7x\equiv_{34}11$. Now we have $\gcd(34,7)=1=-1\cdot34+5\cdot7$, so $[7]^{-1}_{34}=[5]_{34}$ and the earlier strategy can be applied:
+\begin{align*}
+7x\equiv_{34}11&\leftrightarrow[7]_{34}\cdot[x]_{34}=[11]_{34}\\
+&\leftrightarrow[x]_{34}=[7]^{-1}_{34}\cdot[11]_{34}=[5]_{34}\cdot[11]_{34}=[55]_{34}=[21]_{34}\\
+&\leftrightarrow x\in[21]_{34}
+\end{align*}
+Thus the solutions to the second congruence are the elements of $[21]_{34}$.
+\newpage
+
+\section{Euler's theorem}
+
+
+
+
 
 
 
