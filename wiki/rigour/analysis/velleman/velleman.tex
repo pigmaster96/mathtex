@@ -5494,8 +5494,74 @@ Thus the solutions to the second congruence are the elements of $[21]_{34}$.
 \newpage
 
 \section{Euler's theorem}
-
-
+For some positive integer $m$,
+we saw that some elements of $\mathbb Z/\equiv_m$ have multiplicative inverses and some don't.
+Here we focus on the ones that do. We let $(\mathbb Z/\equiv_m)^*$ denote the set of elements 
+of $\mathbb Z/\equiv_m$ that have multiplicative inverses. That is
+\begin{equation*}
+(\mathbb Z/\equiv_m)^*=\{X\in\mathbb Z/\equiv_m\mid\exists X'\in\mathbb Z/\equiv_m(X\cdot X'=[1]_m)\}
+\end{equation*}
+The number of elements of $(\mathbb Z/\equiv_m)^*$ is denoted $\varphi(m)$. The function $\varphi$ is called \textit{Euler's phi function}, or \textit{Euler's totient function}.\\
+\vspace{1mm}\\
+For every positive
+integer $m$, $(\mathbb Z/\equiv_m)^*\subseteq\mathbb Z/\equiv_m$ and $\mathbb Z/\equiv_m$ has $m$
+elements, so $\varphi(m)\leq m$. Also $[1]_m\cdot[1]_m=[1]_m$, so $[1]_m\in(\mathbb Z/\equiv_m)^*$ and therefore $\varphi(m)\geq1$.
+For example,
+\begin{equation*}
+(\mathbb Z/\equiv_{10})^*=\{[1]_{10},[3]_{10},[7]_{10},[9]_{10}\}
+\end{equation*}
+so $\varphi(10)=4$. Two important properties of $(\mathbb Z/\equiv_m)^*$ are closure under inverses and multiplication.
+\begin{theorem}
+Suppose $m$ is a positive integer.
+\begin{enumerate}
+\item For every $X$ in $(\mathbb Z/\equiv_m)^*$, $X^{-1}\in(\mathbb Z/\equiv_m)^*$.
+\item For every $X$ and $Y$ in $(\mathbb Z/\equiv_m)^*$, $X\cdot Y\in(\mathbb Z/\equiv_m)^*$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}\hspace{1mm}
+\begin{enumerate}
+\item Suppose $X\in(\mathbb Z/\equiv_m)^*$. Then $X$ has a multiplicative inverse $X^{-1}$ (that has been proven to be unique) and $X\cdot X^{-1}=[1]_m$. But this equation also tells us that 
+$X$ is the multiplicative inverse of $X^{-1}$; that is $(X^{-1})^{-1}=X$. Therefore $X^{-1}\in(\mathbb Z/\equiv_m)^*$.
+\item Suppose $X\in(\mathbb Z/\equiv_m)^*$ and $Y\in(\mathbb Z/\equiv_m)^*$. Then $X$ and $Y$ have multiplicative inverses $X^{-1}$ and $Y^{-1}$. Therefore
+\begin{equation*}
+(X\cdot Y)\cdot(X^{-1}\cdot Y^{-1})=(X\cdot X^{-1})\cdot(Y\cdot Y^{-1})=[1]_m\cdot[1]_m=[1]_m
+\end{equation*}
+This means that $X^{-1}\cdot Y^{-1}$ is the multiplicative inverse of $X\cdot Y$ and $X\cdot Y\in(\mathbb Z/\equiv_m)^*$.\qedhere
+\end{enumerate}
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Cont.}\\
+Suppose $X\in(\mathbb Z/\equiv_m)^*$. By the second part of the previous theorem, for every 
+$Y\in(\mathbb Z/\equiv_m)^*$, $X\cdot Y\in(\mathbb Z/\equiv_m)^*$. We can define a function $f_X:(\mathbb Z/\equiv_m)^*\to(\mathbb Z/\equiv_m)^*$ by the formula $f_X(Y)=X\cdot Y$.
+\begin{theorem}
+Defining $f_X:(\mathbb Z/\equiv_m)^*\to(\mathbb Z/\equiv_m)^*$ as
+\begin{equation*}
+f_X=\{(A,B)\in(\mathbb Z/\equiv_m)^*\times(\mathbb Z/\equiv_m)^*\mid B=X\cdot A\}
+\end{equation*}
+$f_X$ is one-to-one and onto.
+\end{theorem}
+\begin{proof}
+To prove $f_X$ is one-to-one, we must show
+\begin{equation*}
+\forall Y_1\in(\mathbb Z/\equiv_m)^*\forall Y_2\in(\mathbb Z/\equiv_m)^*(f_X(Y_1)=f_X(Y_2)\to Y_1=Y_2)
+\end{equation*}
+Suppose $Y_1$ and $Y_2$ are elements of $(\mathbb Z/\equiv_m)^*$ such that $f_X(Y_1)=f_X(Y_2)$.
+Then $X\cdot Y_1=X\cdot Y_2$, and therefore
+\begin{equation*}
+Y_1=[1]_m\cdot Y_1=X^{-1}\cdot X\cdot Y_1=X^{-1}\cdot X\cdot Y_2=[1]_m\cdot Y_2=Y_2
+\end{equation*}
+This proves that $f_X$ is one-to-one.\\
+\indent Next we show $f_X$ is onto, meaning
+\begin{equation*}
+\forall Z\in(\mathbb Z/\equiv_m)^*\exists Y\in(\mathbb Z/\equiv_m)^*(Z=X\cdot Y)
+\end{equation*}
+Suppose $Z\in(\mathbb Z/\equiv_m)^*$. Then since $(\mathbb Z/\equiv_m)^*$ is closed under inverses and multiplication and $X\in(\mathbb Z/\equiv_m)^*$, 
+$X^{-1}\cdot Z\in(\mathbb Z/\equiv_m)^*$. As such 
+\begin{equation*}
+f_X(X^{-1}\cdot Z)=X\cdot X^{-1}\cdot Z=Z
+\end{equation*}
+Since $Z$ was arbitrary, $f_X$ is onto.
+\end{proof}
 
 
 
