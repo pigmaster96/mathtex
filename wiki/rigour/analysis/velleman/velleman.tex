@@ -5572,7 +5572,74 @@ exactly the same as the entries in the first column, but listed in a different o
 
 \subsection{Generalisation of commutativity and associativity}
 The commutative law for multiplication says that for any numbers $a$ and $b$, $ab=ba$. The associative law says that for any numbers $a,b$ and $c$, $(ab)c=a(bc)$. Here we show that these laws can
-be used to justify reordering and regrouping terms in a product of any list of numbers in any way.
+be used to justify reordering and regrouping terms in a product of any list of numbers in any way.\\
+\vspace{1mm}\\
+Let us say that the \textit{left-grouped product} of a list of numbers $a_1,a_2,\ldots,a_n$ is the product in which the terms are grouped as follows:
+\begin{equation*}
+(\cdots(((a_1a_2)a_3)a_4)\cdots a_{n-1})a_n
+\end{equation*}
+More precisely, we have the recursive definition
+\begin{align*}
+&p(1)=a_1;\\
+&\text{for all integers $n>1$: }p(n)=p(n-1)a_n
+\end{align*}
+\begin{theorem}
+Any product of a list of numbers $a_1,a_2,\ldots,a_n$ (with the terms in that order, but with parentheses inserted to group the terms in any way) is equal to the left-grouped product.
+\end{theorem}
+\begin{proof}
+To simplify notation, we will assume that any product is the left grouped product unless parentheses are used to indicate
+otherwise. We use strong induction on $n$.\\
+\indent Suppose that the statement is true for any products of fewer than $n$ terms, and consider the any product 
+of $a_1,a_2,\ldots,a_n$. If $n=1$, then the only product is the left-grouped product, so there is nothing to prove. Now suppose
+$n>1$. Then our product has the form $pq$, where $p$ is a product of $a_1,\ldots,a_{k-1}$ and $q$ is a product of $a_k,\ldots,a_n$
+for some $k$ where $2\leq k\leq n$. By the inductive hypothesis, $p=a_1\cdots a_{k-1}$ and $q=a_k\cdots a_n$, where by our
+convention these two products are left-grouped. It will suffice
+then to prove that $(a_1\cdots a_{k-1})(a_k\cdots a_n)=a_1\cdots a_n$ since (any product of $a_1,a_2,\ldots a_n$)$=pq$.
+If $k=n$, then the left-hand side of the equation is already left grouped. If $k<n$, then
+\begin{align*}
+(a_1&\cdots a_{k-1})(a_k\cdots a_n)\\
+&=(a_1\cdots a_{k-1})((a_k\cdots a_{n-1})a_n)&\text{(Definition of left-grouped)}\\
+&=((a_1\cdots a_{k-1})(a_k\cdots a_{n-1}))a_n&\text{(Associativity)}\\
+&=(a_1\cdots a_{n-1})a_n&\text{(Inductive hypothesis)}\\
+&=a_1\cdots a_{n}&\text{(Definition of left-grouped)}
+\end{align*}
+and we are done.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+Any two products of the numbers $a_1,a_2,\ldots,a_n$, with the terms in any order and grouped in any way, are equal.
+\end{theorem}
+\begin{proof}
+Say we have two products $a_1,a_2,\ldots,a_n$ and $b_1,b_2,\ldots,b_n$, where the second product is some reordering of the first
+sequence. Using the previous theorem, both products are equal to their left-grouped products; we wil show that
+their left-grouped products are equal. As in the previous proof, we will assume that products are written as left-grouped unless
+specified otherwise.\\
+\indent We use induction on $n$. If $n=1$ then the products are clearly equal since $a_1=b_1$. Now suppose that
+the statement is true for products of length $n$, and suppose that $b_1\cdots b_{n+1}$ is a reordering of $a_1\cdots a_{n+1}$.
+Then $b_{n+1}$ is one of $a_1,\ldots,a_{n+1}$.\\
+\indent If $b_{n+1}=a_{n+1}$ then 
+\begin{align*}
+b_1\cdots b_{n+1}&=(b_1\cdots b_{n})a_{n+1}&\text{(Definition of left-grouped)}\\
+&=(a_1\cdots a_n)a_{n+1}&\text{(Inductive hypothesis)}\\
+&=a_1\cdots a_{n+1}&\text{(Definition of left-grouped)}
+\end{align*}
+Now suppose $b_{n+1}=a_k$ for some $k\leq n$. We will write $a_1\cdots\hat{a_k}\cdots a_n$ for the (left-grouped) product of the
+numbers $a_1,\ldots,a_n$ with the factor $a_k$ left out. Then
+\begin{align*}
+b_1\cdots b_{n+1}&=(b_1\cdots b_{n})a_k&\text{(Definition of left-grouped)}\\
+&=(a_1\cdots\hat{a_k}\cdots a_{n+1})a_k&\text{(Inductive hypothesis)}\\
+&=((a_1\cdots\hat{a_k}\cdots a_n)a_{n+1})a_k&\text{(Definition of left-grouped)}\\
+&=(a_1\cdots\hat{a_k}\cdots a_n)(a_{n+1}a_k)&\text{(Associativity)}\\
+&=(a_1\cdots\hat{a_k}\cdots a_n)(a_ka_{n+1})&\text{(Commutativity)}\\
+&=((a_1\cdots\hat{a_k}\cdots a_n)a_k)a_{n+1})&\text{(Associativity)}\\
+&=(a_1\cdots a_n)a_{n+1}&\text{(Inductive hypothesis)}\\
+&=a_1\cdots a_{n+1}&\text{(Definition of left-grouped)}
+\end{align*}
+Since the left-grouped products are equal, the reordered products are equal.
+\end{proof}
+\newpage
+
+\subsection{}
 
 
 
