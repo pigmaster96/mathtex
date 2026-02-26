@@ -5639,7 +5639,41 @@ Since the left-grouped products are equal, the reordered products are equal.
 \end{proof}
 \newpage
 
-\subsection{}
+\subsection{The theorem}
+\begin{theorem}
+Suppose $m$ is a positive integer and $X\in(\mathbb Z/\equiv_m)^*$. Then $X^{\varphi(m)}=[1]_m$.
+\end{theorem}
+\begin{proof}
+By he definition of Euler's phi function, there are $\varphi(m)$ elements in $(\mathbb Z/\equiv_m)^*$. Let $Y_1,Y_2,\ldots,Y_{\varphi(m)}$ be a list of these elements.
+Then since $f_X$ is one-to-one and onto, each of these elements occurs exactly once in the list $f_X(Y_1),f_X(Y_2),\ldots,f_X(Y_{\varphi(m)})$. In other words, the two lists 
+$Y_1,Y_2,\ldots,Y_{\varphi(m)}$ and $f_X(Y_1),f_X(Y_2),\ldots,f_X(Y_{\varphi(m)})$ contain exactly the same entries, but listed in different orders. It follows then, by the commutative and
+associative laws for multiplication, that if we multiply all of the entries in the two lists, the products will be the same:
+\begin{align*}
+Y_1\cdot Y_2\cdots Y_{\varphi(m)}&=f_X(Y_1)\cdot f_X(Y_2)\cdots f_X(Y_{\varphi(m)})\\
+&=(X\cdot Y_1)\cdot(X\cdot Y_2)\cdots(X\cdot Y_{\varphi(m)})\\
+&=X^{\varphi(m)}\cdot(Y_1\cdot Y_2\cdots Y_{\varphi(m)})
+\end{align*}
+Where $X^{\varphi(m)}$ denotes $X$ multiplied by itself $\varphi(m)$ times. Let $Z=Y_1\cdot Y_2\cdots\\Y_{\varphi(m)}$. Then the equation says $Z=X^{\varphi(m)}\cdot Z$. 
+Since $(\mathbb Z/\equiv_m)^*$ is closed under multiplication, $Z\in(\mathbb Z/\equiv_m)^*$, so it has an inverse and
+\begin{equation*}
+[1]_m=Z\cdot Z^{-1}=X^{\varphi(m)}\cdot Z\cdot Z^{-1}=X^{\varphi(m)}\cdot[1]_m=X^{\varphi(m)}\qedhere
+\end{equation*}
+\end{proof}
+\begin{theorem}
+(Euler's theorem) Suppose $m$ is a positive integer. Then for every positive integer $a$, if $\gcd(m,a)=1$ then $a^{\varphi(m)}\equiv_m1$.
+\end{theorem}
+\begin{proof}
+Suppose $a$ is a positive integer and $\gcd(m,a)=1$. Then by an earlier theorem $[a]_m$ has an inverse and therefore $[a]_m\in(\mathbb Z/\equiv_m)^*$. By the previous theorem, 
+$[a]_m^{\varphi(m)}=[1]_m$. But then
+\begin{equation*}
+[a]_m^{\varphi(m)}=\underbrace{[a]_m\cdot[a]_m\cdots[a]_m}_{\varphi(m)\text{ terms}}=[\underbrace{a\cdot a\cdots a}_{\varphi(m)\text{ terms}}]_m=[a^{\varphi(m)}]_m
+\end{equation*}
+Thus $[a^{\varphi(m)}]_m=[a]_m^{\varphi(m)}=[1]_m$, and therefore $a^{\varphi(m)}\equiv_m1$.
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textbf{Applying the theorem}\\
+To
+
 
 
 
