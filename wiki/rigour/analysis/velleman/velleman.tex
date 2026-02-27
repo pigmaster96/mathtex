@@ -5670,12 +5670,34 @@ $[a]_m^{\varphi(m)}=[1]_m$. But then
 \end{equation*}
 Thus $[a^{\varphi(m)}]_m=[a]_m^{\varphi(m)}=[1]_m$, and therefore $a^{\varphi(m)}\equiv_m1$.
 \end{proof}
-\noindent(next page)\newpage
-\noindent\textbf{Applying the theorem}\\
-To
+\newpage
 
-
-
+\subsection{Phi function computation}
+To apply Euler's theorem, we need to be able to compute $\varphi(m)$. One way to do this would be to check all the elements of $\mathbb Z/\equiv_m$ one-by-one and count how many have multiplicative 
+inverses. This is impractical for large $m$. We want to find more efficient ways to compute $\varphi(m)$.\\
+\vspace{1mm}\\
+We begin by rephrasing the definition of $\varphi(m)$. We know that $\{0,1,\ldots,m-1\}$ is a complete residue system modulo $m$. But since $0\equiv_mm$,
+$[0]_m=[m]_m$ and we can also say that $\{1,2,\ldots,m\}$ is a
+complete residue system. Thus $\mathbb Z/\equiv_m=\{[1]_m,[2]_m,\ldots,[m-1]_m,[m]_m\}=\{[a]_m\mid1\leq a\leq m\}$, where each element of $\mathbb Z/\equiv_m$ appears exactly once in this list of
+elements.\\
+\vspace{1mm}\\
+We proved that for any positive integer $a$, $[a]_m$ has a multiplicative inverse iff $m$ and $a$ are relatively prime. So
+\begin{equation*}
+(\mathbb Z/\equiv_m)^*=\{[a]_m\mid1\leq a\leq m\text{ and }\gcd(m,a)=1\}
+\end{equation*}
+Another approach for calculating Euler's phi function would then be
+\begin{equation*}
+\varphi(m)=\text{the number of elements in the set}\{[a]_m\mid1\leq a\leq m\,\text{and}\gcd(m,a)=1\}
+\end{equation*}
+Recall the theorem:
+\begin{theorem}
+For a prime number $p$, $D(p)=\{1,p\}$.
+\end{theorem}
+\noindent Using this approach, it is easy to compute $\varphi(p)$ when $p$ is prime: if $1\leq a\leq p-1$ then $\gcd(p,a)=1$; but $\gcd(p,p)=p>1$. Therefore
+\begin{equation*}
+\{a\mid1\leq a\leq p\text{ and}\,\gcd(p,a)=1\}=\{1,2,\ldots,p-1\}
+\end{equation*}
+So $\varphi(p)=p-1$.
 
 
 
