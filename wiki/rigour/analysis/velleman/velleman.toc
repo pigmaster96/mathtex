@@ -109,8 +109,8 @@
 \contentsline {subsection}{\numberline {6.4.1}Generalisation of commutativity and associativity}{178}{}%
 \contentsline {subsection}{\numberline {6.4.2}The theorem}{180}{}%
 \contentsline {subsection}{\numberline {6.4.3}Phi function computation}{181}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{182}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{182}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{182}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{182}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{183}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{183}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{183}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{183}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{183}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{184}{}%
