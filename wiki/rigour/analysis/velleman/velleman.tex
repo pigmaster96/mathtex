@@ -5672,7 +5672,7 @@ Thus $[a^{\varphi(m)}]_m=[a]_m^{\varphi(m)}=[1]_m$, and therefore $a^{\varphi(m)
 \end{proof}
 \newpage
 
-\subsection{Phi function computation}
+\subsection{Phi function computation 1}
 To apply Euler's theorem, we need to be able to compute $\varphi(m)$. One way to do this would be to check all the elements of $\mathbb Z/\equiv_m$ one-by-one and count how many have multiplicative 
 inverses. This is impractical for large $m$. We want to find more efficient ways to compute $\varphi(m)$.\\
 \vspace{1mm}\\
@@ -5704,15 +5704,19 @@ If $a$ is a positive integer and $p\mid a$ then $\gcd(p^k,a)\geq p>1$. If $p\nmi
 $p^k$, and since $p\nmid a$, $p$ is not a prime factor of $a$, so their greatest common divisor is $p^0=1$.) so $\gcd(p^k,a)=1$.\\
 \vspace{1mm}\\
 The elements of the set $\{a\mid1\leq a\leq p^k\}$ that are \textit{not} relatively prime to $p^k$ are precisely the ones that are divisible by $p$. Those elements are 
-$p,2p,3p,\ldots,p^k$. In other words,\
+$p,2p,3p,\ldots,p^k$. In other words,
 \begin{equation*}
 \{a\mid1\leq a\leq p^k\text{ and }\gcd(p^k,a)=1\}=\{1,2,\ldots,p^k\}\backslash\{p,2p,\ldots,p^{k-1}p\}
 \end{equation*}
-the number of elements in this set is $p^k-p^{k-1}=p^{k-1}(p-1)$. Thus $\varphi(p^k)=p^{k-1}(p-1)$.\\
-(next page)\newpage
+the number of elements in this set is $p^k-p^{k-1}=p^{k-1}(p-1)$. Thus $\varphi(p^k)=p^{k-1}(p-1)$.
+\newpage
+
+\subsection{Phi function computation 2}
+We will show
+\begin{theorem}
+Suppose $m$ and $n$ are relatively prime positive integers. Then\\$\varphi(mn)=\varphi(m)\cdot\varphi(n)$.
+\end{theorem}
 \begin{lemma}
-
-
 
 \end{lemma}
 
