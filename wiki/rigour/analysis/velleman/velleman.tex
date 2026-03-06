@@ -5717,11 +5717,24 @@ We will show
 Suppose $m$ and $n$ are relatively prime positive integers. Then\\$\varphi(mn)=\varphi(m)\cdot\varphi(n)$.
 \end{theorem}
 \begin{lemma}
-
+For any positive integers $a$ and $c$, and for any integer $b$, if $a$ and $c$ are relatively prime and $c\mid ab$, then $c\mid b$.
 \end{lemma}
+\begin{proof}
+Suppose $a$ and $c$ are relatively prime and $c\mid ab$. By a earlier theorem we can declare integers $k_0$ and $k_1$ such that $1=k_0a+k_1c$.
+We can also declare an integer $k_2$ such that $ab=k_2c$. Then we have
+\begin{align*}
+b=(k_0a+k_1c)b=k_0ab+k_1bc=k_0k_2c+k_1bc=(k_0k_2+k_1b)c
+\end{align*}
+Therefore we have $c\mid b$.
+\end{proof}
+\begin{lemma}
+Suppose $m$ and $n$ are relatively prime positive integers. Then for all integers $a$ and $b$, $a\equiv_{mn}b$ iff $a\equiv_mb$ and $a\equiv_nb$.
+\end{lemma}
+\begin{proof}
+($\rightarrow$)
 
 
-
+\end{proof}
 
 
 
