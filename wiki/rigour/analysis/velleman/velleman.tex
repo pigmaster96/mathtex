@@ -5785,7 +5785,28 @@ $1=k_0a+k_1c$ and $1=k_2b+k_3c$ for integers $k_0,k_1,k_2,k_3$. As such we have
 \end{align*}
 and by the previous lemma $\gcd(ab,c)=1$.
 \end{proof}
-
+\noindent(next page)\newpage
+\begin{lemma}
+Suppose $m$ and $n$ are relatively prime positive integers. Then for all integers $a$ and $b$, there is some integer $r$ such that $1\leq r\leq mn$,
+$r\equiv_ma$, and $r\equiv_nb$.
+\end{lemma}
+\begin{proof}
+We are trying to show 
+\begin{equation*}
+\forall a\in\mathbb Z\forall b\in\mathbb Z(\exists r\in\mathbb Z(1\leq r\leq mn\land r\equiv_ma\land r\equiv_nb))
+\end{equation*}
+Let $a$ and $b$ be arbitrary integers. Since $m$ and $n$ are relatively prime, there are integers $s$ and $t$ such that $sm+tn=1$. Therefore $tn-1=-sm$ and $sm-1=-tn$. If we let $x=tna+smb$, then
+\begin{equation*}
+x-a=(tn-1)a+smb=sma+smb=(b-a)sm
+\end{equation*}
+so $x\equiv_ma$. Similarly,
+\begin{equation*}
+x-b=tna+(sm-1)b=tna-tnb=(a-b)tn
+\end{equation*}
+so $x\equiv_nb$. Since $\{1,2,\ldots,mn\}$ is a complete residue system modulo $mn$, we can find some integer $r$ such that 
+$r\equiv_{mn}x$ and $1\leq r\leq mn$. By the second lemma in this subsection, $r\equiv_mx$ and $r\equiv_nx$. By transitivity of $\equiv_m$ and 
+$\equiv_m$ it follows that $r\equiv_ma$ and $r\equiv_nb$.
+\end{proof}
 
 
 
