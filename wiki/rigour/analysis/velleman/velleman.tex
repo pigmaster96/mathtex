@@ -5731,10 +5731,63 @@ Therefore we have $c\mid b$.
 Suppose $m$ and $n$ are relatively prime positive integers. Then for all integers $a$ and $b$, $a\equiv_{mn}b$ iff $a\equiv_mb$ and $a\equiv_nb$.
 \end{lemma}
 \begin{proof}
-($\rightarrow$)
-
-
+Let $a$ and $b$ be arbitrary integers.\\
+\indent($\rightarrow$) Suppose $a\equiv_{mn}b$. Then we can declare a integer $k_0$ such that $a-b=k_0mn$. So we have $a\equiv_nb$ and $a\equiv_mb$.
+\\
+\indent($\leftarrow$) Suppose now that $a\equiv_nb$ and $a\equiv_mb$. Then we can declare some integer $k_0$ such that $a-b=k_0m$. Since 
+$a\equiv_nb$ means $n\mid a-b$, we have $n\mid k_0m$. By the previous lemma we then have $n\mid k_0$, meaning $k_0=k_1n$ for some integer $k_1$.
+So we have $a-b=k_1nm$ and $a\equiv_{mn}b$.
 \end{proof}
+\begin{lemma}
+Suppose $a$ and $b$ are positive integers, and let $d=\gcd(a,b)$. Then for every integer $n$, $n$ is a linear combination of $a$ and $b$ iff 
+$d\mid n$. 
+\end{lemma}
+\begin{proof}
+Let $n$ be some arbitrary integer.\\
+\indent($\rightarrow$) Suppose $n$ is a linear combination of $a$ and $b$. Then there exists integers $k_0,k_1$ such that $n=k_0a+k_1b$. Since
+$d=\gcd(a,b)$, we can also declare integers $k_2,k_3$ where $a=k_2d$ and $b=k_3d$. So $n=k_0k_2d+k_1k_3d=(k_0k_2+k_1k_3)d$, and $d\mid n$.\\
+\indent ($\leftarrow$) Suppose now that $d\mid n$. Then $n=k_0d$ for some integer $k_0$. Since $d=\gcd(a,b)$, by an 
+earlier theorem we have $d=k_1a+k_2b$ for integers $k_1,k_2$. So
+$n=k_0(k_1a+k_2b)=k_0k_1a+k_0k_2b$, meaning $n$ is a linear combination
+of $a$ and $b$. 
+\end{proof}
+\noindent(next page)\newpage
+\begin{lemma}
+Suppose $a$ and $b$ are positive integers. Then $a$ and $b$ are relatively prime iff there are integers $s$ and $t$ such that $sa+tb=1$.
+\end{lemma}
+\begin{proof}
+We are trying to show
+\begin{equation*}
+\gcd(a,b)=1\leftrightarrow\exists s\in\mathbb Z\exists t\in\mathbb Z(sa+tb=1)
+\end{equation*}
+\indent($\rightarrow$) First suppose $a$ and $b$ are relatively prime. By an earlier theorem we can declare integers $s$ and $t$ such that 
+$sa+tb=1$.\\
+\indent($\leftarrow$) Now suppose there exists integers $s$ and $t$ such that $sa+tb=1$. By the previous lemma, since 1 is a linear combination of $a$ and $b$, $\gcd(a,b)\mid 1$, and $\gcd(a,b)$ must be 1.
+\end{proof}
+\begin{lemma}
+For all positive integers $a,b$ and $c$, $\gcd(ab,c)=1$ iff $\gcd(a,c)=1$ and $\gcd(b,c)=1$.
+\end{lemma}
+\begin{proof}
+We want to show
+\begin{equation*}
+\forall a\in\mathbb Z^+\forall b\in\mathbb Z^+\forall c\in\mathbb Z^+
+(\gcd(ab,c)=1\leftrightarrow(\gcd(a,c)=1\land\gcd(b,c)=1))
+\end{equation*}
+Let $a,b,c$ be arbitrary positive integers.\\
+\indent($\rightarrow$) Suppose $\gcd(ab,c)=1$. Then $1=k_0ab+k_1c$ for integers $k_0$ and $k_1$. By the previous lemma, $\gcd(a,c)=1$ and 
+$\gcd(b,c)=1$.\\
+\indent($\leftarrow$) Now suppose $\gcd(a,c)=1$ and $\gcd(b,c)=1$. Then
+$1=k_0a+k_1c$ and $1=k_2b+k_3c$ for integers $k_0,k_1,k_2,k_3$. As such we have
+\begin{align*}
+1&=(k_0a+k_1c)(k_2b+k_3c)\\
+&=k_0ak_2b+k_0ak_3c+k_1ck_2b+k_1k_3c^2\\
+&=(k_0k_2)ab+(k_0ak_3+k_1k_2b+k_1k_3c)c
+\end{align*}
+and by the previous lemma $\gcd(ab,c)=1$.
+\end{proof}
+
+
+
 
 
 
