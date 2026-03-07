@@ -5807,6 +5807,68 @@ so $x\equiv_nb$. Since $\{1,2,\ldots,mn\}$ is a complete residue system modulo $
 $r\equiv_{mn}x$ and $1\leq r\leq mn$. By the second lemma in this subsection, $r\equiv_mx$ and $r\equiv_nx$. By transitivity of $\equiv_m$ and 
 $\equiv_m$ it follows that $r\equiv_ma$ and $r\equiv_nb$.
 \end{proof}
+\begin{theorem}
+Suppose $m$ and $n$ are relatively prime positive integers. Then\\$\varphi(mn)=\varphi(m)\cdot\varphi(n)$.
+\end{theorem}
+\begin{proof}
+Defining $R$ as
+\begin{equation*}
+R=\{a\mid1\leq a\leq mn\land\gcd(mn,a)=1\}
+\end{equation*}
+By the fifth lemma, if $a\in R$ then $\gcd(m,a)=1$ and $\gcd(n,a)=1$, so
+$[a]_m\in(\mathbb Z/\equiv_m)^*$ and $[a]_n\in(\mathbb Z/\equiv_n)^*$.
+As such we can define the function $f:R\to(\mathbb Z/\equiv_m)^*\times(\mathbb Z/\equiv_n)^*$ by the formula 
+$f(a)=([a]_m,[a]_n)$. The domain $R$ has the same number of elements as $(\mathbb Z/\equiv_{mn})^*$, that is, $\varphi(mn)$. 
+The range $(\mathbb Z/\equiv_m)^*\times(\mathbb Z/\equiv_n)^*$ has $\varphi(m)\cdot\varphi(n)$ elements. If we show that $f$ is one-to-one and onto,
+this would imply that the domain and the range have the same number of elements, meaning $\varphi(mn)=\varphi(m)\cdot\varphi(n)$.\\
+\indent To show that $f$ is one-to-one, that is,
+\begin{equation*}
+\forall a_1\in R\forall a_2\in R(f(a_1)=f(a_2)\to a_1=a_2)
+\end{equation*}
+Suppose $a_1\in R$, $a_2\in R$, and $f(a_1)=f(a_2)$. This means that 
+$([a_1]_m,[a_1]_n)=([a_2]_m,[a_2]_n)$, so $[a_1]_m=[a_2]_m$ and $[a_1]_n=[a_2]_n$. Therefore $a_1\equiv_m a_2$ and $a_1\equiv_n a_2$, and by the 
+second lemma, $a_1\equiv_{mn}a_2$.
+Suppose that $a_1\neq a_2$. Since $a_1,a_2\in R$, $[a_1]_{mn}$ and $[a_2]_{mn}$ pairwise disjoint equivalence classes 
+in the complete residue system modulo
+$mn$. However, since $a_1\equiv_{mn}a_2$, we have $a_1\in[a_2]_{mn}$ 
+and $a_1\in[a_1]_{mn}$, contradicting pairwise disjointness. As such we must then have $a_1=a_2$.\\
+(next page)\newpage
+\indent Now we show that $f$ is onto. That is,
+\begin{equation*}
+\forall b\in(\mathbb Z/\equiv_m)^*\times(\mathbb Z/\equiv_n)^*\exists a\in R(f(a)=b)
+\end{equation*}
+Let $([a]_m,[b]_n)$ be an arbitrary element of $(\mathbb Z/\equiv_m)^*\times(\mathbb Z/\equiv_n)^*$. By the previous lemma, we can declare some
+integer $r$ such that $1\leq r\leq mn$, $r\equiv_ma$ and $r\equiv_nb$.
+This means that $[r]_m=[a]_m\in(\mathbb Z/\equiv_m)^*$ and $[r]_n=[b]_n\in(\mathbb Z/\equiv_n)^*$. As such we have $\gcd(m,r)=1$ and $\gcd(n,r)=1$.
+By the fifth lemma $\gcd(mn,r)=1$, so $r\in R$ and $f(r)=([r]_m,[r]_n)=([a]_m,[b]_n)$.
+\end{proof}
+\noindent\textbf{Utility}\\
+We could easily compute $\varphi(m)$ or $\varphi(m^k)$ for cases where $m$ was prime. This theorem allows us to compute $\varphi(m)$ for other
+values of $m$.\\
+\vspace{1mm}\\
+A function from the positive integers to the real numbers is called a \textit{multiplicative function} if it has the property that for all 
+relatively prime positive integers $m$ and $n$, $f(mn)=f(m)\cdot f(n)$. 
+This theorem says that Euler's phi function is a multiplicative function. A number of other important functions in number theory are also 
+multiplicative.\\
+\vspace{1mm}\\
+The theorem here allows us to use the prime factorisation of any possible $m$ to find $\varphi(m)$. Suppose the prime factorisation of $m$ 
+is $m=p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k}$, where $p_1,p_2,\ldots,p_k$ are
+prime numbers and $p_1<p_2<\cdots<p_k$. Then $p_1^{e_1}$ and $p_2^{e_2}\cdots p_k^{e_k}$ are relatively prime since they have no prime
+factors in common. So $\varphi(m)=\varphi(p_1^{e_1})\cdot\varphi(p_2^{e_2}\cdots p_k^{e_k})$. Repeating this reasoning we conclude that
+\begin{align*}
+\varphi(m)=\varphi(p_1^{e_1}p_2^{e_2}\cdots p_k^{e_k})&=\varphi(p_1^{e_1})\cdot\varphi(p_2^{e_2})\cdots\varphi(p_k^{e_k})\\
+&=p_1^{e_1-1}(p_1-1)\cdot p_2^{e_2-1}(p_2-1)\cdots p_k^{e_k-1}(p_k-1)
+\end{align*}
+For example, $600=2^3\cdot3\cdot5^2$, so
+\begin{equation*}
+\varphi(600)=\varphi(2^3\cdot3\cdot5^2)=2^2(2-1)\cdot3^0(3-1)\cdot5^1(5-1)=160
+\end{equation*}
+Which is a lot easier than explicitly listing the 160 elements of $(\mathbb Z/\equiv_{600})^*$.
+\newpage
+
+\section{Public-Key Cryptography}
+
+
 
 
 
