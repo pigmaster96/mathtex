@@ -5448,7 +5448,7 @@ See now that
 [1]_{25}\cdot[x]_{25}&=[161]_{25}=[11]_{25}\\
 [x]_{25}&=[11]_{25}
 \end{align*}
-We are trying to solve $[12]_{25}\cdot[x]_{25}=[7]_{25}$. As such any element of $[11]_25$ are postitive integer solutions, and the smallest positive integer solution would then be $x=11$.\\
+We are trying to solve $[12]_{25}\cdot[x]_{25}=[7]_{25}$. As such any element of $[11]_{25}$ are positive integer solutions, and the smallest positive integer solution would then be $x=11$.\\
 \vspace{1mm}\\
 See that we were lucky in this example that 25 and 12 were relatively prime, since the multiplicative inverse was necessary in our manipulation. The next subsection elaborates a bit more on ways around this.
 \newpage
@@ -5867,6 +5867,63 @@ Which is a lot easier than explicitly listing the 160 elements of $(\mathbb Z/\e
 \newpage
 
 \section{Public-Key Cryptography}
+\textbf{Intuition}\\
+Say we want to communicate some number to some recipient online. 
+To keep an eavesdropper from listening in on digital communications, a computer scrambles, or \textit{encrypts} the number before sending it. The 
+merchant's computer then unscrambles, or \textit{decrypts} the number to obtain the original number.\\
+\vspace{1mm}\\
+For example, suppose my credit card number is a 16-digit sequence $m=\\m_1m_2\cdots m_{16}$. Each $m_i$ is one of hte digits $0,1,\ldots,9$, but
+we will think of it as representing the equivalence class $[m_i]_{10}\in\mathbb Z/\equiv_{10}$. If my computer and a merchant's computer could agree
+on a random sequence of digits $k=k_1k_2\cdots k_{16}$, then they could proceed as follows, doing all calculations in $\mathbb Z/\equiv_{10}$:\\
+\vspace{1mm}\\
+My computer could replace the $i$th digit $m_i$ of my credit card number with the digit $c_i$ such that $[c_i]_{10}=[m_i]_{10}+[k_i]_{10}$.
+My computer would send that 16-digit sequence $c=c_1c_2\cdots c_{16}$ to the merchant's computer, which would then recover the original sequence
+using the formula $[m_i]_{10}=[c_i]_{10}+(-[k_i]_{10})$.\\
+\vspace{1mm}\\
+The sequence $k$ is the \textit{key} that my computer uses to encrypt the sequence and the merchant's computer uses to decrypt it. 
+An eavesdropper who didn't know the key $k$ would be unable to decrypt the encrypted message $c$ to obtain $m$.\\
+\vspace{1mm}\\
+The issue with this strategy is that it uses \textit{symmetric cryptography}, in which the same key is used for both encryption and decryption. The
+eavesdropper could just learn the key and decrypt the encrypted message, and sending the key securely is just as hard as sending the credit card
+number, so we haven't really made any progress.\\
+\vspace{1mm}\\
+The solution here is to use \textit{public-key cryptography}, in which the encryption and decryption keys are different: 
+The merchant's computer creates two keys, one for encryption and one for decryption. It sends the encryption key to my computer, my computer
+uses the encryption key to encrypt my credit card number and then sends the encrypted number to the merchant's computer, which uses the decryption
+key to recover the credit card number. An eavesdropper could learn the encryption key, so this key is regarded as a public key. But this doesn't
+help the eavesdropper, because decryption requires the decryption key, which is never transmitted and therefore remains secret.\\
+\vspace{1mm}\\
+It may seem suprising that it is possible to have different keys for encryption and decryption, but it can be done.\\
+(next page)\newpage
+\noindent\textbf{Cont}\\
+We will discuss a well known public-key encryption system called RSA; RSA is based on Euler's theorem.\\
+\vspace{1mm}\\
+Consider another strategy. 
+Suppose Alice wants to send a message securely to Bob. To use the RSA public-key system, they would proceed as follows. First Bob chooses two
+distinct prime numbers $p$ and $q$. He computes $n=pq$ and $\varphi(n)=(p-1)(q-1)$. Next he chooses a positive integer $e$ such that $e$ and 
+$\varphi(n)$ are relatively prime and $e<\varphi(n)$. By an earlier theorem, $[e]_{\varphi(n)}$ has a multiplicative inverse in
+$\mathbb Z/\equiv_{\varphi(n)}$, which can be computed by the extended euclidean algorithm. Thus Bob will be able to compute a positive integer $d$
+such that $d<\varphi(n)$ and $[e]_{\varphi(n)}\cdot[d]_{\varphi(n)}=[1]_{\varphi(n)}$, which means that $cd\equiv_m1$. Bob sends the pair of numbers
+$(n,e)$ to Alice; this is the encryption key that Alice will use to encrypt her message. He keeps the numbers $p,q$ and $d$ secret; he will use $d$
+to decrypt Alice's message.\\
+\vspace{1mm}\\
+We will assume that the message Alice wants to send is a natural numver $m<n$. Naturally, her message might actually be a piece of text, not a
+number; but this can just be encoded as a natural number or a sequence of natural numbers less than $n$, in the latter case each natural number
+would be encrypted separately. To keep this discussion simple we will assume that Alice's message is a single natural number $m<n$.\\
+\vspace{1mm}\\
+As before, we think of the message $m$ as representing an equivalence class $[m]_n\in\mathbb Z/\equiv_n$, where Alice and Bob will do all of their
+calculations using arithmetic in $\mathbb Z/\equiv_n$. To encrypt her message, Alice computes $[m]^e_n=[c]_n$; the number $c$ is the encrypted message, which she sends to Bob.\\
+\vspace{1mm}\\
+To decrypt the message, Bob computes $[c]^d_n$. What makes the RSA system work is the suprising fact that $[c]^d_n=[m]_n$. Notice that both 
+encryption and decryption involve exponentiation, but the encryption
+exponent $e$ and the decryption exponent $d$ are different.\\
+(next page)\newpage
+\begin{theorem}
+Suppose $p$ and $q$ are distinct primes, $n=pq$, $e$ and $d$ are positive integers such that $ed\equiv_{\varphi(n)}1$, and $m$ and $c$ are natural
+numbers such that $[m]^e_n=[c]_n$. Then $[c]^d_n=[m]_n$.
+\end{theorem}
+
+
 
 
 

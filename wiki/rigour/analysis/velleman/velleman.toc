@@ -111,8 +111,8 @@
 \contentsline {subsection}{\numberline {6.4.3}Phi function computation 1}{182}{}%
 \contentsline {subsection}{\numberline {6.4.4}Phi function computation 2}{183}{}%
 \contentsline {section}{\numberline {6.5}Public-Key Cryptography}{187}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{188}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{188}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{188}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{188}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{189}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{190}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{190}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{190}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{190}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{191}{}%
