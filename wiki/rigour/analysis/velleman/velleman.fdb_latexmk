@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1773000460 "velleman.tex" "velleman.pdf" "velleman" 1773000461 0
+["pdflatex"] 1773088769 "velleman.tex" "velleman.pdf" "velleman" 1773088771 0
   "/etc/texmf/web2c/texmf.cnf" 1755598860 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -108,7 +108,12 @@
   "images//15.png" 1770287289 12809 27c1dc174b6f9c2354a20f750bf3bd0b ""
   "images//16.png" 1772639098 27275 de89a7078296b32bfdd2aec4026d698f ""
   "images//17.png" 1772639098 5304 5f7703abfe76746d5e1257c791d54560 ""
+  "images//18.png" 1773083442 42639 0256fa0d2376753bbe47d9f22e015136 ""
+  "images//19.png" 1773084593 16863 6047254d8ac5b87cd5fec2d94773bee8 ""
   "images//2.png" 1768762667 8878 ff05dc4297e98e2b1f7c8a702299680a ""
+  "images//20.png" 1773085509 42471 6b696679ff305b093184bbc23e0f4d87 ""
+  "images//21.png" 1773087212 83305 8eb1108f0a28f38be3523ee48942ec1d ""
+  "images//22.png" 1773088498 78500 c496510df6b59454c8a2479e91fa1870 ""
   "images//3.png" 1768762667 19313 4049eabee0138790555fa7891b99b1b4 ""
   "images//4.png" 1768762667 20507 863b1ac73b35a9687efe53e59871b439 ""
   "images//5.png" 1768762667 14689 ec7f5ca5bbde1bc5995ec6b8653ce12d ""
@@ -116,9 +121,9 @@
   "images//7.png" 1768762667 180 7f8a7393fad67d0b146142a45dfd6394 ""
   "images//8.png" 1768762667 8137 63bd576dd672f2d4c2088f0644aeef4a ""
   "images//9.png" 1768762667 3969 28c5c893b4488c9441bd401ebf2eb16e ""
-  "velleman.aux" 1773000461 15302 71a01bd9b82beef6e70773bf35217c46 "pdflatex"
-  "velleman.tex" 1773000460 344981 41bc3e687db807c41fbedda3dd359496 ""
-  "velleman.toc" 1773000461 9898 56a483ece7c027d3b65abdda05c2c13b "pdflatex"
+  "velleman.aux" 1773088770 15510 6638e2c83068dc656c7e61a765f3544d "pdflatex"
+  "velleman.tex" 1773088769 354798 1bf31394d895991a788605c0d1956766 ""
+  "velleman.toc" 1773088770 10024 b136ede7a0bf01c4e74c934bfbc7ee7e "pdflatex"
   (generated)
   "velleman.aux"
   "velleman.log"

@@ -5432,7 +5432,19 @@ $[a]^{-1}$ doesn't exist; and if we find that $\gcd(m,a)=1=sm+ta$ then $[a]_m^{-
 \newpage
 
 \subsection{Application}
-\textbf{Example}\\
+\textbf{Example 1}\\
+Say we wanted to find, if they exist, the multiplicative inverses of $[34]_{847}$ and $[35]_{847}$ in $\mathbb Z/\equiv{847}$.\\
+\vspace{1mm}\\
+The extended euclidean algorithm (see the first section of this chapter) can be used to calculate $\gcd(847,34)$:
+\begin{center}
+\includegraphics[width=10cm]{19}
+\end{center}
+We conclude that $\gcd(847,34)=1=11\cdot847-274\cdot34$, and 
+therefore $[34]^{-1}_{847}=[-274]_{847}=[573]_{847}$.\\
+\vspace{1mm}\\
+A similar computation would show that $\gcd(847,35)=7$. Therefore $[35]_847$ does not have a multiplicative inverse.\\
+(next page)\newpage
+\noindent\textbf{Example 2}\\
 A class has 25 students. The teacher bought several cartons of eggs, each containing a dozen eggs, and then distributed the eggs among the students. After giving an equal number
 of eggs to each student, she had 7 eggs left over. What is the smallest number of cartons of eggs she could have bought?\\
 \vspace{1mm}\\
@@ -5922,6 +5934,167 @@ exponent $e$ and the decryption exponent $d$ are different.\\
 Suppose $p$ and $q$ are distinct primes, $n=pq$, $e$ and $d$ are positive integers such that $ed\equiv_{\varphi(n)}1$, and $m$ and $c$ are natural
 numbers such that $[m]^e_n=[c]_n$. Then $[c]^d_n=[m]_n$.
 \end{theorem}
+\begin{proof}
+If $e=d=1$ then $[m]_n=[c]_n$ and the conclusion clearly holds. If not then $ed>1$, so since $ed\equiv_{\varphi(n)}1$, there is some 
+positive integer $k$ such that $ed-1=k\varphi(n)$, and therefore
+\begin{equation*}
+ed=k\varphi(n)+1=k(p-1)(q-1)+1
+\end{equation*}
+Since $[m]^e_n=[c]_n$, we have $m^e\equiv_n c$, so $n\mid m^e-c$.
+Although we want to draw a conclusion about arithmetic in $\mathbb Z/\equiv_n$, we will find value in considering 
+$\mathbb Z/\equiv_p$ and $\mathbb Z/\equiv_q$ first---we will show that $[c]^d_p=[m]_p$ and $[c]^d_q=[m]_q$---after which a previous
+lemma proves our initial goal.\\
+\indent We know that $p\mid n$ and $q\mid n$. Using $p\mid n$ and $n\mid m^e-c$, by transitivity of the divisibility relation we have 
+$p\mid m^e-c$. Therefore $m^e\equiv_pc$ or equivalently $[m]^e_p=[c]_p$.\\
+\indent As a slight digression, note that the usual exponent rules work for exponentiation in $\mathbb Z/\equiv_p$; specifically, for
+any $X\in\mathbb Z/\equiv_p$ and any positive integers $a$ and $b$ we have
+\begin{equation*}
+X^a\cdot X^b=\underbrace{X\cdots X}_{a\text{ terms}}\cdot\underbrace{X\cdots X}_{b\text{ terms}}
+=\underbrace{X\cdots X}_{a+b\text{ terms}}=X^{a+b}
+\end{equation*}
+and
+\begin{equation*}
+(X^a)^b=\underbrace{\underbrace{X\cdots X}_{a\text{ terms}}\cdot\underbrace{X\cdots X}_{a\text{ terms}}\cdots
+\underbrace{X\cdots X}_{a\text{ terms}}}_{b\text{ groups of terms}}
+=\underbrace{X\cdots X}_{ab\text{ terms}}=X^{ab}
+\end{equation*}
+Applying these rules we have
+\begin{equation*}
+[c]^d_p=([m]^e_p)^d=[m]^{ed}_p=[m]^{k(p-1)(q-1)+1}_p=([m]_p^{p-1})^{k(q-1)}\cdot[m]_p
+\end{equation*}
+\indent Case 1: $p\nmid m$. Then $p$ and $m$ are relatively prime (since $p$ is prime and isn't in the prime factorisation of $m$). By Euler's theorem 
+$[m]^{p-1}_p=[m]^{\varphi(p)}_p=[1]_p$ and
+\begin{equation*}
+[c]^d_p=([m]_p^{p-1})^{k(q-1)}\cdot[m]_p=[1]^{k(q-1)}_p\cdot[m]_p
+=[1]_p\cdot[m]_p=[m]_p
+\end{equation*}
+\indent Case 2: $p\mid m$. Then $[m]_p=[0]_p$, so 
+\begin{equation*}
+[c]^d_p=[m]^{ed}_p=[0]^{ed}_p=[0]_p=[m]_p
+\end{equation*}
+In both cases we have reached the desired conclusion that $[c]^d_p=[m]_p$, which means $c^d\equiv_pm$. Similar reasoning shows that 
+$c^d\equiv_qm$. Since $pq=n$ and $p$ and $q$ are relatively prime, by the second lemma of the second section on phi function 
+computation, $c^d\equiv_{pq}m$ and $c^d\equiv_nm$.
+\end{proof}
+\newpage
+
+\subsection{RSA}
+\textbf{Example}\\
+Our previous theorem is the essence of RSA. For example, suppose Bob chooses the primes $p=3$ and $q=11$, so $n=pq=33$ and
+$\varphi(n)=(p-1)(q-1)=20$. He then chooses $e=7$, and then computes $[e]^{-1}_{\varphi(n)}=[7]^{-1}_{20}=[3]_{20}$, so $d=3$. Bob
+sends the numbers $n=33$ and $e=7$ to Alice.\\
+\vspace{1mm}\\
+Suppose Alice wants to send the message $m=5$ to Bob. She computes
+\begin{equation*}
+[m]^e_n=[5]^7_{33}=[78125]_{33}=[14]_{33}
+\end{equation*}
+so her encrypted message is $c=14$. She sends this number to Bob. To decrypt the message, Bob computes
+\begin{equation*}
+[c]^d_n=[14]^3_{33}=[2744]_{33}=[5]_{33}
+\end{equation*}
+So Bob successfully recovers the original message $m=5$.\\
+\vspace{1mm}\\
+\textbf{Intuition}\\
+Are Alice and Bob's communications secure? Suppose an eavesdropper intercepts both Bob's message to Alice and Alice's message to Bob,
+thus learning the numbers $n=33$, $e=7$ and $c=14$. By factoring $n=33=3\cdot11$, the eavesdropper could learn $p=3$ and $q=11$ (or vice-versa), 
+and therefore $\varphi(n)=(p-1)(q-1)=20$. They could then compute, just as Bob did, that $[e]^{-1}_{\varphi(n)}=[7]^{-1}_{20}=[3]_{20}$,
+thus learning the decryption exponent $d=3$. The eavesdropper can now decrypt Alice's message just the way Bob did. The communications are not
+secure!\\
+\vspace{1mm}\\
+What went wrong? The problem is that in this simple example we hav used smaller numbers. The eavesdropper's first step was to factor $n=33$, which
+is a product of two prime numbers. A smaller number $n$ can be factored easily by simply dividing $n$ by all smaller primes until a prime factor 
+is found, but if $n$ is large then this procedure will take too long to be practical.
+Factoring numbers that are products of two large prime numbers is expecially hard, with 116-digit primes, for instance, 
+requiring 2000 years of computation should a single computer be used. \textit{The key to RSA is that no feasible way to factor a product of very 
+large primes using current computing technology.}\\
+\vspace{1mm}\\
+Today most people who use RSA choose prime numbers that are several hundreds of digits long. If an eavesdropper learns $n$ and $e$, then
+in principle he has enough information to find the decryption exponend $d$, but the only known way to do this is to factor $n$. The 
+security of RSA depends on the fact that, in practice, the numbers used are so large that factoring $n$ is not feasible.\\
+(next page)\newpage
+\noindent\textbf{All other computations are efficient}\\
+Except for factoring the large primes, Alice and Bob would have to perform all the other computations with these large numbers as well. 
+Would these computations also be computationally infeasible? If so the system would be useless. Fortunately there are efficient ways to do these.
+The most difficult computations they would have to do are:
+\begin{itemize}
+\item Bob must find two large primes $p$ and $q$. 
+\item Bob must find $[e]^{-1}_{\varphi(n)}$.
+\item Alice must compute $[m]^e_n$, and Bob must compute $[c]^d_n$.
+\end{itemize}
+To find the primes $p$ and $q$, Bob can simply choose suitably large numbers at random and test them to see if they are prime until he finds two 
+primes. This part is fairly computationally efficient, but not ideal since Bob may have to test hundreds of numbers for primality before he finds 
+a prime. Most implementations of RSA use \textit{probabilistic primality tests}, which take a fraction of a second but have a small proaability of 
+error; by repeating the test several times, the probabilty of an error can be made as small as desired.\\
+\vspace{1mm}\\
+Bob can compute $[e]^{-1}_{\varphi(n)}$ using the extended euclidean algorithm, which is very fast even with large numbers. Finally, to encrypt
+and decrypt messages, Alice and Bob must raise elements of $\mathbb Z/\equiv_n$ to high powers. Suppose $X\in\mathbb Z/\equiv_n$ and $a$ is a
+positive integer. The most straightforward way to compute $X^a$ is to multiply $X$ by itself $a$ times, which would not be feasible if $a$ is large.
+A better strategy is to use recursion. If $a=1$ then of course $X^a=X$. 
+For larger values of $a$, we use the following formulas:
+\begin{align*}
+X^{2k}&=X^k\cdot X^k;\\
+X^{2k+1}&=X^k\cdot X^k\cdot X
+\end{align*}
+\textbf{Example.} Find $[347]^{172}_{582}$.\\
+Let $X=[347]_{582}\in\mathbb Z/\equiv_{582}$; we must find $X^{172}$.
+Since $172$ is even, we start with
+\begin{equation*}
+X^{172}=X^{2\cdot86}=X^{86}\cdot X^{86}
+\end{equation*}
+If we find $X^{86}$, we'll just have to multiply it by itself to find $X^{172}$. To find $X^{86}$, we use the same method
+\begin{equation*}
+X^{86}=X^{2\cdot43}=X^{43}\cdot X^{43}
+\end{equation*}
+Now for $X^{43}$, since 43 is odd, we use
+\begin{equation*}
+X^{43}=X^{2\cdot21+1}=X^{21}\cdot X^{21}\cdot X
+\end{equation*}
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Continuing this way we have:
+\begin{align*}
+X^{172}&=X^{86}\cdot X^{86}\\
+X^{86}&=X^{43}\cdot X^{43}\\
+X^{43}&=X^{21}\cdot X^{21}\cdot X\\
+X^{21}&=X^{10}\cdot X^{10}\cdot X\\
+X^{10}&=X^{5}\cdot X^{5}\\
+X^{5}&=X^2\cdot X^2\cdot X\\
+X^2&=X^1\cdot X^1=X\cdot X
+\end{align*}
+Where we can now work through this list in reverse order and evaluate
+each formula:
+\begin{center}
+\includegraphics[width=12cm]{18}
+\end{center}
+We conclude $[347]^{172}_{582}=[72]_{582}$. We only performed 10 multiplications, much less than the 171 that would be required if we simply
+multiplied 172 $X$s.
+\newpage
+
+\subsection{RSA example}
+In this example we will use numbers that are large enough to force us to use efficient methods of calculation, although they are still not as large
+as they would be in real applications of RSA.\\
+\vspace{1mm}\\
+Suppose Bob chooses the prime numbers $p=48611$ and $q=37813$. He computes $n=pq=1838127743$ and $\varphi(n)=(p-1)(q-1)=1838041320$. 
+He chooses the encryption exponent $e=184270657$. \\
+\vspace{1mm}\\
+To find the decryption exponent $d$, Bob uses the extended euclidean algorithm to find $[e]^{-1}_{\varphi(n)}=[184270657]^{-1}_{1838041320}$:
+\begin{center}
+\includegraphics[width=8cm]{20}
+\end{center}
+Bob concludes that $[e]^{-1}_{\varphi(n)}=[88235833]_{1838041320}$, and that $d=88235833$.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Let $X=[m]_n=[357249732]_{1838127743}$. To encrypt her message, Alice must compute $X^e=X^{184270657}$. Using the discussed strategy, Alice plans
+her calculations starting at the end of this table, but performs the computations from the beginning. She sends the encrypted message 
+$c=1357673396$:
+\begin{center}
+\includegraphics[width=9cm]{21}
+\end{center}
+To decrypt the message, Bob lets $Y=[c]_n$, and computes $Y^d=Y^{88235833}$ as shown, 
+\begin{center}
+\includegraphics[width=9cm]{22}
+\end{center}
+As expected, he gets $m=35729732$.
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.19)  9 MAR 2026 04:07
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2025.8.19)  10 MAR 2026 04:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -221,11 +221,11 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./velleman.toc [1
 
-] [2])
+] [2] [3])
 \tf@toc=\write3
 \openout3 = `velleman.toc'.
 
- [3] [4]
+ [4]
 Chapter 1.
 [5
 
@@ -346,30 +346,59 @@ File: ./images//16.png Graphic file (type png)
 <use ./images//16.png>
 Package pdftex.def Info: ./images//16.png  used on input line 5271.
 (pdftex.def)             Requested size: 312.9803pt x 103.28925pt.
- [170 <./images//16.png (PNG copy)>] [171] [172] [173] [174] [175] [176] [177]
-<./images//17.png, id=606, 246.9225pt x 104.64093pt>
+ [170 <./images//16.png (PNG copy)>] [171] [172] [173] [174]
+<./images//19.png, id=597, 271.122pt x 91.542pt>
+File: ./images//19.png Graphic file (type png)
+<use ./images//19.png>
+Package pdftex.def Info: ./images//19.png  used on input line 5440.
+(pdftex.def)             Requested size: 284.52756pt x 96.07724pt.
+ [175 <./images//19.png (PNG copy)>] [176] [177] [178]
+<./images//17.png, id=610, 246.9225pt x 104.64093pt>
 File: ./images//17.png Graphic file (type png)
 <use ./images//17.png>
-Package pdftex.def Info: ./images//17.png  used on input line 5567.
+Package pdftex.def Info: ./images//17.png  used on input line 5579.
 (pdftex.def)             Requested size: 170.71652pt x 72.34601pt.
- [178 <./images//17.png (PNG copy)>] [179] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189]
+ [179 <./images//17.png (PNG copy)>] [180] [181] [182] [183] [184] [185] [186] [187] [188] [189] [190] [191] [192]
+<./images//18.png, id=656, 285.576pt x 103.806pt>
+File: ./images//18.png Graphic file (type png)
+<use ./images//18.png>
+Package pdftex.def Info: ./images//18.png  used on input line 6067.
+(pdftex.def)             Requested size: 341.43306pt x 124.11513pt.
+ [193 <./images//18.png (PNG copy)>]
+<./images//20.png, id=660, 226.008pt x 165.126pt>
+File: ./images//20.png Graphic file (type png)
+<use ./images//20.png>
+Package pdftex.def Info: ./images//20.png  used on input line 6082.
+(pdftex.def)             Requested size: 227.62204pt x 166.30981pt.
+ [194 <./images//20.png (PNG copy)>]
+<./images//21.png, id=664, 267.18pt x 184.398pt>
+File: ./images//21.png Graphic file (type png)
+<use ./images//21.png>
+Package pdftex.def Info: ./images//21.png  used on input line 6091.
+(pdftex.def)             Requested size: 256.0748pt x 176.74713pt.
+<./images//22.png, id=665, 271.998pt x 171.696pt>
+File: ./images//22.png Graphic file (type png)
+<use ./images//22.png>
+Package pdftex.def Info: ./images//22.png  used on input line 6095.
+(pdftex.def)             Requested size: 256.0748pt x 161.66147pt.
+ [195 <./images//21.png (PNG copy)> <./images//22.png (PNG copy)>]
 Appendix A.
-[190
+[196
 
-] [191] (./velleman.aux) ) 
+] [197] (./velleman.aux) ) 
 Here is how much of TeX's memory you used:
- 3709 strings out of 476091
- 57223 string characters out of 5794081
- 1874330 words of memory out of 5000000
- 24028 multiletter control sequences out of 15000+600000
+ 3764 strings out of 476091
+ 58168 string characters out of 5794081
+ 1875330 words of memory out of 5000000
+ 24083 multiletter control sequences out of 15000+600000
  531025 words of font info for 102 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,21n,62p,304b,263s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on velleman.pdf (192 pages, 846751 bytes).
+Output written on velleman.pdf (198 pages, 1125748 bytes).
 PDF statistics:
- 746 PDF objects out of 1000 (max. 8388607)
- 488 compressed objects within 5 object streams
+ 771 PDF objects out of 1000 (max. 8388607)
+ 501 compressed objects within 6 object streams
  0 named destinations out of 1000 (max. 500000)
- 86 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
