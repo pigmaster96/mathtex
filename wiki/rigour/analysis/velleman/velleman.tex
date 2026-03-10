@@ -6095,7 +6095,25 @@ To decrypt the message, Bob lets $Y=[c]_n$, and computes $Y^d=Y^{88235833}$ as s
 \includegraphics[width=9cm]{22}
 \end{center}
 As expected, he gets $m=35729732$.
+\newpage
 
+\chapter{Infinite sets}
+\section{Equinumerous sets}
+\textbf{Intuition}\\
+When counting the number of elements in a set $A$, one points to each element of $A$ while saying the words \textit{one, two,} and so fourth.
+We can think of this as defining a function $f$ from the set $\{1,2,\ldots,n\}$ to $A$ for some natural number $n$. Because every element of $A$
+gets pointed to exactly once, the function $f$ is one-to-one and onto.\\
+\vspace{1mm}\\
+Counting the elements of $A$ is simply a method of establishing a one-to-one correspondence between the set $\{1,2,\ldots,n\}$ and $A$ for some 
+natural number $n$. One-to-one correspondence is the key idea behind measuring the sizes of sets, and sets of the form $\{1,2,\ldots,n\}$ are the 
+standards against which we measure the sizes of finite sets.
+\begin{definition}
+Suppose $A$ and $B$ are sets. We'll say that $A$ is \textit{equinumerous} with $B$ if there is a function $f:A\to B$ that is one-to-one and onto.
+We'll write $A\sim B$ to indicate that $A$ is equinumerous with $B$.\\
+\indent For each natural number $n$, let $I_n=\{i\in\mathbb Z^+\mid i\leq n\}$. A set
+$A$ is called \textit{finite} if there is a natural number $n$ such that
+$I_n\sim A$. Otherwise $A$ is \textit{infinite}.
+\end{definition}
 
 
 
