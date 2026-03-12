@@ -6122,9 +6122,44 @@ We can show that if $A$ is finite, then there is \textit{exactly one} $n$ such t
 For all natural numbers $n$ amd $m$, if $I_n\sim I_m$ then $n=m$.
 \end{theorem}
 \begin{proof}
+We want to show
+\begin{equation*}
+\forall n\in\mathbb N\,\forall m\in\mathbb N(I_n\sim I_m\to n=m)
+\end{equation*}
 We proceed by induction on $n$.\\
 \indent Base case: $n=0$. 
-
+Let $m$ be some arbitrary natural number. By definition, $I_0=\emptyset$. Suppose $I_0\sim I_m$, meaning we can declare some one-to-one and onto function $f:I_0\to I_m$. 
+Suppose now that
+$n\neq m$, meaning $m\geq1$. This means that $I_m$ is nonempty and we can declare $i$ to be some element of $I_m$.
+Since $f$ is onto we can then declare some $j\in I_0$ such that $f(j)=i$. However this would contradict
+the fact that $I_0=\emptyset$, so we must have $n=m$.\\
+\indent Induction step: We show
+\begin{equation*}
+\forall n\in\mathbb N(\forall m\in\mathbb N(I_n\sim I_m\to n=m)\to\forall m\in\mathbb N(I_{n+1}\sim I_m\to n+1=m)
+\end{equation*}
+Let $n$ be some arbitrary natural number. Suppose that $\forall m\in\mathbb N(I_n\sim I_m\to n=m)$. Now let 
+$m$ be some natural number and suppose that $I_{n+1}\sim I_m$. Then we can declare some function $f:I_{n+1}\sim I_m$
+that is one-to-one and onto, meaning
+\begin{equation*}
+\forall a_1\in I_{n+1}\forall a_2\in I_{n+1}
+(f(a_1)=f(a_2)\to a_1=a_2)
+\end{equation*}
+and 
+\begin{equation*}
+\forall b\in I_m\exists a\in I_{n+1}(f(a)=b)
+\end{equation*}
+$n+1>0$, so by definition we know that $n+1\in I_{n+1}$. Since $f$ is a function, $I_m$ must also be nonempty, 
+and by definition we can then say $m\in I_m$. Since $f$ is a function, we can declare $k\in I_m$ such that 
+$k=f(n+1)$. Since $f$ is onto, we can also declare $j=I_{n+1}$ such that $f(j)=m$. Defining $g:I_n\to I_{n+1}$ as
+\begin{equation*}
+g(i)=\begin{cases}
+f(i)&i\neq j\\
+k&i=j
+\end{cases}
+\end{equation*}
+we will show that $g$ is a one-to-one and onto function.\\
+(next page)\newpage
+First we show that $g$ is a function from $I_n$ to $I_{m-1}$
 
 \end{proof}
 
