@@ -6177,15 +6177,29 @@ $f(i)\neq f(n+1)$ and $g(i)=k=f(n+1)\neq f(i)=f(j)=m$. So we have $g(i)=k\in I_m
 \forall a_1\in I_n\forall a_2\in I_n(g(a_1)=g(a_2)\to a_1=a_2)
 \end{equation*}
 Let $a_1,a_2$ be elements of $I_n$ such that
-
-
-
-
-
-
+$g(a_1)=g(a_2)$. Naturally $a_1,a_2$ are also in $I_{n+1}$. We have 4 cases:\\
+\indent Case 1: $a_1=j\land a_2=j$. Then of course $a_1=j=a_2$.\\
+\indent Case 2: $a_1=j\land a_2\neq j$. Then $g(a_1)=k=f(n+1)$ and $g(a_2)=f(a_2)$. 
+Since $a_2\leq n$, $a_2\neq n+1$. So since $f$ is one-to-one $f(a_2)\neq f(n+1)$ and $g(a_1)=k=f(n+1)\neq f(a_2)=g(a_2)$. This would 
+contradict the assumption that $g(a_1)=g(a_2$. This case therefore cannot occur and can be excluded.\\
+\indent Case 3: $a_1\neq j\land a_2=j$. This is similar to case 2. Excluded.\\
+\indent Case 4: $a_1\neq j\land a_2\neq j$. Then $g(a_1)=f(a_1)$ and $g(a_2)=f(a_2)$ so $f(a_1)=f(a_2)$. Since $f$ is one-to-one 
+$a_1=a_2$.\\
+\indent Finally, we show that $g$ is onto. That is,
+\begin{equation*}
+\forall b\in I_{m-1}\exists a\in I_n(g(a)=b)
+\end{equation*}
+Let $b$ be some element of $I_{m-1}$. Then $b\neq m$. We have 2 cases:\\
+\indent Case 1: $b=k$. Then $b=k=f(n+1)\neq m=f(j)$. Since $f$ is one-to-one, $j\neq n+1$. Since $j\in I_{n+1}$, we then have 
+$j\in I_{n+1}\backslash\{n+1\}=I_n$, where $g(j)=k=b$.\\
+\indent Case 2: $b\neq k$. Since $b\in I_{m-1}$, $b\in I_m$. Since $f$ is onto, we can declare $a\in I_{n+1}$ such that
+$f(a)=b\neq k=f(n+1)$. Since $f$ is one-to-one, $a\neq n+1$; so $a\in I_{n+1}\backslash\{n+1\}=I_n$. Since $b\neq m$, we similarly have
+$f(a)=b\neq m=f(j)$ and $a\neq j$. So we have $a\in I_n$, and since $a\neq j$, $g(a)=f(a)=b$.\\
+\indent We've shown that there exists an one-to-one and onto function from $I_n$ to $I_{m-1}$. By the inductive hypothesis $n=m-1$,
+and $n+1=m$.
 \end{proof}
-
-
+\noindent(next page)\newpage
+\noindent We showed
 
 
 
