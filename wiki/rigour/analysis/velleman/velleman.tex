@@ -6159,7 +6159,29 @@ k&i=j
 \end{equation*}
 we will show that $g$ is a one-to-one and onto function.\\
 (next page)\newpage
-First we show that $g$ is a function from $I_n$ to $I_{m-1}$
+First we show that $g$ is a function from $I_n$ to $I_{m-1}$, that is
+\begin{align*}
+\forall a\in I_n&(\exists b\in I_{m-1}(g(a)=b)\land\\&\forall b_1\in I_{m-1}\forall b_2\in I_{m-1}(g(a)=b_1\land g(a)=b_2\to b_1=b_2))
+\end{align*}
+Let $i$ be some element of $I_n$. Then by definition, since $i\leq n\in I_{n+1}$, $i\in I_{n+1}$. First we show existence; we have 2
+cases.\\
+\indent Case 1: $i\neq j$. Then $g(i)=f(i)\in I_m$. $i,j\in I_{n+1}$, so since $f$ is one-to-one, $f(i)\neq f(j)=m$. 
+So $g(i)=f(i)\neq m$, and $f(i)\in I_m\backslash\{m\}=I_{m-1}$.\\
+\indent Case 2: $i=j$. Then $g(i)=k=f(n+1)\in I_m$. Since $i\in I_n$, $i\leq n$ and $i\neq n+1$. Since $f$ is one-to-one we then have 
+$f(i)\neq f(n+1)$ and $g(i)=k=f(n+1)\neq f(i)=f(j)=m$. So we have $g(i)=k\in I_m\backslash\{m\}=I_{m-1}$.\\
+\indent To show uniqueness, let $b_1,b_2$ be elements of $I_{m-1}$.\\
+\indent Case 1: $i\neq j$. Then $g(i)=f(i)=b_1$; similarly $f(i)=b_2$. Since $f$ is a function, $b_1\neq b_2$ would be contradicted.\\
+\indent Case 2: $i=j$. Then $g(i)=k=f(n+1)=b_1$; similarly $f(n+1)=b_2$. Since $f$ is a function, $b_1\neq b_2$ would be contradicted.\\
+\indent Next we show $g$ is one-to-one. That is
+\begin{equation*}
+\forall a_1\in I_n\forall a_2\in I_n(g(a_1)=g(a_2)\to a_1=a_2)
+\end{equation*}
+Let $a_1,a_2$ be elements of $I_n$ such that
+
+
+
+
+
 
 \end{proof}
 
