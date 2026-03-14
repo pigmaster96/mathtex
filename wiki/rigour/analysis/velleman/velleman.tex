@@ -6125,7 +6125,52 @@ Suppose $A\sim B$ and $C\sim D$. Then
 \end{enumerate}
 \end{theorem}
 \begin{proof}
+Since $A\sim B$ and $C\sim D$, we can choose functions $f:A\to B$ and $g:C\to D$ that are one-to-one and onto.
+\begin{enumerate}
+\item Defining $h:A\times C\to B\times D$ by the formula
+\begin{equation*}
+h(a,c)=(f(a),g(c))
+\end{equation*}
+To see that $h$ is one-to-one, that is
+\begin{align*}
+\forall(a_1,c_1)\in A\times C\forall(a_2,c_2)\in A\times C(
+h(a_1,c_1)&=h(a_2,c_2)\\&\to(a_1,c_1)=(a_2,c_2))
+\end{align*}
+Suppose $h(a_1,c_1)=h(a_2,c_2)$. This means $(f(a_1),g(c_1))=(f(a_2),g(c_2))$, so $f(a_1)=f(a_2)$ and $g(c_1)=g(c_2)$. Since $f$ and $g$
+are both one-to-one, it follows that $a_1=a_2$ and $c_1=c_2$, so
+$(a_1,c_1)=(a_2,c_2)$.\\
+\vspace{1mm}\\
+To see that $h$ is onto, that is
+\begin{equation*}
+\forall(b,d)\in B\times D\exists(a,c)\in A\times C(h(a,c)=(b,d))
+\end{equation*}
+Suppose $(b,d)\in B\times D$. Then since $f$ and $g$ are both onto, we can choose $a\in A$ and $c\in C$ such that $f(a)=b$ and $g(c)=d$.
+Therefore $h(a,c)=(f(a),g(c))=(b,d)$ for $(a,c)\in A\times C$, as required. $h$ is one-to-one and onto, so $A\times C\sim B\times D$.\\
+(next page)\newpage
+\item Suppose $A$ and $C$ and disjoint and $B$ and $D$ are disjoint.
+We will show that $f\cup g$ is a one-to-one, onto function from $A\cup C$ to $B\cup D$.\\
+\vspace{1mm}\\
+First we show that $f\cup g$ is a function from $A\cup C$ to $B\cup D$. That is
+\begin{equation*}
+\forall\alpha\in A\cup C\exists\beta\in B\cup D(f\cup g(\alpha)=\beta\land\forall\beta'\in B\cup D(f\cup g(\alpha)=\beta'\to
+\beta'=\beta))
+\end{equation*}
+Let $\alpha$ be an element of $A\cup C$, meaning $\alpha\in A\lor\alpha\in C$. We have 2 cases:
+Case 1: $\alpha\in A$. Since $f$ is a function from $A$ to $B$, we can declare some $\beta\in B$ such that $f(\alpha)=\beta$.
+So $\alpha\in A\cup C$ and $\beta\in B\cup D$; $(\alpha,\beta)\in f$ so $(\alpha,\beta)\in f\cup g$, meaning $f\cup g(\alpha)=\beta$.
+Now let $\beta'$ be some element of $B\cup D$ and suppose
+$f\cup g(\alpha)=\beta'$, which means $(\alpha,\beta')\in f\lor(\alpha,\beta')\in g$. We know that $g\subseteq C\times D$. 
+Since $\alpha\in A$ and $A$ and $C$ are disjoint, $\alpha\notin C$.
+So $(\alpha,\beta')\notin C\times D$ and $(\alpha,\beta')\notin g$. We then must have $(\alpha,\beta')\in f$, so $f(\alpha)=\beta'$ 
+and $f(\alpha)=\beta$; since $f$ is a function we must have $\beta'=\beta$.\\
+\vspace{1mm}\\
+Case 2: $\alpha\in C$. A similar argument shows that there is a unique $\beta\in B\cup D$ such that $f\cup g(\alpha)=\beta$.\\
+\vspace{1mm}\\
+We've shown that $f\cup g$ is a function from $A\cup C$ to $B\cup D$. Now we show that it is one-to-one. That is
 
+
+
+\end{enumerate}
 \end{proof}
 
 
