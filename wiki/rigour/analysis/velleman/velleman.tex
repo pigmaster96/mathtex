@@ -6167,6 +6167,43 @@ and $f(\alpha)=\beta$; since $f$ is a function we must have $\beta'=\beta$.\\
 Case 2: $\alpha\in C$. A similar argument shows that there is a unique $\beta\in B\cup D$ such that $f\cup g(\alpha)=\beta$.\\
 \vspace{1mm}\\
 We've shown that $f\cup g$ is a function from $A\cup C$ to $B\cup D$. Now we show that it is one-to-one. That is
+\begin{equation*}
+\forall\alpha_1\in A\cup C\forall\alpha_2\in A\cup C(f\cup g(\alpha_1)=f\cup g(\alpha_2)\to\alpha_1=\alpha_2)
+\end{equation*}
+Let $\alpha_1$ and $\alpha_2$ be elements of $A\cup C$. Suppose that
+$f\cup g(\alpha_1)=f\cup g(\alpha_2)$. We will denote $\beta$ as 
+$\beta=f\cup g(\alpha_1)=f\cup g(\alpha_2)\in B\cup D$. We have two cases:\\
+Case 1: $\beta\in B$. Since $B$ and $D$ are disjoint, $\beta\notin D$. We know that $(\alpha_1,\beta)\in f\cup g$, so 
+$(\alpha_1,\beta)\in f\subseteq A\times B\lor(\alpha_1,\beta)\in g\subseteq C\times D$. But since $\beta\notin D$, 
+$(\alpha_1,\beta)\notin C\times D$ and $(\alpha_1,\beta)\notin g$. We must then have 
+$(\alpha_1,\beta)\in f$. A similar argument will also show $(\alpha_2,\beta)\in f$, so $f(\alpha_1)=\beta$ and $f(\alpha_2)=\beta$.
+Since $f$ is one-to-one we then have $\alpha_1=\alpha_2$.\\
+\vspace{1mm}\\
+Case 2: $\beta\in D$. Since $B$ and $D$ are disjoint, $\beta\notin B$. An argument similar to the first case would show 
+$g(\alpha_1)=\beta$ and $g(\alpha_2)=\beta$. Since $g$ is one-to-one we then have $\alpha_1=\alpha_2$.\\
+\vspace{1mm}\\
+Lastly we show that $f\cup g$ is onto. Let $\beta$ be some element of $B\cup D$. We have two cases. First suppose $\beta\in B$. Then 
+since $f$ is onto we can declare $\alpha\in A$ such that $f(\alpha)=\beta$, meaning $(\alpha,\beta)\in f$ and 
+$(\alpha,\beta)\in f\cup g$. So $f\cup g(\alpha)=\beta$ for $\alpha\in A\cup C$. 
+For the second case suppose $\beta\in D$. Then since $g$ is onto we can declare $\alpha\in C$ such that $g(\alpha)=\beta$, meaning $(\alpha,\beta)\in g$ and 
+$(\alpha,\beta)\in f\cup g$. So $f\cup g(\alpha)=\beta$ for $\alpha\in A\cup C$.
+We have now shown that $f\cup g$ is a one-to-one and onto function from $A\cup C$ to $B\cup D$.
+So $A\cup C\sim B\cup D$.\qedhere
+\end{enumerate}
+\end{proof}
+\noindent(next page)\newpage
+\noindent We can also show that $\sim$ is reflexive, symmetric, and transitive.
+\begin{theorem}
+For any sets $A,B$, and $C$:
+\begin{enumerate}
+\item $A\sim A$.
+\item If $A\sim B$ then $B\sim A$.
+\item If $A\sim B$ and $B\sim C$ then $A\sim C$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}\hspace{1mm}
+\begin{enumerate}
+\item 
 
 
 
