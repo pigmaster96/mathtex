@@ -6192,7 +6192,23 @@ So $A\cup C\sim B\cup D$.\qedhere
 \end{enumerate}
 \end{proof}
 \noindent(next page)\newpage
-\noindent We can also show that $\sim$ is reflexive, symmetric, and transitive.
+\noindent Recall the following theorems:
+\begin{theorem}
+Suppose $f:A\to B$. Then the following statements are equivalent.
+\begin{enumerate}
+\item $f$ is one-to-one and onto.
+\item $f^{-1}:B\to A$.
+\item There is a function $g:B\to A$ such that $g\circ f=i_A$ and $f\circ g=i_B$.
+\end{enumerate}
+\end{theorem}
+\begin{theorem}
+Suppose $f:A\to B$ and $g:B\to C$. As we saw earlier, it follows that $g\circ f:A\to C$. 
+\begin{enumerate}
+\item If $f$ and $g$ are both one-to-one, then so is $g\circ f$.
+\item If $f$ and $g$ are both onto, then so is $g\circ f$.
+\end{enumerate}
+\end{theorem}
+\noindent We can show that $\sim$ is reflexive, symmetric, and transitive. 
 \begin{theorem}
 For any sets $A,B$, and $C$:
 \begin{enumerate}
@@ -6203,17 +6219,15 @@ For any sets $A,B$, and $C$:
 \end{theorem}
 \begin{proof}\hspace{1mm}
 \begin{enumerate}
-\item 
-
-
-
+\item The identity function $i_A$ is a one-to-one, onto function from $A$ to $A$.
+\item Suppose $A\sim B$. Then we can declare some function $f:A\to B$ that is one-to-one and onto. By the first
+theorem, $f^{-1}$ is a function from $B$ to $A$. But 
+since $(f^{-1})^{-1}=f$, which is a function from $A$ to $B$, by the first theorem again $f^{-1}$ must also be 
+one-to-one and onto. Therefore $B\sim A$.
+\item Suppose $A\sim B$ and $B\sim C$. Then we can choose one-to-one, onto functions $f:A\to B$ and $g:B\to C$.
+By the second theorem, $g\circ f:A\to C$ is one-to-one and onto; so $A\sim C$.\qedhere
 \end{enumerate}
 \end{proof}
-
-
-
-
-
 \newpage
 
 \subsection{Uniqueness and finite sets}
@@ -6299,7 +6313,26 @@ $f(a)=b\neq m=f(j)$ and $a\neq j$. So we have $a\in I_n$, and since $a\neq j$, $
 and $n+1=m$.
 \end{proof}
 \noindent(next page)\newpage
-\noindent We showed
+\begin{theorem}
+If $A$ is finite, then there is exactly one natural number $n$ such that $I_n\sim A$.
+\end{theorem}
+\begin{proof}
+We are trying to show
+\begin{equation*}
+\exists n\in\mathbb N(I_n\sim A)\to\exists n\in\mathbb N(I_n\sim A\land\forall m\in\mathbb N(I_m\sim A\to n=m))
+\end{equation*}
+Suppose $A$ is finite. Then we can declare some $n\in\mathbb N$ such that $I_n\sim A$, proving existence.
+To show uniqueness, let $m$ be some natural number such that $I_m\sim A$. Then by symmetry and transitivity of 
+$\sim$, $I_n\sim I_m$. By the previous theorem, $n=m$.
+\end{proof}
+\newpage
+
+\subsection{Intuition}
+
+
+
+
+
 
 
 
