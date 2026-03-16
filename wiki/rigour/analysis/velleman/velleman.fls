@@ -437,6 +437,10 @@ INPUT ./images//22.png
 INPUT ./images//22.png
 INPUT ./images//22.png
 INPUT ./images//22.png
+INPUT ./images//23.png
+INPUT ./images//23.png
+INPUT ./images//23.png
+INPUT ./images//23.png
 INPUT velleman.aux
 INPUT /usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb

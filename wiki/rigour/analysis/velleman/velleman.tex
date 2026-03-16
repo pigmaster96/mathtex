@@ -6325,11 +6325,38 @@ Suppose $A$ is finite. Then we can declare some $n\in\mathbb N$ such that $I_n\s
 To show uniqueness, let $m$ be some natural number such that $I_m\sim A$. Then by symmetry and transitivity of 
 $\sim$, $I_n\sim I_m$. By the previous theorem, $n=m$.
 \end{proof}
+\noindent Given this theorem, it makes sense to define the \textit{number of elements} of a finite set $A$ to be 
+the unique $n$ such that $I_n\sim A$. This number is sometimes called the \textit{cardinality} of $A$, and is
+denoted $|A|$.\\
+\vspace{1mm}\\
+Note that according to this definition, $\emptyset$ is finite and $|\emptyset|=0$.
 \newpage
 
 \subsection{Intuition}
-
-
+One might think that $\mathbb Z^+$ could not be equinumerous with $\mathbb Z$ because $\mathbb Z$ includes not only
+all the positive integers, but also the negative integers and zero. Consider the function 
+$f:\mathbb Z^+\to\mathbb Z$ defined as
+\begin{equation*}
+f(n)=\begin{cases}
+n/2,&\text{if $n$ is even}\\
+(1-n)/2,&\text{if $n$ is odd}
+\end{cases}
+\end{equation*}
+A table of values for $f$ reveals a pattern that suggests $f$ may be one-to-one and onto:
+\begin{center}
+\includegraphics[width=11cm]{23}
+\end{center}
+Now for a more careful assessment. First note that for every positive integer $n$, if $n$ is even then $f(n)=n/2>0$,
+and if $n$ is odd then $f(n)=(1-n)/2\leq0$.
+Now suppose $n_1$ and $n_2$ are positive integers and $f(n_1)=f(n_2)$. If $f(n_1)=f(n_2)>0$ then $n_1$ and $n_2$
+must both be even. So the equation $f(n_1)=f(n_2)$ means $n_1/2=n_2/2$ and $n_1=n_2$. Similarly if
+$f(n_1)=f(n_2)\leq0$ then $n_1$ and $n_2$ are both odd, so we get $(1-n_1)/2=(1-n_2)/2$, and once again it follows
+that $n_1=n_2$. Thus $f$ is one-to-one.\\
+\vspace{1mm}\\
+To see that $f$ is onto, let $m$ be an arbitrary integer. If $m>0$ then let $n=2m$, an even positive integer, and 
+if $m\leq0$ then let $n=1-2m$, an odd positive integer. 
+In both cases it is easy to verify that $f(n)=m$. Thus $f$ is onto as well as one-to-one, meaning 
+$\mathbb Z^+\sim\mathbb Z$.
 
 
 
