@@ -6356,11 +6356,83 @@ that $n_1=n_2$. Thus $f$ is one-to-one.\\
 To see that $f$ is onto, let $m$ be an arbitrary integer. If $m>0$ then let $n=2m$, an even positive integer, and 
 if $m\leq0$ then let $n=1-2m$, an odd positive integer. 
 In both cases it is easy to verify that $f(n)=m$. Thus $f$ is onto as well as one-to-one, meaning 
-$\mathbb Z^+\sim\mathbb Z$.
+$\mathbb Z^+\sim\mathbb Z$.\\
+\vspace{1mm}\\
+Note that $f$ had to be chosen very carefully. There are many other functions from $\mathbb Z^+$ to $\mathbb Z$ that
+are one-to-one but not onto, onto but not one-to-one, or neither one-to-one nor onto, but this does not contradict
+our claim that $\mathbb Z^+\sim\mathbb Z$, since we only need to show that there is at least one one-to-one and onto
+function from $\mathbb Z^+$ to $\mathbb Z$.\\
+(next page)\newpage
+\noindent Perhaps even more suprising is that $\mathbb Z^+\times\mathbb Z^+\sim\mathbb Z^+$, where it can be shown
+(with difficulty) that the following defines a function from $\mathbb Z^+\times\mathbb Z^+$ to $\mathbb Z^+$ that is
+one-to-one and onto:
+\begin{equation*}
+f(i,j)=\frac{(i+j-2)(i+j-1)}{2}+i
+\end{equation*}
+\begin{center}
+\includegraphics[width=10cm]{24}
+\end{center}
+Notice first that either $i+j-2$ or $i+j-1$ is even, so $f(i,j)$ is a positive integer, and $f$ is therefore a
+function from $\mathbb Z^+\times\mathbb Z^+$ to $\mathbb Z^+$. One can verify two facts about the function $f$,
+which can be checked by straightforward algebra:
+\begin{enumerate}
+\item For all $j\in\mathbb Z^+$, $f(1,j+1)-f(1,j)=j$.
+\item For all $i\in\mathbb Z^+$ and $j\in\mathbb Z^+$, 
+$f(1,i+j-1)\leq f(i,j)<f(1,i+j)$. It follows that $i+j$ is the smallest $k\in\mathbb Z^+$ such that $f(i,j)<f(1,k)$.
+\end{enumerate}
+To see that $f$ is one-to-one, suppose that $f(i_1,j_1)=f(i_2,j_2)$. Then by fact 2,
+\begin{align*}
+i_1+j_1&=\text{the smallest $k\in\mathbb Z^+$ such that $f(i_1,j_1)<f(1,k)$}\\
+&=\text{the smallest $k\in\mathbb Z^+$ such that $f(i_2,j_2)<f(1,k)$}\\
+&=i_2+j_2
+\end{align*}
+Using the definiton of $f$ it follows that
+\begin{align*}
+i_1&=f(i_1,j_1)-\frac{(i_1+j_1-2)(i_1+j_1-1)}{2}\\
+&=f(i_2,j_2)-\frac{(i_2+j_2-2)(i_2+j_2-1)}{2}\\
+&=i_2
+\end{align*}
+So since $i_1=i_2$ and $i_1+j_1=i_2+j_2$, we must also have $j_1=j_2$. So $(i_1,j_1)=(i_2,j_2)$, and $f$ is 
+one-to-one.\\
+(next page)\newpage
+\noindent To see that $f$ is onto, suppose $n\in\mathbb Z^+$. It is easy to verify that $f(1,n+1)>n$, so we can
+let $k$ be the smallest positive integer such that $f(1,k)>n$. Notice that $f(1,1)=1\leq n$, so $k\geq2$. Since
+$k$ is smallest, $f(1,k-1)\leq n$, and by fact 1,
+\begin{equation*}
+0\leq n-f(1,k-1)<f(1,k)-f(1,k-1)=k-1
+\end{equation*}
+adding 1 to all terms we get
+\begin{equation*}
+1\leq n-f(1,k-1)+1<k
+\end{equation*}
+Thus if we let $i=n-f(1,k-1)+1$ then $1\leq i<k$.
+Let $j=k-i$, and notice that $i\in\mathbb Z^+$ and $j\in\mathbb Z^+$, we have
+\begin{align*}
+f(i,j)&=\frac{(i+j-2)(i+j-1)}{2}+i\\
+&=\frac{(k-2)(k-1)}{2}+n-f(1,k-1)+1\\
+&=\frac{(k-2)(k-1)}{2}+n-\left[\frac{(k-2)(k-1)}{2}+1\right]+1=n
+\end{align*}
+Which shows that $f$ is onto.\\
+\vspace{1mm}\\
+Using the properties from the first subsection we can show that many sets are equinumerous. For instance we know that $\mathbb Z^+\times\mathbb Z^+\sim\mathbb Z^+$ and 
+$\mathbb Z^+\sim\mathbb Z$, so by transitivity it follows that
+$\mathbb Z^+\times\mathbb Z^+\sim\mathbb Z$.\\
+\vspace{1mm}\\
+By part one of the first theorem, since we had 
+$\mathbb Z^+\sim\mathbb Z$ we must also have
+$\mathbb Z^+\times\mathbb Z^+\sim\mathbb Z\times\mathbb Z$. By symmetry and transitivity we then have 
+$\mathbb Z^+\sim\mathbb Z^+\times\mathbb Z^+$ and 
+$\mathbb Z^+\sim\mathbb Z\times\mathbb Z$.\\
+\vspace{1mm}\\
+We have now found three sets, $\mathbb Z$, $\mathbb Z^+\times\mathbb Z^+$, and $\mathbb Z\times\mathbb Z$ that 
+are equinumerous with $\mathbb Z^+$. Such sets are
+especially important and have a special name.
+\newpage
 
+\subsection{Countable and Uncountable}
+\begin{definition}
 
-
-
+\end{definition}
 
 
 \newpage
