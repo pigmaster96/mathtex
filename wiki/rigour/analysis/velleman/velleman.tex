@@ -6438,8 +6438,47 @@ One may think of the countable sets as those sets whose elements can be \textit{
 one by one while naming positive integers in order. If the counting process ends at some point, then the set is 
 finite; and if it never ends, the set is denumerable.
 \begin{theorem}
-Suppose
+Suppose $A$ is a set. The following statements are equivalent:
+\begin{enumerate}
+\item $A$ is countable.
+\item Either $A=\emptyset$ or there is a function $f:\mathbb Z^+\to A$ that is onto.
+\item There is a function $f:A\to\mathbb Z^+$ that is one-to-one.
+\end{enumerate}
 \end{theorem}
+\begin{proof}
+($1\rightarrow2$) Suppose $A$ is countable. If $A$ is denumerable, then there is a function $f:\mathbb Z^+\to A$ 
+that is one-to-one and onto, so clearly statement 2 is true.
+Now suppose $A$ is finite. If $A=\emptyset$ then there is nothing more to prove, so suppose $A\neq\emptyset$. 
+Then we can choose some element $a_0\in A$. Since $A$ is finite, we can declare $g:I_n\to A$ to be a one-to-one, 
+onto function, where $n$ is the number of elements of $A$.
+Now defining $f:\mathbb Z^+\to A$ as
+\begin{equation*}
+f(i)=\begin{cases}
+g(i),&\text{if $i\leq n$}\\
+a_0,&\text{if $i>n$}
+\end{cases}
+\end{equation*}
+First we show that $f$ is a function from $\mathbb Z^+$ to $A$. Let $i$ be some arbitrary element of $\mathbb Z^+$.
+We have two cases.\\
+\indent Case 1: $i\leq n$. Then $f(i)=g(i)$; since $g(i)$ is a function from $I_n$ to $A$ there then exists some 
+$a\in A$ such that $g(i)=a$. So $f(i)=g(i)=a$, proving existence. Now suppose there is some $a'\in A$ such that 
+$f(i)=a'$. Since $i\leq n$ we must have $f(i)=g(i)=a'$. Since $g$ is a function, we must then have $a=a'$.\\
+\indent Case 2: $i>n$. Then $f(i)=a_0\in A$, proving existence. Now suppose $a'$ is some element of $A$ such that 
+$f(i)=a'$. Since $i>n$, we must then have $a'=a_0$.\\
+\indent We now show that $f$ is onto. Let $a$ be some element of $A$. Then since $g$ is onto, there exists some $i\in I_n$
+such that $g(i)=a$. Since $i\in I_n$, we have $0<i\leq n$, and so
+$f(i)=g(i)=a$.\\
+(next page)\newpage
+($2\rightarrow3$) Suppose
+
+
+
+
+
+
+
+
+\end{proof}
 
 
 

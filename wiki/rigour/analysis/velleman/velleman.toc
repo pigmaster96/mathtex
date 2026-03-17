@@ -119,8 +119,8 @@
 \contentsline {subsection}{\numberline {7.1.2}Uniqueness and finite sets}{200}{}%
 \contentsline {subsection}{\numberline {7.1.3}Intuition}{203}{}%
 \contentsline {subsection}{\numberline {7.1.4}Countable and Uncountable}{206}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{207}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{207}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{207}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{207}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{208}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{208}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{208}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{208}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{208}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{209}{}%
