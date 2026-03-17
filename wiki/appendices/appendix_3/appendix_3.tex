@@ -64,6 +64,39 @@ Note that the third property can be generalised as follows:
 which can be shown be recursively applying the property for each element.
 \newpage
 
+\subsection{Intuition 1}
+Parts of these notes were written at different points in time, when my mathematical maturity was much weaker. These 
+`intuitive' subsections aim to clarify some insight I lacked.\\
+\vspace{1mm}\\
+A probabilistic model is a mathematical description of an uncertain situation. 
+Every probabilistic model involves an underlying process, called the \textit{experiment}, that 
+will produce exactly one out of several possible \textit{outcomes}. The set of all possible outcomes is called the
+\textit{sample space} of the experient, denoted by $\Omega$.
+A \textit{subset of the sample space}, that is, a collection of possible outcomes, is called an \textit{event}.\\
+\vspace{1mm}\\
+Regardless of their number, different elements of the sample space should be distinct and 
+\textit{mutually exclusive}, meaning that when the expreiment is carried out there is a unique outcome. A given 
+physical situation may be modeled in several different ways; generally, the sample space chosen for a probabilistic 
+model must be \textit{collectively exhaustive}, in the sense that no matter what happens in the experiment, 
+we always obtain an outcome that has been included in the sample space.
+\begin{center}
+\includegraphics[width=12cm]{27}\\
+\end{center}
+Suppose we have settled on the sample space $\Omega$ associated with an experiment. To complete the probabilistic
+model, we must now introduce a \textit{probability law}.
+The probability law assigns to every event $A$, a number $P(A)$, called the \textit{probability} of $A$.\\
+(next page)\newpage
+\noindent The probability law assigns to every event $A$, a number $P(A)$, called the \textit{probability} of $A$. 
+They must satisfy the following axioms:
+\begin{center}
+\includegraphics[width=12cm]{28}\\
+\end{center}
+
+
+
+
+\newpage
+
 \subsection{Properties of conditional probability}
 The conditional probability of an event $A$, given an event $B$ with $\mathbb P(B)>0$, is defined by
 \begin{equation*}
