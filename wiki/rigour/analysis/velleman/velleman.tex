@@ -6330,6 +6330,18 @@ the unique $n$ such that $I_n\sim A$. This number is sometimes called the \texti
 denoted $|A|$.\\
 \vspace{1mm}\\
 Note that according to this definition, $\emptyset$ is finite and $|\emptyset|=0$.
+\begin{theorem}
+Suppose $A$ and $B$ are sets and $A$ is finite. Then
+$A\sim B$ iff $B$ is also finite and $|A|=|B|$.
+\end{theorem}
+\begin{proof}
+Since $A$ is finite, we can declare $n$ such that $I_n\sim A$ and therefore $n=|A|$.\\
+\indent($\rightarrow$) Suppose $A\sim B$. Then since $I_n\sim A$, by transitivity we have $I_n\sim B$. This means 
+$B$ is finite and $|B|=n=|A|$.\\
+\indent($\leftarrow$) Suppose $B$ is finite and $|A|=|B|$.
+Then $|B|=|A|=n$. This means that $I_n\sim B$. So since $I_n\sim A$, by
+symmetry and transitivity, $A\sim B$.
+\end{proof}
 \newpage
 
 \subsection{Intuition}
