@@ -117,10 +117,11 @@
 \contentsline {section}{\numberline {7.1}Equinumerous sets}{196}{}%
 \contentsline {subsection}{\numberline {7.1.1}Properties}{197}{}%
 \contentsline {subsection}{\numberline {7.1.2}Uniqueness and finite sets}{200}{}%
-\contentsline {subsection}{\numberline {7.1.3}Intuition}{203}{}%
-\contentsline {subsection}{\numberline {7.1.4}Countable and Uncountable}{206}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{208}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{208}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{208}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{208}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{209}{}%
+\contentsline {subsection}{\numberline {7.1.3}More properties}{203}{}%
+\contentsline {subsection}{\numberline {7.1.4}Intuition}{204}{}%
+\contentsline {subsection}{\numberline {7.1.5}Countable and Uncountable}{207}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{209}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{209}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{209}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{209}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{210}{}%
