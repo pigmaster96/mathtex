@@ -3340,6 +3340,39 @@ $(g\circ f)(a)=c$. Thus
 was proven in an earlier section)
 \newpage
 
+\subsection{Restriction}
+\begin{definition}
+Suppose $f:A\to B$ and $C\subseteq A$. The set $f\cap(C\times B)$, which is a relation from $C$ to $B$, is called
+the \textit{restriction} of $f$ to $C$, and is sometimes denoted $f\restriction C$. In other words,
+\begin{equation*}
+f\restriction C=f\cap(C\times B)
+\end{equation*}
+\end{definition}
+\begin{theorem}
+Suppose $f:A\to B$ and $C\subseteq A$. Then $f\restriction C$ is a function from $C$ to $B$, and for all $c\in C$, 
+$f(c)=(f\restriction C)(c)$.
+\end{theorem}
+\begin{proof}
+Suppose that $c\in C$. We must prove that there is a unique $b\in B$ such that $(c,b)\in f\restriction C$.\\
+\indent Existence: Since $C\subseteq A$, we have $c\in A$.
+$f$ is a function from $A$ to $B$, so we can declare $b=f(c)\in B$. Then since $(c,b)\in f$ and 
+$(c,b)\in C\times B$, we have $(c,b)\in f\cap(C\times B)=f\restriction C$.\\
+\indent Uniqueness: Let $b'$ be some arbitrary element of $B$ such that $(f\restriction C)(c)=b'$. Then 
+$(c,b')\in f\cap(C\times B)$ and $(c,b')\in f$. So $f(c)=b$ and $f(c)=b'$. Since $f$ is a function, $b=b'$.
+This proves that $f\restriction C$ is a function from $C$ to $B$.\\
+\indent For the last requirement, let $c\in C$. Since we showed that $f\restriction C$ is a function we can
+declare $b\in B$ such that $(f\restriction C)(c)=b$, so
+$(c,b)\in f\restriction C=f\cap(C\times B)$ and $(c,b)\in f$. This means $f(c)=b=(f\restriction C)(c)$.
+\end{proof}
+\begin{theorem}
+
+\end{theorem}
+
+
+
+
+\newpage
+
 \section{One-to-One and Onto}
 \begin{definition}
 Suppose $f:A\to B$. We will say that $f$ is \textit{one-to-one} if 
