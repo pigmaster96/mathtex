@@ -6356,9 +6356,62 @@ We are trying to show
 (A\neq I_n\to|A|<n)])
 \end{equation*}
 We proceed by induction on $n$.\\
-\indent Base case: $n=0$. 
-
+\indent Base case: $n=0$. Then $A\subseteq I_n=\emptyset$.
+Then $A=\emptyset$. $I_0=\emptyset$ is a one-to-one function from $\emptyset=A$ to $\emptyset=I_n$ (all properties
+are vacuously true), so $I_0\sim A$. This means $|A|=0=n$.
+The last requirement, $A\neq I_n\to|A|<n$ is vacuously true.\\
+\indent Induction step. We want to show
+\begin{align*}
+\forall n\in\mathbb N([A\subseteq I_n\to[\exists m\in\mathbb N&(I_m\sim A)\land|A|\leq n\land
+(A\neq I_n\to|A|<n)]]\\
+\to[A\subseteq I_{n+1}\to[\exists& m\in\mathbb N(I_m\sim A)\land|A|\leq n+1\\
+&\land(A\neq I_{n+1}\to|A|<n+1)]])
+\end{align*}
+Let $n$ be a natural number. Suppose that for all $A\subseteq I_n$, $A$ is finite, $|A|\leq n$, and if 
+$A\neq I_n$ then $|A|<n$. Now suppose that $A\subseteq I_{n+1}$. We have two cases.\\ 
+\indent Case 1: $A=I_{n+1}$. Then by
+reflexivity $A\sim A$ and $I_{n+1}\sim A$. This means $|A|=n+1$. The last requirement is vacuously true.\\
+\indent Case 2: $A\neq I_{n+1}$. We have two cases.\\
+\indent Case 2.1: $n+1\notin A$. Then $A\subseteq I_{n+1}\backslash\{n+1\}=I_n$. So by the inductive hypothesis we 
+$A$ is finite and $|A|\leq n<n+1$.\\
+\indent Case 2.2: $n+1\in A$. We know $A\neq I_{n+1}$, meaning $\neg(A\subseteq I_{n+1}\land I_{n+1}\subseteq A)$
+which means $A\subseteq I_{n+1}\to I_{n+1}\nsubseteq A$. So $I_{n+1}\nsubseteq A$ and we can declare some 
+$k\in I_{n+1}$ such that $k\notin A$. Denoting $A'=(A\cup\{k\})\backslash\{n+1\}$, we can define $f:A'\to A$ as
+\begin{equation*}
+f(i)=\begin{cases}
+i&i\neq k\\
+n+1&i=k
+\end{cases}
+\end{equation*}
+and show that it is one-to-one and onto. First we show that $f$ is a function. Let $a'$ be some element of $A'$.
+We have 2 cases. Case 2.2.1: $a'=k$. Then $f(a')=n+1\in A$. For any $a_0\in A$ such that $f(a')=a_0$, by definition
+we must have $a_0=n+1$. Case 2.2.2: $a'\neq k$. Then $f(a')=a'\in A'$. This means that
+$a'\in A\lor a'\in\{k\}$. Since $a'\neq k$ we must then have $a'\in A$.
+For any $a_0\in A$ such that $f(a')=a_0$, by definition
+we must have $a_0=a'$. This shows that $f$ is a valid function.\\
+(next page)\newpage
+Next we show that $f$ is one-to-one. Let $a_1$ and $a_2$ be elements of $A'$ and suppose that $f(a_1)=f(a_2)$.
+We have four cases.\\
+\indent Case 2.2.1: $a_1=k\land a_2=k$. Then $a_1=k=a_2$.\\
+\indent Case 2.2.2: $a_1\neq k\land a_2=k$. Then $f(a_1)=a_1$ and $f(a_2)=n+1$.
+Since $a_1\in A'=(A\cup\{k\})\backslash\{n+1\}$. This means that $f(a_1)=a_1\neq n+1=f(a_2)$. This case is therefore
+a contradiction and cannot occur. It can be excluded.\\
+\indent Case 2.2.3: $a_1=k\land a_2\neq k$. This is similar to the previous case. Excluded.\\
+\indent Case 2.2.4: $a_1\neq k\land a_2\neq k$. Then $f(a_1)=a_1$ and $f(a_2)=a_2$, and
+so $a_1=f(a_1)=f(a_2)=a_2$. So $f$ is one-to-one.\\
+\indent To show that $f$ is onto, let $a$ be an element of $A$. We have two cases.\\
+\indent Case 2.2.1: $a=n+1$. We know $k\in A'$, and $f(k)=n+1=a$.\\
+\indent Case 2.2.2: $a\neq n+1$. Since $a\in A$, we then have $a\in(A\cup\{k\})\backslash\{n+1\}=A'$. We know 
+$k\notin A$. So $a\neq k$ and we then have $f(a)=a$.\\
+\indent We showed that $f$ is one-to-one and onto, so $A'\sim A$. We know $A\subseteq I_{n+1}$ and 
+$\{k\}\subseteq I_{n+1}$. So $(A\cup\{k\})\subseteq I_{n+1}$, and $A'=(A\cup\{k\})\backslash\{n+1\}\subseteq I_{n}$.
+By the inductive hypothesis, $A'$ is finite, so we can declare some $m\in\mathbb N$ such that $I_m\sim A'$. By
+transitivity we then have $I_m\sim A$, so $A$ is finite.
+By the inductive hypothesis we also have $|A'|\leq n$; since $A'\sim A$, by the last theorem from the previous 
+subsection we have $|A|=|A'|\leq n<n+1$ (the last requirement follows since $A\neq I_{n+1}$ was already assumed).
 \end{proof}
+
+
 
 
 \newpage
