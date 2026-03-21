@@ -3365,12 +3365,20 @@ declare $b\in B$ such that $(f\restriction C)(c)=b$, so
 $(c,b)\in f\restriction C=f\cap(C\times B)$ and $(c,b)\in f$. This means $f(c)=b=(f\restriction C)(c)$.
 \end{proof}
 \begin{theorem}
-
+Suppose $f:A\to B$ and $C\subseteq A$. Suppose $g:C\to B$.
+Then $g=f\restriction C$ iff $g\subseteq f$.
 \end{theorem}
-
-
-
-
+\begin{proof}
+($\rightarrow$) Suppose $g=f\restriction C=f\cap(C\times B)$. Then for any $(c,b)\in g$, we have $(c,b)\in f$, 
+so $g\subseteq f$.\\
+\indent ($\leftarrow$) Suppose $g\subseteq f$. We will show
+\begin{equation*}
+\forall c\in C(g(c)=(f\restriction C)(c))
+\end{equation*}
+Let $c\in C$. Since $g$ is a function from $C$ to $B$ we can declare some $b\in B$ such that $g(c)=b$.
+Since $g\subseteq f$ we then have $(c,b)\in f$ and $f(c)=b$. By the previous theorem
+$(f\restriction C)(c)=f(c)=b=g(c)$.
+\end{proof}
 \newpage
 
 \section{One-to-One and Onto}
