@@ -6451,6 +6451,34 @@ transitivity we then have $I_m\sim A$, so $A$ is finite.
 By the inductive hypothesis we also have $|A'|\leq n$; since $A'\sim A$, by the last theorem from the previous 
 subsection we have $|A|=|A'|\leq n<n+1$ (the last requirement follows since $A\neq I_{n+1}$ was already assumed).
 \end{proof}
+\begin{theorem}
+If $A$ is finite and $B\subseteq A$, then $B$ is also finite, and $|B|\leq|A|$. Furthermore, if $B\neq A$, then
+$|B|<|A|$.
+\end{theorem}
+\begin{proof}
+Suppose $A$ is finite and $B\subseteq A$. Since $A$ is finite, for some natural number $n$, $I_n\sim A$ and $n=|A|$.
+By symmetry, $A\sim I_n$, and we can declare a function $f:A\to I_n$ that is one-to-one and onto.
+First we will show that
+\begin{equation*}
+\forall b\in B(f(b)\in I_n)
+\end{equation*}
+This is fairly straightforward. Let $b$ be an element of $B$. Then since $B\subseteq A$, $b\in A$. 
+So $f(b)\in I_n$ exists. Now we show that
+\begin{equation*}
+\forall b\in B(f(b)\in I_n)\rightarrow f(B)\subseteq I_n
+\end{equation*}
+where $f(B)$ is defined as $f(B)=\{f(b)\mid b\in B\}$. Supposing that $\forall b\in B(f(b)\in I_n)$ ,
+let $i$ be some element of $f(B)$. Then there exists some $b\in B$ such that $i=f(b)\in I_n$, and we are done.\\
+\indent We have shown $f(B)\subseteq I_n$. By the previous theorem, $f(B)$ is finite, $|f(B)|\leq n$, and 
+$f(B)\neq I_n\to|f(B)|<n$. We will show that 
+$f\restriction B=f\cup(B\times f(B))\subseteq B\times f(B)$ is a one-to-one and onto function from $B$ to $f(B)$.\\
+(next page)\newpage
+First we show $f\restriction B:B\to f(B)$.
+
+
+
+
+\end{proof}
 
 
 
