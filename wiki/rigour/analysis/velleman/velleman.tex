@@ -6473,13 +6473,28 @@ let $i$ be some element of $f(B)$. Then there exists some $b\in B$ such that $i=
 $f(B)\neq I_n\to|f(B)|<n$. We will show that 
 $f\restriction B=f\cup(B\times f(B))\subseteq B\times f(B)$ is a one-to-one and onto function from $B$ to $f(B)$.\\
 (next page)\newpage
-First we show $f\restriction B:B\to f(B)$.
-
-
-
-
+First we show $f\restriction B:B\to f(B)$. Let $b$ be some element of $B\subseteq A$. Then $b$ is also an element of
+$A$ and $f(b)=i\in I_n$ exists since $f$ is a function. By
+definition $i\in f(B)$. So $(b,i)\in f$ and $(b,i)\in B\times f(B)$, meaning
+$(b,i)\in f\cap(B\times f(B))=f\restriction B$ and $(f\restriction B)(b)=i\in f(B)$.
+Now suppose that we have some $i_0\in f(B)$ such that $(f\restriction B)(b)=i_0$. Then $(b,i_0)\in f$. Since 
+$f$ is a function, $f(b)=i_0$ and $f(b)=i$ would imply that we must have $i_0=i$.\\
+\indent Now we show that $f\restriction B:B\to f(B)$ is one-to-one. Let $b_1,b_2\in B$ and suppose that
+$(f\restriction B)(b_1)=(f\restriction B)(b_2)=i$.
+Then $f(b_1)=i$ and $f(b_2)=i$. Since $f$ is one-to-one, we must have $b_1=b_2$.\\
+\indent Finally we show that $f\restriction B:B\to f(B)$ is onto. Let $i\in f(B)$. Then by definition there exists
+some $b\in B$ such that $i=f(b)$. So $(b,i)\in f$ and 
+$(b,i)\in B\times f(B)$. So $(b,i)\in f\restriction B$ and
+$(f\restriction B)(b)=i$.\\
+\indent We have shown that $B\sim f(B)$. By symmetry this means that $f(B)\sim B$. Since $f(B)$ is finite, by the 
+last theorem from the previous subsection, $B$ is finite and $|B|=|f(B)|\leq n=|A|$. Suppose now that $B\neq A$. 
+This means that $B\subseteq A\to A\nsubseteq B$. So we have $A\nsubseteq B$. As such we can declare some $a\in A$ 
+such that $a\notin B$. So $f(a)\in I_n$ and $f(a)\notin f(B)$, meaning $I_n\nsubseteq f(B)$ and $f(B)\neq I_n$. We 
+know that $f(B)\neq I_n\to|f(B)|<n$. So $|B|=|f(B)|<n=|A|$, and $B\neq A\to |B|<|A|$.
 \end{proof}
+\begin{theorem}
 
+\end{theorem}
 
 
 
