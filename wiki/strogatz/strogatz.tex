@@ -208,10 +208,26 @@ See that the fixed point $x^*=0$ is very unstable---the slope of $f(0)$ is infin
 Suppose that $f(x)$ and $f'(x)$ are continuous on an open interval $R$ of the $x$ axis, and suppose that $x_0$ is a point in $R$. Then the initial
 value problem has a solution $x(t)$ on some time interval $(-\tau,\tau)$ about $t=0$, and the solution is unique.\\
 \vspace{1mm}\\
-This theorem says that if $f(x)$ is \textit{smooth enough}, then solutions exist and they are unique. Even so, note that there's \textit{no guarantee that solutions exist for all time}.
+This theorem says that if $f(x)$ is \textit{smooth enough}, then solutions exist and they are unique. Even so, note that there's \textit{no guarantee that solutions exist for all time}.\\
 (next page)\newpage
 \noindent\textbf{Instructive example}\\
-Consider
+Consider the initial value problem $\dot x=1+x^2$, $x(0)=x_0$. We have $f(x)=1+x^2$. This function is continuous and has a continuous derivative for all of $x$. Hence the theorem tells 
+us that solutions exist and are unique for any initial condition $x_0$. 
+But \textit{the theorem does not say that the solutions exist for all time}; they are only guaranteed to exist in a (possibly very short) time interval around $t=0$.\\
+\vspace{1mm}\\
+For instance consider the case where $x(0)=0$. The problem can can be solved analytically by separation of variables to yield
+\begin{equation*}
+\tan^{-1}x=t+C
+\end{equation*}
+where the initial condition would imply $C=0$, so $x(t)=\tan t$ is the solution. But notice that this solution only exists for $-\pi/2<t<\pi/2$, since $x\to\pm\infty$ as $t\to\pm\pi/2$. 
+Outside this interval there is no solution to the initial value problem for $x_0=0$ (solutions must be continuous).\\
+\vspace{1mm}\\
+This system has solutions that reach infinity in \textit{finite} time. This phenomenon is called \textit{blow-up}.
+
+
+
+
+
 
 
 
