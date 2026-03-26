@@ -224,6 +224,86 @@ Outside this interval there is no solution to the initial value problem for $x_0
 \vspace{1mm}\\
 This system has solutions that reach infinity in \textit{finite} time. This phenomenon is called \textit{blow-up}.
 
+\section{Impossibility of Oscillations}
+In all examples so far, all trajectories either approached a fixed point, or diverged to $\pm\infty$. In fact, those are the \textit{only} things that can happen to a vector field on the real line.
+Trajectories are forced to increase or decrease \textit{monotonically}; overshoot and damped oscillations can never occur in a first-order system. Undamped oscillations are also impossible.
+There are no periodic soluutions to $\dot x=f(x)$. These general results are fundamentally topological in origin. 
+\newpage
+
+\section{Potentials}
+For another way to visualise the dynamics of the first order system $\dot x=f(x)$, we picture a particle sliding down the walls of a potential well, where the \textit{potential} $V(x)$ is defined
+by
+\begin{equation*}
+f(x)=-\frac{dV}{dx}
+\end{equation*}
+The negative sign in the definition of $V$ implies that the particle always moves ``downhill'' as the motion proceeds.
+\begin{center}
+\includegraphics[width=8cm]{9}
+\end{center}
+To see this, we can use the chain rule to obtain
+\begin{equation*}
+\frac{dV}{dt}=\frac{dV}{dx}\frac{dx}{dt}
+\end{equation*}
+Hence by the definition of the potential
+\begin{equation*}
+\frac{dV}{dt}=-\left(\frac{dV}{dx}\right)^2\leq0
+\end{equation*}
+Thus $V(t)$ \textit{decreases along trajectories} (in the sense that it is strictly decreasing with time), and so the particle always moves toward lower potential. 
+Of course, if the particle happens to be at an \textit{equilibrium} point where $dV/dx=0$, then $V$ remains constant. This is to be expected, since $dV/dx=0$ implies $\dot x=0$.\\
+\vspace{1mm}\\
+In this sense, local minima of $V(x)$ correspond to \textit{stable} fixed points, as we'd expect intuitively, and local maxima correspond to unstable fixed points.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Consider the system $\dot x=-x$. We have $-dV/dx=-x$. The general solution is $V(x)=\frac{1}{2}x^2+C$. Choosing $C=0$ for convenience, the graph of $V(x)$ is
+\begin{center}
+\includegraphics[width=4.5cm]{10}
+\end{center}
+The only equilibrium point occurs at $x=0$, and it's stable.\\
+\vspace{1mm}\\
+For another example consider $\dot x=x-x^3$. Solving $-dV/dx=x-x^3$ yields $V=-\frac{1}{2}x^2+\frac{1}{4}x^4+C$. Once again we set $C=0$:
+\begin{center}
+\includegraphics[width=4.5cm]{11}
+\end{center}
+The local minima at $x=\pm1$ correspond to stable equilibria, and the local maximum at $x=0$ corresponds to an unstable equilibrium. This is often called a \textit{double-well potential},
+and the system is said to be \textit{bistable}, since it has two stable equilibria.
+\newpage
+
+\section{Numerical methods}
+The Euler's method update rule is
+\begin{equation*}
+x_{n+1}=x_n+f(x_n)\Delta t
+\end{equation*}
+where $\Delta t$ is the timestep. Euler's method is not recommended in practice since its approximation is pretty bad. One problem with it is that it estimates the derivative at only the left end
+of the time interval between $t_n$ and $t_{n+1}$. A more sensible approach would be to use the 
+\textit{average} derivative across this interval.\\
+\vspace{1mm}\\
+The \textit{improved Euler method} first takes a trial step across the interval as in the generic Euler method. This produces a trial value $\tilde x_{n+1}=x_n+f(x_n)\Delta t$;
+the tilde above the $x$ indicates that this is a tentative step, used only as a probe. Now that we've estimated the derivative on both ends of the interval, we average
+$f(x_n)$ and $f(\tilde x_{n+1})$, and use that to take the \textit{real} step across the interval.
+The improved Euler method is
+\begin{align*}
+&\tilde x_{n+1}=x_n+f(x_n)\Delta t&\text{(the trial step)}\\
+&x_{n+1}=x_n+\frac{1}{2}[f(x_n)+f(\tilde x_{n+1})]\Delta t&\text{(the real step)}
+\end{align*}
+This method is more accurate in the sense that it tends to make a smaller error $E=|x(t_n)-x_n|$ for a given stepsize $\Delta t$. In both method the error $E\to0$ as $\Delta t\to0$, but the error
+decreases \textit{faster} for the improved Euler. The Euler method is considered first order, whereas the improved Euler is second order.\\
+\vspace{1mm}\\
+Higher order methods have been concocted, but are not necessarily superior, since they are more computationally expensive. In practice, a good balance is achieved by the 
+\textit{fourth-order Runge-Kutta method}. We evaluate the following 
+\begin{align*}
+&k_1=f(x_n)\Delta t\\
+&k_2=f(x_n+\frac{1}{2}k_1)\Delta t\\
+&k_3=f(x_n+\frac{1}{2}k_2)\Delta t\\
+&k_4=f(x_n+k_3)\Delta t
+\end{align*}
+Then $x_{n+1}$ is given by
+\begin{equation*}
+x_{n+1}=x_n+\frac{1}{6}(k_1+2k_2+2k_3+k_4)
+\end{equation*}
+This method generally gives accurate results without requiring an excessively small stepsize $\Delta t$.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Consider the system
 
 
 

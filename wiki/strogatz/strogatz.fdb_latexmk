@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1774460270.03105 "strogatz.tex" "strogatz.pdf" "strogatz" 1774460270.40743 0
+["pdflatex"] 1774506000.37408 "strogatz.tex" "strogatz.pdf" "strogatz" 1774506000.76003 0
   "/etc/texmf/web2c/texmf.cnf" 1767433088.34546 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy5.tfm" 1246382020 1120 1e8878807317373affa7f7bba4cf2f6a ""
@@ -86,6 +86,8 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1767433103 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1767433139 3348620 54815ecd3cfca19d87f06e16fc1eb500 ""
   "images/1.png" 1767433362.30755 12029 8b7a0ee0c75e32e0821d7ac7b84fc14c ""
+  "images/10.png" 1774502831.37708 4384 f80db462c3f43fca5d9b1b5e36caa83d ""
+  "images/11.png" 1774503210.82823 6347 9024753199af5abdbde6c41b32773251 ""
   "images/2.png" 1767433362.30755 5980 1f5d90aca0b9957b2e1e3546f8d4a73a ""
   "images/3.png" 1767433362.30755 20834 18811c1426023cbe41aa8cd1361ed6da ""
   "images/4.png" 1767433362.30755 8985 f2ec461077d8bde62b5fd1950cc35957 ""
@@ -93,9 +95,10 @@
   "images/6.png" 1767433362.30755 6771 052b05996c7fa43fa1381d1ad9b8af6b ""
   "images/7.png" 1767433362.30755 12167 7538e9b12d282d773ff0823a47ba8f93 ""
   "images/8.png" 1767433362.30755 5115 e51762d5966510e168fa20534e4aefeb ""
-  "strogatz.aux" 1774460270.3676 888 3372fda8dff73a298f0b647124f1fb12 "pdflatex"
-  "strogatz.tex" 1774460268.31157 13252 94768bd9422e71dfa164ac783fbf7bd9 ""
-  "strogatz.toc" 1774460270.3676 492 023b4bf2ec22e8aec2e3e9bd505c9b45 "pdflatex"
+  "images/9.png" 1774500850.71043 22552 d0e38ca295f2b3c05233ca48cba340ba ""
+  "strogatz.aux" 1774506000.72269 1217 810358c367e9fe3616c9ee6025749cd9 "pdflatex"
+  "strogatz.tex" 1774505998.43066 18003 8e6c1aee42501f56afa3ad1e91c42935 ""
+  "strogatz.toc" 1774506000.72269 698 2773b1d794413ac5abf39159461fa5cd "pdflatex"
   (generated)
   "strogatz.aux"
   "strogatz.log"
