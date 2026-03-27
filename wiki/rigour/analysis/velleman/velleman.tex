@@ -4655,7 +4655,7 @@ F_n&=\frac{\left(\frac{1+\sqrt{5}}{2}\right)^{n-2}\left(\frac{1+\sqrt{5}}{2}\rig
 \noindent\textit{Scratch work}\\
 Formally this means
 \begin{equation*}
-\forall S[(S\subseteq\mathbb N\land S\neq\emptyset)\to(\exists x\in S\forall y\in A(x\leq y)]
+\forall S[(S\subseteq\mathbb N\land S\neq\emptyset)\to(\exists x\in S\forall y\in S(x\leq y)]
 \end{equation*}
 which is the same as
 \begin{equation*}
@@ -6643,10 +6643,49 @@ $f(i)=g(i)=a$.\\
 
 
 
-
-
-
 \end{proof}
+
+
+\newpage
+
+\subsection{Well-ordering principle recap}
+\begin{theorem}
+(Well-ordering principle) Every nonempty set of natural numbers has a smallest element. 
+\end{theorem}
+\noindent Formally this means
+\begin{equation*}
+\forall S[(S\subseteq\mathbb N\land S\neq\emptyset)\to(\exists x\in S\forall y\in S(x\leq y)]
+\end{equation*}
+\begin{proof}
+Suppose that for some set $S$, $S\subseteq\mathbb N$ and $S\neq\emptyset$. Suppose that there $S$ does not have a smallest element. That is
+\begin{equation*}
+\neg\exists x\in S\forall y\in S(x\leq y)
+\end{equation*}
+First we will show, using strong induction, that $\forall n\in\mathbb N(n\notin S)$. We must show
+\begin{equation*}
+\forall n\in\mathbb N(\forall k<n(k\notin S)\to n\notin S)
+\end{equation*}
+Suppose that $n\in\mathbb N$ and $\forall k<n(k\notin S)$. For contradiction, suppose $n\in S$. The inductive hypothesis can be
+rewritten,
+\begin{equation*}
+\forall k(k<n\to k\notin S)\leftrightarrow\forall k(k\in S\to n\leq k)
+\end{equation*}
+Since $n\in S$, this, combined with the contrapositive of the inductive hypothesis, means that $n$ is the smallest element in $S$. 
+This contradicts the initial assumption that $S$ does not have a smallest element. So we must have $n\notin S$.\\
+\indent We showed $\forall n\in\mathbb N(n\notin S)$ We now show that 
+\begin{equation*}
+[S\subseteq\mathbb N\land\forall n\in\mathbb N(n\notin S)]\rightarrow S=\emptyset
+\end{equation*}
+Supposing that $S\subseteq\mathbb N$ and $\forall n\in\mathbb N(n\notin S)$. Suppose for contradiction that $S\neq\emptyset$. This means that
+we can declare some $s\in S$; since $S\subseteq\mathbb N$ we must have $s\in\mathbb N$, contradicting the second assumption since 
+it would imply that $s\notin S$.\\
+\indent We have shown that $S=\emptyset$. This would contradict the initial assumption that $S$ is nonempty. So $S$ must have a smallest element.
+\end{proof}
+\newpage
+
+\subsection{}
+
+
 
 
 
