@@ -3,3 +3,4 @@ matplotlib
 pandas
 tqdm
 scipy
+PyQt5==5.15.10
