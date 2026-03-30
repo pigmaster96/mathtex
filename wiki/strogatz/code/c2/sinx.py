@@ -4,10 +4,7 @@ from tqdm import trange
 
 
 def f(x):
-    '''
-    logistic model dxdt=x(1-x)
-    '''
-    return x*(1-x)
+    return np.sin(x)
 
 
 
@@ -43,14 +40,14 @@ def rk4logistic(init_cons,dt):
 
 
 #compute
-t,x=rk4logistic([(0,0.5),(1,1.4),(2,0.3),(0,0.003)],0.01)
+t,x=rk4logistic([(1,-0.01),(0,0.01),(0,6),(1,6.28)],0.01)
 
 #phase portrait
-X=np.arange(0,1.5,0.1)
+X=np.arange(-4,8,0.4)
 T=np.arange(0,10,0.5)
 
 traj_x=f(X)
-traj_t=np.ones(np.shape(T))*0.1
+traj_t=np.ones(np.shape(T))
 
 #position
 T,X=np.meshgrid(T,X)
@@ -61,7 +58,7 @@ traj_t,traj_x=np.meshgrid(traj_t,traj_x)
 
 fig,ax=plt.subplots()
 
-ax.quiver(T,X,traj_t,traj_x,pivot='tail',scale=10,headwidth=1)
+ax.quiver(T,X,traj_t,traj_x,pivot='tail',scale=35,headwidth=1)
 
 
 for traj in range(np.shape(x)[0]):
