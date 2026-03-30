@@ -1,0 +1,365 @@
+\documentclass{report} 
+\title{Strogatz}
+\date{Started 20th November 2025}
+\author{Malcolm}
+\usepackage{amsmath} %import math
+\usepackage{mathtools} %more math
+\usepackage{amssymb} %for QED symbol
+\usepackage{amsthm} %
+\usepackage{mathrsfs} %
+\usepackage{bm}%bold math
+\usepackage{graphicx} %import imaging
+
+\graphicspath{{./images/}} %set imaging path
+\newtheorem*{theorem}{Theorem}
+\theoremstyle{definition}
+\newtheorem*{definition}{Definition}
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter{Flows on a line}
+\section{Introduction}
+We have the general system as
+\begin{align*}
+\dot x_1=&f_1(x_1,\ldots,x_n)\\
+&\vdots\\
+\dot x_n=&f_n(x_1,\ldots,x_n)
+\end{align*}
+its solutions can be intuitively visualised as trajectories flowing through an $n$-dimensional phase space. In these early sections we start with the simple case where $n=1$; then we get a single
+equation of the form
+\begin{equation*}
+\dot x=f(x)
+\end{equation*}
+We call such systems one-dimensional or first-order systems.\\
+\vspace{1mm}\\
+We clarify the following:
+\begin{enumerate}
+\item The word \textit{system} is being used here in the context of a dynamical system, not in the classical sense of a collection of two or more equations. Thus a single equation can be called a
+`system'.
+\item We do not allow $f$ to depend explicitly on time. Time-dependent or `nonautonomous' equations of the form $\dot x=f(x,t)$ are more complicated because they require two variables. Such a system
+in this case would be regarded as a two-dimensional system, to be discussed later.
+\end{enumerate}
+\newpage
+
+\section{Geometric intuition}
+\subsection{Instructive example}
+Consider the following nonlinear differential equation:
+\begin{equation*}
+\dot x=\sin x
+\end{equation*}
+This particular equation can be solved in closed form; using separation of variables then integration we get
+\begin{equation*}
+t=\ln\left|\frac{\csc x_0+\cot x_0}{\csc x+\cot x}\right|
+\end{equation*}
+where $x=x_0$ at $t=0$. Although the result is exact, it isn't really possible to interpret. For instance consider the following
+\begin{enumerate}
+\item Suppose $x_0=\pi/4$. Describe the qualitative features of the solution $x(t)$ for all $t>0$. What happens as $t\to\infty$?
+\item For an arbitrary initial condition $x_0$, what is the behaviour of $x(t)$ as $t\to\infty$?
+\end{enumerate}
+The formula above is not transparent. We consider instead a graphical analysis; the differential equation $\dot x=\sin x$ represents a \textit{vector field} on the line: it dictates the velocity
+vector $\dot x$ at each $x$. To sketch this vector field, it is convenient to plot $\dot x$ vs $x$, drawing arrows on the $x$-axis to indicate the corresponding velocity vector at each $x$.
+The arrows point to the right when $\dot x>0$ and to the left when $\dot x<0$:
+\begin{center}
+\includegraphics[width=10cm]{1}
+\end{center}
+The \textit{flow} is to the right when $\dot x>0$ and to the left when $\dot x<0$; at points where $\dot x=0$, there is no flow, and such points are therefore called \textit{fixed points}. Solid
+dots represent \textit{stable} fixed points (often called \textit{attractors/sinks}, bscause the flow is toward them). Open dots represent \textit{unstable} fixed points (also known as \textit{repellers/sources}).\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+We had \begin{center}
+\includegraphics[width=9cm]{1}
+\end{center}
+We start at $x_0$ and watch how $x$ is carried along by the flow. Consider now the questions proposed earlier.
+\begin{enumerate}
+\item Starting at $x_0=\pi/4$, the flow moves to the right faster and faster until $x$ crosses $\pi/2$ (where $\sin x$ reaches its maximum). Then the flow slows down and eventually approaches
+the stable fixed point $x=\pi$ from the left. As such the qualitative form of the solution is as follows
+\begin{center}
+\includegraphics[width=7cm]{2}
+\end{center}
+See that the curve is concave up at first, then concave down; this change in concavity corresponds to the initial acceleration for $x<\pi/2$, followed by the deceleration toward $x=\pi$.\\
+(next page)\newpage
+\item The same reasoning applies to any initial condition $x_0$. If $\dot x>0$ initially, the flow is to the right and $x$ asymptotically approaches the nearest stable point, and similarly to the left for the
+other case where $\dot x<0$. If $\dot x=0$, then $x$ remains constant. The qualitative form of the solution for any initial condition can be sketched: 
+\begin{center}
+\includegraphics[width=6cm]{3}
+\end{center}
+\end{enumerate}
+\noindent Note that the picture can't tell us certain \textit{quantitative} things: for instance we don't know the time at which the speed $|\dot x|$ is greatest. But in many cases the \textit{qualitative}
+information is what we care about. In this case these sketches are useful.
+\newpage
+
+\subsection{Fixed points and stability}
+The ideas discussed can be extended to any one-dimensional system $\dot x=f(x)$. We draw the graph of $f(x)$.
+\begin{center}
+\includegraphics[width=8cm]{4}
+\end{center}
+As before, the flow is to the right where $f(x)>0$ and to the left when $f(x)<0$. To find the solution to $\dot x=f(x)$ starting from an arbitrary initial condition $x_0$, we start at $x=x_0$ and 
+watch how it is carried along by the flow.\\
+\vspace{1mm}\\
+The point moves along the $x$ axis according to some function $x(t)$. This function is called the \textit{trajectory} based at $x_0$, and it represents the solution of the differential equation
+starting from the initial condition $x_0$. A figure like the one above, which shows all the different trajectories of the system, is called a \textit{phase portrait}.\\
+\vspace{1mm}\\
+The appearance of the phase portrait is controlled by the fixed points $x^*$, defined by $f(x^*)=0$; they correspond to stagnation points of flow. As shown earlier the solid dots represent stable
+fixed points while open dots represent unstable fixed points. In terms of trajectories, fixed points represent \textit{equilibrium} solutions (sometimes called steady/constant/rest solutions), 
+since if $x=x^*$ initially it stays there for all of time.\\
+\vspace{1mm}\\
+An equilibrium is defined to be stable if all sufficiently small disturbances away from it damp out in time, so stable equilibria are 
+represented geometrically by stable fixed points. Conversely, unstable equilibria, in which disturbances grow over time, are represented by unstable points.\\
+(next page)\newpage
+\noindent\textbf{Instructive examples}\\
+Say we want to find all the fixed points for $\dot x=x^2-1$, and then classify their stability.\\
+\vspace{1mm}\\
+Here $f(x)=x^2-1$. To find the fixed points we set $f(x^*)=0$ and solve for $x^*$; thus $x^*=\pm1$. To determine stability we plot $x^2-1$ and then sketch the vector field:
+\begin{center}
+\includegraphics[width=7cm]{5}
+\end{center}
+The flow is to the right when $x^2-1>0$ and to the left where $x^2-1<0$. $x^*=-1$ is stable and $x^*=1$ is unstable.\\
+\vspace{1mm}\\
+Note that the definition of stable equilibrium is based on \textit{small} disturbances; certain large disturbances may fail to decay. In this case see that all small disturbances to 
+$x^*=-1$ will decay, but a large disturbance that sends $x$ to the right of $x=1$ will \textit{not} decay---and will in fact be repelled out to $+\infty$. To emphasise this we sometimes say that
+$x^*=-1$ is \textit{locally stable}, but not globally stable.\\
+\vspace{1mm}\\
+On the other hand consider the vector field for the RC circuit equation
+\begin{equation*}
+\dot Q=f(Q)=\frac{V_0}{R}-\frac{Q}{RC}
+\end{equation*}
+\begin{center}
+\includegraphics[width=5cm]{6}
+\end{center}
+In this case the flow is always towards $Q^*$; it is a \textit{stable} fixed point. In fact, it is \textit{globally stable}, in the sense that it is approached from \textit{all} initial 
+conditions.\\
+(next page)\newpage
+\noindent\textbf{Another example}\\
+Say we want to sketch the phase portrait corresponding to $\dot x=x-\cos x$, and determine the stability of all the fixed points.\\
+\vspace{1mm}\\
+Our approach would be to plot $x-\cos x$ and then sketch the associated vector field. This method is valid, but it requires one to figure out what the graph of $x-\cos x$ looks like. 
+An easier approach would be to plot both $y=x$ and $y=\cos x$ separately; we plot both graphs on the same axes and then observe that they intersect at exactly one point:
+\begin{center}
+\includegraphics[width=8cm]{7}
+\end{center}
+This intersection corresponds to a fixed point since $x^*=\cos x^*$ and therefore $f(x^*)=0$. When the line lies above the cosine curve, we have $x>\cos x$ and so $\dot x>0$; the flow is to the
+right. Similarly, the flow is to the left when the line is below the cosine curve.\\
+\vspace{1mm}\\
+Hence $x^*$ is the only fixed point and is unstable. See that we can classify its stability even though we don't know exactly where it is.
+\newpage
+
+\section{Linear stability analysis}
+One may want to have a more quantitative measure of stability, such as the rate of decay to a stable fixed point. This sort of information
+may be obtained by \textit{linearising} about a fixed point.\\
+\vspace{1mm}\\
+Let $x^*$ be a fixed point, and let
+\begin{equation*}
+x(t)=x^*+u(t)
+\end{equation*}
+where 
+\begin{equation*}
+u(t)=x(t)-x^*
+\end{equation*}
+differentiation yields
+\begin{equation*}
+\dot u=\frac{d}{dt}(x-x^*)=\dot x
+\end{equation*}
+Thus $\dot u=\dot x=f(x)=f(x^*+u)$. Now using Taylor's expansion we obtain
+\begin{equation*}
+f(x^*+u)=f(x^*)+f'(x^*)u+O(u^2)
+\end{equation*}
+where $O(u^2)$ denotes quadratically small terms in $u$. Finally observe that $f'(x^*)=0$ since $x^*$ is a fixed point. Hence
+\begin{equation*}
+\dot u=f'(x^*)u+O(u^2)
+\end{equation*}
+If $f'(x^*)\neq0$, the $O(u^2)$ terms are negligible in comparison to the linear term, so we may write the approximation
+\begin{equation*}
+\dot u\approx f'(x^*)u
+\end{equation*}
+This linear differential equation for $u$ is called the \textit{linearisation} about $x^*$. The linearisation shows that $u(t)$ grows exponentially if $f'(x^*)>0$ and decays exponentially if 
+$f'(x^*)<0$. If $f'(x^*)=0$, the $O(u^2)$ can't be ignored and a nonlinear analysis is needed to determine stability.\\
+\vspace{1mm}\\
+The slope $f'(x^*)$ at the fixed point determines its stability. The importance of the \textit{sign} of $f'(x^*)$ was clear from our graphical approach; now we also
+have a measure of \textit{how} stable a fixed point is---determined by the \textit{magnitude} of $f'(x^*)$. Its reciprocal $1/|f'(x^*)|$ is a \textit{characteristic time scale}; it determines the 
+time required for $x(t)$ to vary significantly in the neighbourhood of $x^*$.
+\newpage
+
+\section{Existence and uniqueness}
+\textbf{Instructive example}\\
+We can show that the solution to $\dot x=x^{1/3}$ starting from $x_0=0$ is \textit{not} unique.\\
+\vspace{1mm}\\
+The point $x=0$ is a fixed point, so one obvious solution is $x(t)=0$ for all $t$. 
+The suprising fact is that there is another solution. By separating variables and integrating:
+\begin{equation*}
+\int x^{-1/3}dx=\int dt
+\end{equation*}
+so $3/2x^{2/3}=t+C$. Imposing an initial condition $x(0)=0$ yields $C=0$, and hence $x(t)=(2/3t)^{3/2}$ is also a solution.\\
+\vspace{1mm}\\
+To find the source of the non-uniqueness, a hint comes from the vector field:
+\begin{center}
+\includegraphics[width=5cm]{8}
+\end{center}
+See that the fixed point $x^*=0$ is very unstable---the slope of $f(0)$ is infinite---a jump discontinuity in $x$. We state the existence and uniqueness theorem as follows\\
+\vspace{1mm}\\
+\textbf{Existence and uniqueness Theorem}: Consider the initial value problem
+\begin{equation*}
+\dot x=f(x),\quad x(0)=x_0
+\end{equation*}
+Suppose that $f(x)$ and $f'(x)$ are continuous on an open interval $R$ of the $x$ axis, and suppose that $x_0$ is a point in $R$. Then the initial
+value problem has a solution $x(t)$ on some time interval $(-\tau,\tau)$ about $t=0$, and the solution is unique.\\
+\vspace{1mm}\\
+This theorem says that if $f(x)$ is \textit{smooth enough}, then solutions exist and they are unique. Even so, note that there's \textit{no guarantee that solutions exist for all time}.\\
+(next page)\newpage
+\noindent\textbf{Instructive example}\\
+Consider the initial value problem $\dot x=1+x^2$, $x(0)=x_0$. We have $f(x)=1+x^2$. This function is continuous and has a continuous derivative for all of $x$. Hence the theorem tells 
+us that solutions exist and are unique for any initial condition $x_0$. 
+But \textit{the theorem does not say that the solutions exist for all time}; they are only guaranteed to exist in a (possibly very short) time interval around $t=0$.\\
+\vspace{1mm}\\
+For instance consider the case where $x(0)=0$. The problem can can be solved analytically by separation of variables to yield
+\begin{equation*}
+\tan^{-1}x=t+C
+\end{equation*}
+where the initial condition would imply $C=0$, so $x(t)=\tan t$ is the solution. But notice that this solution only exists for $-\pi/2<t<\pi/2$, since $x\to\pm\infty$ as $t\to\pm\pi/2$. 
+Outside this interval there is no solution to the initial value problem for $x_0=0$ (solutions must be continuous).\\
+\vspace{1mm}\\
+This system has solutions that reach infinity in \textit{finite} time. This phenomenon is called \textit{blow-up}.
+
+\section{Impossibility of Oscillations}
+In all examples so far, all trajectories either approached a fixed point, or diverged to $\pm\infty$. In fact, those are the \textit{only} things that can happen to a vector field on the real line.
+Trajectories are forced to increase or decrease \textit{monotonically}; overshoot and damped oscillations can never occur in a first-order system. Undamped oscillations are also impossible.
+There are no periodic soluutions to $\dot x=f(x)$. These general results are fundamentally topological in origin. 
+\newpage
+
+\section{Potentials}
+For another way to visualise the dynamics of the first order system $\dot x=f(x)$, we picture a particle sliding down the walls of a potential well, where the \textit{potential} $V(x)$ is defined
+by
+\begin{equation*}
+f(x)=-\frac{dV}{dx}
+\end{equation*}
+The negative sign in the definition of $V$ implies that the particle always moves ``downhill'' as the motion proceeds.
+\begin{center}
+\includegraphics[width=8cm]{9}
+\end{center}
+To see this, we can use the chain rule to obtain
+\begin{equation*}
+\frac{dV}{dt}=\frac{dV}{dx}\frac{dx}{dt}
+\end{equation*}
+Hence by the definition of the potential
+\begin{equation*}
+\frac{dV}{dt}=-\left(\frac{dV}{dx}\right)^2\leq0
+\end{equation*}
+Thus $V(t)$ \textit{decreases along trajectories} (in the sense that it is strictly decreasing with time), and so the particle always moves toward lower potential. 
+Of course, if the particle happens to be at an \textit{equilibrium} point where $dV/dx=0$, then $V$ remains constant. This is to be expected, since $dV/dx=0$ implies $\dot x=0$.\\
+\vspace{1mm}\\
+In this sense, local minima of $V(x)$ correspond to \textit{stable} fixed points, as we'd expect intuitively, and local maxima correspond to unstable fixed points.\\
+(next page)\newpage
+\noindent\textbf{Example}\\
+Consider the system $\dot x=-x$. We have $-dV/dx=-x$. The general solution is $V(x)=\frac{1}{2}x^2+C$. Choosing $C=0$ for convenience, the graph of $V(x)$ is
+\begin{center}
+\includegraphics[width=4.5cm]{10}
+\end{center}
+The only equilibrium point occurs at $x=0$, and it's stable.\\
+\vspace{1mm}\\
+For another example consider $\dot x=x-x^3$. Solving $-dV/dx=x-x^3$ yields $V=-\frac{1}{2}x^2+\frac{1}{4}x^4+C$. Once again we set $C=0$:
+\begin{center}
+\includegraphics[width=4.5cm]{11}
+\end{center}
+The local minima at $x=\pm1$ correspond to stable equilibria, and the local maximum at $x=0$ corresponds to an unstable equilibrium. This is often called a \textit{double-well potential},
+and the system is said to be \textit{bistable}, since it has two stable equilibria.
+\newpage
+
+\section{Numerical methods}
+The Euler's method update rule is
+\begin{equation*}
+x_{n+1}=x_n+f(x_n)\Delta t
+\end{equation*}
+where $\Delta t$ is the timestep. Euler's method is not recommended in practice since its approximation is pretty bad. One problem with it is that it estimates the derivative at only the left end
+of the time interval between $t_n$ and $t_{n+1}$. A more sensible approach would be to use the 
+\textit{average} derivative across this interval.\\
+\vspace{1mm}\\
+The \textit{improved Euler method} first takes a trial step across the interval as in the generic Euler method. This produces a trial value $\tilde x_{n+1}=x_n+f(x_n)\Delta t$;
+the tilde above the $x$ indicates that this is a tentative step, used only as a probe. Now that we've estimated the derivative on both ends of the interval, we average
+$f(x_n)$ and $f(\tilde x_{n+1})$, and use that to take the \textit{real} step across the interval.
+The improved Euler method is
+\begin{align*}
+&\tilde x_{n+1}=x_n+f(x_n)\Delta t&\text{(the trial step)}\\
+&x_{n+1}=x_n+\frac{1}{2}[f(x_n)+f(\tilde x_{n+1})]\Delta t&\text{(the real step)}
+\end{align*}
+This method is more accurate in the sense that it tends to make a smaller error $E=|x(t_n)-x_n|$ for a given stepsize $\Delta t$. In both method the error $E\to0$ as $\Delta t\to0$, but the error
+decreases \textit{faster} for the improved Euler. The Euler method is considered first order, whereas the improved Euler is second order.\\
+\vspace{1mm}\\
+Higher order methods have been concocted, but are not necessarily superior, since they are more computationally expensive. In practice, a good balance is achieved by the 
+\textit{fourth-order Runge-Kutta method}. We evaluate the following 
+\begin{align*}
+&k_1=f(x_n)\Delta t\\
+&k_2=f(x_n+\frac{1}{2}k_1)\Delta t\\
+&k_3=f(x_n+\frac{1}{2}k_2)\Delta t\\
+&k_4=f(x_n+k_3)\Delta t
+\end{align*}
+Then $x_{n+1}$ is given by
+\begin{equation*}
+x_{n+1}=x_n+\frac{1}{6}(k_1+2k_2+2k_3+k_4)
+\end{equation*}
+This method generally gives accurate results without requiring an excessively small stepsize $\Delta t$.
+\newpage
+
+\chapter{Bifurcations}
+The dynamics of vector fields on the line is very limited: all solutions either settle down to equilibrium or head out to $\pm\infty$. Such dynamics are fairly trivial. 
+The interest here lies in \textit{dependence on parameters}. The qualitative structure of the flow
+can change as parameters are varied. In particular, fixed points can be created or destroyed, or 
+their stability can change. These qualitative changes in the dynamics are called \textit{bifurcations}, and the parameter values at which they occur are called \textit{bifurcation points}.
+
+\section{Saddle-Node Bifurcation}
+The saddle-node bifurcation is the basic mechanism by which fixed points are \textit{created and destroyed}. As a parameter is varied, two fixed points move toward each other, collide, and mutually
+annihilate. The prototypical or \textit{normal form} of a saddle-node bifurcation is given by the first order system
+\begin{equation*}
+\dot x=r+x^2
+\end{equation*}
+where $r$ is a parameter which may be positive, negative or zero:
+\begin{center}
+\includegraphics[width=12cm]{12}
+\end{center}
+(next page)\newpage
+\noindent We have
+\begin{equation*}
+\dot x=r+x^2
+\end{equation*}
+where $r$ is a parameter which may be positive, negative or zero:
+\begin{center}
+\includegraphics[width=12cm]{12}
+\end{center}
+When $r$ is negative, there are two fixed points, one stable and one unstable. As $r$ approaches 0 from below, the parabola moves up and the two fixed points move toward each other.
+When $r=0$ the fixed points coalesce into a half-stable fixed point at $x^*=0$. This type of fixed
+point is extremely delicate---vanishing as soon as $r>0$. After which there is no more fixed point.
+We say that a \textit{bifurcation} occurred at $r=0$ since the vector fields for $r<0$ and $r>0$ are qualitatively different.\\
+\vspace{1mm}\\
+\textbf{Illustration}\\
+There are several ways to depict such a bifurcation. We can show a stack of vector fields for discrete values of $r$:
+\begin{center}
+\includegraphics[width=12cm]{13}
+\end{center}
+(next page)\newpage
+\noindent Alternatively we can let $r$ be continuous.
+\begin{center}
+\includegraphics[width=12cm]{14}
+\end{center}
+The curve shown is $r=-x^2$; i.e $\dot x=0$, giving the fixed points for different $r$. To distinguish between stable and unstable fixed points, we use a solid line for stable points and a broken
+line for unstable ones.\\
+\vspace{1mm}\\
+However, the most common way to depict the bifurcation is to invert the axes. The idea here is that $r$ plays the role of an independent variable, and so should be plotted horizontally.
+\begin{center}
+\includegraphics[width=12cm]{15}
+\end{center}
+Arrows are sometimes included, but not always. This is the \textit{bifurcation diagram} for the saddle-node bifurcation.
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
