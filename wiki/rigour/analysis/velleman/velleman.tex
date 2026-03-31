@@ -6524,12 +6524,30 @@ Since $f$ is onto
 \begin{equation*}
 \forall b\in B(\exists i\in I_n(f(i)=b))
 \end{equation*}
-For any $b\in B$, defining $A_b$ as $A_b=\{i\in I_n\mid f(i)=b\}$. We have
+For any $b\in B$, defining $A_b$ as $A_b=\{i\in I_n\mid f(i)=b\}$, we can declare some $i\in I_n$ such that $f(i)=b$. So $i\in A_b$. 
+Also see that by definition $A_b\subseteq I_n\subseteq\mathbb N$. So 
+this proves
 \begin{equation*}
-\forall b\in B(A_b\neq\emptyset)
+\forall b\in B(A_b\neq\emptyset\land A_b\subseteq\mathbb N)
 \end{equation*}
-
-
+By the well-ordering principle, we have
+\begin{equation*}
+\forall b\in B\exists i_0\in A_b(\forall i\in A_b(i_0\leq i))
+\end{equation*}
+Now we define $g:B\to I_n$ as
+\begin{equation*}
+g(x)=\text{the smallest }i\in I_n\text{ such that }f(i)=x
+\end{equation*}
+First we show that $g$ is a function from $B$ to $I_n$. Let $b$ be some element of $B$. 
+See that $A_b$ is exactly the set of $i\in I_n$ such that $f(i)=b$. As proved, we can declare some
+$i_0\in A_b\subseteq I_n$ to be the smallest element of this set, meaning $g(b)=i_0$. 
+Now let $i_1\in I_n$ such that $g(b)=i_1$. This means that $i_1$ is also the smallest element of $A_b$; since the smallest element is unique, $i_0=i_1$.\\
+\indent We showed that $g$ is a function from $B$ to $I_n$. By the previous theorem $g$ is then also a function from $B$ to Ran$(g)\subseteq I_n$. So $g:B\to\text{Ran}(g)$. Now we show that $g$ is
+one-to-one. Let $b_1$ and $b_2$ be arbitrary elements of $B$ and suppose that $g(b_1)=g(b_2)=x$.
+Then $f(x)=b_1$ and $f(x)=b_2$ and we must have $b_1=b_2$.\\
+\indent Now we show $g:B\to\text{Ran}(g)$ is onto. This is fairly straightforward. For any $i$ in Ran$(g)$ we can, by definition, declare some $b\in B$ such that $(b,i)\in g$. So $g(b)=i$.\\
+\indent We have $B\sim\text{Ran}(g)\subseteq I_n$. By the first theorem Ran$(g)$ is finite and $|\text{Ran}(g)|\leq n$. By the last theorem from the previous subsection, $B$ is also finite and 
+$|B|=|\text{Ran}(g)|\leq n$.
 \end{proof}
 
 
