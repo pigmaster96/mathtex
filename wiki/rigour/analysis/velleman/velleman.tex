@@ -6493,9 +6493,42 @@ such that $a\notin B$. So $f(a)\in I_n$ and $f(a)\notin f(B)$, meaning $I_n\nsub
 know that $f(B)\neq I_n\to|f(B)|<n$. So $|B|=|f(B)|<n=|A|$, and $B\neq A\to |B|<|A|$.
 \end{proof}
 \begin{theorem}
+Suppose $f$ is a function from $A$ to $B$. Then $\text{Ran}(f)\subseteq B$, 
+and $f$ is also a function from $A$ to $\text{Ran}(f)$.
+\end{theorem}
+\begin{proof}
+Recall the definition of $\text{Ran}(f)$
+\begin{equation*}
+\text{Ran}(f)=\{b\mid\exists a\in A((a,b)\in f)\}
+\end{equation*}
+First suppose that $b\in\text{Ran}(f)$. Then we can declare some $a\in A$ such that $(a,b)\in f\subseteq A\times B$.
+So $b\in B$, and $\text{Ran}(f)\subseteq B$.\\
+\indent To show that $f$ is a function from $A$ to $\text{Ran}(f)$, we need to show that 
+$f\subseteq A\times\text{Ran}(f)$ and
+\begin{equation*}
+\forall a\in A(\exists b\in\text{Ran}(f)(f(a)=b\land\forall b'\in\text{Ran}(f)(f(a)=b'\to b'=b)))
+\end{equation*}
+First suppose that $(a,b)\in f$. Since $f\subseteq A\times B$, $a\in A$ and $b\in B$. By definition we have
+$b\in\text{Ran}(f)$. So $(a,b)\in A\times\text{Ran}(f)$. Thus $f\subseteq A\times\text{Ran}(f)$.\\
+\indent Now suppose that $a\in A$. Since $f$ is a function, there exists some $b\in B$ such that $f(a)=b$. 
+This means $(a,b)\in f$, and by definition $b\in\text{Ran}(f)$. Now let $b'\in\text{Ran}(f)$ and suppose that
+$f(a)=b'$. Since $f(a)=b$ and $f(a)=b'$ we must have $b'=b$ since $f$ is a function.
+\end{proof}
+\noindent(next page)
+\newpage
+\begin{theorem}
 Suppose $n\in\mathbb N$, $f:I_n\to B$, and $f$ is onto. Then $B$ is finite and $|B|\leq n$.
 \end{theorem}
 \begin{proof}
+Since $f$ is onto
+\begin{equation*}
+\forall b\in B(\exists i\in I_n(f(i)=b))
+\end{equation*}
+For any $b\in B$, defining $A_b$ as $A_b=\{i\in I_n\mid f(i)=b\}$. We have
+\begin{equation*}
+\forall b\in B(A_b\neq\emptyset)
+\end{equation*}
+
 
 \end{proof}
 
