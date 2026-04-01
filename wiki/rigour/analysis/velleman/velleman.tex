@@ -6688,7 +6688,45 @@ $f(i)=a'$. Since $i>n$, we must then have $a'=a_0$.\\
 such that $g(i)=a$. Since $i\in I_n$, we have $0<i\leq n$, and so
 $f(i)=g(i)=a$.\\
 (next page)\newpage
-\noindent($2\rightarrow3$) Suppose that either $A=\emptyset$ or there is a function $f:\mathbb Z^+\to A$ that is onto.
+\noindent($2\rightarrow3$) Suppose that either $A=\emptyset$ or there is a function from $\mathbb Z^+$ to $A$ that is onto.
+If $A=\emptyset$, then the empty set is a one-to-one function from $A$ to $\mathbb Z^+$ (all requirements are vacuously true).\\
+\indent Now suppose $g:\mathbb Z^+\to A$, and $g$ is onto. This means
+\begin{equation*}
+\forall a\in A\exists n\in\mathbb Z^+(g(n)=a)
+\end{equation*}
+Suppose $a$ is some arbitrary element of $A$. Defining $B_a$ as
+\begin{equation*}
+B_a=\{n\in\mathbb Z^+\mid g(n)=a\}
+\end{equation*}
+Since $g$ is onto, we can declare some $n\in\mathbb Z^*$ such that $g(n)=a$. So $n\in B_a$, and $B_a\neq\emptyset$. Also see 
+that for any $n\in B_a$, $n\in\mathbb Z^+\subseteq\mathbb N$, so
+$B_a\subseteq\mathbb N$. We have shown
+\begin{equation*}
+\forall a\in A(B_a\neq\emptyset\land B_a\subseteq\mathbb N)
+\end{equation*}
+By the well-ordering principle, we then have
+\begin{equation*}
+\forall a\in A(\exists n_0\in B_a\forall n\in B_a(n_0\leq n))
+\end{equation*}
+That is, for any $a\in A$, $B_a$ has a smallest element. Now defining $f:A\to\mathbb Z^+$ as
+\begin{equation*}
+f(a)=\text{the smallest }n\in\mathbb Z^+\text{ such that }g(n)=a
+\end{equation*}
+we first show that $f$ is a function. Let $a\in A$. See that the set of $n\in\mathbb Z^*$ such that $g(n)=a$ is exactly $B_a$.
+As proven, we can declare some $n_0\in B_a$ to be the smallest element of $B_a$. That is, $f(a)=n_0$, where by definition $n_0\in\mathbb Z^+$. 
+Now let $n_1\in\mathbb Z^+$ such that $f(a)=n_1$.
+This means that $n_0$ and $n_1$ are both the smallest element of
+$B_a$. Since the smallest element is unique, we must have $n_0=n_1$.\\
+\indent We've shown that $f$ is a function. Now to show that it is one-to-one, we show that $g\circ f=i_A$. That is
+\begin{equation*}
+\forall a\in A(g(f(a))=I_A(a))
+\end{equation*}
+Suppose $a\in A$. Then since $f$ is a function we can declare some $x\in\mathbb Z^+$ such that $x=f(a)$. By definition this also
+means that $g(x)=a$. So $g(f(a))=a=I_A(a)$.
+By a previous theorem, it follows that $f$ is one-to-one.\\
+(next page)\newpage
+\noindent($3\rightarrow1$)
+
 
 
 
