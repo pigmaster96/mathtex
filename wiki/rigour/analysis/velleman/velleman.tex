@@ -6494,7 +6494,7 @@ know that $f(B)\neq I_n\to|f(B)|<n$. So $|B|=|f(B)|<n=|A|$, and $B\neq A\to |B|<
 \end{proof}
 \begin{theorem}
 Suppose $f$ is a function from $A$ to $B$. Then $\text{Ran}(f)\subseteq B$, 
-and $f$ is also a function from $A$ to $\text{Ran}(f)$.
+and $f$ is an onto function from $A$ to $\text{Ran}(f)$.
 \end{theorem}
 \begin{proof}
 Recall the definition of $\text{Ran}(f)$
@@ -6512,7 +6512,9 @@ First suppose that $(a,b)\in f$. Since $f\subseteq A\times B$, $a\in A$ and $b\i
 $b\in\text{Ran}(f)$. So $(a,b)\in A\times\text{Ran}(f)$. Thus $f\subseteq A\times\text{Ran}(f)$.\\
 \indent Now suppose that $a\in A$. Since $f$ is a function, there exists some $b\in B$ such that $f(a)=b$. 
 This means $(a,b)\in f$, and by definition $b\in\text{Ran}(f)$. Now let $b'\in\text{Ran}(f)$ and suppose that
-$f(a)=b'$. Since $f(a)=b$ and $f(a)=b'$ we must have $b'=b$ since $f$ is a function.
+$f(a)=b'$. Since $f(a)=b$ and $f(a)=b'$ we must have $b'=b$ since $f$ is a function.\\
+\indent Lastly to show that $f$ is onto from $A$ to Ran$(f)$, let $b$ be an element of Ran$(f)$. 
+Then by definition we can declare some $a\in A$ such that $(a,b)\in f$. This means that $f(a)=b$ for $a\in A$.
 \end{proof}
 \noindent(next page)
 \newpage
@@ -6726,6 +6728,12 @@ means that $g(x)=a$. So $g(f(a))=a=I_A(a)$.
 By a previous theorem, it follows that $f$ is one-to-one.\\
 (next page)\newpage
 \noindent($3\rightarrow1$)
+Suppose $g:A\to Z^+$ and $g$ is one-to-one. Letting $B=\text{Ran}(g)$, by a previous theorem $g$ is then also an onto function 
+from $A$ to $B\subseteq Z^+$. We've shown that $g$ is a one-to-one and onto function from $A$ to $B$, so $A\sim B$. We will
+show that $B$ is countable.\\
+\indent Suppose $B$ is infinite. We must show that $B$ is denumerable.
+
+
 
 
 
