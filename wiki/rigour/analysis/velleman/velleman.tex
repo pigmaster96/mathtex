@@ -6658,6 +6658,40 @@ A set $A$ is called \textit{denumerable} if $\mathbb Z^+\sim A$. It is called \t
 One may think of the countable sets as those sets whose elements can be \textit{counted} by pointing to all of them
 one by one while naming positive integers in order. If the counting process ends at some point, then the set is 
 finite; and if it never ends, the set is denumerable.
+\begin{lemma}
+Suppose $B\subseteq\mathbb Z^+$ and that $B$ is infinite. Defining $f:\mathbb Z^+\to B$ recursively as
+\begin{align*}
+\text{For all $n\in\mathbb Z^+$},&\\
+f(n)=&\text{the smallest element of } B\backslash\{f(m)\mid m\in\mathbb Z^+,m<n\}
+\end{align*}
+$f$ is one-to-one and onto.
+\end{lemma}
+\begin{proof}
+First we show that $f$ is a function. It is easy to show that $f\subseteq\mathbb Z^+\times B$.
+We now want to show
+\begin{equation*}
+\forall n\in\mathbb Z^+(\exists b\in B(f(n)=b\land\forall b'\in B(f(n)=b'\to b=b')))
+\end{equation*}
+We proceed by strong induction. We show
+\begin{align*}
+\forall n\in\mathbb Z^+(&\forall m<n(\exists b\in B(f(m)=b\land\forall b'\in B(f(m)=b'\to b=b')))\\
+&\to\exists b\in B(f(n)=b\land\forall b'\in B(f(n)=b'\to b=b')))
+\end{align*}
+Supposing $n\in\mathbb Z^+$ and
+\begin{equation*}
+\forall m<n(\exists b\in B(f(m)=b\land\forall b'\in B(f(m)=b'\to b=b')))
+\end{equation*}
+Denoting $\{f(m)\mid m\in\mathbb Z^+,m<n\}$ as $S_n$,
+we will show that $g:I_{n-1}\to S_n$, defined as $g(i)=f(i)$, is an onto function. Let $i$ be some element of $I_{n-1}$.
+
+
+
+
+\end{proof}
+
+
+
+\newpage
 \begin{theorem}
 Suppose $A$ is a set. The following statements are equivalent:
 \begin{enumerate}
