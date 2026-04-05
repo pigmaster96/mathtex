@@ -6682,7 +6682,21 @@ Supposing $n\in\mathbb Z^+$ and
 \forall m<n(\exists b\in B(f(m)=b\land\forall b'\in B(f(m)=b'\to b=b')))
 \end{equation*}
 Denoting $\{f(m)\mid m\in\mathbb Z^+,m<n\}$ as $S_n$,
-we will show that $g:I_{n-1}\to S_n$, defined as $g(i)=f(i)$, is an onto function. Let $i$ be some element of $I_{n-1}$.
+we will show that $g:I_{n-1}\to S_n$, defined as $g(i)=f(i)$, is an onto function. Let $i$ be some element of $I_{n-1}$. 
+By definition $i<n$, so by the inductive hypothesis we can declare some $b\in B$ such that $f(i)=b$ and $\forall b'\in B(f(i)=b'\to b=b')$. 
+See that $b\in S_n$; and $g(i)=f(i)=b$, proving existence. Let $\beta$ be some element of $S_n$ such that $g(i)=\beta$. Then $f(i)=\beta$, and since $f\subseteq\mathbb Z^+\times B$ we have
+$\beta\in B$. Then the inductive hypothesis, $b=\beta$.\\
+\indent To show that $g$ is onto, let $\alpha$ be some element of $S_n$. This means that there exists some $m\in\mathbb Z^+$ such that $m<n$ and $f(m)=\alpha$. By definition $m\in I_{n-1}$, and 
+$g(m)=f(m)=\alpha$. We have shown that there exists an onto function from $I_{n-1}$ to $S_n$. By a previous theorem this means that $S_n$ is finite.\\
+(next page)\newpage
+\indent Suppose, for contradiction, that $B\backslash S_n=\emptyset$.
+This means $\neg\exists x(x\in B\land x\notin S_n)$, which is equivalent to $\forall x(x\in B\to x\in S_n)$. So $B\subseteq S_n$. Since $S_n$ was proved to be finite, by a previous theorem this
+means that $B$ is also finite. This contradicts the fact that $B$ was assumed to be infinite, so 
+$B\backslash S_n\neq\emptyset$.\\
+\indent By well-ordering, $B\backslash\{f(m)\mid m\in\mathbb Z^+,m<n\}$ has a smallest element $f(n)$;
+this smallest element is, by definition, an element of $B$. The smallest element is unique. This proves that $n$ is well-defined; the inductive proof that $f$ is a valid function is complete.\\
+\indent Next
+
 
 
 
