@@ -122,7 +122,7 @@
 \contentsline {subsection}{\numberline {7.1.4}Intuition}{208}{}%
 \contentsline {subsection}{\numberline {7.1.5}Countable and Uncountable}{211}{}%
 \contentsline {subsection}{\numberline {7.1.6}Well-ordering principle recap}{216}{}%
-\contentsline {subsection}{\numberline {7.1.7}}{217}{}%
+\contentsline {subsection}{\numberline {7.1.7}More theorems}{217}{}%
 \contentsline {chapter}{\numberline {A}Exercises}{218}{}%
 \contentsline {section}{\numberline {A.1}Ch 3}{218}{}%
 \contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{218}{}%

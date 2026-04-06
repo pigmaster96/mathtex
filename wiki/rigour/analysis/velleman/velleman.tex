@@ -6808,11 +6808,6 @@ By the previous lemma, since $B\subseteq Z^+$ and $B$ is infinite, there is a on
 So $B$ is denumerable.\\
 \indent We have shown that $B$ is countable. By transitivity $A$ is countable.
 \end{proof}
-
-
-
-
-
 \newpage
 
 \subsection{Well-ordering principle recap}
@@ -6850,8 +6845,27 @@ it would imply that $s\notin S$.\\
 \end{proof}
 \newpage
 
-\subsection{}
+\subsection{More theorems}
+\begin{theorem}
+$\mathbb Q$ is denumerable.
+\end{theorem}
+\begin{proof}
+Let $f:\mathbb Z\times\mathbb Z^+\to\mathbb Q$ be defined as follows:
+\begin{equation*}
+f(p,q)=p/q
+\end{equation*}
+Clearly $f$ is onto, since by definition all rational numbers can be written as fractions (note that $f$ is not one-to-one; for example $f(1,2)=f(2,4)=1/2$).
+We know that $\mathbb Z^+\sim\mathbb Z$. By an earlier theorem, since $\mathbb Z^+\sim\mathbb Z^+$, we have $\mathbb Z^+\times\mathbb Z^+\sim\mathbb Z\times\mathbb Z^+$. Since we know that
+$\mathbb Z^+\times\mathbb Z^+\sim\mathbb Z^+$, it follows that $\mathbb Z^+\sim\mathbb Z^+$ is also denumerable. Thus we can choose a one-to-one, onto function $g:\mathbb Z^+\to\mathbb Z\times\mathbb Z^+$. By a previous theorem, since both $f$ and $g$ are onto, $f\circ g:\mathbb Z^+\to\mathbb Q$ 
+is onto. By the previous subsection, $\mathbb Q$ is countable. Since $\mathbb Q$ is infinite, it must be denumerable.
+\end{proof}
+\begin{theorem}
+Suppose $A$ and $B$ are disjoint finite sets. Then $A\cup B$ is finite, and $|A\cup B|=|A|+|B|$.
+\end{theorem}
+\begin{proof}
 
+
+\end{proof}
 
 
 
