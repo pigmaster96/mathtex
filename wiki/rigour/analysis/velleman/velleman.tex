@@ -6695,16 +6695,40 @@ means that $B$ is also finite. This contradicts the fact that $B$ was assumed to
 $B\backslash S_n\neq\emptyset$.\\
 \indent By well-ordering, $B\backslash\{f(m)\mid m\in\mathbb Z^+,m<n\}$ has a smallest element $f(n)$;
 this smallest element is, by definition, an element of $B$. The smallest element is unique. This proves that $n$ is well-defined; the inductive proof that $f$ is a valid function is complete.\\
-\indent Next
-
-
-
-
-
+\indent To show that $f$ is one-to-one, we show the contrapositive. Suppose that for $n_1,n_2\in\mathbb Z^+$, $n_1\neq n_2$.
+Then either $n_1<n_2$ or $n_2<n_1$. In the first case $n_1<n_2$; by definition $f(n_2)\in B\backslash S_{n_2}$. 
+But since $n_1<n_2$, $f(n_1)\in S_{n_2}$ so we must have $f(n_1)\neq f(n_2)$. 
+The proof for the second case $n_2<n_1$ is similar to the first.
+So $f$ is one-to-one.\\
+\indent Before we show that $f$ is onto, we first show $f(n)\geq n$ for all $n\in\mathbb Z^+$. That is,
+\begin{equation*}
+\forall n\in\mathbb Z^+(f(n)\geq n)
+\end{equation*}
+We proceed by strong induction.
+\begin{equation*}
+\forall n\in\mathbb Z^+(\forall m<n(f(m)\geq m)\to f(n)\geq n)
+\end{equation*}
+Let $n\in\mathbb Z^+$. Suppose $\forall m<n(f(m)\geq m)$. Now suppose, for contradiction, that $f(n)<n$. Denoting $m=f(n)$,
+since $m\in B\subseteq\mathbb Z^+$ and $m<n$, by the inductive hypthesis $f(m)\geq m$. We know that $m<n$. We can show that 
+$B\backslash S_n\subseteq B\backslash S_m$; that is
+\begin{equation*}
+B\backslash\{f(k)\mid m\in\mathbb Z^+,k<n\}\subseteq
+B\backslash\{f(k)\mid m\in\mathbb Z^+,k<m\}
+\end{equation*}
+For some $x\in B\backslash S_n$, we know $x\notin S_n$. Supposing for contradiction that $x\in S_m$, there exists some $y<m$ such
+that $f(y)=x$. Since $y\in\mathbb Z^+$ and $y<m<n$, we then have $x=f(y)\in S_n$. This is a contradiction. So $x\notin S_m$ and
+$x\in B\backslash S_m$.\\
+\indent We have, by definition, $m\in B\backslash\{f(k)\mid m\in\mathbb Z^+,k<n\}\subseteq
+B\backslash\{f(k)\mid m\in\mathbb Z^+,k<m\}$. But since $f(m)$ is the smallest element of $S_m$, we have $f(m)\leq m$.
+So $f(m)=m$. But $m=f(m)\in S_n$, contradicting the fact that
+$m\in B\backslash S_n$ by definition. As such we must have $f(n)\geq n$. We are done.\\
+\indent Finally to show that $f$ is onto, let $b\in B$. 
+We know that $f(b+1)\geq b+1>b$.
+By definition $f(b+1)$ is the smallest element of $B\backslash S_{b+1}$. So since $f(b+1)>b$ we must have $b\notin B\backslash S_{b+1}$.
+Logically this is equivalent to $b\in B\to b\in S_{b+1}$. So $b\in S_{b+1}$. This means that there exists some $m\in\mathbb Z^+$
+such that $b=f(m)$, which is what we wanted to show.
 \end{proof}
-
-
-
+\noindent (next page)
 \newpage
 \begin{theorem}
 Suppose $A$ is a set. The following statements are equivalent:
@@ -6779,16 +6803,14 @@ By a previous theorem, it follows that $f$ is one-to-one.\\
 Suppose $g:A\to Z^+$ and $g$ is one-to-one. Letting $B=\text{Ran}(g)$, by a previous theorem $g$ is then also an onto function 
 from $A$ to $B\subseteq Z^+$. We've shown that $g$ is a one-to-one and onto function from $A$ to $B$, so $A\sim B$. We will
 show that $B$ is countable.\\
-\indent Suppose $B$ is infinite. We must show that $B$ is denumerable.
-
-
-
-
-
-
-
-
+\indent If $B$ were finite, then of course $B$ is countable. Now suppose $B$ is infinite. We must then show that $B$ is denumerable. 
+By the previous lemma, since $B\subseteq Z^+$ and $B$ is infinite, there is a one-to-one and onto function from $\mathbb Z^+$ to $B$.
+So $B$ is denumerable.\\
+\indent We have shown that $B$ is countable. By transitivity $A$ is countable.
 \end{proof}
+
+
+
 
 
 \newpage
