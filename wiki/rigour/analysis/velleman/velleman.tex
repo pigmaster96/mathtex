@@ -6863,9 +6863,36 @@ is onto. By the previous subsection, $\mathbb Q$ is countable. Since $\mathbb Q$
 Suppose $A$ and $B$ are disjoint finite sets. Then $A\cup B$ is finite, and $|A\cup B|=|A|+|B|$.
 \end{theorem}
 \begin{proof}
-
-
+Since $A$ and $B$ are finite, we can declare two natural numbers $n$ and $m$ such that $A\sim I_n$ and $B\sim I_m$. Defining a function $f:I_m\to I_{n+m}\backslash I_n$ by $f(x)=x+n$, we
+can check that $f$ is one-to-one and onto.\\
+\indent To check that $f$ is a function, let $x$ be some element of $I_m$. Then by definition
+$1\leq x\leq m$ and $1+n\leq x+n\leq m+n$. So clearly $1\leq x+n\leq m+n$ and $x+n\in I_{n+m}$. Since $x$ is defined to be a positive integer, $n<x+n$. So $x+n\notin I_n$ and 
+$f(x)=x+n\in I_{n+m}\backslash I_n$.
+For any arbitrary $y'\in I_{n+m}\backslash I_n$ such that $f(x)=y'$, by definition we have $f(x)=x+n=y'$. This shows that $f$ is a valid function.\\
+\indent To show that $f$ is one-to-one, letting $x_1$ and $x_2$ be elements of $I_m$ such that $f(x_1)=f(x_2)$, we have $x_1+n=x_2+n$ and $x_1=x_2$. To show that it is onto, let 
+$y\in I_{n+m}\backslash I_n$. this means $y\in I_{n+m}$ and $y\notin I_n$. $y\in I_{n+m}$ means $1\leq y\land y\leq n+m$. $y\notin I_n$ means $\neg(1\leq y\land y\leq n)$, and so $(1\leq y\to n<y)$.
+So $n<y\leq n+m$, and $n+1\leq y\leq n+m$, which is equivalent to $1\leq y-n\leq m$. So $y-n\in I_m$, and $f(y-n)=y-n+n=y$.\\
+\indent We will verify two more facts. First we show that $I_{n+m}\backslash I_n$ and $I_n$ are disjoint. For contradiction, suppose we can declare some $x\in I_{n+m}\backslash I_n$ and $x\in I_n$.
+The first statement contradicts the second.\\
+\indent Next we show that 
+$I_{n+m}=(I_{n+m}\backslash I_n)\cup I_n$. First let $x\in I_{n+m}$. Then by definition $1\leq x\leq n+m$. We have two cases; first suppose that $1\leq x\leq n$. Then $x\in I_n$, so 
+$x\in(I_{n+m}\backslash I_n)\cup I_n$. 
+In the second case $n+1\leq x\leq n+m$. $n<x$ implies $x\notin I_n$ and $x\leq n+m$ implies $x\in I_{n+m}$. So $x\in I_{n+m}\backslash I_n$ and $x\in(I_{n+m}\backslash I_n)\cup I_n$. We have shown 
+$I_{n+m}\subseteq(I_{n+m}\backslash I_n)\cup I_n$. Now let $x\in(I_{n+m}\backslash I_n)\cup I_n$.
+Similarly we have two cases. In the first $x\in I_{n+m}\backslash I_n$; as shown earlier this implies $n+1\leq y\leq n+m$. So $1\leq y\leq n+m$ and $y\in I_{n+m}$. For the second case
+$x\in I_n$. Then $m$ is a natural number $1\leq x\leq n\leq n+m$. So $x\in I_{n+m}$. We have now shown $(I_{n+m}\backslash I_n)\cup I_n\subseteq I_{n+m}$. So
+$I_{n+m}=(I_{n+m}\backslash I_n)\cup I_n$.\\
+(next page)\newpage
+\indent To put it all together, we found a one-to-one and onto function $f:I_m\to I_{n+m}\backslash I_n$, so $I_m\sim I_{n+m}\backslash I_n$. Since $I_m\sim B$ we then have, by symmetry and 
+transitivity, $B\sim I_{n+m}\backslash I_n$. We know that $A\sim I_n$. By an earlier theorem, since
+$A$ and $B$ are disjoint and $I_{n+m}\backslash I_n$ and $I_n$ are disjoint,
+$A\cup B\sim(I_{n+m}\backslash I_n)\cup I_n=I_{n+m}$.
+Therefore $A\cup B$ is finite, and $|A\cup B|=n+m=|A|+|B|$. 
 \end{proof}
+\begin{theorem}
+
+\end{theorem}
+
 
 
 
