@@ -6890,8 +6890,19 @@ $A\cup B\sim(I_{n+m}\backslash I_n)\cup I_n=I_{n+m}$.
 Therefore $A\cup B$ is finite, and $|A\cup B|=n+m=|A|+|B|$. 
 \end{proof}
 \begin{theorem}
-
+Suppose $A$ and $B$ are finite sets and $f:A\to B$. If $|A|<|B|$ then $f$ is not onto.
 \end{theorem}
+\begin{proof}
+We will prove the contrapositive. Suppose $f$ is onto. Since $A$ is finite, we have $I_n\sim A$ for some natural number $n$.
+We can let $g:I_n\to A$ be a one-to-one and onto. Since $f:A\to B$ is onto, we then know that $f\circ g:I_n\to B$ is onto.
+By a previous theorem this means that $B$ is finite and $|B|\leq n=|A|$. 
+\end{proof}
+\begin{theorem} (Pigeonhole principle)
+Suppose $A$ and $B$ are finite sets and $f:A\to B$. If $|A|>|B|$ then $f$ is not one-to-one.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
 
 
 
