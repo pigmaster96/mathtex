@@ -11,11 +11,11 @@
 \usepackage{graphicx} %import imaging
 
 \graphicspath{{./images/}} %set imaging path
-\newtheorem{theorem}{Theorem}
-\newtheorem{lemma}{Lemma}
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}
 
+\newtheorem{theo}{Theorem}[chapter]
+\newtheorem{theorem}[theo]{Theorem}
+\newtheorem{lemma}[theo]{Lemma}
+\newtheorem{definition}[theo]{Definition}
 
 
 \begin{document}
@@ -40,7 +40,12 @@
 where $a,b,c,d\in\mathbb R$.
 \end{itemize}
 \end{definition}
+\begin{theorem}
 We will prove the following properties of complex arithmetic:
+\end{theorem}
+
+
+
 
 
 
