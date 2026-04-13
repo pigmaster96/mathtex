@@ -6917,12 +6917,26 @@ theorem $f:A\to\text{Ran}(f)$ is an onto function, where $\text{Ran}(f)\subseteq
 Since $f$ does not map onto $B$, we must have $\text{Ran}(f)\neq B$. By a previous theorem
 we must then have $|\text{Ran}(f)|<|B|$. Since $f$ is also one-to-one, $A\sim\text{Ran}(f)$, so by
 another theorem we have $|A|=|\text{Ran}(f)|<|B|$. This contradicts $|A|=|B|$.\\
-\indent($\leftarrow$)
-
-
-
-
+\indent($\leftarrow$) Suppose $f$ is onto. For contradiction suppose that $f$ is one-to-one. Since $f$ is not one-to-one, there
+exists elements $x_1,x_2$ in $A$ such that $f(x_1)=f(x_2)$ and $x_1\neq x_2$.
+Denoting $A'=A\backslash\{x_1\}$ and $f'=f\backslash\{(x_1,f(x_1))\}$, we will show that $f':A'\to B$ is onto.\\
+\indent First we show that $f'$ is a function. Let $a\in A'$, meaning $a\in A$ and $a\neq x_1$.
+Since $f$ is onto there exists some $b\in B$ such that $f(a)=b$.
+Since $a\neq x_1$, $(a,b)\neq(x_1,f(x_1))$. So since $(a,b)\in f$, $(a,b)\in f\backslash\{(x_1,f(x_1))\}=f'$.
+Now suppose there is some $b'\in B$ such that $f'(a)=b'$. Then by definition $f(a)=b'$. 
+Since $f$ is a function, we must then have $b=b'$.\\
+\indent To show that $f'$ is onto, let $b\in B$. Since $f$ is onto, there exists $a\in A$ such that $f(a)=b$. We have two cases;
+first suppose $a=x_1$. Then $b=f(a)=f(x_1)=f(x_2)$.
+Since $x_1\neq x_2$, we have $x_2\in A\backslash\{x_1\}=A'$ and 
+$(x_2,b)\in f'$. For the other case suppose $a\neq x_1$. Then $a\in A'$ and $(a,b)\in f'$.\\
+\indent We showed that $f'$ is an onto function from $A'\subset A$ to $B$. Then by a previous theorem we have
+$|A'|<|A|=|B|$. This contradicts the third theorem in this subsection. 
 \end{proof}
+\newpage
+
+\section{Countable and Uncountable sets}
+
+
 
 
 
