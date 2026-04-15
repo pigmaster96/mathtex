@@ -6650,6 +6650,49 @@ are equinumerous with $\mathbb Z^+$. Such sets are
 especially important and have a special name.
 \newpage
 
+\subsection{Deriving Cantor's pairing function}
+Imagine a $\mathbb N$ by $\mathbb N$ lattice:
+\begin{center}
+\includegraphics[width=7cm]{25}
+\end{center}
+The idea here is that we can enumerate through each point in this lattice, assigning a number to each step, leaving us with a 
+one-to-one and onto function from $\mathbb N$ to $\mathbb N\times \mathbb N$.\\
+\vspace{1mm}\\
+Cantor's function $\pi:\mathbb N\times\mathbb N\to\mathbb N$ can be expressed inductively as
+\begin{equation*}
+\pi(x,y)+1=\pi(x-1,y+1)
+\end{equation*}
+The function must also define what to do when it hits the boundaries of the first quadrant:
+\begin{equation*}
+\pi(0,k)+1=\pi(k+1,0)
+\end{equation*}
+We also need to define the starting point (the base case) $\pi(0,0)=0$. Assume that there is a quadratic 2 dimensional polynomial that 
+can fit these conditions (if there were not, one could just repeat by trying a higher-degree polynomial). The general form is
+\begin{equation*}
+\pi(x,y)=ax^2+by^2+cxy+dx+ey+f
+\end{equation*}
+Plugging in our initial conditions we get $f=0$. Plugging in the boundary conditions gives
+\begin{equation*}
+bk^2+ek+1=a(k+1)^2+d(k+1)
+\end{equation*}
+So we can compare coefficients to get $b=a$, $d=1-a$, and $e=1+a$. So every parameter can be written in terms of $a$ except $c$.\\
+(next page)\newpage
+\noindent\textbf{Cont.}\\
+Our diagonal step can be written as
+\begin{align*}
+\pi(x,y)+1=&a(x^2+y^2)+cxy+(1-a)x+(1+a)y+1\\
+=&a((x-1)^2+(y+1)^2)+c(x-1)(y+1)+(1-a)(x-1)\\&+(1+a)(y+1)
+\end{align*}
+Where expanding and comparing coefficients again will yield
+$a=1/2=b=d$, $c=1$.
+Therefore
+\begin{align*}
+\pi(x,y)&=\frac{1}{2}(x^2+y^2)+xy+\frac{1}{2}x+\frac{3}{2}y\\
+&=\frac{1}{2}(x+y)(x+y+1)+y
+\end{align*}
+is the cantor pairing function.
+\newpage
+
 \subsection{Countable and Uncountable}
 \begin{definition}
 A set $A$ is called \textit{denumerable} if $\mathbb Z^+\sim A$. It is called \textit{countable} if it is either finite or denumerable. Otherwise it is \textit{uncountable}.
@@ -6808,6 +6851,13 @@ By the previous lemma, since $B\subseteq Z^+$ and $B$ is infinite, there is a on
 So $B$ is denumerable.\\
 \indent We have shown that $B$ is countable. By transitivity $A$ is countable.
 \end{proof}
+\noindent\textbf{Intuition}\\
+Consider some set $A$. If $A$ is countable and $A\neq\emptyset$, then by the previous theorem there is a function $f:\mathbb Z^+\to A$ that is onto. If, for every $n\in\mathbb Z^+$, we let 
+$a_n=f(n)$, then the fact that $f$ is onto means that every element of $A$ appears at least once in the list $a_1,a_2,a_3,\ldots$. In other words, $A=\{a_1,a_2,a_3,\ldots\}$.\\
+\vspace{1mm}\\
+Countability of a set $A$ is often used in this way to enable us to write the elements of $A$ in a list, indexed by the positive integers.
+One may think of countability as meaning \textit{listability}. Also see that if $A$ is denumerable, then the function $f$ can be taken to be one-to-one, which means that each element of $A$
+will appear only once in the list $a_1,a_2,a_3,\ldots$.
 \newpage
 
 \subsection{Well-ordering principle recap}
