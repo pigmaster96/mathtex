@@ -125,8 +125,8 @@
 \contentsline {subsection}{\numberline {7.1.7}Well-ordering principle recap}{218}{}%
 \contentsline {subsection}{\numberline {7.1.8}More theorems}{219}{}%
 \contentsline {section}{\numberline {7.2}Countable and Uncountable sets}{221}{}%
-\contentsline {chapter}{\numberline {A}Exercises}{222}{}%
-\contentsline {section}{\numberline {A.1}Ch 3}{222}{}%
-\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{222}{}%
-\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{222}{}%
-\contentsline {subsection}{\numberline {A.1.3}}{223}{}%
+\contentsline {chapter}{\numberline {A}Exercises}{224}{}%
+\contentsline {section}{\numberline {A.1}Ch 3}{224}{}%
+\contentsline {subsection}{\numberline {A.1.1}$\exists x(P(x)\to Q(x))$ is equivalent to $\forall xP(x)\to \exists xQ(x)$}{224}{}%
+\contentsline {subsection}{\numberline {A.1.2}If $\exists x(P(x)\to Q(x))$, then $\forall xP(x)\to \exists xQ(x)$}{224}{}%
+\contentsline {subsection}{\numberline {A.1.3}}{225}{}%

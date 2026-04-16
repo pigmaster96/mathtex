@@ -1,0 +1,18 @@
+# Fdb version 4
+["pdflatex"] 1776284924.84223 "quotes.tex" "quotes.pdf" "quotes" 1776284925.09329 0
+  "/etc/texmf/web2c/texmf.cnf" 1767433088.34546 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/report.cls" 1738182759 23203 7ac64169eac711b8259b91f4833984f3 ""
+  "/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo" 1738182759 8448 5cf247d4bd0c7d5d711bbbdf111fae2e ""
+  "/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def" 1716410060 29785 9f93ab201fe5dd053afcc6c1bcf7d266 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
+  "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1767433103 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1767433139 3348620 54815ecd3cfca19d87f06e16fc1eb500 ""
+  "quotes.aux" 1776284925.07642 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "quotes.tex" 1776284923.51239 365 38cbce5d4dd77f4a66554ea3a80b4834 ""
+  (generated)
+  "quotes.aux"
+  "quotes.log"
+  "quotes.pdf"
+  (rewritten before read)

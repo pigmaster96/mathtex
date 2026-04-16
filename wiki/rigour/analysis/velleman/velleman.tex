@@ -6997,17 +6997,55 @@ Since $A$ and $B$ are countable, by the circle of implications from the last sec
 \begin{enumerate}
 \item Defining $h:A\times B\to\mathbb Z^+\times\mathbb Z^+$ by the formula
 \begin{equation*}
-h(a,b)=(f(a),g(b))
+h((a,b))=(f(a),g(b))
 \end{equation*}
-First we show that $h$ is a function. 
-
-
-
-
-
+First we show that $h$ is a function. Let $(a,b)$ be some element of $A\times B$. Then we can declare $x=f(a)\in\mathbb Z^+$ and $y=g(b)\in\mathbb Z^+$.
+So $(x,y)\in\mathbb Z^+\times\mathbb Z^+$ and $h((a,b))=(f(a),g(b))=(x,y)$. Now
+let $(x',y')\in\mathbb Z^+\times\mathbb Z^+$ such that $h((a,b))=(x',y')$. Then 
+$(x',y')=(f(a),g(b))$ and $(x,y)=(f(a),g(b))$. Since $f$ and $g$ are both functions. We then have $x'=x$ and $y'=y$.
+So $(x',y')=(x,y)$.\\
+\vspace{1mm}\\
+Now we show that $h$ is one-to-one. Letting $(a_1,b_1)$ and $(a_2,b_2)$ be elements of $A\times B$, and supposing that $h((a_1,b_1))=h((a_2,b_2))$. This means that
+$(f(a_1),g(b_1))=(f(a_2),g(b_2))$. Since $f$ and $g$ are both one-to-one, we then have $(a_1,b_1)=(a_2,b_2)$.\\
+\vspace{1mm}\\
+We now have shown that $h$ is a one-to-one function from $A\times B$ to $\mathbb Z^+\times\mathbb Z^+$. We know that $\mathbb Z^+\times\mathbb Z^+\sim\mathbb Z^+$; we can declare $j$ to be a
+one-to-one, onto function from $\mathbb Z^+\times\mathbb Z^+$ to $\mathbb Z^+$. By a previous theorem we can then say that $j\circ h$ is a one-to-one function from $A\times B$ to $\mathbb Z^+$.
+By the circle of implications we can conclude that $A\times B$ is countable.\\
+(next page)\newpage
+\item Defining $h:A\cup B\to\mathbb Z$ as:
+\begin{equation*}
+h(x)=\begin{cases}
+f(x),&\text{if }x\in A,\\
+-g(x),&\text{if }x\notin A.
+\end{cases}
+\end{equation*}
+First we show that $h$ is a function. Let $x$ be some element of $A\cup B$. 
+We have two cases. First suppose that $x\in A$; then we can declare $y=f(x)\in\mathbb Z^+\subseteq\mathbb Z$. Since $x\in A$, $h(x)=f(x)=y\in\mathbb Z$. Now let $y'\in\mathbb Z$ such that $h(x)=y'$.
+Then $f(x)=y'$; since $f$ is a function $y=y'$. For the other case suppose $x\notin A$. Since $x\in A\cup B$ we must have $x\in B$. We can then declare $g(x)\in\mathbb Z^+$; denoting $y=-g(x)$, since $x\notin A$ we
+have $h(x)=-g(x)=y\in\mathbb Z$. Now suppose there exists some $y'\in\mathbb Z$ such that $h(x)=y'$.
+Then $g(x)=-y$ and $g(x)=-y'$. Since $g$ is one-to-one we then have $-y=-y'$ and $y=y'$.\\
+\vspace{1mm}\\
+Now we show that $h$ is one-to-one. Let $x_1,x_2$ be elements of $A\cup B$ such that $h(x_1)=h(x_2)$. Denoting $y=h(x_1)=h(x_2)$, we have 2 cases.\\
+Case 1: $y>0$. Suppose for contradiction that $x_1\notin A\lor x_2\notin A$. In the case that $x_1\notin A$ then we must have $x_1\in B$. We can then declare $g(x_1)\in\mathbb Z^+$. Then
+$y=h(x_1)=-g(x_1)<0$ is a contradiction. We can similarly show that $x_2\notin A$ leads to a contradiction. We must have $x_1\in A\land x_2\in A$. So $f(x_1)=h(x_1)=h(x_2)=f(x_2)$. Since $f$ is 
+one-to-one, $x_1=x_2$.\\
+Case 2: $y\leq0$. Supposing for contradiction that $x_1\in A\lor x_2\in A$, in the case that $x_1\in A$ we have $y=h(x_1)=f(x_1)\in\mathbb Z^+$, implying that $y>0$; this is a contradiction. 
+The other case where $x_2\in A$ leads to a contradiction in a similar manner. We must have $x_1\notin A\land x_2\notin A$. So $-g(x_1)=h(x_1)=h(x_2)=-g(x_2)$ and $g(x_1)=g(x_2)$.
+Since $g$ is one-to-one, $x_1=x_2$.\\
+\vspace{1mm}\\
+We have shown that $h$ is a one-to-one function from $A\cup B\to\mathbb Z$. We already know that
+$\mathbb Z\sim\mathbb Z^+$. We can then declare $j:\mathbb Z\to\mathbb Z^+$ be a one-to-one, onto
+function. By a previous theorem we can conclude that $j\circ h:A\cup B\to\mathbb Z^+$ is one-to-one, so $A\cup B$ is countable.\qedhere
 \end{enumerate}
 \end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+The union of countably many countable sets is countable. That is, for some family of sets $\mathcal F$, if $\mathcal F$ is countable and every element of $\mathcal F$ is countable, then 
+$\bigcup\mathcal F$ is countable.
+\end{theorem}
+\begin{proof}
 
+\end{proof}
 
 
 
