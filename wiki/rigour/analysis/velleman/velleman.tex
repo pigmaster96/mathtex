@@ -7051,11 +7051,41 @@ function. By a previous theorem we can conclude that $j\circ h:A\cup B\to\mathbb
 \end{enumerate}
 \end{proof}
 \noindent(next page)\newpage
+\begin{lemma}
+Suppose $A$ and $B$ are sets, $B\subseteq A$, and $B\neq\emptyset$. Then there exists an onto function from $A$ to $B$.
+\end{lemma}
+\begin{proof}
+Since $B$ is nonempty, we can declare $b_0\in B$.
+Define $f:A\to B$ as
+\begin{equation*}
+f(a)=\begin{cases}
+a,&a\in B,\\
+b_0&a\notin B
+\end{cases}
+\end{equation*}
+To show that $f$ is a function, let $x\in A$. We have two cases. First suppose that $x\in B$. Then $f(x)=x$. Letting $y\in B$ such that $f(x)=y$, since $x\in B$ we have $x=y$ by definition. In the
+other case suppose that $x\notin B$. Then $f(x)=b_0\in B$. Letting $y\in B$ such that $y=f(x)$, we have by definition $b_0=y$.\\
+\indent To show that $f$ is onto, let $y\in B$. Since $B\subseteq A$ then $y\in A$. Since $y\in B$ we have $y=f(y)$.
+\end{proof}
 \begin{theorem}
 The union of countably many countable sets is countable. That is, for some family of sets $\mathcal F$, if $\mathcal F$ is countable and every element of $\mathcal F$ is countable, then 
 $\bigcup\mathcal F$ is countable.
 \end{theorem}
 \begin{proof}
+First we consider the case where $\emptyset\notin\mathcal F$. We have two further cases here. First suppose that $\mathcal F=\emptyset$. Then one can easily show that $\bigcup\mathcal F=\emptyset$, 
+which is finite and therefore countable.\\
+\indent Now suppose that $\mathcal F\neq\emptyset$. Since $\mathcal F$ is countable, by the circle of implications from the previous section, there exists an onto function $f$ from $\mathbb Z^+$ 
+to $\mathcal F$. So denoting $A_i$ as $f(i)$ for $i\in\mathbb Z^+$, the list $A_1,A_2,A_3,\ldots$ will contain all the elements of $\mathcal F$ since $f$ is onto. 
+We can therefore write $\mathcal F=\{A_1,A_2,A_3,\ldots\}$. We assumed that $\emptyset\notin\mathcal F$. So every element of $\mathcal F$ is nonempty. Since each element is assumed to be countable,
+each element of $\mathcal F$ has its own onto function. We will denote $g_i$ to be the the specific onto function from $\mathbb Z^+$ to $A_i$. Denoting $a^i_j=g_i(j)$ for $j\in\mathbb Z^+$, we can 
+write
+\begin{align*}
+A
+\end{align*}
+
+
+
+
 
 \end{proof}
 
