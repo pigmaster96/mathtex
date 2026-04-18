@@ -7080,14 +7080,55 @@ We can therefore write $\mathcal F=\{A_1,A_2,A_3,\ldots\}$. We assumed that $\em
 each element of $\mathcal F$ has its own onto function. We will denote $g_i$ to be the the specific onto function from $\mathbb Z^+$ to $A_i$. Denoting $a^i_j=g_i(j)$ for $j\in\mathbb Z^+$, we can 
 write
 \begin{align*}
-A
+A_1&=\{a^1_1,a^1_2,a^1_3,\ldots\}\\
+A_2&=\{a^2_1,a^2_2,a^2_3,\ldots\}\\
 \end{align*}
-
-
-
-
-
+Where in general
+\begin{equation*}
+A_i=\{a^i_1,a^i_2,a^i_3,\ldots\}
+\end{equation*}
+By definition:
+\begin{equation*}
+\bigcup\mathcal F=\{a\mid\exists A\in\mathcal F(a\in A)\}
+\end{equation*}
+(next page)\newpage
+We will prove that for arbitrary $a$,
+\begin{equation*}
+\exists A\in\mathcal F(a\in A)\leftrightarrow\exists i\in\mathbb Z^+\exists j\in\mathbb Z^+(a=a^i_j)
+\end{equation*}
+($\leftarrow$) Declaring $i$ and $j$ to be positive integers such that $a=a^i_j$, since $f$ is a function we can
+declare $A_i=f(i)\in\mathcal F$. We declared that there was an onto function $g_i:\mathbb Z^+\to A_i$, so since $j$ is a positive integer we have $a=a^i_j=g_i(j)\in A_i$.
+So $a\in A_i\in\mathcal F$.\\
+\indent($\rightarrow$) Declaring $A\in\mathcal F$ such that $a\in A$, since $f$ maps onto $\mathcal F$, we can declare some $i\in\mathbb Z^+$ such that $A_i=f(i)=A$. So $a\in A=A_i$. 
+Similarly since $g_i$ maps onto $A_i$, we can declare $j\in\mathbb Z^+$ such that $a^i_j=g_i(j)=a$.\\
+\indent We now have
+\begin{equation*}
+\bigcup\mathcal F=\{a\mid\exists i\in\mathbb Z^+\exists j\in\mathbb Z^+(a=a^i_j)
+\}\leftrightarrow
+\{a^i_j\mid i\in\mathbb Z^+,j\in\mathbb Z^+\}
+\end{equation*}
+Define $h:\mathbb Z^+\times\mathbb Z^+\to\bigcup\mathcal F$ as $h(i,j)=a^i_j$.
+To show that $h$ is a function, let $(x,y)\in\mathbb Z^+\times\mathbb Z^+$. Since $x$ and $y$ are both positive integers, $h(i,j)=a^i_j\in\bigcup\mathcal F$.
+Suppose now that $h(i,j)=a'$ for $a'\in\bigcup\mathcal F$. Then $g_x(y)=a'$ and $g_x(y)=a^i_j$.
+Since $g_x$ is a function we must have $a'=a^i_j$.\\
+\indent To show that $h$ is onto, let $a\in\bigcup\mathcal F$. Then by definition we can declare $i$ and $j$ to be positive integers such that $a=a^i_j=h(i,j)$.\\
+\indent $h$ is an onto function from $\mathbb Z^+\times\mathbb Z^+$ to $\bigcup\mathcal F$. We know that $\mathbb Z^+\sim\mathbb Z^+\times\mathbb Z^+$. So letting $j$ be a one-to-one, onto 
+function from $\mathbb Z^+$ to $\mathbb Z^+\times\mathbb Z^+$, $h\circ j:Z^+\to\bigcup\mathcal F$ is then onto. Since $\mathcal F$ is nonempty and $\emptyset\notin\mathcal F$, we can show that 
+$\bigcup\mathcal F$ is nonempty; therefore $\bigcup\mathcal F$ is countable.\\
+\indent We showed that in the case where $\emptyset\notin\mathcal F$, $\bigcup\mathcal F$ is countable. Now suppose that $\emptyset\in\mathcal F$. 
+Denoting $\mathcal F'=\mathcal F\backslash\{\emptyset\}$, first consider the case where $\mathcal F'=\emptyset$. Then $\bigcup\mathcal F'=\emptyset$ and $\bigcup\mathcal F'$ is countable. 
+In the case where $\mathcal F'$ is nonempty, $\mathcal F$ must also be nonempty and we know that $\mathcal F$ is countable, so there is an onto function from $\mathbb Z^+$ to $\mathcal F$. 
+Since $\mathcal F'\subseteq\mathcal F$ and $\mathcal F'$ is nonempty, there exists an onto function from $\mathcal F$ to $\mathcal F'$. The composition of these two functions is an onto function
+from $\mathbb Z^+$ to $\mathcal F'$. $\mathcal F'$ is nonempty, so $\mathcal F'$ is countable. 
+Since all elements of $\mathcal F$ are countable, all elements of $\mathcal F'$ are also countable.
+Since $\emptyset\notin\mathcal F'$, $\mathcal F'$ is a nonempty family of nonempty countable sets; as previously shown this means that $\bigcup\mathcal F'$ is countable.\\
+\indent In either case $\bigcup\mathcal F'$ is countable. It can be easily shown that $\bigcup\mathcal F=\bigcup\mathcal F'$. 
+So $\bigcup\mathcal F$ is countable.
 \end{proof}
+\newpage
+
+\subsection{Finite sequences}
+
 
 
 
