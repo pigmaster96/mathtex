@@ -7128,9 +7128,52 @@ So $\bigcup\mathcal F$ is countable.
 \newpage
 
 \subsection{Finite sequences}
+\begin{definition}
+Suppose $A$ is a set. A function $f:I_n\to A$, where $n$ is a natural number, is called a \textit{finite sequence} of elements of $A$, and $n$ is called the \textit{length} of the sequence.
+\end{definition}
+\begin{theorem}
+Suppose $A$ is a countable set. Then the set of all finite sequences of elements of $A$ is also countable.
+\end{theorem}
+\begin{proof}
+We want to show that 
+\begin{equation*}
+\{f\mid f:I_n\to A,n\in\mathbb N\}
+\end{equation*}
+is countable. First we show that this set is equivalent to
+\begin{equation*}
+\bigcup_{n\in\mathbb N}\{f\mid f:I_n\to A\}
+\end{equation*}
+First suppose that $f:I_n\to A$ is an arbitrary function for arbitrary $n\in\mathbb N$. 
+Then $f\in\{f\mid f:I_n\to A\}$. So since $n\in\mathbb N$, $f\in\bigcup_{n\in\mathbb N}\{f\mid f:I_n\to A\}$. This shows 
+$\{f\mid f:I_n\to A,n\in\mathbb N\}\subseteq\bigcup_{n\in\mathbb N}\{f\mid f:I_n\to A\}$.
+Now suppose that $f\in\bigcup_{n\in\mathbb N}\{f\mid f:I_n\to A\}$. Then for some $n\in\mathbb N$, $f\in\{f\mid f:I_n\to A\}$, so $f$ must be a function from $I_n$ to $A$. 
+Since $n\in\mathbb N$, this means $f\in\{f\mid f:I_n\to A,n\in\mathbb N\}$. So
+$\bigcup_{n\in\mathbb N}\{f\mid f:I_n\to A\}\subseteq\{f\mid f:I_n\to A,n\in\mathbb N\}$ and 
+$\bigcup_{n\in\mathbb N}\{f\mid f:I_n\to A\}=\{f\mid f:I_n\to A,n\in\mathbb N\}$.\\
+\indent We will show that for every natural number, $\{f\mid f:I_n\to A\}$ is countable. We proceed by induction. For the base case $\{f\mid f:I_0\to A\}=\{f\mid f:\emptyset\to A\}$,
+The only element in this set is $\emptyset$. Since otherwise we would be able to declare $f\in\{f\mid f:\emptyset\to A\}$ such that $f\neq\emptyset$; which would mean that some 
+$(x,y)\in f\subseteq\emptyset\times A$, which is a contradiction. $\{f\mid f:I_0\to A\}=\{\emptyset\}$, which is finite and therefore countable.\\
+\indent For the induction step, we need to show
+\begin{equation*}
+\forall n\in\mathbb N(\{f\mid f:I_n\to A\}\text{ is countable}\to\{f\mid f:I_{n+1}\to A\}\text{ is countable})
+\end{equation*}
+Suppose $n$ is a natural number and $\{f\mid f:I_n\to A\}$ is countable. We will show 
+\begin{equation*}
+\{f\mid f:I_n\to A\}\times A\sim\{f\mid f:I_{n+1}\to A\}
+\end{equation*}
+We define that function $F:\{f\mid f:I_n\to A\}\times A\to\{f\mid f:I_{n+1}\to A\}$ as
+\begin{equation*}
+F(f,a)=f\cup\{(n+1,a)\}
+\end{equation*}
+(Intuitively, for any sequence $f\in\{f\mid f:I_n\to A\}$ and $a\in A$, $F(f,a)$ is the sequence where $a$ is tacked on to $f$ as term number $n+1$)\\
+(next page)\newpage
+First we show that $F$ is a function. 
 
 
 
+
+
+\end{proof}
 
 
 
