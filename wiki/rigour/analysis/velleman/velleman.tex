@@ -7167,7 +7167,25 @@ F(f,a)=f\cup\{(n+1,a)\}
 \end{equation*}
 (Intuitively, for any sequence $f\in\{f\mid f:I_n\to A\}$ and $a\in A$, $F(f,a)$ is the sequence where $a$ is tacked on to $f$ as term number $n+1$)\\
 (next page)\newpage
-First we show that $F$ is a function. 
+First we show that $F$ is a function. Let $(g,a)$ be some element of $\{f\mid f:I_n\to A\}\times A$. Then $g:I_n\to A$ and $a\in A$. We will show that $g\cup\{(n+1,a)\}$ is a function from 
+$I_{n+1}\to A$. Suppose $i\in I_{n+1}$; we have two cases.\\
+\indent For the first case $1\leq i\leq n$. In which case $i\in I_n$ and we can declare some $a_0\in A$ such that $g(i)=a_0$. So $(i,a_0)\in g$ and $(i,a_0)\in g\cup\{(n+1,a)\}$. 
+Suppose now that $(i,a_0')\in g\cup\{(n+1,a)\}$ for some $a_0'\in A$. Since $i<n$ we must have $(i,a_0')\neq (n+1,a)$ and therefore $(i,a_0')\in g$. Since $g$ is a function we must then have
+$a'_0=a_0$.\\
+\indent For the other case suppose $i=n+1$. Then $(i,a)=(n+1,a)\in g\cup\{(n+1,a)\}$.
+Suppose $(i,a')\in g\cup\{(n+1,a)\}$ for some $a'\in A$. Since $i=n+1$, $i\notin I_n$ and $(i,a')\notin g$. So we must have $(i,a')\in\{(n+1,a)\}$, $(i,a')=(n+1,a)$, and $a'=a$. So $g\cup\{(n+1,a)\}$ is a function from 
+$I_{n+1}\to A$, meaning $g\cup\{(n+1,a)\}\in\{f\mid f:I_{n+1}\to A\}$.\\
+\indent We have now showed that for every $(g,a)\in\{f\mid f:I_n\to A\}\times A$, $F(g,a)=g\cup\{(n+1,a)\}\in\{f\mid f:I_{n+1}\to A\}$ exists. 
+Now suppose that there exists some $h\in\{f\mid f:I_{n+1}\to A\}$ such that $F(g,a)=h$.
+By definition we must have $g\cup\{(n+1,a)\}=h$. We have now shown that $F$ is a function.\\
+\indent Now we show that $F$ is one-to-one.
+
+
+
+
+
+
+
 
 
 
