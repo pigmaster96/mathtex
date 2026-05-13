@@ -24,7 +24,7 @@
 \tableofcontents
 
 \chapter{Axioms and Operations}
-\section{Axioms}
+\section{Axioms I}
 \textit{Extensionality axiom}\\
 If two sets have the exact same members, then they are equal:
 \begin{equation*}
@@ -42,6 +42,55 @@ For any sets $u$ and $v$, there is a set having as members just $u$ and $v$:
 \begin{equation*}
 \forall u\forall v\exists B\forall x(x\in B\leftrightarrow x=u\text{ or }x=v)
 \end{equation*}
+\textit{Union axiom, Preliminary form}\\
+For any sets $a$ and $b$, there is a set whose members are those sets belonging either to $a$ or to $b$ (or both):
+\begin{equation*}
+\forall a\forall b\exists B\forall x(x\in B\leftrightarrow x\in a\text{ or }x\in b)
+\end{equation*}
+(next page)\newpage
+\noindent\textit{Power set axiom}\\
+For any set $a$, there is a set whose members are exactly the subsets of $a$:
+\begin{equation*}
+\forall a\exists B\forall x(x\in B\leftrightarrow x\subseteq a)
+\end{equation*}
+We can rewrite $x\subseteq a$ in terms of the definition of $\subseteq$:
+\begin{equation*}
+\forall t(t\in x\to t\in a)
+\end{equation*}
+This list will be further expanded later to include
+\begin{itemize}
+\item Subset axioms
+\item Replacement axioms
+\item Infinity axiom
+\item Regularity axiom
+\item Choice axiom
+\end{itemize}
+The union axiom will be also be restated in a stronger form.
+\newpage
+
+\subsection{Definitions}
+\begin{definition}
+$\emptyset$ is the set having no members.
+\end{definition}
+\noindent This definition bestows the name ``$\emptyset$'' on a certain set. When we write down such a definition we must be sure of two things: that there exists such a set and that there cannot be more 
+than one set having no members. The empty set axiom provides the first fact and extensionality provides the second.
+Without both facts the symbol ``$\emptyset$'' would not be well defined.
+\begin{definition}\hspace{1mm}
+\begin{itemize}
+\item For any sets $u$ and $v$, the \textbf{pair set} $\{u,v\}$ is the set whose members are $u$ and $v$.
+\item For any sets $a$ and $b$, the \textbf{union} $a\cup b$ is the set whose members are those sets belonging either to $a$ or to $b$ (or both).
+\item For any set $a$, the \textbf{power set} $\mathscr Pa$ is the set whose members are exactly the subsets of $a$.
+\end{itemize}
+\end{definition}
+\noindent The existence and uniqueness proofs guaranteeing all of these definitions can be proved using the empty set axiom, the pairing axiom, the union axiom, and the power set axiom respectively,
+each in combination with the extensionality axiom.\\
+\vspace{1mm}\\
+We can use the pairing and union together to form other finite sets. Given any $x$ we can denote the pair set $\{x,x\}$ as the \textit{singleton} $\{x\}$ (since the pair exists and is unique). 
+For any given $x_1,x_2,x_3$ we can define
+\begin{equation*}
+\{x_1,x_2,x_3\}=\{x_1,x_2\}\cup\{x_3\}
+\end{equation*}
+(since the union exists and is unique for any two particular sets). Similarly we can define $\{x_1,x_2,x_3,x_4\}$ and so forth.
 
 
 
