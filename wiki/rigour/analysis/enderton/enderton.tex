@@ -23,7 +23,27 @@
 
 \tableofcontents
 
-\chapter{}
+\chapter{Axioms and Operations}
+\section{Axioms}
+\textit{Extensionality axiom}\\
+If two sets have the exact same members, then they are equal:
+\begin{equation*}
+\forall A\forall B[\forall x(x\in A\leftrightarrow x\in B)\to A=B]
+\end{equation*}
+(The nested implication is not an equivalence because the other direction is already true. Declaring it would be redundant.)\\
+\vspace{1mm}\\
+\textit{Empty set axiom}\\
+There is a set having no members:
+\begin{equation*}
+\exists B\forall x(x\notin B)
+\end{equation*}
+\textit{Pairing axiom}\\
+For any sets $u$ and $v$, there is a set having as members just $u$ and $v$:
+\begin{equation*}
+\forall u\forall v\exists B\forall x(x\in B\leftrightarrow x=u\text{ or }x=v)
+\end{equation*}
+
+
 
 
 
