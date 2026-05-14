@@ -24,7 +24,7 @@
 \tableofcontents
 
 \chapter{Axioms and Operations}
-\section{Axioms I}
+\section{First Axioms}
 \textit{Extensionality axiom}\\
 If two sets have the exact same members, then they are equal:
 \begin{equation*}
@@ -90,7 +90,26 @@ For any given $x_1,x_2,x_3$ we can define
 \begin{equation*}
 \{x_1,x_2,x_3\}=\{x_1,x_2\}\cup\{x_3\}
 \end{equation*}
-(since the union exists and is unique for any two particular sets). Similarly we can define $\{x_1,x_2,x_3,x_4\}$ and so forth.
+(since the union exists and is unique for any two particular sets). Similarly we can define $\{x_1,x_2,x_3,x_4\}$ and so forth.\\
+(next page)\newpage
+\noindent\textbf{Notation}\\
+Our existence axioms have been of the form ``there exists a set $B$ whose members are those sets $x$ satisfying the condition \_\_''
+\begin{equation*}
+\exists B\forall x(x\in B\leftrightarrow \_\_)
+\end{equation*}
+Where if some other sets $t_1,\ldots,t_k$ are involved in the condition, then the full version becomes
+\begin{equation*}
+\forall t_1\cdots\forall t_k\exists B\forall x(x\in B\leftrightarrow\_\_)
+\end{equation*}
+With the blank filled in be some expression involving $t_1,\ldots,t_k$ and $x$. The empty set axiom can be written as
+\begin{equation*}
+\exists B\forall x(x\in B\leftrightarrow x\neq x)
+\end{equation*}
+Now let us be more general and consider any statement of the form
+\begin{equation*}
+\forall t_1\cdots\forall t_k\exists B\forall x(x\in B\leftrightarrow\_\_)
+\end{equation*}
+
 
 
 
