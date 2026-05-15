@@ -109,10 +109,29 @@ Now let us be more general and consider any statement of the form
 \begin{equation*}
 \forall t_1\cdots\forall t_k\exists B\forall x(x\in B\leftrightarrow\_\_)
 \end{equation*}
+If the statement were true, then the set $B$, by the statement itself, as well as by equivalence, can be named by use of the abstraction notation:
+\begin{equation*}
+B=\{x\mid\_\_\}
+\end{equation*}
+*My interpretation was that showing the existence and uniqueness of $B$ amounts to showing:
+\begin{equation*}
+\forall t_1\cdots\forall t_k[\exists B(\forall x(x\in B\leftrightarrow\_\_)\land 
+\forall B'(\forall x(x\in B'\leftrightarrow\_\_)\to B'=B))]
+\end{equation*}
+The sets defined earlier can similarly be named in this notation:
+\begin{align*}
+\emptyset&=\{x\mid x\neq x\}\\
+\{u,v\}&=\{x\mid x=u\text{ or }x=v\}\\
+a\cup b&=\{x\mid x\in a\text{ or }x\in b\}\\
+\mathscr Pa&=\{x\mid x\subseteq a\}
+\end{align*}
+Note that it is not the case that all statements of the general form are true. For instance 
+\begin{equation*}
+\exists B\forall x(x\in B\leftrightarrow x=x)
+\end{equation*}
+is false as it asserts the existence of a set $B$ to which every set belongs.\newpage
 
-
-
-
+\subsection{More axioms}
 
 
 
