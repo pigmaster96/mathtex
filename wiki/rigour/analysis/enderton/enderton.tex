@@ -131,7 +131,37 @@ Note that it is not the case that all statements of the general form are true. F
 \end{equation*}
 is false as it asserts the existence of a set $B$ to which every set belongs.\newpage
 
-\subsection{More axioms}
+\subsection{Subset axioms}
+\textit{Subset axioms}\\
+For each formula \_\_ not containing $B$, the following is an axiom:
+\begin{equation*}
+\forall t_1\cdots\forall t_k\forall c\exists B\forall x(x\in B\leftrightarrow x\in c\land\_\_)
+\end{equation*}
+Given an existing set $c$, this axiom asserts the existence of a set whose members are exactly those sets in $c$ such that \_\_.\\
+\vspace{1mm}\\
+See that such a set must be the subset of an existing set $c$ (thus the name). The set can be namd by use of a variation on the abstraction notation:
+\begin{equation*}
+B=\{x\in c\mid\_\_\}
+\end{equation*}
+\textbf{Intersection}\\
+One of the subset axioms is
+\begin{equation*}
+\forall a\forall c\exists B\forall x(x\in B\leftrightarrow x\in c\land x\in a)
+\end{equation*}
+The axiom asserts the existence of the set we define to be the \textit{intersection} $c\cap a$ of $c$ and $a$.\\
+\vspace{1mm}\\
+\textbf{Relative component}\\
+We also have as a subset axiom 
+\begin{equation*}
+\forall A\forall B\exists S\forall x(x\in S\leftrightarrow x\in A\land x\notin B)
+\end{equation*}
+This set $S$ is the \textit{relative component} of $B$ in $A$, denoted $A-B$.
+\begin{theorem}
+There is no set to which every set belongs.
+\end{theorem}
+\begin{proof}
+
+\end{proof}
 
 
 
