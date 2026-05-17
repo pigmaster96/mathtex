@@ -189,8 +189,77 @@ B\in B\leftrightarrow B\notin B\qedhere
 The idea here is that if $B$ were not a member of itself, then by definition $B$ should be in $B$. But if $B$ were a member of itself, then by definition it should not be a member of itself.
 \newpage
 
-\subsection{}
+\subsection{Improved Union Axiom}
+The previously described union operation allowed us to consider the union of two sets, and by repeating the operation, the union of three sets and so on.
+Suppose however we want the union of infinitely many sets:
+\begin{equation*}
+A=\{b_0,b_1,b_2,\ldots\}
+\end{equation*}
+For this we need a more general union operation:
+\begin{align*}
+\bigcup A&=\bigcup_ib_i\\
+&=\{x\mid x\text{ belongs to some member $b_i$ of $A$}\}
+\end{align*}
+This leads us to define the union of any set $A$ as
+\begin{align*}
+\bigcup A&=\{x\mid x\text{ belongs to some member of $A$}\}\\
+&=\{x\mid(\exists b\in A)x\in b\}
+\end{align*}
+We need an improved union axiom to include cases where $A$ were infinite, overcoming the limitation of defining unions strictly ``one by one''.\\
+\vspace{1mm}\\
+\textit{Union axiom}\\
+For any set $A$, there exists a set $B$ whose elements are exactly the members of the members of $A$:
+\begin{equation*}
+\forall A\exists B\forall x[x\in B\leftrightarrow(\exists b\in A) x\in b]
+\end{equation*}
+For any $A$ we can define $\bigcup A$ as
+\begin{equation*}
+\bigcup A=\{x\mid(\exists b\in A)x\in b\}
+\end{equation*}
+See that for any two sets $a$ and $b$ we have
+\begin{align*}
+\bigcup\{a,b\}&=\{x\mid(\exists c\in\{a,b\})x\in c\}\\
+&=\{x\mid x\in a\lor x\in b\}\\
+&=a\cup b
+\end{align*}
+(one can check that the $\{x\mid x\in a\lor x\in b\}$ is the equivalent notation for the binary union.) This shows that our preliminary form of the union axiom can be discarded in favor of the new
+form---the set $a\cup b$ produced by the preliminary form can also be obtained from the pairing and revised form of the union axiom.
+\newpage
 
+\subsection{Intersection}
+\begin{theorem}
+For any nonempty set $A$, there exists a unique set $B$ such that for any $x$, 
+\begin{equation*}
+x\in B\leftrightarrow x\text{ belongs to every member of $A$}
+\end{equation*}
+\end{theorem}
+\begin{proof}
+We first prove existence. We want to show
+\begin{equation*}
+\exists B(\forall x(x\in B\leftrightarrow\forall a\in A(x\in a)))
+\end{equation*}
+Since $A$ is nonempty we can let $c$ be some member of $A$. By the subset axiom we can assert 
+\begin{equation*}
+\exists B(x\in B\leftrightarrow x\in c\land \forall a\in A\backslash\{c\}(x\in a))
+\end{equation*}
+So we can declare some $B$ such that the above is true. Let $x$ be arbitrary.\\ 
+\indent($\rightarrow$) First suppose that $x\in B$, then let $a\in A$. 
+We have two cases; first suppose $a=c$, then we know $x\in c=a$. Now suppose that $x\neq c$; then since $x\in A$ we have $x\in A\backslash\{c\}$ and therefore $x\in a$.\\
+\indent($\leftarrow$) Now suppose that $\forall a\in A(x\in a)$. Since $c\in A$, we must have $x\in c$. Let $a$ be some element of $A\backslash\{c\}$; clearly $a\in A$, so $x\in a$. We have 
+now shown $x\in c\land \forall a\in A\backslash\{c\}(x\in a)$, so $x\in B$. Existence is proven.\\
+\indent Uniqueness, as always, follows from extensionality. We consider some arbitrary $B'$ and assume that $\forall x(x\in B'\leftrightarrow\forall a\in A(x\in a))$, then show that $B'=B$ using
+extensionality.
+\end{proof}
+\noindent In contrast to the union operation, no special axiom is needed to justify the intersection operation. This theorem permits defining a unique intersection set for every nonempty set.
+We proved that for any nonempty $A$,
+\begin{equation*}
+\exists B(\forall x(x\in B\leftrightarrow\forall a\in A(x\in a)))
+\end{equation*}
+and that this set was unique for each $A$. Using the earlier notation we name this set
+\begin{equation*}
+\bigcap A=\{x\mid x\text{ belongs to every member of $A$}\}
+\end{equation*}
+An edge case should be considered:
 
 
 
