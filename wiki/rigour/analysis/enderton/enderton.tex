@@ -226,6 +226,37 @@ See that for any two sets $a$ and $b$ we have
 form---the set $a\cup b$ produced by the preliminary form can also be obtained from the pairing and revised form of the union axiom.
 \newpage
 
+\subsection{Redundance of the preliminary union axiom}
+\begin{theorem}
+Given the pairing axiom
+\begin{equation*}
+\forall u\forall v\exists B\forall x(x\in B\leftrightarrow x=u\text{ or }x=v)
+\end{equation*}
+and the union axiom
+\begin{equation*}
+\forall A\exists B\forall x[x\in B\leftrightarrow(\exists b\in A) x\in b]
+\end{equation*}
+we can show
+\begin{equation*}
+\forall a\forall b\exists B\forall x(x\in B\leftrightarrow x\in a\text{ or }x\in b)
+\end{equation*}
+which is the preliminary union axiom determined earlier.
+\end{theorem}
+\begin{proof}
+Let $a$ and $b$ be arbitrary sets. The pairing axiom asserts the existence of a set $A$ where
+\begin{equation*}
+\forall x(x\in A\leftrightarrow x=a\text{ or }x=b)
+\end{equation*}
+Now that we know set $A$ exists, the union axiom axiom asserts the existence of a set $B$ where
+\begin{equation*}
+\forall x[x\in B\leftrightarrow(\exists b\in A) x\in b]
+\end{equation*}
+Let $x$ be arbitrary.\\
+\indent($\rightarrow$) First suppose $x\in B$. We can then declare some $y\in A$ such that $x\in y$. Since $y\in A$ we have $y=a\lor y=b$, and therefore $x\in a\lor x\in b$.\\
+\indent($\leftarrow$) Now suppose that $x\in a\lor x\in b$. In the case where $x\in a$, we know that $x\in a\in A$, so $x\in B$. The case where $x\in b$ is similarly proven.
+\end{proof}
+\newpage
+
 \subsection{Intersection}
 \begin{theorem}
 For any nonempty set $A$, there exists a unique set $B$ such that for any $x$, 
@@ -259,7 +290,21 @@ and that this set was unique for each $A$. Using the earlier notation we name th
 \begin{equation*}
 \bigcap A=\{x\mid x\text{ belongs to every member of $A$}\}
 \end{equation*}
-An edge case should be considered:
+An edge case should be considered: our theorem proves existence of the intersection $\bigcap A$ for all nonempty $A$; what happens in the case where $A=\emptyset$? In other words,
+is it the case that
+\begin{equation*}
+\exists B(\forall x(x\in B\leftrightarrow \forall a\in\emptyset(x\in a)))
+\end{equation*}
+We can show that this implies (by vacuous truth)
+\begin{equation*}
+\exists B(\forall x(x\in B))
+\end{equation*}
+which would contradict russells paradox. 
+\newpage
+
+\section{Set algebra}
+
+
 
 
 

@@ -4,4 +4,6 @@
 \contentsline {subsection}{\numberline {1.1.2}Subset axioms}{6}{}%
 \contentsline {subsection}{\numberline {1.1.3}Russell's Paradox}{7}{}%
 \contentsline {subsection}{\numberline {1.1.4}Improved Union Axiom}{8}{}%
-\contentsline {subsection}{\numberline {1.1.5}Intersection}{9}{}%
+\contentsline {subsection}{\numberline {1.1.5}Redundance of the preliminary union axiom}{9}{}%
+\contentsline {subsection}{\numberline {1.1.6}Intersection}{10}{}%
+\contentsline {section}{\numberline {1.2}Set algebra}{11}{}%
