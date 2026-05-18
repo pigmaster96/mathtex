@@ -150,12 +150,12 @@ One of the subset axioms is
 \end{equation*}
 The axiom asserts the existence of the set we define to be the \textit{intersection} $c\cap a$ of $c$ and $a$.\\
 \vspace{1mm}\\
-\textbf{Relative component}\\
+\textbf{Relative complement}\\
 We also have as a subset axiom 
 \begin{equation*}
 \forall A\forall B\exists S\forall x(x\in S\leftrightarrow x\in A\land x\notin B)
 \end{equation*}
-This set $S$ is the \textit{relative component} of $B$ in $A$, denoted $A-B$.
+This set $S$ is the \textit{relative complement} of $B$ in $A$, denoted $A-B$.
 \newpage
 
 \subsection{Russell's Paradox}
@@ -303,13 +303,48 @@ which would contradict russells paradox.
 \newpage
 
 \section{Set algebra}
+The union operation for any two sets exists by the pairing, union, and extensionality axioms.
+\begin{equation*}
+A\cup B=\{x\mid x\in A\lor x\in B\}
+\end{equation*}
+The intersection operation for any two sets exists by the subset and extensionality axioms.
+\begin{equation*}
+A\cap B=\{x\mid x\in A\land x\in B\}
+\end{equation*}
+Also by the subset and extensionality axioms, we have the \textit{relative complement $A-B$ of $B$ in $A$}.
+\begin{equation*}
+A-B=\{x\in A\mid x\notin B\}
+\end{equation*}
+also sometimes denoted as $A\backslash B$.\\
+\vspace{1mm}\\
+Note that we cannot form (as a set) the ``absolute complement'' of $B$, $\{x\mid x\neq B\}$. In this case the union with $B$, which must exist axiomatically, would be a set of all sets, which 
+would contradict russell's paradox.\\
+\vspace{1mm}\\
+The study of the operations of union $(\cup)$, intersection $(\cap)$, and relative complementation $(-)$, together with the inclusion relation $(\subseteq)$, is called the \textit{algebra of sets}.
+The following identities, which hold for any sets, are some elementary facts of the algebra of sets:\\
+\vspace{1mm}\\
+\textit{Commutative laws}
+\begin{equation*}
+A\cup B=B\cup A\quad\text{and}\quad A\cap B=B\cap A
+\end{equation*}
+\textit{Associative laws}
+\begin{align*}
+A\cup(B\cup C)&=(A\cup B)\cup C\\
+A\cap(B\cap C)&=(A\cap B)\cap C
+\end{align*}
+Proofs of these follow directly from the commutativity and associativity of the logical OR and AND.\\
+(next page)\newpage
+\noindent\textit{Distributive laws}
+\begin{align*}
+A\cap(B\cup C)&=(A\cap B)\cup(A\cap C)\\
+A\cup(B\cap C)&=(A\cup B)\cap(A\cup C)
+\end{align*}
+\begin{proof}
+First we show $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$. Let $x$ be arbitrary.\\
+\indent($\rightarrow$) 
 
 
-
-
-
-
-
+\end{proof}
 
 
 
