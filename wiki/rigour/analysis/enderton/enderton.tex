@@ -341,10 +341,74 @@ A\cup(B\cap C)&=(A\cup B)\cap(A\cup C)
 \end{align*}
 \begin{proof}
 First we show $A\cap(B\cup C)=(A\cap B)\cup(A\cap C)$. Let $x$ be arbitrary.\\
-\indent($\rightarrow$) 
-
-
+\indent($\rightarrow$) Suppose $x\in A\cap(B\cup C)$. Then $x\in A$ and $x\in B\cup C$. In the case where $x\in B$, then $x\in A\cap B$. In the case where $x\in C$, 
+then $x\in A\cap C$. So we have $x\in A\cap B\lor x\in A\cap C$ and $x\in(A\cap B)\cup(A\cap C)$.\\
+\indent($\leftarrow$) Suppose $x\in (A\cap B)\cup(A\cap C)$. Then $x\in (A\cap B)\lor x\in(A\cap C)$. In the case where $x\in (A\cap B)$ then $x\in A$ and $x\in B$. So $x\in B\cup C$ and 
+$x\in A\cap(B\cup C)$. In the case where $x\in(A\cap C)$ then $x\in A$ and $x\in C$. Again $x\in B\cup C$ and $x\in A\cap(B\cup C)$. We are done.\\
+\indent Now we show $A\cup(B\cap C)=(A\cup B)\cap(A\cup C)$. Let $x$ be arbitrary.\\
+\indent($\rightarrow$) Suppose $x\in A\cup(B\cap C)$. Then $x\in A$ or $x\in B\cap C$. In the case where $x\in A$ we have both $x\in A\cup B$ and $x\in A\cup C$, so $x\in(A\cup B)\cap(A\cup C)$. 
+In the case where $x\in B\cap C$, then $x\in B$ and $x\in C$. So $x\in(A\cup B)$ and $x\in(A\cup C)$ and $x\in(A\cup B)\cap(A\cup C)$.\\
+\indent($\leftarrow$) Suppose $x\in(A\cup B)\cap(A\cup C)$. We have $x\in(A\cup B)$ and $x\in(A\cup C)$. We have two cases. Suppose first that $x\in A$; then $x\in A\cup(B\cap C)$. 
+Now suppose $x\notin A$. Then since $x\in(A\cup B)$ and $x\in(A\cup C)$ we must have $x\in B$ and $x\in C$. So $x\in B\cap C$ and $x\in A\cup(B\cap C)$.
 \end{proof}
+\noindent\textit{De Morgan's laws}
+\begin{align*}
+C-(A\cup B)&=(C-A)\cap(C-B)\\
+C-(A\cap B)&=(C-A)\cup(C-B)
+\end{align*}
+\begin{proof}
+First we show $C-(A\cup B)=(C-A)\cap(C-B)$. Let $x$ be arbitrary.\\
+\indent($\rightarrow$) Suppose $x\in C-(A\cup B)$. Then $x\in C$ and $x\notin A\cup B$, meaning $\neg(x\in A\cup B)$, $\neg(x\in A\lor x\in B)$, and $x\notin A\land x\notin B$. 
+So since $x\in C$, we have $x\in C-A$ and $x\in C-B$, and therefore $x\in(C-A)\cap(C-B)$.\\
+\indent($\leftarrow$) Suppose $x\in(C-A)\cap(C-B)$. Then $x\in C$, $x\notin A$, and $x\notin B$.
+We therefore have $\neg(x\in A\lor x\in B)$ and $x\notin A\cup B$. So $x\in C-(A\cup B)$. We are done.\\
+\indent Now we show $C-(A\cap B)=(C-A)\cup(C-B)$. Let $x$ be arbitrary.\\
+\indent ($\rightarrow$) Suppose $x\in C-(A\cap B)$. Then $x\in C$ and $\neg(x\in A\land x\in B)$. So $x\notin A$ or $x\notin B$. In the case where $x\notin A$, $x\in C-A$.
+In the case where $x\notin B$, $x\in C-B$. We therefore have $x\in C-A$ or $x\in C-B$, and $x\in(C-A)\cup(C-B)$.\\
+\indent ($\leftarrow$) Suppose $x\in(C-A)\cup(C-B)$. We have two cases. First suppose $x\in C-A$, then $x\in C$ and $x\notin A$. The latter implies $\neg(x\in A\land x\in B)$ and $x\notin A\cap B$,
+so $x\in C-(A\cap B)$. Now suppose $x\in C-B$. In a similar manner this implies $x\in C$ and $x\notin A\cap B$, and therefore $x\in C-(A\cap B)$.
+\end{proof}
+\noindent(next page)\newpage
+\noindent One generally considers sets as subsets of some larger set or ``space'' $S$. Assume then that $A$ and $B$ are subsets of $S$. We can then abbreviate $S-A$ as simply $-A$, the set $S$
+being understood as fixed. In this abbreviation De Morgan's laws become
+\begin{align*}
+-(A\cup B)&=-A\cap-B\\
+-(A\cap B)&=-A\cup-B
+\end{align*}
+\noindent\textit{Identities involving $\emptyset$}
+\begin{align*}
+A\cup\emptyset&=A\\
+A\cap\emptyset&=\emptyset\\
+A\cap(C-&A)=\emptyset
+\end{align*}
+\begin{proof}
+We show $A\cup\emptyset=A$. Let $x$ be arbitrary. First suppose that $x\in A\cup\emptyset$. This implies that $x\notin\emptyset\to x\in A$. Therefore $x\in A$. The other direction is clearly true.\\
+\indent Both of the other two statements can be proved by extensionality, where both directions in each statement are vacuously true.
+\end{proof}
+\noindent\textit{Inclusion}\\
+Under the assumption that $A\subseteq S$ (and that $S-A$ can be abbreviated as $-A$), we have
+\begin{align*}
+A\cup S&=S\\
+A\cap S&=A\\
+A\cup-&A=S\\
+A\cap-&A=\emptyset
+\end{align*}
+\begin{proof}
+First we show $A\cup S=S$. Let $x$ be arbitrary. Suppose that $x\in A\cup S$; then $x\in A$ or $x\in S$. In the case where $x\in A$, since $A\subseteq S$ then $x\in S$. The case where $x\in S$ is 
+self-evident. Now suppose that $x\in S$, then clearly $x\in A\cup S$. We are done.\\
+\indent Next we show $A\cap S=A$. Let $x$ be arbitrary. Suppose $x\in A\cap S$. This clearly implies $x\in A$. Now suppose that $x\in A$. Since $A\subseteq S$ we also have $x\in S$ and therefore 
+$x\in A\cap S$.\\
+\indent To show $A\cup-A=S$, let $x$ be arbitrary and suppose $x\in A\cup -A$. This means
+$x\in A\lor(x\in S\land x\notin A)$. In the case where $x\in A$ we know that $A\subseteq S$ so $x\in S$. The other case where $x\in S\land x\notin A$ is self-evident. Now suppose $x\in S$; we have 
+two cases. In the first case suppose $x\in A$. Then clearly $x\in A\cup-A$. In the other case $x\notin A$. Then $x\in S-A$ and $x\in A\cup-A$.\\
+\indent The last statement follows from a previously proven identity. Namely that for any two sets $A$ and $C$ we have $A\cap(C-A)=\emptyset$.
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textit{Inclusion: Monotonicity properties}
+
+
+
+
 
 
 
