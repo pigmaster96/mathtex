@@ -405,10 +405,34 @@ two cases. In the first case suppose $x\in A$. Then clearly $x\in A\cup-A$. In t
 \end{proof}
 \noindent(next page)\newpage
 \noindent\textit{Inclusion: Monotonicity properties}
-
-
-
-
+\begin{align*}
+A\subseteq B&\to A\cup C\subseteq B\cup C\\
+A\subseteq B&\to A\cap C\subseteq B\cap C\\
+A\subseteq B&\to\bigcup A\subseteq\bigcup B
+\end{align*}
+\begin{proof}
+For the first property, suppose $A\subseteq B$. Let $x$ be an arbitrary element of $A\cup C$. Then $x\in A$ or $x\in C$. In the case where $x\in A$, since $A\subseteq B$ we also have $x\in B$ and 
+$x\in B\cup C$. 
+In the case where $x\in C$ we have $x\in B\cup C$.\\
+\indent For the second property, again suppose $A\subseteq B$. Let $x$ be an arbitrary element of $A\cap C$. Then $x\in A$ and $x\in C$. Since $A\subseteq B$, $x\in B$; so $x\in B\cap C$.\\
+\indent For the last property, suppose $A\subseteq B$ and let $x$ be an arbitrary element of $\bigcup A$. Then there is some $a\in A$ such that $x\in a$. Since $A\subseteq B$, $x\in a\in B$; so
+$x\in\bigcup B$.
+\end{proof}
+\noindent\textit{Antimonotone properties}
+\begin{align*}
+A\subseteq B&\to C-B\subseteq C-A\\
+\emptyset\neq A\subseteq B&\to\bigcap B\subseteq\bigcap A
+\end{align*}
+\begin{proof}
+For the first property, suppose $A\subseteq B$ and let $x$ be an arbitrary element of $C-B$. This means $x\in C$ and $x\notin B$. The contrapositive of the fact that $A\subseteq B$ 
+shows that $x\notin A$. So $x\in C-A$.\\
+\indent For the second property, suppose $A$ is nonempty and $A\subseteq B$ (which also means that $B$ is nonempty). Let $x$ be an arbitrary element of $\bigcap B$. Let $a$ be some element of $A$. 
+Since $A\subseteq B$, $a\in B$. Since $x\in\bigcap B$ we then have $x\in a$.
+\end{proof}
+\noindent(next page)\newpage
+\noindent\textit{Distributive laws}
+\begin{align*}
+\end{align*}
 
 
 
