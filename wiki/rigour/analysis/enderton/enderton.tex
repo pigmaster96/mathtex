@@ -475,11 +475,45 @@ In the case where $x\in\bigcap B$, since $X\in B$ we must have $x\in X$. Therefo
 $x\in A\cup\bigcap B$. Now suppose $x\notin A$; we will show that $x\in\bigcap B$. Let $b\in B$; then we know $A\cup b\in\{A\cup X\mid X\in B\}$. So $x\in A\cup b$. Since $x\notin A$ this must 
 mean that $x\in b$. So $x\in\bigcap B$ and $x\in A\cup\bigcap B$.
 \end{proof}
-\begin{proof}(Second statement) First
-
-
+\begin{proof}(Second statement) First we prove the existence of $\{A\cap X\mid x\in B\}$, defined as the unique set $C$ where for arbitrary $A$ and $B$,
+\begin{equation*}
+\forall x(x\in C\leftrightarrow\exists X\in B(x=A\cap X))
+\end{equation*}
+We first show
+\begin{equation*}
+\forall A\forall B\forall x(\exists X\in B(x=A\cap X)\to x\in\mathscr P(A\cap\bigcup B))
+\end{equation*}
+Let $A$, $B$, and $x$ be arbitrary. Suppose there exists $X\in B$ such that $x=A\cap X$.
+Let $y$ be some arbitrary element of $x$. Then $y\in A$ and $y\in X\in B$, meaning $y\in\bigcup B$.
+So $y\in A\cup\bigcup B$ and $x\in\mathscr P(A\cup\bigcup B)$.\\
+\indent We now know
+\begin{equation*}
+\forall A\forall B\forall x(\exists X\in B(x=A\cap X)\leftrightarrow x\in\mathscr P(A\cap\bigcup B)\land\exists X\in B(x=A\cap X))
+\end{equation*}
+By the subset axiom we can assert
+\begin{equation*}
+\forall A\forall B\exists C(\forall x(x\in C\leftrightarrow x\in\mathscr P(A\cap\bigcup B)\land\exists X\in B(x=A\cap X)))
+\end{equation*}
+Using these two facts we can prove
+\begin{equation*}
+\forall A\forall B\exists C(\forall x(x\in C\leftrightarrow x\in\exists X\in B(x=A\cap X)))
+\end{equation*}
+Proving the existence of $\{A\cap X\mid X\in B\}$ for arbitrary $A$ and $B$, where uniqueness follows from extensionality.\\
+(next page)\newpage
+Now we prove the second property.
+\begin{equation*}
+A\cap\bigcup B=\bigcup\{A\cap X\mid X\in B\}
+\end{equation*}
+Let $x$ be arbitrary.\\
+\indent($\rightarrow$) Suppose $x\in A\cap\bigcup B$. Then $x\in A$ and $x\in\bigcup B$, meaning we can declare some $b\in B$ such that $x\in b$. We know $x\in A\cap b$. 
+Since $A\cap b\in\{A\cap X\mid X\in B\}$, we then have $x\in\bigcup\{A\cap X\mid X\in B\}$.\\
+\indent($\leftarrow$) Suppose now that $x\in\bigcup\{A\cap X\mid X\in B\}$ then we can declare some $a\in\{A\cap X\mid X\in B\}$ such that $x\in a$. This means that 
+we can declare some $X\in B$ such that $a=A\cap X$. So $x\in A$ and $x\in X\in B$, which means
+$x\in\bigcup B$. So $x\in A\cap\bigcup B$.
 \end{proof}
-
+\noindent\textit{De Morgan's laws (for $A\neq\emptyset$)}
+\begin{align*}
+\end{align*}
 
 
 
