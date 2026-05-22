@@ -432,7 +432,56 @@ Since $A\subseteq B$, $a\in B$. Since $x\in\bigcap B$ we then have $x\in a$.
 \noindent(next page)\newpage
 \noindent\textit{Distributive laws}
 \begin{align*}
+A\cup\bigcap B&=\bigcap\{A\cup X\mid X\in B\}\quad\text{for $B\neq\emptyset$}\\
+A\cap\bigcup B&=\bigcup\{A\cap X\mid X\in B\}
 \end{align*}
+The set $\{A\cup X\mid X\in B\}$ is an extension of the abstraction notation; read ``the set of all $A\cup X$ such that $X\in B$''. It defines the unique set $D$ such that
+\begin{equation*}
+\forall x(x\in D\leftrightarrow\exists X\in B(x=A\cup X))
+\end{equation*}
+The existence of such a set $D$ can be proved by observing that $A\cup X\subseteq A\cup\bigcup B$, which means that $D$ is a subset of $\mathscr P(A\cup\bigcup B)$. A similar approach 
+can be used to assert the existence of $\{A\cap X\mid X\in B\}$.
+\begin{proof} 
+(First statement) First we prove the existence of $\{A\cup X\mid X\in B\}$. We do this by showing that for arbitrary $x$, $A$, and $B$,
+\begin{equation*}
+\exists X\in B(x=A\cup X)\to x\in\mathscr P(A\cup\bigcup B)
+\end{equation*}
+Suppose there exists some $X\in B$ such that $x=A\cup X$. Let $y$ be some arbitrary element of $x$.
+Then $y\in A\cup X$. In the case where $y\in A$ we clearly have $y\in A\cup\bigcup B$. In the case where $y\in X$, since $X\in B$ we then have $y\in\bigcup B$ and $y\in A\cup\bigcup B$.
+This shows that $x\subseteq A\cup\bigcup B$ and $x\in\mathscr P(A\cup\bigcup B)$.
+As such we have
+\begin{equation*}
+\forall A\forall B\forall x[\exists X\in B(x=A\cup X)\leftrightarrow x\in\mathscr P(A\cup\bigcup B)\land\exists X\in B(x=A\cup X)]
+\end{equation*}
+The statement
+\begin{equation*}
+\forall A\forall B\exists C(\forall x(x\in C\leftrightarrow x\in\mathscr P(A\cup\bigcup B)\land\exists X\in B(x=A\cup X)))
+\end{equation*}
+Is true by the subset axiom. These two statements can be used to show
+\begin{equation*}
+\forall A\forall B\exists C(\forall x(x\in C\leftrightarrow\exists X\in B(x=A\cup X)))
+\end{equation*}
+Proving the existence of $\{A\cup X\mid X\in B\}$ for arbitrary $A$ and $B$, where uniqueness follows from extensionality.\\
+(next page)\newpage
+Now we prove the first property.
+\begin{equation*}
+A\cup\bigcap B=\bigcap\{A\cup X\mid X\in B\}\quad\text{for $B\neq\emptyset$}
+\end{equation*}
+Let $x$ be arbitrary.\\
+\indent($\rightarrow$) Suppose $x\in A\cup\bigcap B$. This means that either $x\in A$ or $x\in\bigcap B$.
+Let $a$ be some arbitrary element of $\{A\cup X\mid X\in B\}$; this means that there exists some $X\in B$ such that $a=A\cup X$. In the case where $x\in A$, we clearly have $x\in A\cup X=a$.
+In the case where $x\in\bigcap B$, since $X\in B$ we must have $x\in X$. Therefore $x\in A\cup X=a$.\\
+\indent($\leftarrow$) Now suppose that $x\in\bigcap\{A\cup X\mid X\in B\}$. This means $\forall a\in\{A\cup X\mid X\in B\}(x\in a)$. We have 2 cases. First suppose $x\in A$; then 
+$x\in A\cup\bigcap B$. Now suppose $x\notin A$; we will show that $x\in\bigcap B$. Let $b\in B$; then we know $A\cup b\in\{A\cup X\mid X\in B\}$. So $x\in A\cup b$. Since $x\notin A$ this must 
+mean that $x\in b$. So $x\in\bigcap B$ and $x\in A\cup\bigcap B$.
+\end{proof}
+\begin{proof}(Second statement) First
+
+
+\end{proof}
+
+
+
 
 
 
