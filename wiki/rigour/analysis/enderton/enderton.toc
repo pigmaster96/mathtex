@@ -7,3 +7,4 @@
 \contentsline {subsection}{\numberline {1.1.5}Redundance of the preliminary union axiom}{9}{}%
 \contentsline {subsection}{\numberline {1.1.6}Intersection}{10}{}%
 \contentsline {section}{\numberline {1.2}Set algebra}{11}{}%
+\contentsline {chapter}{\numberline {2}Relations and Functions}{19}{}%

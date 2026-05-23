@@ -555,13 +555,18 @@ contradiction. So we have $x\in C-\bigcup A$. This proves the first property.\\
 \begin{equation*}
 C-\bigcap A=\bigcup\{C-X\mid X\in A\}
 \end{equation*}
-
-
-
-
-
-
+Let $x$ be arbitrary\\
+\indent($\rightarrow$) Suppose $x\in C-\bigcap A$. Then $x\in C$ and $x\notin\bigcap A$. The latter implies $\exists a\in A(x\notin a)$. So there is some $a\in A$ such that $x\notin a$.
+We know $x\in C-a\in\{C-X\mid X\in A\}$; so $x\in\bigcup\{C-X\mid X\in A\}$.\\
+\indent($\leftarrow$) Suppose $x\in\bigcup\{C-X\mid X\in A\}$. Then there exists some $a\in\{C-X\mid X\in A\}$ such that $x\in a$. There then exists some $X\in A$ such that $a=C-X$.
+So $x\in C$ and $x\notin X$. For contradiction, suppose $x\in\bigcap A$. Since $X\in A$ this would imply that $x\in X$, which is a contradiction. So $x\in C-\bigcap A$. We are done.
 \end{proof}
+\newpage
+
+\chapter{Relations and Functions}
+
+
+
 
 
 
