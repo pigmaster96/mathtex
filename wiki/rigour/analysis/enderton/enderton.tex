@@ -513,7 +513,49 @@ $x\in\bigcup B$. So $x\in A\cap\bigcup B$.
 \end{proof}
 \noindent\textit{De Morgan's laws (for $A\neq\emptyset$)}
 \begin{align*}
+C-\bigcup A&=\bigcap\{C-X\mid X\in A\}\\
+C-\bigcap A&=\bigcup\{C-X\mid X\in A\}
 \end{align*}
+Existence of $\{C-X\mid X\in A\}$ can be proven by noticing that $X\in A$ implies $\bigcap A\subseteq X$, which implies $C-X\subseteq C-\bigcap A$.
+\begin{proof}
+We first prove existence of $\{C-X\mid X\in A\}$. That is, we prove
+\begin{equation*}
+\forall A\forall C(\exists D\forall x(x\in D\leftrightarrow\exists X\in A(x=C-X)))
+\end{equation*}
+We start by showing that for nonempty $A$,
+\begin{equation*}
+\forall A\forall C\forall x(\exists X\in A(x=C-X)\to x\in\mathscr P(C-\bigcap A))
+\end{equation*}
+Letting $A, C,$ and $x$ be arbitrary, suppose there exists some $X\in A$ such that $x=C-X$. Let $y$ be some arbitrary element of $x$. 
+Then $y\in C$ and $y\notin X$. For contradiction suppose $y\in\bigcap A$; since $X\in A$ this would mean $y\in X$, which is a contradiction. So $y\in C-\bigcap A$, $x\subseteq C-\bigcap A$, and
+$x\in\mathscr P(C-\bigcap A)$. We are done.\\
+\indent By the subset axiom we can assert
+\begin{equation*}
+\forall A\forall C\exists D\forall x(x\in D\leftrightarrow x\in\mathscr P(C-\bigcap A)\land\exists X\in A(x=C-X))
+\end{equation*}
+Using these two facts we can prove
+\begin{equation*}
+\forall A\forall C(\exists D\forall x(x\in D\leftrightarrow\exists X\in A(x=C-X)))
+\end{equation*}
+Which proves the existence of $\{C-X\mid X\in A\}$ for arbitrary $A$ and $C$. Uniqness follows from extensionality.\\
+(next page)\newpage
+Now we prove the first property---that for nonempty $A$,
+\begin{equation*}
+C-\bigcup A=\bigcap\{C-X\mid X\in A\}
+\end{equation*}
+
+
+
+
+
+
+\end{proof}
+
+
+
+
+
+
 
 
 
