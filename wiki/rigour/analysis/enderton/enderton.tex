@@ -543,6 +543,18 @@ Now we prove the first property---that for nonempty $A$,
 \begin{equation*}
 C-\bigcup A=\bigcap\{C-X\mid X\in A\}
 \end{equation*}
+Let $x$ be arbitrary.\\
+\indent($\rightarrow$) Suppose $x\in C-\bigcup A$. Then $x\in C$ and $x\notin\bigcup A$. 
+Suppose arbitrary $a\in\{C-X\mid X\in A\}$. Then there exists some $X\in A$ such that 
+$a=C-X$. Suppose for contradiction that $x\in X$; since $X\in A$ this would mean $x\in\bigcup A$, which is a contradiction. Therefore $x\in C-X=a$. Since $a$ was arbitrary we therefore have 
+$x\in\bigcap\{C-X\mid X\in A\}$.\\
+\indent($\leftarrow$) Now suppose $x\in\bigcap\{C-X\mid X\in A\}$. Since $A$ is nonempty we can declare some $X\in A$. Then $C-X\in\{C-X\mid X\in A\}$, and $x\in C-X$. So we have $x\in C$.
+Now suppose for contradiction that $x\in\bigcup A$. Then we can declare some $X_0\in A$ such that $x\in X_0$. $C-X_0\in\{C-X\mid X\in A\}$, so $x\in C-X_0$ and $x\notin X_0$, which is a 
+contradiction. So we have $x\in C-\bigcup A$. This proves the first property.\\
+\indent Now for the second property. For any nonempty $A$,
+\begin{equation*}
+C-\bigcap A=\bigcup\{C-X\mid X\in A\}
+\end{equation*}
 
 
 
