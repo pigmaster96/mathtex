@@ -680,6 +680,19 @@ the desired result follows. Uniqueness follows from extensionality.
 \end{proof}\newpage
 
 \subsection{$n$-ary Relations}
+We can extend the ideas behind ordered pairs to the case of ordered triples and, more generally, to ordered $n$-tuples. For triples we define
+\begin{equation*}
+\langle x,y,z\rangle=\langle\langle x,y\rangle,z\rangle
+\end{equation*}
+Similarly we can form ordered quadruples:
+\begin{equation*}
+\langle x_1,x_2,x_3,x_4\rangle=\langle\langle x_1,x_2,x_3\rangle,x_4\rangle=\langle\langle\langle x_1,x_2\rangle,x_3\rangle,x_4\rangle
+\end{equation*}
+We define an \textit{$n$-ary relation on $A$} to be a set of ordered $n$-tuples with all components in $A$. Thus a binary (2-ary) relation on $A$ is just a subset of $A\times A$. 
+A ternary (3-ary) relation on $A$ is a subset of $(A\times A)\times A$.
+
+\section{Functions}
+
 
 
 

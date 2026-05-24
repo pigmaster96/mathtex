@@ -12,3 +12,4 @@
 \contentsline {subsection}{\numberline {2.1.1}Cartesian product}{20}{}%
 \contentsline {section}{\numberline {2.2}Relations}{21}{}%
 \contentsline {subsection}{\numberline {2.2.1}$n$-ary Relations}{22}{}%
+\contentsline {section}{\numberline {2.3}Functions}{22}{}%
