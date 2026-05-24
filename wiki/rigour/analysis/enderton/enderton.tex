@@ -564,9 +564,70 @@ So $x\in C$ and $x\notin X$. For contradiction, suppose $x\in\bigcap A$. Since $
 \newpage
 
 \chapter{Relations and Functions}
+\section{Ordered Pairs}
+The pair set $\{a,b\}$ can be thought of as an unordered pair, since $\{a,b\}=\{b,a\}$. We want to define a set $\langle x,y\rangle$ that uniquely encodes both what $x,y$ are, and what order 
+they are in. That is, 
+\begin{equation*}
+\forall x\forall y\forall u\forall v(\langle x,y\rangle=\langle u,v\rangle\leftrightarrow(x=u\land y=v))
+\end{equation*}
+Any definition of $\langle x,y\rangle$ that satisfies the above will suffice. For an example of definitions that \textit{fail this requirement},
+if we define $\langle x,y\rangle_1=\{x,y\}$, then for $x\neq y$, $\langle x,y\rangle_1=\{x,y\}=\{y,x\}=\langle y,x\rangle_1$ even though $x\neq y$.\\
+\vspace{1mm}\\
+The most conventional construction was given by Kazimierz Kuratowski in 1921:
+\begin{definition}
+$\langle x,y\rangle$ is defined to be $\{\{x\},\{x,y\}\}$.
+\end{definition}
+\noindent We must prove that this definition succeeds in capturing the desired property.
+\begin{theorem}
+For arbitrary $u,v,x,y$, $\langle u,v\rangle=\langle x,y\rangle$ iff $u=x$ and $v=y$.
+\end{theorem}
+\begin{proof}
+The left direction is trivial. If $u=x$ and $v=y$, then $\{\{x\},\{x,y\}\}$ is identical to $\{\{u\},\{u,v\}\}$.\\
+\indent For the right direction,
+suppose $\langle u,v\rangle=\langle x,y\rangle$. We have two cases. First suppose $x=y$. 
+Then $\langle x,y\rangle=\{\{x\},\{x,y\}\}=\{\{x\},\{x,x\}\}=\{\{x\},\{x\}\}=\{\{x\}\}$ and then
+$\{\{x\}\}=\{\{u\},\{u,v\}\}$. This means that $\{x\}=\{u,v\}$ and $y=x=u=v$. So clearly $u=x$ and $v=y$. For the other case suppose $x\neq y$. We know 
+$\{\{x\},\{x,y\}\}=\{\{u\},\{u,v\}\}$. See that $\{u\}=\{x\}\lor\{u\}=\{x,y\}$; the latter cannot be the case, so we must have $\{u\}=\{x\}$ and $u=x$. We know that $\{x,y\}\neq\{u\}$ 
+since $x\neq y$, so we must have $\{x,y\}=\{u,v\}=\{x,v\}$. This leaves us with $y=x\lor y=v$, so we can conclude that $y=v$.
+\end{proof}
+\noindent This allows us to unambiguously define the \textit{first coordinate} of $\langle x,y\rangle$ to be $x$ and the \textit{second coordinate} to be $y$.
+\newpage
 
+\subsection{Cartesian product}
+Suppose that we have two sets $A$ and $B$, and we form ordered pairs $\langle x,y\rangle$ with $x\in A$ and $y\in B$. The collection of all such pairs is called the \textit{Cartesian product}
+$A\times B$ of $A$ and $B$:
+\begin{equation*}
+A\times B=\{\langle x,y\rangle\mid x\in A\land y\in B\}
+\end{equation*}
+We must verify that this collection is actually a set before the definition is legal.
+\begin{lemma}
+For arbitrary $x,y,C$, if $x\in C$ and $y\in C$, then $\langle x,y\rangle\in\mathscr P\mathscr PC$.
+\end{lemma}
+\begin{proof}
+Suppose $x\in C$ and $y\in C$. Then $\{x\}\subseteq C$ and $\{x,y\}\subseteq C$. So $\{x\}\in\mathscr PC$ and $\{x,y\}\in\mathscr PC$. So $\{\{x\},\{x,y\}\}\subseteq\mathscr PC$ and 
+$\{\{x\},\{x,y\}\}\in\mathscr{PP}C$.
+\end{proof}
+\noindent Now to show existence of $A\times B=\{\langle x,y\rangle\mid x\in A\land y\in B\}$.
+\begin{proof}
+We first show
+\begin{equation*}
+\forall A\forall B\forall t(\exists x\in A\exists y\in B(t=\langle x,y\rangle)\to t\in\mathscr{PP}(A\cup B))
+\end{equation*}
+Letting $A,B,$ and $t$ be arbitrary, suppose we can declare $x\in A$ and $y\in B$ such that $t=\langle x,y\rangle$. We have $x\in A\cup B$ and $y\in A\cup B$; by the previous lemma we then
+have $t=\langle x,y\rangle\in\mathscr{PP}(A\cup B)$.\\
+\indent By the subset axiom we can assert
+\begin{equation*}
+\forall A\forall B\exists D\forall t(t\in D\leftrightarrow t\in\mathscr{PP}(A\cup B)\land\exists x\in A\exists y\in B(t=\langle x,y\rangle))
+\end{equation*}
+Using these two facts we can show
+\begin{equation*}
+\forall A\forall B\exists D\forall t(t\in D\leftrightarrow\exists x\in A\exists y\in B(t=\langle x,y\rangle))
+\end{equation*}
+Proving the existence of $\{\langle x,y\rangle\mid x\in A\land y\in B\}$ for arbitrary $A$ and $B$. Uniqueness follows from extensionality.
+\end{proof}
+\newpage
 
-
+\subsection{}
 
 
 
