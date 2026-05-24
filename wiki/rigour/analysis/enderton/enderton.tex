@@ -627,13 +627,59 @@ Proving the existence of $\{\langle x,y\rangle\mid x\in A\land y\in B\}$ for arb
 \end{proof}
 \newpage
 
-\subsection{}
+\section{Relations}
+\begin{definition}
+A \textbf{relation} is a set of ordered pairs.
+\end{definition}
+\noindent Any set of ordered pairs is some relation, even if a peculiar one. For a relation $R$, we sometimes write $xRy$ in place of $\langle x,y\rangle\in R$.
+\begin{definition}
+We define the \textbf{domain} of $R$ (dom $R$), the \textbf{range} of $R$ (ran $R$), and the \textbf{field} of $R$ (fld $R$) by
+\begin{align*}
+x\in\text{dom}\,R&\leftrightarrow\exists y(\langle x,y\rangle\in R)\\
+x\in\text{ran}\,R&\leftrightarrow\exists t(\langle t,x\rangle\in R)\\
+\text{fld}\,R&=\text{dom}\,R\cup\text{ran}\,R
+\end{align*}
+\end{definition}
+\noindent Again we must justify the existence of the domain and the range. 
+\begin{lemma}
+For arbitrary $A,x,y$, if $\langle x,y\rangle\in A$, then $x$ and $y$ belong to $\bigcup\bigcup A$.
+\end{lemma}
+\begin{proof}
+We assume $\{\{x\},\{x,y\}\}\in A$. Consequently, $\{x,y\}\in\bigcup A$ since it belongs to a member of $A$. In a similar manner we can conclude that $x\in\bigcup\bigcup A$ and
+$y\in\bigcup\bigcup A$.
+\end{proof}
+\noindent Now to prove existence. 
+\begin{proof}
+Starting with the domain, we want to show
+\begin{equation*}
+\forall R\exists D\forall x(x\in D\leftrightarrow\exists y(\langle x,y\rangle\in R))
+\end{equation*}
+We start by proving
+\begin{equation*}
+\forall R\forall x(\exists y(\langle x,y\rangle\in R)\to x\in\bigcup\bigcup R)
+\end{equation*}
+Letting $R$ and $x$ be arbitrary, and supposing that there exists $y$ such that $\langle x,y\rangle\in R$, by the previous lemma we have $x\in\bigcup\bigcup R$.\\
+\indent The subset axioms allow us to assert
+\begin{equation*}
+\forall R\exists D\forall x(x\in D\leftrightarrow x\in\bigcup\bigcup R\leftrightarrow\exists y(\langle x,y\rangle\in R))
+\end{equation*}
+Existence follows from these two facts. Uniqueness follows from extensionality.\\
+\indent Now for the range. We want to show
+\begin{equation*}
+\forall R\exists D\forall x(x\in D\leftrightarrow\exists t(\langle t,x\rangle\in R))
+\end{equation*}
+Again using the previous lemma we can easily prove
+\begin{equation*}
+\forall R\forall x(\exists t(\langle t,x\rangle\in R)\to x\in\bigcup\bigcup R)
+\end{equation*}
+and then using the subset axiom to assert
+\begin{equation*}
+\forall R\exists D\forall x(x\in D\leftrightarrow x\in\bigcup\bigcup R\land\exists t(\langle t,x\rangle\in R))
+\end{equation*}
+the desired result follows. Uniqueness follows from extensionality.
+\end{proof}\newpage
 
-
-
-
-
-
+\subsection{$n$-ary Relations}
 
 
 
