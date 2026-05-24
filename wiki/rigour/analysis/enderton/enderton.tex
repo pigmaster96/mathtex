@@ -692,6 +692,76 @@ We define an \textit{$n$-ary relation on $A$} to be a set of ordered $n$-tuples 
 A ternary (3-ary) relation on $A$ is a subset of $(A\times A)\times A$.
 
 \section{Functions}
+\begin{definition}
+A \textbf{function} is a relation $F$ such that for each $x$ in dom$\,F$ there is only one $y$ such that $xFy$.
+\begin{equation*}
+\forall x\in\text{dom$\,F$}\exists!y(xFy)
+\end{equation*}
+For a function $F$ and a $x$ in dom$\,F$, the unique $y$ such that $xFy$ is called the \textbf{value of $F$ at $x$} and is denoted $F(x)$. Thus $\langle x,F(x)\rangle\in F$.
+\end{definition}
+\noindent To avoid confusion, this ``$F(x)$'' notation should only be used when $F$ is a function and $x\in\text{dom}\,F$.
+\begin{definition}
+For sets $A$ and $B$, we say that $F$ is a function \textit{from $A$ to $B$} or that $F$ \textit{maps $A$ into $B$}
+\begin{equation*}
+F:A\to B
+\end{equation*}
+iff $F$ is a function, dom$\,F=A$, and ran$\,F\subseteq B$. 
+\end{definition}
+\noindent Note the unequal treatment of $A$ and $B$ here---we demand only that ran$\,F\subseteq B$.
+\begin{definition}
+$F$ is a function from $A$ \textbf{onto} $B$ if $F$ is a function from $A$ to $B$, and ran$\,F=B$.
+\end{definition}
+\noindent Thus any function $F$ maps its domain onto its range. The word ``onto'' depends both on $F$ and on the set $B$. 
+\begin{definition}
+A function $F$ is \textbf{one-to-one} iff for each $y\in\text{ran}\,F$ there is only one $x$ such that $xFy$.
+\begin{equation*}
+\forall y\in\text{ran}\,F\exists!x(xFy)
+\end{equation*}
+One-to-one functions are sometimes called \textbf{injections}.
+\end{definition}
+\noindent(next page)
+\newpage
+\noindent I use this page to prove a few equivalences of alternative definitions.
+\begin{theorem}
+For a function $F$,
+\begin{equation*}
+\forall y\in\text{ran}\,F\exists!x(xFy)\leftrightarrow
+\forall x_1\in\text{dom}\,F\forall x_2\in\text{dom}\,F(F(x_1)=F(x_2)\to x_1=x_2)
+\end{equation*}
+\end{theorem}
+\begin{proof} ($\rightarrow$)
+Suppose $\forall y\in\text{ran}\,F\exists!x(xFy)$. This can be rewritten as
+\begin{equation*}
+\forall y\in\text{ran}\,F(\exists x(xFy)\land\forall x_1\forall x_2(x_1Fy\land x_2Fy\to x_1=x_2))
+\end{equation*}
+Suppose $x_1$ and $x_2$ are elements of dom$\,F$ such that $F(x_1)=F(x_2)$ (we know that $F(x_1)$ and $F(x_2)$ exist and are unique since $F$ is a function and $x_1$ and $x_2$ are in
+the domain of $F$.) We know $\langle x_1,F(x_1)\rangle\in F$ and $\langle x_2,F(x_2)\rangle\in F$ so both $F(x_1)$ and $F(x_2)$ are in the range of $F$. We will denote $F(x_1)=F(x_2)=y$. 
+We then have $x_1Fy$ and $x_2Fy$ for $y\in\text{ran}\,F$. Using our initial assumption we can conclude that $x_1=x_2$.\\
+\indent($\leftarrow$) Suppose now that the right side is true. We want to show
+\begin{equation*}
+\forall y\in\text{ran}\,F(\exists x(xFy)\land\forall x_1\forall x_2(x_1Fy\land x_2Fy\to x_1=x_2))
+\end{equation*}
+Let $y$ be an arbitrary element of ran$\,F$. $\exists x(xFy)$ follows by definition. Let $x_1$ and $x_2$ be arbitrary such that $x_1Fy$ and $x_2Fy$. Then $x_1$ and $x_2$ are in the domain of $F$.
+Since $F$ is a function, $y=F(x_1)=F(x_2)$ it follows from our initial assumption that $x_1=x_2$.
+\end{proof}
+\begin{theorem}
+Supposing $F$ is a function from $A$ to $B$,
+\begin{equation*}
+\text{ran}\,F=B\leftrightarrow\forall y\in B\exists x\in A(xFy)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+\indent ($\rightarrow$) Suppose $\text{ran}\,F=B$. Let $y$ be an arbitrary element of $B$.
+Then by our assumption, $y\in\text{ran}\,F$. By definition, there exists some $x$ such that $xFy$.
+$x$ is in the domain of $F$, so since $F:A\to B$, $x\in A$.\\
+\indent ($\leftarrow$) Suppose now that $\forall y\in B\exists x\in A(xFy)$. Let $y$ be arbitrary. First suppose $y\in\text{ran}\,F$. Then since $F:A\to B$, $\text{ran}\,F\subseteq B$ and $y\in B$.
+Now suppose $y\in B$. Then by the initial assumption there exists some $x\in A$ such that $xFy$.
+This implies that $y\in\text{ran}\,F$.
+\end{proof}
+\newpage
+
+\subsection{More definitions}
+
 
 
 
