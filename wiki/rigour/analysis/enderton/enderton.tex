@@ -761,7 +761,75 @@ This implies that $y\in\text{ran}\,F$.
 \newpage
 
 \subsection{More definitions}
+It will occasionally be useful to apply the concept of ``one-to-one'' to relations that are not functions. The phrase seems inapproprate in the context of nonfunctions, so in such a context we use
+the phrase ``single-rooted''.
+\begin{definition}
+A set $R$ is \textit{single-rooted} iff for each $y\in\text{ran}\,R$ there is only one $x$ such that $xRy$.
+\begin{equation*}
+\forall y\in\text{ran}\,F\exists!x(xRy)
+\end{equation*}
+For a function, it is single-rooted iff it is one-to-one.
+\end{definition}
+\noindent The following can be defined for arbitrary sets $A,F,$ and $G$:
+\begin{definition}\hspace{1mm}\\
+The \textbf{inverse} of $F$ is the set
+\begin{equation*}
+F^{-1}=\{\langle u,v\rangle\mid vFu\}
+\end{equation*}
+The \textbf{composition} of $F$ and $G$ is the set
+\begin{equation*}
+F\circ G=\{\langle u,v\rangle\mid\exists t(uGt\land tFu)\}
+\end{equation*}
+The \textbf{restriction} of $F$ to $A$ is the set
+\begin{equation*}
+F\restriction A=\{\langle u,v\rangle\mid uFv\land u\in A\}
+\end{equation*}
+The \textbf{image} of $A$ \textbf{under} $F$ is the set
+\begin{align*}
+F[A]&=\{v\mid\exists u\in A(uFv)\}\\
+&=\text{ran}(F\restriction A)
+\end{align*}
+\end{definition}
+\noindent In each case we prove existence using the subset axioms.
+\begin{proof}(Inverse)
+We show 
+\begin{equation*}
+\forall F\exists D\forall x(x\in D\leftrightarrow\exists u\exists v(x=\langle u,v\rangle\land vFu))
+\end{equation*}
+First we show
+\begin{equation*}
+\forall F\forall x(\exists u\exists v(x=\langle u,v\rangle\land vFu)\to x\in\text{ran}F\times\text{dom}F)
+\end{equation*}
+Let $F$ and $x$ be arbitrary. Suppose there exists $u$ and $v$ such that $x=\langle u,v\rangle$ and $vFu$. Then $v\in\text{dom}F$ and $u\in\text{ran}F$, so since $x=\langle u,v\rangle$,
+$x\in\text{ran}F\times\text{dom}F$.\\
+\indent The subset axiom allows us to assert
+\begin{equation*}
+\forall F\exists D\forall x(x\in D\leftrightarrow x\in\text{ran}F\times\text{dom}F\land\exists u\exists v(x=\langle u,v\rangle\land vFu))
+\end{equation*}
+These desired result follows from these two facts. Uniqueness follows from extensionality.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(Composition) We show
+\begin{equation*}
+\forall F\forall G\exists D\forall x(x\in D\leftrightarrow[\exists u\exists v(x=\langle u,v\rangle\land\exists t(uGt\land tFv))])
+\end{equation*}
+We first show
+\begin{equation*}
+\forall F\forall G\forall x([\exists u\exists v(x=\langle u,v\rangle\land\exists t(uGt\land tFv))]\to x\in\text{dom}G\times\text{ran}F)
+\end{equation*}
+Let $F,G,$ and $x$ be arbitrary. Suppose there exists $u$ and $v$ such that $x=\langle u,v\rangle$ and $\exists t(uGt\land tFv)$. Then there exists $t$ such that $uGt$ and $tFv$; this means that
+$u\in\text{dom}G$ and $v\in\text{ran}F$. So since $x=\langle u,v\rangle$, $x\in\text{dom}G\times\text{ran}F$.\\
+\indent The subset axiom allows us to assert
+\begin{equation*}
+\forall F\forall G\exists D\forall x(x\in D\leftrightarrow x\in\text{dom}G\times\text{ran}F\land[\exists u\exists v(x=\langle u,v\rangle\land\exists t(uGt\land tFv))])
+\end{equation*}
+These desired result follows from these two facts. Uniqueness follows from extensionality.
+\end{proof}
+\begin{proof}(Restriction) We show
 
+
+
+\end{proof}
 
 
 
