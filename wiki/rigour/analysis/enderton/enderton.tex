@@ -866,9 +866,24 @@ $tFx$ and $t\in A$, so $x\in F[A]$.
 For a set $F$, dom$\,F^{-1}=\text{ran}\,F$ and ran$\,F^{-1}=\text{dom}\,F$. For a relation $F$, $(F^{-1})^{-1}=F$.
 \end{theorem}
 \begin{proof}
+First to show that for any arbitrary set $F$, dom$F^{-1}=\text{ran}F$. Let $x$ be arbitrary and suppose $x\in\text{dom}F^{-1}$. Then there exists some $y$ such that $xF^{-1}y$. By definition
+this means $yFx$, so $x\in\text{ran}F$. Now suppose $x\in\text{ran}F$. Then there exists some $y$ such that $yFx$. By definition this means $xF^{-1}y$, so $x\in\text{dom}F^{-1}$.\\
+\indent Next we show that for any arbitrary set $F$, ran$F^{-1}=\text{dom}F$. Let $x$ be arbitrary and suppose $x\in\text{ran}F^{-1}$. Then there exists some $y$ such that $yF^{-1}x$. 
+By definition this means $xFy$, so $x\in\text{dom}F$. Now suppose $x\in\text{dom}F$. Then there exists some $y$ such that $xFy$. By definition then $yF^{-1}x$, so $x\in\text{ran}F^{-1}$.\\
+\indent Finally we show that for any arbitrary relation $F$, $(F^{-1})^{-1}=F$. Let $x$ be arbitrary and suppose $x\in(F^{-1})^{-1}$. Then there exists $u$ and $v$ such that $x=\langle u,v\rangle$
+and $vF^{-1}u$. By definition we then have $uFv$ and $x=\langle u,v\rangle\in F$. Now suppose $x\in F$. Since $F$ is a relation $x$ must be an ordered pair, whose first and second coordinates 
+can be denoted as $u$ and $v$ such that $x=\langle u,v\rangle$ and $uFv$. By definition $vF^{-1}u$ and $u(F^{-1})^{-1}v$, so $x=\langle u,v\rangle\in(F^{-1})^{-1}$.
+\end{proof}
+\begin{theorem}
+For a set $F$, $F^{-1}$ is a function iff $F$ is single-rooted. A relation $F$ is a function iff $F^{-1}$ is single-rooted.
+\end{theorem}
+\begin{proof}
+First we prove that for any set $F$, $F^{-1}$ is a function iff $F$ is single-rooted.\\
+\indent($\rightarrow$)
+
+
 
 \end{proof}
-
 
 
 
