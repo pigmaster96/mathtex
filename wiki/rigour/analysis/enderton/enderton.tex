@@ -806,7 +806,7 @@ $x\in\text{ran}F\times\text{dom}F$.\\
 \begin{equation*}
 \forall F\exists D\forall x(x\in D\leftrightarrow x\in\text{ran}F\times\text{dom}F\land\exists u\exists v(x=\langle u,v\rangle\land vFu))
 \end{equation*}
-These desired result follows from these two facts. Uniqueness follows from extensionality.
+The desired result follows from these two facts. Uniqueness follows from extensionality.
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(Composition) We show
@@ -823,13 +823,49 @@ $u\in\text{dom}G$ and $v\in\text{ran}F$. So since $x=\langle u,v\rangle$, $x\in\
 \begin{equation*}
 \forall F\forall G\exists D\forall x(x\in D\leftrightarrow x\in\text{dom}G\times\text{ran}F\land[\exists u\exists v(x=\langle u,v\rangle\land\exists t(uGt\land tFv))])
 \end{equation*}
-These desired result follows from these two facts. Uniqueness follows from extensionality.
+The desired result follows from these two facts. Uniqueness follows from extensionality.
 \end{proof}
 \begin{proof}(Restriction) We show
-
-
-
+\begin{equation*}
+\forall F\forall A\exists D(\forall x(x\in D\leftrightarrow\exists u\exists v(x=\langle u,v\rangle\land uFv\land u\in A)))
+\end{equation*}
+It is straightforward to show
+\begin{equation*}
+\forall F\forall A\forall x(\exists u\exists v(x=\langle u,v\rangle\land uFv\land u\in A)\to x\in F)
+\end{equation*}
+Then with the subset axiom we can assert
+\begin{equation*}
+\forall F\forall A\exists D(\forall x(x\in D\leftrightarrow x\in F\land\exists u\exists v(x=\langle u,v\rangle\land uFv\land u\in A)))
+\end{equation*}
+The desired result follows from these two facts. Uniqueness follows from extensionality.
 \end{proof}
+\begin{proof}(Image)
+We show 
+\begin{equation*}
+\forall F\forall A\exists D\forall x(x\in D\leftrightarrow\exists u\in A(uFx))
+\end{equation*}
+It is straightforward to show
+\begin{equation*}
+\forall F\forall A\forall x(\exists u\in A(uFx)\to x\in\text{ran}F)
+\end{equation*}
+Then with the subset axiom we can assert
+\begin{equation*}
+\forall F\forall A\exists D\forall x(x\in D\leftrightarrow x\in\text{ran}F\land\exists u\in A(uFx))
+\end{equation*}
+The desired result follows from these two facts. Uniqueness follows from extensionality.\\
+(next page)\newpage
+Next we show $F[A]=\text{ran}(F\restriction A)$. Let $x$ be arbitrary.\\
+\indent($\rightarrow$) Suppose $x\in F[A]$. This means $\exists u\in A(uFx)$, so there exists some $u\in A$ such that $uFx$. So $\langle u,x\rangle\in F\restriction A$ and 
+$x\in\text{ran}(F\restriction A)$.\\
+\indent($\leftarrow$) Now suppose $x\in\text{ran}(F\restriction A)$. Then there exists some $t$ such that $\langle t,x\rangle\in F\restriction A$. This means 
+$tFx$ and $t\in A$, so $x\in F[A]$.
+\end{proof}
+
+\subsection{Theorems}
+\begin{theorem}
+
+\end{theorem}
+
 
 
 
