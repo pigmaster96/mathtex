@@ -880,10 +880,32 @@ For a set $F$, $F^{-1}$ is a function iff $F$ is single-rooted. A relation $F$ i
 \begin{proof}
 First we prove that for any set $F$, $F^{-1}$ is a function iff $F$ is single-rooted.\\
 \indent($\rightarrow$)
-
-
-
+First suppose $F^{-1}$ is a function. Let $y$ be some element of ran$F$. By definition there exists some $x$ such that $xFy$. We also have $yF^{-1}x$ and $y\in\text{dom}F^{-1}$.
+Now let there be some other $x'$ such that $x'Fy$.
+Then since $xFy$ and $x'Fy$, $yF^{-1}x$ and $yF^{-1}x'$. Since $F^{-1}$ is a function we then have $x'=x$, so $F$ is single-rooted.\\
+\indent($\leftarrow$) Now suppose $F$ is single-rooted. Let $y$ be some element of dom$F^{-1}$. By definition this means there exists some $x$ such that
+$yF^{-1}x$, and $xFy$. So $y\in\text{ran}F$. Let $x_1$ and $x_2$ exist such that $yF^{-1}x_1$ and $yF^{-1}x_2$, meaning $x_1Fy$ and $x_2Fy$. Since $F$ is single rooted, we must
+then have $x_1=x_2$. So $F^{-1}$ is a function.\\
+(next page)\newpage
+Now we prove that a relation $F$ is a function iff $F^{-1}$ is single-rooted.\\
+\indent($\rightarrow$) Suppose $F$ were a function. Let $x$ be an element of ran$F^{-1}$.
+By definition there then exists some $y$ such that $yF^{-1}x$. This also means $xFy$ so $x\in\text{dom}F$. Let $y_1$ and $y_2$ be arbitrary such that $y_1F^{-1}x$ and $y_2F^{-1}x$. Then $xFy_1$
+and $xFy_2$. Since $F$ is a function we then have $y_1=y_2$.\\
+\indent($\leftarrow$) Suppose $F^{-1}$ were single-rooted. Let $x$ be an element of dom$F$. Then by definition there exists some $y$ such that $xFy$. This means $yF^{-1}x$ so $x\in\text{ran}F^{-1}$.
+Now let $y_1$ and $y_2$ be arbitrary such that $xFy_1$ and $xFy_2$. This means $y_1F^{-1}x$ and $y_2F^{-1}x$; since $F^{-1}$ is single-rooted, $y_1=y_2$.
 \end{proof}
+\begin{theorem}
+Assume that $F$ is a one-to-one function. If $x\in\text{dom}F$, then $F^{-1}(F(x))=x$. If $y\in\text{ran}F$, then $F(F^{-1}(y))=y$.
+\end{theorem}
+\begin{proof}
+First to show $\forall x(x\in\text{dom}F\to F^{-1}(F(x))=x)$. Let $x$ be arbitrary and suppose $x\in\text{dom}F$. Then there exists some $y$ such that $\langle x,y\rangle\in F$; by definition
+this $y$ is unique and $y=F(x)$. By definition $\langle y,x\rangle\in F^{-1}$. Since $F$ is one-to-one $F^{-1}$ is a function and $x=F^{-1}(y)=F^{-1}(F(x))$.\\
+\indent Now to show $\forall y(y\in\text{ran}F\to F(F^{-1}(y))=y)$. Let $y$ be arbitrary and suppose $y\in\text{ran}F$. Then by definition there exists a unique $x$ such that 
+$\langle x,y\rangle\in F$, and $y=F(x)$. We also have $\langle y,x\rangle\in F^{-1}$; since $F^{-1}$ is a function $x=F^{-1}(y)$. So $y=F(x)=F(F^{-1}(y))$.
+\end{proof}
+
+
+
 
 
 
