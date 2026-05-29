@@ -661,7 +661,7 @@ We start by proving
 Letting $R$ and $x$ be arbitrary, and supposing that there exists $y$ such that $\langle x,y\rangle\in R$, by the previous lemma we have $x\in\bigcup\bigcup R$.\\
 \indent The subset axioms allow us to assert
 \begin{equation*}
-\forall R\exists D\forall x(x\in D\leftrightarrow x\in\bigcup\bigcup R\leftrightarrow\exists y(\langle x,y\rangle\in R))
+\forall R\exists D\forall x(x\in D\leftrightarrow x\in\bigcup\bigcup R\land\exists y(\langle x,y\rangle\in R))
 \end{equation*}
 Existence follows from these two facts. Uniqueness follows from extensionality.\\
 \indent Now for the range. We want to show
@@ -862,7 +862,7 @@ $tFx$ and $t\in A$, so $x\in F[A]$.
 \end{proof}
 
 \subsection{Theorems}
-\begin{theorem}
+\begin{theorem}\label{theorems0}
 For a set $F$, dom$\,F^{-1}=\text{ran}\,F$ and ran$\,F^{-1}=\text{dom}\,F$. For a relation $F$, $(F^{-1})^{-1}=F$.
 \end{theorem}
 \begin{proof}
@@ -874,7 +874,7 @@ By definition this means $xFy$, so $x\in\text{dom}F$. Now suppose $x\in\text{dom
 and $vF^{-1}u$. By definition we then have $uFv$ and $x=\langle u,v\rangle\in F$. Now suppose $x\in F$. Since $F$ is a relation $x$ must be an ordered pair, whose first and second coordinates 
 can be denoted as $u$ and $v$ such that $x=\langle u,v\rangle$ and $uFv$. By definition $vF^{-1}u$ and $u(F^{-1})^{-1}v$, so $x=\langle u,v\rangle\in(F^{-1})^{-1}$.
 \end{proof}
-\begin{theorem}
+\begin{theorem}\label{theorems3}
 For a set $F$, $F^{-1}$ is a function iff $F$ is single-rooted. A relation $F$ is a function iff $F^{-1}$ is single-rooted.
 \end{theorem}
 \begin{proof}
@@ -894,7 +894,7 @@ and $xFy_2$. Since $F$ is a function we then have $y_1=y_2$.\\
 \indent($\leftarrow$) Suppose $F^{-1}$ were single-rooted. Let $x$ be an element of dom$F$. Then by definition there exists some $y$ such that $xFy$. This means $yF^{-1}x$ so $x\in\text{ran}F^{-1}$.
 Now let $y_1$ and $y_2$ be arbitrary such that $xFy_1$ and $xFy_2$. This means $y_1F^{-1}x$ and $y_2F^{-1}x$; since $F^{-1}$ is single-rooted, $y_1=y_2$.
 \end{proof}
-\begin{theorem}
+\begin{theorem}\label{theorems1}
 Assume that $F$ is a one-to-one function. If $x\in\text{dom}F$, then $F^{-1}(F(x))=x$. If $y\in\text{ran}F$, then $F(F^{-1}(y))=y$.
 \end{theorem}
 \begin{proof}
@@ -903,6 +903,118 @@ this $y$ is unique and $y=F(x)$. By definition $\langle y,x\rangle\in F^{-1}$. S
 \indent Now to show $\forall y(y\in\text{ran}F\to F(F^{-1}(y))=y)$. Let $y$ be arbitrary and suppose $y\in\text{ran}F$. Then by definition there exists a unique $x$ such that 
 $\langle x,y\rangle\in F$, and $y=F(x)$. We also have $\langle y,x\rangle\in F^{-1}$; since $F^{-1}$ is a function $x=F^{-1}(y)$. So $y=F(x)=F(F^{-1}(y))$.
 \end{proof}
+\begin{theorem}\label{theorems2}
+Assume $F$ and $G$ are functions. Then $F\circ G$ is a function. Its domain is
+\begin{equation*}
+\{x\in\text{dom}G\mid G(x)\in\text{dom}F\}
+\end{equation*}
+and for $x$ in its domain $(F\circ G)(x)=F(G(x))$.
+\end{theorem}
+\begin{proof}
+Assuming $F$ and $G$ are functions. First we show that $F\circ G$ is a function.
+Suppose $x\in\text{dom}(F\circ G)$. Then by definition there exists $y$ such that $\langle x,y\rangle\in F\circ G$. Suppose $y_1$ and $y_2$ are arbitrary elements such that
+$\langle x,y_1\rangle\in F\circ G$ and $\langle x,y_2\rangle\in F\circ G$; then by definition there exists $t_1$ and $t_2$ such that $\langle x,t_1\rangle\in G$,
+$\langle t_1,y_1\rangle\in F$, $\langle x,t_2\rangle\in G$, and $\langle t_2,y_2\rangle\in F$.
+Since $G$ is a function we then have $t_1=t_2$. So 
+$\langle t_1,y_1\rangle\in F$ and $\langle t_1,y_2\rangle\in F$. Since $F$ is a function we then have $y_1=y_2$.\\
+\indent Now we show dom$(F\circ G)=\{x\in\text{dom}G\mid G(x)\in\text{dom}F\}$. We can assert the existence of the right side by the subset axiom:
+\begin{equation*}
+\exists D(\forall x(x\in D\leftrightarrow x\in\text{dom}G\land G(x)\in\text{dom}F))
+\end{equation*}
+$G(x)$ exists since $G$ is a function and dom$G$ and dom$F$ are sets.\\
+\indent($\rightarrow$) Suppose $x\in\text{dom}(F\circ G)$. Then by definition there exists $y$ such that $\langle x,y\rangle\in F\circ G$; then there exists $t$ such that $\langle x,t\rangle\in G$
+and $\langle t,y\rangle\in F$. Then $x\in\text{dom}G$ and since $G$ is a function $G(x)=t\in\text{dom}F$.\\
+\indent($\leftarrow$) Suppose now $x\in\{x\in\text{dom}G\mid G(x)\in\text{dom}F\}$. Then $x\in\text{dom}G$ and $G(x)\in\text{dom}F$. The former means there exists $t$ such that $xGt$, so $t=G(x)$.
+This, combined with the latter means $t\in\text{dom}F$, so there exists $y$ such that $tFy$.
+By definition we then have $\langle x,y\rangle\in F\circ G$ and $x\in\text{dom}(F\circ G)$.\\
+(next page)\newpage
+Finally we show that $\forall x\in\text{dom}(F\circ G)[(F\circ G)(x)=F(G(x))]$. Let $x$ be an arbitrary element of dom$(F\circ G)$. Then there exists $y$ such that $\langle x,y\rangle\in F\circ G$
+Since $F\circ G$ is a function $y=(F\circ G)(x)$. By definition there exists $t$ such that
+$xGt$ and $tFy$. Since $G$ is a function $t=G(x)$ and $y=F(t)$.
+Putting it all together we have $(F\circ G)(x)=y=F(t)=F(G(x))$.
+\end{proof}
+
+\subsection{Identity relation}
+\begin{definition}
+For a set $\omega$, the identity function on $\omega$ is 
+\begin{equation*}
+I_\omega=\{\langle n,n\rangle\mid n\in\omega\}
+\end{equation*}
+\end{definition}
+\begin{proof}(Existence)
+We want to show
+\begin{equation*}
+\forall\omega\exists D(\forall x(x\in D\leftrightarrow\exists n\in\omega(x=\langle n,n\rangle)))
+\end{equation*}
+First we show
+\begin{equation*}
+\forall\omega\forall x(\exists n\in\omega(x=\langle n,n\rangle)\to x\in\omega\times\omega)
+\end{equation*}
+Let $\omega$ and $x$ be arbitrary. Suppose there exists some $n\in\omega$ such that $x=\langle n,n\rangle$. Then by definition $x\in\omega\times\omega$. 
+By the subset axiom we can assert
+\begin{equation*}
+\forall\omega\exists D(\forall x(x\in D\leftrightarrow x\in\omega\times\omega\land\exists n\in\omega(x=\langle n,n\rangle)))
+\end{equation*}
+where the desired conclusion follows from these two facts. Uniqueness follows from extensionality.
+\end{proof}
+\begin{proof}($I_\omega$ is a function on $\omega$) We first show that $I_\omega$ is a function.
+Let $x\in\text{dom}I_\omega$. Then by definition there exists $y$ such that $\langle x,y\rangle\in I_\omega$. Let $y_1$ and $y_2$ be arbitrary such that 
+$\langle x,y_1\rangle\in I_\omega$ and $\langle x,y_2\rangle\in I_\omega$. Then there exists $n_1$ and $n_2$ such that 
+$\langle x,y_1\rangle=\langle n_1,n_1\rangle$ and $\langle x,y_2\rangle=\langle n_2,n_2\rangle$.
+So $n_1=x=n_2$ and $y_1=n_1=n_2=y_2$.\\
+\indent Next we show $\text{dom}I_\omega=\omega$. Let $x\in\text{dom}I_\omega$. Then there exists some $y$ such that $\langle x,y\rangle\in I_\omega$. By definition there exists some $n\in\omega$
+such that $\langle x,y\rangle=\langle n,n\rangle$. So $x=n\in\omega$. Now let $x\in\omega$. By the pairing axiom $\langle x,x\rangle$ exists and by definition is an element of $I_\omega$. 
+So $x\in\text{dom}I_\omega$.\\
+\indent Finally we show $\text{ran}I_\omega=\omega$. Let $x\in\text{ran}I_\omega$. Then there exists $y$ such that $\langle y,x\rangle\in I_\omega$. By definition there then
+exists $n\in\omega$ such that $\langle n,n\rangle=\langle y,x\rangle$, and $x=n\in\omega$. Now let $x\in\omega$; then $\langle x,x\rangle$ exists and by definition is an element of $I_\omega$.
+So $x\in\text{ran}I_\omega$.
+\end{proof}
+\newpage
+
+\subsection{More theorems}
+\begin{theorem}
+Assuming that $G$ is some one-to-one function, $G^{-1}\circ G$ is the identity function on dom$G$, $I_{\text{dom}G}$,
+and $G\circ G^{-1}$ is the identity on ran$G$, $I_{\text{ran}G}$.
+\end{theorem}
+\begin{proof}
+Assuming that $G$ is some one-to-one function, we first show $G^{-1}\circ G$ is the identity function on dom$G$, $I_{\text{dom}G}$. Since $G$ is a one-to-one function, by theorem \ref{theorems3} 
+$G^{-1}$ is also a one-to-one function; 
+by theorem \ref{theorems2} $G^{-1}\circ G$ is a function.\\
+\indent We can show that $\text{dom}(G^{-1}\circ G)=\text{dom}G$. By theorem \ref{theorems2}, the domain of $G^{-1}\circ G$ is given by
+\begin{equation*}
+\{x\in\text{dom}G\mid G(x)\in\text{dom}G^{-1}\}
+\end{equation*}
+Suppose $x\in\text{dom}(G^{-1}\circ G)$. Then by the above equivalence it immediately follows that $x\in\text{dom}G$. Now suppose $x\in\text{dom}G$. 
+Then there exists some $y$ such that $xGy$ and $yG^{-1}x$. This means $G(x)=y\in\text{dom}G^{-1}$. By the above equivalence 
+$x\in\{x\in\text{dom}G\mid G(x)\in\text{dom}G^{-1}\}=\text{dom}(G^{-1}\circ G)$.\\
+\indent Now to show $G^{-1}\circ G=I_{\text{dom}G}$. Let $\langle x,y\rangle$ be an arbitrary element of $G^{-1}\circ G$. Then $x\in\text{dom}(G^{-1}\circ G)=\text{dom}G$. By theorem \ref{theorems2}
+$(G^{-1}\circ G)(x)=G^{-1}(G(x))$. By theorem \ref{theorems1} $G^{-1}(G(x))=x$.
+Putting it all together we have $y=(G^{-1}\circ G)(x)=G^{-1}(G(x))=x$, so $\langle x,y\rangle=\langle x,x\rangle$ for $x\in\text{dom}G$, so by definition $\langle x,y\rangle\in I_{\text{dom}G}$.\\
+\indent Now suppose $\langle x,y\rangle\in I_{\text{dom}G}$. Then there exists some $n\in\text{dom}G$ such that $\langle x,y\rangle=\langle n,n\rangle$. 
+This implies $x=n=y$ and $x\in\text{dom}G=\text{dom}(G^{-1}\circ G)$ in a manner similar to the previous direction $(G^{-1}\circ G)(x)=G^{-1}(G(x))=x=y$. So $\langle x,y\rangle\in G^{-1}\circ G$.\\
+\indent Next we show $G\circ G^{-1}$ is the identity on ran$G$, $I_{\text{ran}G}$. First we show 
+that $\text{dom}(G\circ G^{-1})=\text{ran}G$. By theorem \ref{theorems2} $G\circ G^{-1}$ is a function and the domain of $G\circ G^{-1}$ is equivalent to
+\begin{equation*}
+\{x\in\text{dom}G^{-1}\mid G^{-1}(x)\in\text{dom}G\}
+\end{equation*}
+Suppose $x\in\text{dom}(G\circ G^{-1})$. Then by the above equivalence and theorem \ref{theorems0} we immediately have $x\in\text{dom}G^{-1}=\text{ran}G$. Now suppose $x\in\text{ran}G$. 
+Then $x\in\text{dom}G^{-1}$ and there exists
+some $y$ such that $yGx$ and $xG^{-1}y$. So $G^{-1}(x)=y\in\text{dom}G$. By the above equivalence
+we then have $x\in\text{dom}(G\circ G^{-1})$.\\
+\indent Suppose $\langle x,y\rangle\in G\circ G^{-1}$. Then $x\in\text{dom}(G\circ G^{-1})=\text{ran}G$. By theorem \ref{theorems2} we have $y=(G\circ G^{-1})(x)=G(G^{-1}(x))$. 
+Since $G$ is a one-to-one function and $x\in\text{ran}G$, by theorem \ref{theorems1} $G(G^{-1}(x))=x$. Putting it all together we have $y=(G\circ G^{-1})(x)=G(G^{-1}(x))=x$. 
+So $\langle x,y\rangle=\langle x,x\rangle$ for $x\in\text{ran}G$. By definition we have
+$\langle x,y\rangle\in I_{\text{ran}G}$.\\
+\indent Now suppose $\langle x,y\rangle\in I_{\text{ran}G}$. By definition there exists some $n\in\text{ran}G$ such that $\langle x,y\rangle=\langle n,n\rangle$.
+This implies $x=n=y$ and $x\in\text{ran}G=\text{dom}(G\circ G^{-1})$.
+Then in a manner similar to the previous direction, $(G\circ G^{-1})(x)=G(G^{-1}(x))=x=y$. So
+$\langle x,y\rangle\in G\circ G^{-1}$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+
+\end{theorem}
+
 
 
 
