@@ -1012,9 +1012,90 @@ $\langle x,y\rangle\in G\circ G^{-1}$.
 \end{proof}
 \noindent(next page)\newpage
 \begin{theorem}
-
+For any sets $F$ and $G$,
+\begin{equation*}
+(F\circ G)^{-1}=G^{-1}\circ F^{-1}
+\end{equation*}
 \end{theorem}
+\begin{proof}
+Both $(F\circ G)^{-1}$ and $G^{-1}\circ F^{-1}$ are, by definition, relations. We have the string of equivalences for arbitrary
+$\langle x,y\rangle$.
+\begin{align*}
+\langle x,y\rangle\in(F\circ G)^{-1}&\leftrightarrow\langle y,x\rangle\in F\circ G\\
+&\leftrightarrow\exists t(yGt\land tFx)\\
+&\leftrightarrow\exists t(xF^{-1}t\land tG^{-1}y)\\
+&\leftrightarrow\langle x,y\rangle\in G^{-1}\circ F^{-1}\qedhere
+\end{align*}
+\end{proof}
+\begin{theorem}
+Assume that $F:A\to B$, and that $A$ is nonempty.
+\begin{enumerate}
+\item There exists a function $G:B\to A$ (a ``left inverse'') such that $G\circ F$ is the identity function $I_A$ on $A$ iff $F$ is one-to-one.
+\item There exists a function $H:B\to A$ (a ``right inverse'') such that $F\circ H$ is the identity function $I_B$ on $B$ iff $F$ is maps $A$ onto $B$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}(1.)\\
+\indent$(\rightarrow)$ Suppose there exists some $G:B\to A$ such that $G\circ F$ is the identity function $I_A$ on $A$. Let $y$ be an element of ran$F$.
+Then by definition there exists $x$ such that $xFy$. Now let $x'$ be arbitrary such that $x'Fy$.
+We know that $y\in\text{ran}F\subseteq B=\text{dom}G$. By theorem \ref{theorems2} $x\in\text{dom}(G\circ F)$ and $G(y)=G(F(x))=(G\circ F)(x)$ since 
+$G\circ F$ is the identity function $I_A$ we then have $(G\circ F)(x)=x$. A similar argument 
+shows $G(y)=G(F(x'))=(G\circ F)(x')=x'$. So $yGx'$ and $yGx$; since $G$ is a function $x'=x$.\\
+\indent $(\leftarrow)$ Suppose now that $F$ is one-to-one. We need to come up with some function $G$ that satisfies the following requirements: $G$ is a function, dom$G=B$, ran$G\subseteq A$, and 
+$G\circ F=I_A$. Since $F$ is one-to-one $F^{-1}$ is a function from $\text{ran}F$ onto $A$. By assumption $A$ is nonempty, so we can fix some $a$ in $A$, defining $G$ such that it assigns $a$ to 
+every point in $B-\text{ran}F$ (so that the domain of $G$ encompasses all of $B$):
+\begin{equation*}
+G(x)=\begin{cases}
+F^{-1}(x)&\text{if }x\in\text{ran}F\\
+a&\text{if }x\in B-\text{ran}F
+\end{cases}
+\end{equation*}
+More precisely, our candidate function is
+\begin{equation*}
+G=F^{-1}\cup(B-\text{ran}F)\times\{a\}
+\end{equation*}
+(next page)\newpage
+We show that $G$, defined as
+\begin{equation*}
+G=F^{-1}\cup(B-\text{ran}F)\times\{a\}
+\end{equation*}
+is, firstly, a function. Let $x$ be an arbitrary element of dom$G$. By definition then exists $y$ such that $xGy$. Now let $y'$ be arbitrary such that $xGy'$.
+We have four cases.\\
+\indent Case 1: $\langle x,y\rangle\in F^{-1}$, $\langle x,y'\rangle\in F^{-1}$. Then since $F^{-1}$ is a function, $y=y'$.\\
+\indent Case 2: $\langle x,y\rangle\in F^{-1}$, $\langle x,y'\rangle\in(B-\text{ran}F)\times\{a\}$.
+In this case $x\in(B-\text{ran}F)$ so $x\notin\text{ran}F$. But since $\langle x,y\rangle\in F^{-1}$ we also have $\langle y,x\rangle\in F$ and $x\in\text{ran}F$. 
+This case leads to a contradiction and cannot occur; it is excluded.\\
+\indent Case 3: $\langle x,y\rangle\in(B-\text{ran}F)\times\{a\}$, $\langle x,y'\rangle\in F^{-1}$.
+In a manner similar to case 2, this case leads to a contradiction and can be excluded.\\
+\indent Case 4: $\langle x,y\rangle\in(B-\text{ran}F)\times\{a\}$, $\langle x,y'\rangle\in(B-\text{ran}F)\times\{a\}$. Then $y=a=y'$.\\
+\indent Next we show dom$G=B$. First suppose $x\in\text{dom}G$. Then there exists $y$ such that $\langle x,y\rangle\in G$, meaning $\langle x,y\rangle\in F^{-1}$ or 
+$\langle x,y\rangle\in(B-\text{ran}F)\times\{a\}$. In the first case $\langle y,x\rangle\in F$ so
+$x\in\text{ran}F\subseteq B$ and $x\in B$. In the second case it immediately follows that $x\in B$.\\
+\indent Now suppose $x\in B$. We have two cases. First suppose $x\in\text{ran}F$. Then there exists $y$ such that $xF^{-1}y$; so $xGy$ and $x\in\text{dom}G$. Next suppose $x\notin\text{ran}F$.
+Then it immediately follows that $x\in B-\text{ran}F$; $\langle x,a\rangle$ exists by the pairing axiom and is a member of $(B-\text{ran}F)\times\{a\}$, so 
+$\langle x,a\rangle\in G$ and $x\in\text{dom}G$.\\
+\indent Next we show ran$G\subseteq A$. Suppose $x\in\text{ran}G$. Then there exists $y$ such that
+$\langle y,x\rangle\in F^{-1}$ or $\langle y,x\rangle\in(B-\text{ran}F)\times\{a\}$. In the first case $\langle x,y\rangle\in F$ and $x\in\text{dom}F$. In the second case it immediately follows
+that $x=a\in A$.\\
+\indent Finally we show $G\circ F=I_A$. Both $G\circ F$ and $I_A$ are relations. Suppose $\langle x,y\rangle$ is an arbitrary element of $G\circ F$. Then there exists $t$ such that $xFt$ and $tGy$.
+The latter implies $\langle t,y\rangle\in F^{-1}$ or $\langle t,y\rangle\in(B-\text{ran}F)\times\{a\}$. In the first case $yFt$ and $xFt$; so since $F$ is one-to-one $x=y$. 
+Since $\langle x,y\rangle=\langle x,x\rangle$ for $x\in\text{dom}F=A$, by definition $\langle x,y\rangle\in I_A$. In the other case where 
+$\langle t,y\rangle\in(B-\text{ran}F)\times\{a\}$ we have $t\notin\text{ran}F$. But since $xFt$ we also have $t\in\text{ran}F$. This case leads to a contradiction and can be excluded.\\
+\indent Suppose now that $\langle x,y\rangle$ is an arbitrary element of $I_A$. Then there exists some $z\in A$ such that 
+$\langle x,y\rangle=\langle z,z\rangle$. Since $A=\text{dom}F$, there exists $z_0$ such that $zFz_0$; it follows that $z_0\in\text{ran}F\subseteq B$ and $z_0\in B=\text{dom}G$. 
+Then since $G$ was proven to be a function there exists $z_1$ such that $z_0Gz_1$. We have 
+$\langle z_0,z_1\rangle\in F^{-1}$ or $\langle z_0,z_1\rangle\in (B-\text{ran}F)\times\{a\}$
+since $z_0\in\text{ran}F$ the latter case is false and $\langle z_0,z_1\rangle\in F^{-1}$.
+We then have $zFz_0$ and $z_1Fz_0$; since $F$ is one-to-one, $z_1=z$. 
+So since $zFz_0$ and $z_0Gz_1\leftrightarrow z_0Gz$, 
+$\langle x,y\rangle=\langle z,z\rangle\in G\circ F$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(2)\\
+\indent($\rightarrow$)
 
+
+
+\end{proof}
 
 
 
