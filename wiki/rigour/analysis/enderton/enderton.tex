@@ -1124,14 +1124,47 @@ So $\langle x,y\rangle=\langle n,n\rangle=\langle n,n_1\rangle\in F\circ H$.
 \newpage
 
 \subsection{Even more theorems}
+\begin{theorem}
+The following hold for any sets. ($F$ need not be a function)
+\begin{enumerate}
+\item The image of a union is the union of the images:
+\begin{equation*}
+F[A\cup B]=F[A]\cup F[B]\quad\text{and}\quad F[\bigcup X]=\bigcup\{F[A]\mid A\in X\}
+\end{equation*}
+\item The image of an intersection is included in the intersection of the images:
+\begin{equation*}
+F[A\cap B]\subseteq F[A]\cap F[B]\quad\text{and}\quad F[\bigcap X]\subseteq\bigcap\{F[A]\mid A\in X\}
+\end{equation*}
+for nonempty $X$. Equality holds if $F$ is single-rooted.
+\item The image of a difference includes the difference of the images:
+\begin{equation*}
+F[A]-F[B]\subseteq F[A-B]
+\end{equation*}
+Equality holds if $F$ is single-rooted.
+\end{enumerate}
+\end{theorem}
+\begin{proof}(1)\\
+\indent To prove $F[A\cup B]=F[A]\cup F[B]$ for arbitrary $F,A$ and $B$ we have the following string of equivalences for arbitrary $y$:
+\begin{align*}
+y\in F[A\cup B]&\leftrightarrow\exists u\in A\cup B(uFy)\\
+&\leftrightarrow\exists u\in A(uFy)\lor\exists u\in B(uFy)\\
+&\leftrightarrow y\in F[A]\lor y\in F[B]\\
+&\leftrightarrow y\in F[A]\cup F[B]
+\end{align*}
+\indent Proving $F[\bigcup X]=\bigcup\{F[A]\mid A\in X\}$ for arbitrary $F$ and $X$ follows a similar principle. Suppose $y\in F[\bigcup X]$. Then by definition there exists some $u\in\bigcup X$ 
+such that $uFy$. There then also exists $A\in X$ such that $u\in A$, so by definition $y\in F[A]$.
+Since $A\in X$, $F[A]\in\{F[A]\mid A\in X\}$, so $y\in\bigcup\{F[A]\mid A\in X\}$.\\
+\indent Now suppose $y\in\bigcup\{F[A]\mid A\in X\}$. Then there exists some $B\in\{F[A]\mid A\in X\}$ such that $y\in B$. So there exists $A\in X$ such that $B=F[A]$, and $y\in F[A]$. 
+This means that there exists $u\in A$ such that $uFy$. Since $A\in X$ we then have $u\in\bigcup X$ and $y\in F[\bigcup X]$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(2)\\
+To prove $F[A\cap B]\subseteq F[A]\cap F[B]$ for arbitrary $F,A$ and $B$ we
 
 
 
 
-
-
-
-
+\end{proof}
 
 
 
