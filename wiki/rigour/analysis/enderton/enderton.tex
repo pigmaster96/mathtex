@@ -971,7 +971,7 @@ So $x\in\text{ran}I_\omega$.
 \end{proof}
 \newpage
 
-\subsection{More theorems}
+\subsection{More theorems, Axiom of Choice first form}
 \begin{theorem}
 Assuming that $G$ is some one-to-one function, $G^{-1}\circ G$ is the identity function on dom$G$, $I_{\text{dom}G}$,
 and $G\circ G^{-1}$ is the identity on ran$G$, $I_{\text{ran}G}$.
@@ -1092,10 +1092,19 @@ $\langle x,y\rangle=\langle z,z\rangle\in G\circ F$.
 \noindent(next page)\newpage
 \begin{proof}(2)\\
 \indent($\rightarrow$)
+Suppose there exists some $H:B\to A$ such that $F\circ H=I_B$. First suppose that $x\in\text{ran}F$; it immediately from $\text{ran}F\subseteq B$ that $x\in B$. Next suppose $x\in B$. Then
+$x\in\text{dom}H$ so there exists some $y$ such that $xHy$. $y\in\text{ran}H\subseteq A=\text{ran}F$ then implies the existence of $z$ such that $yFz$.
+We then have $\langle x,z\rangle\in F\circ H=I_B$, implying the existence of $n\in B$ such that $\langle x,z\rangle=\langle n,n\rangle$, where it then follows that $x=n=z$. 
+So $yFz\leftrightarrow yFx$ and $x\in\text{ran}F$.\\
+\indent($\leftarrow$)
+
 
 
 
 \end{proof}
+
+
+
 
 
 
