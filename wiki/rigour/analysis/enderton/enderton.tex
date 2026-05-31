@@ -1090,19 +1090,40 @@ So since $zFz_0$ and $z_0Gz_1\leftrightarrow z_0Gz$,
 $\langle x,y\rangle=\langle z,z\rangle\in G\circ F$.
 \end{proof}
 \noindent(next page)\newpage
+\noindent\textbf{Intuition}\\
+The left direction of the second proof poses a difficulty. Assuming $F$ maps $A$ onto $B$, $F$ not necessarily being one-to-one means we cannot guarantee $F^{-1}$ is a function.
+So we cannot take $H=F^{-1}$ leaving us with limited options for a candidate $H$. The idea is that for each $y\in B$ we must \textit{choose} some $x$ for which $F(x)=y$ and let $H(y)$ be the chosen
+$x$. Since $F$ is onto we know that every $y$ has one or more $x$ such that $F(x)=y$; we just have no way of defining any one particular choice of $x$. The axiom of choice gives us a way out.\\
+\vspace{1mm}\\
+\textit{Axiom of Choice} (first form)\\
+For any relation $R$ there is a function $H\subseteq R$ with dom$H=\text{dom}R$.\
+\begin{equation*}
+\forall R\exists H(H\subseteq R\land\text{$H$ is a function}\land\text{dom}H=\text{dom}R)
+\end{equation*}
+This axiom asserts that one can ``choose'' exactly one output or every input in a relation's domain.
 \begin{proof}(2)\\
 \indent($\rightarrow$)
-Suppose there exists some $H:B\to A$ such that $F\circ H=I_B$. First suppose that $x\in\text{ran}F$; it immediately from $\text{ran}F\subseteq B$ that $x\in B$. Next suppose $x\in B$. Then
-$x\in\text{dom}H$ so there exists some $y$ such that $xHy$. $y\in\text{ran}H\subseteq A=\text{ran}F$ then implies the existence of $z$ such that $yFz$.
+Suppose there exists some $H:B\to A$ such that $F\circ H=I_B$. First suppose that $x\in\text{ran}F$; it immediately follows from $\text{ran}F\subseteq B$ that $x\in B$. Next suppose $x\in B$. Then
+$x\in\text{dom}H$ so there exists some $y$ such that $xHy$. $y\in\text{ran}H\subseteq A=\text{dom}F$ then implies the existence of $z$ such that $yFz$.
 We then have $\langle x,z\rangle\in F\circ H=I_B$, implying the existence of $n\in B$ such that $\langle x,z\rangle=\langle n,n\rangle$, where it then follows that $x=n=z$. 
 So $yFz\leftrightarrow yFx$ and $x\in\text{ran}F$.\\
-\indent($\leftarrow$)
-
-
-
-
+\indent($\leftarrow$) Suppose $F$ maps $A$ onto $B$, meaning $\text{ran}F=B$. $F^{-1}$ is a relation. 
+By the axiom of choice we can assert the existence of a function $H$ such that $H\subseteq F^{-1}$
+and dom$H=\text{dom}F^{-1}=\text{ran}F=B$.\\
+\indent Next we show ran$H\subseteq A$. Let $y\in\text{ran}H$. Then there exists $x$ such that $xHy$. Then $xF^{-1}y$, $y\in\text{ran}F^{-1}=\text{dom}F=A$.\\
+\indent Finally we show $F\circ H=I_B$. Let $\langle x,y\rangle$ be an arbitrary element of $F\circ H$. Then there exists $t$ such that $xHt$ and $tFy$. The former implies $xF^{-1}t$ and $tFx$. 
+This, combined with the latter and the fact that $F$ is a function, means $x=y$. 
+We have $\langle x,y\rangle=\langle x,x\rangle$ for $x\in\text{ran}F=B$, so $\langle x,y\rangle\in I_B$.\\
+\indent Now suppose $\langle x,y\rangle\in I_B$. Then there exists $n\in B$ such that $\langle x,y\rangle=\langle n,n\rangle$, and it follows that $x=n=y$. We showed that $H$ is a function from
+$B$ into $A$.
+Since $n\in B=\text{dom}H$ there exists $n_0$ such that $nHn_0$. Then $n_0\in\text{ran}H\subseteq A=\text{dom}F$, so there exists $n_1$ such that $n_0Fn_1$.
+$nHn_0$ implies $nF^{-1}n_0$ and $n_0Fn$, so since $F$ is a function $n=n_1$.
+$nHn_0$ and $n_0Fn_1$ means $\langle n,n_1\rangle\in F\circ H$. 
+So $\langle x,y\rangle=\langle n,n\rangle=\langle n,n_1\rangle\in F\circ H$.
 \end{proof}
+\newpage
 
+\subsection{Even more theorems}
 
 
 
