@@ -1159,12 +1159,30 @@ This means that there exists $u\in A$ such that $uFy$. Since $A\in X$ we then ha
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(2)\\
-To prove $F[A\cap B]\subseteq F[A]\cap F[B]$ for arbitrary $F,A$ and $B$ we
-
-
-
-
+\indent To prove $F[A\cap B]\subseteq F[A]\cap F[B]$ for arbitrary $F,A$ and $B$, suppose $y\in F[A\cap B]$. Then there exists some $u\in A\cap B$ such that $uFy$. Since $u\in A$ and $u\in B$ then 
+$y\in F[A]$ and $y\in F[B]$. So $y\in F[A]\cap F[B]$.\\
+\indent The converse, $F[A]\cap F[B]\subseteq F[A\cap B]$, can be proven if $F$ were single rooted.
+Suppose $y\in(F[A]\cap F[B])$. Then $y\in F[A]$ and $y\in F[B]$, and there exists $u_1\in A$ and $u_2\in B$ such that $u_1Fy$ and $u_2Fy$.
+Since $F$ is single rooted, we then have $u_1=u_2$ and $u_1\in A\cap B$. So $y\in F[A\cap B]$.\\
+\indent Now for the general case. To prove $F[\bigcap X]\subseteq\bigcap\{F[A]\mid A\in X\}$ for arbitrary $F$ and nonempty $X$, suppose $y\in F[\bigcap X]$. Then there exists $u\in\bigcap X$
+such that $uFy$. Let $B$ be an arbitrary element of $\{F[A]\mid A\in X\}$, then there exists some $A\in X$ such that $B=F[A]$. Since $A\in X$ then $u\in A$ and $y\in F[A]=B$. 
+So $y\in\bigcap\{F[A]\mid A\in X\}$.\\
+\indent The converse, $\bigcap\{F[A]\mid A\in X\}\subseteq F[\bigcap X]$, is again true if $F$ were single rooted. Suppose $y\in\bigcap\{F[A]\mid A\in X\}$. Since $X$ is nonempty then there
+exists $A\in X$. We know by the subset axiom that $F[A]$ exists, so $F[A]\in\{F[A]\mid A\in X\}$ and $y\in F[A]$. Then there exists $u\in A$ such that $uFy$. 
+Let $B$ be an arbitrary element of $X$. Then $F[B]\in\{F[A]\mid A\in X\}$ and $y\in F[B]$. So there
+then exists $u_1\in B$ such that $u_1Fy$. Since $F$ is single rooted we must then have $u=u_1$ and 
+$u\in B$; so $u\in\bigcap X$. Since $uFy$ we then have $y\in F[\bigcap X]$.
 \end{proof}
+\begin{proof}(3)\\
+\indent To prove, for arbitrary $F,A$ and $B$ that $F[A]-F[B]\subseteq F[A-B]$, suppose $y\in F[A]-F[B]$. Then $y\in F[A]$ and $y\notin F[B]$. There exists some $u\in A$ such that $uFy$.
+Suppose, for contradiction, that $u\in B$. Then $uFy$ and $y\in F[B]$. So we must have
+$u\in A-B$ and $y\in F[A-B]$.\\
+\indent The converse is true if $F$ is single-rooted. Suppose $y\in F[A-B]$. Then there exists $u\in A-B$ such that $uFy$. $u\in A$ so $y\in F[A]$. For contradiction suppose $y\in F[B]$. Then there
+exists $v\in B$ such that $vFy$. Since $F$ is single-rooted we would then have $u=v$ and $u\in B$.
+So $y\notin F[B]$ and $y\in F[A]-F[B]$.
+\end{proof}
+
+
 
 
 
