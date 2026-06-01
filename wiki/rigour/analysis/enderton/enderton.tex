@@ -15,6 +15,7 @@
 \newtheorem{theo}{Theorem}[chapter]
 \newtheorem{theorem}[theo]{Theorem}
 \newtheorem{lemma}[theo]{Lemma}
+\newtheorem{corollary}[theo]{Corollary}
 \newtheorem{definition}[theo]{Definition}
 
 
@@ -1181,6 +1182,19 @@ $u\in A-B$ and $y\in F[A-B]$.\\
 exists $v\in B$ such that $vFy$. Since $F$ is single-rooted we would then have $u=v$ and $u\in B$.
 So $y\notin F[B]$ and $y\in F[A]-F[B]$.
 \end{proof}
+\noindent The inverse of a function is always single-rooted by theorem \ref{theorems3} so we have the following for any function $G$ and sets $A,B$ and $X$:
+\begin{corollary}
+\begin{align*}
+G^{-1}[\bigcup X]&=\bigcup\{G^{-1}[A]\mid A\in X\}\\
+G^{-1}[\bigcap X]&=\bigcap\{G^{-1}[A]\mid A\in X\}\quad\text{for }X\neq\emptyset\\
+G^{-1}[A-B]&=G^{-1}[A]-G^{-1}[B]
+\end{align*}
+\end{corollary}
+\newpage
+
+\subsection{}
+
+
 
 
 
