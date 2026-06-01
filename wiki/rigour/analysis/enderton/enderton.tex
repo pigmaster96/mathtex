@@ -1192,8 +1192,88 @@ G^{-1}[A-B]&=G^{-1}[A]-G^{-1}[B]
 \end{corollary}
 \newpage
 
-\subsection{}
+\subsection{Indexed unions and intersections}
+Let $I$ be a set, called the \textit{index} set. Let $F$ be a function whose domain includes $I$. Then we define
+\begin{align*}
+\bigcup_{i\in I}F(i)&=\bigcup\{F(i)\mid i\in I\}\\
+&=\{x\mid x\in F(i)\text{ for some $i$ in $I$}\}
+\end{align*}
+I attempt to prove existence by the subset axiom:
+\begin{proof}
+We want to show that given some set $I$ and function $F$ such that $I\subseteq\text{dom}F$,
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\exists i\in I(x\in F(i)))
+\end{equation*}
+We first show
+\begin{equation*}
+\forall x(\exists i\in I(x\in F(i))\to x\in\bigcup\text{ran}F)
+\end{equation*}
+Let $x$ be arbitrary. Suppose there exists $i\in I$ such that $x\in F(i)$. Then since $I\subseteq\text{dom}F$ and $F$ is a function, $F(i)$ exists and is an element of $\text{ran}F$.
+Since $x\in F(i)$ and $F(i)\in\text{ran}F$, $x\in\bigcup\text{ran}F$.\\
+\indent By the subset axiom we can assert
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\in\bigcup\text{ran}F\land\exists i\in I(x\in F(i)))
+\end{equation*}
+and the desired result follows from these two facts. Uniqueness follows from extensionality.
+\end{proof}
+\noindent A similar definition applies for the intersection (provided $I$ is nonempty).
+\begin{align*}
+\bigcap_{i\in I}F(i)&=\bigcap\{F(i)\mid i\in I\}\\
+&=\{x\mid x\in F(i)\text{ for every $i$ in $I$}\}
+\end{align*}
+\begin{proof}(Existence)
+We want to show that given some nonempty set $I$ and function $F$ such that $I\subseteq\text{dom}F$,
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\forall i\in I(x\in F(i)))
+\end{equation*}
+First we prove
+\begin{equation*}
+\forall x(\forall i\in I(x\in F(i))\to x\in\bigcup\text{ran}F)
+\end{equation*}
+Let $x$ be arbitrary. Suppose $\forall i\in I(x\in F(i))$. Since $I$ was assumed to be nonempty, there exists $i\in I\subseteq\text{dom}F$, 
+Then since $F$ is a function $F(i)$ exists, and we have $x\in F(i)\in\text{ran}F$. So $x\in\bigcup\text{ran}F$.\\
+\indent The subset axiom allows us to assert
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\in\bigcup\text{ran}F\land\forall i\in I(x\in F(i)))
+\end{equation*}
+and the desired result follows from these two facts. Uniqueness follows from extensionality.
+\end{proof}
+\noindent The alternative notation $F_i=F(i)$ is also used on occasion.
+\newpage
 
+\subsection{Set of all functions between sets}
+For sets $A$ and $B$ we can form the collection of functions from $A$ to $B$. Denoted by $\prescript{A}{}{B}$:
+\begin{equation*}
+\prescript{A}{}{B}=\{F\mid F\text{ is a function from $A$ into $B$}\}
+\end{equation*}
+\begin{lemma}
+For any function $F$ and sets $A$ and $B$, if $F:A\to B$, then $F\subseteq A\times B$.
+\end{lemma}
+\begin{proof}
+Suppose $F$ is a function from $A$ into $B$. Then $\text{dom}F=A$ and ran$F\subseteq B$.
+$F$ is a relation, so let $\langle x,y\rangle$ be an arbitrary element of $F$. Then $x\in\text{dom}F=A$ and $y\in\text{ran}F\subseteq B$. So $x\in A$ and $y\in B$, and by definition
+$\langle x,y\rangle\in A\times B$.
+\end{proof}
+\begin{proof}(Existence)
+We want to show for arbitrary sets $A$ and $B$
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\text{ is a function from $A$ into $B$})
+\end{equation*}
+We first show
+\begin{equation*}
+\forall x(x\text{ is a function from $A$ into $B$}\to x\in\mathscr P(A\times B))
+\end{equation*}
+For arbitrary $x$, supposing $x:A\to B$, it follows from the previous lemma that $x\subseteq A\times B$ and so $x\in\mathscr P(A\times B)$.\\
+\indent The subset axiom allows us to assert
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\in\mathscr P(A\times B)\land x\text{ is a function from $A$ into $B$})
+\end{equation*}
+The desired result follows from these two facts. Uniqueness follows from extensionality.
+\end{proof}
+\noindent The notation $\prescript{A}{}{B}$ is read ``$B$-pre-$A$'' and is sometimes written $B^A$ instead. 
+\newpage
+
+\section{}
 
 
 
