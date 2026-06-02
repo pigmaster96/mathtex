@@ -20,4 +20,4 @@
 \contentsline {subsection}{\numberline {2.3.5}Even more theorems}{33}{}%
 \contentsline {subsection}{\numberline {2.3.6}Indexed unions and intersections}{35}{}%
 \contentsline {subsection}{\numberline {2.3.7}Set of all functions between sets}{36}{}%
-\contentsline {section}{\numberline {2.4}}{37}{}%
+\contentsline {section}{\numberline {2.4}Infinite Cartesian Products}{37}{}%
