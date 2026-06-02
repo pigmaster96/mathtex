@@ -1241,6 +1241,71 @@ and the desired result follows from these two facts. Uniqueness follows from ext
 \noindent The alternative notation $F_i=F(i)$ is also used on occasion.
 \newpage
 
+\subsection{Another proof for indexed unions and intersection}
+The use of $F(i)$ in the subset axiom assertion of the previous proofs hinges on the assumption that $F$ is a function. I write another two proofs of existence of the set of interest without
+assuming that $I\subseteq\text{dom}F$ and $F$ is a function.
+\begin{proof}(Existence of the ``indexed union'')
+We show for arbitrary sets $I$ and $F$
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\exists i\in I\exists y(iFy\land x\in y))
+\end{equation*}
+We do this by showing
+\begin{equation*}
+\forall x(\exists i\in I\exists y(iFy\land x\in y)\to x\in\bigcup\text{ran}F)
+\end{equation*}
+Letting $x$ be arbitrary and supposing there exists $i\in I$ and $y$ such that $iFy$ and $x\in y$,
+by definition $y\in\text{ran}F$ and so $x\in\bigcup\text{ran}F$.\\
+\indent Then the subset axiom allows us to assert
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\in\bigcup\text{ran}F\land\exists i\in I\exists y(iFy\land x\in y))
+\end{equation*}
+and the desired result follows from these two facts. Uniqueness follows from extensionality.\\
+\indent Now suppose that $F$ were a function and $I\subseteq\text{dom}F$. The statement we just proved
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\exists i\in I\exists y(iFy\land x\in y))
+\end{equation*}
+Can be shown to be equivalent to
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\exists i\in I(x\in F(i)))
+\end{equation*}
+This can be done by showing that for arbitrary $x$,
+\begin{equation*}
+\exists i\in I\exists y(iFy\land x\in y)\leftrightarrow\exists i\in I(x\in F(i))
+\end{equation*}
+Which is straightforward.
+\end{proof}
+\noindent This proof seems clearer by decoupling existence from behaviour.\\
+(next page)\newpage
+\newpage
+\begin{proof}(Existence of the ``indexed intersection'')
+We show for arbitrary sets $F$ and nonempty $I$
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\forall i\in I\exists y(\langle i,y\rangle\in F\land x\in y))
+\end{equation*}
+We first show
+\begin{equation*}
+\forall x(\forall i\in I\exists y(\langle i,y\rangle\in F\land x\in y)\to x\in\bigcup\text{ran}F)
+\end{equation*}
+Let $x$ arbitrary such that $\forall i\in I\exists y(\langle i,y\rangle\in F\land x\in y)$. Since $I$ is nonempty there exists $i\in I$. Then there exists $y$ such that 
+$\langle i,y\rangle\in F$ and $x\in y$. Since $y\in\text{ran}F$, $x\in\bigcup\text{ran}F$.\\
+\indent The subset axiom allows us to assert, even if $I$ were empty,
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\in\bigcup\text{ran}F\land\forall i\in I\exists y(\langle i,y\rangle\in F\land x\in y))
+\end{equation*}
+With the added condition that $I$ was nonempty, the desired result follows from these two facts.
+Uniqueness follows from extensionality.\\
+\indent Now suppose $F$ were a function and $I\subseteq\text{dom}F$. The statement we just proved can be shown to be equivalent to
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\forall i\in I(x\in F(i)))
+\end{equation*}
+By showing that under the assumptions, 
+\begin{equation*}
+\forall i\in I\exists y(\langle i,y\rangle\in F\land x\in y)\leftrightarrow\forall i\in I(x\in F(i))
+\end{equation*}
+Which is straightforward.
+\end{proof}
+\newpage
+
 \subsection{Set of all functions between sets}
 For sets $A$ and $B$ we can form the collection of functions from $A$ to $B$. Denoted by $\prescript{A}{}{B}$:
 \begin{equation*}
@@ -1282,6 +1347,22 @@ We define:
 \end{equation*}
 The members of this set are all functions with domain $I$, where each $i$ maps to some element in $H(i)$. Intuitively, each function $f$ in the set dictates exactly one way to ``choose'' one element
 from each $H(i)$.
+\begin{proof}(Existence)
+Given that $H$ is a function whose domain includes $I$, We want to prove
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\text{ is a function}\land\text{dom}x=I\land\forall i\in I(x(i)\in H(i)))
+\end{equation*}
+We will show
+\begin{equation*}
+\forall x([x\text{ is a function}\land\text{dom}x=I\land\forall i\in I(x(i)\in H(i))]\to x\in\prescript{I}{}{(\bigcup_{i\in I}H(i)})
+\end{equation*}
+Let $x$ be an arbitrary function such that dom$x=I$ and $\forall i\in I(x(i)\in H(i))$. 
+By definition we need to show that $x$ is a function from $I$ to $\bigcup_{i\in I}H(i)$. We know that $x$ is a function and dom$x=I$ so all we need to do is show ran$x\subseteq\bigcup_{i\in I}H(i)$.
+Suppose $y\in\text{ran}x$. Then there exists $z$ such that $\langle z,y\rangle\in x$, so $z\in\text{dom}x=I$.
+Then since $x$ is a function $y=x(z)\in H(z)$. Then by definition 
+
+
+\end{proof}
 
 
 
