@@ -1347,22 +1347,55 @@ We define:
 \end{equation*}
 The members of this set are all functions with domain $I$, where each $i$ maps to some element in $H(i)$. Intuitively, each function $f$ in the set dictates exactly one way to ``choose'' one element
 from each $H(i)$.
-\begin{proof}(Existence)
-Given that $H$ is a function whose domain includes $I$, We want to prove
+\begin{proof}(Existence) 
+We want to show for arbitrary sets $I$ and $H$,
 \begin{equation*}
-\exists D\forall x(x\in D\leftrightarrow x\text{ is a function}\land\text{dom}x=I\land\forall i\in I(x(i)\in H(i)))
+\exists D\forall x(x\in D\leftrightarrow[x\text{ is a function}\land\text{dom}x=I\land\forall i\in I\exists y(\langle i,y\rangle\in H\land x(i)\in y)])
 \end{equation*}
-We will show
+We first show that for any sets $I$ and $H$,
+\begin{align*}
+\forall x([x\text{ is a function}\land\text{dom}x=I\land\forall i\in I\exists y(\langle i,y\rangle\in H\land x(i)\in y)]\\\to x\in\prescript{I}{}{\{z\mid\exists i\in I\exists 
+y(\langle i,y\rangle\in H\land z\in y)\}})
+\end{align*}
+Let $x$ be an arbitrary function with domain equal to $I$, such that $\forall i\in I\exists y(\langle i,y\rangle\\\in H\land x(i)\in y)$. We need to show that $x$ is a function from $I$ to 
+$\{z\mid\exists i\in I\exists y(\langle i,y\rangle\in H\land z\in y)\}$, which has been proven to exist. 
+We already know that $x$ is a function with domain $I$. We just need to show ran$x\subseteq\{z\mid\exists i\in I\exists y(\langle i,y\rangle\in H\land z\in y)\}$. 
+Let $b$ be an arbitrary element of ran$x$. Then there exists $a$ such that $\langle a,b\rangle\in x$. Since $x$ is a function $b=x(a)$. Since $a\in\text{dom}x=I$, our assumptions 
+assert the existence of $y$ such that $\langle a,y\rangle\in H$ and $x(a)\in y$, so $b\in y$.
+Since $a\in I$, $\langle a,y\rangle\in H$, and $b\in y$, we then have $b\in \{z\mid\exists i\in I\exists y(\langle i,y\rangle\in H\land z\in y)\}$. 
+So $x$ is a function from $I$ into $\{z\mid\exists i\in I\exists y(\langle i,y\rangle\in H\land z\in y)\}$ and 
+$x\in\prescript{I}{}{\{z\mid\exists i\in I\exists y(\langle i,y\rangle\in H\land z\in y)\}}$.\\
+\indent By the subset axiom, for arbitrary sets $I$ and $H$, we know 
 \begin{equation*}
-\forall x([x\text{ is a function}\land\text{dom}x=I\land\forall i\in I(x(i)\in H(i))]\to x\in\prescript{I}{}{(\bigcup_{i\in I}H(i)})
+\prescript{I}{}{\{z\mid\exists i\in I\exists y(\langle i,y\rangle\in H\land z\in y)\}}
 \end{equation*}
-Let $x$ be an arbitrary function such that dom$x=I$ and $\forall i\in I(x(i)\in H(i))$. 
-By definition we need to show that $x$ is a function from $I$ to $\bigcup_{i\in I}H(i)$. We know that $x$ is a function and dom$x=I$ so all we need to do is show ran$x\subseteq\bigcup_{i\in I}H(i)$.
-Suppose $y\in\text{ran}x$. Then there exists $z$ such that $\langle z,y\rangle\in x$, so $z\in\text{dom}x=I$.
-Then since $x$ is a function $y=x(z)\in H(z)$. Then by definition 
-
-
+exists. So we can assert
+\begin{align*}
+\exists D\forall x(x\in D\leftrightarrow[x\in\prescript{I}{}{\{z\mid\exists i\in I\exists y(\langle i,y\rangle\in H\land z\in y)\}}\land x\text{ is a function}\\\land\text{ dom}x=I\land\forall i\in I\exists y(\langle i,y\rangle\in H\land x(i)\in y)])
+\end{align*}
+This, together with the implication we just proved, allows us to easily reach the desired result. Uniqueness follows from extensionality.\\
+(next page)\newpage
+Now suppose $I\subseteq\text{dom}H$ and that $H$ were a function. It is straightforward to show
+\begin{equation*}
+\forall i\in I\exists y(\langle i,y\rangle\in H\land x(i)\in y)\leftrightarrow\forall i\in I(x(i)\in H(i))
+\end{equation*}
+The result we proved
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow[x\text{ is a function}\land\text{dom}x=I\land\forall i\in I\exists y(\langle i,y\rangle\in H\land x(i)\in y)])
+\end{equation*}
+Becomes equivalent to
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow[x\text{ is a function}\land\text{dom}x=I\land\forall i\in I(x(i)\in H(i))])
+\end{equation*}
+Which proves the existence of the infinite cartesian product under the assumption that $I\subseteq\text{dom}H$ and that $H$ is a function.
 \end{proof}
+
+\subsection{Axiom of choice second form}
+
+
+
+
+
 
 
 
