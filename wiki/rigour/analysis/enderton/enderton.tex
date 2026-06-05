@@ -1414,10 +1414,62 @@ For any relation $R$ there is a function $H\subseteq R$ with dom$H=\text{dom}R$.
 \textit{Axiom of Choice} (second form)\\
 For any set $I$ and any function $H$ with domain $I$, if $H(i)\neq\emptyset$ for all $i$ in $I$, then $\bigtimes_{i\in I}H(i)\neq\emptyset$.
 \begin{proof} (First form implies second form)
-
+We want to show that 
+\begin{equation*}
+\forall R(R\text{ is a relation}\to\exists H(H\subseteq R\land\text{$H$ is a function}\land\text{dom}H=\text{dom}R))
+\end{equation*}
+Implies
+\begin{equation*}
+\forall I\forall H([H\text{ is a function}\land\text{dom}H=I]\to[\forall i\in I(H(i)\neq\emptyset)\to \bigtimes_{i\in I}H(i)\neq\emptyset])
+\end{equation*}
+Suppose the former is true. Let $I, H$ be arbitrary such that $H$ is a function and dom$H=I$. Now suppose $\forall i\in I(H(i)\neq\emptyset)$. To show that $\bigtimes_{i\in I}H(i)$ is nonempty,
+we need to come up with some function $f$ such that dom$f=I$ and 
+$\forall i\in I(f(i)\in H(i))$. Our candidate set, to apply the former assumption on, will be
+\begin{equation*}
+\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}
+\end{equation*}
+To prove existence of this set, we show that for arbitrary $I$ and $H$, 
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\exists i\in I\exists y(\langle i,y\rangle=x\land\exists z(\langle i,z\rangle\in H\land y\in z)))
+\end{equation*}
+We first show
+\begin{equation*}
+\forall x(\exists i\in I\exists y(\langle i,y\rangle=x\land\exists z(\langle i,z\rangle\in H\land y\in z))\to x\in I\times\bigcup\text{ran}H)
+\end{equation*}
+Let $x$ be arbitrary and suppose there exists $i,y$ such that $i\in I$ and $\langle i,y\rangle=x$. Suppose there exists $z$ such that $\langle i,z\rangle\in H$ and $y\in z$.
+By definition $z\in\text{ran}H$. So $y\in\bigcup\text{ran}H$ and $x=\langle i,y\rangle\in I\times\bigcup\text{ran}H$.\\
+\indent The subset axiom allows us to assert
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\in I\times\bigcup\text{ran}H\land\exists i\in I\exists y(\langle i,y\rangle=x\land\exists z(\langle i,z\rangle\in H\land y\in z))
+\end{equation*}
+and the desired conclusion follows from these two facts. Uniqueness follows from extensionality.\\
+(next page)\newpage
+It can then be easily shown that if we further assume that $\text{dom}H=I$ and $H$ were a function, that
+\begin{equation*}
+\exists i\in I\exists y(\langle i,y\rangle=x\land\exists z(\langle i,z\rangle\in H\land y\in z))\leftrightarrow\exists i\in I\exists y(\langle i,y\rangle=x\land y\in H(i))
+\end{equation*}
+so our proven result becomes
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\exists i\in I\exists y(\langle i,y\rangle=x\land y\in H(i)))
+\end{equation*}
+proving the existence of $\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$.\\
+\indent By definition, every element in this set is an ordered pair, so it is a binary relation. We can then, by the first form of the choice axiom, assert the existence of a function $f$ such that 
+$f\subseteq\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$ and dom$f=\text{dom}\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$. We already know that $f$ is a function.\\
+\indent We first show that dom$f=I$.
+We do this by showing that dom$f=\text{dom}\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}=I$. Let $a$ be arbitrary and suppose $a\in\text{dom}\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$.
+Then by definition there exists $b$ such that $\langle a,b\rangle\in\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$, so $a\in I$.
+Now suppose $a\in I$. Then since $\text{dom}H=I$, $H(a)$ exists. Since $\forall i\in I(H(i)\neq\emptyset)$, $H(a)$ is nonempty so there exists $c$ such that $c\in H(a)$. 
+Then by definition $\langle a,c\rangle\in
+\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$ so $a\in\text{dom}\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$.\\
+\indent Lastly we show $\forall i\in I(f(i)\in H(i))$. Let $i$ be an arbitrary element of $I$.
+Since dom$f=I$, $f(i)$ exists and $\langle i,f(i)\rangle\in f\subseteq\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$.
+By definition then $f(i)\in H(i)$. So $f\in\bigtimes_{i\in I}H(i)$.
+\end{proof}
+\begin{proof}(Second form implies first form)
 
 
 \end{proof}
+
 
 
 
