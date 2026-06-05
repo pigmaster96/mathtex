@@ -1391,13 +1391,33 @@ Which proves the existence of the infinite cartesian product under the assumptio
 \end{proof}
 
 \subsection{Axiom of choice second form}
+\textbf{Intuition}\\
+Assume that the index set is the set $\omega=\{0,1,2,\ldots\}$. Then $\bigtimes_{i\in I}H(i)$ consists of ``$\omega$-sequences'' (functions with domain $\omega$). That have for their
+$i$th term some member of $H(i)$. A typical member of $\bigtimes_{i\in I}H(i)$ is a ``thread'' that selects a point from each set:
+\begin{center}
+\includegraphics[width=10cm]{1}
+\end{center}
+If any one $H(i)$ were empty, then clearly the product $\bigtimes_{i\in I}H(i)$ is empty. Conversely, suppose that $H(i)\neq\emptyset$ for every $i$ in $I$. Would it then follow that 
+$\bigtimes_{i\in I}H(i)\neq\emptyset$? To obrain a member $f$ of the product, we need to select some member from each $H(i)$, and set $f(i)$ equal to each member.
+This requires the axiom of choice, and is an equivalent way of stating the axiom.\\
+\vspace{1mm}\\
+\textit{Axiom of Choice} (second form)\\
+For any set $I$ and any function $H$ with domain $I$, if $H(i)\neq\emptyset$ for all $i$ in $I$, then $\bigtimes_{i\in I}H(i)\neq\emptyset$.
+\newpage
+
+\subsection{Choice axiom---equivalence betwen first and second forms}
+\textit{Axiom of Choice} (first form)\\
+For any relation $R$ there is a function $H\subseteq R$ with dom$H=\text{dom}R$.\
+\begin{equation*}
+\forall R\exists H(H\subseteq R\land\text{$H$ is a function}\land\text{dom}H=\text{dom}R)
+\end{equation*}
+\textit{Axiom of Choice} (second form)\\
+For any set $I$ and any function $H$ with domain $I$, if $H(i)\neq\emptyset$ for all $i$ in $I$, then $\bigtimes_{i\in I}H(i)\neq\emptyset$.
+\begin{proof} (First form implies second form)
 
 
 
-
-
-
-
+\end{proof}
 
 
 
