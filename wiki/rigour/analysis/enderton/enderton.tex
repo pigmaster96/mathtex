@@ -1440,7 +1440,7 @@ Let $x$ be arbitrary and suppose there exists $i,y$ such that $i\in I$ and $\lan
 By definition $z\in\text{ran}H$. So $y\in\bigcup\text{ran}H$ and $x=\langle i,y\rangle\in I\times\bigcup\text{ran}H$.\\
 \indent The subset axiom allows us to assert
 \begin{equation*}
-\exists D\forall x(x\in D\leftrightarrow x\in I\times\bigcup\text{ran}H\land\exists i\in I\exists y(\langle i,y\rangle=x\land\exists z(\langle i,z\rangle\in H\land y\in z))
+\exists D\forall x(x\in D\leftrightarrow x\in I\times\bigcup\text{ran}H\land\exists i\in I\exists y(\langle i,y\rangle=x\land\exists z(\langle i,z\rangle\in H\land y\in z)))
 \end{equation*}
 and the desired conclusion follows from these two facts. Uniqueness follows from extensionality.\\
 (next page)\newpage
@@ -1465,10 +1465,90 @@ Then by definition $\langle a,c\rangle\in
 Since dom$f=I$, $f(i)$ exists and $\langle i,f(i)\rangle\in f\subseteq\{\langle i,x\rangle\mid i\in I\land x\in H(i)\}$.
 By definition then $f(i)\in H(i)$. So $f\in\bigtimes_{i\in I}H(i)$.
 \end{proof}
-\begin{proof}(Second form implies first form)
-
-
+\begin{lemma}
+For arbitrary sets $i$ and $R$, the following set 
+\begin{equation*}
+\{z\mid\langle i,z\rangle\in R\}
+\end{equation*}
+exists and is unique.
+\end{lemma}
+\begin{proof}
+This is straightforward. We want to show for arbitrary $i$ and $R$,
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\langle i,x\rangle\in R)
+\end{equation*}
+It is easy to show
+\begin{equation*}
+\forall x(\langle i,x\rangle\in R\to x\in\text{ran}R)
+\end{equation*}
+The subset axiom allows us to assert
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\in\text{ran}R\land\langle i,x\rangle\in R)
+\end{equation*}
+and the desired result follows from these two facts. Uniqueness follows from extensionality.
 \end{proof}
+\noindent(next page)\newpage
+\begin{proof}(Second form implies first form)
+We want to show that 
+\begin{equation*}
+\forall I\forall H([H\text{ is a function}\land\text{dom}H=I]\to[\forall i\in I(H(i)\neq\emptyset)\to \bigtimes_{i\in I}H(i)\neq\emptyset])
+\end{equation*}
+Implies
+\begin{equation*}
+\forall R(R\text{ is a relation}\to\exists H(H\subseteq R\land\text{$H$ is a function}\land\text{dom}H=\text{dom}R))
+\end{equation*}
+Suppose the former is true. Suppose $R$ is a relation. To use the former assumption we need to come up with some function $H$. Our candidate $H$ will be
+\begin{equation*}
+H=\{\langle i,y\rangle\mid i\in\text{dom}R\land y=\{z\mid\langle i,z\rangle\in R\}\}
+\end{equation*}
+First we show that $H$ exists. That is,
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\exists i\exists y(x=\langle i,y\rangle\land i\in\text{dom}R\land y=\{z\mid\langle i,z\rangle\in R\}))
+\end{equation*}
+We do this by showing, for arbitrary $x$ and $R$,
+\begin{equation*}
+\exists i\exists y(x=\langle i,y\rangle\land i\in\text{dom}R\land y=\{z\mid\langle i,z\rangle\in R\})\to x\in\text{dom}R\times\mathscr P(\text{ran}R)
+\end{equation*}
+Suppose $i,y$ exist such that $x=\langle i,y\rangle$, $i\in\text{dom}R$, and $y=\{z\mid\langle i,z\rangle\in R\}$. We need to show that $y\subseteq\text{ran}R$. 
+Let $a$ be an arbitrary element of $y$. Then by definition $\langle i,a\rangle\in R$ and $a\in\text{ran}R$. So $y\in\mathscr P(\text{ran}R)$ and 
+$x=\langle i,y\rangle\in\text{dom}R\times\mathscr P(\text{ran}R)$.\\
+\indent The subset axiom allows us to assert
+\begin{align*}
+\exists D\forall x(x\in D&\leftrightarrow x\in\text{dom}R\times\mathscr P(\text{ran}R)\\&\land\exists i\exists y(x=\langle i,y\rangle\land i\in\text{dom}R\land y=\{z\mid\langle i,z\rangle\in R\}))
+\end{align*}
+and the desired conclusion follows from these two facts. Uniqueness follows from extensionality.\\
+\indent We show that $H$ is a function. Let $x\in\text{dom}H$. By definition there exists $y$ such that $\langle x,y\rangle\in H$. Now let $y'$ be arbitrary such that 
+$\langle x,y'\rangle\in H$. By definition we have $y=\{z\mid\langle x,z\rangle\in R\}=y'$.\\
+\indent Next we show $\text{dom}H=\text{dom}R$. Let $a\in\text{dom}H$. By definition there exists $b$ such that $\langle a,b\rangle\in H$. So by definition $a\in\text{dom}R$.
+Now suppose $a\in\text{dom}R$. By the pairing axiom we can assert the existence of $\langle a,\{z\mid \langle a,z\rangle\in R\}\rangle$, which is by definition a member of $H$.
+So $a\in\text{dom}H$.\\
+\indent Next we show that $\forall i\in\text{dom}H(H(i)\neq\emptyset)$. Let $i\in\text{dom}H=\text{dom}R$. We then know $H(i)$ exists and by definition $H(i)=\{z\mid\langle i,z\rangle\in R\}$.
+Since $i\in\text{dom}R$, there exists $b$ such that $\langle i,b\rangle\in R$.
+So $b\in H(i)$ and $H(i)\neq\emptyset$.\\
+\indent We showed that $H$ is a function and that $\forall i\in\text{dom}H(H(i)\neq\emptyset)$.
+By the second form of the choice axiom we can then assert that
+\begin{equation*}
+\bigtimes_{i\in\text{dom}H}H(i)\neq\emptyset
+\end{equation*}
+(next page)\newpage
+We know
+\begin{equation*}
+\bigtimes_{i\in\text{dom}H}H(i)\neq\emptyset
+\end{equation*}
+This means that there exists $f$ such that $f$ is a function, dom$f=\text{dom}H$, and $\forall i\in\text{dom}H(f(i)\in H(i))$. We know that $f$ is a function and dom$f=\text{dom}H=\text{dom}R$. 
+To complete the proof we show that $f\subseteq R$.\\
+\indent $f$ is a relation. Let $\langle a,b\rangle$ be an arbitrary element of $f$. Since $f$ is a function $f(a)$ exists and $b=f(a)$.
+We have $a\in\text{dom}f=\text{dom}H$, so using the implication from the second form of the choice axiom we have $f(a)\in H(a)$. Since $H(a)=\{z\mid\langle a,z\rangle\in R\}$ we then have
+$\langle a,b\rangle=\langle a,f(a)\rangle\in R$.
+\end{proof}
+\newpage
+
+\section{Equivalence Relations}
+
+
+
+
+
 
 
 

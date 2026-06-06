@@ -24,3 +24,4 @@
 \contentsline {section}{\numberline {2.4}Infinite Cartesian Products}{39}{}%
 \contentsline {subsection}{\numberline {2.4.1}Axiom of choice second form}{40}{}%
 \contentsline {subsection}{\numberline {2.4.2}Choice axiom---equivalence betwen first and second forms}{41}{}%
+\contentsline {section}{\numberline {2.5}Equivalence Relations}{45}{}%
