@@ -1560,11 +1560,69 @@ $R$ is \textbf{transitive} iff whenever $xRy$ and $yRz$, then also $xRz$.
 \forall x\forall y\forall z((xRy\land yRz)\to xRz)
 \end{equation*}
 \end{definition}
+\begin{theorem}
+If $R$ is a symmetric and transitive relation, then $R$ is an equivalence relation on fld$R$.
+\end{theorem}
+\begin{proof}
+It is straightforward to show 
+\begin{equation*}
+R\subseteq\text{dom}R\times\text{ran}R\subseteq\text{fld}R\times\text{fld}R
+\end{equation*}
+So $R$ is a binary relation on its field.\\
+\indent We need to show that $R$ is reflexive on fld$R$. Let $x\in\text{fld}R=\text{dom}R\cup\text{ran}R$. Suppose $x\in\text{dom}R$; then $y$ exists such that $xRy$. By symmetry we then have $yRx$,
+and then by transitivity we have $xRx$. Now suppose $x\in\text{ran}R$. Then similarly there exists $y$ such that $yRx$. Again by symmetry and transitivity we have $xRx$.
+\end{proof}
+\newpage
 
+\subsection{Equivalence classes and Quotient set}
+\begin{definition}
+The set $[x]_R$ is defined by
+\begin{equation*}
+[x]_R=\{t\mid xRt\}
+\end{equation*}
+If $R$ is an equivalence relation and $x\in\text{fld}R$, then $[x]_R$ is called the \textbf{equivalence class} of $x$ (modulo $R$). If the relation $R$ is fixed
+by context, we may write just $[x]$.
+\end{definition}
+\begin{definition}
+If $R$ is an equivalence relation on $A$, then we can define the \textbf{quotient set}
+\begin{equation*}
+A/R=\{[x]_R\mid x\in A\}
+\end{equation*}
+\end{definition}
+\begin{proof}(Existence)
+First the equivalence class. We want to show for arbitrary $a$ and $R$,
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow aRx)
+\end{equation*}
+It is straightforward to show
+\begin{equation*}
+\forall x(aRx\to x\in\text{ran}R)
+\end{equation*}
+The subset axiom asserts
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow  x\in\text{ran}R\land aRx)
+\end{equation*}
+and the desired result follows from these two facts. Uniqueness follows from extensionality. This holds even if $a\notin\text{fld}R$.\\
+\indent Now for the quotient set. We want to show for arbitrary $A$ and $R$,
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow\exists a\in A(x=[a]_R))
+\end{equation*}
+We first show
+\begin{equation*}
+\forall x(\exists a\in A(x=[a]_R)\to x\in\mathscr P(\text{ran}R))
+\end{equation*}
+Let $x$ be arbitrary and suppose there exists $a\in A$ such that $x=[a]_R$.
+Suppose $y\in x$. Then by definition $aRy$ and $y\in\text{ran}R$. So $x\in\mathscr P(\text{ran}R)$.\\ 
+\indent The subset axiom allows us to assert
+\begin{equation*}
+\exists D\forall x(x\in D\leftrightarrow x\in\mathscr P(\text{ran}R)\land\exists a\in A(x=[a]_R))
+\end{equation*}
+and the result follows from these two facts. Uniqueness follows from extensionality.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
 
-
-
-
+\end{theorem}
 
 
 
