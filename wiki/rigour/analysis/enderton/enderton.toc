@@ -27,3 +27,4 @@
 \contentsline {section}{\numberline {2.5}Equivalence Relations}{45}{}%
 \contentsline {subsection}{\numberline {2.5.1}Equivalence classes and Quotient set}{46}{}%
 \contentsline {subsection}{\numberline {2.5.2}Partitions}{47}{}%
+\contentsline {subsection}{\numberline {2.5.3}Canonical/Natural map}{49}{}%

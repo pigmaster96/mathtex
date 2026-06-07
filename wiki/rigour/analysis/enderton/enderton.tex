@@ -1620,7 +1620,7 @@ Suppose $y\in x$. Then by definition $aRy$ and $y\in\text{ran}R$. So $x\in\maths
 and the result follows from these two facts. Uniqueness follows from extensionality.
 \end{proof}
 \noindent(next page)\newpage
-\begin{lemma}
+\begin{lemma}\label{equiv_rls_lemma}
 Supposing $R$ is an equivalence relation on $A$ and that $x$ and $y$ belong to $A$, then
 \begin{equation*}
 [x]_R=[y]_R\leftrightarrow xRy
@@ -1635,8 +1635,65 @@ $z\in[y]_R$. Now suppose $z\in[y]_R$. Then by definition $yRz$. Since $xRy$, by 
 
 \subsection{Partitions}
 \begin{definition}
-
+$\Pi$ is a \textbf{partition} on the set $A$ iff
+\begin{enumerate}
+\item Each element of $\Pi$ is a nonempty subset of $A$.
+\begin{equation*}
+\forall X\in\Pi(X\neq\emptyset\land X\subseteq A).
+\end{equation*}
+\item Each element of $A$ is in some set in $\Pi$. (exhaustive)
+\begin{equation*}
+\forall x\in A(\exists X\in\Pi(x\in X))\quad\text{or}\quad A\subseteq\bigcup\Pi
+\end{equation*}
+\item No two different sets in $\Pi$ have common elements. (pairwise disjoint)
+\begin{equation*}
+\forall X\in\Pi\forall Y\in\Pi(X\neq Y\to X\cap Y=\emptyset)
+\end{equation*}
+\end{enumerate}
+An alternative (and equivalent) definition is
+\begin{enumerate}
+\item
+\begin{equation*}
+\forall X\in\Pi(X\neq\emptyset).
+\end{equation*}
+\item 
+\begin{equation*}
+A=\bigcup\Pi
+\end{equation*}
+\item
+\begin{equation*}
+\forall X\in\Pi\forall Y\in\Pi(X\neq Y\to X\cap Y=\emptyset)
+\end{equation*}
+\end{enumerate}
 \end{definition}
+\noindent(next page)\newpage
+\begin{theorem}
+Assume that $R$ is an equivalence relation on $A$. Then the set $\{[x]_R\mid x\in A\}$ of all equivalence classes is a partition of $A$.
+\end{theorem}
+\begin{proof}
+The set of interest here is the unique quotient set of the equivalence relation $R$ on $A$ where
+\begin{equation*}
+\forall a(a\in\{[x]_R\mid x\in A\}\leftrightarrow\exists x\in A(a=[x]_R))
+\end{equation*}
+We want to show that this set $\{[x]_R\mid x\in A\}$ is a partition of $A$.\\
+\indent First we show $\forall X\in\{[x]_R\mid x\in A\}(X\neq\emptyset)$. Let $X$ be an arbitrary element of $\{[x]_R\mid x\in A\}$. Then by definition there exists some $x\in A$ such that 
+$X=[x]_R$. Since $x\in A$, by reflexivity $xRx$, meaning $x\in[x]_R=X$.\\
+\indent Next we show $\bigcup\{[x]_R\mid x\in A\}=A$. Let $a$ be an arbitrary element of $\bigcup\{[x]_R\mid x\in A\}$. Then by definition there exists $X\in\{[x]_R\mid x\in A\}$ such that
+$a\in X$. By definition there exists $x\in A$ such that $X=[x]_R$. So $a\in[x]_R$, meaning $\langle x,a\rangle\in R$. Since $R$ is an equivalence relation on $A$ it is, 
+by definition, a binary relation on $A$. This means $R\subseteq A\times A$ and $a\in A$.
+Now suppose $a\in A$. Then by reflexivity $aRa$ and $a\in[a]_R$. By definition $[a]_R\in\{[x]_R\mid x\in A\}$. So $a\in\bigcup\{[x]_R\mid x\in A\}$.\\
+\indent Finally one must show pairwise disjointness:
+\begin{equation*}
+\forall X\in\{[x]_R\mid x\in A\}\forall Y\in\{[x]_R\mid x\in A\}(X\neq Y\to X\cap Y=\emptyset)
+\end{equation*}
+Let $X$ and $Y$ be arbitrary elements of $\{[x]_R\mid x\in A\}$. We will prove the contrapositive. Suppose $X\cap Y\neq\emptyset$, meaning there exists $a$ such that $a\in X\cap Y$. 
+Also by definition there exists $x,y\in A$ such that $a\in X=[x]_R$ and $a\in Y=[y]_R$, so $xRa$ and $yRa$.
+We need to show $X=Y$. Since $xRa$ and $yRa$, symmetry and transitivity gives us $xRy$. By lemma \ref{equiv_rls_lemma}, since $x,y\in A$ and $R$ is an equivalence relation on $A$, this means
+$X=[x]_R=[y]_R=Y$.
+\end{proof}
+\newpage
+
+\subsection{Canonical/Natural map}
 
 
 
