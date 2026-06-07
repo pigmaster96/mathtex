@@ -1620,9 +1620,25 @@ Suppose $y\in x$. Then by definition $aRy$ and $y\in\text{ran}R$. So $x\in\maths
 and the result follows from these two facts. Uniqueness follows from extensionality.
 \end{proof}
 \noindent(next page)\newpage
-\begin{theorem}
+\begin{lemma}
+Supposing $R$ is an equivalence relation on $A$ and that $x$ and $y$ belong to $A$, then
+\begin{equation*}
+[x]_R=[y]_R\leftrightarrow xRy
+\end{equation*}
+\end{lemma}
+\begin{proof}
+($\rightarrow$) Suppose $[x]_R=[y]_R$. Since $y\in A$ by reflexivity we know $yRy$.
+Then by definition $y\in[y]_R=[x]_R$. This then means $xRy$.\\
+\indent($\leftarrow$) Suppose $xRy$. Let $z$ be an arbitrary element of $[x]_R$. Then by definition $xRz$. Since $xRy$, by symmetry we have $yRx$. By transitivity $yRx$ and $xRz$ implies $yRz$, so 
+$z\in[y]_R$. Now suppose $z\in[y]_R$. Then by definition $yRz$. Since $xRy$, by transitivity $xRz$ and $z\in[x]_R$.
+\end{proof}
 
-\end{theorem}
+\subsection{Partitions}
+\begin{definition}
+
+\end{definition}
+
+
 
 
 
