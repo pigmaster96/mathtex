@@ -1696,9 +1696,38 @@ $X=[x]_R=[y]_R=Y$.
 
 \subsection{Partition induces equivalence relation}
 \begin{theorem}
-Suppose $\Pi$ is a partition of a set $A$.
-
+Suppose $\Pi$ is a partition of a set $A$. Define the relation $R_\Pi$ as follows:
+\begin{equation*}
+z\in R_\Pi\leftrightarrow\exists x\exists y(z=\langle x,y\rangle\land\exists B\in\Pi(x\in B\land y\in B))
+\end{equation*}
+Then $R_\Pi$ is an equivalence relation on $A$.
 \end{theorem}
+\begin{proof} First we show existence.
+We want to show for arbitrary $\Pi$
+\begin{equation*}
+\exists D\forall z(z\in D\leftrightarrow\exists x\exists y(z=\langle x,y\rangle\land\exists B\in\Pi(x\in B\land y\in B)))
+\end{equation*}
+We start by showing
+\begin{equation*}
+\exists x\exists y(z=\langle x,y\rangle\land\exists B\in\Pi(x\in B\land y\in B))\to z\in\bigcup\Pi\times\bigcup\Pi
+\end{equation*}
+Suppose there exists $x$ and $y$ such that $z=\langle x,y\rangle$ and that there exists $B\in\Pi$ such that $x\in B$ and $y\in B$. Then both $x$ and $y$ are elements of $\bigcup\Pi$.
+Then by definition, $z=\langle x,y\rangle\in\bigcup\Pi\times\bigcup\Pi$.\\
+\indent The subset axiom allows us to assert
+\begin{equation*}
+\exists D\forall z(z\in D\leftrightarrow z\in\bigcup\Pi\times\bigcup\Pi\land\exists x\exists y(z=\langle x,y\rangle\land\exists B\in\Pi(x\in B\land y\in B)))
+\end{equation*}
+The desired conclusion follows from these two facts. Uniqueness follows from extensionality.\\
+\indent Now suppose that $\Pi$ were a partition of a set $A$. We will show that $R_\Pi$, defined as
+the unique set such that 
+\begin{equation*}
+\forall z(z\in R_\Pi\leftrightarrow\exists x\exists y(z=\langle x,y\rangle\land\exists B\in\Pi(x\in B\land y\in B)))
+\end{equation*}
+Is an equivalence relation. First we show that 
+
+
+
+\end{proof}
 
 
 
