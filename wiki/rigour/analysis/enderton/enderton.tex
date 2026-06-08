@@ -1588,6 +1588,7 @@ If $R$ is an equivalence relation on $A$, then we can define the \textbf{quotien
 \begin{equation*}
 A/R=\{[x]_R\mid x\in A\}
 \end{equation*}
+The expression $A/R$ is read ``$A$ modulo $R$''.
 \end{definition}
 \begin{proof}(Existence)
 First the equivalence class. We want to show for arbitrary $a$ and $R$,
@@ -1693,9 +1694,81 @@ $X=[x]_R=[y]_R=Y$.
 \end{proof}
 \newpage
 
+\subsection{Partition induces equivalence relation}
+\begin{theorem}
+Suppose $\Pi$ is a partition of a set $A$.
+
+\end{theorem}
+
+
+
+
+\newpage
+
 \subsection{Canonical/Natural map}
+If $R$ is an equivalence relation on $A$, recall that we defined the quotient set.
+\begin{equation*}
+A/R=\{[x]_R\mid x\in A\}
+\end{equation*}
+We can also define the \textit{natural/canonical map} $\varphi:A\to A/R$ by
+\begin{equation*}
+\varphi(x)=[x]_R
+\end{equation*}
+For $x\in A$.
+\begin{proof}(Existence)
+We proved earlier (existence of the quotient set) that
+\begin{equation*}
+\forall A\forall R\exists D\forall x(x\in D\leftrightarrow\exists a\in A(\forall b(b\in x\leftrightarrow aRb)))
+\end{equation*}
+We now want to show for arbitrary $A,R$,
+\begin{equation*}
+\exists D\forall z(z\in D\leftrightarrow\exists x\in A\exists y(z=\langle x,y\rangle\land\forall a(a\in y\leftrightarrow xRa)))
+\end{equation*}
+The earlier proof allows us to assert the existence of $D_0$ such that 
+\begin{equation*}
+\forall x(x\in D_0\leftrightarrow\exists a\in A(\forall b(b\in x\leftrightarrow aRb)))
+\end{equation*}
+We start by proving for arbitrary $A,R$
+\begin{equation*}
+\forall z(\exists x\in A\exists y(z=\langle x,y\rangle\land\forall a(a\in y\leftrightarrow xRa))\to z\in A\times D_0)
+\end{equation*}
+Let $z$ be arbitrary. Suppose there exists $x\in A$ and $y$ such that $z=\langle x,y\rangle$ and
+$\forall a(a\in y\leftrightarrow xRa)$. It immediately follows that since $x\in A$ we have $y\in D_0$ and by definition 
+$z=\langle x,y\rangle\in A\times D_0$.\\
+\indent Since $A\times D_0$ exists, by the subset axiom we can assert
+\begin{equation*}
+\exists D\forall z(z\in D\leftrightarrow z\in A\times D_0\land\exists x\in A\exists y(z=\langle x,y\rangle\land\forall a(a\in y\leftrightarrow xRa)))
+\end{equation*}
+and the desired result follows from these two facts. Uniqueness follows from extensionality.
+\end{proof}
+\noindent We have proved the existence of the canonical map as a binary relation without any other conditions. We next show that $\varphi$ is a function.\\
+(next page)\newpage
+\begin{proof} ($\varphi$ is a function)
+Given arbitrary $R$ and $A$, we defined the canonical set $\varphi$ to be the unique set such that
+\begin{equation*}
+\forall z(z\in\varphi\leftrightarrow\exists x\in A\exists y(z=\langle x,y\rangle\land\forall a(a\in y\leftrightarrow xRa)))
+\end{equation*}
+We start by showing
+\begin{equation*}
+\forall x\in\text{dom}\varphi\exists y(\langle x,y\rangle\in\varphi\land\forall y'(\langle x,y'\rangle\in\varphi\to y=y'))
+\end{equation*}
+Let $x$ be an arbitary element of dom$\varphi$. By definition there exists $y$ such that
+$\langle x,y\rangle\in\varphi$. Let $y'$ be arbitrary such that $\langle x,y'\rangle\in\varphi$.
+By definition we have $\forall a(a\in y\leftrightarrow xRa)$ and $\forall a(a\in y'\leftrightarrow xRa)$; it is then straightforward to show $\forall a(a\in y\leftrightarrow a\in y')$. 
+So by extensionality $y=y'$.\\
+\indent We showed that in any context $\varphi$ is a function. Now suppose $R$ were an equivalence relation on $A$. We can show that dom$\varphi=A$. Suppose $x\in\text{dom}\varphi$; then by
+definition there exists $y$ such that $\langle x,y\rangle\in\varphi$. It immediately follows by definition that $x\in A$. Now suppose $x\in A$; we know that $[x]_R$ exists, where by definition
+$\forall a(a\in[x]_R\leftrightarrow xRa)$. It follows that $\langle x,[x]_R\rangle\in\varphi$ and $x\in\text{dom}\varphi$.\\
+\indent Finally we show that ran$\varphi\subseteq A/R$. $A/R$ defined as the unique set such that
+\begin{equation*}
+\forall x(x\in A/R\leftrightarrow\exists a\in A\forall b(b\in x\leftrightarrow aRb))
+\end{equation*}
+Let $y$ be an arbitrary element of ran$\varphi$. Then by definition there exists $x$ such that $\langle x,y\rangle\in\varphi$. By the previous proof $x\in\text{dom}\varphi=A$.
+By definition $\forall a(a\in y\leftrightarrow xRa)$. So $y\in A/R$.
+\end{proof}
+\newpage
 
-
+\subsection{}
 
 
 
