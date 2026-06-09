@@ -1723,15 +1723,17 @@ the unique set such that
 \begin{equation*}
 \forall z(z\in R_\Pi\leftrightarrow\exists x\exists y(z=\langle x,y\rangle\land\exists B\in\Pi(x\in B\land y\in B)))
 \end{equation*}
-Is an equivalence relation. First we show that 
-
-
-
+Is an equivalence relation on $A$. First we show that $R_\Pi\subseteq A\times A$. Let $z\in R_\Pi$.
+Then there exists $x,y$ such that $z=\langle x,y\rangle$. There also exists $B\in\Pi$ such that $x\in B$
+and $y\in B$. This means that $x$ and $y$ are elements of $\bigcup\Pi$. Since $\Pi$ is a partition on $A$ we have $\bigcup\Pi=A$. So by definition $z=\langle x,y\rangle\in A\times A$.\\
+\indent Next we show that $R_\Pi$ is reflexive on $A$. Let $a$ be an arbitrary element of $A$. Since $\Pi$ is a partition on $A$
+we have $\bigcup\Pi=A$ and $a\in\bigcup\Pi$. So there exists $B\in\Pi$ such that $a\in B$. We know $\langle a,a\rangle$ exists by pairing. By definition $\langle a,a\rangle\in R_\Pi$.\\
+\indent Next we show $R_\Pi$ is symmetric. Let $a$ and $b$ be arbitrary. Suppose $\langle a,b\rangle\in R_\Pi$. Then by definition there exists $B\in\Pi$ such that $a\in B$ and $b\in B$.
+$\langle b,a\rangle$ exists by pairing; by definition it is then also a member of $R_\Pi$.\\
+\indent Finally we show transitivity. Let $a,b,c$ be arbitrary and suppose $\langle a,b\rangle\in R_\Pi$ and $\langle b,c\rangle\in R_\Pi$. Then by definition there exists $B_0$ such that $a\in B_0$
+and $b\in B_0$. There also exists $B_1$ such that $b\in B_1$ and $c\in B_1$. Since $\Pi$ is a partition and $B_0\cap B_1\neq\emptyset$, we must have $B_0=B_1$. $\langle a,c\rangle$ exists by
+pairing, $c\in B_1=B_0$, $a\in B_0$, and $B_0\in\Pi$. By definition $\langle a,c\rangle\in R_\Pi$.
 \end{proof}
-
-
-
-
 \newpage
 
 \subsection{Canonical/Natural map}
