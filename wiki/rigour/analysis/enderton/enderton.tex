@@ -1815,7 +1815,7 @@ If $F$ is not compatible with $R$, then no such $\hat F$ exists.
 First we prove that if $F$ were not compatible with $R$ no such $\hat F$ exists:
 \begin{align*}
 \neg\forall x\in A\forall y\in A(xRy&\to F(x)RF(y))\to\\
-&\neg\exists\hat F(F:A/R\to A/R\land\forall x\in A(\hat F([x]_R)=[F(x)]_R))
+&\neg\exists\hat F(\hat F:A/R\to A/R\land\forall x\in A(\hat F([x]_R)=[F(x)]_R))
 \end{align*}
 Suppose $F$ were not compatible with $R$. Then there exists $x\in A$ and $y\in A$ such that $xRy$ but $\neg F(x)RF(y)$. For contradiction, suppose there exists $\hat F:A/R\to A/R$
 such that $\forall x\in A(\hat F([x]_R)=[F(x)]_R)$. We know $xRy$; by lemma \ref{equiv_rls_lemma} this means that $[x]_R=[y]_R$. Since $x\in A$ and $y\in A$, both $[x]_R$ and $[y]_R$ are in 
@@ -1861,8 +1861,8 @@ means that $xRx'$; compatibility implies that $F(x)RF(x')$, and since $F$ is a f
 We want to show $\beta=\beta'$. Let $\gamma$ be an arbitrary element of $\beta$. Then by our assumptions we have $x_0R\gamma$. Then by symmetry on $x_0Rx_0'$ and transitivity we have $x_0'R\gamma$,
 which then means $\gamma\in\beta'$. Now let $\gamma$ be an arbitrary element of $\beta'$. Similarly we then have $x_0'R\gamma$, and by transitivity with $x_0Rx_0'$ we then have $x_0R\gamma$, 
 implying $\gamma\in\beta$.\\
-\indent Next
-
+\indent Next we show that dom$\hat F=A/R$. Let $a$ be arbitrary and suppose $a\in\text{dom}\hat F$.
+Then there exists $b$ such that $\langle a,b
 
 
 
