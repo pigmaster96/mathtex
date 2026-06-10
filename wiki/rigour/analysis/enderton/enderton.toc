@@ -29,4 +29,4 @@
 \contentsline {subsection}{\numberline {2.5.2}Partitions}{47}{}%
 \contentsline {subsection}{\numberline {2.5.3}Partition induces equivalence relation}{49}{}%
 \contentsline {subsection}{\numberline {2.5.4}Canonical/Natural map}{50}{}%
-\contentsline {subsection}{\numberline {2.5.5}}{52}{}%
+\contentsline {subsection}{\numberline {2.5.5}Compatibility}{52}{}%

@@ -1799,7 +1799,80 @@ By definition $\forall a(a\in y\leftrightarrow xRa)$. So $y\in A/R$.
 \end{proof}
 \newpage
 
-\subsection{}
+\subsection{Compatibility}
+\begin{theorem}
+Suppose $R$ is an equivalence relation on $A$ and that $F:A\to A$. We say that $F$ is \textbf{compatible} with $R$ iff
+\begin{equation*}
+\forall x\in A\forall y\in A(xRy\to F(x)RF(y))
+\end{equation*}
+If $F$ is compatible with $R$, then there exists a unique $\hat F:A/R\to A/R$ such that
+\begin{equation*}
+\forall x\in A(\hat F([x]_R)=[F(x)]_R)
+\end{equation*}
+If $F$ is not compatible with $R$, then no such $\hat F$ exists.
+\end{theorem}
+\begin{proof}
+First we prove that if $F$ were not compatible with $R$ no such $\hat F$ exists:
+\begin{align*}
+\neg\forall x\in A\forall y\in A(xRy&\to F(x)RF(y))\to\\
+&\neg\exists\hat F(F:A/R\to A/R\land\forall x\in A(\hat F([x]_R)=[F(x)]_R))
+\end{align*}
+Suppose $F$ were not compatible with $R$. Then there exists $x\in A$ and $y\in A$ such that $xRy$ but $\neg F(x)RF(y)$. For contradiction, suppose there exists $\hat F:A/R\to A/R$
+such that $\forall x\in A(\hat F([x]_R)=[F(x)]_R)$. We know $xRy$; by lemma \ref{equiv_rls_lemma} this means that $[x]_R=[y]_R$. Since $x\in A$ and $y\in A$, both $[x]_R$ and $[y]_R$ are in 
+$A/R=\text{dom}\hat F$. Since $\hat F$ is a function then $\hat F([x]_R)$ and $\hat F([y]_R)$ exist. By our assumption $[F(x)]_R=\hat F([x]_R)=\hat F([y]_R)=[F(y)]_R$. Then again 
+by lemma \ref{equiv_rls_lemma} we have $F(x)RF(y)$, the contradiction we expected.\\
+\indent Now for the converse. Assume that $F$ were compatible with $R$. We need to come up with a function $\hat F:A/R\to A/R$. We propose the set
+\begin{equation*}
+\hat F=\{\langle [x]_R,[F(x)]_R\rangle\mid x\in A\}
+\end{equation*}
+First we need to prove existence. That is
+\begin{align*}
+\forall A\forall R\forall F\exists D\forall z(z\in D\leftrightarrow\exists a\exists b(z=&\langle a,b\rangle\land\exists x\in A(\forall y(y\in a\leftrightarrow xRy)\\
+&\land\exists x_0(\langle x,x_0\rangle\in F\land\forall y(y\in b\leftrightarrow x_0Ry)))))
+\end{align*}
+We will show
+\begin{align*}
+\forall A\forall R\forall F\forall z(\exists a\exists b(z=&\langle a,b\rangle\land\exists x\in A(\forall y(y\in a\leftrightarrow xRy)\\
+\land&\exists x_0(\langle x,x_0\rangle\in F\land\forall y(y\in b\leftrightarrow x_0Ry))))\\&\to z\in\mathscr P\text{ran}R\times\mathscr P\text{ran}R)
+\end{align*}
+Let $A,R,F$ and $z$ be arbitrary. Suppose there exists $a$ and $b$ such that $z=\langle a,b\rangle$. Suppose there exists $x\in A$ such that $\forall y(y\in a\leftrightarrow xRy)$.
+Suppose there exists $x_0$ such that $\langle x,x_0\rangle\in F$ and $\forall y(y\in b\leftrightarrow x_0Ry)$. We will show that both $a$ and $b$ are subsets of the range of $R$. Let $y$ be an 
+arbitrary element of $a$. Then by our assumptions $xRy$ and $y\in\text{ran}R$. Now let $y$ be an arbitrary element of $b$. Then again it follows that $x_0Ry$ and
+$y\in\text{ran}R$. $a$ and $b$ are both subsets of ran$R$, so they are both elements of $\mathscr P\text{ran}R$ and $z=\langle a,b\rangle\in\mathscr P\text{ran}R\times\mathscr P\text{ran}R$.\\
+(next page)\newpage
+The subset axiom allows us to assert
+\begin{align*}
+\forall A\forall R\forall F\exists D\forall z(z\in D\leftrightarrow z&\in\mathscr P\text{ran}R\times\mathscr P\text{ran}R\\
+&\land\exists a\exists b(z=\langle a,b\rangle\land\exists x\in A(\forall y(y\in a\leftrightarrow xRy)\\
+&\land\exists x_0(\langle x,x_0\rangle\in F\land\forall y(y\in b\leftrightarrow x_0Ry)))))
+\end{align*}
+The desired result follows from these two facts. Uniqueness follows from extensionality.\\
+\indent Now suppose $R$ were an equivalence relation on $A$, $F:A\to A$, and remember that we assumed that $F$ is compatible with $R$. We defined $\hat F$ to be the unique set such that
+\begin{align*}
+z\in\hat F\leftrightarrow\exists a\exists b(z=&\langle a,b\rangle\land\exists x\in A(\forall y(y\in a\leftrightarrow xRy)\\
+&\land\exists x_0(\langle x,x_0\rangle\in F\land\forall y(y\in b\leftrightarrow x_0Ry))))
+\end{align*}
+First we show that $\hat F$ is a function. Let $\alpha\in\text{dom}\hat F$. Then there exists $\beta$ such that $\alpha\hat F\beta$. Let $\beta'$ be arbitrary such that $\alpha\hat F\beta'$. 
+By definition, $\alpha\hat F\beta$ means there exists $x\in A$ such that $\forall y(y\in\alpha\leftrightarrow xRy)$ and that there exists $x_0$ such that $\langle x,x_0\rangle\in F$ and
+$\forall y(y\in\beta\leftrightarrow x_0Ry)$. Similarly $\alpha\hat F\beta'$ means 
+there exists $x'\in A$ such that $\forall y(y\in\alpha\leftrightarrow x'Ry)$ and that there exists $x_0'$ such that $\langle x',x_0'\rangle\in F$ and $\forall y(y\in\beta'\leftrightarrow x_0'Ry)$. 
+The fact that $\forall y(y\in\alpha\leftrightarrow xRy)$ and $\forall y(y\in\alpha\leftrightarrow x'Ry)$ means it is straightforward to show $[x]_R=[x']_R$. By lemma \ref{equiv_rls_lemma} this then 
+means that $xRx'$; compatibility implies that $F(x)RF(x')$, and since $F$ is a function this means $x_0Rx_0'$.
+We want to show $\beta=\beta'$. Let $\gamma$ be an arbitrary element of $\beta$. Then by our assumptions we have $x_0R\gamma$. Then by symmetry on $x_0Rx_0'$ and transitivity we have $x_0'R\gamma$,
+which then means $\gamma\in\beta'$. Now let $\gamma$ be an arbitrary element of $\beta'$. Similarly we then have $x_0'R\gamma$, and by transitivity with $x_0Rx_0'$ we then have $x_0R\gamma$, 
+implying $\gamma\in\beta$.\\
+\indent Next
+
+
+
+
+
+
+
+\end{proof}
+
+
+
 
 
 
