@@ -1,0 +1,83 @@
+\documentclass{report} 
+\title{Bloch}
+\date{Started 15th June 2026}
+\author{Malcolm}
+\usepackage{amsmath} %import math
+\usepackage{mathtools} %more math
+\usepackage{amssymb} %for QED symbol
+\usepackage{amsthm} %
+\usepackage{mathrsfs} %
+\usepackage{bm}%bold math
+\usepackage{graphicx} %import imaging
+
+\graphicspath{{./images/}} %set imaging path
+
+\newtheorem{theo}{Theorem}[chapter]
+\newtheorem{theorem}[theo]{Theorem}
+\newtheorem{lemma}[theo]{Lemma}
+\newtheorem{corollary}[theo]{Corollary}
+\newtheorem{definition}[theo]{Definition}
+
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\chapter{Construction of the Real Numbers}
+\begin{definition}
+Let $S$ be a set. A \textbf{binary operation} on $S$ is a function $S\times S\to S$. A
+\textbf{unary operation} on $S$ is a function $S\to S$.
+\end{definition}
+\noindent Let $S$ be a set and let $*:S\times S\to S$ be a binary operation. If $x,y\in S$, the correct way to write the result of the operation to the pair $\langle x,y\rangle$ would be
+$*(\langle x,y\rangle)$. However since this is a bit cumbersome one may write $x*y$ instead.
+Similarly if $\neg:S\to S$ is a unary operation and $x\in S$ one may choose to write $\neg x$ over $\neg(x)$.
+
+\section{Axioms for the Natural numbers}
+\subsection{Peano Postulates}
+\textit{Axiom: Peano Postulates}\\
+There exists a set $\mathbb N$ with an element $1\in\mathbb N$ and a function $s:\mathbb N\to\mathbb N$ that satisfy the following three properties.
+\begin{itemize}
+\item There is no $n\in\mathbb N$ such that $s(n)=1$.
+\item The function $s$ is injective.
+\item Let $G\subseteq\mathbb N$ be a set. Suppose that $1\in G$, and that if $g\in G$ then $s(g)\in G$. Then $G=\mathbb N$.
+\end{itemize}
+It will be shown that the set $\mathbb N$ is unique. We can therefore give it a name.
+\begin{definition}
+The set of \textbf{natural numbers} denoted $\mathbb N$, is the set the existence of which is given in the Peano Postulates.
+\end{definition}
+\newpage
+
+\subsection{Consequences of Peano Postulates}
+\begin{lemma} 
+Let $a\in\mathbb N$. Suppose that $a\neq 1$. Then there is a unique $b\in\mathbb N$ such that $a=s(b)$. (where existence of $s$ and $\mathbb N$ are outlined by the peano axioms)
+\end{lemma}
+\begin{proof}
+First we prove existence. Let 
+\begin{equation*}
+G=\{1\}\cup\{c\in\mathbb N\mid \exists b\in\mathbb N(s(b)=c)\}
+\end{equation*}
+(which exists by the subset, pairing, and union axioms) We will prove that $G=\mathbb N$. To do this we need to show $1\in G$, $G\subseteq\mathbb N$ and $\forall g\in G(s(g)\in G)$. 
+The first two are 
+straightforward. For the third suppose $g\in G$; we have two cases. First suppose $g\in\{1\}$; then $g=1\in\mathbb N$. Since $s:\mathbb N\to\mathbb N$, we then have $s(1)\in\mathbb N$.
+So by definition $s(1)\in\{c\in\mathbb N\mid \exists b\in\mathbb N(s(b)=c)\}$ and $s(g)=s(1)\in G$.
+Now suppose $g\in\{c\in\mathbb N\mid \exists b\in\mathbb N(s(b)=c)\}$; then by definition $g\in\mathbb N$ and $s(g)\in\mathbb N$ exists. 
+By definition $s(g)\in\{c\in\mathbb N\mid \exists b\in\mathbb N(s(b)=c)\}$ so $s(g)\in G$. By the third peano postulate we then can assert that $G=\mathbb N$.
+So $a\in\mathbb N=G$. Since $a\neq 1$ we must then have $a\in\{c\in\mathbb N\mid \exists b\in\mathbb N(s(b)=c)\}$ and by definition, $\exists b\in\mathbb N(s(b)=a)$.\\
+\indent Now for uniqueness. Let $m$ and $n$ be arbitrary elements of $\mathbb N$ such that $a=s(m)$ and $a=s(n)$. Then $\langle m,a\rangle\in s$ and $\langle n,a\rangle\in s$. Since $s$ is injective
+we must have $n=m$.
+\end{proof}
+
+\begin{theorem}
+
+\end{theorem}
+
+
+
+
+
+
+
+
+
+\end{document}
