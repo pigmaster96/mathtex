@@ -30,3 +30,4 @@
 \contentsline {subsection}{\numberline {2.5.3}Partition induces equivalence relation}{49}{}%
 \contentsline {subsection}{\numberline {2.5.4}Canonical/Natural map}{50}{}%
 \contentsline {subsection}{\numberline {2.5.5}Compatibility}{52}{}%
+\contentsline {subsection}{\numberline {2.5.6}Generalisation to binary operators}{55}{}%

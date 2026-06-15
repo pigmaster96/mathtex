@@ -1849,8 +1849,8 @@ The subset axiom allows us to assert
 The desired result follows from these two facts. Uniqueness follows from extensionality.\\
 \indent Now suppose $R$ were an equivalence relation on $A$, $F:A\to A$, and remember that we assumed that $F$ is compatible with $R$. We defined $\hat F$ to be the unique set such that
 \begin{align*}
-z\in\hat F\leftrightarrow\exists a\exists b(z=&\langle a,b\rangle\land\exists x\in A(\forall y(y\in a\leftrightarrow xRy)\\
-&\land\exists x_0(\langle x,x_0\rangle\in F\land\forall y(y\in b\leftrightarrow x_0Ry))))
+\forall z(z\in\hat F\leftrightarrow\exists a\exists b(z=&\langle a,b\rangle\land\exists x\in A(\forall y(y\in a\leftrightarrow xRy)\\
+&\land\exists x_0(\langle x,x_0\rangle\in F\land\forall y(y\in b\leftrightarrow x_0Ry)))))
 \end{align*}
 First we show that $\hat F$ is a function. Let $\alpha\in\text{dom}\hat F$. Then there exists $\beta$ such that $\alpha\hat F\beta$. Let $\beta'$ be arbitrary such that $\alpha\hat F\beta'$. 
 By definition, $\alpha\hat F\beta$ means there exists $x\in A$ such that $\forall y(y\in\alpha\leftrightarrow xRy)$ and that there exists $x_0$ such that $\langle x,x_0\rangle\in F$ and
@@ -1862,14 +1862,114 @@ We want to show $\beta=\beta'$. Let $\gamma$ be an arbitrary element of $\beta$.
 which then means $\gamma\in\beta'$. Now let $\gamma$ be an arbitrary element of $\beta'$. Similarly we then have $x_0'R\gamma$, and by transitivity with $x_0Rx_0'$ we then have $x_0R\gamma$, 
 implying $\gamma\in\beta$.\\
 \indent Next we show that dom$\hat F=A/R$. Let $a$ be arbitrary and suppose $a\in\text{dom}\hat F$.
-Then there exists $b$ such that $\langle a,b
+Then there exists $b$ such that $\langle a,b\rangle\in\hat F$. By definition there then exists $x\in A$ such that $\forall y(y\in a\leftrightarrow xRy)$. This means $a\in A/R$. Now suppose
+$a\in A/R$; by definition there exists $x\in A$ such that $\forall y(y\in a\leftrightarrow xRy)$.
+Since $F:A\to A$, $F(x)\in A$ exists. We know then that $[F(x)]_R$ exists, where
+$\forall y(y\in [F(x)]_R\leftrightarrow F(x)Ry)$. So by definition $\langle a,[F(x)]_R\rangle\in\hat F$ and $a\in\text{dom}\hat F$.\\
+\indent Next we show that ran$\hat F\subseteq A/R$. Let $b$ be arbitrary such that $b\in\text{ran}\hat F$. So there exists $a$ such that $\langle a,b\rangle\in\hat F$. By definition
+there then exists $x\in A$ such that $\forall y(y\in a\leftrightarrow xRy)$; there also exists $x_0$ such that $\langle x,x_0\rangle\in F$ and $\forall y(y\in b\leftrightarrow x_0Ry)$. Since 
+$F:A\to A$ we have $x_0=F(x)\in A$. So it follows that $b\in A/R$.\\
+(next page)\newpage
+Next we show 
+\begin{equation*}
+\forall x\in A(\hat F([x]_R)=[F(x)]_R)
+\end{equation*}
+Let $x$ be an arbitrary element of $A$. We know that $[x]_R$ exists and is, by definition, a member of $A/R=\text{dom}\hat F$, so $\hat F([x]_R)$ exists. Since $F:A\to A$, $F(x)\in A$ also exists 
+and $[F(x)]_R$ exists. We know $\langle [x]_R,\hat F([x]_R)\rangle\in\hat F$. So by definition 
+there exists $x'\in A$ such that $\forall y(y\in[x]_R\leftrightarrow x'Ry)$, and there also
+exists $x_0'$ such that $\langle x',x_0'\rangle\in F$ and $\forall y(y\in\hat F([x]_R)\leftrightarrow x_0'Ry)$. Let $b$ be arbitrary.\\
+\indent($\rightarrow$) Suppose $b\in\hat F([x]_R)$. Then $x_0'Rb$, and since $F$ is a function this means $F(x')Rb$. $R$ is an equivalence relation on $A$ and $x\in A$, so $xRx$ and $x\in[x]_R$.
+We then have $x'Rx$ and, by compatibility, $F(x')RF(x)$. By symmetry and transitivity with $F(x')Rb$ we then have $F(x)Rb$, so $b\in[F(x)]_R$.\\
+\indent($\leftarrow$) Now suppose $b\in[F(x)]_R$. This means $F(x)Rb$. by reflexivity we have $x\in[x]_R$ and then $x'Rx$. Similarly, compatibility implies $F(x')RF(x)$. Transitivity then yields
+$F(x')Rb$. Since $F(x')=x'_0$ we have $x'_0Rb$ and then $b\in\hat F([x]_R)$.\\
+\indent We just proved existence that in the context where $R$ is an equivalence relation on $A$, $F:A\to A$, and $F$ is compatible with $R$. That is
+\begin{equation*}
+\exists\hat F(\hat F:A/R\to A/R\land\forall x\in A(\hat F([x]_R)=[F(x)]_R))
+\end{equation*}
+Now we show uniqueness of this function. That is,
+\begin{align*}
+\forall\hat G\forall\hat G_0([&\hat G:A/R\to A/R\land\forall x\in A(\hat G([x]_R)=[F(x)]_R)\\
+&\land\hat G_0:A/R\to A/R\land\forall x\in A(\hat G_0([x]_R)=[F(x)]_R)]\to \hat G=\hat G_0)
+\end{align*}
+Let $\hat G$ and $\hat G_0$ be arbitrary and assume that the conditions before the implication hold. Let $\langle x,y\rangle$ be an arbitrary element of $\hat G$, we then know that 
+$x\in\text{dom}\hat G=A/R$. So by definition there exists $a\in A$ such that $x=[a]_R$.
+We then have $\hat G(x)=\hat G([a]_R)=[F(a)]_R=\hat G_0([a]_R)=\hat G_0(x)$. So $\hat G_0(x)=\hat G(x)=y$ and $\langle x,y\rangle\in\hat G_0$. 
+Now let $\langle x,y\rangle$ be an arbitrary element of $\hat G_0$. An analagous argument yields $y=\hat G_0(x)=\hat G(x)$ and $\langle x,y\rangle\in\hat G$.
+\end{proof}
+\newpage
 
-
-
-
+\subsection{Generalisation to binary operators}
+\begin{theorem}
+Suppose $R$ is an equivalence relation on $A$ and that $F:A\times A\to A$. We say that $F$ is \textbf{compatible} with $R$ iff
+\begin{equation*}
+\forall a\in A\forall b\in A\forall c\in A\forall d\in A([aRc\land bRd]\to F(\langle a,b\rangle)RF(\langle c,d\rangle))
+\end{equation*}
+If $F$ is compatible with $R$, then there exists a unique $\hat F:A/R\times A/R\to A/R$ such that
+\begin{equation*}
+\forall x\in A\forall y\in A(\hat F(\langle[x]_R,[y]_R\rangle)=[F(\langle x,y\rangle)]_R)
+\end{equation*}
+If $F$ is not compatible with $R$, then no such $\hat F$ exists.
+\end{theorem}
+\begin{proof}
+First we show that incompatibility implies nonexistence. Given the context that $R$ is an equivalence relation on $A$ and $F:A\times A\to A$, suppose that $F$ were incompatible with $R$.
+Then there exists $a,b,c$ and $d$ in $A$ such that $aRc$ and $bRd$, but $\neg F(\langle a,b\rangle)RF(\langle c,d\rangle)$. 
+Suppose, for contradiction, that there exists $\hat F:A/R\times A/R\to A/R$ where
+$\forall x\in A\forall y\in A(\hat F(\langle[x]_R,[y]_R\rangle)=[F(\langle x,y\rangle)]_R)$. $aRc$ implies $[a]_R=[c]_R$ and $bRd$ implies $[b]_R=[d]_R$. We then have
+$\langle[a]_R,[b]_R\rangle=\langle[c]_R,[d]_R\rangle$. By our assumption we would then have
+\begin{equation*}
+[F(\langle a,b\rangle)]_R=\hat F(\langle[a]_R,[b]_R\rangle)=\hat F(\langle[c]_R,[d]_R\rangle)=[F(\langle c,d\rangle)]_R
+\end{equation*}
+This then implies $F(\langle a,b\rangle)RF(\langle c,d\rangle)$, a contradiction.\\
+\indent For the rest of the proof we need to come up with a candidate function. We propose
+\begin{equation*}
+\hat F=\{\langle\langle[x]_R,[y]_R\rangle,[F(\langle x,y\rangle)]_R\rangle\mid x\in A\land y\in A\}
+\end{equation*}
+First we need to show existence. That is, for arbitrary $A,R,F$
+\begin{align*}
+\exists D\forall z(z\in D\leftrightarrow&\exists a\exists b(z=\langle a,b\rangle\land\exists x\in A\exists y\in A(\\&\exists a_0\exists a_1(a=\langle a_0,a_1\rangle\land\forall i(i\in a_0\leftrightarrow xRi)
+\land\forall i(i\in a_1\leftrightarrow yRi))\\
+&\land\exists b_0(\langle\langle x,y\rangle,b_0\rangle\in F\land\forall i(i\in b\leftrightarrow b_0Ri)))))
+\end{align*}
+To do this we will show for
+\begin{align*}
+\forall z(&\exists a\exists b(z=\langle a,b\rangle\land\exists x\in A\exists y\in A(\\&\exists a_0\exists a_1(a=\langle a_0,a_1\rangle\land\forall i(i\in a_0\leftrightarrow xRi)
+\land\forall i(i\in a_1\leftrightarrow yRi))\\
+&\land\exists b_0(\langle\langle x,y\rangle,b_0\rangle\in F\land\forall i(i\in b\leftrightarrow b_0Ri))))\\
+&\to z\in(\mathscr P\text{ran}R\times\mathscr P\text{ran}R)\times\mathscr P\text{ran}R)
+\end{align*}
+Let $z$ be arbitrary and suppose there exists $a,b$ such that $z=\langle a,b\rangle$, that there exists $x\in A$, $y\in A$, $a_0$ and $a_1$
+such that $a=\langle a_0,a_1\rangle$, $\forall i(i\in a_0\leftrightarrow xRi)$, and $\forall i(i\in a_1\leftrightarrow yRi)$, and that there exists $b_0$ such that 
+$\langle\langle x,y\rangle,b_0\rangle\in F$ and $\forall i(i\in b\leftrightarrow b_0Ri)$.
+Let $i$ be arbitrary and suppose $i\in a_0$; then by our assumptions $xRi$ and $i\in\text{ran}R$.
+Suppose $i\in a_1$; then similarly by our assumptions $yRi$ and $i\in\text{ran}R$. So $a_0$ and $a_1$ are both subsets of $\text{ran}R$ and are therefore elements of $\mathscr P\text{ran}R$, so
+$a=\langle a_0,a_1\rangle\in\mathscr P\text{ran}R\times\mathscr P\text{ran}R$. Now suppose $i\in b$. This implies $b_0Ri$ so $i\in\text{ran}R$ and $b\in\mathscr P\text{ran}R$. 
+So $z=\langle a,b\rangle\in(\mathscr P\text{ran}R\times\mathscr P\text{ran}R)\times\mathscr P\text{ran}R$.\\
+(next page)\newpage
+The subset axiom allows us to assert
+\begin{align*}
+\exists D\forall z(z\in D\leftrightarrow&z\in(\mathscr P\text{ran}R\times\mathscr P\text{ran}R)\times\mathscr P\text{ran}R\\
+&\land\exists a\exists b(z=\langle a,b\rangle\land\exists x\in A\exists y\in A(\\&\exists a_0\exists a_1(a=\langle a_0,a_1\rangle\land\forall i(i\in a_0\leftrightarrow xRi)
+\land\forall i(i\in a_1\leftrightarrow yRi))\\
+&\land\exists b_0(\langle\langle x,y\rangle,b_0\rangle\in F\land\forall i(i\in b\leftrightarrow b_0Ri)))))
+\end{align*}
+The desired result follows from these two facts. Uniqueness follows from extensionality.\\
+\indent Now suppose that $R$ is an equivalence relation on $A$, $F:A\times A\to A$, and $F$ is compatible with $R$. We proved the existence of the unique set $\hat F$ such that for arbitrary $z$
+\begin{align*}
+z\in \hat F\leftrightarrow&\exists a\exists b(z=\langle a,b\rangle\land\exists x\in A\exists y\in A(\\&\exists a_0\exists a_1(a=\langle a_0,a_1\rangle\land\forall i(i\in a_0\leftrightarrow xRi)
+\land\forall i(i\in a_1\leftrightarrow yRi))\\
+&\land\exists b_0(\langle\langle x,y\rangle,b_0\rangle\in F\land\forall i(i\in b\leftrightarrow b_0Ri))))
+\end{align*}
+Now we prove functionality. Let $z_0$ be an arbitrary element of 
 
 
 \end{proof}
+
+
+
+
+
+
+
 
 
 
