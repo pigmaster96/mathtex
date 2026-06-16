@@ -1959,7 +1959,17 @@ z\in \hat F\leftrightarrow&\exists a\exists b(z=\langle a,b\rangle\land\exists x
 \land\forall i(i\in a_1\leftrightarrow yRi))\\
 &\land\exists b_0(\langle\langle x,y\rangle,b_0\rangle\in F\land\forall i(i\in b\leftrightarrow b_0Ri))))
 \end{align*}
-Now we prove functionality. Let $z_0$ be an arbitrary element of 
+Now we prove functionality. Let $z_0$ be an arbitrary element of dom$\hat F$. Then by definition there exists $z_1$ such that $z_0\hat Fz_1$. Let $z_2$ be arbitary and suppose that $z_0\hat Fz_2$.
+Since $\langle z_0,z_1\rangle\in\hat F$, by definition there exists $x_1,y_1\in A$, and there exists $a_0,a_1$ such that $z_0=\langle a_0,a_1\rangle$, $\forall i(i\in a_0\leftrightarrow x_1Ri)$,
+and $\forall i(i\in a_1\leftrightarrow y_1Ri)$. There also exists $b_0$ such that $F(\langle x_1,y_1\rangle)=b_0$ and $\forall i(i\in z_1\leftrightarrow b_0Ri)$. 
+Similarly, since $\langle z_0,z_2\rangle\in\hat F$, there exists $x_2,y_2\in A$, and there exists $a_0',a_1'$ such that $z_0=\langle a_0',a_1'\rangle$, $\forall i(i\in a_0'\leftrightarrow x_2Ri)$,
+and $\forall i(i\in a_1'\leftrightarrow y_2Ri)$. There also exists $b_0'$ such that $F(\langle x_2,y_2\rangle)=b_0'$ and $\forall i(i\in z_2\leftrightarrow b_0'Ri)$. We immediately have
+$\langle a_0,a_1\rangle=z_0=\langle a_0',a_1'\rangle$.
+Since $a_0=a_0'$, it is easy to show that $[x_1]_R=[x_2]_R$. This means $x_1Rx_2$. Similarly since $a_1=a_1'$ it is similarly easy to show $[y_1]_R=[y_2]_R$, meaning $y_1Ry_2$. By compatibility
+we then have $F(\langle x_1,y_1\rangle)RF(\langle x_2,y_2\rangle)$ and $b_0Rb_0'$. Let $i$ be an arbitrary element of $z_1$. Then $b_0Ri$, and by symmetry on $b_0Rb_0'$ and transitivity we have
+$b_0'Ri$ and $i\in z_2$. Now suppose $i$ were in $z_2$; then similarly we have $b_0'Ri$ and by transitivity with $b_0Rb_0'$ we can conclude $b_0Ri$ and $i\in z_1$.\\
+\indent Next we show
+
 
 
 \end{proof}
