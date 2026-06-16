@@ -1968,7 +1968,21 @@ $\langle a_0,a_1\rangle=z_0=\langle a_0',a_1'\rangle$.
 Since $a_0=a_0'$, it is easy to show that $[x_1]_R=[x_2]_R$. This means $x_1Rx_2$. Similarly since $a_1=a_1'$ it is similarly easy to show $[y_1]_R=[y_2]_R$, meaning $y_1Ry_2$. By compatibility
 we then have $F(\langle x_1,y_1\rangle)RF(\langle x_2,y_2\rangle)$ and $b_0Rb_0'$. Let $i$ be an arbitrary element of $z_1$. Then $b_0Ri$, and by symmetry on $b_0Rb_0'$ and transitivity we have
 $b_0'Ri$ and $i\in z_2$. Now suppose $i$ were in $z_2$; then similarly we have $b_0'Ri$ and by transitivity with $b_0Rb_0'$ we can conclude $b_0Ri$ and $i\in z_1$.\\
-\indent Next we show
+\indent Next we show dom$\hat F=A/R\times A/R$. Let $a$ be arbitrary and suppose that $a\in\text{dom}\hat F$. Then there exists $b$ such that $\langle a,b\rangle\in\hat F$. By definition there then
+exists $x,y\in A$, and there exists $a_0,a_1$ such that $a=\langle a_0,a_1\rangle$, 
+$\forall i(i\in a_0\leftrightarrow xRi)$ and $\forall i(i\in a_1\leftrightarrow yRi)$. It immediately follows by definition that $a_0\in A/R$ and $a_1\in A/R$. 
+So $a=\langle a_0,a_1\rangle\in A/R\times A/R$. Now suppose $a\in A/R\times A/R$. By definition there then exists $a_0\in A/R$ and $a_1\in A/R$ such that $a=\langle a_0,a_1\rangle$.
+Again by definition there exists $x\in A$ such that $\forall i(i\in a_0\leftrightarrow xRi)$ and $y\in A$ such that $\forall i(i\in a_1\leftrightarrow yRi)$. We know that $F:A\times A\to A$, so
+$F(\langle x,y\rangle)\in A$ exists. We know that $[F(\langle x,y\rangle)]_R$ exists, where by definition $\forall i(i\in[F(\langle x,y\rangle)]_R\leftrightarrow F(\langle x,y\rangle)Ri)$.
+Putting it all together, we can conclude that $\langle\langle a_0,a_1\rangle,[F(\langle x,y\rangle)]_R\rangle\in\hat F$, and $a=\langle a_0,a_1\rangle\in\text{dom}\hat F$.\\
+(next page)\newpage
+Next we show ran$\hat F\subseteq A/R$.
+
+
+
+
+
+
 
 
 
