@@ -1976,19 +1976,42 @@ Again by definition there exists $x\in A$ such that $\forall i(i\in a_0\leftrigh
 $F(\langle x,y\rangle)\in A$ exists. We know that $[F(\langle x,y\rangle)]_R$ exists, where by definition $\forall i(i\in[F(\langle x,y\rangle)]_R\leftrightarrow F(\langle x,y\rangle)Ri)$.
 Putting it all together, we can conclude that $\langle\langle a_0,a_1\rangle,[F(\langle x,y\rangle)]_R\rangle\in\hat F$, and $a=\langle a_0,a_1\rangle\in\text{dom}\hat F$.\\
 (next page)\newpage
-Next we show ran$\hat F\subseteq A/R$.
-
-
-
-
-
-
-
-
-
+Next we show ran$\hat F\subseteq A/R$. Let $b$ be arbitrary and suppose $b\in\text{ran}\hat F$. Then there exists $a$ such that $\langle a,b\rangle\in\hat F$. 
+By definition there then exists $x,y\in A$ and there exists $b_0$ such that $b_0=F(\langle x,y\rangle)\in A$ and $\forall i(i\in b\leftrightarrow b_0Ri)$. By definition we have $b\in A/R$.\\
+\indent Next we verify the desired property:
+\begin{equation*}
+\forall a\in A\forall b\in A(\hat F(\langle[a]_R,[b]_R\rangle)=[F(\langle a,b\rangle)]_R)
+\end{equation*}
+Let $a,b\in A$. We know $[a]_R,[b]_R$ exist and by that by definition $\langle[a]_R,[b]_R\rangle\in A/R\times A/R$, so $\hat F(\langle[a]_R,[b]_R\rangle)$ exists. 
+We know $\langle\langle[a]_R,[b]_R\rangle,\hat F(\langle[a]_R,[b]_R\rangle)\rangle\in\hat F$.
+So by definition there exists $x,y\in A$ such that $\forall i(i\in[a]_R\leftrightarrow xRi)$ and $\forall i(i\in[b]_R\leftrightarrow yRi)$, and there exists $b_0$ such that 
+$b_0=F(\langle x,y\rangle)\in A$ and $\forall i(i\in\hat F(\langle[a]_R,[b]_R\rangle)\leftrightarrow b_0Ri)$.\\
+\indent Let $z$ be arbitrary and suppose $z\in\hat F(\langle[a]_R,[b]_R\rangle)$. Then $b_0Rz$.
+We know by reflexivity that $a\in[a]_R$ and $b\in[b]_R$, so $xRa$ and $yRb$.
+By compatibility we have $F(\langle x,y\rangle)RF(\langle a,b\rangle)$, so $b_0RF(\langle a,b\rangle)$. By symmetry and transitivity with $b_0Rz$ we have 
+$F(\langle a,b\rangle)Rz$, so $z\in[F(\langle a,b\rangle)]_R$. Now suppose $z\in[F(\langle a,b\rangle)]_R$; this means $F(\langle a,b\rangle)Rz$. 
+As before, using reflexivity, compatibility, and the definition of
+$\hat F$ we have $F(\langle x,y\rangle)RF(\langle a,b\rangle)$. By transitivity we then have
+$F(\langle x,y\rangle)Rz$, so $b_0Rz$, and by definition we have $z\in\hat F(\langle[a]_R,[b]_R\rangle)$.\\
+\indent Finally we show that $\hat F$ is the only function with this property. That is,
+\begin{align*}
+\forall\hat G\forall\hat H&([\hat G:A/R\times A/R\to A/R\land\forall a\in A\forall b\in A(\hat G(\langle[a]_R,[b]_R\rangle)=[F(\langle a,b\rangle)]_R)\\
+\land\hat H:&A/R\times A/R\to A/R\land\forall a\in A\forall b\in A(\hat H(\langle[a]_R,[b]_R\rangle)=[F(\langle a,b\rangle)]_R)]\\
+&\to\hat G=\hat H)
+\end{align*}
+Let $\hat G,\hat H$ be arbitrary and suppose that the statements before implication are true.
+Let $\langle a,b\rangle$ be an arbitrary element of $\hat G$. Then $a\in\text{dom}\hat G=A/R\times A/R$ and there exists, by definition, $a_0,a_1$ such that $a=\langle a_0,a_1\rangle$ such that 
+$a_0,a_1\in A/R$. Then again by definition there exists $x\in A$ such that $a_0=[x]_R$ and $y\in A$ such that $a_1=[y]_R$.
+We then have $b=\hat G(a)=\hat G(\langle a_0,a_1\rangle)=\hat G(\langle[x]_R,[y]_R\rangle)=[F(\langle x,y\rangle)]_R=\hat H(\langle[x]_R,[y]_R\rangle)=\hat H(\langle a_0,a_1\rangle)=\hat H(a)$.
+So $\langle a,b\rangle\in\hat H$. Supposing now that $\langle a,b\rangle$ were an arbitrary element of $\hat H$, a similar argument shows that $\langle a,b\rangle\in\hat G$.
 \end{proof}
+\newpage
+
+\section{Ordering Relations}
+\begin{definition}
 
 
+\end{definition}
 
 
 
