@@ -69,8 +69,39 @@ we must have $n=m$.
 \end{proof}
 
 \begin{theorem}
-
+Let $H$ be a set, Let $e\in H$ and let $k:H\to H$ be a function. Then there is a unique function $f:\mathbb N\to H$ such that $f(1)=e$ and $f\circ s=k\circ f$.
 \end{theorem}
+\begin{proof}
+Letting $H, e$, and $k$ be arbitrary such that $e\in H$ and $k:H\to H$. We will show existence and uniqueness separately. We start with uniqueness.\\
+\indent Let $g$ and $h$ be arbitrary such that $g:\mathbb N\to H$, $g(1)=e$, and $g\circ s=k\circ g$ and $h:\mathbb N\to H$, $h(1)=e$, and $h\circ s=k\circ h$. We will first define $V$ as the 
+unique set (guaranteed by the subset and extensionality axioms) such that
+\begin{equation*}
+\forall a(a\in V\leftrightarrow a\in\mathbb N\land g(a)=h(a))
+\end{equation*}
+and show that $V=\mathbb N$. By peano's postulates, we need to show $V\subseteq\mathbb N$, $1\in V$, and $\forall n\in V(s(n)\in V)$. The first is straightforward. For the second requirement, we 
+know by peano's postulates that $1\in\mathbb N$, so by our assumptions $g(1)$ and $h(1)$ exist and
+$g(1)=e=h(1)$. So $1\in V$.\\
+\indent For the third requirement, let $n$ be arbitrary and suppose that $n\in V$. Then by definition $n\in\mathbb N$ and $g(n)=h(n)$. Since $n\in\mathbb N=\text{dom}(h\circ s)$, we have, by our 
+assumptions,
+\begin{equation*}
+h(s(n))=h\circ s(n)=k\circ h(n)=k(h(n))=k(g(n))=k\circ g(n)=g\circ s(n)=g(s(n))
+\end{equation*}
+we know by definition ran$(s)\subseteq\mathbb N$, so $s(n)\in\mathbb N$ and again by definition
+$s(n)\in V$. We can conclude that $V=\mathbb N$.\\
+\indent Suppose $\langle x,y\rangle\in g$, then $x\in\text{dom}g=\mathbb N=V$. So by definition $y=g(x)=h(x)$, and $\langle x,y\rangle\in h$.
+Suppose $\langle x,y\rangle\in h$, then $x\in\text{dom}h=\mathbb N=V$. So by definition $y=h(x)=g(x)$, and $\langle x,y\rangle\in g$.\\
+(next page)\newpage
+
+
+
+
+
+
+
+\end{proof}
+
+
+
 
 
 
