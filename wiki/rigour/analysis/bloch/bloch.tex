@@ -91,7 +91,25 @@ $s(n)\in V$. We can conclude that $V=\mathbb N$.\\
 \indent Suppose $\langle x,y\rangle\in g$, then $x\in\text{dom}g=\mathbb N=V$. So by definition $y=g(x)=h(x)$, and $\langle x,y\rangle\in h$.
 Suppose $\langle x,y\rangle\in h$, then $x\in\text{dom}h=\mathbb N=V$. So by definition $y=h(x)=g(x)$, and $\langle x,y\rangle\in g$.\\
 (next page)\newpage
-
+Now for existence. We need to come up with a function from $\mathbb N$ into $H$ such that $f(1)=e$ and $f\circ s=k\circ f$. We first define $C$, where
+\begin{equation*}
+\forall X(X\in C\leftrightarrow X\subseteq\mathbb N\times H\land\langle 1,e\rangle\in X\land\forall n\forall y(\langle n,y\rangle\in X\to\langle s(n),k(y)\rangle\in X))
+\end{equation*}
+(guaranteed by the subset and extensionality axioms.) We propose that $f=\bigcap C$ is the desired function. To ensure its existence, we need to show that $C$ is nonempty.
+We will show that $\mathbb N\times H\in C$. For the first requirement, clearly $\mathbb N\times H\subseteq\mathbb N\times H$.
+Next, since $1\in\mathbb N$ and $e\in H$ then $\langle 1,e\rangle\in\mathbb N\times H$. Finally, let $n$ and $y$ be arbitrary such that $\langle n,y\rangle\in\mathbb N\times H$. 
+Since $s:\mathbb N\to\mathbb N$ and $k:H\to H$, we must then have $s(n)\in\mathbb N$ and $k(y)\in H$. So $\langle s(n),k(y)\rangle\in\mathbb N\times H$. $f=\bigcap C$ is therefore a valid candidate.\\
+\indent Before we prove the functionality of $f$, we first state a few facts about $f$.
+First we note that $f\in C$. Let arbitrary $x\in\bigcap C$. Since $C$ is nonempty there exists $X\in C$, and by definition $x\in X\subseteq\mathbb N\times H$. So 
+$\bigcap C\subseteq\mathbb N\times H$. Next let arbitrary $X\in C$. By definition $\langle 1,e\rangle\in X$, so $\langle 1,e\rangle\in\bigcap C$. Finally let $n$ and $y$ be arbitrary and suppose 
+$\langle n,y\rangle\in\bigcap C$. We need to show that $\langle s(n),k(y)\rangle\in\bigcap C$. 
+Let arbitrary $X\in C$. We have $\langle n,y\rangle\in X$. Since $X\in C$, by definition we must then have $\langle s(n),k(y)\rangle\in X$. We are done.\\
+\indent Next we note that $\forall X\in C(f\subseteq X)$. This is straightforward to prove.
+Finally we show
+\begin{align*}
+\forall n\forall y([\langle n,y\rangle&\in f\land\langle n,y\rangle\neq\langle 1,e\rangle]\\&\to
+\exists m\exists u(\langle m,u\rangle\in f\land\langle n,y\rangle=\langle s(m),k(u)\rangle))
+\end{align*}
 
 
 

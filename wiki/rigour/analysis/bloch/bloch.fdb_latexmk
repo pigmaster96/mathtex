@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1781696332.7734 "bloch.tex" "bloch.pdf" "bloch" 1781696333.06211 0
+["pdflatex"] 1781814664.3397 "bloch.tex" "bloch.pdf" "bloch" 1781814664.72875 0
   "/etc/texmf/web2c/texmf.cnf" 1767433088.34546 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -46,6 +46,7 @@
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb" 1248133631 36554 b67dc2cfa451409e100b3fcf5f506509 ""
+  "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1248133631 30251 6afa5cb1d0204815a708a080681d4674 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1248133631 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
   "/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1248133631 32722 d7379af29a190c3f453aba36302ff5a9 ""
@@ -87,9 +88,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1767433103 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1767433139 3348620 54815ecd3cfca19d87f06e16fc1eb500 ""
-  "bloch.aux" 1781696333.02736 586 f8cff6443b84e6e1e23ac515d7f837cb "pdflatex"
-  "bloch.tex" 1781696330.99134 5385 813ad0997eac7ae32e47497b97f808cd ""
-  "bloch.toc" 1781696333.02736 314 1a6ee647a622fe2a177fbf8f99732bdd "pdflatex"
+  "bloch.aux" 1781814664.68801 586 f8cff6443b84e6e1e23ac515d7f837cb "pdflatex"
+  "bloch.tex" 1781814662.87603 7438 94ee96bba2e3dc5bc4bbe8612fc4cb2e ""
+  "bloch.toc" 1781814664.69201 314 1a6ee647a622fe2a177fbf8f99732bdd "pdflatex"
   (generated)
   "bloch.aux"
   "bloch.log"
