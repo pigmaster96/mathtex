@@ -110,6 +110,41 @@ Finally we show
 \forall n\forall y([\langle n,y\rangle&\in f\land\langle n,y\rangle\neq\langle 1,e\rangle]\\&\to
 \exists m\exists u(\langle m,u\rangle\in f\land\langle n,y\rangle=\langle s(m),k(u)\rangle))
 \end{align*}
+Let $n$ and $y$ be arbitrary such that $\langle n,y\rangle\in f$ and $\langle n,y\rangle\neq\langle1,e\rangle$. Suppose, for contradiction, that the statement after the implication is false.
+Then $\forall m\forall u(\langle m,u\rangle\in f\to \langle n,y\rangle\neq\langle s(m),k(u)\rangle)$. The set $f-\{\langle n,y\rangle\}$ exists by the subset axiom; we will show that this set is a
+member of $C$. We know that $f\in C$, so $f\subseteq\mathbb N\times H$, and it is straightforward to show that $(f-\{\langle n,y\rangle\})\subseteq N\times H$. 
+Since $\langle 1,e\rangle\neq\langle n,y\rangle$ and $\langle 1,e\rangle\in f$, we also have $\langle 1,e\rangle\in f-\{\langle n,y\rangle\}$. 
+Finally, let arbitrary $\langle a,b\rangle\in f-\{\langle n,y\rangle\}$. Then $\langle a,b\rangle\in f\in C$ and $\langle s(a),k(b)\rangle\in f$.
+Since $\langle a,b\rangle\in f$, we must have, by our assumption, $\langle n,y\rangle\neq\langle s(a),k(b)\rangle$ and $\langle s(a),k(b)\rangle\in f-\{\langle n,y\rangle\}$. 
+So $f-\{\langle n,y\rangle\}\in C$. It is straightforward to show that $f\nsubseteq f-\{\langle n,y\rangle\}$, contradicting the fact that $\forall X\in C(f\subseteq X)$.\\
+\indent We now prove functionality. We will do this by defining $G$:
+\begin{equation*}
+\forall z(z\in G\leftrightarrow z\in\mathbb N\land\exists!x\in H(\langle z,x\rangle\in f))
+\end{equation*}
+(which exists by the subset axiom) and using the peano postulates to show that $G=\mathbb N$.\\
+(next page)\newpage
+We defined $G$:
+\begin{equation*}
+\forall z(z\in G\leftrightarrow z\in\mathbb N\land\exists!x\in H(\langle z,x\rangle\in f))
+\end{equation*}
+To show that $G=\mathbb N$, we need to show that $G\subseteq\mathbb N$, $1\in G$, and $\forall n\in G(s(n)\in G)$. The first requirement is straightforward. 
+For the second, we already know by definition that $1\in\mathbb N$. Since $f\in C$ we know by definition that $\langle 1,e\rangle\in f$, where $e\in H$. 
+Let arbitrary $x'\in H$ such that $\langle 1,x'\rangle\in f$. Suppose for contradiction that $e\neq x'$. Then we have $\langle 1,e\rangle\neq\langle 1,x'\rangle$; so by the third statement proven
+earlier there exists $m,u$ such that $\langle m,u\rangle\in f$ and $\langle 1,x'\rangle=\langle s(m),k(u)\rangle$. 
+This means that $1=s(m)$, where since $f\subseteq\mathbb N\times H$, $m\in\mathbb N$. This contradicts the peano postulates, which assert that 
+$\neg\exists n\in\mathbb N(s(n)=1)$.\\
+\indent For the third and final requirement, let $n$ be an arbitrary element of $G$. Then by definition $n\in\mathbb N$ and there exists a unique $x$ such that $\langle n,x\rangle\in f$. 
+By definition we know $s(n)\in\mathbb N$, and 
+since $f\in C$, we have $\langle s(n),k(x)\rangle\in f$, this verifies existence. Now let $x'$ be arbitrary such that $\langle s(n),x'\rangle\in f$. By peano's postulates we know that $s(n)\neq 1$,
+so $\langle s(n),x'\rangle\neq\langle 1,e\rangle$. By the third statement proven earlier there exists $m,u$ such that $\langle m,u\rangle\in f$ and 
+$\langle s(n),x'\rangle=\langle s(m),k(u)\rangle$. So $s(n)=s(m)$ and $x'=k(u)$. Since $s$ is injective we must have $m=n$. So $\langle n,u\rangle\in f$. By uniqueness of $x$ we then have
+$u=x$. So $x'=k(u)=k(x)$, proving uniqueness. $s(n)\in G$.\\
+\indent We have shown that $G=\mathbb N$. It follows from this that $f:\mathbb N\to H$. For functionality, let $x\in\text{dom}f$. Then there exists $y$ such that $\langle x,y\rangle\in f$.
+Since $f\subseteq\mathbb N\times H$ we have $x\in\mathbb N=G$, and by definition $y$ is unique.
+Next to show dom$f=\mathbb N$, first let arbitrary $x\in\text{dom}f$, similarly it immediately follows that $x\in\mathbb N$. Now let $x\in\mathbb N$. Then $x\in G$ and by definition there exists
+$y\in H$ such that $\langle x,y\rangle\in f$, meaning $x\in\text{dom}f$. Finally to show ran$f\subseteq H$, let $y\in\text{ran}f$. 
+Then there exists $x$ such that $\langle x,y\rangle\in f\subseteq\mathbb N\times H$, so $y\in H$.\\
+\indent Finally 
 
 
 
