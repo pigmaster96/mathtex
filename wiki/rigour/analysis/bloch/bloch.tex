@@ -144,13 +144,14 @@ Since $f\subseteq\mathbb N\times H$ we have $x\in\mathbb N=G$, and by definition
 Next to show dom$f=\mathbb N$, first let arbitrary $x\in\text{dom}f$, similarly it immediately follows that $x\in\mathbb N$. Now let $x\in\mathbb N$. Then $x\in G$ and by definition there exists
 $y\in H$ such that $\langle x,y\rangle\in f$, meaning $x\in\text{dom}f$. Finally to show ran$f\subseteq H$, let $y\in\text{ran}f$. 
 Then there exists $x$ such that $\langle x,y\rangle\in f\subseteq\mathbb N\times H$, so $y\in H$.\\
-\indent Finally 
-
-
-
-
-
-
+\indent The fact that $\langle 1,e\rangle\in\bigcap C=f$ was already shown earlier. 
+Finally we show $f\circ s=k\circ f$. Let $\langle x,y\rangle\in f\circ s$. Then $y=f\circ s(x)=f(s(x))$. Since $s(x)\neq 1$, $\langle s(x),y\rangle\neq\langle 1,e\rangle$ and as proven
+earlier there then exists $m,u$ such that $\langle m,u\rangle\in f$ and $\langle s(x),y\rangle=\langle s(m),k(u)\rangle$. So $s(x)=s(m)$ and $y=k(u)$.
+Since $s$ is injective $x=m$. We then have $\langle x,u\rangle\in f$ and $y=k(u)=k(f(x))=k\circ f(x)$. so $\langle x,y\rangle\in k\circ f$.
+Next, suppose $\langle x,y\rangle\in k\circ f$.
+By definition there exists $z$ such that $\langle x,z\rangle\in f$ and $\langle z,y\rangle\in k$.
+Since $f\in C$ we have $\langle s(x),k(z)\rangle\in f$. We then have $y=k(z)=f(s(x)=f\circ s(x)$ and
+$\langle x,y\rangle\in f\circ s$. We are done.
 \end{proof}
 
 
