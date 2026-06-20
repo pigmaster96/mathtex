@@ -2,3 +2,4 @@
 \contentsline {section}{\numberline {1.1}Axioms for the Natural numbers}{2}{}%
 \contentsline {subsection}{\numberline {1.1.1}Peano Postulates}{2}{}%
 \contentsline {subsection}{\numberline {1.1.2}Consequences of Peano Postulates}{3}{}%
+\contentsline {subsection}{\numberline {1.1.3}Addition on $\mathbb N$}{6}{}%

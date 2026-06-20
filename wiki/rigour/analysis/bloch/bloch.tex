@@ -68,7 +68,7 @@ So $a\in\mathbb N=G$. Since $a\neq 1$ we must then have $a\in\{c\in\mathbb N\mid
 we must have $n=m$.
 \end{proof}
 
-\begin{theorem}
+\begin{theorem}\label{recursion}
 Let $H$ be a set, Let $e\in H$ and let $k:H\to H$ be a function. Then there is a unique function $f:\mathbb N\to H$ such that $f(1)=e$ and $f\circ s=k\circ f$.
 \end{theorem}
 \begin{proof}
@@ -153,8 +153,67 @@ By definition there exists $z$ such that $\langle x,z\rangle\in f$ and $\langle 
 Since $f\in C$ we have $\langle s(x),k(z)\rangle\in f$. We then have $y=k(z)=f(s(x)=f\circ s(x)$ and
 $\langle x,y\rangle\in f\circ s$. We are done.
 \end{proof}
+\newpage
+
+\subsection{Addition on $\mathbb N$}
+\begin{theorem}
+There is a unique binary operation $+:\mathbb N\times\mathbb N\to\mathbb N$ that satisfies the following two properties for all $n,m\in\mathbb N$:
+\begin{itemize}
+\item $n+1=s(n)$
+\item $n+s(m)=s(n+m)$
+\end{itemize}
+\end{theorem}
+\begin{proof}
+We start with uniqueness. Let $+$ and $\oplus$ be arbitrary such that $+,\oplus:\mathbb N\times\mathbb N\to\mathbb N$, 
+$\forall m\in\mathbb N\forall n\in\mathbb N(+(\langle n,1\rangle)=s(n)\land+(\langle n,s(m)\rangle)=s(+(\langle n,m\rangle)))$, and 
+$\forall m\in\mathbb N\forall n\in\mathbb N(\oplus(\langle n,1\rangle)=s(n)\land\oplus(\langle n,s(m)\rangle)=s(\oplus(\langle n,m\rangle)))$. We need to show $+=\oplus$. 
+We define $G$ as
+\begin{equation*}
+\forall x(x\in G\leftrightarrow x\in\mathbb N\land\forall n\in\mathbb N(+(\langle n,x\rangle)=\oplus(\langle n,x\rangle)))
+\end{equation*}
+(guaranteed by the subset axiom.) We will show that $G=\mathbb N$. To do this we need to show
+$G\subseteq\mathbb N$, $1\in G$, and $\forall g\in G(s(g)\in G)$. The first requirement is straightforward. For the second requirement, we already know $1\in\mathbb N$, and for arbitrary 
+$n\in\mathbb N$, $+(\langle n,1\rangle)=s(n)=\oplus(\langle n,1\rangle)$.\\
+\indent For the third requirement, let arbitrary $g\in G$. Then by definition $g\in\mathbb N$ and $\forall n\in\mathbb N(+(\langle n,g\rangle)=\oplus(\langle n,g\rangle))$.
+Since $s:\mathbb N\to\mathbb N$ we know that $s(g)\in\mathbb N$ exists. Let $n$ be arbitrary. By definition
+$+(\langle n,s(g)\rangle)=s(+(\langle n,g\rangle))$ and $\oplus(\langle n,s(g)\rangle)=s(\oplus(\langle n,g\rangle))$. 
+By assumption we can assert that $+(\langle n,g\rangle)=\oplus(\langle n,g\rangle)$, so 
+$+(\langle n,s(g)\rangle)=s(+(\langle n,g\rangle))=s(\oplus(\langle n,g\rangle))=\oplus(\langle n,s(g)\rangle)$. We conclude that $s(g)\in G$ and $G=\mathbb N$.\\
+\indent Let $\langle\langle x,y\rangle,z\rangle\in+$. By definition $y\in\mathbb N=G$ and $x\in\mathbb N$. So $+(\langle x,y\rangle)=\oplus(\langle x,y\rangle)$ and $z=\oplus(\langle x,y\rangle)$.
+So $\langle\langle x,y\rangle,z\rangle\in\oplus$. Now let $\langle\langle x,y\rangle,z\rangle\in\oplus$. A similar argument shows that $\langle\langle x,y\rangle,z\rangle\in+$.\\
+\indent Now for existence. We want to show
+\begin{align*}
+\exists+(+:\mathbb N\times\mathbb N\to\mathbb N\land\forall m\in\mathbb N\forall&n\in\mathbb N
+(+(\langle n,1\rangle)=s(n)\\
+&\land+(\langle n,s(m)\rangle)=s(+(\langle n,m\rangle))))
+\end{align*}
+Theorem \ref{recursion} allows us to assert
+\begin{equation*}
+\forall k\forall H\forall e([e\in H\land k:H\to H]\to\exists!f(f:\mathbb N\to H\land f(1)=e\land f\circ s=k\circ f))
+\end{equation*}
+It immediately follows that
+\begin{equation*}
+\forall p\in\mathbb N\exists!f(f:\mathbb N\to\mathbb N\land f(1)=p\land f\circ s=s\circ f)
+\end{equation*}
+We will define $+$ as the set where
+\begin{align*}
+\forall z(z\in+\leftrightarrow\exists a\in\mathbb N\exists b\in\mathbb N(\exists f(&f:\mathbb N\to\mathbb N\land f(1)=s(a)\land f\circ s=s\circ f\\&\land\exists c(\langle b,c\rangle\in f\land 
+z=\langle\langle a,b\rangle,c\rangle))))
+\end{align*}
+Existence follows from the subset axiom, where it can be shown that $+\subseteq(\mathbb N\times\mathbb N)\times\mathbb N$.\\
+(next page)\newpage
+We defined $+$ as
+\begin{align*}
+\forall z(z\in+\leftrightarrow\exists a\in\mathbb N\exists b\in\mathbb N(\exists f(&f:\mathbb N\to\mathbb N\land f(1)=s(a)\land f\circ s=s\circ f\\&\land\exists c(\langle b,c\rangle\in f\land 
+z=\langle\langle a,b\rangle,c\rangle))))
+\end{align*}
+First we prove functionality.
 
 
+
+
+
+\end{proof}
 
 
 
