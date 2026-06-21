@@ -207,13 +207,53 @@ We defined $+$ as
 \forall z(z\in+\leftrightarrow\exists a\in\mathbb N\exists b\in\mathbb N(\exists f(&f:\mathbb N\to\mathbb N\land f(1)=s(a)\land f\circ s=s\circ f\\&\land\exists c(\langle b,c\rangle\in f\land 
 z=\langle\langle a,b\rangle,c\rangle))))
 \end{align*}
-First we prove functionality.
-
-
-
-
-
+First we prove functionality. Let $x$ be an arbitrary element of dom$(+)$. Then there exists $y$ such that $\langle x,y\rangle\in +$. Let $y'$ be arbitrary such that $\langle x,y'\rangle\in+$.
+$\langle x,y\rangle\in +$ by definition means that there exists $a,b\in\mathbb N$, and $f:\mathbb N\to\mathbb N$ such that $f(1)=s(a)$ and $f\circ s=s\circ f$, and that there exists $c$ such that
+$\langle b,c\rangle\in f$ and $\langle x,y\rangle=\langle\langle a,b\rangle,c\rangle$.
+$\langle x,y'\rangle\in +$ similarly implies the existence of $a_0,b_0\in\mathbb N$ and $f_0:\mathbb N\to\mathbb N$ such that $f_0(1)=s(a_0)$ and $f_0\circ s=s\circ f_0$, and the existence of $c_0$ 
+such that $\langle b_0,c_0\rangle\in f_0$ and $\langle x,y'\rangle=\langle\langle a_0,b_0\rangle,c_0\rangle$. Then $\langle a,b\rangle=x=\langle a_0,b_0\rangle$, so $a_0=a$ and $b_0=b$.
+It follows that $s(a_0)=s(a)\in\mathbb N$. This and 
+\begin{equation*}
+\forall p\in\mathbb N\exists!f(f:\mathbb N\to\mathbb N\land f(1)=p\land f\circ s=s\circ f)
+\end{equation*}
+implies that $f=f_0$. So we have $y=c=f(b)=f(b_0)=f_0(b_0)=c_0=y'$.\\
+\indent Next we show that dom$(+)=\mathbb N\times\mathbb N$. First let $x$ be an arbitrary element of dom$(+)$. Then there exists $y$ such that $\langle x,y\rangle\in+$. By definition 
+there then exists $a,b\in\mathbb N$ and there exists $c$ such that $\langle x,y\rangle=\langle\langle a,b\rangle,c\rangle$. So $x=\langle a,b\rangle\in\mathbb N\times\mathbb N$.\\
+\indent Now suppose $x\in\mathbb N\times\mathbb N$. Then by definition there exists $a,b\in\mathbb N$ such that $x=\langle a,b\rangle$. $s(a)\in\mathbb N$ exists, so by theorem \ref{recursion} there
+exists $f$ such that $f:\mathbb N\to\mathbb N$, $f(1)=s(a)$, and $f\circ s=s\circ f$.
+Since $b\in\mathbb N=\text{dom}f$, $f(b)$ exists and $\langle b,f(b)\rangle\in f$.
+Then by definition, $\langle\langle a,b\rangle,f(b)\rangle\in+$, so $x=\langle a,b\rangle\in\text{dom}(+)$.\\
+\indent Next we show that ran$(+)\subseteq\mathbb N$. Let arbitrary $y\in\text{ran}(+)$. Then there exists $x$ such that $\langle x,y\rangle\in+$.
+By definition there then exists $a,b\in\mathbb N$, $f:\mathbb N\to\mathbb N$, and $c$ such that
+$\langle b,c\rangle\in f$ and $\langle x,y\rangle=\langle\langle a,b\rangle,c\rangle$.
+So we have $y=c=f(b)\in\mathbb N$.\\
+\indent Now we verify the two properties of addition, that is,
+\begin{equation*}
+\forall m\in\mathbb N\forall n\in\mathbb N(+(\langle n,1\rangle)=s(n)\land+(\langle n,s(m)\rangle)=s(+(\langle n,m\rangle)))
+\end{equation*}
+Let arbitrary $n,m\in\mathbb N$. We know that $+:\mathbb N\times\mathbb N\to\mathbb N$, so $\langle n,1\rangle\in\mathbb N\times\mathbb N=\text{dom}(+)$ and there exists $y$ such that
+$\langle\langle n,1\rangle,y\rangle\in+$. By definition there then exists $a,b\in\mathbb N$ and $f:\mathbb N\to\mathbb N$ such that $f(1)=s(a)$, and there exists $c$ such that 
+$\langle b,c\rangle\in f$ and $\langle\langle n,1\rangle,y\rangle=\langle\langle a,b\rangle,c\rangle$. 
+Then $n=a$, $1=b$, and $y=c$. We then have $\langle 1,y\rangle\in f$ and $y=f(1)=s(a)=s(n)$.
+We conclude that $\langle\langle n,1\rangle,s(n)\rangle\in+$ and $+(\langle n,1\rangle)=s(n)$.\\
+(next page)\newpage
+Now for the second property. We know that $s(m)\in\mathbb N$. So $\langle n,s(m)\rangle\in\mathbb N\times\mathbb N=\text{dom}(+)$ and there exists $y$ such that 
+$\langle\langle n,s(m)\rangle,y\rangle\in+$. By definition there then exists $a,b\in\mathbb N$ such that $f:\mathbb N\to\mathbb N$, $f(1)=s(a)$, and $f\circ s=s\circ f$, and there 
+exists $c$ such that $\langle b,c\rangle\in f$ and $\langle\langle n,s(m)\rangle,y\rangle=\langle\langle a,b\rangle,c\rangle$. 
+We then have $n=a$, $s(m)=b$, and $y=c=f(b)=f(s(m))=s(f(m))$. We know that $\langle n,m\rangle\in\mathbb N\times\mathbb N=\text{dom}(+)$, so there exists $y_0$ such that 
+$\langle\langle n,m\rangle,y_0\rangle\in+$. Again by definition there exists $a_0,b_0\in\mathbb N$ and $f_0:\mathbb N\to\mathbb N$ such that $f_0(1)=s(a_0)$ and $f_0\circ s=s\circ f_0$ and there 
+exists $c_0$ such that $\langle b_0,c_0\rangle\in f_0$
+and $\langle\langle n,m\rangle,y_0\rangle=\langle\langle a_0,b_0\rangle,c_0\rangle$. Since it follows that $a_0=n=a$ and $s(a_0)=s(a)$, theorem \ref{recursion} allows us to assert $f=f_0$.
+Putting it all together, we have $+(\langle n,m\rangle)=y_0=c_0=f_0(b_0)=f_0(m)=f(m)$.
+We conclude that $+(\langle n,s(m)\rangle)=y=s(f(m))=s(+(\langle n,m\rangle))$.
 \end{proof}
+
+\subsection{Multiplication on $\mathbb N$}
+
+
+
+
+
 
 
 
