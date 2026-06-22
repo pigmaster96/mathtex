@@ -256,8 +256,33 @@ There is a unique binary operation $\cdot:\mathbb N\times\mathbb N\to\mathbb N$ 
 \item $n\cdot s(m)=(n\cdot m)+n$
 \end{itemize}
 \end{theorem}
-\begin{proof}
-$\odot$
+\begin{proof} We start with uniqueness.
+Let $\cdot,\odot$ be arbitrary. Suppose $\cdot:\mathbb N\times\mathbb N\to\mathbb N$ and 
+$\forall m\in\mathbb N\forall n\in\mathbb N(\cdot(\langle n,1\rangle)=n\land\cdot(\langle n,s(m)\rangle)=+(\langle\cdot(\langle n,m\rangle),n\rangle))$. Similarly suppose 
+$\odot:\mathbb N\times\mathbb N\to\mathbb N$ and 
+$\forall m\in\mathbb N\forall n\in\mathbb N(\odot(\langle n,1\rangle)=n\land\odot(\langle n,s(m)\rangle)=+(\langle\odot(\langle n,m\rangle),n\rangle))$.
+We want to show that $\cdot=\odot$. We do this by defining $G$ such that
+\begin{equation*}
+\forall z(z\in G\leftrightarrow z\in\mathbb N\land\forall n\in\mathbb N(\cdot(\langle n,z\rangle)=\odot(\langle n,z\rangle)))
+\end{equation*}
+(where existence is assured by the subset axiom) and showing that $G=\mathbb N$.\\
+\indent We need to show $G\subseteq\mathbb N$, $1\in G$, and $\forall g\in G(s(g)\in G)$.
+The first requirement is straightforward. For the second, we already know $1\in\mathbb N$, and see that for arbitrary $n\in\mathbb N$ we have 
+$\cdot(\langle n,1\rangle)=n=\odot(\langle n,1\rangle)$.\\
+\indent For the third requirement let arbitrary $g\in G$. Then by definition $g\in\mathbb N$ and $\forall n\in\mathbb N(\cdot(\langle n,g\rangle)=\odot(\langle n,g\rangle))$.
+We know that $s(g)\in\mathbb N$ exists. So since $\langle n,s(g)\rangle\in\mathbb N\times\mathbb N=\text{dom}(\cdot)$, we have, by our assumptions, 
+$\cdot(\langle n,s(g)\rangle)=+(\langle\cdot(\langle n,g\rangle),n\rangle)=+(\langle\odot(\langle n,g\rangle),n\rangle)=\odot(\langle n,s(g)\rangle)$. So $s(g)\in G$ and $G=\mathbb N$.\\
+\indent To prove the desired result, let arbitrary $z\in\cdot\subseteq(\mathbb N\times\mathbb N)\times\mathbb N$. Then there exists $a_0,a_1,b\in\mathbb N$ such that 
+$\langle\langle a_0,a_1\rangle,b\rangle=z\in\cdot$. So $b=\cdot(\langle a_0,a_1\rangle)$.
+Since $a_1\in\mathbb N=G$, we can then conclude that $b=\cdot(\langle a_0,a_1\rangle)=\odot(\langle a_0,a_1\rangle)$. So $z=\langle\langle a_0,a_1\rangle,b\rangle\in\odot$. Next suppose $z\in\odot$.
+It then follows from a similar argument that $z\in\cdot$. We are done.\\
+(next page)\newpage
+Now for existence. We want to show
+
+
+
+
+
 
 \end{proof}
 
