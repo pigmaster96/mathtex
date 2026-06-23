@@ -277,7 +277,49 @@ $\langle\langle a_0,a_1\rangle,b\rangle=z\in\cdot$. So $b=\cdot(\langle a_0,a_1\
 Since $a_1\in\mathbb N=G$, we can then conclude that $b=\cdot(\langle a_0,a_1\rangle)=\odot(\langle a_0,a_1\rangle)$. So $z=\langle\langle a_0,a_1\rangle,b\rangle\in\odot$. Next suppose $z\in\odot$.
 It then follows from a similar argument that $z\in\cdot$. We are done.\\
 (next page)\newpage
-Now for existence. We want to show
+Now for existence. We start by defining a function $h$ for all $q$, where
+\begin{equation*}
+\forall q\exists h\forall z(z\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))
+\end{equation*}
+(which exists by the subset axiom, where $\mathbb N\times\mathbb N$ is a bounding set. Uniqueness for each $q$ follows from extensionality.) We show that for all $q\in\mathbb N$, this $h$ is a 
+function from $\mathbb N$ into $\mathbb N$. That is
+\begin{align*}
+\forall q\in\mathbb N[\forall z(z\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\to h:\mathbb N\to\mathbb N]
+\end{align*}
+Let arbitrary $q\in\mathbb N$. Suppose that the statement before the implication is true.
+First to prove functionality. Let $a\in\text{dom}h$. Then there exists $b$ such that $\langle a,b\rangle\in h$. Let $b'$ be arbitrary such that $\langle a,b'\rangle\in h$. By our assumptions we 
+must have $a,b,b'\in\mathbb N$, $+(\langle a,q\rangle)=b$, and $+(\langle a,q\rangle)=b'$. Since
+$+:\mathbb N\times\mathbb N\to\mathbb N$ we must have $b=b'$. Next for the domain bound suppose arbitrary $a\in\text{dom}h$. Then there exists $b$ such that $\langle a,b\rangle\in h$. It immediately
+follows that $a\in\mathbb N$. Suppose instead that $a\in\mathbb N$. Then $\langle a,q\rangle\in\mathbb N\times\mathbb N=\text{dom}(+)$.
+So $+(\langle a,q\rangle)\in\mathbb N$ exists and by definition, $\langle a,+(\langle a,q\rangle)\rangle\in h$. So $a\in\text{dom}h$. Finally for the range bound, let arbitrary $b\in\text{ran}h$.
+Then there exists $a$ such that $\langle a,b\rangle\in h$. It immediately follows by definition that $b\in\mathbb N$. We have therefore shown
+\begin{align*}
+\forall q\in\mathbb N\exists!h
+(\forall z(z\in h\leftrightarrow\exists&m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\\&\land h:\mathbb N\to\mathbb N)
+\end{align*}
+Theorem \ref{recursion} states
+\begin{equation*}
+\forall H\forall q\forall h([q\in H\land h:H\to H]\to\exists!g(g:\mathbb N\to H\land g(1)=q\land g\circ s=h\circ g))
+\end{equation*}
+which allows us to assert
+\begin{equation*}
+\forall q\forall h([q\in\mathbb N\land h:\mathbb N\to\mathbb N]\to\exists!g(g:\mathbb N\to\mathbb N\land g(1)=q\land g\circ s=h\circ g))
+\end{equation*}
+This, combined with the result we just proved, allows us to state
+\begin{align*}
+\forall q\in\mathbb N\exists!h(\forall z(&z\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\\&\land h:\mathbb N\to\mathbb N\land\exists!g(g:\mathbb N\to\mathbb N\land g(1)=q\land g\circ s=h\circ g))
+\end{align*}
+(next page)\newpage
+We showed
+\begin{align*}
+\forall q\in\mathbb n\exists!h(\forall z(&z\in h\leftrightarrow\exists m\in\mathbb n\exists x\in\mathbb n(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\\&\land h:\mathbb n\to\mathbb n\land\exists!g(g:\mathbb n\to\mathbb n\land g(1)=q\land g\circ s=h\circ g))
+\end{align*}
+Now we construct $\cdot$ as follows
+\begin{align*}
+
+\end{align*}
+
+
 
 
 
