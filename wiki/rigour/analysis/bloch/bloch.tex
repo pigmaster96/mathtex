@@ -312,12 +312,21 @@ This, combined with the result we just proved, allows us to state
 (next page)\newpage
 We showed
 \begin{align*}
-\forall q\in\mathbb n\exists!h(\forall z(&z\in h\leftrightarrow\exists m\in\mathbb n\exists x\in\mathbb n(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\\&\land h:\mathbb n\to\mathbb n\land\exists!g(g:\mathbb n\to\mathbb n\land g(1)=q\land g\circ s=h\circ g))
+\forall q\in\mathbb N\exists!h(\forall z(&z\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\\
+&\land h:\mathbb N\to\mathbb N\land\exists!g(g:\mathbb N\to\mathbb N\land g(1)=q\land g\circ s=h\circ g))
 \end{align*}
-Now we construct $\cdot$ as follows
+Now we construct $\cdot$ as the set
 \begin{align*}
-
+\forall z(z\in\cdot\leftrightarrow\exists&a\in\mathbb N\exists b\in\mathbb N(\\
+\exists h(&\forall z_0(z_0\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z_0=\langle m,x\rangle\land\langle\langle m,a\rangle,x\rangle\in+))\\
+&\land h:\mathbb N\to\mathbb N\land\exists g(g:\mathbb N\to\mathbb N\land g(1)=a\land g\circ s=h\circ g\\
+&\land\exists c(\langle b,c\rangle\in g\land z=\langle\langle a,b\rangle,c\rangle)))))
 \end{align*}
+(existence follows from the subset axiom, where $(\mathbb N\times\mathbb N)\times\mathbb N$ is a bounding set.) We want to verify
+\begin{equation*}
+\cdot:\mathbb N\times\mathbb N\to\mathbb N\land\forall m\in\mathbb N\forall n\in\mathbb N(\cdot(\langle n,1\rangle)=n\land\cdot(\langle n,s(m)\rangle)=+(\langle\cdot(\langle n,m\rangle),n\rangle))
+\end{equation*}
+We start with functionality.
 
 
 
