@@ -326,7 +326,17 @@ Now we construct $\cdot$ as the set
 \begin{equation*}
 \cdot:\mathbb N\times\mathbb N\to\mathbb N\land\forall m\in\mathbb N\forall n\in\mathbb N(\cdot(\langle n,1\rangle)=n\land\cdot(\langle n,s(m)\rangle)=+(\langle\cdot(\langle n,m\rangle),n\rangle))
 \end{equation*}
-We start with functionality.
+We start with functionality. Let arbitrary $p\in\text{dom}(\cdot)$. Then by definition there exists $q$ such that $\langle p,q\rangle\in\cdot$. This means
+that there exists $a,b\in\mathbb N$ and $h:\mathbb N\to\mathbb N$ such that 
+$\forall z_0(z_0\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z_0=\langle m,x\rangle\land\langle\langle m,a\rangle,x\rangle\in+))$. 
+There also exists $g:\mathbb N\to\mathbb N$ such that $g(1)=a$ and $g\circ s=h\circ g$, and $c$ such that $\langle b,c\rangle\in g$ and $\langle p,q\rangle=\langle\langle a,b\rangle,c\rangle$.
+Now suppose there exists $\langle p,q'\rangle\in\cdot$. 
+Similarly there exists $a',b'\in\mathbb N$, $h':\mathbb N\to\mathbb N$ such that 
+$\forall z_0(z_0\in h'\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z_0=\langle m,x\rangle\land\langle\langle m,a'\rangle,x\rangle\in+))$, 
+$g':\mathbb N\to\mathbb N$ such that $g'(1)=a'$ and $g'\circ s=h'\circ g'$, and $c'$ such that $\langle b',c'\rangle\in g'$ and $\langle p,q'\rangle=\langle\langle a',b'\rangle,c'\rangle$. 
+We have $\langle a',b'\rangle=p=\langle a,b\rangle$. So $a'=a$ and $b'=b$. Uniqueness, as proven, implies that $h=h'$ and $g=g'$. So
+$q'=c'=g'(b')=g(b')=g(b)=c=q$.\\
+\indent Now for the domain bound. 
 
 
 
