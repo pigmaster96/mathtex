@@ -112,7 +112,7 @@ Finally we show
 \end{align*}
 Let $n$ and $y$ be arbitrary such that $\langle n,y\rangle\in f$ and $\langle n,y\rangle\neq\langle1,e\rangle$. Suppose, for contradiction, that the statement after the implication is false.
 Then $\forall m\forall u(\langle m,u\rangle\in f\to \langle n,y\rangle\neq\langle s(m),k(u)\rangle)$. The set $f-\{\langle n,y\rangle\}$ exists by the subset axiom; we will show that this set is a
-member of $C$. We know that $f\in C$, so $f\subseteq\mathbb N\times H$, and it is straightforward to show that $(f-\{\langle n,y\rangle\})\subseteq N\times H$. 
+member of $C$. We know that $f\in C$, so $f\subseteq\mathbb N\times H$, and it is straightforward to show that $(f-\{\langle n,y\rangle\})\subseteq\mathbb N\times H$. 
 Since $\langle 1,e\rangle\neq\langle n,y\rangle$ and $\langle 1,e\rangle\in f$, we also have $\langle 1,e\rangle\in f-\{\langle n,y\rangle\}$. 
 Finally, let arbitrary $\langle a,b\rangle\in f-\{\langle n,y\rangle\}$. Then $\langle a,b\rangle\in f\in C$ and $\langle s(a),k(b)\rangle\in f$.
 Since $\langle a,b\rangle\in f$, we must have, by our assumption, $\langle n,y\rangle\neq\langle s(a),k(b)\rangle$ and $\langle s(a),k(b)\rangle\in f-\{\langle n,y\rangle\}$. 
@@ -305,16 +305,16 @@ which allows us to assert
 \begin{equation*}
 \forall q\forall h([q\in\mathbb N\land h:\mathbb N\to\mathbb N]\to\exists!g(g:\mathbb N\to\mathbb N\land g(1)=q\land g\circ s=h\circ g))
 \end{equation*}
-This, combined with the result we just proved, allows us to state
-\begin{align*}
-\forall q\in\mathbb N\exists!h(\forall z(&z\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\\&\land h:\mathbb N\to\mathbb N\land\exists!g(g:\mathbb N\to\mathbb N\land g(1)=q\land g\circ s=h\circ g))
-\end{align*}
 (next page)\newpage
 We showed
 \begin{align*}
-\forall q\in\mathbb N\exists!h(\forall z(&z\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\\
-&\land h:\mathbb N\to\mathbb N\land\exists!g(g:\mathbb N\to\mathbb N\land g(1)=q\land g\circ s=h\circ g))
+\forall q\in\mathbb N\exists!h
+(\forall z(z\in h\leftrightarrow\exists&m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,q\rangle,x\rangle\in+))\\&\land h:\mathbb N\to\mathbb N)
 \end{align*}
+and
+\begin{equation*}
+\forall q\forall h([q\in\mathbb N\land h:\mathbb N\to\mathbb N]\to\exists!g(g:\mathbb N\to\mathbb N\land g(1)=q\land g\circ s=h\circ g))
+\end{equation*}
 Now we construct $\cdot$ as the set
 \begin{align*}
 \forall z(z\in\cdot\leftrightarrow\exists&a\in\mathbb N\exists b\in\mathbb N(\\
@@ -348,15 +348,26 @@ By definition we then have $\langle\langle a,b\rangle,g(b)\rangle\in\cdot$ and $
 that $\langle b,c\rangle\in g$ and $\langle p,q\rangle=\langle\langle a,b\rangle,c\rangle$.
 So $q=c=g(b)\in\mathbb N$.\\
 \indent Finally we verify the two properties of multiplication. Let arbitrary $m,n\in\mathbb N$.
-We first show $\cdot(\langle n,1\rangle)=n$.
-
-
-
-
-
-
-
-
+We first show $\cdot(\langle n,1\rangle)=n$. We know that $\langle\langle n,1\rangle,\cdot(\langle n,1\rangle)\rangle\in\cdot$.
+By definition there then exists $a,b\in\mathbb N$, $g:\mathbb N\to\mathbb N$ such that $g(1)=a$, and $c$ such that $\langle b,c\rangle\in g$ and 
+$\langle\langle n,1\rangle,\cdot(\langle n,1\rangle)\rangle=\langle\langle a,b\rangle,c\rangle$.
+So $\cdot(\langle n,1\rangle)=c=g(b)=g(1)=a=n$.
+(next page)\newpage
+Now we show $\cdot(\langle n,s(m)\rangle)=+(\langle\cdot(\langle n,m\rangle),n\rangle)$.
+$s(m)\in\mathbb N$ exists, so we have $\langle\langle n,s(m)\rangle,\cdot(\langle n,s(m)\rangle)\rangle\in\cdot$. Then there exists $a,b\in\mathbb N$, $h:\mathbb N\to\mathbb N$ such that 
+$\forall z_0(z_0\in h\leftrightarrow\exists m_0\in\mathbb N\exists x\in\mathbb N(z_0=\langle m_0,x\rangle\land\langle\langle m_0,a\rangle,x\rangle\in+))$, $g:\mathbb N\to\mathbb N$ such that 
+$g(1)=a$ and $g\circ s=h\circ g$, and $c$ such that $\langle b,c\rangle\in g$ and 
+$\langle\langle n,s(m)\rangle,\cdot(\langle n,s(m)\rangle)\rangle=\langle\langle a,b\rangle,c\rangle$.
+We then have $\cdot(\langle n,s(m)\rangle)=c=g(b)=g(s(m))=h(g(m))$ and $a=n$. Similarly we know that $\langle\langle n,m\rangle,\cdot(\langle n,m\rangle)\rangle\in\cdot$.
+So there exists $a_0,b_0\in\mathbb N$, $h_0:\mathbb N\to\mathbb N$ such that 
+$\forall z_0(z_0\in h_0\leftrightarrow\exists m_0\in\mathbb N\exists x\in\mathbb N(z_0=\langle m_0,x\rangle\land\langle\langle m_0,a_0\rangle,x\rangle\in+))$,
+$g_0:\mathbb N\to\mathbb N$ such that $g_0(1)=a_0$ and $g_0\circ s=h_0\circ g_0$, and $c_0$ such 
+that $\langle b_0,c_0\rangle\in g_0$ and $\langle\langle n,m\rangle,\cdot(\langle n,m\rangle)\rangle=\langle\langle a_0,b_0\rangle,c_0\rangle$.
+This means that $a_0=n=a$, and that by our earlier statements we can assert that $h=h_0$, and $g=g_0$. So $\cdot(\langle n,m\rangle)=c_0=g_0(b_0)=g(m)$. We then have
+$\cdot(\langle n,s(m)\rangle)=h(g(m))=h(\cdot(\langle n,m\rangle))$. From the definition of $h$, there then exists $m_0,x\in\mathbb N$ such that
+$\langle\cdot(\langle n,m\rangle),h(\cdot(\langle n,m\rangle))\rangle=\langle m_0,x\rangle$ and
+$\langle\langle m_0,a\rangle,x\rangle\in+$. This and the fact that $a=n$ allows us to conclude
+$+(\langle\cdot(\langle n,m\rangle),n\rangle)=h(\cdot(\langle n,m\rangle))=\cdot(\langle n,s(m)\rangle)$.
 \end{proof}
 
 
