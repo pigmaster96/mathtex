@@ -336,7 +336,19 @@ $\forall z_0(z_0\in h'\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(
 $g':\mathbb N\to\mathbb N$ such that $g'(1)=a'$ and $g'\circ s=h'\circ g'$, and $c'$ such that $\langle b',c'\rangle\in g'$ and $\langle p,q'\rangle=\langle\langle a',b'\rangle,c'\rangle$. 
 We have $\langle a',b'\rangle=p=\langle a,b\rangle$. So $a'=a$ and $b'=b$. Uniqueness, as proven, implies that $h=h'$ and $g=g'$. So
 $q'=c'=g'(b')=g(b')=g(b)=c=q$.\\
-\indent Now for the domain bound. 
+\indent Next we show dom$(\cdot)=\mathbb N\times\mathbb N$. Let arbitrary $p\in\text{dom}(\cdot)$.
+Then by definition there exists $q$ such that $\langle p,q\rangle\in\cdot$.
+So there exists $a,b\in\mathbb N$ and $c$ such that $\langle p,q\rangle=\langle\langle a,b\rangle,c\rangle$.
+So $p=\langle a,b\rangle\in\mathbb N\times\mathbb N$. Now let $p\in\mathbb N\times\mathbb N$. Then by definition there exists $a,b\in\mathbb N$ such that $p=\langle a,b\rangle$. Since 
+$a\in\mathbb N$, as proven there exists $h:\mathbb N\to\mathbb N$ such that 
+$\forall z(z\in h\leftrightarrow\exists m\in\mathbb N\exists x\in\mathbb N(z=\langle m,x\rangle\land\langle\langle m,a\rangle,x\rangle\in+))$, 
+and there exists $g:\mathbb N\to\mathbb N$ such that $g(1)=a$ and $g\circ s=h\circ g$.
+By definition we then have $\langle\langle a,b\rangle,g(b)\rangle\in\cdot$ and $p=\langle a,b\rangle\in\text{dom}(\cdot)$.\\
+\indent For the range bound, let $q\in\text{ran}(\cdot)$. Then there exists $p$ such that $\langle p,q\rangle\in\cdot$. So there exists $a,b\in\mathbb N$, $g:\mathbb N\to\mathbb N$, and $c$ such 
+that $\langle b,c\rangle\in g$ and $\langle p,q\rangle=\langle\langle a,b\rangle,c\rangle$.
+So $q=c=g(b)\in\mathbb N$.\\
+\indent Finally we verify the two properties of multiplication. Let arbitrary $m,n\in\mathbb N$.
+We first show $\cdot(\langle n,1\rangle)=n$.
 
 
 
