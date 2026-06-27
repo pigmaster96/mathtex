@@ -370,6 +370,46 @@ $\langle\langle m_0,a\rangle,x\rangle\in+$. This and the fact that $a=n$ allows 
 $+(\langle\cdot(\langle n,m\rangle),n\rangle)=h(\cdot(\langle n,m\rangle))=\cdot(\langle n,s(m)\rangle)$.
 \end{proof}
 
+\subsection{Properties of addition and multiplication on the naturals}
+\begin{theorem}
+Let $a,b,c\in\mathbb N$.
+\begin{enumerate}
+\item If $a+c=b+c$, then $a=b$\quad(Cancellation Law for Addition)
+\item $(a+b)+c=a+(b+c)$\quad(Associative Law for Addition)
+\item $1+a=s(a)=a+1$
+\item $a+b=b+a$\quad(Commutative Law for Addition)
+\item $a+b\neq1$
+\item $a+b\neq a$
+\item $a\cdot1=a=1\cdot a$\quad(Identity Law for Multiplication)
+\item $(a+b)c=ac+bc$\quad(Distributive Law)
+\item $ab=ba$\quad(Commutative Law for Multiplication)
+\item $c(a+b)=ca+cb$\quad(Distributive Law)
+\item $(ab)c=a(bc)$\quad(Associative Law for Multiplication)
+\item If $ac=bc$ then $a=b$\quad(Cancellation Law for Multiplication)
+\item $ab=1$ iff $a=1=b$
+\end{enumerate}
+\end{theorem}
+\noindent(next page)\newpage
+\begin{proof}(1)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N(a+c=b+c\to a=b)
+\end{equation*}
+To do this we define the set $G$ as the set where
+\begin{equation*}
+\forall c(c\in G\leftrightarrow c\in\mathbb N\land\forall a\in\mathbb N\forall b\in\mathbb N(a+c=b+c\to a=b))
+\end{equation*}
+(where existence follows from the subset axiom using $\mathbb N$ as the bounding set. Uniqueness follows from extensionality.) Then we show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward; we need to show $1\in G$ and $\forall g\in G(s(g)\in G)$.
+For the former, we already know $1\in\mathbb N$. Let arbitrary $a,b\in\mathbb N$. Suppose that $a+1=b+1$. By definition we then have $s(a)=s(b)$, so by injectivity $a=b$ and $1\in G$.\\
+\indent Now the latter. Let arbitrary $g\in G$. As defined we then have $g\in\mathbb N$ and $\forall a\in\mathbb N\forall b\in\mathbb N(a+g=b+g\to a=b)$. $s(g)\in\mathbb N$ exists. 
+Let arbitary $a,b\in\mathbb N$ and suppose that $a+s(g)=b+s(g)$. Then by the definition of addition we have $s(a+g)=s(b+g)$ and, by injectivity, $a+g=b+g$. Since $g\in G$ we then have
+$a=b$. So $G=\mathbb N$. To prove the initial statement, let arbitrary $c\in\mathbb N$. Then from $\mathbb N=G$ the desired conclusion immediately follows.
+\end{proof}
+\begin{proof}(2) We want to show
+
+
+\end{proof}
 
 
 
