@@ -429,15 +429,50 @@ So $\mathbb N=G$. To prove the initial statement, let arbitrary $c\in\mathbb N=G
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(3)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N(1+a=s(a)=a+1)
+\end{equation*}
+To do this we define $G$ as the set where
+\begin{equation*}
+\forall a(a\in G\leftrightarrow a\in\mathbb N\land 1+a=s(a)=a+1)
+\end{equation*}
+(Showing existence and uniqueness is straightforward.) We show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show that $1\in G$ and $\forall g\in G(s(g)\in G)$. For the former we already know that $1\in G$, and by definition we have
+$1+1=s(1)$.\\
+\indent Now the latter. Let arbitrary $g\in G$. Then by definition $g\in\mathbb N$ and $1+g=s(g)=g+1$. We know $s(g)\in\mathbb N$ exists. We then have
+\begin{equation*}
+1+s(g)=s(1+g)=s(s(g))=s(g+1)=(g+1)+1=s(g)+1
+\end{equation*}
+So $G=\mathbb N$. Proving the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$ and the desired conclusion immediately follows.
+\end{proof}
+\begin{proof}(4)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a+b=b+a)
+\end{equation*}
+To do this we define $G$ as the set such that
+\begin{equation*}
+\forall a(a\in G\leftrightarrow a\in\mathbb N\land\forall b\in\mathbb N(a+b=b+a))
+\end{equation*}
+(Showing existence and uniqueness is straightforward.) We show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show that $1\in G$ and $\forall g\in G(s(g)\in G)$. For the former we already know $1\in\mathbb N$. 
+Letting arbitrary $b\in\mathbb N$, by (3) we have $1+b=b+1$.\\
+\indent Now the latter. Let arbitrary $g\in G$. Then by definition $g\in\mathbb N$ and $\forall b\in\mathbb N(g+b=b+g)$. $s(g)\in\mathbb N$ exists. Let arbitrary $b\in\mathbb N$.
+Then we have
+\begin{equation*}
+s(g)+b=(g+1)+b\overset{(2)}{=}g+(1+b)\overset{(3)}{=}g+s(b)=s(g+b)=s(b+g)=b+s(g)
+\end{equation*}
+So $G=\mathbb N$. Showing the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$ and the desired conclusion immediately follows.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(5)
+
+
 
 
 
 \end{proof}
-
-
-
-
-
 
 
 
