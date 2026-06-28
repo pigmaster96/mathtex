@@ -407,10 +407,32 @@ Let arbitary $a,b\in\mathbb N$ and suppose that $a+s(g)=b+s(g)$. Then by the def
 $a=b$. So $G=\mathbb N$. To prove the initial statement, let arbitrary $c\in\mathbb N$. Then from $\mathbb N=G$ the desired conclusion immediately follows.
 \end{proof}
 \begin{proof}(2) We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N((a+b)+c=a+(b+c)) 
+\end{equation*}
+To do this we define $G$ as the set where
+\begin{equation*}
+\forall c(c\in G\leftrightarrow c\in\mathbb N\land\forall a\in\mathbb N\forall b\in\mathbb N((a+b)+c=a+(b+c)))
+\end{equation*}
+(where existence and uniqueness can be easily shown) and show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show $1\in G$ and $\forall g\in G(s(g)\in G)$.\\
+\indent For the former, we already know $1\in\mathbb N$. Let arbitrary $a,b\in\mathbb N$. By the definition of addition we have
+\begin{equation*}
+(a+b)+1=s(a+b)=a+s(b)=a+(b+1)
+\end{equation*}
+\indent Now the latter. Let arbitrary $g\in G$. Then by definition $g\in\mathbb N$ and $\forall a\in\mathbb N\forall b\in\mathbb N((a+b)+g=a+(b+g))$. We know $s(g)\in\mathbb N$ exists. 
+Let arbitrary $a,b\in\mathbb N$. By definition we then have
+\begin{equation*}
+(a+b)+s(g)=s((a+b)+g)=s(a+(b+g))=a+s(b+g)=a+(b+s(g))
+\end{equation*}
+So $\mathbb N=G$. To prove the initial statement, let arbitrary $c\in\mathbb N=G$. The desired conclusion immediately follows.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(3)
+
 
 
 \end{proof}
-
 
 
 
