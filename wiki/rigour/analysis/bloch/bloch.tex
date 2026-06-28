@@ -49,7 +49,7 @@ The set of \textbf{natural numbers} denoted $\mathbb N$, is the set the existenc
 \newpage
 
 \subsection{Consequences of Peano Postulates}
-\begin{lemma} 
+\begin{lemma}\label{predecessor}
 Let $a\in\mathbb N$. Suppose that $a\neq 1$. Then there is a unique $b\in\mathbb N$ such that $a=s(b)$. (where existence of $s$ and $\mathbb N$ are outlined by the peano axioms)
 \end{lemma}
 \begin{proof}
@@ -466,14 +466,39 @@ s(g)+b=(g+1)+b\overset{(2)}{=}g+(1+b)\overset{(3)}{=}g+s(b)=s(g+b)=s(b+g)=b+s(g)
 So $G=\mathbb N$. Showing the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$ and the desired conclusion immediately follows.
 \end{proof}
 \noindent(next page)\newpage
-\begin{proof}(5)
-
-
+\begin{proof}(5) We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a+b\neq1)
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. Suppose for contradiction that $a+b=1$. 
+We have 2 cases. First suppose $b=1$. Then $a+b=a+1=s(a)=1$, and the last equality is a contradiction of the peano postulates. Now suppose $b\neq1$. Then by lemma \ref{predecessor} there exists
+$x\in\mathbb N$ such that $b=s(x)$. We then have $a+b=a+s(x)=s(a+x)=1$, which is again a contradiction.
+\end{proof}
+\begin{proof}(6)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a+b\neq a)
+\end{equation*}
+We do this by defining $G$ as the set such that
+\begin{equation*}
+\forall a(a\in G\leftrightarrow a\in\mathbb N\land\forall b\in\mathbb N(a+b\neq a))
+\end{equation*}
+(Showing existence and uniqueness is straightforward.) We show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show $1\in G$ and $\forall g\in G(s(g)\in G)$. For the former, we already know $1\in\mathbb N$. Let arbitrary $b\in\mathbb N$.
+By (5) $1+b\neq 1$.\\
+\indent Now the latter. Let arbitrary $g\in G$. Then $g\in\mathbb N$ and $\forall b\in\mathbb N(g+b\neq g)$. $s(g)\in\mathbb N$ exists. Let arbitrary $b\in\mathbb N$.
+For contradiction, suppose $s(g)+b=s(g)$. We then have
+\begin{equation*}
+s(g)=s(g)+b\overset{(4)}{=}b+s(g)=s(b+g)
+\end{equation*}
+By injectivity of $s$ and (4) we then have $g=b+g=g+b$. This contradicts $\forall b\in\mathbb N(g+b\neq g)$.
+So $G=\mathbb N$. Showing the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$ and the desired conclusion immediately follows.
+\end{proof}
+\begin{proof}(7)
 
 
 
 \end{proof}
-
 
 
 
