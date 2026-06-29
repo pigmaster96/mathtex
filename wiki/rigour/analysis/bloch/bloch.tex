@@ -495,10 +495,31 @@ By injectivity of $s$ and (4) we then have $g=b+g=g+b$. This contradicts $\foral
 So $G=\mathbb N$. Showing the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$ and the desired conclusion immediately follows.
 \end{proof}
 \begin{proof}(7)
-
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N(a\cdot1=a=1\cdot a)
+\end{equation*}
+to do this we define $G$ as the set such that
+\begin{equation*}
+\forall a(a\in G\leftrightarrow a\in\mathbb N\land a\cdot1=a=1\cdot a)
+\end{equation*}
+(where existence and uniqueness can be easily shown.) We show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show $1\in G$ and $\forall g\in G(s(g)\in G)$. For the former we already know $1\in\mathbb N$, and $1\cdot1=1$.\\
+\indent Now the latter. Let arbitrary $g\in G$. Then $g\in\mathbb N$ and $g\cdot1=g=1\cdot g$. 
+$s(g)\in\mathbb N$ exists. We then have
+\begin{equation*}
+s(g)\cdot1=s(g)=s(g\cdot1)=s(1\cdot g)=(1\cdot g)+1=1\cdot s(g)
+\end{equation*}
+so $G=\mathbb N$. Proving the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$
+and the desired conclusion immediately follows.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(8)
 
 
 \end{proof}
+
+
 
 
 
