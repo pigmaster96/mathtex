@@ -515,9 +515,64 @@ and the desired conclusion immediately follows.
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(8)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N((a+b)c=(ac)+(bc))
+\end{equation*}
+To do this we define $G$ as the set such that
+\begin{equation*}
+\forall c(c\in G\leftrightarrow c\in\mathbb N\land\forall a\in\mathbb N\forall b\in\mathbb N((a+b)c=(ac)+(bc))
+\end{equation*}
+(where proving existence and uniqueness is straightforward.) We show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show $1\in G$ and $\forall g\in G(s(g)\in G)$.
+For the former, we already know $1\in\mathbb N$. Let arbitrary $a,b\in\mathbb N$. We have
+\begin{equation*}
+(a+b)\cdot1=a+b=(a\cdot1)+(b\cdot1)
+\end{equation*}
+Now the latter. Let arbitrary $g\in G$. Then by definition $g\in\mathbb N$ and $\forall a\in\mathbb N\forall b\in\mathbb N((a+b)g=(ag)+(bg))$. $s(g)\in\mathbb N$ exists. 
+Let arbitrary $a,b\in\mathbb N$. We have
+\begin{align*}
+(a+b)s(g)&=((a+b)g)+(a+b)=((ag)+(bg))+(a+b)\\
+&\overset{(2)}{=}(ag)+((bg)+(a+b))\overset{(4,2)}{=}(ag)+((bg+b)+a)\\
+&=(ag)+((bs(g))+a)\overset{(4,2)}{=}((ag)+a)+(bs(g))\\
+&=(as(g))+(bs(g))
+\end{align*}
+So $G=\mathbb N$. Proving the initial statement is straightforward. Let arbitrary $c\in\mathbb N=G$
+and the desired conclusion immediately follows.
+\end{proof}
+\begin{proof}(9)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(ab=ba)
+\end{equation*}
+To do this we define $G$ as the set such that
+\begin{equation*}
+\forall a(a\in G\leftrightarrow a\in\mathbb N\land\forall b\in\mathbb N(ab=ba))
+\end{equation*}
+(where proving existence and uniqueness is straightforward.) We show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show $1\in G$ and $\forall g\in G(s(g)\in G)$.
+For the former, we know $1\in\mathbb N$. Let arbitrary $b\in\mathbb N$. Then by $(7)$ we have
+$1\cdot b=b\cdot 1$.\\
+\indent Now the latter. Let arbitrary $g\in G$. Then $g\in\mathbb N$ and $\forall b\in\mathbb N(gb=bg)$. $s(g)\in\mathbb N$ exists. Let arbitrary $b\in\mathbb N$. We have
+\begin{align*}
+s(g)b=(g+1)b\overset{(8)}{=}(gb)+(1\cdot b)\overset{(7)}{=}(bg)+b=bs(g)
+\end{align*}
+So $G=\mathbb N$. Proving the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$
+and the desired conclusion immediately follows.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(10)
+
+
 
 
 \end{proof}
+
+
+
+
+
+
 
 
 
