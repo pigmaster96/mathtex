@@ -562,15 +562,78 @@ and the desired conclusion immediately follows.
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(10)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N(c(a+b)=(ca)+(cb))
+\end{equation*}
+Let arbitrary $a,b,c\in\mathbb N$. We have
+\begin{equation*}
+c(a+b)\overset{(9)}{=}(a+b)c\overset{(8)}{=}(ac)+(bc)\overset{9}{=}(ca)+(cb)\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(11)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N((ab)c=a(bc))
+\end{equation*}
+To do this we define $G$ as the set such that
+\begin{equation*}
+\forall b(b\in G\leftrightarrow b\in\mathbb N\land\forall a\in\mathbb N\forall c\in\mathbb N((ab)c=a(bc)))
+\end{equation*}
+(where proving existence and uniqueness is straightforward.) We show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show $1\in G$ and $\forall g\in G(s(g)\in G)$. For the former, we already know $1\in\mathbb N$. Let arbitrary $a,c\in\mathbb N$. We have
+\begin{equation*}
+(a\cdot1)c=ac\overset{(7)}{=}a(1\cdot c)
+\end{equation*}
+\indent Now the latter. Let arbitrary $g\in G$. Then $g\in\mathbb N$ and $\forall a\in\mathbb N\forall c\in\mathbb N((ag)c=a(gc))$. $s(g)\in\mathbb N$ exists. Let arbitrary $a,c\in\mathbb N$.
+We have
+\begin{align*}
+(as(g))c&=((ag)+a)c\overset{(8)}{=}((ag)c)+(ac)=(a(gc))+(ac)\\
+&\overset{(10)}{=}a((gc)+c)\overset{(9)}{=}a((cg)+c)=a(cs(g))\\
+&\overset{(9)}{=}a(s(g)c)
+\end{align*}
+So $G=\mathbb N$. Proving the initial statement is straightforward. Let arbitrary $b\in\mathbb N=G$
+and the desired conclusion immediately follows.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(12)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N(ac=bc\to a=b)
+\end{equation*}
+To do this we define $G$ as the set such that
+\begin{equation*}
+\forall a(a\in G\leftrightarrow a\in\mathbb N\land\forall b\in\mathbb N\forall c\in\mathbb N(ac=bc\to a=b))
+\end{equation*}
+(where proving existence and uniqueness is straightforward.) We show that $G=\mathbb N$.
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show $1\in G$ and $\forall g\in G(s(g)\in G)$.\\
+\indent For the former, we already know $1\in\mathbb N$. Let arbitrary $b,c\in\mathbb N$ and suppose that $1\cdot c=bc$. Suppose for contradiction that $b\neq1$. Then by lemma \ref{predecessor}
+there exists $x\in\mathbb N$ such that $b=s(x)$. We then have
+\begin{equation*}
+c\overset{(7)}{=}1\cdot c=bc=s(x)c=(x+1)c\overset{(8,7)}{=}(xc)+c\overset{(4,9)}{=}c+cx
+\end{equation*}
+which contradicts $(6)$.\\
+\indent Now the latter. Let arbitrary $g\in G$. Then $g\in\mathbb N$ and $\forall b\in\mathbb N\forall c\in\mathbb N(gc=bc\to g=b)$. $s(g)\in\mathbb N$ exists. Let arbitrary $b,c\in\mathbb N$.
+Suppose $s(g)c=bc$. For contradiction, suppose $b=1$. Then
+\begin{equation*}
+c\overset{(7)}{=}1\cdot c=bc=s(g)c\overset{(9)}{=}cs(g)=(cg)+c\overset{(4)}{=}c+(cg)
+\end{equation*}
+contradicting $(6)$. So we must have $b\neq1$ and by lemma \ref{predecessor}
+there exists $x\in\mathbb N$ such that $b=s(x)$. Then
+\begin{equation*}
+(cg)+c=cs(g)\overset{(9)}{=}s(g)c=bc=s(x)c=(x+1)c\overset{(8,7)}{=}(xc)+c
+\end{equation*}
+and by $(1)$, $gc=cg=xc$. Since $g\in G$ we then have $g=x$ and $s(g)=s(x)=b$.
+So $G=\mathbb N$. Proving the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$
+and the desired conclusion immediately follows.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(13)
 
 
 
 
 \end{proof}
-
-
-
-
 
 
 
