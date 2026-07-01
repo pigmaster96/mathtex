@@ -371,7 +371,7 @@ $+(\langle\cdot(\langle n,m\rangle),n\rangle)=h(\cdot(\langle n,m\rangle))=\cdot
 \end{proof}
 
 \subsection{Properties of addition and multiplication on the naturals}
-\begin{theorem}
+\begin{theorem}\label{natural arithmetic}
 Let $a,b,c\in\mathbb N$.
 \begin{enumerate}
 \item If $a+c=b+c$, then $a=b$\quad(Cancellation Law for Addition)
@@ -438,7 +438,7 @@ To do this we define $G$ as the set where
 \forall a(a\in G\leftrightarrow a\in\mathbb N\land 1+a=s(a)=a+1)
 \end{equation*}
 (Showing existence and uniqueness is straightforward.) We show that $G=\mathbb N$.
-Showing $G\subseteq\mathbb N$ is straightforward. We need to show that $1\in G$ and $\forall g\in G(s(g)\in G)$. For the former we already know that $1\in G$, and by definition we have
+Showing $G\subseteq\mathbb N$ is straightforward. We need to show that $1\in G$ and $\forall g\in G(s(g)\in G)$. For the former we already know that $1\in\mathbb N$, and by definition we have
 $1+1=s(1)$.\\
 \indent Now the latter. Let arbitrary $g\in G$. Then by definition $g\in\mathbb N$ and $1+g=s(g)=g+1$. We know $s(g)\in\mathbb N$ exists. We then have
 \begin{equation*}
@@ -568,7 +568,7 @@ We want to show
 \end{equation*}
 Let arbitrary $a,b,c\in\mathbb N$. We have
 \begin{equation*}
-c(a+b)\overset{(9)}{=}(a+b)c\overset{(8)}{=}(ac)+(bc)\overset{9}{=}(ca)+(cb)\qedhere
+c(a+b)\overset{(9)}{=}(a+b)c\overset{(8)}{=}(ac)+(bc)\overset{(9)}{=}(ca)+(cb)\qedhere
 \end{equation*}
 \end{proof}
 \begin{proof}(11)
@@ -610,7 +610,7 @@ Showing $G\subseteq\mathbb N$ is straightforward. We need to show $1\in G$ and $
 \indent For the former, we already know $1\in\mathbb N$. Let arbitrary $b,c\in\mathbb N$ and suppose that $1\cdot c=bc$. Suppose for contradiction that $b\neq1$. Then by lemma \ref{predecessor}
 there exists $x\in\mathbb N$ such that $b=s(x)$. We then have
 \begin{equation*}
-c\overset{(7)}{=}1\cdot c=bc=s(x)c=(x+1)c\overset{(8,7)}{=}(xc)+c\overset{(4,9)}{=}c+cx
+c\overset{(7)}{=}1\cdot c=bc=s(x)c=(x+1)c\overset{(8,7)}{=}(xc)+c\overset{(4,9)}{=}c+(cx)
 \end{equation*}
 which contradicts $(6)$.\\
 \indent Now the latter. Let arbitrary $g\in G$. Then $g\in\mathbb N$ and $\forall b\in\mathbb N\forall c\in\mathbb N(gc=bc\to g=b)$. $s(g)\in\mathbb N$ exists. Let arbitrary $b,c\in\mathbb N$.
@@ -637,15 +637,51 @@ Then by lemma \ref{predecessor} there exists $x\in\mathbb N$ such that $b=s(x)$.
 \begin{equation*}
 1=ab=as(x)=a(x+1)\overset{(10)}{=}(ax)+(a\cdot1)=(ax)+a
 \end{equation*}
-Which contradicts (5). So $b=1$. We immediately have $1=ab=a\cdot1=a$ and $a=1=b$. Now suppose $a=1=b$. We immediately have $ab=1\cdot1=1$.
+which contradicts (5). So $b=1$. We immediately have $1=ab=a\cdot1=a$ and $a=1=b$. Now suppose $a=1=b$. We immediately have $ab=1\cdot1=1$.
 \end{proof}
 \newpage
 
 \subsection{Ordering on $\mathbb N$}
+\begin{definition}
+The relation $<$ on $\mathbb N$ is defined by $a<b$ if and only if there is some $p\in\mathbb N$ such that $a+p=b$ for all $a,b\in\mathbb N$.
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a<b\leftrightarrow\exists p\in\mathbb N(a+p=b))
+\end{equation*}
+The relation $\leq$ on $\mathbb N$ is defined by $a\leq b$ if and only if $a<b$ or $a=b$ for all $a,b\in\mathbb N$.
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a\leq b\leftrightarrow(a<b\lor a=b))
+\end{equation*}
+\end{definition}
+\noindent We will write $a>b$ to mean the same thing as $b<a$. The same applies to $a\geq b$.
+\begin{theorem}
+Let $a,b\in\mathbb N$. Suppose that $a<b$. Then there is a unique $p\in\mathbb N$ such that $a+p=b$.
+\end{theorem}
+\begin{proof}
+By definition there exists $p\in\mathbb N$ such that $a+p=b$. Let $p'\in\mathbb N$ be arbitrary such that $a+p'=b$. Then by part 4 of theorem \ref{natural arithmetic}
+we have $p+a=b$ and $p'+a=b$, so $p+a=p'+a$. By part 1 of theorem \ref{natural arithmetic} we have $p=p'$.
+\end{proof}
+\begin{theorem}
+Let $a,b,c,d\in\mathbb N$.
+\begin{enumerate}
+\item $a\leq a$, and $a\nless a$, and $a<a+1$
+\item $1\leq a$
+\item If $a<b$ and $b<c$, then $a<c$; if $a\leq b$ and $b<c$, then $a<c$; if $a<b$ and $b\leq c$, then $a<c$; if $a\leq b$ and $b\leq c$, then $a\leq c$
+\item $a<b$ if and only if $a+c<b+c$
+\item $a<b$ if and only if $ac<bc$
+\item Precisely one of $a<b$ or $a=b$ or $a>b$ holds\quad(Trichotomy Law)
+\item $a\leq b$ or $b\leq a$
+\item If $a\leq b$ and $b\leq a$, then $a=b$
+\item It cannot be that $b<a<b+1$
+\item $a\leq b$ if and only if $a<b+1$
+\item $a<b$ if and only if $a+1\leq b$
+\end{enumerate}
+\end{theorem}
+\noindent(next page)\newpage
+\begin{proof}(1)
 
 
 
-
+\end{proof}
 
 
 
