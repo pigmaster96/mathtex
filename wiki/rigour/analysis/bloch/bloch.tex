@@ -627,14 +627,21 @@ and by $(1)$, $gc=cg=xc$. Since $g\in G$ we then have $g=x$ and $s(g)=s(x)=b$.
 So $G=\mathbb N$. Proving the initial statement is straightforward. Let arbitrary $a\in\mathbb N=G$
 and the desired conclusion immediately follows.
 \end{proof}
-\noindent(next page)\newpage
 \begin{proof}(13)
-
-
-
-
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(ab=1\leftrightarrow a=1=b)
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. First suppose $ab=1$. For contradiction suppose $b\neq1$.
+Then by lemma \ref{predecessor} there exists $x\in\mathbb N$ such that $b=s(x)$. So
+\begin{equation*}
+1=ab=as(x)=a(x+1)\overset{(10)}{=}(ax)+(a\cdot1)=(ax)+a
+\end{equation*}
+Which contradicts (5). So $b=1$. We immediately have $1=ab=a\cdot1=a$ and $a=1=b$. Now suppose $a=1=b$. We immediately have $ab=1\cdot1=1$.
 \end{proof}
+\newpage
 
+\subsection{Ordering on $\mathbb N$}
 
 
 
