@@ -661,14 +661,14 @@ By definition there exists $p\in\mathbb N$ such that $a+p=b$. Let $p'\in\mathbb 
 we have $p+a=b$ and $p'+a=b$, so $p+a=p'+a$. By part 1 of theorem \ref{natural arithmetic} we have $p=p'$.
 \end{proof}
 \begin{theorem}
-Let $a,b,c,d\in\mathbb N$.
+Let $a,b,c\in\mathbb N$.
 \begin{enumerate}
 \item $a\leq a$, and $a\nless a$, and $a<a+1$
 \item $1\leq a$
 \item If $a<b$ and $b<c$, then $a<c$; if $a\leq b$ and $b<c$, then $a<c$; if $a<b$ and $b\leq c$, then $a<c$; if $a\leq b$ and $b\leq c$, then $a\leq c$
 \item $a<b$ if and only if $a+c<b+c$
-\item $a<b$ if and only if $ac<bc$
 \item Precisely one of $a<b$ or $a=b$ or $a>b$ holds\quad(Trichotomy Law)
+\item $a<b$ if and only if $ac<bc$
 \item $a\leq b$ or $b\leq a$
 \item If $a\leq b$ and $b\leq a$, then $a=b$
 \item It cannot be that $b<a<b+1$
@@ -678,10 +678,27 @@ Let $a,b,c,d\in\mathbb N$.
 \end{theorem}
 \noindent(next page)\newpage
 \begin{proof}(1)
+We want to show 
+\begin{equation*}
+\forall a\in\mathbb N(a\leq a\land a\nless a\land a<a+1)
+\end{equation*}
+Let arbitrary $a\in\mathbb N$. Since $a=a$, by definition $a\leq a$. Next suppose for contradiction that $a<a$. Then there would exist $p\in\mathbb N$ such that $a+p=a$, contradicting part 6
+of theorem \ref{natural arithmetic}. Finally since $1\in\mathbb N$ and $a+1=a+1$, by definition $a<a+1$.
+\end{proof}
+\begin{proof}(2)
 
 
 
 \end{proof}
+
+
+\newpage
+\begin{align*}
+\forall a\in\mathbb N&\forall b\in\mathbb N((a<b\lor a=b\lor b<a)\\
+&\land\neg((a<b)\land(a=b))\land\neg((a<b)\land(b<a))\land\neg((a=b)\land(b<a)))
+\end{align*}
+
+
 
 
 
