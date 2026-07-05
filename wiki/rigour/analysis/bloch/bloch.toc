@@ -6,3 +6,4 @@
 \contentsline {subsection}{\numberline {1.1.4}Multiplication on $\mathbb N$}{8}{}%
 \contentsline {subsection}{\numberline {1.1.5}Properties of addition and multiplication on the naturals}{11}{}%
 \contentsline {subsection}{\numberline {1.1.6}Ordering on $\mathbb N$}{18}{}%
+\contentsline {subsection}{\numberline {1.1.7}Well-ordering}{22}{}%

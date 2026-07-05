@@ -403,7 +403,7 @@ To do this we define the set $G$ as the set where
 Showing $G\subseteq\mathbb N$ is straightforward; we need to show $1\in G$ and $\forall g\in G(s(g)\in G)$.
 For the former, we already know $1\in\mathbb N$. Let arbitrary $a,b\in\mathbb N$. Suppose that $a+1=b+1$. By definition we then have $s(a)=s(b)$, so by injectivity $a=b$ and $1\in G$.\\
 \indent Now the latter. Let arbitrary $g\in G$. As defined we then have $g\in\mathbb N$ and $\forall a\in\mathbb N\forall b\in\mathbb N(a+g=b+g\to a=b)$. $s(g)\in\mathbb N$ exists. 
-Let arbitary $a,b\in\mathbb N$ and suppose that $a+s(g)=b+s(g)$. Then by the definition of addition we have $s(a+g)=s(b+g)$ and, by injectivity, $a+g=b+g$. Since $g\in G$ we then have
+Let arbitrary $a,b\in\mathbb N$ and suppose that $a+s(g)=b+s(g)$. Then by the definition of addition we have $s(a+g)=s(b+g)$ and, by injectivity, $a+g=b+g$. Since $g\in G$ we then have
 $a=b$. So $G=\mathbb N$. To prove the initial statement, let arbitrary $c\in\mathbb N$. Then from $\mathbb N=G$ the desired conclusion immediately follows.
 \end{proof}
 \begin{proof}(2) We want to show
@@ -686,17 +686,127 @@ Let arbitrary $a\in\mathbb N$. Since $a=a$, by definition $a\leq a$. Next suppos
 of theorem \ref{natural arithmetic}. Finally since $1\in\mathbb N$ and $a+1=a+1$, by definition $a<a+1$.
 \end{proof}
 \begin{proof}(2)
-
-
-
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N(1\leq a)
+\end{equation*}
+Let arbitrary $a\in\mathbb N$. We have 2 cases. First suppose $a=1$; then by definition $1\leq a$.
+Next suppose $a\neq1$. Then by lemma \ref{predecessor} there exists $x\in\mathbb N$ such
+that $a=s(x)=x+1$. By theorem \ref{natural arithmetic} part 4 we have $a=1+x$. So by definition $1<a$.
 \end{proof}
-
-
-\newpage
+\begin{proof}(3)
+We want to show
+\begin{align*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N(&[(a<b\land b<c)\to a<c]\land[(a\leq b\land b<c)\to a<c]\\
+&\land[(a<b\land b\leq c)\to a<c]\land[(a\leq b\land b\leq c)\to a\leq c])
+\end{align*}
+Let arbitrary $a,b,c\in\mathbb N$. First suppose $a<b\land b<c$. Then there exists $x,y\in\mathbb N$ such that $a+x=b$ and $b+y=c$. We then have $(a+x)+y=b+y=c$. By
+theorem \ref{natural arithmetic} part 2 we have $a+(x+y)=c$ and therefore $a<c$.\\
+\indent Next suppose $a\leq b\land b<c$. There exists $y\in\mathbb N$ such that $b+y=c$.
+We have 2 cases. First suppose $a<b$. Then as proven earlier we have $a<c$. Next suppose $a=b$.
+Then we immediately have $a+y=c$ and $a<c$.\\
+\indent Next suppose $a<b\land b\leq c$. There exists $x\in\mathbb N$ such that $a+x=b$.
+We have 2 cases. First suppose $b<c$. Then again we immediately have $a<c$. Next suppose $b=c$. Then $a+x=c$ and $a<c$.\\
+\indent Finally suppose $a\leq b\land b\leq c$. We have 4 cases. First suppose $a<b\land b<c$. As proven $a<c$. Next suppose $a=b\land b<c$. As proven $a<c$. 
+Next suppose $a<b\land b=c$. As proven $a<c$. Finally suppose $a=b$ and $b=c$. It immediately follows that $a=c$ and $a\leq c$.
+\end{proof}
+\begin{proof}(4)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N(a<b\leftrightarrow a+c<b+c)
+\end{equation*}
+Let arbitrary $a,b,c\in\mathbb N$. First suppose $a<b$. Then there exists $x\in\mathbb N$ such that $a+x=b$. Then $(a+x)+c=b+c$ and by theorem \ref{natural arithmetic} parts 2 and 4 we have 
+$(a+c)+x=b+c$. So $a+c<b+c$.\\
+\indent Next suppose $a+c<b+c$. Then there exists $x\in\mathbb N$ such that $(a+c)+x=b+c$.
+By theorem \ref{natural arithmetic} parts 2 and 4 we have $(a+x)+c=b+c$, and by part 1 of that same theorem we have $a+x=b$. So $a<b$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(5)
+We want to prove trichotomy
 \begin{align*}
 \forall a\in\mathbb N&\forall b\in\mathbb N((a<b\lor a=b\lor b<a)\\
 &\land\neg((a<b)\land(a=b))\land\neg((a<b)\land(b<a))\land\neg((a=b)\land(b<a)))
 \end{align*}
+Let arbitrary $a,b\in\mathbb N$. We start by proving the last three statements. First suppose for contradiction that $a<b$ and $a=b$. Then $a<a$, contradicting (1).
+Next suppose for contradiction that $a=b$ and $b<a$. A similar argument shows that this contradicts (1).
+Finally suppose for contradiction that $a<b\land b<a$. By (3) we have $a<a$, a contradiction.\\
+\indent Now for the first statement. We define $G$ as the set such that
+\begin{equation*}
+\forall a(a\in G\leftrightarrow a\in\mathbb N\land\forall b\in\mathbb N(a<b\lor a=b\lor b<a))
+\end{equation*}
+(proving existence and uniqueness of $G$ is straightforward.)
+We show that $G=\mathbb N$. Showing $G\subseteq\mathbb N$ is straightforward. We need to show that $1\in G$ and $\forall g\in G(s(g)\in G)$. For the former, we already know $1\in\mathbb N$. Let
+arbitrary $b\in\mathbb N$. By (2) we have $1\leq b$, meaning $1<b$ or $1=b$. Either case allows us to conclude that $1\in G$.\\
+\indent Now the latter. Let arbitrary $g\in G$. Then $g\in\mathbb N$ and 
+$\forall b\in\mathbb N(g<b\lor g=b\lor b<g)$. $s(g)\in\mathbb N$ exists. Let arbitrary $b\in\mathbb N$. We have 3 cases. First suppose $g<b$. Then there exists $x\in\mathbb N$ 
+such that $g+x=b$. Suppose $x=1$; then $s(g)=g+1=b$. Next suppose $x\neq1$; then by lemma \ref{predecessor} there exists $y\in\mathbb N$ such that $x=s(y)$. So 
+$b=g+x=g+s(y)=g+(y+1)$. By theorem \ref{natural arithmetic} parts 2 and 4 we have $(g+1)+y=b$ and $s(g)<b$. For the second case suppose $g=b$. Then by (1) we have $b=g<g+1=s(g)$. 
+Finally suppose $b<g$. Then since $g<g+1$ by (3) we have $b<g+1=s(g)$. We then have $G=\mathbb N$.\\
+\indent Showing the desired result is straightforward. For all arbitrary $a\in\mathbb N$, $a\in G$. The result immediately follows.
+\end{proof}
+\begin{proof}(6)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N\forall c\in\mathbb N(ac<bc\leftrightarrow a<b)
+\end{equation*}
+Let arbitrary $a,b,c\in\mathbb N$. First suppose $a<b$. Then there exists $x\in\mathbb N$ such that $a+x=b$. Then by theorem \ref{natural arithmetic} part 8 we have
+$bc=(a+x)c=(ac)+(xc)$; so $ac<bc$.\\
+\indent Next suppose $ac<bc$. Suppose for contradiction that $a\nless b$. Then by (5) we have $a=b\lor b<a$. First suppose $a=b$. Then we immediately have $ac<ac$, which
+contradicts (1). Next suppose $b<a$. There exists $x,y\in\mathbb N$ such that $(ac)+x=bc$ and $b+y=a$. By theorem \ref{natural arithmetic} parts 8 and 2 we have $bc=((b+y)c)+x=((bc)+(yc))+x=(bc)+((yc)+x)$, contradicting part 6 of that same theorem.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(7) We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a\leq b\lor b\leq a)
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. First suppose $a\nless b$. Then by (5) $a=b\lor b<a$, meaning $b\leq a$. Next suppose $a<b$. Then immediately it follows that $a\leq b$.
+\end{proof}
+\begin{proof}(8) We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N((a\leq b\land b\leq a)\to a=b)
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. Suppose that $a\leq b\land b\leq a$. We have four cases. 
+Three of the cases: $a<b\land b<a$, $a=b\land b<a$, and $a<b\land b=a$ all contradict (5). The only possibility is the last case $a=b\land b=a$.
+\end{proof}
+\begin{proof}(9)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(\neg(b<a\land a<b+1))
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. Suppose for contradiction that $b<a\land a<b+1$. Then there exists $x,y\in\mathbb N$ such that $b+x=a$ and $a+y=b+1$.
+Then $(b+x)+y=b+1$. By theorem \ref{natural arithmetic} parts 2 and 4 we have $(x+y)+b=1+b$. By part 1 of that theorem we then have $x+y=1$, contradicting part 5 of that theorem.
+\end{proof}
+\begin{proof}(10)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a\leq b\leftrightarrow a<b+1)
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. First suppose $a\leq b$. Suppose for contradiction that $b+1\leq a$. Then by (3) we would have $b+1\leq b$. The case where $b+1=b$ is a contradiction to
+theorem \ref{natural arithmetic} part 6. The case where $b+1<b$ implies the existence of $x\in\mathbb N$ such that $(b+1)+x=b$; by theorem \ref{natural arithmetic} part 2 we have $b+(1+x)=b$, again 
+contradicting part 6 of that theorem. We can then conclude
+that $\neg(b+1\leq a)$, meaning $\neg(b+1=a\lor b+1<a)$. By (5) we must then have $a<b+1$.\\
+\indent Now for the other direction. Suppose $a<b+1$. Supposing that $b<a$ immediately contradicts (9). Therefore by (5) we must have $a\leq b$.
+\end{proof}
+\begin{proof}(11)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a<b\leftrightarrow a+1\leq b)
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. Suppose $a<b$. Supposing $b<a+1$ immediately contradicts (9), so we must have, by (5), $a+1\leq b$.\\
+\indent Next suppose $a+1\leq b$. Suppose for contradiction that 
+$b\leq a$, which would imply by (3) that $a+1\leq a$. The case where $a+1=a$ immediately contradicts theorem \ref{natural arithmetic} part 6. The case where $a+1<a$ implies the existence of 
+$x\in\mathbb N$ such that $(a+1)+x=a$; theorem \ref{natural arithmetic} part 2 then implies $a+(1+x)=a$, again contradicting part 6 of that same theorem. We conclude that $\neg(b=a\lor b<a)$, so by
+(5) we have $a<b$.
+\end{proof}
+\newpage
+
+\subsection{Well-ordering}
+
+
+
+
+
+
 
 
 
