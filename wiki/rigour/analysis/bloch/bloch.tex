@@ -660,7 +660,7 @@ Let $a,b\in\mathbb N$. Suppose that $a<b$. Then there is a unique $p\in\mathbb N
 By definition there exists $p\in\mathbb N$ such that $a+p=b$. Let $p'\in\mathbb N$ be arbitrary such that $a+p'=b$. Then by part 4 of theorem \ref{natural arithmetic}
 we have $p+a=b$ and $p'+a=b$, so $p+a=p'+a$. By part 1 of theorem \ref{natural arithmetic} we have $p=p'$.
 \end{proof}
-\begin{theorem}
+\begin{theorem}\label{natural ordering}
 Let $a,b,c\in\mathbb N$.
 \begin{enumerate}
 \item $a\leq a$, and $a\nless a$, and $a<a+1$
@@ -801,8 +801,40 @@ $x\in\mathbb N$ such that $(a+1)+x=a$; theorem \ref{natural arithmetic} part 2 t
 \newpage
 
 \subsection{Well-ordering}
+\begin{theorem}
+Let $G\subseteq\mathbb N$ be a non-empty set. Then there is some $m\in G$ such that $m\leq g$ for all $g\in G$.
+\end{theorem}
+\begin{proof}
+We want to show
+\begin{equation*}
+\forall G(G\subseteq\mathbb N\land G\neq\emptyset\to\exists m\in G(\forall g\in G(m\leq g)))
+\end{equation*}
+Let $G$ be arbitrary; assume that $G\subseteq\mathbb N$ and $G\neq\emptyset$. Assume for contradiction that the implication is false. That is
+\begin{equation*}
+\neg\exists m\in G(\forall g\in G(m\leq g))
+\end{equation*}
+We define $H$ as the set such that
+\begin{equation*}
+\forall a(a\in H\leftrightarrow a\in\mathbb N\land\forall n\in\mathbb N(n\le a\to n\notin G))
+\end{equation*}
+(where existence and uniqueness can be easily shown). We can show that $H\cap G=\emptyset$.
+For contradiction suppose there exists $x$ such that $x\in H$ and $x\in G$. By definition then $x\in\mathbb N$ and $\forall n\in\mathbb N(n\leq x\to n\notin G)$. Then since $x\leq x$ we must have 
+$x\notin G$, a contradiction. We will show that $H=\mathbb N$. Showing $H\subseteq\mathbb N$ is straightforward. We need to show $1\in H$ and $\forall h\in H(s(h)\in H)$.\\
+\indent We start with the former. Suppose for contradiction that $1\notin H$. We know $1\in\mathbb N$, so we must have $\neg\forall n\in\mathbb N(n\leq a\to n\notin G)$. This
+is logically equivalent to
+\begin{equation*}
+\exists n\in\mathbb N(n\leq 1\land n\in G)
+\end{equation*}
+That is, there exists $n\in\mathbb N$ such that $n\leq 1$ and $n\in G$. $n<1$ is a contradiction as it would imply the existence of $x\in\mathbb N$ such that $n+x=1$, contradicting theorem
+\ref{natural arithmetic} part 5. We therefore must have $1=n\in G$. Let arbitrary $g\in G\subseteq \mathbb N$. By theorem \ref{natural ordering} part 2 we must have $n=1\leq g$. This
+contradicts our assumption that such an element does not exist, so $1\in H$.\\
+\indent Now the latter.
 
 
+
+
+
+\end{proof}
 
 
 
