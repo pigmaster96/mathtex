@@ -801,7 +801,7 @@ $x\in\mathbb N$ such that $(a+1)+x=a$; theorem \ref{natural arithmetic} part 2 t
 \newpage
 
 \subsection{Well-ordering}
-\begin{theorem}
+\begin{theorem}(Well-Ordering Principle)
 Let $G\subseteq\mathbb N$ be a non-empty set. Then there is some $m\in G$ such that $m\leq g$ for all $g\in G$.
 \end{theorem}
 \begin{proof}
@@ -820,7 +820,7 @@ We define $H$ as the set such that
 (where existence and uniqueness can be easily shown). We can show that $H\cap G=\emptyset$.
 For contradiction suppose there exists $x$ such that $x\in H$ and $x\in G$. By definition then $x\in\mathbb N$ and $\forall n\in\mathbb N(n\leq x\to n\notin G)$. Then since $x\leq x$ we must have 
 $x\notin G$, a contradiction. We will show that $H=\mathbb N$. Showing $H\subseteq\mathbb N$ is straightforward. We need to show $1\in H$ and $\forall h\in H(s(h)\in H)$.\\
-\indent We start with the former. Suppose for contradiction that $1\notin H$. We know $1\in\mathbb N$, so we must have $\neg\forall n\in\mathbb N(n\leq a\to n\notin G)$. This
+\indent We start with the former. Suppose for contradiction that $1\notin H$. We know $1\in\mathbb N$, so we must have $\neg\forall n\in\mathbb N(n\leq 1\to n\notin G)$. This
 is logically equivalent to
 \begin{equation*}
 \exists n\in\mathbb N(n\leq 1\land n\in G)
@@ -828,13 +828,26 @@ is logically equivalent to
 That is, there exists $n\in\mathbb N$ such that $n\leq 1$ and $n\in G$. $n<1$ is a contradiction as it would imply the existence of $x\in\mathbb N$ such that $n+x=1$, contradicting theorem
 \ref{natural arithmetic} part 5. We therefore must have $1=n\in G$. Let arbitrary $g\in G\subseteq \mathbb N$. By theorem \ref{natural ordering} part 2 we must have $n=1\leq g$. This
 contradicts our assumption that such an element does not exist, so $1\in H$.\\
-\indent Now the latter.
-
-
-
-
-
+\indent Now the latter. Let arbitary $h\in H$. Then $h\in\mathbb N$ and $\forall n\in\mathbb N(n\leq h\to n\notin G)$. We know $s(h)\in\mathbb N$ exists. Suppose for contradiction that 
+$s(h)\notin H$. Then as before there then exists $n\in\mathbb N$ such that $n\leq s(h)$ and $n\in G$. By the contrapositive of one of the consequences
+of $h\in H$, since $n\in G$ we then have $\neg(n\leq h)$,
+which by theorem \ref{natural ordering} part 5 implies $h<n$. Since $n<s(h)=h+1$ would then lead to a contradiction of theorem \ref{natural ordering} part 9, we must have $n=s(h)$.
+Let arbitrary $g\in G$. Suppose for contradiction that $g<n=s(h)=h+1$. Then by theorem \ref{natural ordering} part 10 we have $g\leq h$. Since $h\in H$ we then have $g\notin G$, a contradiction.
+So we must have $\neg(g<n)$, which by theorem \ref{natural ordering} part 5 implies $n\leq g$.
+We know that $n\in G$, so this contradicts our earlier assumption that such an element must not exist. So $s(h)\in H$ and $H=\mathbb N$.\\
+\indent We know $H\cap G=\emptyset$. So $\mathbb N\cap G=\emptyset$. Suppose for contradiction that $G$ is nonempty, meaning that there exists some $x\in G$. 
+Then since $G\subseteq\mathbb N$ we would have $x\in\mathbb N$ and 
+therefore $x\in\mathbb N\cap G=\emptyset$, a contradiction. So we must have $G=\emptyset$, contradicting a key assumption.
 \end{proof}
+\newpage
+
+\section{Construction of the integers}
+
+
+
+
+
+
 
 
 
