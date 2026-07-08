@@ -870,11 +870,21 @@ $\langle c,d\rangle\sim\langle e,f\rangle$. This means that all three pairs are 
 By cancellation we then have $a+f=b+e$. So $\langle a,b\rangle\sim\langle e,f\rangle$.
 \end{proof}
 \begin{definition}
-
-
+The set of \textbf{integers}, denoted $\mathbb Z$, is the quotient set $(\mathbb N\times\mathbb N)/\sim$. That is,
+\begin{equation*}
+\forall x(x\in\mathbb Z\leftrightarrow\exists\langle a,b\rangle\in\mathbb N\times\mathbb N(x=[\langle a,b\rangle]))
+\end{equation*}
+where
+\begin{equation*}
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N\forall x(x\in[\langle a,b\rangle]\leftrightarrow\langle a,b\rangle\sim x)
+\end{equation*}
 \end{definition}
-
-
+\noindent Each integer is an equivalence class. 
+Existence of each equivalence class can be shown using ran$(\sim)$ as a bounding set. The same can be done for $\mathbb Z$ using $\mathscr P(\text{ran}(\sim))$.
+Uniqueness for both follows from extensionality. 
+\begin{definition}
+We define $\hat 0,\hat 1$ as $\hat 0=[\langle 1,1\rangle]$ and $\hat 1=[\langle 1+1,1\rangle]$.
+\end{definition}
 
 
 
