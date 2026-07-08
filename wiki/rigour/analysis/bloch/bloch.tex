@@ -842,6 +842,7 @@ therefore $x\in\mathbb N\cap G=\emptyset$, a contradiction. So we must have $G=\
 \newpage
 
 \section{Construction of the integers}
+\subsection{Construction}
 \begin{definition}
 The relation $\sim$ on $\mathbb N\times\mathbb N$ is defined by $\langle a,b\rangle\sim\langle c,d\rangle$ 
 if and only if $a+d=b+c$ for all $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$. That is, the set such that
@@ -885,7 +886,25 @@ Uniqueness for both follows from extensionality.
 \begin{definition}
 We define $\hat 0,\hat 1$ as $\hat 0=[\langle 1,1\rangle]$ and $\hat 1=[\langle 1+1,1\rangle]$.
 \end{definition}
+\newpage
+\subsection{Operations on the integers}
+\begin{definition}
+The binary operation $+$ on $\mathbb Z$ is defined as $+:\mathbb Z\times\mathbb Z\to\mathbb Z$ where
+\begin{equation*}
+\forall x(x\in+\leftrightarrow\exists\langle a,b\rangle\in\mathbb N\times\mathbb N\exists\langle c,d\rangle\in\mathbb N\times\mathbb N(x=\langle\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle,[\langle a+c,b+d\rangle]\rangle))
+\end{equation*}
+put simply, for all $[\langle a,b\rangle],[\langle c,d\rangle]\in\mathbb Z$,
+\begin{equation*}
+[\langle a,b\rangle]+[\langle c,d\rangle]=[\langle a+c,b+d\rangle]
+\end{equation*}
+\end{definition}
+\begin{proof}
+We start by showing well-definedness, that is,
 
+
+
+
+\end{proof}
 
 
 

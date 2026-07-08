@@ -8,3 +8,5 @@
 \contentsline {subsection}{\numberline {1.1.6}Ordering on $\mathbb N$}{18}{}%
 \contentsline {subsection}{\numberline {1.1.7}Well-ordering}{22}{}%
 \contentsline {section}{\numberline {1.2}Construction of the integers}{23}{}%
+\contentsline {subsection}{\numberline {1.2.1}Construction}{23}{}%
+\contentsline {subsection}{\numberline {1.2.2}Operations on the integers}{24}{}%
