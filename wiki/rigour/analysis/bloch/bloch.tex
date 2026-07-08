@@ -842,10 +842,37 @@ therefore $x\in\mathbb N\cap G=\emptyset$, a contradiction. So we must have $G=\
 \newpage
 
 \section{Construction of the integers}
+\begin{definition}
+The relation $\sim$ on $\mathbb N\times\mathbb N$ is defined by $\langle a,b\rangle\sim\langle c,d\rangle$ 
+if and only if $a+d=b+c$ for all $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$. That is, the set such that
+\begin{equation*}
+\forall x(x\in\sim\leftrightarrow\exists\langle a,b\rangle\in\mathbb N\times\mathbb N\exists\langle c,d\rangle\in\mathbb N\times\mathbb N
+(x=\langle\langle a,b\rangle,\langle c,d\rangle\rangle\land a+d=b+c))
+\end{equation*}
+\end{definition}
+\noindent(Existence follows from using $(\mathbb N\times\mathbb N)\times(\mathbb N\times\mathbb N)$ as a bounding set. 
+Uniqueness from extensionality)
+\begin{lemma}
+The relation $\sim$ is an equivalence relation on $\mathbb N\times\mathbb N$.
+\end{lemma}
+\begin{proof}
+Showing that $\sim\subseteq(\mathbb N\times\mathbb N)\times(\mathbb N\times\mathbb N)$ is straightforward. We need to show reflexivity on $\mathbb N\times\mathbb N$,
+symmetry, and transitivity. We start with reflexivity; let arbitrary $\langle a,b\rangle\in\mathbb N\times\mathbb N$.
+We immediately have $a+b=b+a$ and $\langle a,b\rangle\sim\langle a,b\rangle$. For symmetry, let $\langle a,b\rangle,\langle c,d\rangle$ be arbitrary and suppose 
+$\langle a,b\rangle\sim\langle c,d\rangle$. Then by definition both pairs are members of $\mathbb N\times\mathbb N$ and $a+d=b+c$. 
+We then have $c+b=b+c=a+d=d+a$, which then means $\langle c,d\rangle\sim\langle a,b\rangle$.\\
+\indent Finally transitivity. Let $\langle a,b\rangle,\langle c,d\rangle,\langle e,f\rangle$ be arbitrary, suppose $\langle a,b\rangle\sim\langle c,d\rangle$ and 
+$\langle c,d\rangle\sim\langle e,f\rangle$. This means that all three pairs are members of $\mathbb N\times\mathbb N$, $a+d=c+b$, and $c+f=e+d$. We then have
+\begin{align*}
+(a+f)+c&=a+(c+f)=a+(e+d)=(a+d)+e\\
+&=(c+b)+e=(b+e)+c
+\end{align*}
+By cancellation we then have $a+f=b+e$. So $\langle a,b\rangle\sim\langle e,f\rangle$.
+\end{proof}
+\begin{definition}
 
 
-
-
+\end{definition}
 
 
 
