@@ -887,6 +887,7 @@ Uniqueness for both follows from extensionality.
 We define $\hat 0,\hat 1$ as $\hat 0=[\langle 1,1\rangle]$ and $\hat 1=[\langle 1+1,1\rangle]$.
 \end{definition}
 \newpage
+
 \subsection{Operations on the integers}
 \begin{definition}
 The binary operation $+$ on $\mathbb Z$ is defined as $+:\mathbb Z\times\mathbb Z\to\mathbb Z$ where
@@ -899,12 +900,45 @@ put simply, for all $[\langle a,b\rangle],[\langle c,d\rangle]\in\mathbb Z$,
 \end{equation*}
 \end{definition}
 \begin{proof}
-We start by showing well-definedness, that is,
-
-
-
-
+We start by showing the domain bound dom$(+)=\mathbb Z\times\mathbb Z$. First suppose $x\in\text{dom}(+)$. Then there exists $y$ such that $\langle x,y\rangle\in+$ and
+$\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such
+that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\mathbb Z\times\mathbb Z$.
+Next suppose $x\in\mathbb Z\times\mathbb Z$. Then there exists $x_0,x_1\in\mathbb Z$ such that
+$x=\langle x_0,x_1\rangle$. There exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such that $x_0=[\langle a,b\rangle]$
+and $x_1=[\langle c,d\rangle]$. We know $\langle a+c,b+d\rangle\in\mathbb N\times\mathbb N$ and
+$\langle\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle,[\langle a+c,b+d\rangle]\rangle\in+$, so
+$x=\langle x_0,x_1\rangle=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\text{dom}(+)$.\\
+\indent Now the range bound ran$(+)\subseteq\mathbb Z$. Let arbitrary $y\in\text{ran}(+)$. Then there exists $x$ such that $\langle x,y\rangle\in+$ and $a,b,c,d\in\mathbb N$ such that
+$y=[\langle a+c,b+d\rangle]\in\mathbb Z$.\\
+\indent Now we prove well definedness. That is, that addition between equivalence classes is independent of the particular elements used to represent each equivalence class:
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N&\forall\langle c,d\rangle\in\mathbb N\times\mathbb N
+\forall\langle a',b'\rangle\in\mathbb N\times\mathbb N\forall\langle c',d'\rangle\in\mathbb N\times\mathbb N(\\
+[\langle a,b\rangle]&=[\langle a',b'\rangle]\land[\langle c,d\rangle]=[\langle c',d'\rangle]\\
+&\to[\langle a+c,b+d\rangle]=[\langle a'+c',b'+d'\rangle])
+\end{align*}
+Let arbitary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb N\times\mathbb N$ and suppose that $[\langle a,b\rangle]=[\langle a',b'\rangle]$
+and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. Then $\langle a,b\rangle\sim\langle a',b'\rangle$ and $a+b'=b+a'$. Similarly $c+d'=d+c'$. We then have, by associativity and commutativity of 
+natural arithmetic:
+\begin{align*}
+(a+c)+(b'+d')&=(a+b')+(c+d')\\
+&=(b+a')+(d+c')=(b+d)+(a'+c')
+\end{align*}
+and we can conclude that 
+$\langle a+c,b+d\rangle\sim\langle a'+c',b'+d'\rangle$ and 
+$[\langle a+c,b+d\rangle]=[\langle a'+c',b'+d'\rangle]$.\\
+\indent Finally we show functionality. Let arbitrary $x\in\text{dom}(+)$. Then by definition there exists $y$ such that $\langle x,y\rangle\in+$. There then exists 
+$\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such that 
+$x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$ and $y=[\langle a+c,b+d\rangle]$. Let $y'$ be arbitrary such that 
+$\langle x,y'\rangle\in+$. Then similarly there exists $\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb N\times\mathbb N$ such that 
+$x=\langle[\langle a',b'\rangle],[\langle c',d'\rangle]\rangle$ and $y'=[\langle a'+c',b'+d'\rangle]$. 
+We know $\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle=\langle[\langle a',b'\rangle],[\langle c',d'\rangle]\rangle$. So since addition is well defined we have
+$y=[\langle a+c,b+d\rangle]=[\langle a'+c',b'+d'\rangle]=y'$.
 \end{proof}
+\noindent(next page)\newpage
+\begin{definition}
+
+\end{definition}
 
 
 
