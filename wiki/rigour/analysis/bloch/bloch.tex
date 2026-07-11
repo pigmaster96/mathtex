@@ -899,6 +899,7 @@ put simply, for all $[\langle a,b\rangle],[\langle c,d\rangle]\in\mathbb Z$,
 [\langle a,b\rangle]+[\langle c,d\rangle]=[\langle a+c,b+d\rangle]
 \end{equation*}
 \end{definition}
+\noindent(A bounding set is $(\mathbb Z\times\mathbb Z)\times\mathbb Z$. Uniqueness follows from extensionality.)
 \begin{proof}
 We start by showing the domain bound dom$(+)=\mathbb Z\times\mathbb Z$. First suppose $x\in\text{dom}(+)$. Then there exists $y$ such that $\langle x,y\rangle\in+$ and
 $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such
@@ -937,9 +938,97 @@ $y=[\langle a+c,b+d\rangle]=[\langle a'+c',b'+d'\rangle]=y'$.
 \end{proof}
 \noindent(next page)\newpage
 \begin{definition}
+The binary operation $\cdot$ on $\mathbb Z$ is defined as $\cdot:\mathbb Z\times\mathbb Z\to\mathbb Z$ where
+\begin{align*}
+\forall x(x\in\cdot\leftrightarrow\exists\langle a,b\rangle\in&\mathbb N\times\mathbb N
+\exists\langle c,d\rangle\in\mathbb N\times\mathbb N(\\&x=\langle\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle,[\langle ac+bd,ad+bc\rangle]\rangle))
+\end{align*}
+\end{definition}
+\noindent(A bounding set is $(\mathbb Z\times\mathbb Z)\times\mathbb Z$. Uniqueness follows from extensionality.)
+\begin{proof}
+We start with the domain bound dom$(\cdot)=\mathbb Z\times\mathbb Z$. First suppose $x\in\text{dom}(\cdot)$. Then there exists $y$ such that $\langle x,y\rangle\in\cdot$, and 
+$\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such that
+$x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\mathbb Z\times\mathbb Z$. Next suppose $x\in\mathbb Z\times\mathbb Z$. Then there exists $x_0,x_1\in\mathbb Z$ such that 
+$x=\langle x_0,x_1\rangle$. There exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such that $x_0=[\langle a,b\rangle]$ and $x_1=[\langle c,d\rangle]$.
+We have $\langle\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle,[\langle ac+bd,ad+bc\rangle]\rangle\in\cdot$.
+So $x=\langle x_0,x_1\rangle=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\text{dom}(\cdot)$.\\
+\indent Next the range bound ran$(\cdot)\subseteq\mathbb Z$. Let arbitary $y\in\text{ran}(\cdot)$. 
+Then there exists $x$ such that $\langle x,y\rangle\in\cdot$ and $a,b,c,d\in\mathbb N$ such that
+$y=[\langle ac+bd,ad+bc\rangle]\in\mathbb Z$.\\
+\indent Next we show well definedness. That is
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N&\forall\langle c,d\rangle\in\mathbb N\times\mathbb N\forall\langle a',b'\rangle\in\mathbb N\times\mathbb N
+\forall\langle c',d'\rangle\in\mathbb N\times\mathbb N(\\
+([\langle a,b\rangle]&=[\langle a',b'\rangle]\land[\langle c,d\rangle]=[\langle c',d'\rangle])\\&\to
+[\langle ac+bd,ad+bc\rangle]=[\langle a'c'+b'd',a'd'+b'c'\rangle])
+\end{align*}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb N\times\mathbb N$ and suppose  
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$.
+Then we have $\langle a,b\rangle\sim\langle a',b'\rangle$ and
+$a+b'=b+a'$. Similarly we have $c+d'=d+c'$. We want to show
+\begin{equation*}
+(ac+bd)+(a'd'+b'c')=(ad+bc)+(a'c'+b'd')
+\end{equation*}
+See that
+\begin{align*}
+&((a+b')d+(b+a')c)+((c+d')b'+(d+c')a')\\
+&=((ad+b'd)+(bc+a'c))+((cb'+d'b')+(da'+c'a'))\\
+&=((ad+bc)+(b'd+a'c))+((a'c'+b'd')+(da'+cb'))\\
+&=((ad+bc)+(a'c'+b'd'))+((b'd+a'c)+(da'+cb'))
+\end{align*}
+Also see that
+\begin{align*}
+&((a+b')d+(b+a')c)+((c+d')b'+(d+c')a')\\
+&=((b+a')d+(a+b')c)+((d+c')b'+(c+d')a')\\
+&=((bd+a'd)+(ac+b'c))+((db'+c'b')+(ca'+d'a'))\\
+&=((ac+bd)+(da'+cb'))+((a'd'+c'b')+(a'c+b'd))\\
+&=((ac+bd)+(a'd'+c'b'))+((b'd+a'c)+(da'+cb'))
+\end{align*}
+By cancellation we then have our desired result, which means
+\begin{equation*}
+\langle ac+bd,ad+bc\rangle\sim\langle a'c'+b'd',a'd'+b'c'\rangle
+\end{equation*}
+and $[\langle ac+bd,ad+bc\rangle]=[\langle a'c'+b'd',a'd'+b'c'\rangle]$.\\
+(next page)\newpage
+\indent Finally functionality. Let arbitrary $x\in\text{dom}(\cdot)$. Then there exists $y$ such that $\langle x,y\rangle\in\cdot$ and 
+$\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such that 
+$x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$ and $y=[\langle ac+bd,ad+bc\rangle]$.
+Let $y'$ be arbitrary such that $\langle x,y'\rangle\in\cdot$. Then similarly there exists
+$\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb N\times\mathbb N$ such that 
+$x=\langle[\langle a',b'\rangle],[\langle c',d'\rangle]\rangle$ and $y'=[\langle a'c'+b'd',a'd'+b'c'\rangle]$.
+We have $\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle=\langle[\langle a',b'\rangle],[\langle c',d'\rangle]\rangle$, by well definedness we then have
+$y=[\langle ac+bd,ad+bc\rangle]=[\langle a'c'+b'd',a'd'+b'c'\rangle]=y'$.
+\end{proof}
+\begin{definition}
+The unary operation $-$ on $\mathbb Z$ is defined as $-:\mathbb Z\to\mathbb Z$ where
+\begin{equation*}
+\forall x(x\in-\leftrightarrow\exists\langle a,b\rangle\in\mathbb N\times\mathbb N(x=\langle[\langle a,b\rangle],[\langle b,a\rangle]))
+\end{equation*}
+\end{definition}
+\noindent (A bounding set is $\mathbb Z\times\mathbb Z$. Uniqueness follows from extensionality.)
+\begin{proof}
+We start with the domain bound dom$(-)=\mathbb Z$. First let arbitrary $x\in\text{dom}(-)$. Then there exists $y$ such that $\langle x,y\rangle\in-$, and 
+$\langle a,b\rangle\in\mathbb N\times\mathbb N$ such that $x=[\langle a,b\rangle]\in\mathbb Z$.
+Next suppose $x\in\mathbb Z$. Then there exists $\langle a,b\rangle\in\mathbb N\times\mathbb N$ such that $x=[\langle a,b\rangle]$. 
+We have $\langle[\langle a,b\rangle],[\langle b,a\rangle]\rangle\in-$. So $x=[\langle a,b\rangle]\in\text{dom}(-)$.\\
+\indent Next the range bound ran$(-)\subseteq\mathbb Z$. Suppose $y\in\text{ran}(-)$. Then there exists $x$ such that $\langle x,y\rangle\in-$ and $a,b\in\mathbb N$ such that $y=[\langle b,a\rangle]\in\mathbb Z$.\\
+\indent Next we show well-defineness. That is
+\begin{equation*}
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N\forall\langle a',b'\rangle\in\mathbb N\times\mathbb N([\langle a,b\rangle]=[\langle a',b'\rangle]\to
+[\langle b,a\rangle]=[\langle b',a'\rangle])
+\end{equation*}
+Letting arbitrary $\langle a,b\rangle,\langle a',b'\rangle\in\mathbb N\times\mathbb N$ and supposing that $[\langle a,b\rangle]=[\langle a',b'\rangle]$,
+we have $a+b'=b+a'$. See that this also means $\langle b,a\rangle\sim\langle b',a'\rangle$ and therefore $[\langle b,a\rangle]=[\langle b',a'\rangle]$.\\
+\indent Finally functionality. Let arbitary $x\in\text{dom}(-)$. Then there exists $y$ such that $\langle x,y\rangle\in-$, and $\langle a,b\rangle\in\mathbb N\times\mathbb N$ such that
+$x=[\langle a,b\rangle]$ and $y=[\langle b,a\rangle]$.
+Let $y'$ be arbitrary such that $\langle x,y'\rangle\in-$. Then there exists 
+$\langle a',b'\rangle\in\mathbb N\times\mathbb N$ such that
+$x=[\langle a',b'\rangle]$ and $y'=[\langle b',a'\rangle]$. We have $[\langle a,b\rangle]=[\langle a',b'\rangle]$; by well-definedness we have $y=[\langle b,a\rangle]=[\langle b',a'\rangle]=y'$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{definition}
 
 \end{definition}
-
 
 
 
