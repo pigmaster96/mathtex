@@ -1025,11 +1025,22 @@ Let $y'$ be arbitrary such that $\langle x,y'\rangle\in-$. Then there exists
 $\langle a',b'\rangle\in\mathbb N\times\mathbb N$ such that
 $x=[\langle a',b'\rangle]$ and $y'=[\langle b',a'\rangle]$. We have $[\langle a,b\rangle]=[\langle a',b'\rangle]$; by well-definedness we have $y=[\langle b,a\rangle]=[\langle b',a'\rangle]=y'$.
 \end{proof}
-\noindent(next page)\newpage
+\newpage
+
+\subsection{Ordering}
 \begin{definition}
-
+The binary relaion $<$ on $\mathbb Z$ is defined such that
+\begin{equation*}
+\forall x(x\in<\leftrightarrow\exists\langle a,b\rangle\in\mathbb N\times\mathbb N\exists\langle c,d\rangle\in\mathbb N\times\mathbb N(x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\land 
+a+d<b+c))
+\end{equation*}
 \end{definition}
+\noindent($\mathbb Z\times\mathbb Z$ is a bounding set. Uniqueness follows from extensionality.)
+\begin{proof}
+We start by showing $<$ is a relation on $\mathbb Z$.
 
+
+\end{proof}
 
 
 

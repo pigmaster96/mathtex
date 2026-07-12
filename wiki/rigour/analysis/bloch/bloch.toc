@@ -10,3 +10,4 @@
 \contentsline {section}{\numberline {1.2}Construction of the integers}{23}{}%
 \contentsline {subsection}{\numberline {1.2.1}Construction}{23}{}%
 \contentsline {subsection}{\numberline {1.2.2}Operations on the integers}{24}{}%
+\contentsline {subsection}{\numberline {1.2.3}Ordering}{27}{}%
