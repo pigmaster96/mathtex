@@ -1038,7 +1038,8 @@ a+d<b+c))
 \noindent($\mathbb Z\times\mathbb Z$ is a bounding set. Uniqueness follows from extensionality.)
 \begin{lemma}
 \begin{align*}
-\forall\langle a,b\rangle\forall\langle c,d\rangle\forall\langle a',b'\rangle\forall\langle c',d'\rangle((&[\langle a,b\rangle]=[\langle a',b'\rangle]\land[\langle c,d\rangle]=
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N&\forall\langle c,d\rangle\in\mathbb N\times\mathbb N\forall\langle a',b'\rangle\in\mathbb N\times\mathbb N
+\forall\langle c',d'\rangle\in\mathbb N\times\mathbb N(\\(&[\langle a,b\rangle]=[\langle a',b'\rangle]\land[\langle c,d\rangle]=
 [\langle c',d'\rangle])\\
 &\to a+d<b+c\leftrightarrow a'+d'<b'+c')
 \end{align*}
@@ -1056,8 +1057,7 @@ Rearranging the left side:
 &=((a+d)+x)+((b+c)+(a'+d'))\\
 &=(a+d)+(x+((b+c)+(a'+d')))\\
 &=(a+d)+((b+c)+(x+(a'+d')))\\
-&=((a+d)+(b+c))+((a'+d')+x)
-\end{align*}
+&=((a+d)+(b+c))+((a'+d')+x) \end{align*}
 and the right side:
 \begin{align*}
 &((b+c)+(a+b'))+(d+c')\\
