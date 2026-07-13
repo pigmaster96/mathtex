@@ -1036,7 +1036,59 @@ a+d<b+c))
 \end{equation*}
 \end{definition}
 \noindent($\mathbb Z\times\mathbb Z$ is a bounding set. Uniqueness follows from extensionality.)
+\begin{lemma}
+\begin{align*}
+\forall\langle a,b\rangle\forall\langle c,d\rangle\forall\langle a',b'\rangle\forall\langle c',d'\rangle((&[\langle a,b\rangle]=[\langle a',b'\rangle]\land[\langle c,d\rangle]=
+[\langle c',d'\rangle])\\
+&\to a+d<b+c\leftrightarrow a'+d'<b'+c')
+\end{align*}
+\end{lemma}
 \begin{proof}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb N\times\mathbb N$. Suppose that 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$, which then means $a+b'=b+a'$ and $c+d'=d+c'$. 
+First suppose $a+d<b+c$. Then there exists $x$ such that $(a+d)+x=b+c$, and we have
+\begin{equation*}
+(((a+d)+x)+(b+a'))+(c+d')=((b+c)+(a+b'))+(d+c')
+\end{equation*}
+Rearranging the left side:
+\begin{align*}
+&(((a+d)+x)+(b+a'))+(c+d')\\
+&=((a+d)+x)+((b+c)+(a'+d'))\\
+&=(a+d)+(x+((b+c)+(a'+d')))\\
+&=(a+d)+((b+c)+(x+(a'+d')))\\
+&=((a+d)+(b+c))+((a'+d')+x)
+\end{align*}
+and the right side:
+\begin{align*}
+&((b+c)+(a+b'))+(d+c')\\
+&=(b+c)+((a+b')+(d+c'))\\
+&=(b+c)+((a+d)+(b'+c'))\\
+&=((a+d)+(b+c))+(b'+c')
+\end{align*}
+By cancellation we have $(a'+d')+x=b'+c'$ and $a'+d'<b'+c'$.\\
+(next page)\newpage
+Next suppose $a'+d'<b'+c'$. Then there exists $x$ such that $a'+d'+x=b'+c'$. We have
+\begin{equation*}
+(((a'+d')+x)+(a+b'))+(d+c')=((b'+c')+(b+a'))+(c+d')
+\end{equation*}
+Rearranging the left side:
+\begin{align*}
+&(((a'+d')+x)+(a+b'))+(d+c')\\
+&=((a'+d')+x)+((a+b')+(d+c'))\\
+&=((a'+d')+x)+((b'+c')+(a+d))\\
+&=(a'+d')+(x+((b'+c')+(a+d)))\\
+&=((a'+d')+(b'+c'))+((a+d)+x)
+\end{align*}
+and the right hand side:
+\begin{align*}
+&((b'+c')+(b+a'))+(c+d')\\
+&=(b'+c')+((b+a')+(c+d'))\\
+&=(b'+c')+((a'+d')+(b+c))\\
+&=((a'+d')+(b'+c'))+(b+c)
+\end{align*}
+So by cancellation $(a+d)+x=b+c$ and $a+d<b+c$.
+\end{proof}
+\begin{proof}(range/domain bound and well-definedness)
 We start by showing $<$ is a relation on $\mathbb Z$.
 
 
