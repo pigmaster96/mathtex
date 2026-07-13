@@ -1036,7 +1036,7 @@ a+d<b+c))
 \end{equation*}
 \end{definition}
 \noindent($\mathbb Z\times\mathbb Z$ is a bounding set. Uniqueness follows from extensionality.)
-\begin{lemma}
+\begin{lemma}\label{Z_order_1}
 \begin{align*}
 \forall\langle a,b\rangle\in\mathbb N\times\mathbb N&\forall\langle c,d\rangle\in\mathbb N\times\mathbb N\forall\langle a',b'\rangle\in\mathbb N\times\mathbb N
 \forall\langle c',d'\rangle\in\mathbb N\times\mathbb N(\\(&[\langle a,b\rangle]=[\langle a',b'\rangle]\land[\langle c,d\rangle]=
@@ -1088,12 +1088,39 @@ and the right hand side:
 \end{align*}
 So by cancellation $(a+d)+x=b+c$ and $a+d<b+c$.
 \end{proof}
-\begin{proof}(range/domain bound and well-definedness)
-We start by showing $<$ is a relation on $\mathbb Z$.
-
-
+\begin{lemma}\label{Z_order_2}
+\begin{equation*}
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N\forall\langle c,d\rangle\in\mathbb N\times\mathbb N([\langle a,b\rangle]<[\langle c,d\rangle]\leftrightarrow a+d<b+c)
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$. First suppose $[\langle a,b\rangle]<[\langle c,d\rangle]$. Then by definition
+there exists $\langle a_0,b_0\rangle,\langle c_0,d_0\rangle\in\mathbb N\times\mathbb N$ such that 
+$[\langle a,b\rangle]=[\langle a_0,b_0\rangle]$, $[\langle c,d\rangle]=[\langle c_0,d_0\rangle]$ and $a_0+d_0<b_0+c_0$. It then immediately follows by lemma \ref{Z_order_1} that 
+$a+d<b+c$.\\
+\indent The reverse direction is straightforward. Suppose $a+d<b+c$ and it immediately follows by definition
+that $[\langle a,b\rangle]<[\langle c,d\rangle]$.
 \end{proof}
+\begin{proof}(range/domain bound and well-definedness)
+We start by showing $<$ is a relation on $\mathbb Z$, $<\subseteq\mathbb Z\times\mathbb Z$.
+Let arbitary $x\in<$. Then by definition there exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such that 
+$x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\mathbb Z\times\mathbb Z$.\\
+\indent Next well-definedness. That is,
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N&\forall\langle c,d\rangle\in\mathbb N\times\mathbb N\forall\langle a',b'\rangle\in\mathbb N\times\mathbb N
+\forall\langle c',d'\rangle\in\mathbb N\times\mathbb N(\\(&[\langle a,b\rangle]=[\langle a',b'\rangle]\land[\langle c,d\rangle]=
+[\langle c',d'\rangle])\\
+&\to([\langle a,b\rangle]<[\langle c,d\rangle]\leftrightarrow[\langle a',b'\rangle]<[\langle c',d'\rangle]))
+\end{align*}
+Letting arbitary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb N\times\mathbb N$. Suppose that 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$, which then means $a+b'=b+a'$ and $c+d'=d+c'$. Suppose first that 
+$[\langle a,b\rangle]<[\langle c,d\rangle]$, which by lemma \ref{Z_order_2} means $a+d<b+c$. It follows by lemma \ref{Z_order_1} that $a'+d'<b'+c'$ and by lemma \ref{Z_order_2} that
+$[\langle a',b'\rangle]<[\langle c',d'\rangle]$. An identical strategy proves the reverse direction.
+\end{proof}
+\noindent(next page)\newpage
+\begin{definition}
 
+\end{definition}
 
 
 
