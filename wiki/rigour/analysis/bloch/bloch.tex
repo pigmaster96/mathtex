@@ -1126,14 +1126,68 @@ The binary relation $\leq$ on $\mathbb Z$ is defined such that
 \end{align*}
 \end{definition}
 \noindent($\mathbb Z\times\mathbb Z$ is a bounding set. Uniqueness follows from extensionality.)
-\begin{lemma}
-\begin{equation*}
-
-\end{equation*}
+\begin{lemma}\label{Z_order_3}
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N\forall\langle c,d\rangle\in\mathbb N\times\mathbb N(&[\langle a,b\rangle]\leq[\langle c,d\rangle]\\&\leftrightarrow
+([\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle]))
+\end{align*}
 \end{lemma}
+\begin{proof}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$. First suppose 
+$[\langle a,b\rangle]\leq[\langle c,d\rangle]$. Then by definition there exists
+$\langle a_0,b_0\rangle,\langle c_0,d_0\rangle\in\mathbb N\times\mathbb N$ such that 
+$[\langle a,b\rangle]=[\langle a_0,b_0\rangle]$, $[\langle c,d\rangle]=[\langle c_0,d_0\rangle]$,
+and $[\langle a_0,b_0\rangle]<[\langle c_0,d_0\rangle]$ or $[\langle a_0,b_0\rangle]=[\langle c_0,d_0\rangle]$. In the first case suppose $[\langle a_0,b_0\rangle]<[\langle c_0,d_0\rangle]$. It 
+then follows from the well-definedness of $<$ that $[\langle a,b\rangle]<[\langle c,d\rangle]$. In the other case suppose 
+$[\langle a_0,b_0\rangle]=[\langle c_0,d_0\rangle]$. It immediately follows that $[\langle a,b\rangle]=[\langle a_0,b_0\rangle]=[\langle c_0,d_0\rangle]=[\langle c,d\rangle]$.\\
+\indent Now suppose $[\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle]$. It immediately follows by definition that $[\langle a,b\rangle]\leq[\langle c,d\rangle]$.
+\end{proof}
+\begin{proof}(domain/range bound and well-definedness)
+First we show $\leq\subseteq\mathbb Z\times\mathbb Z$. Let arbitrary $x\in\leq$.
+Then there exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb N\times\mathbb N$ such that
+$x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\mathbb Z\times\mathbb Z$.\\
+\indent Next well-definedness. That is
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb N\times\mathbb N&\forall\langle c,d\rangle\in\mathbb N\times\mathbb N\forall\langle a',b'\rangle\in\mathbb N\times\mathbb N
+\forall\langle c',d'\rangle\in\mathbb N\times\mathbb N(\\(&[\langle a,b\rangle]=[\langle a',b'\rangle]\land[\langle c,d\rangle]=
+[\langle c',d'\rangle])\\
+&\to([\langle a,b\rangle]\leq[\langle c,d\rangle]\leftrightarrow[\langle a',b'\rangle]\leq[\langle c',d'\rangle]))
+\end{align*}
+Letting arbitary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb N\times\mathbb N$. Suppose that 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. 
+First suppose $[\langle a,b\rangle]\leq[\langle c,d\rangle]$. It follows by lemma \ref{Z_order_3}
+that $[\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle]$.
+In the first case where $[\langle a,b\rangle]<[\langle c,d\rangle]$ it follows from
+the well-definedness of $<$ that $[\langle a',b'\rangle]<[\langle c',d'\rangle]$ and again by lemma \ref{Z_order_3} that $[\langle a',b'\rangle]\leq[\langle c',d'\rangle]$. For the other case where
+$[\langle a,b\rangle]=[\langle c,d\rangle]$ we immediately have $[\langle a',b'\rangle]=[\langle a,b\rangle]=[\langle c,d\rangle]=[\langle c',d'\rangle]$ and by lemma \ref{Z_order_3} 
+$[\langle a',b'\rangle]\leq[\langle c',d'\rangle]$. The reverse implication follows by the same argument.
+\end{proof}
+\newpage
+
+\subsection{Properties}
+\begin{theorem}\label{integer_arithmetic_1}
+Let $x,y,z\in\mathbb Z$.
+\begin{enumerate}
+\item$(x+y)+z=x+(y+z)$\quad(Associative Law for Addition)
+\item$x+y=y+x$\quad(Commutative Law for Addition)
+\item$x+\hat0=x$\quad(Identity Law for Addition)
+\item$x+(-x)=\hat0$\quad(Inverses Law for Addition)
+\item$(xy)z=x(yz)$\quad(Associative Law for Multiplication)
+\item$xy=yx$\quad(Commutative Law for Multiplication)
+\item$x\cdot\hat1=x$\quad(Identity Law for Multiplication)
+\item$x(y+z)=xy+xz$\quad(Distributive Law)
+\item If $xy=\hat0$, then $x=\hat0$ or $y=\hat0$\quad(No Zero Divisors Law)
+\item Precisely one of $x<y$ or $x=y$ or $x>y$ holds\quad(Trichotomy Law)
+\item If $x<y$ and $y<z$, then $x<z$\quad(Transitive Law)
+\item If $x<y$ then $x+z<y+z$\quad(Addition Law for Order)
+\item If $x<y$ and $z>\hat0$, the $xz<yz$\quad(Multiplication Law for Order)
+\item $\hat0\neq\hat1$\quad(Non-Triviality)
+\end{enumerate}
+\end{theorem}
+\begin{proof}(1)
 
 
-
+\end{proof}
 
 
 
