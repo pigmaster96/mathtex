@@ -1029,7 +1029,7 @@ $x=[\langle a',b'\rangle]$ and $y'=[\langle b',a'\rangle]$. We have $[\langle a,
 
 \subsection{Ordering}
 \begin{definition}
-The binary relaion $<$ on $\mathbb Z$ is defined such that
+The binary relation $<$ on $\mathbb Z$ is defined such that
 \begin{equation*}
 \forall x(x\in<\leftrightarrow\exists\langle a,b\rangle\in\mathbb N\times\mathbb N\exists\langle c,d\rangle\in\mathbb N\times\mathbb N(x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\land 
 a+d<b+c))
@@ -1119,8 +1119,21 @@ $[\langle a',b'\rangle]<[\langle c',d'\rangle]$. An identical strategy proves th
 \end{proof}
 \noindent(next page)\newpage
 \begin{definition}
-
+The binary relation $\leq$ on $\mathbb Z$ is defined such that
+\begin{align*}
+\forall x(x\in\leq\leftrightarrow\exists\langle a,b\rangle\in\mathbb N\times\mathbb N\exists\langle c,d\rangle\in&\mathbb N\times\mathbb N(x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\\
+&\land([\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle])))
+\end{align*}
 \end{definition}
+\noindent($\mathbb Z\times\mathbb Z$ is a bounding set. Uniqueness follows from extensionality.)
+\begin{lemma}
+\begin{equation*}
+
+\end{equation*}
+\end{lemma}
+
+
+
 
 
 
