@@ -1185,10 +1185,40 @@ Let $x,y,z\in\mathbb Z$.
 \end{enumerate}
 \end{theorem}
 \begin{proof}(1)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z((x+y)+z=x+(y+z))
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Z$. Then there exists $a,b,c,d,e,f\in\mathbb N$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$.
+We have
+\begin{align*}
+(x+y)+z&=([\langle a,b\rangle]+[\langle c,d\rangle])+[\langle e,f\rangle]\\
+&=[\langle a+c,b+d\rangle]+[\langle e,f\rangle]\\
+&=[\langle (a+c)+e,(b+d)+f\rangle]\\
+&=[\langle a+(c+e),b+(d+f)\rangle]\\
+&=[\langle a,b\rangle]+[\langle c+e,d+f\rangle]\\
+&=[\langle a,b\rangle]+([\langle c,d\rangle]+[\langle e,f\rangle])\\
+&=x+(y+z)
+\end{align*}
+Where the fourth equality follows from associativity of $\mathbb N$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(2)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(x+y=y+x)
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. Then there exists $a,b,c,d\in\mathbb N$ such that $x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$. It follows that 
+\begin{align*}
+x+y=[\langle a,b\rangle]+[\langle c,d\rangle]&=[\langle a+c,b+d\rangle]\\
+&=[\langle c+a,d+b\rangle]=[\langle c,d\rangle]+[\langle a,b\rangle]=y+x\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(3)
 
 
 \end{proof}
-
 
 
 
