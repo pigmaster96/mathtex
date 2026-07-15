@@ -1216,7 +1216,48 @@ x+y=[\langle a,b\rangle]+[\langle c,d\rangle]&=[\langle a+c,b+d\rangle]\\
 \end{align*}
 \end{proof}
 \begin{proof}(3)
-
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z(x+\hat0=x)
+\end{equation*}
+Let arbitrary $x\in\mathbb Z$. Then there exists $a,b\in\mathbb N$ such that $x=[\langle a,b\rangle]$. We have $a+(b+1)=b+(a+1)$ and therefore $\langle a,b\rangle\sim\langle a+1,b+1\rangle$.
+So
+\begin{equation*}
+x=[\langle a,b\rangle]=[\langle a+1,b+1\rangle]=[\langle a,b\rangle]+[\langle 1,1\rangle]=x+\hat0\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(4)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z(x+(-x)=\hat0)
+\end{equation*}
+Let arbitrary $x\in\mathbb Z$. Then there exists $a,b\in\mathbb N$ such that $x=[\langle a,b\rangle]$. Then by definition $-x=[\langle b,a\rangle]$.
+We have $x+(-x)=[\langle a,b\rangle]+[\langle b,a\rangle]=[\langle a+b,b+a\rangle]$.
+We also know $(a+b)+1=(b+a)+1$, meaning $\langle a+b,b+a\rangle\sim\langle 1,1\rangle$. Putting it all together we have
+\begin{equation*}
+x+(-x)=[\langle a+b,b+a\rangle]=[\langle 1,1\rangle]=\hat0\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(5)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z((xy)z=x(yz))
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Z$. Then there exists $a,b,c,d,e,f\in\mathbb N$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. We have
+\begin{align*}
+(xy)z&=[\langle ac+bd,ad+bc\rangle]\cdot[\langle e,f\rangle]\\
+&=[\langle (ac+bd)e+(ad+bc)f,(ac+bd)f+(ad+bc)e\rangle]\\
+&=[\langle ((ac)e+(bd)e)+((ad)f+(bc)f),((ac)f+(bd)f)+((ad)e+(bc)e)\rangle]\\
+&=[\langle (a(ce)+a(df))+(b(de)+b(cf)),(a(cf)+a(de))+(b(ce)+b(df))\rangle]\\
+&=[\langle a(ce+df)+b(cf+de),a(cf+de)+b(ce+df)\rangle]\\
+&=[\langle a,b\rangle]\cdot[\langle ce+df,cf+de\rangle]\\
+&=[\langle a,b\rangle]\cdot([\langle c,d\rangle]\cdot[\langle e,f\rangle])\\
+&=x(yz)\qedhere
+\end{align*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(6)
 
 \end{proof}
 
