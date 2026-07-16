@@ -1258,8 +1258,56 @@ $x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(6)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(xy=yx)
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. Then there exists $a,b,c,d\in\mathbb N$ such that $x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$. It follows that 
+\begin{equation*}
+xy=[\langle ac+bd,ad+bc\rangle]=[\langle ca+db,cb+da\rangle]=[\langle c,d\rangle]\cdot[\langle a,b\rangle]=yx\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(7)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z(x\cdot\hat1=x)
+\end{equation*}
+Let arbitrary $x\in\mathbb Z$. Then there exists $a,b\in\mathbb N$ such that $x=[\langle a,b\rangle]$. We have
+\begin{align*}
+x\cdot\hat1=[\langle a,b\rangle]\cdot[\langle 1+1,1\rangle]&=[\langle a(1+1)+b\cdot1,a\cdot1+b(1+1)\rangle]\\
+&=[\langle(a+a)+b,a+(b+b)\rangle]
+\end{align*}
+We also have $a+(a+(b+b))=b+((a+a)+b)$, meaning $\langle a,b\rangle\sim\langle (a+a)+b,a+(b+b)\rangle$. Combining these two facts we have
+\begin{equation*}
+x\cdot\hat1=[\langle(a+a)+b,a+(b+b)\rangle]=[\langle a,b\rangle]=x\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(8)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(x(y+z)=xy+xz)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Z$. Then there exists $a,b,c,d,e,f\in\mathbb N$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$.
+We have
+\begin{align*}
+x(y+z)&=[\langle a,b\rangle]\cdot[\langle c+e,d+f\rangle]\\
+&=[\langle a(c+e)+b(d+f),a(d+f)+b(c+e)\rangle]\\
+&=[\langle (ac+bd)+(ae+bf),(ad+bc)+(af+be)\rangle]\\
+&=[\langle ac+bd,ad+bc\rangle]+[\langle ae+bf,af+be\rangle]\\
+&=[\langle a,b\rangle]\cdot[\langle c,d\rangle]+[\langle a,b\rangle]\cdot[\langle e,f\rangle]\\
+&=xy+xz\qedhere
+\end{align*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(9)
+
+
 
 \end{proof}
+
+
+
 
 
 
