@@ -1300,7 +1300,38 @@ x(y+z)&=[\langle a,b\rangle]\cdot[\langle c+e,d+f\rangle]\\
 \end{align*}
 \end{proof}
 \noindent(next page)\newpage
+\begin{lemma}
+$\forall a\in\mathbb N\forall b\in\mathbb N([\langle a,b\rangle]=\hat0\leftrightarrow a=b)$
+\end{lemma}
+\begin{proof}
+Let arbitary $a,b\in\mathbb N$. First suppose that $[\langle a,b\rangle]=\hat0=[\langle 1,1\rangle]$. Then $a+1=b+1$ and by cancellation $a=b$. Next suppose 
+$a=b$. Then $a+1=b+1$ and $\langle a,b\rangle\sim\langle 1,1\rangle$. We then have
+$[\langle a,b\rangle]=[\langle 1,1\rangle]=\hat0$.
+\end{proof}
 \begin{proof}(9)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(xy=\hat0\to(x=\hat0\lor y=\hat0))
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$ and suppose that $xy=\hat0$. The statement after the implication is logically equivalent to $x\neq\hat0\to y=\hat0$.
+Suppose $x\neq\hat0$. There exists $a,b,c,d\in\mathbb N$ such that $x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$. We then have $xy=[\langle ac+bd,ad+bc\rangle]=\hat0$; 
+by the previous lemma $ac+bd=ad+bc$. That lemma also implies $a\neq b$; so by trichotomy of the natural numbers we have $a<b$ or $b<a$.\\
+\indent In the first case suppose $a<b$. Then there exists $g\in\mathbb N$ such that $a+g=b$. We then have
+\begin{equation*}
+(ac+ad)+gd=ac+(a+g)d=ad+(a+g)c=(ac+ad)+gc
+\end{equation*}
+Cancellation of addition on the naturals allows us to conclude that $gd=gc$. Cancellation of multiplication allows us to conclude $c=d$. By the previous lemma this implies 
+$y=[\langle c,d\rangle]=\hat0$.\\
+\indent In the other case suppose $b<a$. Then there exists $g\in\mathbb N$ such that $b+g=a$.
+We then have
+\begin{equation*}
+(bc+bd)+gc=(b+g)c+bd=(b+g)d+bc=(bc+bd)+gd
+\end{equation*}
+Similarly again we conclude $gc=gd$ and $c=d$, which then implies $y=[\langle c,d\rangle]=\hat0$.
+\end{proof}
+\begin{proof}(10)
+We want to show
+
 
 
 
