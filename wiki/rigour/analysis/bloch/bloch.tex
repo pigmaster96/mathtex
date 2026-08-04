@@ -1331,6 +1331,13 @@ Similarly again we conclude $gc=gd$ and $c=d$, which then implies $y=[\langle c,
 \end{proof}
 \begin{proof}(10)
 We want to show
+\begin{align*}
+\forall x\in\mathbb Z&\forall y\in\mathbb Z((x<y\lor x=y\lor y<x)\land\\
+&\neg(x<y\land x=y)\land\neg(x<y\land y<x)\land\neg(x=y\land y<x))
+\end{align*}
+Let arbitrary $x,y\in\mathbb Z$. Then there exists $a,b,c,d\in\mathbb N$ such that $x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$.
+We start with the latter three statements. First suppose $x<y$ and $x=y$.
+By lemma \ref{Z_order_2} $a+d<b+c$ and by definition $a+d=b+c$; this contradicts trichotomy for the naturals.
 
 
 
