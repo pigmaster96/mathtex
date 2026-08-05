@@ -1329,6 +1329,7 @@ We then have
 \end{equation*}
 Similarly again we conclude $gc=gd$ and $c=d$, which then implies $y=[\langle c,d\rangle]=\hat0$.
 \end{proof}
+\noindent(next page)\newpage
 \begin{proof}(10)
 We want to show
 \begin{align*}
@@ -1351,7 +1352,6 @@ which by lemma \ref{Z_order_2} means
 \end{equation*}
 which is equivalent to our desired result.
 \end{proof}
-\newpage
 \begin{proof}(11) We want to show
 \begin{equation*}
 \forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(x<y\land y<z\to x<z)
@@ -1382,9 +1382,70 @@ which by cancellation means
 \end{equation*}
 and $a+f<b+e$. By lemma \ref{Z_order_2} this means $[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.
 \end{proof}
+\noindent(next page)\newpage
 \begin{proof}(12)
-
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(x<y\to x+z<y+z)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Z$. By definition there exists $a,b,c,d,e,f\in\mathbb N$ such that 
+$x=[\langle a,b\rangle], y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. Suppose $x<y$. By lemma \ref{Z_order_2} we then have
+$a+d<b+c$. By theorem \ref{natural ordering} part 4 and  commutativity and associativity of the naturals, we can assert
+\begin{equation*}
+(a+e)+(d+f)=(a+d)+(e+f)<(b+c)+(e+f)=(b+f)+(c+e)
+\end{equation*}
+which by lemma \ref{Z_order_2} and the definition of addition, implies
+\begin{equation*}
+[\langle a,b\rangle]+[\langle e,f\rangle]=[\langle a+e,b+f\rangle]<[\langle c+e,d+f\rangle]=[\langle c,d\rangle]+[\langle e,f\rangle]
+\end{equation*}
+which is equivalent to our desired result.
 \end{proof}
+\begin{proof}(13) 
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(x<y\land z>\hat0\to xz<yz)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Z$. By definition there exists $a,b,c,d,e,f\in\mathbb N$ such that 
+$x=[\langle a,b\rangle], y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$.
+Suppose that $x<y$ and $z>\hat0$. By lemma \ref{Z_order_2} we have $a+d<b+c$ and $1+f<1+e$. By theorem \ref{natural ordering} part 4 we have
+$f<e$, so there exists $k\in\mathbb N$ such that $f+k=e$. By theorem \ref{natural ordering} part 6 we have $k(a+d)<k(b+c)$. Part 4 of the
+same theorem allows us to then assert
+\begin{equation*}
+k(a+d)+((a+d)f+(b+c)f)<k(b+c)+((a+d)f+(b+c)f)
+\end{equation*}
+The right hand side is equivalent to
+\begin{align*}
+&k(a+d)+((a+d)f+(b+c)f)\\
+&=(ka+kd)+((af+df)+(bf+cf))\\
+&=((ka+kd)+(af+df))+(bf+cf)\\
+&=(a(k+f)+d(k+f))+(bf+cf)\\
+&=(ae+de)+(bf+cf)\\
+&=(ae+bf)+(cf+de)
+\end{align*}
+Similarly the left hand side is equivalent to
+\begin{align*}
+&k(b+c)+((a+d)f+(b+c)f)\\
+&=(kb+kc)+((af+df)+(bf+cf))\\
+&=(b(k+f)+c(k+f))+(af+df)\\
+&=(be+ce)+(af+df)\\
+&=(af+be)+(ce+df)
+\end{align*}
+(next page)\newpage
+We can then conclude that $(ae+bf)+(cf+de)<(af+be)+(ce+df)$. By lemma \ref{Z_order_2} and the definition of multiplication on the integers 
+we then have
+\begin{equation*}
+[\langle a,b\rangle]\cdot[\langle e,f\rangle]=[\langle ae+bf,af+be\rangle]<[\langle ce+df,cf+de\rangle]=[\langle c,d\rangle]\cdot
+[\langle e,f\rangle]
+\end{equation*}
+Which is equivalent to our desired conclusion.
+\end{proof}
+\begin{proof}(14)
+We want to show $\hat0\neq\hat1$. Suppose for contradiction that they are equal, meaning $[\langle 1,1\rangle]=[\langle 1+1,1\rangle]$. 
+By definition we then have $1+1=1+(1+1)$, which by cancellation implies $1=1+1$, contradicting part 5 of theorem \ref{natural arithmetic}.
+\end{proof}
+\newpage
+
+\subsection{}
 
 
 
