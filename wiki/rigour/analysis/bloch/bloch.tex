@@ -1445,8 +1445,50 @@ By definition we then have $1+1=1+(1+1)$, which by cancellation implies $1=1+1$,
 \end{proof}
 \newpage
 
-\subsection{}
+\subsection{Joining the naturals and the integers}
+\begin{definition}
+Let $x\in\mathbb Z$. $x$ is \textbf{positive} if $x>\hat0$. $x$ is \textbf{negative} if $x<\hat0$.
+\end{definition}
+\begin{theorem}
+Let $i:\mathbb N\to\mathbb Z$ be defined by $i(n)=[\langle n+1,1\rangle]$ for all $n\in\mathbb N$.
+\begin{enumerate}
+\item The function $i:\mathbb N\to\mathbb Z$ is injective.
+\item $i(\mathbb N)=\{x\in\mathbb Z\mid x>\hat0\}$
+\item $i(1)=\hat1$
+\item Let $a,b\in\mathbb N$. Then
+\begin{enumerate}
+\item $i(a+b)=i(a)+i(b)$
+\item $i(ab)=i(a)i(b)$
+\item $a<b$ if and only if $i(a)<i(b)$
+\end{enumerate}
+\end{enumerate}
+\end{theorem}
+\begin{proof}(1) Defining $i$ as the set such that
+\begin{equation*}
+\forall x(x\in i\leftrightarrow\exists a\in\mathbb N\exists b(x=\langle a,b\rangle\land b=[\langle a+1,1\rangle]))
+\end{equation*}
+Existence of such a set can be shown using the subset axiom, with $\mathbb N\times\mathbb Z$ as a bounding set. We start by showing functionality.
+Let arbitrary $a\in\text{dom}(i)$. By definition there exists $b$ such that $\langle a,b\rangle\in i$; as defined this implies $a\in\mathbb N$ and 
+$b=[\langle a+1,1\rangle]$.
+Let $b'$ be arbitrary such that $\langle a,b'\rangle\in i$. Again by definition we immediately have $b'=[\langle a+1,1\rangle]=b$.\\
+\indent Next the domain bound $\text{dom}(i)=\mathbb N$. Let $a$ be arbitrary and suppose that $a\in\text{dom}(i)$. By definition there then exists
+$b$ such that $\langle a,b\rangle\in i$ and it immediately follows that $a\in\mathbb N$. Now suppose $a\in\mathbb N$.
+By definition $[\langle a+1,1\rangle]\in\mathbb Z$ and $\langle a,[\langle a+1,1\rangle]\rangle\in i$. So $a\in\text{dom}(i)$.\\
+\indent Next the range bound $\text{ran}(i)\subseteq\mathbb Z$. Let arbitrary $b\in\text{ran}(i)$. Then by definition there exists $a$ such that 
+$\langle a,b\rangle\in i$. It immediately follows that $a\in\mathbb N$ and $b=[\langle a+1,1\rangle]\in\mathbb Z$.\\
+\indent Finally we show injectivity. Let arbitrary $b\in\text{ran}(i)$. By definition there exists $a$ such that $\langle a,b\rangle\in i$; it 
+also follows that $a\in\mathbb N$ and $b=[\langle a+1,1\rangle]$.
+Let $a'$ be arbitrary and suppose $\langle a',b\rangle\in i$; similarly we have $a'\in\mathbb N$ and $b=[\langle a'+1,1\rangle]$.
+So $[\langle a+1,1\rangle]=[\langle a'+1,1\rangle]$, which implies
+$\langle a+1,1\rangle\sim\langle a'+1,1\rangle$ and 
+$(a+1)+1=1+(a'+1)$. By commutativity and cancellation we then have $a=a'$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(2)
 
+
+
+\end{proof}
 
 
 
