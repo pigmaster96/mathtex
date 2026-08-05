@@ -1337,14 +1337,54 @@ We want to show
 \end{align*}
 Let arbitrary $x,y\in\mathbb Z$. Then there exists $a,b,c,d\in\mathbb N$ such that $x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$.
 We start with the latter three statements. First suppose $x<y$ and $x=y$.
-By lemma \ref{Z_order_2} $a+d<b+c$ and by definition $a+d=b+c$; this contradicts trichotomy for the naturals.
-
-
-
+By lemma \ref{Z_order_2} $a+d<b+c$ and by definition $a+d=b+c$; this contradicts trichotomy for the naturals. Next suppose $x<y$ and $y<x$. Again
+this then implies $a+d<b+c$ and $b+c<a+d$ which contradicts trichotomy.
+Supposing $x=y$ and $y<x$ also contradicts trichotomy in a similar manner.\\
+\indent Finally the former statement. We know that $a+d,b+c\in\mathbb N$.
+By trichotomy we must have
+\begin{equation*}
+a+d<b+c\lor a+d=b+c\lor b+c<a+d
+\end{equation*}
+which by lemma \ref{Z_order_2} means
+\begin{equation*}
+[\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle]\lor[\langle c,d\rangle]<[\langle a,b\rangle]
+\end{equation*}
+which is equivalent to our desired result.
+\end{proof}
+\newpage
+\begin{proof}(11) We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(x<y\land y<z\to x<z)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Z$. Suppose $x<y$ and $y<z$. Then by definition there exists $a,b,c,d,e,f\in\mathbb N$ such that 
+$x=[\langle a,b\rangle], y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. By lemma \ref{Z_order_2} we can assert that $a+d<b+c$ and 
+$c+f<d+e$. By definition there then exists $g,g'\in\mathbb N$ such that
+$(a+d)+g=b+c$ and $(c+f)+g'=d+e$. The former, along with cancellation, associativity and commutativity, allows us to assert
+\begin{equation*}
+((a+d)+g)+f=((a+d)+f)+g=(b+c)+f
+\end{equation*}
+So $(a+d)+f<(b+c)+f$. Similarly the latter allows us to assert
+\begin{equation*}
+((c+f)+g')+b=((b+c)+f)+g'=(d+e)+b=b+(d+e)
+\end{equation*}
+So $(b+c)+f<b+(d+e)$. By transitivity of the naturals we then have
+\begin{equation*}
+(a+d)+f<b+(d+e)
+\end{equation*}
+Then there exists $g_0\in\mathbb N$ such that 
+$((a+d)+f)+g_0=b+(d+e)$. So we have
+\begin{equation*}
+d+((a+f)+g_0)=((a+d)+f)+g_0=b+(d+e)=d+(b+e)
+\end{equation*}
+which by cancellation means
+\begin{equation*}
+(a+f)+g_0=b+e
+\end{equation*}
+and $a+f<b+e$. By lemma \ref{Z_order_2} this means $[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.
+\end{proof}
+\begin{proof}(12)
 
 \end{proof}
-
-
 
 
 
