@@ -1485,12 +1485,37 @@ $(a+1)+1=1+(a'+1)$. By commutativity and cancellation we then have $a=a'$.
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(2)
-
+We show $\{i(n)\mid n\in\mathbb N\}=\{x\in\mathbb Z\mid x>\hat0\}$.
+More specifically, denoting the former as $A$ and the latter $B$, they are the sets such that
+\begin{align*}
+&\forall x(x\in A\leftrightarrow\exists n\in\mathbb N(x=i(n)))\\
+&\forall x(x\in B\leftrightarrow x\in\mathbb Z\land x>\hat0)
+\end{align*}
+Existence of $A$ can be shown using the subset axiom with $\mathbb Z$ as a bounding set. Existence of $B$ is immediately 
+assured by the subset axiom. We want to show $A=B$.\\
+\indent Let $x$ be arbitrary and suppose $x\in A$. Then there exists $n\in\mathbb N$ such that $x=i(n)$. So $\langle n,x\rangle\in i$ and 
+$x\in\text{ran}(i)\subseteq\mathbb Z$. By definition $x=[\langle n+1,1\rangle]$. Since we know $(1+1)+n=1+(n+1)$ it follows that
+$1+1<1+(n+1)$ and by lemma \ref{Z_order_2} that $\hat0=[\langle 1,1\rangle]<[\langle n+1,1\rangle]=x$. So $x\in B$.\\
+\indent Now suppose $x\in B$. Then $x\in\mathbb Z$ and $x>\hat0$. By definition there exists $a,b\in\mathbb N$ such that 
+$x=[\langle a,b\rangle]>\hat0$. By lemma \ref{Z_order_2} $1+b<1+a$, so there exists $k\in\mathbb N$ such that $(1+b)+k=1+a$;
+associativity and cancellation allows us to conclude that $b+k=a$
+it is apparent that $[\langle k+1,1\rangle]\in\mathbb Z$ and that by definition $\langle k,[\langle k+1,1\rangle]\rangle\in i$. 
+We know $(1+b)+k=1+a$; so $(k+1)+b=1+a$,
+$\langle k+1,1\rangle\sim\langle a,b\rangle$, and
+$x=[\langle a,b\rangle]=[\langle k+1,1\rangle]=i(k)$, meaning $x\in A$.
+\end{proof}
+\begin{proof}(3)
+We defined $i$ such that
+\begin{equation*}
+\forall x(x\in i\leftrightarrow\exists a\in\mathbb N\exists b(x=\langle a,b\rangle\land b=[\langle a+1,1\rangle]))
+\end{equation*}
+By definition we have $\langle 1,[\langle 1+1,1\rangle]\rangle\in i$. So
+$i(1)=[\langle 1+1,1\rangle]=\hat1$.
+\end{proof}
+\begin{proof}(4a)
 
 
 \end{proof}
-
-
 
 
 
