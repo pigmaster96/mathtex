@@ -1513,7 +1513,31 @@ By definition we have $\langle 1,[\langle 1+1,1\rangle]\rangle\in i$. So
 $i(1)=[\langle 1+1,1\rangle]=\hat1$.
 \end{proof}
 \begin{proof}(4a)
-
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(i(a+b)=i(a)+i(b))
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. See that $\langle((a+b)+1)+1,1+1\rangle\sim\langle(a+b)+1,1\rangle$ since 
+\begin{equation*}
+(((a+b)+1)+1)+1=(1+1)+((a+b)+1)
+\end{equation*}
+We therefore have the following string of equivalences
+\begin{align*}
+i(a+b)&=[\langle(a+b)+1,1\rangle]=[\langle((a+b)+1)+1,1+1\rangle]\\
+&=[\langle (a+1)+(b+1),1+1\rangle]=[\langle a+1,1\rangle]+[\langle b+1,1\rangle]\\
+&=i(a)+i(b)\qedhere
+\end{align*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(4b)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(i(ab)=i(a)i(b))
+\end{equation*}
+See that $\langle(a+1)(b+1)+1,(a+1)+(b+1)\rangle\sim\langle ab+1,1\rangle$:
+\begin{align*}
+(
+\end{align*}
 
 \end{proof}
 
