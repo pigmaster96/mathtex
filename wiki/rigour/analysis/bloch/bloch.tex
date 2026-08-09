@@ -1534,12 +1534,38 @@ We want to show
 \begin{equation*}
 \forall a\in\mathbb N\forall b\in\mathbb N(i(ab)=i(a)i(b))
 \end{equation*}
-See that $\langle(a+1)(b+1)+1,(a+1)+(b+1)\rangle\sim\langle ab+1,1\rangle$:
+Letting arbitrary $a,b\in\mathbb N$,
+see that $\langle(a+1)(b+1)+1,(a+1)+(b+1)\rangle\sim\langle ab+1,1\rangle$:
 \begin{align*}
-(
+((a+1)(b+1)+1)+1&=(((a+1)b+(a+1))+1)+1\\
+&=(((ab+b)+(a+1))+1)+1\\
+&=((a+1)+(b+1))+(ab+1)
 \end{align*}
-
+We therefore have
+\begin{equation*}
+i(ab)=[\langle ab+1,1\rangle]=[\langle(a+1)(b+1)+1,(a+1)+(b+1)\rangle]=i(a)i(b)\qedhere
+\end{equation*}
 \end{proof}
+\begin{proof}(4c)
+We want to show
+\begin{equation*}
+\forall a\in\mathbb N\forall b\in\mathbb N(a<b\leftrightarrow i(a)<i(b))
+\end{equation*}
+Let arbitrary $a,b\in\mathbb N$. First suppose $a<b$. Then by theorem \ref{natural ordering} part 
+4 we know $a+1<b+1$; applying the same theorem again we have $(a+1)+1<(b+1)+1=1+(b+1)$.
+By lemma \ref{Z_order_2} this implies $[\langle a+1,1\rangle]<[\langle b+1,1\rangle]$
+and $i(a)<i(b)$.\\
+\indent Now instead suppose $i(a)<i(b)$. This implies $[\langle a+1,1\rangle]<[\langle b+1,1\rangle]$. By lemma \ref{Z_order_2} we then have
+$(a+1)+1<1+(b+1)=(b+1)+1$. Applying theorem \ref{natural ordering} part 4 twice we then have $a<b$.
+\end{proof}
+\newpage
+
+\subsection{}
+
+
+
+
+
 
 
 
