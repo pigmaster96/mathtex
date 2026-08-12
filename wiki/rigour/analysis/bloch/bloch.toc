@@ -13,3 +13,4 @@
 \contentsline {subsection}{\numberline {1.2.3}Ordering}{27}{}%
 \contentsline {subsection}{\numberline {1.2.4}Properties}{30}{}%
 \contentsline {subsection}{\numberline {1.2.5}Joining the naturals and the integers}{37}{}%
+\contentsline {subsection}{\numberline {1.2.6}More properties}{40}{}%
