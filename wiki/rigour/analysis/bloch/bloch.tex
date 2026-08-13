@@ -1579,8 +1579,24 @@ Let $x,y,z\in\mathbb Z$.
 \end{enumerate}
 \end{theorem}
 \begin{proof}(1) We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z
+(x+z=y+z\to x=y)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Z$. Suppose that $x+z=y+z$.
+The desired result follows from several parts of theorem \ref{integer_arithmetic_1}:
+\begin{align*}
+x&\overset{(3)}{=}x+0\overset{(4)}{=}x+(z+(-z))\overset{(1)}{=}(x+z)+(-z)=(y+z)+(-z)\\
+&\overset{(1)}{=}y+(z+(-z))\overset{(4)}{=}y+0\overset{(3)}{=}y\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(2)
+
+
 
 \end{proof}
+
+
 
 
 
