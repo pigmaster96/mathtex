@@ -1591,7 +1591,53 @@ x&\overset{(3)}{=}x+0\overset{(4)}{=}x+(z+(-z))\overset{(1)}{=}(x+z)+(-z)=(y+z)+
 \end{align*}
 \end{proof}
 \begin{proof}(2)
-
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z(-(-x)=x)
+\end{equation*}
+Let arbitrary $x\in\mathbb Z$. Part 4 of theorem \ref{integer_arithmetic_1} allows us to state
+\begin{equation*}
+(-x)+(-(-x))=0
+\end{equation*}
+We then have, by the same theorem,
+\begin{align*}
+x&\overset{(3)}{=}x+0=x+((-x)+(-(-x)))\overset{(1)}{=}(x+(-x))+(-(-x))\\
+&\overset{(4)}{=}0+(-(-x))\overset{(2,3)}{=}(-(-x))\qedhere
+\end{align*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(3)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(-(x+y)=(-x)+(-y))
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. By part 4 of theorem \ref{integer_arithmetic_1} we have
+\begin{equation*}
+(x+y)+(-(x+y))=0
+\end{equation*}
+We then have, by the same theorem,
+\begin{align*}
+(-x)+(-y)&\overset{(3)}{=}((-x)+(-y))+0=((-x)+(-y))+((x+y)+(-(x+y)))\\
+&\overset{(1)}{=}(((-x)+(-y))+(x+y))+(-(x+y))\\
+&\overset{(1,2)}{=}((-x)+(((-y)+y)+x))+(-(x+y))\\
+&\overset{(4)}{=}((-x)+(0+x))+(-(x+y))\\
+&\overset{(2,3)}{=}((-x)+x)+(-(x+y))\\
+&\overset{(2,4)}{=}0+(-(x+y))\\
+&\overset{(2,3)}{=}-(x+y)\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(4)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z(x\cdot0=0)
+\end{equation*}
+Let arbitrary $x\in\mathbb Z$. We have, by theorem \ref{integer_arithmetic_1},
+\begin{align*}
+x\cdot0+0\overset{(3)}{=}x\cdot0\overset{(3)}{=}x(0+0)\overset{(8)}{=}x\cdot0+x\cdot0
+\end{align*}
+By commutativity and cancellation we have $0=x\cdot0$.\qedhere
+\end{proof}
+\begin{proof}(5)
 
 
 \end{proof}
