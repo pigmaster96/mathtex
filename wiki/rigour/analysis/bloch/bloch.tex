@@ -1569,8 +1569,8 @@ Let $x,y,z\in\mathbb Z$.
 \item $-(-x)=x$
 \item $-(x+y)=(-x)+(-y)$
 \item $x\cdot0=0$
-\item If $z\neq0$ and $xz=yz$, then $x=y$\quad(Cancellation Law for Multiplication)
 \item $(-x)y=-xy=x(-y)$
+\item If $z\neq0$ and $xz=yz$, then $x=y$\quad(Cancellation Law for Multiplication)
 \item $xy=1$ if and only if $x=1=y$ or $x=-1=y$
 \item $x>0$ if and only if $-x<0$ and $x<0$ if and only if $-x>0$
 \item $0<1$
@@ -1638,11 +1638,44 @@ x\cdot0+0\overset{(3)}{=}x\cdot0\overset{(3)}{=}x(0+0)\overset{(8)}{=}x\cdot0+x\
 By commutativity and cancellation we have $0=x\cdot0$.\qedhere
 \end{proof}
 \begin{proof}(5)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z((-x)y=-(xy)=x(-y))
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. We first show $(-x)y=-(xy)$. By part 4 of this theorem and several parts of theorem 
+\ref{integer_arithmetic_1} we have
+\begin{equation*}
+xy+(-(xy))\overset{(4)}{=}0=y\cdot0\overset{(4)}{=}y(x+(-x))\overset{(8)}{=}yx+y(-x)\overset{(6)}{=}xy+(-x)y
+\end{equation*}
+where cancellation on addition immediately yields $-(xy)=(-x)y$.
+Similarly we have
+\begin{equation*}
+xy+(-(xy))\overset{(4)}{=}0=x\cdot0\overset{(4)}{=}x(y+(-y))\overset{(8)}{=}xy+x(-y)
+\end{equation*}
+where it follows that $-(xy)=x(-y)$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(6)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z((z\neq0\land xz=yz)\to x=y)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Z$. Suppose that $z\neq0$ and $xz=yz$.
+By part 5 of this theorem and several parts of theorem \ref{integer_arithmetic_1} we have
+\begin{equation*}
+0\overset{(4)}{=}xz+(-(xz))=yz+(-(xz))=yz+(-x)z\overset{(6,8)}{=}(y+(-x))z
+\end{equation*}
+Part 9 of theorem \ref{integer_arithmetic_1} then allows us to conclude $y+(-x)=0$ or $z=0$. By our earlier assumptions we must
+then have $y+(-x)=0$. So by part 4 of theorem \ref{integer_arithmetic_1},
+\begin{equation*}
+y+(-x)=0=x+(-x)
+\end{equation*}
+and by cancellation on addition $y=x$.
+\end{proof}
+\begin{proof}(7)
 
 
 \end{proof}
-
-
 
 
 
