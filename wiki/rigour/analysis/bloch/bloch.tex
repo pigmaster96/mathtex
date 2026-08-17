@@ -1449,7 +1449,7 @@ By definition we then have $1+1=1+(1+1)$, which by cancellation implies $1=1+1$,
 \begin{definition}
 Let $x\in\mathbb Z$. $x$ is \textbf{positive} if $x>\hat0$. $x$ is \textbf{negative} if $x<\hat0$.
 \end{definition}
-\begin{theorem}
+\begin{theorem}\label{natural_integer_isomorphism}
 Let $i:\mathbb N\to\mathbb Z$ be defined by $i(n)=[\langle n+1,1\rangle]$ for all $n\in\mathbb N$.
 \begin{enumerate}
 \item The function $i:\mathbb N\to\mathbb Z$ is injective.
@@ -1562,7 +1562,7 @@ $(a+1)+1<1+(b+1)=(b+1)+1$. Applying theorem \ref{natural ordering} part 4 twice 
 
 \subsection{More properties}
 (Denoting $\hat0$ as 0 and $\hat1$ as 1)
-\begin{theorem}
+\begin{theorem}\label{integer_arithmetic_2}
 Let $x,y,z\in\mathbb Z$.
 \begin{enumerate}
 \item If $x+z=y+z$, then $x=y$\quad(Cancellation Law for Addition)
@@ -1571,7 +1571,6 @@ Let $x,y,z\in\mathbb Z$.
 \item $x\cdot0=0$
 \item $(-x)y=-xy=x(-y)$
 \item If $z\neq0$ and $xz=yz$, then $x=y$\quad(Cancellation Law for Multiplication)
-\item $xy=1$ if and only if $x=1=y$ or $x=-1=y$
 \item $x>0$ if and only if $-x<0$ and $x<0$ if and only if $-x>0$
 \item $0<1$
 \item If $x\leq y$ and $y\leq x$. Then $x=y$
@@ -1673,9 +1672,105 @@ y+(-x)=0=x+(-x)
 and by cancellation on addition $y=x$.
 \end{proof}
 \begin{proof}(7)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z((x>0\leftrightarrow-x<0)\land(x<0\leftrightarrow-x>0))
+\end{equation*}
+Let arbitrary $x\in\mathbb Z$. First suppose $x>0$. It follows
+from theorem \ref{integer_arithmetic_1} that
+\begin{equation*}
+-x\overset{(3,2)}{=}0+(-x)\overset{(12)}{<}x+(-x)\overset{(4)}{=}0
+\end{equation*}
+Next suppose $-x<0$. Similarly,
+\begin{equation*}
+0\overset{(4)}{=}x+(-x)\overset{(2,12)}{<}x+0\overset{(3)}{=}x
+\end{equation*}
+Next suppose $x<0$. We have
+\begin{equation*}
+-x\overset{(3,2)}{=}0+(-x)\overset{(12)}{>}x+(-x)\overset{(4)}{=}0
+\end{equation*}
+Finally suppose $-x>0$. We have
+\begin{equation*}
+0\overset{(4)}{=}x+(-x)\overset{(2,12)}{>}x+0\overset{(3)}{=}x\qedhere
+\end{equation*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(8)
+We want to show $0<1$. We know by theorem \ref{integer_arithmetic_1} part 14 that $0\neq1$. So by part 10 (trichotomy) of that
+same theorem we either have $0<1$ or $0>1$. Suppose for contradiction that the latter is true. By part 7 of this theorem we
+immediately have $0<-1$. By part 13 of theorem \ref{integer_arithmetic_1} we then have $0(-1)<(-1)(-1)$. By an earlier part
+of this theorem and theorem \ref{integer_arithmetic_1},
+\begin{equation*}
+0=0(-1)<(-1)(-1)=1(-(-1))=1\cdot1=1
+\end{equation*}
+Which contradicts trichotomy since we assumed $1<0$. We therefore must have $0<1$.
+\end{proof}
+\begin{proof}(9)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z((x\leq y\land y\leq x)\to x=y)
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. Suppose that $x\leq y$ and $y\leq x$. Lemma \ref{Z_order_3} implies that
+$x<y\lor x=y$ and $y<x\lor y=x$.
+Supposing $x<y$, $y<x\lor y=x$ is a contradiction in either case. Therefore $x<y\lor x=y$ implies that it must be
+the case that $x=y$.
+\end{proof}
+\begin{proof}(10)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(([x>0\land y>0]\to xy>0)\land([x>0\land y<0]\to xy<0))
+\end{equation*}
+Let $x,y\in\mathbb Z$ be arbitrary. First suppose $x>0$ and $y>0$. By theorem \ref{integer_arithmetic_1} part 13 we immediately
+have
+\begin{equation*}
+xy>0\cdot y=0
+\end{equation*}
+Where the equality follows from commutativity and part 4 of this theorem.
+Next suppose $x>0$ and $y<0$. Similarly we have
+\begin{equation*}
+xy=yx<0\cdot x=0\qedhere
+\end{equation*}
+\end{proof}
+\newpage
 
+\subsection{Discreteness}
+\begin{theorem}
+Let $x\in\mathbb Z$. Then there is no $y\in\mathbb Z$ such that $x<y<x+1$.
+\end{theorem}
+\begin{proof}
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z(\neg\exists y\in\mathbb Z(x<y<x+1))
+\end{equation*}
+Let arbitrary $x\in\mathbb Z$. Suppose for contradiction that there exists some $y\in\mathbb Z$ such that $x<y<x+1$.
+By theorem \ref{integer_arithmetic_1} we have
+\begin{align*}
+1=x+((-x)+1)<y+((-x)+1)<&(x+1)+((-x)+1)\\
+&=(1+(x+(-x)))+1=1+1
+\end{align*}
+By theorem \ref{integer_arithmetic_2} part 8 and transitivity we have $0<y+((-x)+1)$. It then follows from theorem
+\ref{natural_integer_isomorphism} that there exists $n\in\mathbb N$ such that $i(n)=y+((-x)+1)$, where $i:\mathbb N\to\mathbb Z$. 
+By the same theorem we have
+\begin{equation*}
+i(1)=1<i(n)<1+1=i(1)+i(1)=i(1+1)
+\end{equation*}
+and
+\begin{equation*}
+1<n<1+1
+\end{equation*}
+Which contradicts part 9 of theorem \ref{natural ordering}.
+\end{proof}
+\begin{theorem}
+Let $x,y\in\mathbb Z$. $xy=1$ iff $x=1=y$ or $x=-1=y$.
+\end{theorem}
+\begin{proof}
+We want to show
 
 \end{proof}
+
+
+
+
 
 
 
