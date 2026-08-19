@@ -841,7 +841,7 @@ therefore $x\in\mathbb N\cap G=\emptyset$, a contradiction. So we must have $G=\
 \end{proof}
 \newpage
 
-\section{Construction of the integers}
+\section{Construction of the Integers}
 \subsection{Construction}
 \begin{definition}
 The relation $\sim$ on $\mathbb N\times\mathbb N$ is defined by $\langle a,b\rangle\sim\langle c,d\rangle$ 
@@ -1734,7 +1734,7 @@ xy=yx<0\cdot x=0\qedhere
 \newpage
 
 \subsection{Discreteness}
-\begin{theorem}
+\begin{theorem}\label{integer_discreteness}
 Let $x\in\mathbb Z$. Then there is no $y\in\mathbb Z$ such that $x<y<x+1$.
 \end{theorem}
 \begin{proof}
@@ -1760,14 +1760,38 @@ and
 \end{equation*}
 Which contradicts part 9 of theorem \ref{natural ordering}.
 \end{proof}
+\begin{lemma}
+$\forall x\in\mathbb Z\forall y\in\mathbb Z(x>y\to x\geq y+1)$
+\end{lemma}
+\begin{proof}
+Let $x,y\in\mathbb Z$ be arbitrary. Suppose $x>y$. Suppose for contradiction that $x<y+1$. 
+This contradicts theorem \ref{integer_discreteness} since $y<x<y+1$. By trichotomy we must therefore $x\geq y+1$.
+\end{proof}
+\noindent(next page)\newpage
 \begin{theorem}
 Let $x,y\in\mathbb Z$. $xy=1$ iff $x=1=y$ or $x=-1=y$.
 \end{theorem}
 \begin{proof}
-We want to show
-
+We want to show 
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(xy=1\leftrightarrow(x=1=y\lor x=-1=y))
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. Suppose that $xy=1$. It follows from theorem \ref{integer_arithmetic_1} that $xy\neq0$. By contradiction it can then be shown that $x\neq0$ and $y\neq0$.
+By trichotomy we must have either $x>0$ or $x<0$. \\
+\indent First consider the case where $x>0$. Since $xy=1>0$, by trichotomy on $y$ it can be shown by contradiction that $y>0$; and by the previous lemma $y\geq1$. 
+Suppose $x\neq1$; by trichotomy we have either $x<1$ or $x>1$.
+The first case implies $0<x<1$, which contradicts theorem \ref{integer_discreteness}. In the second case by theorem \ref{integer_arithmetic_1} we would have
+$xy>y\geq1$, which implies $xy>1$, contradicting trichotomy. We must therefore have $x=1$. It immediately follows that $1=xy=1\cdot y=y$.\\
+\indent Next consider the case where $x<0$. By trichotomy $y<0\lor y=0\lor y>0$. The latter two cases are contradictions since $y=0$ would imply $xy=0\neq1$ and $y>0$ would, 
+by theorem \ref{integer_arithmetic_2}, imply $xy<0<1$. We therefore conclude that $y<0$.
+Again by theorem \ref{integer_arithmetic_2}, we have $-x>0$ and $-y>0$ and $(-x)(-y)=xy=1$.
+Using an identical strategy to the previous case, it follows that $(-x)=1=(-y)$ and $x=-1=y$.\\
+\indent Now for the reverse implication. Supposing $x=1=y$ it immediately follows that $xy=1\cdot1=1$.
+Supposing $x=-1=y$ we have $xy=(-1)(-1)=1\cdot1=1$.
 \end{proof}
+\newpage
 
+\section{Construction of the Rationals}
 
 
 
