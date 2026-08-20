@@ -1792,6 +1792,7 @@ Supposing $x=-1=y$ we have $xy=(-1)(-1)=1\cdot1=1$.
 \newpage
 
 \section{Construction of the Rationals}
+\subsection{Construction}
 \begin{definition}
 Let $\mathbb Z^*=\mathbb Z-\{0\}$. The relation $\asymp$ on $\mathbb Z\times\mathbb Z^*$ is defined by $(x,y)\asymp(z,w)$ if and only if
 $xw=yz$, for all $(x,y),(z,w)\in\mathbb Z\times\mathbb Z^*$. That is, the set such that 
@@ -1805,6 +1806,44 @@ as a bounding set.)
 \begin{lemma}
 The relation $\asymp$ is an equivalence relation on $\mathbb Z\times\mathbb Z^*$.
 \end{lemma}
+\begin{proof}
+Showing $\asymp\subseteq(\mathbb Z\times\mathbb Z^*)\times(\mathbb Z\times\mathbb Z^*)$ is straightforward. We start with reflexivity on 
+$\mathbb Z\times\mathbb Z^*$. Let arbitrary $x\in\mathbb Z\times\mathbb Z^*$; there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ 
+such that $x=\langle a,b\rangle$. Since $\mathbb Z^*\subseteq\mathbb Z$, $a,b\in\mathbb Z$, so $ab=ba$. It then follows by definition
+that $\langle x,x\rangle=\langle\langle a,b\rangle,\langle a,b\rangle\rangle\in\asymp$.\\
+\indent Now for symmetry. Let $a,b$ be arbitrary such that $\langle a,b\rangle\in\asymp$. By definition there then exists 
+$\langle x,y\rangle,\langle z,w\rangle\in\mathbb Z\times\mathbb Z^*$ such that $a=\langle x,y\rangle$, $b=\langle z,w\rangle$, and $xw=yz$.
+By commutativity we have $zy=wx$, meaning $\langle b,a\rangle=\langle\langle z,w\rangle,\langle x,y\rangle\rangle\in\asymp$.\\
+\indent Finally transitivity. Let $a,b,c$ be arbitrary such that $\langle a,b\rangle,\langle b,c\rangle\in\asymp$. 
+By definition there exists $\langle x,y\rangle,\langle z,w\rangle\in\mathbb Z\times\mathbb Z^*$ where $a=\langle x,y\rangle$, $b=\langle z,w\rangle$,
+and $xw=yz$. There also exists
+$\langle x',y'\rangle,\langle z',w'\rangle\in\mathbb Z\times\mathbb Z^*$ where $b=\langle x',y'\rangle$, $c=\langle z',w'\rangle$,
+and $x'w'=y'z'$.
+It follows that $\langle z,w\rangle=\langle x',y'\rangle$ and $zw'=wz'$.
+We then have $(xw)w'=(yz)w'$ and $y(zw')=y(wz')$. By associativity we then have $(xw)w'=(yz)w'=y(zw')=y(wz')$. By commutativity and associativity
+it follows that $(xw')w=(yz')w$. Since $w\in\mathbb Z^*$, $w\neq0$ and 
+by cancellation we have $xw'=yz'$. By definition 
+$\langle a,c\rangle=\langle\langle x,y\rangle,\langle z',w'\rangle\rangle\in\asymp$.
+\end{proof}
+\begin{definition}
+The set of \textbf{rational numbers}, denoted $\mathbb Q$, is the quotient set $(\mathbb Z\times\mathbb Z^*)/\asymp$. That is,
+\begin{equation*}
+\forall x(x\in\mathbb Q\leftrightarrow\exists\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*(x=[\langle a,b\rangle]))
+\end{equation*}
+where
+\begin{equation*}
+\forall\langle a,b\rangle\forall x(x\in[\langle a,b\rangle]\leftrightarrow \langle a,b\rangle\asymp x)
+\end{equation*}
+\end{definition}
+\noindent Existence of each equivalence class can be shown using ran$(\asymp)$ as a bounding set. The 
+same can be done for $\mathbb Q$ using $\mathscr P(\text{ran}(\asymp))$.
+\begin{definition}
+The elements $\bar0,\bar1\in\mathbb Q$ are defined by $\bar0=[\langle0,1\rangle]$ and 
+$\bar1=[\langle 1,1\rangle]$.
+\end{definition}
+\newpage
+
+\subsection{Operations}
 
 
 

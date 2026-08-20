@@ -16,3 +16,5 @@
 \contentsline {subsection}{\numberline {1.2.6}More properties}{40}{}%
 \contentsline {subsection}{\numberline {1.2.7}Discreteness}{44}{}%
 \contentsline {section}{\numberline {1.3}Construction of the Rationals}{46}{}%
+\contentsline {subsection}{\numberline {1.3.1}Construction}{46}{}%
+\contentsline {subsection}{\numberline {1.3.2}Operations}{47}{}%
