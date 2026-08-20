@@ -1792,9 +1792,19 @@ Supposing $x=-1=y$ we have $xy=(-1)(-1)=1\cdot1=1$.
 \newpage
 
 \section{Construction of the Rationals}
-
-
-
+\begin{definition}
+Let $\mathbb Z^*=\mathbb Z-\{0\}$. The relation $\asymp$ on $\mathbb Z\times\mathbb Z^*$ is defined by $(x,y)\asymp(z,w)$ if and only if
+$xw=yz$, for all $(x,y),(z,w)\in\mathbb Z\times\mathbb Z^*$. That is, the set such that 
+\begin{equation*}
+\forall a(a\in\asymp\leftrightarrow\exists\langle x,y\rangle\in\mathbb Z\times\mathbb Z^*
+\exists\langle z,w\rangle\in\mathbb Z\times\mathbb Z^*(a=\langle\langle x,y\rangle,\langle z,w\rangle\rangle\land xw=yz))
+\end{equation*}
+\end{definition}
+\noindent(Existence follows from using $(\mathbb Z\times\mathbb Z^*)\times(\mathbb Z\times\mathbb Z^*)$
+as a bounding set.)
+\begin{lemma}
+The relation $\asymp$ is an equivalence relation on $\mathbb Z\times\mathbb Z^*$.
+\end{lemma}
 
 
 
