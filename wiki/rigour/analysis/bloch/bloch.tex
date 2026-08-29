@@ -1855,7 +1855,19 @@ The binary operation $+$ on $\mathbb Q$ is defined as $+:\mathbb Q\times\mathbb 
 \noindent(Existence follows from using $(\mathbb Q\times\mathbb Q)\times\mathbb Q$ as a bounding set.)
 \begin{proof}(Domain/Range bounds, Well-definedness, Functionality) Staring with the domain bound, dom$(+)=\mathbb Q\times\mathbb Q$. First let arbitrary $x\in\text{dom}(+)$. By definition there 
 exists $y$ such that $\langle x,y\rangle\in+$.
-By definition there then exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\mathbb Q\times\mathbb Q$
+By definition there then exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\mathbb Q\times\mathbb Q$.
+Now let arbitrary $\langle x,y\rangle\in\mathbb Q\times\mathbb Q$. By definition there then exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=[\langle a,b\rangle]$
+and $y=[\langle c,d\rangle]$.
+We then have $\langle\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle,[\langle ad+bc,bd\rangle]\rangle\in+$. 
+So $\langle x,y\rangle=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\text{dom}(+)$.\\
+\indent Next the range bound ran$(+)\subseteq\mathbb Q$. Let arbitrary $y\in\text{ran}(+)$. Then there exists $x$ such that $\langle x,y\rangle\in+$. 
+There then exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$y=[\langle ad+bc,bd\rangle]$.
+We know that $b,d\in\mathbb Z^*$. By theorem \ref{integer_arithmetic_1} since $b\neq0$ and $d\neq0$ we must have $bd\neq0$.
+So $bd\in\mathbb Z-\{0\}=\mathbb Z^*$, and $\langle ad+bc,bd\rangle\in\mathbb Z\times\mathbb Z^*$.
+So $y=[\langle ad+bc,bd\rangle]\in\mathbb Q$.\\
+\indent Next well-definedness. That is,
+
 
 
 
