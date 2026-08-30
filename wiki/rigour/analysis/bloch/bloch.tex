@@ -1874,12 +1874,29 @@ So $y=[\langle ad+bc,bd\rangle]\in\mathbb Q$.\\
 \end{align*}    
 Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$.
 Suppose $[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. We then have $\langle a,b\rangle\asymp\langle a',b'\rangle$ and $\langle c,d\rangle\asymp\langle c',d'\rangle$; so $ab'=ba'$ and $cd'=dc'$.
-
-
-
-
+We then have
+\begin{align*}
+(ad+bc)(b'd')&=(ad)(b'd')+(bc)(b'd')\\
+&=(ab')(dd')+(cd')(bb')\\
+&=(ba')(dd')+(dc')(bb')\\
+&=(bd)(a'd')+(bd)(b'c')\\
+&=(bd)(a'd'+b'c')
+\end{align*}
+Which implies $\langle ad+bc,bd\rangle\asymp\langle a'd'+b'c',b'd'\rangle$ and 
+$[\langle ad+bc,bd\rangle]=[\langle a'd'+b'c',b'd'\rangle]$.\\
+\noindent(next page)\newpage
+Finally functionality. Let arbitrary $x\in\text{dom}(+)$. There then exists $y$ such that $\langle x,y\rangle\in+$.
+By definition there then exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$ and 
+$y=[\langle ad+bc,bd\rangle]$. Now let $y'$ be arbitrary such that $\langle x,y'\rangle\in+$.
+Then there exists $\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=\langle[\langle a',b'\rangle],[\langle c',d'\rangle]\rangle$ and 
+$y'=[\langle a'd'+b'c',b'd'\rangle]$. Since this implies $[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$,
+by well definedness we have
+$y=[\langle ad+bc,bd\rangle]=[\langle a'd'+b'c',b'd'\rangle]=y'$.
 \end{proof}
+\begin{definition}
 
+
+\end{definition}
 
 
 
