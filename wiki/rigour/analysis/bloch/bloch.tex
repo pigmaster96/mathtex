@@ -1894,10 +1894,26 @@ by well definedness we have
 $y=[\langle ad+bc,bd\rangle]=[\langle a'd'+b'c',b'd'\rangle]=y'$.
 \end{proof}
 \begin{definition}
-
-
+The binary operation $\cdot$ on $\mathbb Q$ is defined as $\cdot:\mathbb Q\times\mathbb Q\to\mathbb Q$ where
+\begin{align*}
+\forall x(x\in\cdot\leftrightarrow\exists\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*
+\exists\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*(x=\langle\langle[\langle a,b\rangle]&,[\langle c,d\rangle]\rangle,
+[\langle ac,bd\rangle]\rangle))
+\end{align*}
 \end{definition}
+\noindent(Existence follows from using $(\mathbb Q\times\mathbb Q)\times\mathbb Q$ as a bounding set.)
+\begin{proof}(Domain/Range bounds, Well-definedness, Functionality)
+First the domain bound dom$(\cdot)=\mathbb Q\times\mathbb Q$. First let arbitrary $x\in\text{dom}(\cdot)$. Then there exists $y$ such that $\langle x,y\rangle\in\cdot$, and 
+$\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $\langle x,y\rangle=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\mathbb Q\times\mathbb Q$. Next let 
+arbitary $\langle x,y\rangle\in\mathbb Q\times\mathbb Q$.
+There then exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$. By definition 
+$\langle\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle,[\langle ac,bd\rangle]\rangle\in\cdot$; so $\langle x,y\rangle=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\text{dom}(\cdot)$.\\
+\indent Next the range bound ran$(\cdot)\subseteq\mathbb Q$.
 
+
+
+
+\end{proof}
 
 
 
