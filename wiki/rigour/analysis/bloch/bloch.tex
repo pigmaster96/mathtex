@@ -1867,6 +1867,13 @@ We know that $b,d\in\mathbb Z^*$. By theorem \ref{integer_arithmetic_1} since $b
 So $bd\in\mathbb Z-\{0\}=\mathbb Z^*$, and $\langle ad+bc,bd\rangle\in\mathbb Z\times\mathbb Z^*$.
 So $y=[\langle ad+bc,bd\rangle]\in\mathbb Q$.\\
 \indent Next well-definedness. That is,
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c,d\rangle&\in\mathbb Z\times\mathbb Z^*\forall\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*(\\
+(&[\langle a,b\rangle]=[\langle a',b'\rangle]\land[\langle c,d\rangle]=[\langle c',d'\rangle])\\
+&\to[\langle ad+bc,bd\rangle]=[\langle a'd'+b'c',b'd'\rangle])
+\end{align*}    
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$.
+Suppose $[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. We then have $\langle a,b\rangle\asymp\langle a',b'\rangle$ and $\langle c,d\rangle\asymp\langle c',d'\rangle$; so $ab'=ba'$ and $cd'=dc'$.
 
 
 
