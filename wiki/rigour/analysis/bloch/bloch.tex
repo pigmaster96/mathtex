@@ -1873,7 +1873,7 @@ So $y=[\langle ad+bc,bd\rangle]\in\mathbb Q$.\\
 &\to[\langle ad+bc,bd\rangle]=[\langle a'd'+b'c',b'd'\rangle])
 \end{align*}    
 Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$.
-Suppose $[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. We then have $\langle a,b\rangle\asymp\langle a',b'\rangle$ and $\langle c,d\rangle\asymp\langle c',d'\rangle$; so $ab'=ba'$ and $cd'=dc'$.
+Suppose $[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. We then have $\langle a,b\rangle\asymp\langle a',b'\rangle$ and $\langle c,d\rangle\asymp\langle c',d'\rangle$; so $ab'=ba'$ and $cd'=dc'$. We know $bd,b'd'\in\mathbb Z^*$.
 We then have
 \begin{align*}
 (ad+bc)(b'd')&=(ad)(b'd')+(bc)(b'd')\\
@@ -1909,14 +1909,48 @@ arbitary $\langle x,y\rangle\in\mathbb Q\times\mathbb Q$.
 There then exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$. By definition 
 $\langle\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle,[\langle ac,bd\rangle]\rangle\in\cdot$; so $\langle x,y\rangle=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\text{dom}(\cdot)$.\\
 \indent Next the range bound ran$(\cdot)\subseteq\mathbb Q$.
+Let arbitrary $y\in\text{ran}(\cdot)$. There then exists $x$ such that $\langle x,y\rangle\in\cdot$. By definition there then exists 
+$\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $y=[\langle ac,bd\rangle]$. Since $b,d\in\mathbb Z^*$, we have $b\neq0$ and $d\neq0$. 
+By theorem \ref{integer_arithmetic_1} we then have $bd\neq0$. So $\langle ac,bd\rangle\in\mathbb Z\times\mathbb Z^*$ and therefore $y=[\langle ac,bd\rangle]\in\mathbb Q$.\\
+\indent Now for well-definedness. That is
+\begin{align*}
+\forall\langle a,b&\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*(\\
+(&[\langle a,b\rangle]=[\langle a',b'\rangle]\land[\langle c,d\rangle]=[\langle c',d'\rangle])
+\to[\langle ac,bd\rangle]=[\langle a'c',b'd'\rangle])
+\end{align*}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$.
+We then have $ab'=ba'$ and $cd'=dc'$. We know $bd,b'd'\in\mathbb Z^*$ and
+\begin{equation*}
+(ac)(b'd')=(ab')(cd')=(ba')(dc')=(bd)(a'c')
+\end{equation*}
+so $\langle ac,bd\rangle\asymp\langle a'c',b'd'\rangle$ and $[\langle ac,bd\rangle]=[\langle a'c',b'd'\rangle]$.\\
+\indent Finally functionality. Let arbitrary $x\in\text{dom}(\cdot)$. There then exists $y$ such that $\langle x,y\rangle\in\cdot$.
+There exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$\langle x,y\rangle=\langle\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$,\\$[\langle ac,bd\rangle]\rangle$. Let $y'$ be arbitrary such that $\langle x,y'\rangle\in\cdot$; 
+there exists $\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$\langle x,y'\rangle=\langle\langle[\langle a',b'\rangle],[\langle c',d'\rangle]\rangle,[\langle a'c',b'd'\rangle]\rangle$.
+It follows that 
+$\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle=\langle[\langle a',b'\rangle],[\langle c',d'\rangle]\rangle$, so by well-definedness we have 
+\begin{equation*}
+y=[\langle ac,bd\rangle]=[\langle a'c',b'd'\rangle]=y'\qedhere
+\end{equation*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{definition}
+The unary operation $-$ on $\mathbb Q$ is defined as $-:\mathbb Q\to\mathbb Q$ where
+\begin{align*}
+\forall x(x\in-\leftrightarrow\exists\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*
+(x=\langle[\langle a,b\rangle],[\langle -a,b\rangle]\rangle))
+\end{align*}
+\end{definition}
+\noindent(Existence follows from using $\mathbb Q\times\mathbb Q$ as a bounding set.)
+\begin{proof}(Domain/Range bounds, Well-definedness, Functionality)
 
 
 
 
 \end{proof}
-
-
-
 
 
 
