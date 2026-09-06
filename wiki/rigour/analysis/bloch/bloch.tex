@@ -1978,10 +1978,26 @@ The unary operation $^{-1}$ on $\mathbb Q^*$ is defined as $^{-1}:\mathbb Q^*\to
 \end{equation*}
 \end{definition}
 \noindent(Existence follows from using $\mathbb Q^*\times\mathbb Q^*$ as a bounding set.)
-\begin{proof}
+\begin{proof}(Domain/Range bounds, Well-definedness, Functionality)
+First the domain bound dom$(^{-1})=\mathbb Q^*$.
+Let arbitrary $x\in\text{dom}(^{-1})$. There then exists $y$ such that $\langle x,y\rangle\in^{-1}$.
+By definition there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=[\langle a,b\rangle]\in\mathbb Q$ and $[\langle a,b\rangle]\neq\bar0$. It immediately follows that 
+$x\in\mathbb Q-\{\bar0\}=\mathbb Q^*$.
+Next let arbitrary $x\in\mathbb Q^*$. By definition we then have $x\neq\bar0$. By definition there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=[\langle a,b\rangle]$. 
+So $\langle[\langle a,b\rangle],[\langle b,a\rangle]\rangle\in^{-1}$ and $x\in\text{dom}(^{-1})$.\\
+(next page)\newpage
+We show
+\begin{equation*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*([\langle a,b\rangle]\neq\bar0\to a\neq0)
+\end{equation*}
+Let arbitrary $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that $a=0$. It follows that $a\cdot1=0=b\cdot0$. So $[\langle a,b\rangle]=[\langle 0,1\rangle]=\bar0$.\\
+\indent Next the range bound ran$(^{-1})\subseteq\mathbb Q^*$.
+
 
 
 \end{proof}
+
+
 
 
 
