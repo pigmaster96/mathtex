@@ -1997,14 +1997,27 @@ $\langle x,y\rangle\in^{-1}$ and $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^
 $[\langle a,b\rangle]\neq\bar0$. It follows then that $a\neq0$ and $\langle b,a\rangle\in\mathbb Z\times\mathbb Z^*$. 
 So $y=[\langle b,a\rangle]\in\mathbb Q$. Since $b\neq0$ it also follows that $[\langle b,a\rangle]\neq\bar0$ and $y\in\mathbb Q-\{\bar0\}=\mathbb Q^*$.\\
 \indent Now for well-definedness, that is
-
-
-
-
-
-
+\begin{equation*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*
+\forall\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*([\langle a,b\rangle]=[\langle a',b'\rangle]\to[\langle b,a\rangle]=[\langle b',a'\rangle])
+\end{equation*}
+Let arbitrary $\langle a,b\rangle,\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*$ and suppose that 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$. It follows that
+$ab'=ba'$, which, by commutativity on integer multiplication, implies
+$b'a=a'b$; so $\langle b',a'\rangle\asymp\langle b,a\rangle$ and 
+$[\langle b,a\rangle]=[\langle b',a'\rangle]$.\\
+\indent Finally functionality. Let arbitrary $x\in\text{dom}(^{-1})$. There then exists $y$ such that $\langle x,y\rangle\in^{-1}$, and $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$\langle x,y\rangle=\langle[\langle a,b\rangle],[\langle b,a\rangle]\rangle$. Let $y'$ be arbitrary such that $\langle x,y'\rangle\in^{-1}$. 
+Then there exists $\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$\langle x,y'\rangle=\langle[\langle a',b'\rangle],[\langle b',a'\rangle]\rangle$. So $[\langle a,b\rangle]=[\langle a',b'\rangle]$. 
+It follows from well-definedness that $y=[\langle b,a\rangle]=[\langle b',a'\rangle]=y'$.
 \end{proof}
-
+\begin{definition}
+The binary relation $<$ on $\mathbb Q$ is defined such that
+\begin{align*}
+a
+\end{align*}
+\end{definition}
 
 
 
