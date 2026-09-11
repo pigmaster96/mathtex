@@ -2015,9 +2015,37 @@ It follows from well-definedness that $y=[\langle b,a\rangle]=[\langle b',a'\ran
 \begin{definition}
 The binary relation $<$ on $\mathbb Q$ is defined such that
 \begin{align*}
-a
+\forall x(x\in<&\leftrightarrow\exists\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*
+\exists\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*(x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\\
+\land&((ad<bc\land((d>0\land b>0)\lor(d<0\land b<0)))\\
+&\lor(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0))))))
 \end{align*}
 \end{definition}
+\noindent(Existence follows from using $\mathbb Q\times\mathbb Q$ as a bounding set.)
+\begin{proof}(Range/Domain bound and well-definedness)
+Showing $<\subseteq\mathbb Q\times\mathbb Q$ is straighforward. Let arbitrary $x\in<$. Then by definition exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ 
+such that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$. So $x\in\mathbb Q\times\mathbb Q$.\\
+\indent Next well-definedness. That is
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c,d\rangle&\in\mathbb Z\times\mathbb Z^*
+\forall\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*(\\
+([\langle a,b\rangle]=&[\langle a',b'\rangle]\land[\langle c,d\rangle]=[\langle c',d'\rangle]\\
+&\to([\langle a,b\rangle]<[\langle c,d\rangle]\leftrightarrow[\langle a',b'\rangle]<[\langle c',d'\rangle])))
+\end{align*}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$ and suppose that
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. So
+$ab'=ba'$ and $cd'=dc'$.\\
+(next page)\newpage
+Suppose $[\langle a,b\rangle]<[\langle c,d\rangle]$; this implies 
+\begin{align*}
+i
+\end{align*}
+
+
+
+
+\end{proof}
+
 
 
 
