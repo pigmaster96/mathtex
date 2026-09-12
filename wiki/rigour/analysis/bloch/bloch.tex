@@ -1791,6 +1791,24 @@ Supposing $x=-1=y$ we have $xy=(-1)(-1)=1\cdot1=1$.
 \end{proof}
 \newpage
 
+\subsection{More proofs}
+\begin{theorem}
+\begin{equation*}
+\forall a\in\mathbb Z\forall b\in\mathbb Z(ab>0\to((a<0\land b<0)\lor(a>0\land b>0)))
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $a,b\in\mathbb Z$ such that $ab>0$. We have three cases.\\
+\indent Case 1: $a=0$. Then $ab=0\cdot b=0$, contradicting $ab>0$.\\
+\indent Case 2: $a<0$. First suppose $b=0$. Then $ab=a\cdot0=0$, which is a contradiction.
+Next suppose $b>0$. Then $a<0$ implies $ab<0\cdot b=0$, which is again a contradiction. 
+By trichotomy we must then have $b<0$.\\
+\indent Case 3: $a>0$. First suppose $b=0$. Then $ab=a\cdot0=0$, a contradiction.
+Next suppose $b<0$. This implies $ab<a\cdot0=0$, which is a contradiction.
+By trichotomy we must then have $b>0$.
+\end{proof}
+\newpage
+
 \section{Construction of the Rationals}
 \subsection{Construction}
 \begin{definition}
