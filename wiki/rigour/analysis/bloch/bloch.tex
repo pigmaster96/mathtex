@@ -1809,6 +1809,17 @@ By trichotomy we must then have $b>0$.
 \end{proof}
 \begin{theorem}
 \begin{equation*}
+\forall a\in\mathbb Z\forall b\in\mathbb Z(ab<0\to((a<0\land b>0)\lor(a>0\land b<0)))
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $a,b\in\mathbb Z$ such that $ab<0$. We have three cases.\\
+\indent Case 1: $a=0$. Then $ab=0\cdot b=0$, a contradiction.\\
+\indent Case 2: $a<0$. First suppose $b=0$. Then $ab=a\cdot0=0$, a contradiction. Next suppose $b<0$. We know $(-a)>0$ and $(-b)>0$. So $ab=(-a)(-b)>0$, a contradiction. It follows then that $b>0$.\\
+\indent Case 3: $a>0$. First suppose $b=0$. Then $ab=0$, a contradiction. Next suppose $b>0$; then $ab>0$, another contradiction. We must then have $b<0$.
+\end{proof}
+\begin{theorem}
+\begin{equation*}
 \forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(xz<yz\land z>0\to x<y)
 \end{equation*}
 \end{theorem}
@@ -1816,6 +1827,18 @@ By trichotomy we must then have $b>0$.
 Let arbitrary $x,y,z\in\mathbb Z$ such that $xz<yz\land z>0$. Suppose for contradiction that $x\nless y$. By trichotomy we then have two cases:\\
 \indent Case 1: $x=y$. Which implies $xz=yz$, a contradiction.\\
 \indent Case 2: $x>y$. Since $z>0$ we then have $xz>yz$, a contradiction.
+\end{proof}
+\begin{theorem}
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(x<y\land z<0\to xz>yz)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $x,y,z\in\mathbb Z$ such that $x<y$ and $z<0$. We know $-z>0$. So $x(-z)<y(-z)$ and
+$-xz<-yz$. We then have
+\begin{equation*}
+yz=-xz+(xz+yz)<-yz+(xz+yz)=xz\qedhere
+\end{equation*}
 \end{proof}
 \newpage
 
