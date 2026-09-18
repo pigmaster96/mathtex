@@ -1792,7 +1792,7 @@ Supposing $x=-1=y$ we have $xy=(-1)(-1)=1\cdot1=1$.
 \newpage
 
 \subsection{More proofs}
-\begin{theorem}
+\begin{theorem}\label{mp_1}
 \begin{equation*}
 \forall a\in\mathbb Z\forall b\in\mathbb Z(ab>0\to((a<0\land b<0)\lor(a>0\land b>0)))
 \end{equation*}
@@ -1807,7 +1807,7 @@ By trichotomy we must then have $b<0$.\\
 Next suppose $b<0$. This implies $ab<a\cdot0=0$, which is a contradiction.
 By trichotomy we must then have $b>0$.
 \end{proof}
-\begin{theorem}
+\begin{theorem}\label{mp_2}
 \begin{equation*}
 \forall a\in\mathbb Z\forall b\in\mathbb Z(ab<0\to((a<0\land b>0)\lor(a>0\land b<0)))
 \end{equation*}
@@ -1818,19 +1818,9 @@ Let arbitrary $a,b\in\mathbb Z$ such that $ab<0$. We have three cases.\\
 \indent Case 2: $a<0$. First suppose $b=0$. Then $ab=a\cdot0=0$, a contradiction. Next suppose $b<0$. We know $(-a)>0$ and $(-b)>0$. So $ab=(-a)(-b)>0$, a contradiction. It follows then that $b>0$.\\
 \indent Case 3: $a>0$. First suppose $b=0$. Then $ab=0$, a contradiction. Next suppose $b>0$; then $ab>0$, another contradiction. We must then have $b<0$.
 \end{proof}
-\begin{theorem}
+\begin{theorem}\label{mp_3}
 \begin{equation*}
-\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(xz<yz\land z>0\to x<y)
-\end{equation*}
-\end{theorem}
-\begin{proof}
-Let arbitrary $x,y,z\in\mathbb Z$ such that $xz<yz\land z>0$. Suppose for contradiction that $x\nless y$. By trichotomy we then have two cases:\\
-\indent Case 1: $x=y$. Which implies $xz=yz$, a contradiction.\\
-\indent Case 2: $x>y$. Since $z>0$ we then have $xz>yz$, a contradiction.
-\end{proof}
-\begin{theorem}
-\begin{equation*}
-\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z(x<y\land z<0\to xz>yz)
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z((x<y\land z<0)\to xz>yz)
 \end{equation*}
 \end{theorem}
 \begin{proof}
@@ -1839,6 +1829,28 @@ $-xz<-yz$. We then have
 \begin{equation*}
 yz=-xz+(xz+yz)<-yz+(xz+yz)=xz\qedhere
 \end{equation*}
+\end{proof}
+\begin{theorem}\label{mp_4}
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z((xz<yz\land z>0)\to x<y)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $x,y,z\in\mathbb Z$ such that $xz<yz\land z>0$. Suppose for contradiction that $x\nless y$. By trichotomy we then have two cases:\\
+\indent Case 1: $x=y$. Which implies $xz=yz$, a contradiction.\\
+\indent Case 2: $x>y$. Since $z>0$ we then have $xz>yz$, a contradiction.
+\end{proof}
+\noindent(next page)
+\newpage
+\begin{theorem}
+\begin{equation*}\label{mp_5}
+\forall x\in\mathbb Z\forall y\in\mathbb Z\forall z\in\mathbb Z((xz<yz\land z<0)\to x>y)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $x,y,z\in\mathbb Z$ such that $xz<yz$ and $z<0$. Suppose for contradiction that $y\nless x$. We then have two cases:\\
+\indent Case 1: $x=y$. Which implies $xz=yz$, a contradiction.\\
+\indent Case 2: $x<y$. It follows from theorem \ref{mp_3} that $xz>yz$, another contradiction.\qedhere
 \end{proof}
 \newpage
 
@@ -2073,6 +2085,109 @@ The binary relation $<$ on $\mathbb Q$ is defined such that
 \end{align*}
 \end{definition}
 \noindent(Existence follows from using $\mathbb Q\times\mathbb Q$ as a bounding set.)
+\begin{lemma}\label{Q_strict_order_lemma_1}
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*&\forall\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*
+\forall\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*(\\
+([\langle&a,b\rangle]=[\langle a',b'\rangle]\land
+[\langle c,d\rangle]=[\langle c',d'\rangle])\to(\\
+(&(ad<bc\land((d>0\land b>0)\lor(d<0\land b<0)))\\
+&\lor(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0))))\leftrightarrow\\
+&((a'd'<b'c'\land((d'>0\land b'>0)\lor(d'<0\land b'<0)))\\
+&\lor(b'c'<a'd'\land((d'>0\land b'<0)\lor(d'<0\land b'>0))))))
+\end{align*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$. Suppose 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. It follows that $ab'=ba'$ and $cd'=dc'$; so
+\begin{align*}
+(ad)(b'd')&=(ba')(dd')=(bd)(a'd')\\
+(bc)(b'd')&=(dc')(bb')=(bd)(b'c')
+\end{align*}
+(next page)\newpage
+$(\rightarrow)$ First suppose 
+\begin{align*}
+(ad<bc\land&((d>0\land b>0)\lor(d<0\land b<0)))\lor\\
+&(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))
+\end{align*}
+Where we are trying to show
+\begin{align*}
+(a'd'<b'c'\land&((d'>0\land b'>0)\lor(d'<0\land b'<0)))\lor\\
+&(b'c'<a'd'\land((d'>0\land b'<0)\lor(d'<0\land b'>0)))
+\end{align*}
+We know $b,d,b',d'\in\mathbb Z^*$. It then follows easily by contradiction that $bd\neq0$ and $b'd'\neq0$. By trichotomy we have four cases:\\
+\indent Case 1: $bd>0\land b'd'>0$. It follows from theorem \ref{mp_1} that $b<0\land d<0$ or $b>0\land d>0$. See that either possibility would contradict $(d>0\land b<0)\lor(d<0\land b>0)$.
+So by our assumption we must have $ad<bc$. Since $b'd'>0$, we have
+\begin{equation*}
+(ad)(b'd')<(bc)(b'd')
+\end{equation*}
+and by our earlier assumption that 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$, we have
+\begin{equation*}
+(bd)(a'd')<(bd)(b'c')
+\end{equation*}
+Since $bd>0$, it follows by theorem \ref{mp_4} that $a'd'<b'c'$. Since $b'd'>0$, it also follows from theorem \ref{mp_1} that $(b'<0\land d'<0)$ or $(b'>0\land d'>0)$.\\
+\indent Case 2: $bd>0\land b'd'<0$. Similarly we have $ad<bc$. Since $b'd'<0$, it follows from theorem \ref{mp_3} that 
+\begin{equation*}
+(ad)(b'd')>(bc)(b'd')
+\end{equation*}
+and by our first assumption, that
+\begin{equation*}
+(bd)(a'd')>(bd)(b'c')
+\end{equation*}
+Since $bd>0$, theorem \ref{mp_4} gives us $a'd'>b'c'$. Since $b'd'<0$, we also have, by theorem \ref{mp_2}, $(b'<0\land d'>0)$ or $(b'>0\land d'<0)$.\\
+\indent Case 3: $bd<0\land b'd'>0$. By theorem \ref{mp_2}, we have $(b<0\land d>0)$ or $(b>0\land d<0)$. See that either possibility would contradict $(d>0\land b>0)\lor(d<0\land b<0)$, so we must 
+then have $bc<ad$. Since $b'd'>0$, we have
+\begin{equation*}
+(bc)(b'd')<(ad)(b'd')
+\end{equation*}
+and by our first assumption,
+\begin{equation*}
+(bd)(b'c')<(bd)(a'd')
+\end{equation*}
+Since $bd<0$ theorem \ref{mp_5} allows us to conclude that $a'd'<b'c'$. Since $b'd'>0$ we also have, by theorem \ref{mp_1}, $(b'>0\land d'>0)$ or $(b'<0\land d'<0)$.\\
+(next page)\newpage
+Case 4: $bd<0\land b'd'<0$. Similarly it follows that $bc<ad$. Since $b'd'<0$, by theorem \ref{mp_3},
+\begin{equation*}
+(bc)(b'd')>(ad)(b'd')
+\end{equation*}
+and by our first assumption, 
+\begin{equation*}
+(bd)(b'c')>(bd)(a'd')
+\end{equation*}
+Since $bd<0$ theorem \ref{mp_5} allows us to conclude that $b'c'<a'd'$. Since $b'd'<0$, by theorem \ref{mp_2} we have $(b'<0\land d'>0)$ or $(b'>0\land d'<0)$. This proves one direction.\\
+\indent ($\leftarrow$) Suppose instead that
+\begin{align*}
+(a'd'<b'c'\land&((d'>0\land b'>0)\lor(d'<0\land b'<0)))\lor\\
+&(b'c'<a'd'\land((d'>0\land b'<0)\lor(d'<0\land b'>0)))
+\end{align*}
+We now want to show
+\begin{align*}
+(ad<bc\land&((d>0\land b>0)\lor(d<0\land b<0)))\lor\\
+&(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))
+\end{align*}
+Our argument for the forward direction proves
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*&\forall\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*
+\forall\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*(\\
+([\langle&a,b\rangle]=[\langle a',b'\rangle]\land
+[\langle c,d\rangle]=[\langle c',d'\rangle])\to(\\
+(&(ad<bc\land((d>0\land b>0)\lor(d<0\land b<0)))\\
+&\lor(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0))))\to\\
+&((a'd'<b'c'\land((d'>0\land b'>0)\lor(d'<0\land b'<0)))\\
+&\lor(b'c'<a'd'\land((d'>0\land b'<0)\lor(d'<0\land b'>0))))))
+\end{align*}
+The reverse direction immediately follows.
+\end{proof}
+\begin{lemma}\label{Q_strict_order_lemma_2}
+
+
+
+\end{lemma}
+
+
+
+\newpage
 \begin{proof}(Range/Domain bound and well-definedness)
 Showing $<\subseteq\mathbb Q\times\mathbb Q$ is straighforward. Let arbitrary $x\in<$. Then by definition exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ 
 such that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$. So $x\in\mathbb Q\times\mathbb Q$.\\
