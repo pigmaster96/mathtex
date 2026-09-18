@@ -2228,7 +2228,26 @@ By lemma \ref{Q_strict_order_lemma_1} we then have
 applying lemma \ref{Q_strict_order_lemma_2} again we have $[\langle a',b'\rangle]<[\langle c',d'\rangle]$.\\
 \indent ($\leftarrow$) Suppose $[\langle a',b'\rangle]<[\langle c',d'\rangle]$. A similar argument allows us to conclude $[\langle a,b\rangle]<[\langle c,d\rangle]$.
 \end{proof}
+\begin{definition}
+The binary relation $\leq$ on $\mathbb Q$ is defined such that
+\begin{align*}
+\forall x(x\in\leq\leftrightarrow\exists\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*&
+\exists\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*(x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\land\\
+&([\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle])))
+\end{align*}
+\end{definition}
+\noindent(Existence follows from using $\mathbb Q\times\mathbb Q$ as a bounding set.)\\
+(next page)\newpage
+\begin{lemma}
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c,d\rangle\in&\mathbb Z\times\mathbb Z^*([\langle a,b\rangle]\leq[\langle c,d\rangle]\\
+&\leftrightarrow([\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle]))
+\end{align*}
+\end{lemma}
+\begin{proof}
 
+
+\end{proof}
 
 
 
