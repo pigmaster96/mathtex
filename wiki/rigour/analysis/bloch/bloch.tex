@@ -2180,14 +2180,29 @@ Our argument for the forward direction proves
 The reverse direction immediately follows.
 \end{proof}
 \begin{lemma}\label{Q_strict_order_lemma_2}
-
-
-
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*\forall&\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*([\langle a,b\rangle]<[\langle c,d\rangle]\leftrightarrow\\
+((&ad<bc\land((d>0\land b>0)\lor(d<0\land b<0)))\lor\\
+&(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))))
+\end{align*}
 \end{lemma}
-
-
-
-\newpage
+\begin{proof}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$.\\
+\indent($\rightarrow$) Suppose that $[\langle a,b\rangle]<[\langle c,d\rangle]$. By definition there then exists $\langle a',b'\rangle,\\\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$ such that
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$, where
+\begin{align*}
+(a'd'<b'c'&\land((d'>0\land b'>0)\lor(d'<0\land b'<0)))\lor\\
+&(b'c'<a'd'\land((d'>0\land b'<0)\lor(d'<0\land b'>0)))
+\end{align*}
+The desired conclusion immediately follows from lemma \ref{Q_strict_order_lemma_1}.\\
+(next page)\newpage
+($\leftarrow$) Next suppose 
+\begin{align*}
+(ad<bc&\land((d>0\land b>0)\lor(d<0\land b<0)))\lor\\
+&(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))
+\end{align*}
+It immediately follows by definition that $\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in<$.
+\end{proof}
 \begin{proof}(Range/Domain bound and well-definedness)
 Showing $<\subseteq\mathbb Q\times\mathbb Q$ is straighforward. Let arbitrary $x\in<$. Then by definition exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ 
 such that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$. So $x\in\mathbb Q\times\mathbb Q$.\\
@@ -2199,17 +2214,19 @@ such that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$. So $x\in\
 &\to([\langle a,b\rangle]<[\langle c,d\rangle]\leftrightarrow[\langle a',b'\rangle]<[\langle c',d'\rangle])))
 \end{align*}
 Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$ and suppose that
-$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$. So
-$ab'=ba'$ and $cd'=dc'$.\\
-(next page)\newpage
-Suppose $[\langle a,b\rangle]<[\langle c,d\rangle]$; this implies 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$.\\
+\indent($\rightarrow$) Suppose $[\langle a,b\rangle]<[\langle c,d\rangle]$; by lemma \ref{Q_strict_order_lemma_2} we have
 \begin{align*}
-i
+(ad<bc&\land((d>0\land b>0)\lor(d<0\land b<0)))\lor\\
+&(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))
 \end{align*}
-
-
-
-
+By lemma \ref{Q_strict_order_lemma_1} we then have
+\begin{align*}
+(a'd'<b'c'&\land((d'>0\land b'>0)\lor(d'<0\land b'<0)))\lor\\
+&(b'c'<a'd'\land((d'>0\land b'<0)\lor(d'<0\land b'>0)))
+\end{align*}
+applying lemma \ref{Q_strict_order_lemma_2} again we have $[\langle a',b'\rangle]<[\langle c',d'\rangle]$.\\
+\indent ($\leftarrow$) Suppose $[\langle a',b'\rangle]<[\langle c',d'\rangle]$. A similar argument allows us to conclude $[\langle a,b\rangle]<[\langle c,d\rangle]$.
 \end{proof}
 
 
