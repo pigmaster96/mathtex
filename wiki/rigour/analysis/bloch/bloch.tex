@@ -2298,14 +2298,29 @@ Let $x,y,z\in\mathbb Q$.
 \end{theorem}
 \begin{proof}(1)
 We want to show
-
-
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q\forall z\in\mathbb Q((x+y)+z=x+(y+z))
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Q$. Then there exists $\langle a,b\rangle,\langle c,d\rangle,\langle e,f\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. We then have
+\begin{align*}
+(x+y)+z&=([\langle a,b\rangle]+[\langle c,d\rangle])+[\langle e,f\rangle]\\
+&=[\langle ad+bc,bd\rangle]+[\langle e,f\rangle]\\
+&=[\langle(ad+bc)f+(bd)e,(bd)f\rangle]\\
+&=[\langle((ad)f+(bc)f)+(bd)e,(bd)f\rangle]\\
+&=[\langle a(df)+(b(cf)+b(de)),b(df)\rangle]\\
+&=[\langle a(df)+b(cf+de),b(df)\rangle]\\
+&=[\langle a,b\rangle]+[\langle cf+de,df\rangle]\\
+&=[\langle a,b\rangle]+([\langle c,d\rangle]+[\langle e,f\rangle])\\
+&=x+(y+z)\qedhere
+\end{align*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(2)
 
 
 
 \end{proof}
-
-
 
 
 
