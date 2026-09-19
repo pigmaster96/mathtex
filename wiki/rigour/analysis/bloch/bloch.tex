@@ -2238,16 +2238,81 @@ The binary relation $\leq$ on $\mathbb Q$ is defined such that
 \end{definition}
 \noindent(Existence follows from using $\mathbb Q\times\mathbb Q$ as a bounding set.)\\
 (next page)\newpage
-\begin{lemma}
+\begin{lemma}\label{Q_nonstrict_order_lemma_1}
 \begin{align*}
 \forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c,d\rangle\in&\mathbb Z\times\mathbb Z^*([\langle a,b\rangle]\leq[\langle c,d\rangle]\\
 &\leftrightarrow([\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle]))
 \end{align*}
 \end{lemma}
 \begin{proof}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$. First suppose $[\langle a,b\rangle]\leq[\langle c,d\rangle]$.
+By definition there then exists $\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$ such that $[\langle a,b\rangle]=[\langle a',b'\rangle]$, 
+$[\langle c,d\rangle]=[\langle c',d'\rangle]$, and $[\langle a',b'\rangle]<[\langle c',d'\rangle]$ or $[\langle a',b'\rangle]=[\langle c',d'\rangle]$. In the first case where
+$[\langle a',b'\rangle]<[\langle c',d'\rangle]$ it follows from well-definedness of $<$ that 
+$[\langle a,b\rangle]<[\langle c,d\rangle]$. In the other case it immediately follows that
+$[\langle a,b\rangle]=[\langle a',b'\rangle]=[\langle c',d'\rangle]=[\langle c,d\rangle]$.\\
+\indent Next suppose $[\langle a,b\rangle]<[\langle c,d\rangle]\lor[\langle a,b\rangle]=[\langle c,d\rangle]$. It immediately follows by definition that $\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle\in\leq$.
+\end{proof}
+\begin{proof}(domain/range bound and well-definedness) First we show $\leq\subseteq\mathbb Q\times\mathbb Q$. 
+Let arbitrary $x\in\leq$. Then by definition there exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=\langle[\langle a,b\rangle],[\langle c,d\rangle]\rangle$.
+It immediately follows that $x\in\mathbb Q\times\mathbb Q$.\\
+\indent Next well definedness, that is
+\begin{align*}
+\forall\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c,d\rangle&\in\mathbb Z\times\mathbb Z^*
+\forall\langle a',b'\rangle\in\mathbb Z\times\mathbb Z^*\forall\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*(\\
+([\langle a,b\rangle]=&[\langle a',b'\rangle]\land[\langle c,d\rangle]=[\langle c',d'\rangle]\\
+&\to([\langle a,b\rangle]\leq[\langle c,d\rangle]\leftrightarrow[\langle a',b'\rangle]\leq[\langle c',d'\rangle])))
+\end{align*}
+Let arbitrary $\langle a,b\rangle,\langle c,d\rangle,\langle a',b'\rangle,\langle c',d'\rangle\in\mathbb Z\times\mathbb Z^*$ and suppose that
+$[\langle a,b\rangle]=[\langle a',b'\rangle]$ and $[\langle c,d\rangle]=[\langle c',d'\rangle]$.\\
+\indent($\rightarrow$) Suppose $[\langle a,b\rangle]\leq[\langle c,d\rangle]$. By 
+lemma \ref{Q_nonstrict_order_lemma_1} we then have $[\langle a,b\rangle]<[\langle c,d\rangle]$ or
+$[\langle a,b\rangle]=[\langle c,d\rangle]$. In the case where $[\langle a,b\rangle]<[\langle c,d\rangle]$ it follows from the well-definedness of $<$ that 
+$[\langle a',b'\rangle]<[\langle c',d'\rangle]$. In the other case we have 
+$[\langle a,b\rangle]=[\langle a',b'\rangle]=[\langle c',d'\rangle]=[\langle c,d\rangle]$. So 
+$[\langle a',b'\rangle]<[\langle c',d'\rangle]\lor[\langle a',b'\rangle]=[\langle c',d'\rangle]$.
+By lemma \ref{Q_nonstrict_order_lemma_1} we then have $[\langle a',b'\rangle]\leq[\langle c',d'\rangle]$.\\
+\indent The reverse implication follows from the same argument.
+\end{proof}
+\newpage
+
+\subsection{Properties}
+\begin{theorem}\label{rational_arithmetic_1}
+Let $x,y,z\in\mathbb Q$.
+\begin{enumerate}
+\item$(x+y)+z=x+(y+z)$\quad(Associative Law for Addition)
+\item$x+y=y+x$\quad(Commutative Law for Addition)
+\item$x+\bar0=x$\quad(Identity Law for Addition)
+\item$x+(-x)=\bar0$\quad(Inverses Law for Addition)
+\item$(xy)z=x(yz)$\quad(Associative Law for Multiplication)
+\item$xy=yx$\quad(Commutative Law for Multiplication)
+\item$x\cdot\bar1=x$\quad(Identity Law for Multiplication)
+\item If $r\neq\bar0$, then $r\cdot r^{-1}=\bar1$\quad(Inverses Law for Multiplication)
+\item$x(y+z)=xy+xz$\quad(Distributive Law)
+\item Precisely one of $x<y$ or $x=y$ or $x>y$ holds\quad(Trichotomy Law)
+\item If $x<y$ and $y<z$, then $x<z$\quad(Transitive Law)
+\item If $x<y$ then $x+z<y+z$\quad(Addition Law for Order)
+\item If $x<y$ and $z>\bar0$, then $xz<yz$\quad(Multiplication Law for Order)
+\item $\bar0\neq\bar1$\quad(Non-Triviality)
+\end{enumerate}
+\end{theorem}
+\begin{proof}(1)
+We want to show
+
+
+
 
 
 \end{proof}
+
+
+
+
+
+
+
+
+
 
 
 
