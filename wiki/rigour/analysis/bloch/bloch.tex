@@ -1852,6 +1852,15 @@ Let arbitrary $x,y,z\in\mathbb Z$ such that $xz<yz$ and $z<0$. Suppose for contr
 \indent Case 1: $x=y$. Which implies $xz=yz$, a contradiction.\\
 \indent Case 2: $x<y$. It follows from theorem \ref{mp_3} that $xz>yz$, another contradiction.\qedhere
 \end{proof}
+\begin{theorem}\label{mp_6}
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(x<0\land y<0\to xy>0)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $x,y\in\mathbb Z$. Suppose $x<0$ and $y<0$. It follows that $-x>0$ and $-y>0$.
+So $xy=(-x)(-y)>0$.
+\end{proof}
 \newpage
 
 \section{Construction of the Rationals}
@@ -2316,13 +2325,130 @@ $x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$
 \end{align*}
 \end{proof}
 \noindent(next page)\newpage
+\begin{lemma}\label{Q_0_lemma}
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z^*(x=0\leftrightarrow[\langle x,y\rangle]=\bar0)
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $x\in\mathbb Z$ and $y\in\mathbb Z^*$. First suppose that $x=0$. It follows that
+$x\cdot1=0\cdot1=0=y\cdot0$. So $\langle x,y\rangle\asymp\langle 0,1\rangle$ and $[\langle x,y\rangle]=[\langle 0,1\rangle]=\bar0$. Next suppose
+$[\langle x,y\rangle]=\bar0$. Then since $\bar0=[\langle0,1\rangle]$, we have $\langle x,y\rangle\asymp\langle 0,1\rangle$ so
+$x=x\cdot1=y\cdot0=0$.
+\end{proof}
+\begin{lemma}\label{Q_1_lemma}
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z^*(x=y\leftrightarrow[\langle x,y\rangle]=\bar1)
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $x\in\mathbb Z$ and $y\in\mathbb Z^*$. First suppose that $x=y$. Then it follows that
+$x\cdot1=y\cdot1$, meaning $\langle x,y\rangle\asymp\langle 1,1\rangle$ and 
+$[\langle x,y\rangle]=[\langle 1,1\rangle]=\bar1$. Next suppose $[\langle x,y\rangle]=\bar1$. It follows that $\langle x,y\rangle\asymp\langle1,1\rangle$, so $x=x\cdot1=y\cdot1=y$.
+\end{proof}
 \begin{proof}(2)
-
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q(x+y=y+x)
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Q$. Then there exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$.
+We have
+\begin{align*}
+x+y&=[\langle a,b\rangle]+[\langle c,d\rangle]\\
+&=[\langle ad+bc,bd\rangle]\\
+&=[\langle cb+da,db\rangle]\\
+&=[\langle c,d\rangle]+[\langle a,b\rangle]=y+x\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(3)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q(x+\bar0=x)
+\end{equation*}
+Let arbitrary $x\in\mathbb Q$. Then there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$.
+We then have
+\begin{align*}
+x+\bar0&=[\langle a,b\rangle]+[\langle 0,1\rangle]\\
+&=[\langle a\cdot1+b\cdot0,b\cdot1\rangle]\\
+&=[\langle a,b\rangle]=x\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(4)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q(x+(-x)=\bar0)
+\end{equation*}
+Let arbitrary $x\in\mathbb Q$. Then there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$.
+By definition $-x=[\langle-a,b\rangle]$. So 
+\begin{align*}
+x+(-x)&=[\langle a,b\rangle]+[\langle-a,b\rangle]\\
+&=[\langle ab+b(-a),bb\rangle]=[\langle 0,bb\rangle]
+\end{align*}
+Since $b\neq0$, $bb\in\mathbb Z^*$. So by lemma \ref{Q_0_lemma}, $x+(-x)=[\langle 0,bb\rangle]=\bar0$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(5)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q\forall z\in\mathbb Q((xy)z=x(yz))
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Q$. Then there exists $\langle a,b\rangle,\langle c,d\rangle,\langle e,f\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. We then have
+\begin{align*}
+(xy)z&=([\langle a,b\rangle]\cdot[\langle c,d\rangle])\cdot[\langle e,f\rangle]\\
+&=[\langle ac,bd\rangle]\cdot[\langle e,f\rangle]\\
+&=[\langle(ac)e,(bd)f\rangle]\\
+&=[\langle a(ce),b(df)\rangle]\\
+&=[\langle a,b\rangle]\cdot[\langle ce,df\rangle]\\
+&=[\langle a,b\rangle]\cdot([\langle c,d\rangle]\cdot[\langle e,f\rangle])=x(yz)\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(6)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q(xy=yx)
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Q$.
+Then there exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$.
+We then have
+\begin{equation*}
+xy=[\langle a,b\rangle]\cdot[\langle c,d\rangle]=[\langle ac,bd\rangle]=[\langle ca,db\rangle]=
+[\langle c,d\rangle]\cdot[\langle a,b\rangle]=yx\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(7)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q(x\cdot\bar1=x)
+\end{equation*}
+Let arbitrary $x\in\mathbb Q$. Then there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$. We then have
+\begin{equation*}
+x\cdot\bar1=[\langle a,b\rangle]\cdot[\langle 1,1\rangle]=[\langle a\cdot1,b\cdot1\rangle]=[\langle a,b\rangle]=x\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(8)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q(x\neq\bar0\to x\cdot x^{-1}=\bar1)
+\end{equation*}
+Let arbitrary $x\in\mathbb Q$. Then there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$. Suppose $x\neq\bar0$, meaning $x\in\mathbb Q^*$; by definition we then have $x^{-1}=[\langle a,b\rangle]^{-1}=[\langle b,a\rangle]$. So
+\begin{equation*}
+x\cdot x^{-1}=[\langle a,b\rangle]\cdot[\langle b,a\rangle]=[\langle ab,ba\rangle]=[\langle ab,ab\rangle]
+\end{equation*}
+We know $[\langle a,b\rangle]\neq\bar0$, so by lemma \ref{Q_0_lemma} $a\neq0$. Since $b\neq0$ we then know $ab\neq0$ and $ab\in\mathbb Z^*$. 
+So by lemma \ref{Q_1_lemma}, $x\cdot x^{-1}=[\langle ab,ab\rangle]=\bar1$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(9)
 
 
 \end{proof}
-
-
 
 
 
