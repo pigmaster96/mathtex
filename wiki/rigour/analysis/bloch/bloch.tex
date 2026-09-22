@@ -2446,6 +2446,61 @@ So by lemma \ref{Q_1_lemma}, $x\cdot x^{-1}=[\langle ab,ab\rangle]=\bar1$.
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(9)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q\forall z\in\mathbb Q(x(y+z)=xy+xz)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Q$. Then there exists $\langle a,b\rangle,\langle c,d\rangle,\langle e,f\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. We then have
+\begin{align*}
+x(y+z)&=[\langle a,b\rangle]\cdot([\langle c,d\rangle]+[\langle e,f\rangle])\\
+&=[\langle a,b\rangle]\cdot[\langle cf+de,df\rangle]\\
+&=[\langle a(cf+de),b(df)\rangle]\\
+&=[\langle a(cf)+a(de),b(df)\rangle]
+\end{align*}
+We know $b\in\mathbb Z^*$, so by lemma \ref{Q_1_lemma}, $[\langle b,b\rangle]=\bar1$. By (7) we have
+$[\langle a(cf)+a(de),b(df)\rangle]=[\langle a(cf)+a(de),b(df)\rangle]\cdot\bar1$. So
+\begin{align*}
+[\langle a(cf)+a(de),b(df)\rangle]&=[\langle a(cf)+a(de),b(df)\rangle]\cdot\bar1\\
+&=[\langle a(cf)+a(de),b(df)\rangle]\cdot[\langle b,b\rangle]\\
+&=[\langle(a(cf)+a(de))b,(b(df))b\rangle]\\
+&=[\langle(ac)(bf)+(bd)(ae),(bd)(bf)\rangle]\\
+&=[\langle ac,bd\rangle]+[\langle ae,bf\rangle]\\
+&=[\langle a,b\rangle]\cdot[\langle c,d\rangle]+[\langle a,b\rangle]\cdot[\langle e,f\rangle]\\
+&=xy+xz
+\end{align*}
+So $x(y+z)=[\langle a(cf)+a(de),b(df)\rangle]=xy+xz$.
+\end{proof}
+\begin{proof}(10)
+We want to show trichotomy:
+\begin{align*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q(&(x<y\lor x=y\lor y<x)\\
+&\land\neg(x<y\land x=y)\land\neg(x<y\land y<x)\land\neg(x=y\land y<x))
+\end{align*}
+Let arbitrary $x,y\in\mathbb Q$.
+Then there exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$. We start with the latter three statements. 
+First suppose for contradiction that $x<y\land x=y$. The former implies $ad<bc$ or $bc<ad$, while the latter $ad=bc$; either case contradicts trichotomy on $\mathbb Z$.\\
+\indent Next suppose that $x<y$ and $y<x$. We know $bd\neq0$ so we have 2 cases. First suppose $bd>0$. Then it follows that $(b<0\land d<0)\lor(b>0\land d>0)$. $x<y$ would then imply $ad<bc$ while 
+$y<x$ would imply $cb<da$ and $bc<ad$, contradicting trichotomy on $\mathbb Z$. Next suppose $bd<0$. We then have $(b>0\land d<0)\lor(b<0\land d>0)$, where 
+$x<y$ would then imply $bc<ad$ while $y<x$ would imply $da<cb$ and $ad<bc$, contradicting trichotomy.\\
+\indent Next suppose $x=y\land y<x$. The former implies $ad=bc$ while the latter $bc<ad$ or $ad<bc$. Either case contradicts trichotomy.
+\\
+(next page)\newpage
+\indent Finally we prove the first statement. Trichotomy on $\mathbb Z$ gives us $ad<bc\lor ad=bc\lor bc<ad$. We know $b\neq0$ and $d\neq0$. We have the following cases:\\
+\indent Case 1a: $ad<bc$, $b<0$, $d<0$. Then $[\langle a,b\rangle]<[\langle c,d\rangle]$ and $x<y$.\\
+\indent Case 1b: $ad<bc$, $b<0$, $d>0$. Then $[\langle c,d\rangle]<[\langle a,b\rangle]$ and $y<x$.\\
+\indent Case 1c: $ad<bc$, $b>0$, $d<0$. Then $[\langle c,d\rangle]<[\langle a,b\rangle]$ and $y<x$.\\
+\indent Case 1d: $ad<bc$, $b>0$, $d>0$. Then $[\langle a,b\rangle]<[\langle c,d\rangle]$ and $x<y$.\\
+\indent Case 2: $ad=bc$. Then $[\langle a,b\rangle]=[\langle c,d\rangle]$ and $x=y$.\\
+\indent Case 3a: $bc<ad$, $b<0$, $d<0$. Then $[\langle c,d\rangle]<[\langle a,b\rangle]$ and $y<x$.\\
+\indent Case 3b: $bc<ad$, $b<0$, $d>0$. Then $[\langle a,b\rangle]<[\langle c,d\rangle]$ and $x<y$.\\
+\indent Case 3c: $bc<ad$, $b>0$, $d<0$. Then $[\langle a,b\rangle]<[\langle c,d\rangle]$ and $x<y$.\\
+\indent Case 3d: $bc<ad$, $b>0$, $d>0$. Then $[\langle c,d\rangle]<[\langle a,b\rangle]$ and $y<x$.
+\end{proof}
+\begin{proof}(11)
+We want to show
+
 
 
 \end{proof}
