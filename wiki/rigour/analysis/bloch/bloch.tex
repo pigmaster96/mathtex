@@ -2500,12 +2500,98 @@ $x<y$ would then imply $bc<ad$ while $y<x$ would imply $da<cb$ and $ad<bc$, cont
 \end{proof}
 \begin{proof}(11)
 We want to show
-
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q\forall z\in\mathbb Q((x<y\land y<z)\to x<z)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Q$. Then there exists $\langle a,b\rangle,\langle c,d\rangle,\langle e,f\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. Suppose $x<y$ and $y<z$. $x<y$ implies
+\begin{align*}
+(ad<bc\land((d>0\land b>0)\lor&(d<0\land b<0)))\\
+&\lor(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))
+\end{align*}
+and $y<z$ implies
+\begin{align*}
+(cf<de\land((f>0\land d>0)\lor&(f<0\land d<0)))\\
+&\lor(de<cf\land((f>0\land d<0)\lor(f<0\land d>0)))
+\end{align*}
+We have 8 cases.\\
+\indent Case 1a: $(ad<bc\land((d>0\land b>0)\lor(d<0\land b<0)))$, $(cf<de\land((f>0\land d>0)\lor(f<0\land d<0)))$, $b>0$. We must have $d>0$ and then $f>0$.
+So $(ad)f<(bc)f$ and $b(cf)<b(de)$, which, by integer transitivity, implies $d(af)<d(be)$ and therefore $af<be$. This, together with $f>0$ and $b>0$, implies 
+$[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.\\
+\indent Case 1b: $(ad<bc\land((d>0\land b>0)\lor(d<0\land b<0)))$, $(cf<de\land((f>0\land d>0)\lor(f<0\land d<0)))$, $b<0$. We must have $d<0$ and then $f<0$.
+So $(ad)f>(bc)f$ and $b(cf)>b(de)$, which, by integer transitivity, implies $d(af)>d(be)$ and therefore $af<be$. This, together with $f<0$ and $b<0$, implies 
+$[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.\\
+\indent Case 2a: $(ad<bc\land((d>0\land b>0)\lor(d<0\land b<0)))$, $(de<cf\land((f>0\land d<0)\lor(f<0\land d>0)))$, $b>0$. We must have $d>0$ and then $f<0$.
+So $(ad)f>(bc)f$ and $b(de)<b(cf)$, which, by integer transitivity, implies $d(be)<d(af)$ and therefore $be<af$. This, together with $f<0$ and $b>0$, implies 
+$[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.\\
+(next page)\newpage
+\indent Case 2b: $(ad<bc\land((d>0\land b>0)\lor(d<0\land b<0)))$, $(de<cf\land((f>0\land d<0)\lor(f<0\land d>0)))$, $b<0$. We must have $d<0$ and then $f>0$.
+So $(ad)f<(bc)f$ and $b(de)>b(cf)$, which, by integer transitivity, implies $d(af)<d(be)$ and therefore $be<af$. This, together with $f>0$ and $b<0$, implies 
+$[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.\\
+\indent Case 3a: $(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))$, $(cf<de\land((f>0\land d>0)\lor(f<0\land d<0)))$, $b>0$. We must have $d<0$ and then $f<0$. So
+$(bc)f>(ad)f$ and $b(cf)<b(de)$, which, by integer transitivity, implies $d(af)<d(be)$ and therefore $be<af$. This, together with $f<0$ and $b>0$, implies 
+$[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.\\
+\indent Case 3b: $(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))$, $(cf<de\land((f>0\land d>0)\lor(f<0\land d<0)))$, $b<0$. We must have $d>0$ and then $f>0$. So
+$(bc)f<(ad)f$ and $b(cf)>b(de)$, which, by integer transitivity, implies $d(af)>d(be)$ and therefore $be<af$. This, together with $f>0$ and $b<0$, implies 
+$[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.\\
+\indent Case 4a: $(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))$, $(de<cf\land((f>0\land d<0)\lor(f<0\land d>0)))$, $b>0$. We must then have $d<0$ and then $f>0$.
+So $(bc)f<(ad)f$ and $b(de)<b(cf)$, which, by integer transitivity, implies $d(af)>d(be)$ and therefore $af<be$. This, together with $f>0$ and $b>0$, implies 
+$[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.\\
+\indent Case 4b: $(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))$, $(de<cf\land((f>0\land d<0)\lor(f<0\land d>0)))$, $b<0$. We must then have $d>0$ and then $f<0$.
+So $(bc)f>(ad)f$ and $b(de)>b(cf)$, which, by integer transitivity, implies $d(af)<d(be)$ and therefore $af<be$. This, together with $f<0$ and $b<0$, implies 
+$[\langle a,b\rangle]<[\langle e,f\rangle]$ and $x<z$.
+\end{proof}
+\begin{proof}(12)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q\forall z\in\mathbb Q(x<y\to x+z<y+z)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Q$. Then there exists $\langle a,b\rangle,\langle c,d\rangle,\langle e,f\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. Suppose $x<y$, which implies
+\begin{align*}
+(ad<bc\land((d>0\land b>0)\lor&(d<0\land b<0)))\\
+&\lor(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))
+\end{align*}
+First suppose $bd>0$. It follows that $(b>0\land d>0)\lor(b<0\land d<0)$ and then that $ad<bc$.
+We know $f\neq0$ so $f>0$ or $f<0$, where in either case $ff>0$. So
+\begin{equation*}
+(ad)(df)=(ad)(ff)<(bc)(ff)=(bf)(cf)
+\end{equation*}
+and
+\begin{equation*}
+(af+be)(df)=(ad)(df)+(be)(df)<(bf)(cf)+(be)(df)=(bf)(cf+de)
+\end{equation*}
+(next page)\newpage
+\indent We know $(af+be)(df)<(bf)(cf+de)$. 
+We have four cases:\\
+\indent Case 1: $(b>0\land d>0)$, $f>0$. Then $bf>0$ and $df>0$. This, combined with the above, implies $[\langle af+be,bf\rangle]<[\langle cf+de,df\rangle]$. We have
+\begin{equation*}
+x+z=[\langle a,b\rangle]+[\langle e,f\rangle]=[\langle af+be,bf\rangle]
+<[\langle cf+de,df\rangle]=[\langle c,d\rangle]+[\langle e,f\rangle]=y+z
+\end{equation*}
+\indent Case 2: $(b>0\land d>0)$, $f<0$. Then $bf<0$ and $df<0$, implying $[\langle af+be,bf\rangle]<[\langle cf+de,df\rangle]$ and, similarly, $x+z<y+z$.\\
+\indent Case 3: $(b<0\land d<0)$, $f>0$. Then $bf<0$ and $df<0$, where an identical argument to case 2 implies $x+z<y+z$.\\
+\indent Case 4: $(b<0\land d<0)$, $f<0$. Then $bf>0$ and $df>0$, where an identical argument to case 1 implies $x+z<y+z$.\\
+\indent Next suppose $bd<0$. It follows that $(d>0\land b<0)\lor(d<0\land b>0)$, and then $bc<ad$. We then have
+\begin{equation*}
+(bf)(cf)=(bc)(ff)<(ad)(ff)=(af)(df)
+\end{equation*}
+and
+\begin{equation*}
+(bf)(cf+de)=(bf)(cf)+(bf)(de)<(af)(df)+(bf)(de)=(af+be)(df)
+\end{equation*}
+Again we have four cases.\\
+\indent Case 1: $(b<0\land d>0)$, $f>0$. Then $bf<0$ and $df>0$. This, combined with the fact that 
+$(bf)(cf+de)<(af+be)(df)$, implies $[\langle af+be,bf\rangle]<[\langle cf+de,df\rangle]$, which means $x+z<y+z$.\\
+\indent Case 2: $(b<0\land d>0)$, $f<0$. Then $bf>0$ and $df<0$. This also implies $[\langle af+be,bf\rangle]<[\langle cf+de,df\rangle]$, which means $x+z<y+z$.\\
+\indent Case 3: $(b>0\land d<0)$, $f>0$. Then $bf>0$ and $df<0$, where an identical argument to case 2 implies $x+z<y+z$.\\
+\indent Case 4: $(b>0\land d<0)$, $f<0$. Then $bf<0$ and $df>0$, where an identical argument to case 1 implies $x+z<y+z$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(13)
 
 
 \end{proof}
-
-
 
 
 
