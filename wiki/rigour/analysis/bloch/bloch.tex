@@ -2660,11 +2660,84 @@ Let $i:\mathbb Z\to\mathbb Q$ be defined by $i(x)=[\langle x,1\rangle]$ for all 
 \end{theorem}
 \begin{proof}(1)
 We start with the domain bound dom$(i)=\mathbb Z$.
-
-
-
-
+Let arbitrary $x\in\text{dom}(i)$. Then there exists $y$ such that $\langle x,y\rangle\in i$. By definition there then exists $a\in\mathbb Z$ such that $x=a$. Next let $x\in\mathbb Z$. Then 
+by definition $\langle x,[\langle x,1\rangle]\rangle\in i$. So $x\in\text{dom}(i)$.\\
+\indent Next the range bound ran$(i)\subseteq\mathbb Q$. Let arbitary $y\in\text{ran}(i)$; then there exists $x$ such that $\langle x,y\rangle\in i$. By definition there then exists $a\in\mathbb Z$ 
+such that $y=[\langle a,1\rangle]$. Since $\langle a,1\rangle\in\mathbb Z\times\mathbb Z^*$, $y\in\mathbb Q$.\\
+\indent Next, functionality. Let $x\in\text{dom}(i)$. Then there exists $y$ such that $\langle x,y\rangle\in i$, and then $a\in\mathbb Z$ such that 
+$\langle x,y\rangle=\langle a,[\langle a,1\rangle]\rangle$.
+Let $y'$ be arbitrary such that $\langle x,y'\rangle\in i$. Then there exists $a'\in\mathbb Z$ such that $\langle x,y'\rangle=\langle a',[\langle a',1\rangle]\rangle$. 
+It follows then that $a=x=a'$, and therefore $a\cdot1=1\cdot a'$. This means $\langle a,1\rangle\asymp\langle a',1\rangle$ and $y=[\langle a,1\rangle]=[\langle a',1\rangle]=y'$.\\
+\indent Finally injectivity. Let arbitrary $y\in\text{ran}(i)$. There then exists $x$ such that $\langle x,y\rangle\in i$, and therefore $a\in\mathbb Z$ such that 
+$\langle x,y\rangle=\langle a,[\langle a,1\rangle]\rangle$. Let $x'$ be arbitrary such that $\langle x',y\rangle\in i$. Then there exists $a'\in\mathbb Z$ such that 
+$\langle x',y\rangle=\langle a',[\langle a',1\rangle]\rangle$.
+We know $[\langle a,1\rangle]=y=[\langle a',1\rangle]$, so $x=a=a\cdot1=1\cdot a'=a'=x'$.
 \end{proof}
+\begin{proof}(2)
+By definition $\langle 0,[\langle 0,1\rangle]\rangle\in i$. So $i(0)=[\langle 0,1\rangle]=\bar0$.
+We also have by definition that $\langle 1,[\langle 1,1\rangle]\rangle\in i$. So $i(1)=[\langle 1,1\rangle]=\bar1$.
+\end{proof}
+\begin{proof}(3a)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(i(x+y)=i(x)+i(y))
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. By definition $\langle x+y,[\langle x+y,1\rangle]\rangle\in i$.
+It then follows by definition of $+$ that
+\begin{equation*}
+i(x+y)=[\langle x+y,1\rangle]=[\langle x,1\rangle]+[\langle y,1\rangle]=i(x)+i(y)\qedhere
+\end{equation*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(3b)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z(i(-x)=-i(x))
+\end{equation*}
+Let arbitrary $x\in\mathbb Z$. By definition $\langle-x,[\langle-x,1\rangle]\rangle\in i$. So
+\begin{equation*}
+i(-x)=[\langle-x,1\rangle]=-[\langle x,1\rangle]=-i(x)\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(3c)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(i(xy)=i(x)i(y))
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. By definition $\langle xy,[\langle xy,1\rangle]\rangle\in i$. So
+\begin{equation*}
+i(xy)=[\langle xy,1\rangle]=[\langle x,1\rangle]\cdot[\langle y,1\rangle]=i(x)i(y)\qedhere
+\end{equation*}
+\end{proof}
+\begin{proof}(3d)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Z\forall y\in\mathbb Z(x<y\leftrightarrow i(x)<i(y))
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Z$. By definition $i(x)<i(y)$ is equivalent to $[\langle x,1\rangle]<[\langle y,1\rangle]$, which is equivalent to 
+\begin{align*}
+(x<y\land&((1>0\land 1>0)\lor1<0\land1<0))\\
+&\lor(y<x\land((1>0\land 1<0)\lor1<0\land1>0))
+\end{align*}
+Since $1<0$ is a contradiction, this statement is equivalent to $x<y$.
+\end{proof}
+\begin{proof}(4)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q\exists a\in\mathbb Z\exists b\in\mathbb Z(b\neq0\land x=i(a)(i(b))^{-1})
+\end{equation*}
+Let arbitrary $x\in\mathbb Q$. Then there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$.
+Since $b\in\mathbb Z$, $b\neq0$. By lemma \ref{Q_0_lemma} we have $[\langle b,1\rangle]\neq\bar0$. By definition, 
+$\langle[\langle b,1\rangle],[\langle 1,b\rangle]\rangle\in^{-1}$, so
+\begin{equation*}
+x=[\langle a,b\rangle]=[\langle a,1\rangle]\cdot[\langle 1,b\rangle]=[\langle a,1\rangle]\cdot[\langle b,1\rangle]^{-1}=i(a)(i(b))^{-1}\qedhere
+\end{equation*}
+\end{proof}
+\newpage
+
+\subsection{}
+
 
 
 
