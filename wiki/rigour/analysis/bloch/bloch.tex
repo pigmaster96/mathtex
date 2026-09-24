@@ -2589,9 +2589,86 @@ $(bf)(cf+de)<(af+be)(df)$, implies $[\langle af+be,bf\rangle]<[\langle cf+de,df\
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(13)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q\forall z\in\mathbb Q((x<y\land z>\bar0)\to xz<yz)
+\end{equation*}
+Let arbitrary $x,y,z\in\mathbb Q$. Then there exists $\langle a,b\rangle,\langle c,d\rangle,\langle e,f\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$. Suppose $x<y$, which implies
+\begin{align*}
+(ad<bc\land((d>0\land b>0)\lor&(d<0\land b<0)))\\
+&\lor(bc<ad\land((d>0\land b<0)\lor(d<0\land b>0)))
+\end{align*}
+Suppose $z>\bar0$. It follows by definition that
+\begin{align*}
+(0<e\land((f>0\land 1>0)\lor&(f<0\land 1<0)))\lor\\
+&(e<0\land((f>0\land 1<0)\lor(f<0\land 1>0)))
+\end{align*}
+Which is equivalent to 
+\begin{equation*}
+(0<e\land f>0)\lor(e<0\land f<0)
+\end{equation*}
+First suppose $bd>0$. It follows that $(b>0\land d>0)\lor(b<0\land d<0)$ and then that $ad<bc$.
+We have 2 cases. First suppose $f>0$. This immediately implies that $e>0$, so $ef>0$ and
+\begin{equation*}
+(ae)(df)=(ad)(ef)<(bc)(ef)=(bf)(ce)
+\end{equation*}
+We also have $(bf>0\land df>0)\lor(bf<0\land df<0)$. By definition this implies $[\langle ae,bf\rangle]<[\langle ce,df\rangle]$, and
+\begin{equation*}
+xz=[\langle a,b\rangle]\cdot[\langle e,f\rangle]=[\langle ae,bf\rangle]<[\langle ce,df\rangle]=
+[\langle c,d\rangle]\cdot[\langle e,f\rangle]=yz
+\end{equation*}
+Next suppose $f<0$. This implies $e<0$, so $ef>0$. A similar argument as in the first case allows us to conclude $(ae)(df)<(bf)(ce)$. Again we also have $(bf>0\land df>0)\lor(bf<0\land df<0)$, 
+so $[\langle ae,bf\rangle]<[\langle ce,df\rangle]$ and $xz<yz$.\\
+\indent Next suppose $bd<0$. It follows that $(d>0\land b<0)\lor(d<0\land b>0)$, and then that $bc<ad$. Again we have 2 cases. First suppose $f>0$. Then $e>0$ and $ef>0$. So
+\begin{equation*}
+(bf)(ce)=(bc)(ef)<(ad)(ef)=(ae)(df)
+\end{equation*}
+We also have $(df>0\land bf<0)\lor(df<0\land bf>0)$. By definition this means 
+$[\langle ae,bf\rangle]<[\langle ce,df\rangle]$, and, similarly to the previous cases, $xz<yz$. Next suppose $f<0$. Then $e<0$ and $ef>0$. 
+A similar argument as in the first case allows us to conclude $(bf)(ce)<(ae)(df)$. Again we also have $(df>0\land bf<0)\lor(df<0\land bf>0)$, so 
+$[\langle ae,bf\rangle]<[\langle ce,df\rangle]$ and $xz<yz$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(14)
+We want to show $\bar0\neq\bar1$. Suppose for contradiction that they are equal. Then $[\langle 0,1\rangle]=[\langle 1,1\rangle]$, implying $0=0\cdot1=1\cdot1=1$, 
+which contradicts integer nontriviality.
+\end{proof}
+\noindent\textbf{Terminology}\\
+The properties of the rational numbers listed here are satisfied by other number systems as well (such as the reals), and are sufficiently important to merit special terminology. Any set with
+two binary operations that satisfies parts (1)-(9) is called a "field", and any field that also has a relation that satisfies parts (10)-(14) is called an "ordered field".
+\newpage
+
+\subsection{Joining the integers and the rationals}
+\begin{theorem}
+Let $i:\mathbb Z\to\mathbb Q$ be defined by $i(x)=[\langle x,1\rangle]$ for all $x\in\mathbb Z$. That is,
+\begin{equation*}
+\forall x(x\in i\leftrightarrow\exists a\in\mathbb Z(x=\langle a,[\langle a,1\rangle]\rangle))
+\end{equation*}
+\begin{enumerate}
+\item The function $i:\mathbb Z\to\mathbb Q$ is injective.
+\item $i(0)=\bar0$ and $i(1)=\bar1$.
+\item Let $x,y\in\mathbb Z$. Then
+\begin{enumerate}
+\item $i(x+y)=i(x)+i(y)$
+\item $i(-x)=-i(x)$
+\item $i(xy)=i(x)i(y)$
+\item $x<y$ if and only if $i(x)<i(y)$
+\end{enumerate}
+\item For each $x\in\mathbb Q$ there are $a,b\in\mathbb Z$ such that $b\neq0$ and $x=i(a)(i(b))^{-1}$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}(1)
+We start with the domain bound dom$(i)=\mathbb Z$.
+
+
 
 
 \end{proof}
+
+
+
+
 
 
 
