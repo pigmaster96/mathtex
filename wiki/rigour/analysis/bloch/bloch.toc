@@ -21,4 +21,4 @@
 \contentsline {subsection}{\numberline {1.3.2}Operations}{49}{}%
 \contentsline {subsection}{\numberline {1.3.3}Properties}{57}{}%
 \contentsline {subsection}{\numberline {1.3.4}Joining the integers and the rationals}{66}{}%
-\contentsline {subsection}{\numberline {1.3.5}}{68}{}%
+\contentsline {subsection}{\numberline {1.3.5}More operations}{68}{}%
