@@ -2743,20 +2743,96 @@ The binary operation $-:\mathbb Q\times\mathbb Q\to\mathbb Q$ is defined as
 \forall x(x\in-\leftrightarrow\exists a\in\mathbb Q\exists b\in\mathbb Q(x=\langle\langle a,b\rangle,a+(-b)\rangle))
 \end{equation*}
 \end{definition}
-\begin{proof} 
-
+\begin{proof}(domain/range/functionality)
+First we show dom$(-)=\mathbb Q\times\mathbb Q$. Let arbitrary $x\in-$. Then there exists $y$ such that $\langle x,y\rangle\in-$. There then exists $a,b\in\mathbb Q$ such that 
+$x=\langle a,b\rangle$. So $x\in\mathbb Q\times\mathbb Q$. Next let arbitrary $x\in\mathbb Q\times\mathbb Q$. 
+Then there exists $a,b\in\mathbb Q$ such that $x=\langle a,b\rangle$. By definition $\langle\langle a,b\rangle,a+(-b)\rangle\in-$. So $x=\langle a,b\rangle\in\text{dom}(-)$.\\
+\indent Next we show ran$(-)\subseteq\mathbb Q$. Let arbitrary $y\in\text{ran}(-)$. Then there exists $x$ such that $\langle x,y\rangle\in-$, and $a,b\in\mathbb Q$ such that $y=a+(-b)$. 
+So $y\in\mathbb Q$.\\
+\indent Finally functionality. Let arbitrary $x\in\text{dom}(-)$. There exists $y$, and there exists $a,b\in\mathbb Q$ such that $\langle x,y\rangle=\langle\langle a,b\rangle,a+(-b)\rangle\in-$. 
+Let $y'$ be arbitrary such that $\langle x,y'\rangle\in-$. Then there exists 
+$a',b'\in\mathbb Q$ such that $\langle x,y'\rangle=\langle\langle a',b'\rangle,a'+(-b')\rangle\in-$. 
+We have $\langle a,b\rangle=x=\langle a',b'\rangle$. So $y=a+(-b)=a'+(-b')=y'$.
 \end{proof}
 \begin{definition}
 The binary operation $\div:\mathbb Q\times\mathbb Q^*\to\mathbb Q$ is defined as
 \begin{equation*}
 \forall x(x\in\div\leftrightarrow\exists a\in\mathbb Q\exists b\in\mathbb Q^*(x=\langle\langle a,b\rangle,ab^{-1}\rangle))
 \end{equation*}
+The number $a\div b$ is also denoted $\frac{a}{b}$.
 \end{definition}
-\begin{proof}
+\begin{proof}(domain/range/functionality)
+First we show dom$(\div)=\mathbb Q\times\mathbb Q^*$. Let arbitrary $x\in\text{dom}(\div)$.
+Then there exists $y$ such that $\langle x,y\rangle\in\div$. Then there also exists $a\in\mathbb Q$ and $b\in\mathbb Q^*$ such that $x=\langle a,b\rangle$. So $x\in\mathbb Q\times\mathbb Q^*$.
+Next let arbitrary $x\in\mathbb Q\times\mathbb Q^*$. Then there exists $a\in\mathbb Q$ and $b\in\mathbb Q^*$ such that $x=\langle a,b\rangle$. By definition
+$\langle\langle a,b\rangle,ab^{-1}\rangle\in\div$. So $x=\langle a,b\rangle\in\text{dom}(\div)$.\\
+\indent Next we show ran$(\div)\subseteq\mathbb Q$. Let arbitrary $y\in\text{ran}(\div)$. By definition there exists $x$ such that $\langle x,y\rangle\in\div$, and therefore
+$a\in\mathbb Q$ and $b\in\mathbb Q^*$ such that $y=ab^{-1}$. Since $\cdot:\mathbb Q\times\mathbb Q\to\mathbb Q$, $y=ab^{-1}\in\mathbb Q$.\\
+\indent Finally functionality. Letting arbitary $x\in\text{dom}(\div)$,
+there exists $y$ such that $\langle x,y\rangle\in\div$, as well as $a\in\mathbb Q$ and $b\in\mathbb Q^*$ such that 
+$\langle x,y\rangle=\langle\langle a,b\rangle,ab^{-1}\rangle$.
+Let $y'$ be arbitary such that $\langle x,y'\rangle\in\div$. Then there exists 
+$a'\in\mathbb Q$ and $b'\in\mathbb Q^*$ such that 
+$\langle x,y'\rangle=\langle\langle a',b'\rangle,a'(b')^{-1}\rangle$.
+It follows that $\langle a,b\rangle=x=\langle a',b'\rangle$ and then $y=ab^{-1}=a'(b')^{-1}=y'$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+Let $a,c\in\mathbb Z$ and $b,d\in\mathbb Z^*$. We had defined $i:\mathbb Z\to\mathbb Q$ as
+\begin{equation*}
+\forall x(x\in i\leftrightarrow\exists a\in\mathbb Z(x=\langle a,[\langle a,1\rangle]\rangle))
+\end{equation*}
+We then have
+\begin{enumerate}
+\item$\frac{i(a)}{i(b)}=\frac{i(c)}{i(d)}$ if and only if $ad=bc$
+\item$\frac{i(a)}{i(b)}+\frac{i(c)}{i(d)}=\frac{i(a)i(d)+i(b)i(c)}{i(b)i(d)}$
+\item$-\frac{i(a)}{i(b)}=\frac{-i(a)}{i(b)}$
+\item$\frac{i(a)}{i(b)}\cdot\frac{i(c)}{i(d)}=\frac{i(a)i(c)}{i(b)i(d)}$
+\item If $a\neq0$, then $\left(\frac{i(a)}{i(b)}\right)^{-1}=\frac{i(b)}{i(a)}$
+\item If $b>0$ and $d>0$ or if $b<0$ and $d<0$, then $\frac{i(a)}{i(b)}<\frac{i(c)}{i(d)}$ if and only if $ad<bc$;\\
+If $b>0$ and $d<0$ or if $b<0$ and $d>0$, then $\frac{i(a)}{i(b)}<\frac{i(c)}{i(d)}$ if and only if $ad>bc$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}(1)
+Let arbitrary $a,c\in\mathbb Z$ and $b,d\in\mathbb Z^*$.
+By definition
+\begin{align*}
+\frac{i(a)}{i(b)}=\frac{i(c)}{i(d)}&\leftrightarrow [\langle a,1\rangle]\cdot[\langle b,1\rangle]^{-1}=[\langle c,1\rangle]\cdot[\langle d,1\rangle]^{-1}\\
+&\leftrightarrow[\langle a,b\rangle]=[\langle c,d\rangle]\\
+&\leftrightarrow ad=bc\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(2)
+Let arbitrary $a,c\in\mathbb Z$ and $b,d\in\mathbb Z^*$.
+By definition
+\begin{align*}
+\frac{i(a)}{i(b)}+\frac{i(c)}{i(d)}&=[\langle a,1\rangle]\cdot[\langle b,1\rangle]^{-1}+[\langle c,1\rangle]\cdot[\langle d,1\rangle]^{-1}\\
+&=[\langle a,b\rangle]+[\langle c,d\rangle]\\
+&=[\langle ad+bc,bd\rangle]\\
+&=[\langle ad+bc,1\rangle]\cdot[\langle 1,bd\rangle]\\
+&=i(ad+bc)(i(bd))^{-1}\\
+&=\frac{i(ad)+i(bc)}{i(bd)}\\
+&=\frac{i(a)i(d)+i(b)i(c)}{i(b)i(d)}\qedhere
+\end{align*}
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(3)
+Let arbitrary $a\in\mathbb Z$ and $b\in\mathbb Z^*$.
+By definition
+\begin{align*}
+-\frac{i(a)}{i(b)}&=-([\langle a,1\rangle]\cdot[\langle b,1\rangle]^{-1})\\
+&=-[\langle a,b\rangle]\\
+&=[\langle-a,b\rangle]\\
+&=[\langle-a,1\rangle]\cdot[\langle 1,b\rangle]\\
+&=i(-a)(i(b)^{-1})\\
+&=\frac{i(-a)}{i(b)}=\frac{-i(a)}{i(b)}\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(4)
+
+
 
 \end{proof}
-
-
 
 
 
