@@ -2555,11 +2555,11 @@ $x=[\langle a,b\rangle]$, $y=[\langle c,d\rangle]$, and $z=[\langle e,f\rangle]$
 First suppose $bd>0$. It follows that $(b>0\land d>0)\lor(b<0\land d<0)$ and then that $ad<bc$.
 We know $f\neq0$ so $f>0$ or $f<0$, where in either case $ff>0$. So
 \begin{equation*}
-(ad)(df)=(ad)(ff)<(bc)(ff)=(bf)(cf)
+(af)(df)=(ad)(ff)<(bc)(ff)=(bf)(cf)
 \end{equation*}
 and
 \begin{equation*}
-(af+be)(df)=(ad)(df)+(be)(df)<(bf)(cf)+(be)(df)=(bf)(cf+de)
+(af+be)(df)=(af)(df)+(be)(df)<(bf)(cf)+(be)(df)=(bf)(cf+de)
 \end{equation*}
 (next page)\newpage
 \indent We know $(af+be)(df)<(bf)(cf+de)$. 
@@ -2716,8 +2716,8 @@ We want to show
 \end{equation*}
 Let arbitrary $x,y\in\mathbb Z$. By definition $i(x)<i(y)$ is equivalent to $[\langle x,1\rangle]<[\langle y,1\rangle]$, which is equivalent to 
 \begin{align*}
-(x<y\land&((1>0\land 1>0)\lor1<0\land1<0))\\
-&\lor(y<x\land((1>0\land 1<0)\lor1<0\land1>0))
+(x<y\land&((1>0\land 1>0)\lor(1<0\land1<0))\\
+&\lor(y<x\land((1>0\land 1<0)\lor(1<0\land1>0))
 \end{align*}
 Since $1<0$ is a contradiction, this statement is equivalent to $x<y$.
 \end{proof}
@@ -2829,10 +2829,57 @@ By definition
 \end{align*}
 \end{proof}
 \begin{proof}(4)
-
-
-
+Let arbitrary $a,c\in\mathbb Z$ and $b,d\in\mathbb Z^*$.
+By definition
+\begin{align*}
+\frac{i(a)}{i(b)}\cdot\frac{i(c)}{i(d)}&=[\langle a,b\rangle]\cdot[\langle c,d\rangle]\\
+&=[\langle ac,bd\rangle]\\
+&=[\langle ac,1\rangle]\cdot[\langle 1,bd\rangle]\\
+&=[\langle ac,1\rangle]\cdot[\langle bd,1\rangle]^{-1}\\
+&=i(ac)(i(bd))^{-1}\\
+&=\frac{i(ac)}{i(bd)}=\frac{i(a)i(c)}{i(b)i(d)}\qedhere
+\end{align*}
 \end{proof}
+\begin{proof}(5)
+Let arbitrary $a\in\mathbb Z$ and $b\in\mathbb Z^*$. Suppose $a\neq0$.
+By definition we have
+\begin{align*}
+\left(\frac{i(a)}{i(b)}\right)^{-1}&=[\langle a,b\rangle]^{-1}\\
+&=[\langle b,a\rangle]\\
+&=[\langle b,1\rangle]\cdot[\langle a,1\rangle]^{-1}\\
+&=i(b)(i(a))^{-1}=\frac{i(b)}{i(a)}\qedhere
+\end{align*}
+\end{proof}
+\begin{proof}(6)
+Let arbitrary $a,c\in\mathbb Z$ and $b,d\in\mathbb Z^*$.
+First suppose $(b>0\land d>0)\lor(b<0\land d<0)$. Suppose 
+$\frac{i(a)}{i(b)}<\frac{i(c)}{i(d)}$. We then have
+\begin{equation*}
+[\langle a,b\rangle]=\frac{i(a)}{i(b)}<\frac{i(c)}{i(d)}=[\langle c,d\rangle]
+\end{equation*}
+Which, along with our first assumption, immediately implies $ad<bc$. Next suppose $ad<bc$. This, and our first assumption, similarly implies $[\langle a,b\rangle]<[\langle c,d\rangle]$, so 
+\begin{equation*}
+\frac{i(a)}{i(b)}=[\langle a,b\rangle]<[\langle c,d\rangle]=\frac{i(c)}{i(d)}
+\end{equation*}
+(next page)\newpage
+\indent Next suppose $(b>0\land d<0)\lor(b<0\land d>0)$. Suppose 
+$\frac{i(a)}{i(b)}<\frac{i(c)}{i(d)}$. We then have
+\begin{equation*}
+[\langle a,b\rangle]=\frac{i(a)}{i(b)}<\frac{i(c)}{i(d)}=[\langle c,d\rangle]
+\end{equation*}
+Which, along with our assumption, immediately implies $bc<ad$. Next suppose $bc<ad$. Similarly this implies $[\langle a,b\rangle]<[\langle c,d\rangle]$, so
+\begin{equation*}
+\frac{i(a)}{i(b)}=[\langle a,b\rangle]<[\langle c,d\rangle]=\frac{i(c)}{i(d)}\qedhere
+\end{equation*}
+\end{proof}
+\newpage
+
+\section{Dedekind Cuts}
+
+
+
+
+
 
 
 
