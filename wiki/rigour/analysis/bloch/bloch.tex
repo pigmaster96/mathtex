@@ -2930,7 +2930,7 @@ We want to show
 \end{equation*}
 Let arbitrary $x\in\mathbb Q$. Then there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=[\langle a,b\rangle]$. We then have
 \begin{equation*}
-x\cdot\bar0=[\langle a,b\rangle]=[\langle 0,1\rangle]=[\langle 0,b\rangle]=\bar0\qedhere
+x\cdot\bar0=[\langle a,b\rangle]\cdot[\langle 0,1\rangle]=[\langle 0,b\rangle]=\bar0\qedhere
 \end{equation*}
 \end{proof}
 \noindent(next page)\newpage
@@ -2986,12 +2986,35 @@ Defining 2 as $1+1$,
 \end{enumerate}
 \end{theorem}
 \begin{proof}(1)
-
-
+We know $0<1$. We then have 
+\begin{equation*}
+1=0+1<1+1=2\qedhere
+\end{equation*}
 \end{proof}
-
-
-
+\begin{proof}(2)
+We want to show
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q\left(\frac{x+y}{2}\in\mathbb Q\land\left(x<y\to x<\frac{x+y}{2}<y\right)\right)
+\end{equation*}
+Let arbitrary $x,y\in\mathbb Q$. We know $2>1>0$ so by trichotomy $2\neq0$. Since $+:\mathbb Q\times\mathbb Q\to\mathbb Q$ and $\div:\mathbb Q\times\mathbb Q^*\to\mathbb Q$ it follows that
+$\frac{x+y}{2}\in\mathbb Q$.\\
+\indent Suppose $x<y$. We have 
+\begin{equation*}
+x+y<y+y=y\cdot1+y\cdot1=y(1+1)=y\cdot2
+\end{equation*}
+and since $2>0$ we know $2^{-1}=\frac{1}{2}>0$. So 
+\begin{equation*}
+\frac{x+y}{2}=(x+y)2^{-1}<(y\cdot2)2^{-1}=y(2\cdot2^{-1})=y\cdot1=y
+\end{equation*}
+Similarly we have
+\begin{equation*}
+x\cdot2=x+x<x+y
+\end{equation*}
+and then
+\begin{equation*}
+x=x(2\cdot2^{-1})=(x\cdot2)2^{-1}<(x+y)2^{-1}=\frac{x+y}{2}\qedhere
+\end{equation*}
+\end{proof}
 \newpage
 
 \section{Dedekind Cuts}
