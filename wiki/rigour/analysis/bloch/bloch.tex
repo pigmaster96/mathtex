@@ -3018,6 +3018,7 @@ x=x(2\cdot2^{-1})=(x\cdot2)2^{-1}<(x+y)2^{-1}=\frac{x+y}{2}\qedhere
 \newpage
 
 \section{Dedekind Cuts}
+\subsection{Definitions}
 \begin{definition}
 Let $A\subseteq\mathbb Q$ be a set. The set $A$ is a \textbf{Dedekind cut} if the following three properties hold.
 \begin{enumerate}
@@ -3026,6 +3027,28 @@ Let $A\subseteq\mathbb Q$ be a set. The set $A$ is a \textbf{Dedekind cut} if th
 \item Let $x\in A$. Then there is some $y\in A$ such that $y<x$.
 \end{enumerate}
 \end{definition}
+\begin{lemma}
+Let $r\in\mathbb Q$. The set 
+\begin{equation*}
+D=\{x\in\mathbb Q\mid x>r\}
+\end{equation*}
+That is, the set $D$ where
+\begin{equation*}
+\forall x(x\in D\leftrightarrow(x\in\mathbb Q\land x>r))
+\end{equation*}
+is a Dedekind cut.
+\end{lemma}
+\begin{proof}
+We need to show that $D$ satisfies the three properties defining a dedekind cut.
+We know $r+1\in\mathbb Q$. Since $r+1>r$ by definition $r+1\in D$, so $D\neq\emptyset$.
+We also know $r\nless r$, so $r\notin D$, meaning $D\neq\mathbb Q$.\\
+\indent Next let arbitrary $x\in D$. By definition $x\in\mathbb Q$ and $x>r$. Let $y\in\mathbb Q$ be arbitrary such that $y\geq x$.
+We have $x<y$ or $x=y$. In the former case $y>r$ follows by transitivity. Since $y>r$ in both cases, by definition $y\in D$.\\
+\indent Finally let arbitrary $x\in D$. By definition $x\in\mathbb Q$ and $x>r$. We know that $\frac{x+r}{2}\in\mathbb Q$ and $r<\frac{x+r}{2}<x$. So $\frac{x+r}{2}\in D$ and $\frac{x+r}{2}<x$.
+\end{proof}
+
+
+
 
 
 
