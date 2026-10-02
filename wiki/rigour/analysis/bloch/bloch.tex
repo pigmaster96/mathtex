@@ -3046,10 +3046,56 @@ We also know $r\nless r$, so $r\notin D$, meaning $D\neq\mathbb Q$.\\
 We have $x<y$ or $x=y$. In the former case $y>r$ follows by transitivity. Since $y>r$ in both cases, by definition $y\in D$.\\
 \indent Finally let arbitrary $x\in D$. By definition $x\in\mathbb Q$ and $x>r$. We know that $\frac{x+r}{2}\in\mathbb Q$ and $r<\frac{x+r}{2}<x$. So $\frac{x+r}{2}\in D$ and $\frac{x+r}{2}<x$.
 \end{proof}
+\begin{definition}
+Let $r\in\mathbb Q$. The \textbf{rational cut} at $r$, denoted $D_r$, is the Dedekind cut
+\begin{equation*}
+D_r=\{x\in\mathbb Q\mid x>r\}
+\end{equation*}
+An \textbf{irrational cut} is a Dedekind cut that is not a rational cut at any rational number.
+\end{definition}
+\begin{lemma}\label{ded_1}
+Let $A\subseteq\mathbb Q$ be a Dedekind cut.
+\begin{enumerate}
+\item $\mathbb Q-A=\{x\in\mathbb Q\mid x<a\text{ for all }a\in A\}$
+\item Let $x\in\mathbb Q-A$. If $y\in\mathbb Q$ and $y\leq x$, then $y\in\mathbb Q-A$
+\end{enumerate}
+\end{lemma}
+\begin{proof}(1)
+Let arbitrary $x\in\mathbb Q-A$. Let arbitrary $a\in A$. By trichotomy $x>a\lor x=a\lor x<a$. In the case where $x=a$ we have $x\in A$, which is a contradiction. In the
+case where $x>a$, since $A$ is a dedekind cut this would imply $x\in A$, again a contradiction. We must then have $x<a$.\\
+\indent Next let arbitrary $x\in\{x\in\mathbb Q\mid x<a\text{ for all }a\in A\}$, meaning $\forall a\in A(x<a)$. Suppose for contradiction that $x\in A$. Since $A$ is a dedekind cut there then exists $y\in A$ such
+that $y<x$, contradicting $x<y$.\qedhere
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(2)
+We have arbitrary $x\in\mathbb Q-A$, and arbitrary $y\in\mathbb Q$ such that $y\leq x$. 
+Suppose for contradiction that $y\in A$. Since $A$ is a dedekind cut, the fact that $y\leq x$ would imply that $x\in A$, the contradiction.
+\end{proof}
+\begin{lemma}
+\begin{equation*}
+\forall A\forall B(A\neq B\to(A-B\neq\emptyset\lor B-A\neq\emptyset))
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Let $A,B$ be arbitrary and suppose that $A\neq B$. This means $\neg\forall x(x\in A\leftrightarrow x\in B)$, so there then exists $x$ such that $x\in A\land x\notin B$ or 
+$x\in B\land x\notin A$, meaning $x\in A-B$ or $x\in B-A$.
+\end{proof}
+\begin{lemma}
+Let $A,B\subseteq\mathbb Q$ be Dedekind cuts. Then precisely one of $A\subsetneqq B$ or $A=B$ or 
+$B\subsetneqq A$ holds. (where $A\subsetneqq B\to(A\subseteq B\land A\neq B)$)
+\end{lemma}
+\begin{proof}
+If $A=B$ there is nothing to prove, so suppose $A\neq B$. We then have two cases. First suppose there exists $x\in A-B$. It follows that $x\in\mathbb Q-B$ and by lemma \ref{ded_1} 
+that $\forall b\in B(x<b)$. Letting arbitrary $b\in B$, we will then have $x<b$. Since $A$ is a dedekind cut, it then follows that $b\in A$ and therefore $B\subseteq A$. Since $A\neq B$ we then have
+$B\subsetneqq A$.\\
+\indent Next suppose there exists $x\in B-A$. Similarly it follows that $x\in\mathbb Q-A$ and $\forall a\in A(x<a)$. Letting arbitrary $a\in A$, we have $x<a$ and by definition $a\in B$. So $A\subsetneqq B$.\\
+\indent If $A=B$ by definition neither $A\subsetneqq B$ nor $B\subsetneqq A$ can be true.
+Suppose $A\subsetneqq B$ and $B\subsetneqq A$. It follows that $A\neq B$. However $A\subseteq B$ and $B\subseteq A$ together imply $A=B$, a contradiction.
+\end{proof}
+\begin{lemma}
 
 
-
-
+\end{lemma}
 
 
 

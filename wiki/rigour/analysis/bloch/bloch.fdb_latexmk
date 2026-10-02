@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1790896408.69178 "bloch.tex" "bloch.pdf" "bloch" 1790896409.42201 0
+["pdflatex"] 1790973400.36368 "bloch.tex" "bloch.pdf" "bloch" 1790973401.22693 0
   "/etc/texmf/web2c/texmf.cnf" 1767433088.34546 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -40,6 +40,7 @@
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/share/texlive/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1136768653 1492 86331993fe614793f5e7e755835c31c5 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs10.tfm" 1229303445 688 37338d6ab346c2f1466b29e195316aa4 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs5.tfm" 1229303445 684 3a51bd4fd9600428d5264cf25f04bb9a ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/rsfs/rsfs7.tfm" 1229303445 692 1b6510779f0f05e9cbf03e0f6c8361e6 ""
@@ -92,9 +93,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1741904018 41538 c016915c1d51223b6dbbfe27341748a8 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1767433103 5467255 9a64d1b40e0b893fc5588ecce9d8accf ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1767433139 3348620 54815ecd3cfca19d87f06e16fc1eb500 ""
-  "bloch.aux" 1790896409.37055 4476 e54b831b5b2fbc4a5eab5b1c62d18e64 "pdflatex"
-  "bloch.tex" 1790896406.4985 180567 5fd5e2a6badb81e26459fabc6be35540 ""
-  "bloch.toc" 1790896409.37055 2019 e744110d6cedce76d82cd419e414b4cb "pdflatex"
+  "bloch.aux" 1790973401.15512 4520 413caf72423a7b10dffbb3ac7afd3def "pdflatex"
+  "bloch.tex" 1790973398.35107 183486 6b74f224d10c0399411a21223b6861c2 ""
+  "bloch.toc" 1790973401.15512 2019 e744110d6cedce76d82cd419e414b4cb "pdflatex"
   (generated)
   "bloch.aux"
   "bloch.log"
