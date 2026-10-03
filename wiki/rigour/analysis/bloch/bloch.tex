@@ -801,7 +801,7 @@ $x\in\mathbb N$ such that $(a+1)+x=a$; theorem \ref{natural arithmetic} part 2 t
 \newpage
 
 \subsection{Well-ordering}
-\begin{theorem}(Well-Ordering Principle)
+\begin{theorem}\label{N_wellordering}(Well-Ordering Principle)
 Let $G\subseteq\mathbb N$ be a non-empty set. Then there is some $m\in G$ such that $m\leq g$ for all $g\in G$.
 \end{theorem}
 \begin{proof}
@@ -1860,6 +1860,29 @@ Let arbitrary $x,y,z\in\mathbb Z$ such that $xz<yz$ and $z<0$. Suppose for contr
 \begin{proof}
 Let arbitrary $x,y\in\mathbb Z$. Suppose $x<0$ and $y<0$. It follows that $-x>0$ and $-y>0$.
 So $xy=(-x)(-y)>0$.
+\end{proof}
+\newpage
+
+\subsection{Well-ordering on the positive integers}
+\begin{theorem}
+Let $G\subseteq\{x\in\mathbb Z\mid x>0\}$ be a non-empty set. Then there is some $m\in G$ such that $m\leq g$ for all $g\in G$. That is
+\begin{equation*}
+\forall G((G\subseteq\{x\in\mathbb Z\mid x>0\}\land G\neq\emptyset)\to\exists m\in G\forall g\in G(m\leq g))
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let $G$ be arbitrary and suppose that $G\subseteq\{x\in\mathbb Z\mid x>0\}$ and $G\neq\emptyset$.
+By theorem \ref{natural_integer_isomorphism}, the function $i:\mathbb N\to\mathbb Z$ is defined as $i(n)=[\langle n+1,1\rangle]$ for all $n\in\mathbb N$. We can define $G'$ as the set such that
+\begin{equation*}
+\forall x(x\in G'\leftrightarrow x\in\mathbb N\land i(x)\in G)
+\end{equation*}
+It is straightforward to show that $G'\subseteq\mathbb N$. We need to show that $G'\neq\emptyset$.
+By theorem \ref{natural_integer_isomorphism} we know $\{x\in\mathbb Z\mid x>0\}=\{i(n)\mid n\in\mathbb N\}$.
+Since $G\neq\emptyset$ there exist $x\in G\subseteq\{x\in\mathbb Z\mid x>0\}=\{i(n)\mid n\in\mathbb N\}$. So there exists $n\in\mathbb N$ such that $i(n)=x\in G$, and $n\in G'$.\\
+\indent We know $G'\subseteq\mathbb N$ and $G'\neq\emptyset$. So by well ordering on the naturals(theorem \ref{N_wellordering}), there exists $m'\in G'$ such that $\forall g\in G'(m'\leq g)$.
+By definition we have $i(m')\in G$. Let $g\in G$ be arbitrary. Similar to before there exists
+$g'\in\mathbb N$ such that $i(g')=g$, so $g'\in G'$. It follows that
+$m'\leq g'$, and by theorem \ref{natural_integer_isomorphism} that $i(m')\leq i(g')=g$.
 \end{proof}
 \newpage
 
