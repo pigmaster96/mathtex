@@ -3116,9 +3116,53 @@ $B\subsetneqq A$.\\
 Suppose $A\subsetneqq B$ and $B\subsetneqq A$. It follows that $A\neq B$. However $A\subseteq B$ and $B\subseteq A$ together imply $A=B$, a contradiction.
 \end{proof}
 \begin{lemma}
-
-
+Let $A$ be a non-empty family of subsets of $\mathbb Q$ and suppose that for all $X\in A$ $X$ is a dedekind cut. If $\bigcup A\neq\mathbb Q$, then $\bigcup A$ is a dedekind cut.
 \end{lemma}
+\begin{proof}
+Suppose $\bigcup A\neq\mathbb Q$. It is straightforward to show that $\bigcup A\subseteq\mathbb Q$.
+Next see that since $A$ is nonempty then there exists $X\in A$ that is, by assumption, a dedekind cut. It follows then that $X\neq\emptyset$ and
+that $\bigcup A$, where
+\begin{equation*}
+\forall x(x\in\bigcup A\leftrightarrow\exists X\in A(x\in X))
+\end{equation*}
+is nonempty. By assumption we know $\bigcup A\neq\mathbb Q$.\\
+\indent Next let arbitrary $x\in\bigcup A$. Let arbitrary $y\in\mathbb Q$ and suppose that $y\geq x$. By definition there exists $X\in A$ such that $x\in X$. Since by assumption 
+$X$ is a dedekind cut, it then follows that $y\in X$, and then $y\in\bigcup A$.\\
+\indent Finally let arbitrary $x\in\bigcup A$. Again by definition there exists $X\in A$ such that $x\in X$, where $X$ is a dedekind cut. So there exists $y\in X$ such that $y<x$,
+and by definition $y\in\bigcup A$.
+\end{proof}
+\newpage
+
+\subsection{More properties}
+\begin{lemma}
+Let $A,B\subseteq\mathbb Q$ be Dedekind cuts.
+\begin{enumerate}
+\item The set
+\begin{equation*}
+\{r\in\mathbb Q\mid r=a+b\text{ for some }a\in A\text{ and }b\in B\}
+\end{equation*}
+is a Dedekind cut.
+\item The set
+\begin{equation*}
+\{r\in\mathbb Q\mid-r<c\text{ for some }c\in\mathbb Q-A\}
+\end{equation*}
+is a Dedekind cut.
+\item Suppose $0\in\mathbb Q-A$ and $0\in\mathbb Q-B$. The set
+\begin{equation*}
+\{r\in\mathbb Q\mid r=ab\text{ for some }a\in A\text{ and }b\in B\}
+\end{equation*}
+is a Dedekind cut.
+\item Suppose that there is some $q\in\mathbb Q-A$ such that $q>0$. The set
+\begin{equation*}
+\{r\in\mathbb Q\mid r>0\text{ and }\frac{1}{r}<c\text{ for some }c\in\mathbb Q-A\}
+\end{equation*}
+is a Dedekind cut.
+\end{enumerate}
+\end{lemma}
+\begin{proof}(1)
+
+
+\end{proof}
 
 
 
