@@ -3160,10 +3160,28 @@ is a Dedekind cut.
 \end{enumerate}
 \end{lemma}
 \begin{proof}(1)
+Let $D=\{r\in\mathbb Q\mid r=a+b\text{ for some }a\in A\text{ and }b\in B\}$, that is, the set such that
+\begin{equation*}
+\forall x(x\in D\leftrightarrow x\in\mathbb Q\land\exists a\in A\exists b\in B(x=a+b))
+\end{equation*}
+It is straightforward to show that $D\subseteq\mathbb Q$. Since $A$ and $B$ are dedekind cuts there exists $x\in A$ and $y\in B$; so by definition $x+y\in D$ and $D$ is nonempty. 
+We also know $A,B\neq\mathbb Q$. Since $A,B\subseteq\mathbb Q$, we must then have $A-\mathbb Q,B-\mathbb Q=\emptyset$, and therefore $\mathbb Q-A,\mathbb Q-B\neq\emptyset$.
+There then exists $x\in\mathbb Q-A=\{x\in\mathbb Q\mid\forall a\in A(x<a)\}$ and 
+$y\in\mathbb Q-B=\{x\in\mathbb Q\mid\forall b\in B(x<b)\}$. We show 
+$\neg\exists a\in A\exists b\in B(x=a+b)$. Let arbitrary $a\in A$ and $b\in B$. 
+By definition we have $x<a$ and $y<b$, so $x+y<a+b$, $x+y\neq a+b$, and $x+y\notin D$. Since $x+y\in\mathbb Q$ it follows that $D\neq\mathbb Q$.\\
+\indent Next let arbitrary $x\in D$ and $y\in\mathbb Q$. Suppose $y\geq x$. By definition there exists $a\in A$ and $b\in B$ such that $x=a+b$.
+We have $(a+b)-x=0$ and $y=((a+b)-x)+y=(a+(y-x))+b$.
+Since $y\geq x=a+b$ we then have $a+(y-x)\geq a$, so since $A$ is a dedekind cut $a+(y-x)\in A$.
+So by definition $y=(a+(y-x))+b\in D$.\\
+\indent Finally let arbitrary $x\in D$. There exists $a\in A$ and $b\in B$ such that $x=a+b$. Since $a\in A$ there exists $a'\in A$ such that $a'<a$. It follows that $a'+b<a+b=x$, where by 
+definition $a'+b\in D$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(2)
 
 
 \end{proof}
-
 
 
 
