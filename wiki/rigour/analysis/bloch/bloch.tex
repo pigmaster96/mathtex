@@ -3068,10 +3068,15 @@ We then know $-a>0$ and $-b>0$. Since $(-a)b=(-b)a$ we then have
 \end{equation*}
 \end{proof}
 \begin{lemma}
-
+\begin{equation*}
+\forall x\in\mathbb Z((x>0\to x\geq1)\land(x<0\to x\leq-1))
+\end{equation*}
 \end{lemma}
 \begin{proof}
-
+Let arbitrary $x\in\mathbb Z$. Suppose $x>0$. For contradiction suppose $x<1$. It follows then that $0<x<1$, which contradicts integer
+discreteness, so by 
+trichotomy $x\geq1$. Suppose
+$x<0$. For contradiction suppose $x>-1$. Similarly we then have $-1<x<0=(-1)+1$, the contradiction. So by trichotomy $x\leq-1$.
 \end{proof}
 \begin{lemma}
 \begin{equation*}
@@ -3082,11 +3087,26 @@ Where $i$ refers to the integer-rational embedding in theorem \ref{Z_Q_embedding
 \end{lemma}
 \begin{proof}
 Let arbitrary $x,y\in\mathbb Q$. Suppose $x>0$ and $y>0$. By lemma \ref{Qmp_1} there exists $a,b,c,d\in\mathbb Z$ where $a,b,c,d>0$, 
-$x=\frac{i(a)}{i(b)}$, and $y=\frac{i(c)}{i(d)}$. By theorem \ref{natural_integer_isomorphism} there then exists $a',b',c',d'\in\mathbb N$
-such that $a=j(a'),b=j(b'),c=j(c')$, and $d=j(d')$.
+$x=\frac{i(a)}{i(b)}$, and $y=\frac{i(c)}{i(d)}$. 
+We know $cb>0$, so $cb+1>0$. We also know $cb+1\in\mathbb Z$, so
+by theorem \ref{natural_integer_isomorphism} there then exists $n\in\mathbb N$ such that $j(n)=cb+1$.
+We then know $i(j(n))=i(cb+1)$, and
+\begin{equation*}
+i(j(n))x=i(cb+1)\cdot\frac{i(a)}{i(b)}=\frac{i(cb+1)i(a)}{i(b)}=\frac{i((cb+1)a)}{i(b)}
+\end{equation*}
+To show $\frac{i((cb+1)a)}{i(b)}=i(j(n))x>y=\frac{i(c)}{i(d)}$. We know $b>0$ and $d>0$, so it is then sufficient to show 
+$cb<d((cb+1)a)$. We know $ad>0$ so $ad\geq1$ and
+\begin{equation*}
+d((cb+1)a)=(ad)(cb+1)\geq cb+1>cb\qedhere
+\end{equation*}
+\noindent(next page)
+\newpage
+\begin{lemma}
 
+\end{lemma}
+\begin{proof}
 
-
+\end{proof}
 
 
 \end{proof}
