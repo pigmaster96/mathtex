@@ -2663,7 +2663,7 @@ two binary operations that satisfies parts (1)-(9) is called a "field", and any 
 \newpage
 
 \subsection{Joining the integers and the rationals}
-\begin{theorem}
+\begin{theorem}\label{Z_Q_embedding}
 Let $i:\mathbb Z\to\mathbb Q$ be defined by $i(x)=[\langle x,1\rangle]$ for all $x\in\mathbb Z$. That is,
 \begin{equation*}
 \forall x(x\in i\leftrightarrow\exists a\in\mathbb Z(x=\langle a,[\langle a,1\rangle]\rangle))
@@ -3038,6 +3038,61 @@ and then
 x=x(2\cdot2^{-1})=(x\cdot2)2^{-1}<(x+y)2^{-1}=\frac{x+y}{2}\qedhere
 \end{equation*}
 \end{proof}
+\begin{lemma}
+\begin{align*}
+\forall x\in\mathbb Q\forall a\in\mathbb Z\forall b\in\mathbb Z((x>0\land x&=\frac{i(a)}{i(b)}\land b\neq0)\to\\
+&((a>0\land b>0)\lor(a<0\land b<0)))
+\end{align*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $x\in\mathbb Q$ and $a,b\in\mathbb Z$. Suppose $x>0$, $x=\frac{i(a)}{i(b)}$ and $b\neq0$. 
+By trichotomy on the integers we have two cases.\\
+\indent Case 1: $b>0$. Then since $\frac{i(a)}{i(b)}=x>0=[\langle 0,1\rangle]=\frac{i(0)}{i(1)}$ we
+have $0=0\cdot b<1\cdot a=a$. So $a>0\land b>0$.\\
+\indent Case 2: $b<0$. $\frac{i(a)}{i(b)}>\frac{i(0)}{i(1)}$ then implies $0=0\cdot b>1\cdot a=a$. 
+So $a<0$ and $b<0$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{lemma}\label{Qmp_1}
+\begin{equation*}
+\forall x\in\mathbb Q(x>0\to\exists a\in\mathbb Z\exists b\in\mathbb Z(x=\frac{i(a)}{i(b)}\land a>0\land b>0))
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $x\in\mathbb Q$. Suppose $x>0$. By definition there exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]=\frac{i(a)}{i(b)}$. By the previous lemma it follows that $(a>0\land b>0)\lor(a<0\land b<0)$. In the former case there is
+nothing more to prove, so suppose $a<0$ and $b<0$.
+We then know $-a>0$ and $-b>0$. Since $(-a)b=(-b)a$ we then have
+\begin{equation*}
+\frac{i(-a)}{i(-b)}=\frac{i(a)}{i(b)}=x>0\qedhere
+\end{equation*}
+\end{proof}
+\begin{lemma}
+
+\end{lemma}
+\begin{proof}
+
+\end{proof}
+\begin{lemma}
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q((x>0\land y>0)\to\exists n\in\mathbb N(y<i(j(n))x))
+\end{equation*}
+Where $i$ refers to the integer-rational embedding in theorem \ref{Z_Q_embedding} and $j$ the natural-integer embedding in theorem 
+\ref{natural_integer_isomorphism}.
+\end{lemma}
+\begin{proof}
+Let arbitrary $x,y\in\mathbb Q$. Suppose $x>0$ and $y>0$. By lemma \ref{Qmp_1} there exists $a,b,c,d\in\mathbb Z$ where $a,b,c,d>0$, 
+$x=\frac{i(a)}{i(b)}$, and $y=\frac{i(c)}{i(d)}$. By theorem \ref{natural_integer_isomorphism} there then exists $a',b',c',d'\in\mathbb N$
+such that $a=j(a'),b=j(b'),c=j(c')$, and $d=j(d')$.
+
+
+
+
+
+\end{proof}
+
+
+
 \newpage
 
 \section{Dedekind Cuts}
