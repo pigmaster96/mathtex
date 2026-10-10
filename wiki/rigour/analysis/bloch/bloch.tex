@@ -3099,18 +3099,31 @@ $cb<d((cb+1)a)$. We know $ad>0$ so $ad\geq1$ and
 \begin{equation*}
 d((cb+1)a)=(ad)(cb+1)\geq cb+1>cb\qedhere
 \end{equation*}
+\end{proof}
 \noindent(next page)
 \newpage
+\begin{lemma}
+\begin{equation*}
+\forall x\in\mathbb Q\left(x>0\to\exists n\in\mathbb N\left(\frac{1}{i(j(n))}<x\right)\right) 
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $x\in\mathbb Q$. Suppose $x>0$. We know $1>0$ so by the previous lemma there exists $n\in\mathbb N$ such that $i(j(n))x>1$. 
+By theorem \ref{natural_integer_isomorphism} we know that $j(n)>0$, so $i(j(n))\neq0$ and $i(j(n))\in\mathbb Q^*$, so $(i(j(n)))^{-1}$ is defined.
+Since $j(n)>0$ we also have $0=i(0)<i(j(n))$, so $(i(j(n)))^{-1}=\frac{1}{i(j(n))}>0$.
+We then have
+\begin{equation*}
+\frac{1}{i(j(n))}=1\cdot(i(j(n)))^{-1}<(i(j(n))\cdot x)\cdot(i(j(n)))^{-1}=x\cdot(i(j(n))\cdot(i(j(n)))^{-1})=x
+\end{equation*}
+and we are done.
+\end{proof}
 \begin{lemma}
 
 \end{lemma}
 \begin{proof}
 
-\end{proof}
-
 
 \end{proof}
-
 
 
 \newpage
