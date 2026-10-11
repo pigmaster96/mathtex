@@ -3290,10 +3290,25 @@ definition $a'+b\in D$.
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(2)
+Let $D=\{r\in\mathbb Q\mid-r<c\text{ for some }c\in\mathbb Q-A\}$. That is, the set such that
+\begin{equation*}
+\forall x(x\in D\leftrightarrow x\in\mathbb Q\land\exists c\in\mathbb Q-A(-x<c))
+\end{equation*}
+It is straightforward to show that $D\subseteq\mathbb Q$. Since $A$ is a dedekind cut, $A\subseteq\mathbb Q$ and $A\neq\mathbb Q$. So 
+$\mathbb Q-A\neq\emptyset$ and there exists $x\in\mathbb Q-A$.
+Since $x-1<x$, by definition $-(x-1)\in D$ and $D\neq\emptyset$.\\
+\indent Next, since $A$ is nonempty, there exists $x\in A$, so $-(-x)\in A$ and so $-(-x)\notin\mathbb Q-A$. Let arbitrary $c\in\mathbb Q-A$.
+We then have $\neg(-(-x)\leq c)$, meaning $\neg(-(-x)<c)$. So $-x\notin D$ and $-x\in\mathbb Q$, meaning $D\neq\mathbb Q$.\\
+\indent Next let arbitrary $x\in D$ and $y\in\mathbb Q$. By definition there exists $c\in\mathbb Q-A$ such that $-x<c$.
+Suppose $x\leq y$. It follows that $-y\leq-x$ and $-y<c$. So $y\in D$.\\
+\indent Finally, let arbitrary $x\in D$, where by definition there exists $c\in\mathbb Q-A$ such that $-x<c$. We then have $-c<x$ and
+$-c<\frac{-c+x}{2}<x$. 
+So $-\left(\frac{-c+x}{2}\right)<c$, meaning $\frac{-c+x}{2}\in D$, while $\frac{-c+x}{2}<x$.\qedhere
+\end{proof}
+\begin{proof}(3)
 
 
 \end{proof}
-
 
 
 
