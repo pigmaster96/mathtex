@@ -3149,6 +3149,40 @@ Where since we know $(2x+1)\frac{1}{i(j(n))}<y-x^2$,
 <x^2+(y-x^2)=y\qedhere
 \end{equation*}
 \end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
+\begin{equation*}
+\forall x\in\mathbb Q(-(-x)=x)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+\begin{theorem}
+\begin{equation*}
+\forall x\in\mathbb Q^*\forall y\in\mathbb Q^*\left(\left(\frac xy\right)^{-1}=\frac yx\right)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+\begin{theorem}
+For $x,y,z\in\mathbb Q$,
+\begin{enumerate}
+\item$x\leq y\to x+z\leq y+z$
+\item$x\leq y\land z>0\to xz\leq yz$
+\item$x\leq y\to-y\leq-x$
+\item$0<x\leq y\to\frac1y\leq\frac1x$
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+
+
+\end{proof}
+
+
+
+
 \newpage
 
 \section{Dedekind Cuts}
@@ -3313,10 +3347,43 @@ that is, the set such that
 \forall x(x\in D\leftrightarrow x\in\mathbb Q\land\exists a\in A\exists b\in B(x=ab))
 \end{equation*}
 It is straightforward to show $D\subseteq\mathbb Q$.
-
-
+Since $A$ and $B$ are dedekind cuts there exists $a\in A$ and $b\in B$, where by definition $ab\in D$. So $D\neq\emptyset$.
+Let arbitrary $a\in A$ and $b\in B$. Since $0\in\mathbb Q-A$ and $0\in\mathbb Q-B$ we know $a>0$ and $b>0$. So $ab>0$, where by trichotomy
+$ab\neq0$ and $0\notin D$, so $D\neq\mathbb Q$.\\
+\indent Next let arbitrary $x\in D$, so there exists $a\in A$ and $b\in B$ such that $x=ab$.
+Let arbitrary $y\in\mathbb Q$ and suppose that $y\geq x$. In the case where $y=x$ it immediately follows that
+$y\in D$. In the case where $y>x$ we have $y>ab$. Since $0\in\mathbb Q-A$ and $a\in A$, we have $0<a$. It also follows that $a^{-1}>0$ is defined.
+Then $\frac{y}{a}>b$ and by definition $\frac{y}{a}\in B$.
+Since $y=a\cdot\frac{y}{a}$, $y\in D$.\\
+\indent Finally let arbitrary $x\in D$, where there exists $a\in A$ and $b\in B$ such that $x=ab$. Since $A$ is a dedekind cut there exist $a'\in A$
+such that $a'<a$. Since $0\in\mathbb Q-B$ and $b\in B$, we have $0<b$. So
+$a'b<ab=x$, where $a'b\in D$.
 \end{proof}
-
+\noindent(next page)\newpage
+\begin{proof}(4)
+Suppose there exists $q\in\mathbb Q-A$ such that $q>0$. 
+Let $D=\{r\in\mathbb Q\mid r>0\text{ and }\frac{1}{r}<c\text{ for some }c\in\mathbb Q-A\}$. That is,
+\begin{equation*}
+\forall x\left(x\in D\leftrightarrow x\in\mathbb Q\land x>0\land\exists c\in\mathbb Q-A\left(\frac{1}{x}<c\right)\right)
+\end{equation*}
+It is straightforward to show that $D\subseteq\mathbb Q$.
+We know $q>0$, so $q>\frac{q}{2}>0$. We know $q^{-1}>0$ so $\frac{2}{q}=2q^{-1}>0$. 
+We also have $q>\frac{q}{2}=\left(\frac{2}{q}\right)^{-1}=1/(\frac{2}{q})$. So $\frac{2}{q}\in D$ and $D\neq\emptyset$. 
+We know $0\in\mathbb Q$ and $0\nless0$, so $0\notin D$ and $D\neq\mathbb Q$.\\
+\indent Next let arbitrary $x\in D$. It follows that $x>0$ and that there exists $c\in\mathbb Q-A$ such that $\frac{1}{x}<c$. 
+Let arbitrary $y\in\mathbb Q$ and suppose that $y\geq x$. In the case where $y=x$ it immediately follows that $y\in D$. In the case where $y>x$
+we have $\frac1y<\frac1x<c$ and $y>0$, so $y\in D$.\\
+\indent Finally let arbitrary $x\in D$, where then $x>0$ and that there exists $c\in\mathbb Q-A$ such that $\frac{1}{x}<c$. We know
+$\frac1x>0$, so $c>0$ and $0<\frac1c<x$. We then know
+\begin{equation*}
+0<\frac1c<\frac{x+\frac1c}{2}<x
+\end{equation*}
+where 
+\begin{equation*}
+1/\left(\frac{x+\frac1c}{2}\right)<c
+\end{equation*}
+So $\frac{x+\frac1c}{2}\in D$.
+\end{proof}
 
 
 
