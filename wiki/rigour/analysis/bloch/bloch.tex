@@ -3156,7 +3156,11 @@ Where since we know $(2x+1)\frac{1}{i(j(n))}<y-x^2$,
 \end{equation*}
 \end{theorem}
 \begin{proof}
-
+Let arbitrary $x\in\mathbb Q$. There exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=[\langle a,b\rangle]$. 
+We have $-x=[\langle-a,b\rangle]$ and 
+\begin{equation*}
+-(-x)=[\langle-(-a),b\rangle]=[\langle a,b\rangle]=x\qedhere
+\end{equation*}
 \end{proof}
 \begin{theorem}
 \begin{equation*}
@@ -3164,8 +3168,44 @@ Where since we know $(2x+1)\frac{1}{i(j(n))}<y-x^2$,
 \end{equation*}
 \end{theorem}
 \begin{proof}
-
+Let arbitrary $x,y\in\mathbb Q^*$. There exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$. $y^{-1}$ is defined as $[\langle d,c\rangle]$. We have
+\begin{equation*}
+\frac{x}{y}=xy^{-1}=[\langle a,b\rangle]\cdot[\langle d,c\rangle]=[\langle ad,bc\rangle]
+\end{equation*}
+Since $x\neq0$ we know $a\neq0$, so $ad\neq0$, $\frac xy\neq0$, and $\left(\frac xy\right)^{-1}$ is defined. So
+\begin{align*}
+\left(\frac xy\right)^{-1}&=[\langle ad,bc\rangle]^{-1}=[\langle bc,ad\rangle]=[\langle cb,da\rangle]
+=[\langle c,d\rangle]\cdot[\langle b,a\rangle]\\
+&=[\langle c,d\rangle]\cdot[\langle a,b\rangle]^{-1}=yx^{-1}=\frac yx\qedhere
+\end{align*}
 \end{proof}
+\begin{theorem}
+\begin{equation*}
+\forall x\in\mathbb Q^*((x^{-1})^{-1}=x)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $x\in\mathbb Q^*$. There exists $\langle a,b\rangle\in\mathbb Z\times\mathbb Z^*$ such that $x=[\langle a,b\rangle]$.
+We have $x^{-1}=[\langle b,a\rangle]$ and 
+\begin{equation*}
+(x^{-1})^{-1}=[\langle b,a\rangle]^{-1}=[\langle a,b\rangle]=x\qedhere
+\end{equation*}
+\end{proof}
+\begin{theorem}
+\begin{equation*}
+\forall a\in\mathbb Z\forall b\in\mathbb Z^*\left([\langle a,b\rangle]=\frac{i(a)}{i(b)}\right)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $a\in\mathbb Z$ and $b\in\mathbb Z^*$. By definition $i(a)=[\langle a,1\rangle]$ and $i(b)=[\langle b,1\rangle]$. 
+Since $b\neq0$, $i(b)\neq0$ and $i(b)\in\mathbb Q^*$. So
+\begin{equation*}
+\frac{i(a)}{i(b)}=[\langle a,1\rangle]\cdot[\langle b,1\rangle]^{-1}=[\langle a,1\rangle]\cdot[\langle 1,b\rangle]=[\langle a\cdot1,1\cdot b\rangle]
+=[\langle a,b\rangle]\qedhere
+\end{equation*}
+\end{proof}
+\noindent(next page)\newpage
 \begin{theorem}
 For $x,y,z\in\mathbb Q$,
 \begin{enumerate}
