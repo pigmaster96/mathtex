@@ -2894,7 +2894,6 @@ Which, along with our assumption, immediately implies $bc<ad$. Next suppose $bc<
 \begin{equation*}
 \frac{i(a)}{i(b)}=[\langle a,b\rangle]<[\langle c,d\rangle]=\frac{i(c)}{i(d)}\qedhere
 \end{equation*}
-\end{proof}
 \newpage
 
 \subsection{More properties}
@@ -3228,6 +3227,36 @@ Suppose $x\leq y$. In the case where $x=y$ we have $-x=-y$. In the case where $x
 \begin{proof}(4)
 Suppose $0<x\leq y$. In the case where $x=y$ we have $\frac1x=\frac1y$. In the case where $x<y$, since $0<x<y$, we have $\frac1y<\frac1x$.
 Either case implies $\frac1y\leq\frac1x$.
+\end{proof}
+\begin{theorem}
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q(-(xy)=(-x)y)
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $x,y\in\mathbb Q$. There exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$.
+We have $xy=[\langle ac,bd\rangle]$ and therefore
+\begin{equation*}
+-(xy)=[\langle-(ac),bd\rangle]=[\langle(-a)c,bd\rangle]=
+[\langle-a,b\rangle]\cdot[\langle c,d\rangle]=(-x)y\qedhere
+\end{equation*}
+\end{proof}
+\end{proof}
+\begin{theorem}
+\begin{equation*}
+\forall x\in\mathbb Q\forall y\in\mathbb Q(-(x+y)=(-x)+(-y))
+\end{equation*}
+\end{theorem}
+\begin{proof}
+Let arbitrary $x,y\in\mathbb Q$. There exists $\langle a,b\rangle,\langle c,d\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$x=[\langle a,b\rangle]$ and $y=[\langle c,d\rangle]$.
+We have $x+y=[\langle ad+bc,bd\rangle]$ and therefore
+\begin{align*}
+-(x+y)&=[\langle-(ad+bc),bd\rangle]=[\langle-(ad)+(-(bc)),bd\rangle]
+=[\langle(-a)d+b(-c),bd\rangle]\\
+&=[\langle-a,b\rangle]+[\langle-c,d\rangle]=(-x)+(-y)\qedhere
+\end{align*}
 \end{proof}
 \newpage
 
