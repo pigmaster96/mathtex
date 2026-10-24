@@ -3077,7 +3077,7 @@ discreteness, so by
 trichotomy $x\geq1$. Suppose
 $x<0$. For contradiction suppose $x>-1$. Similarly we then have $-1<x<0=(-1)+1$, the contradiction. So by trichotomy $x\leq-1$.
 \end{proof}
-\begin{lemma}
+\begin{lemma}\label{NQ_1}
 \begin{equation*}
 \forall x\in\mathbb Q\forall y\in\mathbb Q((x>0\land y>0)\to\exists n\in\mathbb N(y<i(j(n))x))
 \end{equation*}
@@ -3469,9 +3469,33 @@ $s>0$, and $y>\frac rs$, and $s<g$ for some $g\in\mathbb Q-A$.
 \end{enumerate}
 \end{theorem}
 \begin{proof}(1)
-
-
+We want to show 
+\begin{equation*}
+\exists u\in A\exists v\in\mathbb Q-A(y=u-v\land\exists e\in\mathbb Q-A(v<e))
+\end{equation*}
+Since $A$ is a dedekind cut, there exists $w\in A$ and $z\in\mathbb Q-A$.
+By lemma \ref{ded_1} we have $z<w$, so $w-z>0$.
+We know $y>0$, so by lemma \ref{NQ_1} there exists $n\in\mathbb N$ such that $w-z<i(j(n))y$. We then have $w+i(j(n))(-y)=w-(i(j(n))y)<z$. By lemma \ref{ded_1} it follows that
+$w+i(j(n))(-y)\in\mathbb Q-A$. We now define $G$ as
+\begin{equation*}
+G=\{p\in\mathbb N\mid w+i(j(p))(-y)\in\mathbb Q-A\}
+\end{equation*}
+By definition $n\in G$, so $G\neq\emptyset$ and by definition there exists $m\in G$ such that for $\forall g\in G(m\leq g)$.
+By definition $w+i(j(m))(-y)\in\mathbb Q-A$.\\
+\indent We first show $w+(i(j(m))-1)(-y)\notin\mathbb Q-A$. Suppose for contradiction that this were true. We know $i(j(m))-1=i(j(m))+i(-1)=i(j(m)-1)$. We have 3 cases. First suppose $j(m)-1<0$.
+In this case it follows that $0<j(m)<1$, contradicting integer discreteness. Next suppose $j(m)-1=0$. Then $i(j(m)-1)=0$, and
+$w=w+i(j(m)-1)(-y)=w+(i(j(m))-1)(-y)\in\mathbb Q-A$. This contradicts $w\in A$. Finally suppose $j(m)-1>0$. Then there exists $m'\in\mathbb N$ such that $j(m')=j(m)-1$. Since $j(m)-1<j(m)$, 
+$j(m')<j(m)$ and $m'<m$. We have $w+i(j(m'))(-y)=w+i(j(m)-1)(-y)=w+(i(j(m))-1)(-y)\in\mathbb Q-A$
+and therefore $m'\in G$. Since $m'<m$ this contradicts $m$ being the smallest element in $G$.\\
+\indent So $w+(i(j(m))-1)(-y)\notin\mathbb Q-A$. We must then have $w+(i(j(m))-1)(-y)\in A$. We know
+$w+i(j(m))(-y)\in\mathbb Q-A$. Finally we have $(w+(i(j(m))-1)(-y))-(w+i(j(m))(-y))=y$. We have 2 cases now.\\
+\indent First suppose $\exists e\in\mathbb Q-A(w+i(j(m))(-y)<e)$. Taking $w+(i(j(m))-1)(-y)$ and $w+i(j(m))(-y)$ as witnesses, our desired conclusion follows.\\
+\indent Next suppose this were not the case. Then $\forall e\in\mathbb Q-A(w+i(j(m))(-y)\geq e)$.
+We know $\frac y2>0$. So $(w+i(j(m))(-y))+\frac y2>w+i(j(m))(-y)$. Then by our case assumption we must have $(w+i(j(m))(-y))+\frac y2\notin\mathbb Q-A$ and $(w+i(j(m))(-y))+\frac y2\in A$. 
+We know $-\frac y2<0$, so $(w+i(j(m))(-y))-\frac y2<w+i(j(m))(-y)\in\mathbb Q-A$ and by lemma \ref{ded_1} we have
+$(w+i(j(m))(-y))-\frac y2\in\mathbb Q-A$. Taking $e=w+i(j(m))(-y)$, $u=(w+i(j(m))(-y))+\frac y2$, and $v=(w+i(j(m))(-y))-\frac y2$, we have $u-v=y$ and $v<e$.
 \end{proof}
+\noindent(next page)\newpage
 \begin{proof}(2)
 
 
