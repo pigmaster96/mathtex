@@ -3261,12 +3261,13 @@ We have $x+y=[\langle ad+bc,bd\rangle]$ and therefore
 \noindent(next page)\newpage
 \begin{lemma}
 \begin{equation*}
-\forall a\in\mathbb Q^*\forall b\in\mathbb Q^*(a^{-1}b^{-1}=(ab)^{-1})
+\forall a\in\mathbb Q^*\forall b\in\mathbb Q^*(ab\in\mathbb Q^*\land a^{-1}b^{-1}=(ab)^{-1})
 \end{equation*}
 \end{lemma}
 \begin{proof}
 Let arbitrary $a,b\in\mathbb Q^*$. Then there exists $\langle a_1,a_2\rangle,\langle b_1,b_2\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
-$a=[\langle a_1,a_2\rangle]$ and $b=[\langle b_1,b_2\rangle]$. Since $a,b\neq 0$, we have $a_1,b_1\neq0$ and $a_1b_1\neq0$. Since $a_2,b_2\neq0$ we also have $a_2b_2\neq0$. So
+$a=[\langle a_1,a_2\rangle]$ and $b=[\langle b_1,b_2\rangle]$. Since $a,b\neq 0$, we have $a_1,b_1\neq0$ and $a_1b_1\neq0$, meaning $ab=[\langle a_1b_1,a_2b_2\rangle]\neq0$ and $ab\in\mathbb Q^*$
+. Since $a_2,b_2\neq0$ we also have $a_2b_2\neq0$. So
 \begin{equation*}
 a^{-1}b^{-1}=[\langle a_2,a_1\rangle]\cdot[\langle b_2,b_1\rangle]=[\langle a_2b_2,a_1b_1\rangle]
 =[\langle a_1b_1,a_2b_2\rangle]^{-1}=(ab)^{-1}\qedhere
@@ -3275,14 +3276,24 @@ a^{-1}b^{-1}=[\langle a_2,a_1\rangle]\cdot[\langle b_2,b_1\rangle]=[\langle a_2b
 \begin{theorem}
 Let $a,c\in\mathbb Q$ and $b,d\in\mathbb Q^*$. 
 \begin{enumerate}
-\item$\frac ab+\frac cd+\frac{ad+bc}{bd}$
+\item$\frac ab+\frac cd=\frac{ad+bc}{bd}$
 \item$\frac ab\cdot\frac cd=\frac{ac}{bd}$
 \end{enumerate}
 \end{theorem}
-\begin{proof}
-
+\begin{proof}(1)
+We have 
+\begin{align*}
+\frac ab+\frac cd&=ab^{-1}+cd^{-1}=(ab^{-1}+cd^{-1})((bd)(bd)^{-1})\\
+&=((ab^{-1}+cd^{-1})(bd))(bd)^{-1}=((ab^{-1})(bd)+(cd^{-1})(bd))(bd)^{-1}\\
+&=(ad+bc)(bd)^{-1}=\frac{ad+bc}{bd}\qedhere
+\end{align*}
 \end{proof}
-
+\begin{proof}(2)
+We have
+\begin{equation*}
+\frac ab\cdot\frac cd=(ab^{-1})(cd^{-1})=(ac)(b^{-1}d^{-1})=(ac)(bd)^{-1}=\frac{ac}{bd}\qedhere
+\end{equation*}
+\end{proof}
 \newpage
 
 \section{Dedekind Cuts}
@@ -3522,7 +3533,7 @@ $(w+i(j(m))(-y))-\frac y2\in\mathbb Q-A$. Taking $e=w+i(j(m))(-y)$, $u=(w+i(j(m)
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(2)
-
+We want to show
 
 
 \end{proof}
