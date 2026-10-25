@@ -3258,6 +3258,31 @@ We have $x+y=[\langle ad+bc,bd\rangle]$ and therefore
 &=[\langle-a,b\rangle]+[\langle-c,d\rangle]=(-x)+(-y)\qedhere
 \end{align*}
 \end{proof}
+\noindent(next page)\newpage
+\begin{lemma}
+\begin{equation*}
+\forall a\in\mathbb Q^*\forall b\in\mathbb Q^*(a^{-1}b^{-1}=(ab)^{-1})
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $a,b\in\mathbb Q^*$. Then there exists $\langle a_1,a_2\rangle,\langle b_1,b_2\rangle\in\mathbb Z\times\mathbb Z^*$ such that 
+$a=[\langle a_1,a_2\rangle]$ and $b=[\langle b_1,b_2\rangle]$. Since $a,b\neq 0$, we have $a_1,b_1\neq0$ and $a_1b_1\neq0$. Since $a_2,b_2\neq0$ we also have $a_2b_2\neq0$. So
+\begin{equation*}
+a^{-1}b^{-1}=[\langle a_2,a_1\rangle]\cdot[\langle b_2,b_1\rangle]=[\langle a_2b_2,a_1b_1\rangle]
+=[\langle a_1b_1,a_2b_2\rangle]^{-1}=(ab)^{-1}\qedhere
+\end{equation*}
+\end{proof}
+\begin{theorem}
+Let $a,c\in\mathbb Q$ and $b,d\in\mathbb Q^*$. 
+\begin{enumerate}
+\item$\frac ab+\frac cd+\frac{ad+bc}{bd}$
+\item$\frac ab\cdot\frac cd=\frac{ac}{bd}$
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
 \newpage
 
 \section{Dedekind Cuts}
