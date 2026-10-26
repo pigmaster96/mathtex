@@ -3516,7 +3516,7 @@ $w+i(j(n))(-y)\in\mathbb Q-A$. We now define $G$ as
 \begin{equation*}
 G=\{p\in\mathbb N\mid w+i(j(p))(-y)\in\mathbb Q-A\}
 \end{equation*}
-By definition $n\in G$, so $G\neq\emptyset$ and by definition there exists $m\in G$ such that for $\forall g\in G(m\leq g)$.
+By definition $n\in G$, so $G\neq\emptyset$ and by well-ordering there exists $m\in G$ such that for $\forall g\in G(m\leq g)$.
 By definition $w+i(j(m))(-y)\in\mathbb Q-A$.\\
 \indent We first show $w+(i(j(m))-1)(-y)\notin\mathbb Q-A$. Suppose for contradiction that this were true. We know $i(j(m))-1=i(j(m))+i(-1)=i(j(m)-1)$. We have 3 cases. First suppose $j(m)-1<0$.
 In this case it follows that $0<j(m)<1$, contradicting integer discreteness. Next suppose $j(m)-1=0$. Then $i(j(m)-1)=0$, and
@@ -3534,9 +3534,33 @@ $(w+i(j(m))(-y))-\frac y2\in\mathbb Q-A$. Taking $e=w+i(j(m))(-y)$, $u=(w+i(j(m)
 \noindent(next page)\newpage
 \begin{proof}(2)
 We want to show
-
-
+\begin{equation*}
+\exists r\in A\exists s\in\mathbb Q-A(s>0\land y>\frac rs\land\exists g\in\mathbb Q-A(s<g))
+\end{equation*}
+We know $y>1$ and $q>0$. So $y-1>0$ and $(y-1)\frac q2>0$. By part 1 there then exists $u\in A$ and $v,e\in\mathbb Q-A$ such that 
+$(y-1)\frac q2=u-v$ and $v<e$. We have 2 cases.\\
+\indent First suppose $v>\frac q2$. It follows that $(y-1)v>(y-1)\frac q2=u-v$. So 
+$yv>u$ and, since $v>\frac q2>0$, $y>\frac uv$. We know $v<e$. So using $u,v,e$ as witnesses we have our desired result.\\
+\indent Next suppose $v\leq\frac q2$. We know $2<3<4$, so $\frac12<\frac34<\frac44=1$. Denoting $r=u+(\frac{3q}4-v)$ and $s=\frac{3q}4$, we know $v\leq\frac q2<\frac{3q}4$, so 
+$\frac{3q}4-v>0$ and $u+(\frac{3q}4-v)>u\in A$. Since $A$ is a dedekind cut $r=u+(\frac{3q}4-v)\in A$.
+We also have $\frac{3q}4<q\in\mathbb Q-A$, so by lemma \ref{ded_1}, $s=\frac{3q}4\in\mathbb Q-A$.
+This gives us
+\begin{equation*}
+r-s=(u+(\frac{3q}4-v))-\frac{3q}4=u-v=(y-1)\frac q2<(y-1)\frac{3q}4=(y-1)s
+\end{equation*}
+so $ys>r$. Since $s=\frac{3q}4>0$, $y>\frac rs$; where $s<q\in\mathbb Q-A$.
 \end{proof}
+\newpage
+
+\section{Construction of the Reals}
+\subsection{Definitions}
+\begin{definition}
+The set of \textbf{real numbers}, denoted $\mathbb R$, 
+
+
+\end{definition}
+
+
 
 
 
