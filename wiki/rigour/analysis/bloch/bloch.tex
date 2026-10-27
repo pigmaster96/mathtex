@@ -3560,9 +3560,26 @@ The set of \textbf{real numbers}, denoted $\mathbb R$, is defined by
 \mathbb R=\{A\subseteq\mathbb Q\mid A\text{ is a Dedekind cut}\}
 \end{equation*}
 \end{definition}
+\begin{definition}
+The binary operation $+$ on $\mathbb R$ is defined for $A,B\in\mathbb R$ as
+\begin{equation*}
+A+B=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}
+\end{equation*}
+That is, the function $+:(\mathbb R\times\mathbb R)\to\mathbb R$,
+\begin{align*}
+\forall x(&x\in+\leftrightarrow\exists A\in\mathbb R\exists B\in\mathbb R(\\
+&x=\langle\langle A,B\rangle,\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}\rangle))
+\end{align*}
+Where $\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$ is the set $D$ such that
+\begin{equation*}
+\forall x(x\in D\leftrightarrow x\in\mathbb Q\land\exists a\in A\exists b\in B(x=a+b))
+\end{equation*}
+\end{definition}
+\noindent(Existence follows from using $(\mathbb R\times\mathbb R)\times\mathbb R$ as a bounding set.)
+\begin{proof}(Range/Domain bounds, Functionality)
 
 
-
+\end{proof}
 
 
 
