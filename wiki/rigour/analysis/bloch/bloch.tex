@@ -3390,7 +3390,7 @@ and by definition $y\in\bigcup A$.
 \newpage
 
 \subsection{More properties}
-\begin{lemma}
+\begin{lemma}\label{R_arithmetic_lemmas}
 Let $A,B\subseteq\mathbb Q$ be Dedekind cuts.
 \begin{enumerate}
 \item The set
@@ -3577,9 +3577,30 @@ Where $\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$ is the
 \end{definition}
 \noindent(Existence follows from using $(\mathbb R\times\mathbb R)\times\mathbb R$ as a bounding set.)
 \begin{proof}(Range/Domain bounds, Functionality)
-
-
+First the domain bound $\text{dom}(+)\\=\mathbb R\times\mathbb R$.
+Let arbitrary $x\in\text{dom}(+)$. Then there exists $y$ such that $\langle x,y\rangle\in+$.
+So by definition there exists $A,B\in\mathbb R$ such that $x=\langle A,B\rangle$. So $x\in\mathbb R\times\mathbb R$. 
+Next let arbitrary $x\in\mathbb R\times\mathbb R$. Then there exists $A,B\in\mathbb R$ such that $x=\langle A,B\rangle$.
+The set $D=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$ exists by separation, and by definition
+$\langle\langle A,B\rangle,D\rangle\in+$. So $x=\langle A,B\rangle\in\text{dom}(+)$.\\
+\indent Next the range bound ran$(+)\subseteq\mathbb R$. Let arbitrary $y\in\text{ran}(+)$. Then there exists $x$ such that 
+$\langle x,y\rangle\in+$. By definition there exists $A,B\in\mathbb R$ such that 
+$y=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$, which, since $A,B$ are dedekind cuts, is a dedekind cut by 
+lemma \ref{R_arithmetic_lemmas}. Therefore $y\in\mathbb R$.\\
+\indent Finally functionality. Let $x\in\text{dom}(+)$. There then exists $y$ where $\langle x,y\rangle\in+$, and therefore $A,B\in\mathbb R$ 
+such that $\langle x,y\rangle=\langle\langle A,B\rangle,D\rangle$, where $D=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$. 
+Let $y'$ be arbitrary such that $\langle x,y'\rangle\in+$. Then there exists $A',B'$ such that 
+$\langle x,y'\rangle=\langle\langle A',B'\rangle,D'\rangle$, where $D'=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A'$ and $b\in B'$}\}$.
+We know $\langle A',B'\rangle=x=\langle A,B\rangle$, so since $D$ is unique by extensionality and $D'$ is defined by the same condition, 
+$y=D=D'=y'$.
 \end{proof}
+\noindent(next page)\newpage
+\begin{definition}
+
+\end{definition}
+
+
+
 
 
 
