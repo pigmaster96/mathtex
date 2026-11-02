@@ -3607,15 +3607,30 @@ That is, the function $-:\mathbb R\to\mathbb R$,
 \end{align*}
 \end{definition}
 \noindent Where existence follows from using $\mathbb R\times\mathbb R$ as a bounding set.
-\begin{proof}(Range/Domain bounds, Functionality) First the domain bound dom$(-)\\=\mathbb R$. Let arbitrary
-
-
-
+\begin{proof}(Range/Domain bounds, Functionality) First the domain bound dom$(-)\\=\mathbb R$. Let arbitrary $x\in\text{dom}(-)$. There exists
+$y$ such that $\langle x,y\rangle\in-$. By definition then there exists $A\in\mathbb R$ such that $x=A$. So $x\in\mathbb R$. 
+Next let arbitrary $x\in\mathbb R$. It follows that $x$ is a dedekind cut. The set $D$, where
+\begin{equation*}
+\forall r(r\in D\leftrightarrow r\in\mathbb Q\land\exists c\in\mathbb Q-x(-r<c))
+\end{equation*}
+exists by separation. By definition $\langle x,D\rangle\in-$. So $x\in\text{dom}(-)$.\\
+\indent Next the range bound ran$(-)\subseteq\mathbb R$. Let arbitrary $y\in\text{ran}(-)$. There exists $x$ such that 
+$\langle x,y\rangle\in-$. By definition there then exists $A\in\mathbb R$ and $D$ such that 
+$D=\{r\in\mathbb Q\mid-r<c\text{ for some }c\in\mathbb Q-A\}$, where $\langle x,y\rangle=\langle A,D\rangle$. 
+By theorem \ref{R_arithmetic_lemmas}, $D$ is a dedekind cut. So $y=D\in\mathbb R$.\\
+\indent Finally functionality. Let arbitrary $x\in\text{dom}(-)$. There exists $y$ such that $\langle x,y\rangle\in-$. 
+So again by definition there exists $A\in\mathbb R$ and $D$ such that $D=\{r\in\mathbb Q\mid-r<c\text{ for some }c\in\mathbb Q-A\}$, where 
+$\langle x,y\rangle=\langle A,D\rangle$.
+Now let $y'$ be arbitrary such that $\langle x,y'\rangle\in-$. Then there exists $A'\in\mathbb R$ and $D'$ such that 
+$D'=\{r\in\mathbb Q\mid-r<c\text{ for some }c\in\mathbb Q-A'\}$, where $\langle x,y'\rangle=\langle A',D'\rangle$. 
+We know $A=x=A'$. 
+So since $D$ is unique by extensionality and $D'$ is defined by the same condition, 
+$y=D=D'=y'$.
 \end{proof}
+\begin{definition}
 
-
-
-
+\end{definition}
+\noindent(next page)\newpage
 
 
 \end{document}
