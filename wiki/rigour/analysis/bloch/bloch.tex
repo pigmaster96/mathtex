@@ -3628,9 +3628,28 @@ So since $D$ is unique by extensionality and $D'$ is defined by the same conditi
 $y=D=D'=y'$.
 \end{proof}
 \begin{definition}
-
+For $A,B\in\mathbb R$, the relation $<$ on $\mathbb R$ is defined by $A<B$ iff $B\subsetneq A$. That is,
+\begin{equation*}
+\forall x(x\in<\leftrightarrow\exists A\in\mathbb R\exists B\in\mathbb R(x=\langle A,B\rangle\land B\subsetneq A))
+\end{equation*}
+The relation $\leq$ on $\mathbb R$ is defined by $A\leq B$ iff $B\subseteq A$. That is,
+\begin{equation*}
+\forall x(x\in\leq\leftrightarrow\exists A\in\mathbb R\exists B\in\mathbb R(x=\langle A,B\rangle\land B\subseteq A))
+\end{equation*}
 \end{definition}
-\noindent(next page)\newpage
+\noindent It is straightforward to show $<\subseteq\mathbb R\times\mathbb R$ and $\leq\subseteq\mathbb R\times\mathbb R$. 
+This justifies existence by separation and the domain/range bound.\\
+(next page)\newpage
+\begin{lemma}
+
+\end{lemma}
+
+
+
+
+
+
+
 
 
 \end{document}
