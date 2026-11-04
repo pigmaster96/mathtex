@@ -3641,10 +3641,41 @@ The relation $\leq$ on $\mathbb R$ is defined by $A\leq B$ iff $B\subseteq A$. T
 This justifies existence by separation and the domain/range bound.\\
 (next page)\newpage
 \begin{lemma}
+Let $A\subseteq\mathbb Q$ be a dedekind cut. Let $r\in\mathbb Q$.
+\begin{enumerate}
+\item $A\subsetneq D_r$ if and only if there is some $q\in\mathbb Q-A$ such that $r<q$.
+\item $A\subseteq D_r$ if and only if $r\in\mathbb Q-A$ if and only if $r<a$ for all $a\in A$.
+\end{enumerate}
+\end{lemma}
+\begin{proof}(1)
+We want to show
+\begin{equation*}
+A\subsetneq D_r\leftrightarrow\exists q\in\mathbb Q-A(r<q)
+\end{equation*}
+Where $D_r$ is the rational cut at $r$:
+\begin{equation*}
+D_r=\{x\in\mathbb Q\mid x>r\}
+\end{equation*}
+First suppose $A\subsetneq D_r$. This means $A\subseteq D_r$ and $A\neq D_r$. It follows that $D_r\nsubseteq A$ and that there exists 
+$x\in D_r$ such that $x\notin A$. So we have $x\in\mathbb Q-A$, where by definition $r<x$.\\
+\indent Next suppose there exists $q\in\mathbb Q-A$ such that $r<q$. It follows by definition that $q\in D_r$. Since $q\notin A$, we must then have
+$D_r\neq A$. Let arbitrary $x\in A$. Since $q\in\mathbb Q-A$, by lemma \ref{ded_1} we have $q<x$ and therefore $r<x$. By definition $x\in D_r$ and 
+$A\subset D_r$. So $A\subsetneq D_r$.
+\end{proof}
+\begin{proof}(2)
+We want to show
+\begin{equation*}
+A\subseteq D_r\leftrightarrow r\in\mathbb Q-A\leftrightarrow\forall a\in A(r<a)
+\end{equation*}
+The second equivalence follows from lemma \ref{ded_1}. We just need to show the first. Suppose $A\subseteq D_r$. We know $r\in\mathbb Q$. 
+Suppose for contradiction that $r\in A$. It then follows that $r\in D_r$ and that $r<r$, the contradiction. So $r\in\mathbb Q-A$.\\
+\indent Suppose $r\in\mathbb Q-A$. Let arbitrary $x\in A$. By lemma \ref{ded_1} we have $r<x$. So by definition $x\in D_r$.
+\end{proof}
+\begin{lemma}
+
+
 
 \end{lemma}
-
-
 
 
 
