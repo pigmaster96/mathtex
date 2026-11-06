@@ -3294,6 +3294,15 @@ We have
 \frac ab\cdot\frac cd=(ab^{-1})(cd^{-1})=(ac)(b^{-1}d^{-1})=(ac)(bd)^{-1}=\frac{ac}{bd}\qedhere
 \end{equation*}
 \end{proof}
+\begin{theorem}
+$0_{\mathbb Q}=-0_{\mathbb Q}$ 
+\end{theorem}
+\begin{proof}
+We have
+\begin{equation*}
+0=0\cdot(-1)=(-0)\cdot1=-0\qedhere
+\end{equation*}
+\end{proof}
 \newpage
 
 \section{Dedekind Cuts}
@@ -3553,7 +3562,7 @@ so $ys>r$. Since $s=\frac{3q}4>0$, $y>\frac rs$; where $s<q\in\mathbb Q-A$.
 \newpage
 
 \section{Construction of the Reals}
-\subsection{Definitions}
+\subsection{Definitions and Operations}
 \begin{definition}
 The set of \textbf{real numbers}, denoted $\mathbb R$, is defined by
 \begin{equation*}
@@ -3703,9 +3712,21 @@ A\subseteq D_r\leftrightarrow D_r\leq A\qedhere
 \end{equation*}
 \end{proof}
 \begin{proof}(3)
-
-
+Suppose $A<D_0$. By definition then $D_0\subsetneq A$, and there exists $q\in A$ such that $q\notin D_0$. Since $q\notin D_0$ we have $q\leq0$. Since $A$ is a dedekind cut we
+then have $0\in A$ and then $0\notin\mathbb Q-A$.
+Suppose for contradiction that $0\in-A$. Then by definition
+there exists $c\in\mathbb Q-A$ such that $0=-0<c$, which by lemma \ref{ded_1} would imply $0\in\mathbb Q-A$, the contradiction. 
+So $0\in\mathbb Q-(-A)$, which by part 2 of this lemma implies $-A\geq D_0$.
 \end{proof}
+\begin{definition}
+
+
+\end{definition}
+
+
+
+
+
 
 
 
