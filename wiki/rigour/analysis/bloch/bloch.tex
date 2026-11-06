@@ -3640,7 +3640,7 @@ The relation $\leq$ on $\mathbb R$ is defined by $A\leq B$ iff $B\subseteq A$. T
 \noindent It is straightforward to show $<\subseteq\mathbb R\times\mathbb R$ and $\leq\subseteq\mathbb R\times\mathbb R$. 
 This justifies existence by separation and the domain/range bound.\\
 (next page)\newpage
-\begin{lemma}
+\begin{lemma}\label{ded_2}
 Let $A\subseteq\mathbb Q$ be a dedekind cut. Let $r\in\mathbb Q$.
 \begin{enumerate}
 \item $A\subsetneq D_r$ if and only if there is some $q\in\mathbb Q-A$ such that $r<q$.
@@ -3680,7 +3680,16 @@ Let $A\in\mathbb R$ and let $r\in\mathbb Q$.
 \end{enumerate}
 \end{lemma}
 \begin{proof}(1)
-
+We want to show
+\begin{equation*}
+A>D_r\leftrightarrow\exists q\in\mathbb Q-A(q>r)
+\end{equation*}
+Suppose $A>D_r$. Then by definition $A\subsetneq D_r$.
+Since $A$ is real, by lemma \ref{ded_2} 
+there exists $q\in\mathbb Q-A$ such that $q>r$.\\
+\indent Next suppose there exists $q\in\mathbb Q-A$ such that $q>r$.
+Then since $A$ is real, by lemma \ref{ded_2} we have $A\subsetneq D_r$. Then by definition
+since $A,D_r\in\mathbb R$, $D_r<A$.
 \end{proof}
 \noindent(next page)\newpage
 \begin{proof}(2)
