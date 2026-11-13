@@ -3720,18 +3720,30 @@ So $0\in\mathbb Q-(-A)$, which by part 2 of this lemma implies $-A\geq D_0$.
 \end{proof}
 \begin{definition}
 Where $\mathbb R_{\geq0}=\{x\in\mathbb R\mid x\geq D_0\}$,
-we define the relation $\odot$ as the binary operation from $\mathbb R_{\geq0}\times\mathbb R_{\geq0}$ into $\mathbb R$ where
+we define the relation $\odot$ as the function $\odot:\mathbb R_{\geq0}\times\mathbb R_{\geq0}\to\mathbb R$ where
 \begin{align*}
-\forall x(x\in\odot&\leftrightarrow\exists A\in\mathbb R\exists B\in\mathbb R
+\forall x(x\in\odot&\leftrightarrow\exists A\in\mathbb R_{\geq0}\exists B\in\mathbb R_{\geq0}
 \exists C\in\mathbb R(
 x=\langle\langle A,B\rangle,C\rangle\\
 &\land\forall y(y\in C\leftrightarrow\exists a\in A\exists b\in B(y=ab))))
 \end{align*}
-
 \end{definition}
+\noindent Where existence follows from using $(\mathbb R_{\geq0}\times\mathbb R_{\geq0})\times\mathbb R$ as a bounding set.
+\begin{proof}(Domain/Range/Functionaliy)
+First the domain bound dom$(\odot)=\mathbb R_{\geq0}\times\mathbb R_{\geq0}$. Let arbitrary $x\in\text{dom}(\odot)$. Then there
+exists $y$ such that $\langle x,y\rangle\in\odot$. By definition there exists $A,B\in\mathbb R_{\geq0}$ 
+such that $x=\langle A,B\rangle$. So $x\in\mathbb R_{\geq0}\times\mathbb R_{\geq0}$.
+Next let arbitrary $x\in\mathbb R_{\geq0}\times\mathbb R_{\geq0}$.
+Then there exists $A,B\in\mathbb R_{\geq0}$ such that $x=\langle A,B\rangle$. The set
+\begin{equation*}
+C=\{r\in\mathbb Q\mid r=ab\text{ for some $a\in A$ and $b\in B$}\}
+\end{equation*}
+Exists by separation. By definition $\langle\langle A,B\rangle,C\rangle\in\odot$. So $x=\langle A,B\rangle\in\text{dom}(\odot)$.\\
+\indent Next the range bound 
 
 
 
+\end{proof}
 
 
 
