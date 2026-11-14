@@ -3594,7 +3594,7 @@ The set $D=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$ ex
 $\langle\langle A,B\rangle,D\rangle\in+$. So $x=\langle A,B\rangle\in\text{dom}(+)$.\\
 \indent Next the range bound ran$(+)\subseteq\mathbb R$. Let arbitrary $y\in\text{ran}(+)$. Then there exists $x$ such that 
 $\langle x,y\rangle\in+$. By definition there exists $A,B\in\mathbb R$ such that 
-$y=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$, which, since $A,B$ are dedekind cuts, is a dedekind cut by 
+$y=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$, which, since $A,B$ are dedekind cuts, $y$ is a dedekind cut by 
 lemma \ref{R_arithmetic_lemmas}. Therefore $y\in\mathbb R$.\\
 \indent Finally functionality. Let $x\in\text{dom}(+)$. There then exists $y$ where $\langle x,y\rangle\in+$, and therefore $A,B\in\mathbb R$ 
 such that $\langle x,y\rangle=\langle\langle A,B\rangle,D\rangle$, where $D=\{r\in\mathbb Q\mid r=a+b\text{ for some $a\in A$ and $b\in B$}\}$. 
@@ -3680,7 +3680,7 @@ The second equivalence follows from lemma \ref{ded_1}. We just need to show the 
 Suppose for contradiction that $r\in A$. It then follows that $r\in D_r$ and that $r<r$, the contradiction. So $r\in\mathbb Q-A$.\\
 \indent Suppose $r\in\mathbb Q-A$. Let arbitrary $x\in A$. By lemma \ref{ded_1} we have $r<x$. So by definition $x\in D_r$.
 \end{proof}
-\begin{lemma}
+\begin{lemma}\label{ded_3}
 Let $A\in\mathbb R$ and let $r\in\mathbb Q$.
 \begin{enumerate}
 \item $A>D_r$ if and only if there is some $q\in\mathbb Q-A$ such that $q>r$.
@@ -3723,14 +3723,14 @@ Where $\mathbb R_{\geq0}=\{x\in\mathbb R\mid x\geq D_0\}$,
 we define the relation $\odot$ as the function $\odot:\mathbb R_{\geq0}\times\mathbb R_{\geq0}\to\mathbb R$ where
 \begin{align*}
 \forall x(x\in\odot&\leftrightarrow\exists A\in\mathbb R_{\geq0}\exists B\in\mathbb R_{\geq0}
-\exists C\in\mathbb R(
+\exists C(
 x=\langle\langle A,B\rangle,C\rangle\\
-&\land\forall y(y\in C\leftrightarrow\exists a\in A\exists b\in B(y=ab))))
+&\land\forall y(y\in C\leftrightarrow y\in\mathbb Q\land\exists a\in A\exists b\in B(y=ab))))
 \end{align*}
 \end{definition}
 \noindent Where existence follows from using $(\mathbb R_{\geq0}\times\mathbb R_{\geq0})\times\mathbb R$ as a bounding set.
-\begin{proof}(Domain/Range/Functionaliy)
-First the domain bound dom$(\odot)=\mathbb R_{\geq0}\times\mathbb R_{\geq0}$. Let arbitrary $x\in\text{dom}(\odot)$. Then there
+\begin{proof}(Domain/Range/Functionality)
+First the domain bound dom$(\odot)=\mathbb R_{\geq0}\\\times\mathbb R_{\geq0}$. Let arbitrary $x\in\text{dom}(\odot)$. Then there
 exists $y$ such that $\langle x,y\rangle\in\odot$. By definition there exists $A,B\in\mathbb R_{\geq0}$ 
 such that $x=\langle A,B\rangle$. So $x\in\mathbb R_{\geq0}\times\mathbb R_{\geq0}$.
 Next let arbitrary $x\in\mathbb R_{\geq0}\times\mathbb R_{\geq0}$.
@@ -3738,13 +3738,52 @@ Then there exists $A,B\in\mathbb R_{\geq0}$ such that $x=\langle A,B\rangle$. Th
 \begin{equation*}
 C=\{r\in\mathbb Q\mid r=ab\text{ for some $a\in A$ and $b\in B$}\}
 \end{equation*}
-Exists by separation. By definition $\langle\langle A,B\rangle,C\rangle\in\odot$. So $x=\langle A,B\rangle\in\text{dom}(\odot)$.\\
-\indent Next the range bound 
-
+exists by separation. By definition $\langle\langle A,B\rangle,C\rangle\in\odot$. So $x=\langle A,B\rangle\in\text{dom}(\odot)$.\\
+\indent Next the range bound ran$(\odot)\subseteq\mathbb R$. Let arbitrary $y\in\text{ran}(\odot)$.
+Then there exists $x$ where $\langle x,y\rangle\in\odot$, $A,B\in\mathbb R_{\geq0}$, and $C$ such that
+\begin{equation*}
+\forall z(z\in C\leftrightarrow z\in\mathbb Q\land\exists a\in A\exists b\in B(z=ab))
+\end{equation*}
+Where $\langle x,y\rangle=\langle\langle A,B\rangle,C\rangle$.
+$A,B$ are dedekind cuts where $A,B\geq D_0$, therefore by lemma \ref{ded_3} $0\in\mathbb Q-A$ and $0\in\mathbb Q-B$, 
+by lemma \ref{R_arithmetic_lemmas} $C$ is a dedekind cut and therefore $y=C\in\mathbb R$.\\
+\indent Finally let $x\in\text{dom}(\odot)$. There exists $y$ such that $\langle x,y\rangle\in\odot$, $A,B\in\mathbb R_{\geq0}$, 
+and $C=\{r\in\mathbb Q\mid r=ab\text{ for some $a\in A$ and $b\in B$}\}$ such that $\langle x,y\rangle=\langle\langle A,B\rangle,C\rangle$. 
+Let $y'$ be arbitrary such that $\langle x,y'\rangle\in\odot$. Then similarly there exists $A',B'\in\mathbb R_{\geq0}$
+and $C'=\{r\in\mathbb Q\mid r=ab\text{ for some $a\in A'$ and $b\in B'$}\}$ such that $\langle x,y'\rangle=\langle\langle A',B'\rangle,C'\rangle$. 
+We then have $\langle A,B\rangle=x=\langle A',B'\rangle$, so $C$ and $C'$ are defined by the same condition and $y=C=C'=y'$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{definition}
+The binary operation $\cdot$ on $\mathbb R$ is defined for all $A,B\in\mathbb R$ as
+\begin{equation*}
+A\cdot B=\begin{cases}
+A\odot B&\text{if $A\geq D_0$ and $B\geq D_0$}\\
+-((-A)\odot B)&\text{if $A<D_0$ and $B\geq D_0$}\\
+-(A\odot(-B))&\text{if $A\geq D_0$ and $B<D_0$}\\
+(-A)\odot(-B)&\text{if $A<D_0$ and $B<D_0$}
+\end{cases}
+\end{equation*}
+That is, the function $\cdot:\mathbb R\times\mathbb R\to\mathbb R$,
+\begin{align*}
+\forall x(x\in\cdot\leftrightarrow&\exists A\in\mathbb R\exists B\in\mathbb R\exists C(x=\langle\langle A,B\rangle,C\rangle\land(\\
+&(A\geq D_0\land B\geq D_0\land C=A\odot B)\\
+&\lor(A<D_0\land B\geq D_0\land C=-((-A)\odot B))\\
+&\lor(A\geq D_0\land B<D_0\land C=-(A\odot(-B)))\\
+&\lor(A<D_0\land B<D_0\land C=(-A)\odot(-B)))))
+\end{align*}
+\end{definition}
+\noindent Where existence follows from using $(\mathbb R\times\mathbb R)\times\mathbb R$ as a bounding set.
+\begin{lemma}
+\begin{equation*}
+\forall A\in\mathbb R\forall r\in\mathbb Q((A<D_r\lor A\geq D_r)\land
+\neg(A<D_r\land A\geq D_r))
+\end{equation*}
+\end{lemma}
+\begin{proof}(Domain/Range/Functionality)
 
 
 \end{proof}
-
 
 
 
