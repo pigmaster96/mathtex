@@ -3774,16 +3774,62 @@ That is, the function $\cdot:\mathbb R\times\mathbb R\to\mathbb R$,
 \end{align*}
 \end{definition}
 \noindent Where existence follows from using $(\mathbb R\times\mathbb R)\times\mathbb R$ as a bounding set.
-\begin{lemma}
+\begin{lemma}\label{ded_4}
 \begin{equation*}
 \forall A\in\mathbb R\forall r\in\mathbb Q((A<D_r\lor A\geq D_r)\land
 \neg(A<D_r\land A\geq D_r))
 \end{equation*}
 \end{lemma}
-\begin{proof}(Domain/Range/Functionality)
-
-
+\begin{proof}
+Let arbitrary $A\in\mathbb R$ and $r\in\mathbb Q$. We have 2 cases. First suppose $r\in A$.
+We know $r\notin D_r$ so $D_r\neq A$. Letting arbitrary $x\in D_r$, by definition $x>r\in A$, so 
+since $A$ is a dedekind cut $x\in A$. It follows then that $D_r\subsetneq A$ and $A<D_r$.\\
+\indent Next suppose $r\notin A$. Since $r\in\mathbb Q$ we then have $r\in\mathbb Q-A$, where by lemma \ref{ded_3} it follows that $A\geq D_r$.\\
+\indent Suppose for contradiction that $A<D_r$ and $A\geq D_r$. By lemma \ref{ded_3} the latter implies $\forall a\in A(a>r)$.
+The former implies $D_r\subsetneq A$, so there exists $x\in A$ where $x\notin D_r$.
+$x\notin D_r$ implies $x\leq r$, contradicting the fact that, since $x\in A$, $x>r$.
 \end{proof}
+\begin{proof}(Domain/Range/Functionality)
+First the domain bound dom$(\cdot)=\mathbb R\times\mathbb R$. Let arbitrary $x\in\text{dom}(\cdot)$. There then exists $y$ such that $\langle x,y\rangle\in\cdot$. 
+By definition there exists $A,B\in\mathbb R$ such that $x=\langle A,B\rangle$. So $x\in\mathbb R\times\mathbb R$. Let arbitrary $x\in\mathbb R\times\mathbb R$. So there exists $A,B\in\mathbb R$ such that $x=\langle A,B\rangle$.
+By lemma \ref{ded_4} we have 4 cases:\\
+\indent Case 1: $A\geq D_0$ and $B\geq D_0$. Then $A,B\in\mathbb R_{\geq0}$ and $A\odot B\in\mathbb R$ exists, where by definition $\langle\langle A,B\rangle,A\odot B\rangle\in\cdot$.
+So $x=\langle A,B\rangle\in\text{dom}(\cdot)$.\\
+\indent Case 2: $A<D_0$ and $B\geq D_0$. Then by lemma \ref{ded_3} $-A\geq D_0$. So $(-A),B\in\mathbb R_{\geq0}$ and $(-A)\odot B\in\mathbb R$ exists. So $-((-A)\odot B)$ exists, where by definition
+$\langle\langle A,B\rangle,-((-A)\odot B)\rangle\in\cdot$. So $x=\langle A,B\rangle\in\text{dom}(\cdot)$.\\
+\indent Case 3: $A\geq D_0$ and $B<D_0$. Then by lemma \ref{ded_3} $-B\geq D_0$. So $A,(-B)\in\mathbb R_{\geq0}$ and $A\odot(-B)\in\mathbb R$ exists. So $-(A\odot(-B))$ exists, where by definition
+$\langle\langle A,B\rangle,-(A\odot(-B))\rangle\in\cdot$. So $x=\langle A,B\rangle\in\text{dom}(\cdot)$.\\
+\indent Case 4: $A<D_0$ and $B<D_0$. Then by lemma \ref{ded_3} $-A,-B\geq D_0$. So $-A,-B\in\mathbb R_{\geq0}$ and $(-A)\odot(-B)$ exists, where by definition 
+$\langle\langle A,B\rangle,(-A)\odot(-B)\rangle\in\cdot$. So $x=\langle A,B\rangle\in\text{dom}(\cdot)$.\\
+(next page)\newpage
+\indent Next the range bound ran$(\cdot)\subseteq\mathbb R$. Let arbitrary $y\in\text{ran}(\cdot)$.
+Then there exists $x$ where $\langle x,y\rangle\in\cdot$. By definition there exists $A,B\in\mathbb R$, and $C$ such that 
+$\langle x,y\rangle=\langle\langle A,B\rangle,C\rangle$, where we have 4 cases:\\
+\indent Case 1: $A\geq D_0\land B\geq D_0\land C=A\odot B$. It follows by definition of $\odot$ that $y=C=A\odot B\in\mathbb R$.\\
+\indent Case 2: $A<D_0\land B\geq D_0\land C=-((-A)\odot B)$. By lemma \ref{ded_3} $A<D_0$ implies $-A\geq D_0$. By definition of $\odot$ and $-$, $(-A)\odot B\in\mathbb R$ and 
+$-((-A)\odot B)\in\mathbb R$. So $y=C\in\mathbb R$.\\
+\indent Case 3: $A\geq D_0\land B<D_0\land C=-(A\odot(-B))$. By lemma \ref{ded_3} $B<D_0$ implies $-B\geq D_0$. By definition of $\odot$ and $-$, $A\odot(-B)\in\mathbb R$ and 
+$-(A\odot(-B))\in\mathbb R$. So $y=C\in\mathbb R$.\\
+\indent Case 4: $A<D_0\land B<D_0\land C=(-A)\odot(-B)$. By lemma \ref{ded_3} $A,B<D_0$ implies $-A,-B\geq D_0$. So by definition of $\odot$, $(-A)\odot(-B)\in\mathbb R$ and $y=C\in\mathbb R$.\\
+\indent Finally functionality. Let $x\in\text{dom}(\cdot)$. There exists $y$ where $\langle x,y\rangle\in\cdot$, $A,B\in\mathbb R$ and $C$ such that 
+$\langle x,y\rangle=\langle\langle A,B\rangle,C\rangle$. Let $y'$ be arbitrary such that $\langle x,y'\rangle\in\cdot$. Similarly there exists $A',B'\in\mathbb R$ and $C'$ such that 
+$\langle x,y'\rangle=\langle\langle A',B'\rangle,C'\rangle$. It follows that $A=A'$ and $B=B'$. We have 4 cases.\\
+\indent Case 1: $A\geq D_0\land B\geq D_0\land C=A\odot B$. We have $A'\geq D_0$ and $B'\geq D_0$, and by lemma \ref{ded_4} we must have $C'=A'\odot B'$. So $y'=C'=A'\odot B'=A\odot B=C=y$.\\
+\indent Case 2: $A<D_0\land B\geq D_0\land C=-((-A)\odot B)$. We have $A'< D_0$ and $B'\geq D_0$, and by lemma \ref{ded_4} we must have $C'=-((-A')\odot B')$. 
+So $y'=C'=-((-A')\odot B')=-((-A)\odot B)=C=y$.\\
+\indent Case 3: $A\geq D_0\land B<D_0\land C=-(A\odot(-B))$. We have $A'\geq D_0$ and $B'<D_0$, and by lemma \ref{ded_4} we must have $C'=-(A'\odot(-B'))$. 
+So $y'=C'=-(A'\odot(-B'))=-(A\odot(-B))=C=y$.\\
+\indent Case 4: $A<D_0\land B<D_0\land C=(-A)\odot(-B)$. We have $A'<D_0$ and $B'<D_0$, and by lemma \ref{ded_4} we must have $C'=(-A')\odot(-B')$. So $y'=C'=(-A')\odot(-B')=(-A)\odot(-B)=C=y$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{definition}
+
+
+\end{definition}
+
+
+
+
 
 
 
