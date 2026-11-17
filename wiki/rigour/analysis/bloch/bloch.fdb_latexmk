@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1794932592 "bloch.tex" "bloch.pdf" "bloch" 1794932593 0
+["pdflatex"] 1794955358 "bloch.tex" "bloch.pdf" "bloch" 1794955359 0
   "/etc/texmf/web2c/texmf.cnf" 1755598860 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -96,9 +96,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755598892 4623455 fa0568a71dd9a288d6c226ee477506c6 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755598947 7881613 ad016286089ecea48254f239da980507 ""
-  "bloch.aux" 1794932593 4893 c74f34a9f88176088d72144db291f588 "pdflatex"
-  "bloch.tex" 1794932591 226879 b069e9682b2440803fd45633ac225246 ""
-  "bloch.toc" 1794932593 2338 c031698a99047c999db2400214ab5e0c "pdflatex"
+  "bloch.aux" 1794955359 4893 c74f34a9f88176088d72144db291f588 "pdflatex"
+  "bloch.tex" 1794955357 227146 771bebb54e955b28bb5474d74f16c7b6 ""
+  "bloch.toc" 1794955359 2338 c031698a99047c999db2400214ab5e0c "pdflatex"
   (generated)
   "bloch.aux"
   "bloch.log"
