@@ -3823,11 +3823,33 @@ So $y'=C'=-(A'\odot(-B'))=-(A\odot(-B))=C=y$.\\
 \end{proof}
 \noindent(next page)\newpage
 \begin{definition}
-
-
+Where $\mathbb R_{>0}=\{x\in\mathbb R\mid x>D_0\}$,
+we define $\operatorname{rec}$ as the function $\operatorname{rec}:\mathbb R_{>0}\to\mathbb R$ where
+\begin{align*}
+\forall x(x\in\operatorname{rec}\leftrightarrow\exists A&\in\mathbb R_{>0}\exists B(x=\langle A,B\rangle\\
+&\land\forall y(y\in B\leftrightarrow y\in\mathbb Q\land y>0\land\exists c\in\mathbb Q-A\left(\frac{1}{y}<c\right))))
+\end{align*}
 \end{definition}
+\noindent Where existence follows from using $\mathbb R_{>0}\times\mathbb R$ as a bounding set.
+\begin{proof}(Domain/Range/Functionality)
+First the domain bound dom$(\operatorname{rec})=\\\mathbb R_{>0}$. Let arbitrary $x\in\text{dom}(\operatorname{rec})$. There then exists $y$ such
+that $\langle x,y\rangle\in\operatorname{rec}$ and by definition
+$A\in\mathbb R_{>0}$ such that $x=A$. So $x\in\mathbb R_{>0}$. Next let arbitrary $x\in\mathbb R_{>0}$. The set $B$ where
+\begin{equation*}
+\forall y\left(y\in B\leftrightarrow y\in\mathbb Q\land y>0\land\exists c\in\mathbb Q-A\left(\frac{1}{y}<c\right)\right)
+\end{equation*}
+exists by separation. By definition $\langle x,B\rangle\in\operatorname{rec}$, so $x\in\text{dom}(\operatorname{rec})$.\\
+\indent Next the range bound ran$(\operatorname{rec})\subseteq\mathbb R$.
+Let arbitrary $y\in\text{ran}(\operatorname{rec})$. There exists $x$ such that $\langle x,y\rangle\in\operatorname{rec}$ and by definition
+$A\in\mathbb R_{>0}$ and $B$ such that $\langle x,y\rangle=\langle A,B\rangle$, and 
+$B=\{r\in\mathbb Q\mid r>0\text{ and }\frac{1}{r}<c\text{ for some }c\in\mathbb Q-A\}$.  
 
 
+By lemma \ref{R_arithmetic_lemmas} since $A$ is a dedekind cut, $B$ is a dedekind cut.
+
+
+
+\end{proof}
 
 
 
