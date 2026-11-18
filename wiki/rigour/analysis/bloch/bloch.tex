@@ -3853,8 +3853,52 @@ $B'=\{r\in\mathbb Q\mid r>0\text{ and }\frac{1}{r}<c\text{ for some }c\in\mathbb
 same condition and $y=B=B'=y'$.
 \end{proof}
 \begin{definition}
-
+The unary operation $^{-1}$ on $\mathbb R$ is defined for all $A\in\mathbb R-{D_0}$ as 
+\begin{equation*}
+A^{-1}=
+\begin{cases}
+\operatorname{rec}(A)&\text{if }A>D_0\\
+-(\operatorname{rec}(-A))&\text{if }A<D_0
+\end{cases}
+\end{equation*}
+That is, the function $^{-1}:\mathbb R-D_0\to\mathbb R$,
+\begin{align*}
+\forall x(x\in ^{-1}\leftrightarrow\exists A\in\mathbb R-D_0\exists B(x=\langle A,B\rangle&\land(
+(A>D_0\land B=\operatorname{rec}(A))\\
+&\lor(A<D_0\land B=-(\operatorname{rec}(-A))))))
+\end{align*}
 \end{definition}
+\noindent Where existence follows from using $\mathbb R-D_0\times\mathbb R$ as a bounding set.\\
+(next page)\newpage
+\begin{lemma}
+\begin{equation*}
+\forall A\in\mathbb R-D_0(A<D_0\to-A>D_0)
+\end{equation*}
+\end{lemma}
+\begin{proof}
+Let arbitrary $A\in\mathbb R$. Suppose $A<D_0$. 
+
+
+By lemma \ref{ded_3} we know that $-A\geq D_0$ and by definition then that $-A\subseteq D_0$. Since $A\neq D_0$ we then have 
+
+
+
+\end{proof}
+\begin{lemma}(Trichotomy)
+\begin{align*}
+\forall A\in\mathbb R\forall&r\in\mathbb Q((A<D_r\lor A=D_r\lor A>D_r)\land\\
+&\neg(A<D_r\land A>D_r)\land\neg(A<D_r\land A=D_r)\land\neg(A=D_r\land A>D_r))
+\end{align*}
+\end{lemma}
+\begin{proof}
+
+
+\end{proof}
+
+
+
+
+
 
 
 
