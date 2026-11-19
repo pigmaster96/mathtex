@@ -3872,17 +3872,17 @@ That is, the function $^{-1}:\mathbb R-D_0\to\mathbb R$,
 (next page)\newpage
 \begin{lemma}
 \begin{equation*}
-\forall A\in\mathbb R-D_0(A<D_0\to-A>D_0)
+\forall A\in\mathbb R(A<D_0\to-A>D_0)
 \end{equation*}
 \end{lemma}
 \begin{proof}
-Let arbitrary $A\in\mathbb R$. Suppose $A<D_0$. 
-
-
-By lemma \ref{ded_3} we know that $-A\geq D_0$ and by definition then that $-A\subseteq D_0$. Since $A\neq D_0$ we then have 
-
-
-
+Let arbitrary $A\in\mathbb R$. Suppose $A<D_0$. Then by definition $D_0\subsetneq A$, and there exists $r$ such that $r\in A$ and $r\notin D_0$. 
+The latter implies $r\leq0$. Since $A$ is a dedekind cut, it follows that 
+there exists $q\in A$ such that $q<r\leq0$; so $-q>0$. By definition we have $-q\in D_0$.
+Let arbitrary $c\in\mathbb Q-A$. It follows 
+from lemma \ref{ded_1} that $c<q=-(-q)$, and therefore $-q\notin-A$. Since $-q\in D_0$, $D_0\neq-A$.\\
+\indent By lemma \ref{ded_3} we know that $-A\geq D_0$ and by definition then that $-A\subseteq D_0$. Since $-A\neq D_0$ we then have 
+$-A\subsetneq D_0$ and by definition $-A>D_0$.
 \end{proof}
 \begin{lemma}(Trichotomy)
 \begin{align*}
