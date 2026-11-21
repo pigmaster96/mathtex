@@ -29,3 +29,4 @@
 \contentsline {subsection}{\numberline {1.4.2}More properties}{83}{}%
 \contentsline {section}{\numberline {1.5}Construction of the Reals}{88}{}%
 \contentsline {subsection}{\numberline {1.5.1}Definitions and Operations}{88}{}%
+\contentsline {subsection}{\numberline {1.5.2}Properties}{97}{}%

@@ -3853,7 +3853,7 @@ $B'=\{r\in\mathbb Q\mid r>0\text{ and }\frac{1}{r}<c\text{ for some }c\in\mathbb
 same condition and $y=B=B'=y'$.
 \end{proof}
 \begin{definition}
-The unary operation $^{-1}$ on $\mathbb R$ is defined for all $A\in\mathbb R-{D_0}$ as 
+The unary operation $^{-1}$ on $\mathbb R$ is defined for all $A\in\mathbb R-\{D_0\}$ as 
 \begin{equation*}
 A^{-1}=
 \begin{cases}
@@ -3861,16 +3861,16 @@ A^{-1}=
 -(\operatorname{rec}(-A))&\text{if }A<D_0
 \end{cases}
 \end{equation*}
-That is, the function $^{-1}:\mathbb R-D_0\to\mathbb R$,
+That is, the function $^{-1}:\mathbb R-\{D_0\}\to\mathbb R$,
 \begin{align*}
-\forall x(x\in ^{-1}\leftrightarrow\exists A\in\mathbb R-D_0\exists B(x=\langle A,B\rangle&\land(
+\forall x(x\in ^{-1}\leftrightarrow\exists A\in\mathbb R-\{D_0\}\exists B(x=\langle A,B\rangle&\land(
 (A>D_0\land B=\operatorname{rec}(A))\\
 &\lor(A<D_0\land B=-(\operatorname{rec}(-A))))))
 \end{align*}
 \end{definition}
-\noindent Where existence follows from using $\mathbb R-D_0\times\mathbb R$ as a bounding set.\\
+\noindent Where existence follows from using $\mathbb R-\{D_0\}\times\mathbb R$ as a bounding set.\\
 (next page)\newpage
-\begin{lemma}
+\begin{lemma}\label{ded_5}
 \begin{equation*}
 \forall A\in\mathbb R(A<D_0\to-A>D_0)
 \end{equation*}
@@ -3884,7 +3884,7 @@ from lemma \ref{ded_1} that $c<q=-(-q)$, and therefore $-q\notin-A$. Since $-q\i
 \indent By lemma \ref{ded_3} we know that $-A\geq D_0$ and by definition then that $-A\subseteq D_0$. Since $-A\neq D_0$ we then have 
 $-A\subsetneq D_0$ and by definition $-A>D_0$.
 \end{proof}
-\begin{lemma}(Trichotomy)
+\begin{lemma}\label{R_trichotomy}(Trichotomy)
 \begin{align*}
 \forall A\in\mathbb R\forall&r\in\mathbb Q((A<D_r\lor A=D_r\lor A>D_r)\land\\
 &\neg(A<D_r\land A>D_r)\land\neg(A<D_r\land A=D_r)\land\neg(A=D_r\land A>D_r))
@@ -3901,13 +3901,40 @@ a contradiction.\\
 \indent Finally suppose for contradiction that $A=D_r\land A>D_r$. By definition the latter implies $A\subsetneq D_r$ and $A\neq D_r$, the contradiction.
 \end{proof}
 \begin{proof}(Domain/Range/Functionality)
-
-
-
-
+First the domain bound dom$( ^{-1})=\mathbb R-\{D_0\}$. Let arbitrary $x\in\text{dom}( ^{-1})$. There exists $y$ such that 
+$\langle x,y\rangle\in ^{-1}$. So by definition there exists $A\in\mathbb R-\{D_0\}$ such that $x=A$. So $x\in\mathbb R-\{D_0\}$.
+Next let arbitrary $x\in\mathbb R-\{D_0\}$. By lemma \ref{R_trichotomy}, since $x\notin\{D_0\}$, $x\neq D_0$ and we have 2 cases:\\ 
+\indent First suppose $x>D_0$. Then by definition $\operatorname{rec}(x)$ exists, where by definition $\langle x,\operatorname{rec}(x)\rangle\in^{-1}$. So $x\in\text{dom}(^{-1})$.\\
+\indent Next suppose $x<D_0$. Then by lemma \ref{ded_5}, $-x>D_0$ and $\operatorname{rec}(-x)\in\mathbb R$ exists. Then $-(\operatorname{rec}(-x))$ exists, where we
+have $\langle x,-(\operatorname{rec}(-x))\rangle\in^{-1}$. So $x\in\text{dom}(^{-1})$.\\
+\indent Next the range bound ran$(^{-1})\subseteq\mathbb R$. Let arbitrary $y\in\text{ran}(^{-1})$. There then exists $x$ such that 
+$\langle x,y\rangle\in^{-1}$, and there exists $A\in\mathbb R-\{D_0\}$ and $B$ such that $\langle x,y\rangle=\langle A,B\rangle$. By definition we have 
+two cases.\\
+\indent First suppose $A>D_0\land B=\operatorname{rec}(A)$. Since $A>D_0$, by definition $\operatorname{rec}(A)\in\mathbb R$ exists. 
+So $y=B=\operatorname{rec}(A)\in\mathbb R$.\\
+\indent Next suppose $A<D_0\land B=-(\operatorname{rec}(-A))$. Since $A<D_0$, by lemma \ref{ded_5} $-A>D_0$ and 
+$\operatorname{rec}(-A)\in\mathbb R$ exists. Similarly, by definition of $-$, $-(\operatorname{rec}(-A))\in\mathbb R$ exists. So
+$y=B=-(\operatorname{rec}(-A))\in\mathbb R$.\\
+\noindent(next page)\newpage
+\indent Finally functionality. Let arbitrary $x\in\text{dom}(^{-1})$. There exists $y$ such that $\langle x,y\rangle\in^{-1}$. 
+Then there exists $A\in\mathbb R-\{D_0\}$ and $B$ such that $\langle x,y\rangle=\langle A,B\rangle$.
+Let $y'$ be arbitrary such that $\langle x,y'\rangle\in^{-1}$. Similarly
+there exists $A'\in\mathbb R-\{D_0\}$ and $B'$ such that $\langle x,y'\rangle=\langle A',B'\rangle$. By pairwise equality we have $A=x=A'$. 
+We know by lemma \ref{R_trichotomy} that $\neg(A>D_0\land A<D_0)$. Any case other than these two would contradict it:\\
+\indent Case 1: $(A>D_0\land B=\operatorname{rec}(A))\land(A'>D_0\land B'=\operatorname{rec}(A'))$. Since $A=A'$, 
+$y=B=\operatorname{rec}(A)=\operatorname{rec}(A')=B'=y'$.\\
+\indent Case 2: $(A<D_0\land B=-(\operatorname{rec}(-A)))\land(A'<D_0\land B'=-(\operatorname{rec}(-A')))$. Similarly, 
+$y=B=-(\operatorname{rec}(-A))=-(\operatorname{rec}(-A'))=B'=y'$.
 \end{proof}
+\newpage
+
+\subsection{Properties}
+\begin{theorem} Let $A,B,C\in\mathbb R$.
 
 
+
+
+\end{theorem}
 
 
 
