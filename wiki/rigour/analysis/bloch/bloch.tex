@@ -3891,10 +3891,21 @@ $-A\subsetneq D_0$ and by definition $-A>D_0$.
 \end{align*}
 \end{lemma}
 \begin{proof}
+Let arbitrary $A\in\mathbb R$ and $r\in\mathbb Q$. By lemma \ref{ded_4} we have $A<D_r$ or $A\geq D_r$. The latter implies $A\subseteq D_r$, 
+which is equivalent to $A\subsetneq D_r\lor A=D_r$ and by definition
+$A>D_r\lor A=D_r$. So we have $A<D_r\lor A=D_r\lor A>D_r$.\\
+\indent We have established that $A\geq D_r$ is equivalent to $A>D_r\lor A=D_r$, and by lemma \ref{ded_4} we know $\neg(A<D_r\land A\geq D_r)$.\\
+\indent Suppose for contradiction that $A<D_r\land A>D_r$. The latter implies $A\geq D_r$, so the statement contradicts lemma \ref{ded_4}.
+Similarly, supposing for contradiction that $A<D_r\land A=D_r$, the latter implies $A\geq D_r$ and the statement is therefore 
+a contradiction.\\
+\indent Finally suppose for contradiction that $A=D_r\land A>D_r$. By definition the latter implies $A\subsetneq D_r$ and $A\neq D_r$, the contradiction.
+\end{proof}
+\begin{proof}(Domain/Range/Functionality)
+
+
 
 
 \end{proof}
-
 
 
 
