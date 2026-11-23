@@ -3948,8 +3948,16 @@ $y=B=-(\operatorname{rec}(-A))=-(\operatorname{rec}(-A'))=B'=y'$.
 \end{enumerate}
 \end{theorem}
 \begin{proof}(1)
-
-
+We want to show
+\begin{equation*}
+\forall A\in\mathbb R\forall B\in\mathbb R\forall C\in\mathbb R((A+B)+C=A+(B+C))
+\end{equation*}
+Let arbitrary $A,B,C\in\mathbb R$. Let arbitrary $x\in(A+B)+C$. By definition there exists rational $d\in A+B$ and $c\in C$ such that $x=d+c$.
+Again by definition there exists rational $a\in A$ and $b\in B$ such that $d=a+b$. By associativity on the rationals, $x=(a+b)+c=a+(b+c)$.
+By definition $b+c\in B+C$ and $a+(b+c)\in A+(B+C)$, so $x\in A+(B+C)$.\\
+\indent Next suppose $x\in A+(B+C)$. Similarly, by definition there exists $a\in A$ and $d\in B+C$ such that $x=a+d$. 
+There exists rational $b\in B$ and $c\in C$ such that $d=b+c$, so by associativity on the rationals $x=a+(b+c)=(a+b)+c$. By definition $a+b\in A+B$,
+and by definition $(a+b)+c\in(A+B)+C$. So $x\in(A+B)+C$.
 \end{proof}
 
 
