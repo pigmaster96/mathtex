@@ -4001,12 +4001,37 @@ We want to show
 \begin{equation*}
 \forall A\in\mathbb R\forall B\in\mathbb R\forall C\in\mathbb R((A<B\land B<C)\to A<C)
 \end{equation*}
+Let arbitrary $A,B,C\in\mathbb R$. Suppose $A<B$ and $B<C$. By definition then $B\subsetneq A$ and $C\subsetneq B$. 
+Let arbitrary $x\in C$. Since $C\subsetneq B$, $x\in B$. Since $B\subsetneq A$, $x\in A$. So $C\subseteq A$.\\
+\indent Since $C\subsetneq B$, there exists $y\in B$ such that $y\notin C$. Since $B\subsetneq A$, we also have $y\in A$. 
+So $C\neq A$. Together we have $C\subsetneq A$ and $A<C$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{proof}(7)
+We want to show
+\begin{equation*}
+\forall A\in\mathbb R\forall B\in\mathbb R\forall C\in\mathbb R(
+A<B\to A+C<B+C)
+\end{equation*}
+Let arbitrary $A,B,C\in\mathbb R$. Suppose $A<B$, meaning $B\subsetneq A$.
+Let arbitrary $x\in B+C$. By definition there exists $b\in B$ and $c\in C$ such that $x=b+c$. 
+Since $B\subsetneq A$, it follows that $b\in A$ and therefore $x=b+c\in A+C$. So $B+C\subseteq A+C$.\\
+\indent Suppose for contradiction that $A+C=B+C$. We then have
+\begin{align*}
+A\overset{(3)}{=}A+D_0&\overset{(4)}{=}A+(C+(-C))\overset{(1)}{=}(A+C)+(-C)=(B+C)+(-C)\\
+&\overset{(1)}{=}B+(C+(-C))\overset{(4)}{=}B+D_0\overset{(3)}{=}B
+\end{align*}
+Contradicting $A\neq B$. So $B+C\subsetneq A+C$ and $A+C<B+C$.
+\end{proof}
+\begin{proof}(8)
+We want to show
+\begin{equation*}
+\forall A\in\mathbb R\forall B\in\mathbb R\forall C\in\mathbb R((AB)C=A(BC))
+\end{equation*}
 
 
 
 \end{proof}
-
-
 
 
 
