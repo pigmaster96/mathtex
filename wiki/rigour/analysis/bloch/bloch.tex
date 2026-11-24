@@ -3505,7 +3505,7 @@ where
 So $\frac{x+\frac1c}{2}\in D$.
 \end{proof}
 \noindent(next page)\newpage
-\begin{theorem}
+\begin{theorem}\label{ded_6}
 Let $A\subseteq\mathbb Q$ be a Dedekind cut. Let $y\in\mathbb Q$.
 \begin{enumerate}
 \item Suppose that $y>0$. Then there are $u\in A$ and $v\in\mathbb Q-A$ such that $y=u-v$, and $v<e$ for some $e\in\mathbb Q-A$.
@@ -3935,14 +3935,14 @@ $y=B=-(\operatorname{rec}(-A))=-(\operatorname{rec}(-A'))=B'=y'$.
 \item$A+B=B+A$\quad(Commutative Law for Addition)
 \item$A+D_0=A$\quad(Identity Law for Addition)
 \item$A+(-A)=D_0$\quad(Inverses Law for Addition)
+\item Precisely one of $A<B$ or $A=B$ or $A>B$ holds\quad(Trichotomy Law)
+\item If $A<B$ and $B<C$, then $A<C$\quad(Transitive Law)
+\item If $A<B$ then $A+C<B+C$\quad(Addition Law for Order)
 \item$(AB)C=A(BC)$\quad(Associative Law for Multiplication)
 \item$AB=BA$\quad(Commutative Law for Multiplication)
 \item$A\cdot D_1=A$\quad(Identity Law for Multiplication)
 \item If $A\neq D_0$, then $AA^{-1}=D_1$\quad(Inverses Law for Multiplication)
 \item$A(B+C)=AB+AC$\quad(Distributive Law)
-\item Precisely one of $A<B$ or $A=B$ or $A>B$ holds\quad(Trichotomy Law)
-\item If $A<B$ and $B<C$, then $A<C$\quad(Transitive Law)
-\item If $A<B$ then $A+C<B+C$\quad(Addition Law for Order)
 \item If $A<B$ and $C>D_0$, then $AC<BC$\quad(Multiplication Law for Order)
 \item $D_0<D_1$\quad(Non-Triviality)
 \end{enumerate}
@@ -3976,16 +3976,35 @@ We want to show
 \begin{equation*}
 \forall A\in\mathbb R(A+D_0=A)
 \end{equation*}
-
+Let arbitrary $A\in\mathbb R$.
+Let arbitrary $x\in A+D_0$. By definition then there exists $a\in A$ and $d\in D_0$ such that $x=a+d$. By definition $d>0$. So $a+d>a$. 
+Since $A$ is a dedekind cut we then have $a+d\in A$. So $x\in A$.\\
+\indent Next let arbitrary $x\in A$. Since $A$ is a dedekind cut there exists $b\in A$ such that $b<x$. We then have $x-b>0$, so $x-b\in D_0$.
+By definition then $x=b+(x-b)\in A+D_0$.
+\end{proof}
+\begin{proof}(4)
+We want to show
+\begin{equation*}
+\forall A\in\mathbb R(A+(-A)=D_0)
+\end{equation*}
+Let arbitrary $A\in\mathbb R$. Let arbitrary $x\in A+(-A)$. It follows that there exists $a\in A$ and $a'\in-A$ such that $x=a+a'$.
+By definition there exists $c\in\mathbb Q-A$ such that $-a'<c$. Since $a\in A$ by lemma \ref{ded_1} we then have $-a'<c<a$. 
+So $a+a'>0$ and $x=a+a'\in D_0$.\\
+\indent Next let arbitrary $x\in D_0$. Then $x>0$; by theorem \ref{ded_6} there exists $u\in A$ and $v\in\mathbb Q-A$ such that $x=u-v$, 
+and $v<e$ for some $e\in\mathbb Q-A$. 
+By definition $-v\in-A$. So $u-v=u+(-v)\in A+(-A)$, and $x\in A+(-A)$.
+\end{proof}
+\begin{proof}(5) This was already shown in lemma \ref{R_trichotomy}.
+\end{proof}
+\begin{proof}(6)
+We want to show
+\begin{equation*}
+\forall A\in\mathbb R\forall B\in\mathbb R\forall C\in\mathbb R((A<B\land B<C)\to A<C)
+\end{equation*}
 
 
 
 \end{proof}
-
-
-
-
-
 
 
 
