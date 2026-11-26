@@ -2009,8 +2009,19 @@ So $\langle a,b\rangle\in\hat H$. Supposing now that $\langle a,b\rangle$ were a
 
 \section{Ordering Relations}
 \begin{definition}
-
-
+Let $A$ be any set. A \textbf{linear ordering} on $A$ (also called a \textbf{total ordering} on $A$) is a binary
+relation $R$ on $A$ where
+\begin{enumerate}
+\item $R$ is a transitive relation.
+\begin{equation*}
+\forall x\forall y((xRy\land yRz)\to xRz)
+\end{equation*}
+\item $R$ satisfies trichotomy on $A$, meaning exactly one of $xRy$, $x=y$, or $yRx$ holds.
+\begin{align*}
+\forall x\in A\forall y\in A(&(xRy\lor x=y\lor yRx)\land\\
+&\neg(xRy\land yRx)\land\neg(xRy\land x=y)\land\neg(x=y\land yRx))
+\end{align*}
+\end{enumerate}
 \end{definition}
 
 
