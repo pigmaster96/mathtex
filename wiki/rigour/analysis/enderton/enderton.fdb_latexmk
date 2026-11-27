@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1795654636 "enderton.tex" "enderton.pdf" "enderton" 1795654637 0
+["pdflatex"] 1795740964 "enderton.tex" "enderton.pdf" "enderton" 1795740964 0
   "/etc/texmf/web2c/texmf.cnf" 1755598860 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -95,9 +95,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1755598892 4623455 fa0568a71dd9a288d6c226ee477506c6 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1755598947 7881613 ad016286089ecea48254f239da980507 ""
-  "enderton.aux" 1795654637 4321 6501ccc8bf38917a28208d383dd6c852 "pdflatex"
-  "enderton.tex" 1795654635 126821 ad5d0104fd4d4b7d7db02eb63d90d903 ""
-  "enderton.toc" 1795654637 2571 3c1058ccdf5a8a7b50d316a86e0f80f5 "pdflatex"
+  "enderton.aux" 1795740964 4606 f6f480b83dd7288098d03d78183ce7e1 "pdflatex"
+  "enderton.tex" 1795740963 129351 071c70e6cdaa572b5b9946cacfcc1e4d ""
+  "enderton.toc" 1795740964 2698 b2d86dc86a96d8decac0e5bd4369bed0 "pdflatex"
   "images//1.png" 1780787690 23015 473518263cc1cb8353fb71e8bae27843 ""
   (generated)
   "enderton.aux"

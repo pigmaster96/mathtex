@@ -2014,7 +2014,7 @@ relation $R$ on $A$ where
 \begin{enumerate}
 \item $R$ is a transitive relation.
 \begin{equation*}
-\forall x\forall y((xRy\land yRz)\to xRz)
+\forall x\forall y\forall z((xRy\land yRz)\to xRz)
 \end{equation*}
 \item $R$ satisfies trichotomy on $A$, meaning exactly one of $xRy$, $x=y$, or $yRx$ holds.
 \begin{align*}
@@ -2023,17 +2023,85 @@ relation $R$ on $A$ where
 \end{align*}
 \end{enumerate}
 \end{definition}
+\begin{theorem}
+Let $R$ be a linear ordering on $A$. 
+\begin{enumerate}
+\item There is no $x$ for which $xRx$.
+\item For distinct $x$ and $y$ in $A$, either $xRy$ or $yRx$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+First we show
+\begin{equation*}
+\neg\exists x(xRx)
+\end{equation*}
+Suppose for contradiction that there exists $x$ such that $xRx$. Since $R$ is a linear ordering and $x=x$, this contradicts 
+trichotomy.\\
+\indent Next we show
+\begin{equation*}
+\forall x\in A\forall y\in A(x\neq y\to(xRy\lor yRx))
+\end{equation*}
+Letting arbitrary $x,y\in A$ and supposing $x\neq y$, it follows by trichotomy that $xRy\lor yRx$.
+\end{proof}
+\newpage
+
+\chapter{Natural Numbers}
+\section{Inductive sets}
+\begin{definition}[von Neumann]
+We define the first four natural numbers as follows:
+\begin{align*}
+0&=\emptyset\\
+1&=\{\emptyset\}\\
+2&=\{0,1\}=\{\emptyset,\{\emptyset\}\}\\
+3&=\{0,1,2\}=\{\emptyset,\{\emptyset\},\{\emptyset,\{\emptyset\}\}\}
+\end{align*}
+\end{definition}
+\noindent We could continue this way to define higher natural numbers. Note that this construction implies
+\begin{equation*}
+0\in1\in2\in3\in\cdots
+\end{equation*}
+and
+\begin{equation*}
+0\subseteq1\subseteq2\subseteq3\subseteq\cdots
+\end{equation*}
+We define the naturals more generally now.
+\begin{definition}
+For any set $a$ its \textbf{successor} $a^+$ is defined by
+\begin{equation*}
+a^+=a\cup\{a\}
+\end{equation*}
+A set $A$ is said to be \textbf{inductive} iff $\emptyset\in A$ and it is ``closed under successor''. That is
+\begin{equation*}
+\forall a\in A(a^+\in A)
+\end{equation*}
+\end{definition}
+\noindent 0 and 1 exist by the empty set and pairing axioms. Each following successor exists by pairing and union axioms.\\
+(next page)\newpage
+\noindent\textit{Infinity axiom}\\
+There exists an inductive set:
+\begin{equation*}
+\exists A(\emptyset\in A\land\forall a\in A(a^+\in A))
+\end{equation*}
+\begin{definition}
+A \textbf{natural number} is a set that belongs to every inductive set.
+\end{definition}
+\begin{theorem}
+There is a set whose members are exactly the natural numbers.
+\end{theorem}
+\begin{proof}
+By the infinity axiom there exists an inductive set $A$. By the subset axiom, the set $D$, where
+\begin{equation*}
+\forall x(x\in D\leftrightarrow x\in A\land\forall B((B\neq A\land\forall a\in B(a^+\in B))\to x\in B))
+\end{equation*}
+exists. We can show
+\begin{align*}
+(x\in A\land\forall B((B\neq A\land\forall a\in B(a^+\in B))&\to x\in B))\\
+&\leftrightarrow\forall B(\forall a\in B(a^+\in B)\to x\in B)
+\end{align*}
 
 
 
-
-
-
-
-
-
-
-
+\end{proof}
 
 
 
