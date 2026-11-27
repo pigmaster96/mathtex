@@ -2091,17 +2091,21 @@ There is a set whose members are exactly the natural numbers.
 \begin{proof}
 By the infinity axiom there exists an inductive set $A$. By the subset axiom, the set $D$, where
 \begin{equation*}
-\forall x(x\in D\leftrightarrow x\in A\land\forall B((B\neq A\land\forall a\in B(a^+\in B))\to x\in B))
+\forall x(x\in D\leftrightarrow x\in A\land\forall B((\emptyset\in B\land\forall a\in B(a^+\in B))\to x\in B))
 \end{equation*}
-exists. We can show
+exists. It is straightforward to show for all $x$
 \begin{align*}
-(x\in A\land\forall B((B\neq A\land\forall a\in B(a^+\in B))&\to x\in B))\\
-&\leftrightarrow\forall B(\forall a\in B(a^+\in B)\to x\in B)
+(x\in A\land\forall B((\emptyset\in B\land\forall a\in B&(a^+\in B))\to x\in B))\leftrightarrow\\
+&\forall B((\emptyset\in B\land\forall a\in B(a^+\in B))\to x\in B)
 \end{align*}
-
-
-
+So the set $D$ exists, where
+\begin{equation*}
+\forall x(x\in D\leftrightarrow\forall B((\emptyset\in B\land\forall a\in B(a^+\in B))\to x\in B))
+\end{equation*}
+Which is what we wanted to show. This set is unique by extensionality.
 \end{proof}
+
+
 
 
 
