@@ -2124,9 +2124,38 @@ Let inductive $A$ be arbitrary. Let arbitrary $x\in\omega$. By definition $x$ is
 set, so $x\in A$.
 \end{proof}
 \noindent(next page)\newpage
-\begin{theorem}
-
+\begin{theorem}[Induction Principle]
+Any inductive subset of $\omega$ is equal to $\omega$.
 \end{theorem}
+\begin{proof}
+We want to show
+\begin{equation*}
+\forall A((\emptyset\in A\land\forall a\in A(a^+\in A)\land A\subseteq\omega)\to A=\omega)
+\end{equation*}
+Let inductive $A$ be arbitrary and suppose that $A\subseteq\omega$. We just need to show
+$\omega\subseteq A$. Letting arbitrary $x\in\omega$, it follows by definition that since $A$ is inductive, $x\in A$.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
