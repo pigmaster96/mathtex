@@ -2086,7 +2086,7 @@ There exists an inductive set:
 A \textbf{natural number} is a set that belongs to every inductive set.
 \end{definition}
 \begin{theorem}
-There is a set whose members are exactly the natural numbers.
+There is a set (which we will denote as $\omega$) whose members are exactly the natural numbers.
 \end{theorem}
 \begin{proof}
 By the infinity axiom there exists an inductive set $A$. By the subset axiom, the set $D$, where
@@ -2104,7 +2104,29 @@ So the set $D$ exists, where
 \end{equation*}
 Which is what we wanted to show. This set is unique by extensionality.
 \end{proof}
+\begin{theorem}
+$\omega$ is inductive, and is a subset of every other inductive set.
+\end{theorem}
+\begin{proof}
+We defined $\omega$ as the set whose members belong to every inductive set:
+\begin{equation*}
+\forall x(x\in\omega\leftrightarrow\forall A((\emptyset\in A\land\forall a\in A(a^+\in A))\to x\in A))
+\end{equation*}
+Let arbitrary $A$ be inductive. Then by definition $\emptyset\in A$.
+So $\emptyset\in\omega$. Next let arbitrary $x\in\omega$.
+Then $x$ is in every inductive set. Again let arbitrary $A$ be inductive. Since $x$ is in every inductive set, $x\in A$. Since $A$ is
+inductive, $x^+\in A$. So $x^+\in\omega$, and therefore $\omega$ is inductive.\\
+\indent Next we want to show
+\begin{equation*}
+\forall A((\emptyset\in A\land\forall a\in A(a^+\in A))\to\omega\subseteq A)
+\end{equation*}
+Let inductive $A$ be arbitrary. Let arbitrary $x\in\omega$. By definition $x$ is a member of every inductive 
+set, so $x\in A$.
+\end{proof}
+\noindent(next page)\newpage
+\begin{theorem}
 
+\end{theorem}
 
 
 
